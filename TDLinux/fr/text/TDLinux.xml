@@ -1,0 +1,2278 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="TDLinux" title="TDLinux - Prise en main de l’environnement, rappels, linux avancé">
+	
+	<entry>
+		<paragraph>
+			Ce TD a pour but de vous rappeler les commandes 
+			<formatted style="code">Linux</formatted>,
+			des commandes de base aux commandes plus évoluées.
+		</paragraph>
+		<paragraph>
+  		Nous vous invitons à relire le Guide Visuel avant de commencer.
+		</paragraph>
+	</entry>
+	
+	<!-- =========================================================== -->
+	<unit label="Bases" title="Les commandes de base de Linux">
+	<!-- =========================================================== -->
+
+    <entry>Revoyons ici les commandes de base</entry>
+    
+		<learningObject title="Les commandes de base">
+		<!-- ================================================ -->
+			<list listStyle="unordered">
+			  <item>
+          <formatted style="input">passwd</formatted> permet de <formatted style="bold">changer le mot de passe </formatted> ; 
+        </item>
+        <item>
+          <formatted style="input">exit</formatted> permet de <formatted style="bold">quitter</formatted> ; 
+        </item>
+        <item>
+          <formatted style="input">nano <formatted style="italic">nomDuFichier</formatted></formatted> 
+          permet d'<formatted style="bold">éditer</formatted> le fichier 
+          nommé <formatted style="italic">nomDuFichier</formatted> ; 
+        </item>
+        <item>
+          <formatted style="input">cat <formatted style="italic">nomDuFichier</formatted></formatted> 
+          permet d'<formatted style="bold">afficher à l'écran</formatted> le contenu du fichier 
+          nommé <formatted style="italic">nomDuFichier</formatted> ; 
+        </item>
+				<item>
+					<formatted style="input">ls</formatted> permet de <formatted style="bold">lister</formatted> le contenu d'un répertoire ; 
+        </item>
+        <item>
+					<formatted style="input">ls -a</formatted> permet de <formatted style="bold">lister</formatted> le contenu d'un répertoire, y compris les fichiers cachés ; 
+        </item>
+        <item>
+					<formatted style="input">ls -l</formatted> permet de <formatted style="bold">lister</formatted> le contenu d'un répertoire au format long ; 
+        </item>
+        <item>
+          <formatted style="input">mv <formatted style="italic">nomDuFichier</formatted> <formatted style="italic">nouveauNomDuFichier</formatted></formatted> 
+          permet de <formatted style="bold">renommer</formatted> le fichier nommé <formatted style="italic">nomDuFichier</formatted>
+          en un fichier nommé <formatted style="italic">nouveauNomDuFichier</formatted> ; 
+        </item>
+        <item>
+          <formatted style="input">mv <formatted style="italic">nomDuFichier</formatted> <formatted style="italic">nomDuDossier</formatted></formatted> 
+          permet de <formatted style="bold">déplacer</formatted> le fichier nommé <formatted style="italic">nomDuFichier</formatted>
+          dans un répertoire nommé <formatted style="italic">nomDuDossier</formatted> ; 
+        </item>
+        <item>
+          <formatted style="input">cp <formatted style="italic">nomDuFichier</formatted> <formatted style="italic">nouveauNomDuFichier</formatted></formatted> 
+          permet de <formatted style="bold">copier</formatted> le fichier nommé <formatted style="italic">nomDuFichier</formatted>
+          en un fichier copie  nommé <formatted style="italic">nouveauNomDuFichier</formatted> situé dans le même répertoire; 
+        </item>
+        <item>
+          <formatted style="input">cp <formatted style="italic">nomDuFichier</formatted> <formatted style="italic">nomDuDossier</formatted></formatted> 
+          permet de <formatted style="bold">copier</formatted> le fichier nommé <formatted style="italic">nomDuFichier</formatted>
+          en un fichier copie  nommé <formatted style="italic">nomDuFichier</formatted> 
+          situé dans un répertoire nommé <formatted style="italic">nomDuDossier</formatted> ; 
+        </item>
+        <item>
+          <formatted style="input">rm <formatted style="italic">nomDuFichier</formatted></formatted> 
+          permet de <formatted style="bold"> détruire </formatted> le fichier nommé <formatted style="italic">nomDuFichier</formatted>; 
+        </item>
+        <item>
+          <formatted style="input">rmdir <formatted style="italic">nomDuDossier</formatted></formatted> 
+          permet de <formatted style="bold">détruire</formatted> le dossier <formatted style="bold">vide</formatted> 
+          nommé <formatted style="italic">nomDuDossier</formatted> ; 
+        </item>
+        <item>
+          <formatted style="input">mkdir <formatted style="italic">nomDuDossier</formatted></formatted> 
+          permet de <formatted style="bold">créer un dossier vide</formatted> 
+          nommé <formatted style="italic">nomDuDossier</formatted> ; 
+        </item>
+        <item>
+          <formatted style="input">rm -r <formatted style="italic">nomDuDossier</formatted></formatted> 
+          permet de <formatted style="bold">détruire</formatted> le dossier <formatted style="bold">pas forcément vide</formatted> 
+          nommé <formatted style="italic">nomDuDossier</formatted> ; 
+        </item>
+        <item>
+          <formatted style="input">pwd</formatted> permet <formatted style="bold">d'afficher le chemin du dossier courant</formatted> 
+          (celui où vous êtes en ce moment) ; 
+        </item>
+        <item>
+          <formatted style="input">cd <formatted style="italic">chemin/nomDuDossier</formatted></formatted> permet de changer le dossier 
+          courant en <formatted style="italic">chemin/nomDuDossier</formatted> ; 
+        </item>
+        <item>
+          <formatted style="input">cd</formatted> permet de changer le dossier courant en votre dossier personnel ; 
+        </item>
+			</list>
+    </learningObject>
+			
+    <learningObject title="Les options dans la ligne de commande.">
+    <!-- ==================================================-->
+			<clarify>
+				<paragraph>
+				  Nous avons déjà rencontré l'une ou l'autre option ; 
+				  par exemple, les options <formatted style="input">-a</formatted> 
+				  ou <formatted style="input">-l</formatted> de <formatted style="input">ls</formatted> ;
+				  ou encore l'option <formatted style="input">-r</formatted> de <formatted style="input">rm</formatted>.
+        </paragraph>
+        <paragraph>
+				  Ces options modifient le sens d'une commande.
+        </paragraph>
+        <paragraph>
+				  On les reconnait car elles commencent par un <formatted style="input">-</formatted> suivi d'une lettre
+          ou <formatted style="input">--</formatted> suivi d'un nom d'option.
+        </paragraph>
+        <paragraph>
+          Les options disponibles pour chaque commande se trouvent dans la page de manuel <formatted style="input">man</formatted> 
+          de la commande en question.
+				</paragraph>
+      </clarify>
+    </learningObject>
+		
+		<learningObject title="Quelques commandes courantes">
+		<!-- ================================================ -->
+			<act>
+				<selfCheck title="Les commandes de base" shuffle="yes">
+						<fillInBlanks>
+							<question> 
+								La commande pour :  
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>voir le contenu d'un dossier (la liste de ce qu'il contient) est <gap answers="ls">ls</gap></item>  
+									<item>voir le contenu d'un dossier (la liste de ce qu'il contient) au format long est <gap answers="ls -l">ls -l</gap></item>  
+									<item>voir le contenu d'un dossier (la liste de ce qu'il contient), y compris les fichiers cachés est <gap answers="ls -a">ls -a</gap></item>  
+									<item>éditer le contenu d'un fichier est <gap answers="nano">nano</gap></item>  
+									<item>changer son mot de passe est <gap answers="passwd">passwd</gap></item>  
+									<item>se déconnecter de linux1 est <gap answers="exit">exit</gap></item>  
+									<item>copier un fichier est <gap answers="cp">cp</gap></item>  
+									<item>renommer un fichier est <gap answers="mv">mv</gap></item>  
+									<item>déplacer un fichier est <gap answers="mv">mv</gap></item>  
+									<item>changer de dossier courant est <gap answers="cd">cd</gap></item>  
+									<item>créer un répertoire est <gap answers="mkdir">mkdir</gap></item>  
+									<item>visualiser le contenu d'un fichier sans l'éditer est <gap answers="cat">cat</gap></item>  
+									<item>voir quel est le dossier courant (son chemin) est <gap answers="pwd">pwd</gap></item>  
+									<item>détruire un fichier est <gap answers="rm">rm</gap></item>  
+									<item>détruire un dossier vide est <gap answers="rmdir,rm -r">rmdir</gap></item>  
+									<item>détruire un dossier pas forcément vide est <gap answers="rm -r">rm -r</gap></item>  
+									<item>d'obtenir la liste des options de la commande rm est <gap answers="man rm">man rm</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+      
+					<selfCheck title="La ligne de commande" shuffle="no">
+						<fillInBlanks>
+							<question/>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										Qu'est-ce qui permet de distinguer / séparer les différentes parties d'une commande ? 
+										<gap answers="l'espace,espace">l'espace</gap> 
+									</item>  
+									<item>
+										Dans la commande <formatted style="input">nanotest</formatted>, combien y a-t-il de parties ?  
+										<gap answers="1,un,une">1</gap> 
+									</item>  
+									<item>
+										Dans la commande <formatted style="input">nano test</formatted>, combien y a-t-il de parties ?  
+										<gap answers="2,deux">2</gap> 
+									</item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+				</act>
+		  </learningObject>
+		<learningObject title="Ressources">
+		</learningObject>
+
+	</unit>
+		
+	<!-- =================================================================== -->
+	<unit label="SystèmeDeFichiers" title="Système de fichiers, chemin absolu et relatif">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Nous allons maintenant nous rappeler ce qu'est le système de fichiers et ce que sont les chemins absolus et relatifs.
+			</paragraph>
+    </entry>
+    
+			<learningObject title="Le système de fichiers">
+			<!-- ================================================ -->
+			  <clarify>
+			  <paragraph>
+			    <multimedia src="../image/arborescenceUnix.png" type="png" />
+			    
+			    [source : franceftars.us.62-152-34-99.ppa.listkom.ru]
+        </paragraph>
+        <paragraph>
+			    Chaque utilisateur dispose d'un dossier personnel, par exemple ici <formatted style="input">adam</formatted> et <formatted style="input">eve</formatted>
+			    qui se trouve dans un dossier appelé home, qui se trouve lui-même dans un dossier appelé / (la barre oblique). 
+        </paragraph>
+        <paragraph>
+			    / est le dossier principal (on dit aussi la racine) du système de fichiers.
+        </paragraph>
+        <paragraph>
+			    Avec Linux, tous les systèmes de fichiers sont assemblés en un seul système de fichiers dont le dossier principal est désigné par la barre oblique (/).
+        </paragraph>
+        <paragraph>
+          On peut voir que le dossier principal (<formatted style="input">/</formatted>) contient le dossier <formatted style="input">home</formatted> 
+          qui contient le dossier <formatted style="input">adam</formatted>, 
+          la home de l'utilisateur <formatted style="input">adam</formatted>.
+        </paragraph>
+        <paragraph>
+          Attention ! Le dossier appelé <formatted style="input">home</formatted> ne contient pas que la home de l'utilisateur mais toutes les homes.
+        </paragraph>
+        <paragraph>
+          Ici, il contient aussi le dossier <formatted style="input">eve</formatted> qui est la home de l'utilisateur <formatted style="input">eve</formatted>.
+        </paragraph>
+        </clarify>
+        <clarify>
+          Il y a des notations de répertoires particuliers :
+          <list listStyle="unordered">
+			      <item>le répertoire <formatted style="input">.</formatted> qui représente le dossier courant ;</item>
+			      <item>le répertoire <formatted style="input">..</formatted> qui représente le dossier parent ;</item>
+			      <item>le répertoire <formatted style="input">~</formatted> qui représente le dossier personnel, 
+			        c'est un raccourci pour la home de l'utilisateur, c-à-d, par exemple <formatted style="input">~</formatted> vaut <formatted style="input">/home/adam</formatted> 
+			        si l'utilisateur a pour home <formatted style="input">/home/adam</formatted> .</item>
+          </list>
+          <paragraph>
+          Supposons être l'utilisateur <formatted style="input">adam</formatted> dans le dossier courant <formatted style="input">adam</formatted>, 
+          <list listStyle="unordered">
+            <item>
+			        <formatted style="input">ls ~</formatted> liste le contenu du répertoire <formatted style="input">adam</formatted>, 
+			        il est ici équivalent à la commande <formatted style="input">ls</formatted>  ;
+            </item>
+			      <item>
+			        <formatted style="input">ls .</formatted> liste le contenu du répertoire <formatted style="input">adam</formatted>, 
+			        il est ici équivalent à la commande <formatted style="input">ls</formatted>  ;
+            </item>
+			      <item>
+			        <formatted style="input">ls ..</formatted> liste le contenu du répertoire parent de <formatted style="input">adam</formatted>, 
+			        c-à-d <formatted style="input">home</formatted>.
+            </item>
+          </list>
+        </paragraph>
+        <paragraph>
+          Supposons être l'utilisateur <formatted style="input">adam</formatted> dans le dossier courant <formatted style="input">notes</formatted>, 
+          <list listStyle="unordered">
+            <item>
+			        <formatted style="input">ls ~</formatted> liste le contenu du répertoire <formatted style="input">adam</formatted> ;
+            </item>
+			      <item>
+			        <formatted style="input">ls .</formatted> liste le contenu du répertoire <formatted style="input">notes</formatted>, 
+			        il est ici équivalent à la commande <formatted style="input">ls</formatted>  ;
+            </item>
+			      <item>
+			        <formatted style="input">ls ..</formatted> liste le contenu du répertoire parent de <formatted style="input">notes</formatted>, 
+			        c-à-d <formatted style="input">docs</formatted>.
+            </item>
+          </list>
+        </paragraph>
+        </clarify>
+      </learningObject>
+			
+		<learningObject title="Chemin relatif">
+		<!-- ================================================ -->
+		  <clarify>
+		    <paragraph>
+			    <multimedia src="../image/arborescenceUnix.png" type="png" />
+			    
+			    [source : franceftars.us.62-152-34-99.ppa.listkom.ru]
+        </paragraph>
+        <paragraph>
+        Si on se trouve dans la home de l'utilisateur <formatted style="input">adam</formatted> et qu'on veut lister le contenu du répertoire <formatted style="input">notes</formatted>,
+        <list listStyle="unordered">
+			    <item>
+            on peut le faire en 2 étapes en changeant de répertoire courant :
+            <formatted style="input">cd docs</formatted>
+            <formatted style="input">ls notes</formatted>
+          </item>
+          <item>
+            on peut aussi le faire sans changer de répertoire courant, 
+            il faut alors lui indiquer le chemin pour arriver au fichier :
+            <formatted style="input">ls docs/notes</formatted>
+          </item>
+        </list>
+        On parle de  <formatted style="bold">chemin relatif</formatted> car on va indiquer le chemin à suivre à partir du dossier courant,
+        en effet, <formatted style="bold">à partir du dossier</formatted>  <formatted style="input">adam</formatted>,
+        on va dans le dossier <formatted style="input">docs</formatted>, puis, on va lister le dossier <formatted style="input">notes</formatted>.
+        </paragraph>
+		  </clarify>
+		</learningObject>
+		
+		<learningObject title="Chemin absolu">
+		<!-- ================================================ -->
+		  <clarify>
+		    <paragraph>
+			    <multimedia src="../image/arborescenceUnix.png" type="png" />
+			    
+			    [source : franceftars.us.62-152-34-99.ppa.listkom.ru]
+        </paragraph>
+        <paragraph>
+        Si on se trouve dans la home de l'utilisateur <formatted style="input">adam</formatted> et qu'on veut lister le contenu du répertoire <formatted style="input">notes</formatted>,
+        <list listStyle="unordered">
+          <item>
+            on peut aussi le faire sans changer de répertoire courant, 
+            en lui indiquant le chemin pour arriver au fichier à partir de la racine :
+            <formatted style="input">ls /home/adam/docs/notes</formatted>
+          </item>
+        </list>
+        On parle de  <formatted style="bold">chemin absolu</formatted> car on va indiquer le chemin à suivre <formatted style="bold">à partir de la racine</formatted>,
+        cette commande fonctionne donc peu importe le dossier courant.
+        </paragraph>
+            </clarify>
+		</learningObject>
+		
+		<learningObject title="Exercices">
+		<!-- ================================================ -->
+			<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>La racine du système de fichier sous Linux est
+						</question>
+						<answer feedback="" correct="no">.</answer>
+						<answer feedback="" correct="no">..</answer>
+						<answer feedback="" correct="no">~</answer>
+						<answer feedback="" correct="no">~g12345</answer>
+						<answer feedback="" correct="yes">/</answer>
+						<answer feedback="" correct="no">/home</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>Le(s)quel(s) de ces chemins est/sont un chemin absolu ?
+						</question>
+						<answer feedback="" correct="yes">/home/g54321/tdLinux</answer>
+						<answer feedback="" correct="yes">~g54321/tdLinux</answer>
+						<answer feedback="" correct="no">g54321/tdLinux</answer>
+						<answer feedback="" correct="no">tdLinux</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>Le(s)quel(s) de ces chemins est/sont un chemin relatif ?
+						</question>
+						<answer feedback="" correct="yes">tdLinux</answer>
+						<answer feedback="" correct="yes">../tdLinux</answer>
+						<answer feedback="" correct="yes">./.././eCours/tdLinux</answer>
+						<answer feedback="" correct="no">/eCours/java/tds/tdLinux</answer>
+					</multipleChoice>
+				</selfCheck>
+		
+		  <paragraph>
+			    <multimedia src="../image/arborescenceUnix.png" type="png" />
+			    
+			    [source : franceftars.us.62-152-34-99.ppa.listkom.ru]
+        </paragraph>
+		<selfCheck title="La ligne de commande" shuffle="no">
+						<fillInBlanks>
+							<question>
+							Supposons que le répertoire courant est le dossier personnel <formatted style="input">/home/adam</formatted>
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										Quelle commande permet de supprimer le répertoire <formatted style="input">imgs</formatted> et son contenu en utilisant un chemin absolu ?
+										<gap answers="rm -r /home/adam/imgs,rm -r ~/imgs">rm -r /home/adam/imgs</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de supprimer le répertoire <formatted style="input">imgs</formatted> et son contenu en utilisant un chemin relatif ?
+										<gap answers="rm -r imgs,rm -r ./imgs">rm -r imgs</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de créer un répertoire <formatted style="input">imgs</formatted> 
+										dans le répertoire <formatted style="input">eve</formatted> en utilisant un chemin relatif ?
+										<gap answers="mkdir ../eve/imgs,mkdir ./../eve/imgs">mkdir ../eve/imgs</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de créer un fichier <formatted style="input">mesImages</formatted> 
+										dans le répertoire <formatted style="input">imgs</formatted> du répertoire <formatted style="input">eve</formatted> en utilisant un chemin absolu ?
+										<gap answers="nano /home/eve/imgs/mesImages">nano /home/eve/imgs/mesImages</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de copier ce fichier <formatted style="input">mesImages</formatted> 
+										que vous venez de créer dans le répertoire courant en utilisant que des chemins relatifs ?
+										<gap answers="cp ../eve/imgs/mesImages .">cp ../eve/imgs/mesImages .</gap> 
+									</item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+					
+					<paragraph>
+			    <multimedia src="../image/fs.jpeg" type="jpeg" />
+        </paragraph>
+		<selfCheck title="La ligne de commande" shuffle="no">
+						<fillInBlanks>
+							<question>
+							Supposons que le répertoire courant est le dossier personnel <formatted style="code">/home/g31000</formatted>
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										Quelle commande permet de supprimer le répertoire <formatted style="code">java</formatted> et son contenu en utilisant un chemin absolu ?
+										<gap answers="rm -r /eCours/java">rm -r /eCours/java</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de supprimer le répertoire <formatted style="code">java</formatted> et son contenu en utilisant un chemin relatif ?
+										<gap answers="rm -r ../../eCours/java,rm -r ./../../eCours/java">rm -r ../../eCours/java</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de créer un répertoire <formatted style="code">tds</formatted> 
+										dans le répertoire <formatted style="code">g32000</formatted> en utilisant un chemin relatif ?
+										<gap answers="mkdir ../g32000/tds,mkdir ./../g32000/tds">mkdir ../g32000/tds</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de créer un fichier <formatted style="code">Ex.java</formatted> 
+										dans le répertoire <formatted style="code">tds</formatted> 
+										du répertoire <formatted style="code">g32000</formatted> en utilisant un chemin relatif ?
+										<gap answers="nano ../g32000/tds/Ex.java,nano ./../g32000/tds/Ex.java">nano ../g32000/tds/Ex.java</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de copier ce fichier <formatted style="code">Ex.java</formatted> 
+										que vous venez de créer dans le répertoire courant en utilisant que des chemins relatifs ?
+										<gap answers="cp ../g32000/tds/Ex.java .,cp ./../g32000/tds/Ex.java .">cp ../g32000/tds/Ex.java .</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de lister au format long le dossier personnel en utilisant un chemin absolu ?
+										<gap answers="ls -l ~, ls -l /home/g31000">ls -l ~</gap> 
+									</item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+		  </learningObject>
+	</unit>
+	
+		
+	<!-- =========================================================== -->
+	<unit label="LigneDeCommande" title="La ligne de commande">
+	<!-- =========================================================== -->
+
+	  <learningObject title="La ligne de commande"> 
+	  <!-- ================================================ -->
+    
+      <clarify>
+        <paragraph>
+          Parfois, vous devez entrer une commande assez longue parce que les noms de fichiers sont longs et/ou nombreux.
+          Linux offre plusieurs facilités pour simplifier l'entrée de longues commandes.  
+        </paragraph>
+      </clarify>
+
+      <clarify>
+        <paragraph title="La complétion de la commande" icon="icon_reading"/> 
+        <paragraph>
+          Lorsque vous appuyez sur la touche <formatted style="input">TAB</formatted>,
+          le shell tente de compléter le début de commande que vous avez déjà tapé.
+          Si plusieurs possibilités existent, elles sont affichées si vous appuyez 2x sur  <formatted style="input">TAB</formatted>.  
+        </paragraph>
+      </clarify>
+      
+      <clarify>
+        <paragraph title="Expérience" icon="icon_experiment"/> 
+        <paragraph>  
+          Supposons que vous ne vous rappeliez plus très bien de la commande qui permet de modifier le mot de passe.
+          Vous vous rappelez juste qu'elle commence par <formatted style="input">pas</formatted>.  
+        </paragraph>  
+        <list listStyle="ordered">
+          <item>
+			  Tapez <formatted style="input">pas</formatted>  
+			  puis appuyez 2x sur la touche <formatted style="input">TAB</formatted>.</item>  
+          <item>
+			Entrez un <formatted style="input">s</formatted>  
+            puis appuyez à nouveau sur <formatted style="input">TAB</formatted>.
+          </item>  
+        </list>
+      </clarify>
+      
+      <clarify>
+        <paragraph title="La complétion des noms de fichiers" icon="icon_reading"/> 
+        <paragraph>
+          La touche de tabulation permet également de compléter un nom de fichier. 
+        </paragraph>
+      </clarify>
+      
+      <act>
+        <paragraph title="Exercice" icon="act"/> 
+        <list listStyle="ordered">
+          <item>
+            Dans votre dossier td3, copiez le fichier <newLine/>
+            <formatted style="code">monfichieraunomtellementlongquilmeparaitpeuprobabledeletaper2xsanserreur</formatted>
+            qui se trouve dans le dossier <formatted style="code">/eCours/java/td/td3</formatted>.
+          </item>  
+          <item>Affichez le contenu de ce fichier en évitant de retaper son nom.</item>  
+        </list>
+      </act>
+      
+      <clarify>
+        <paragraph title="Joker" icon="icon_reading"/> 
+        <paragraph>
+          Il faut savoir que beaucoup de commandes linux qui traitent un fichier peuvent en traiter plusieurs à la fois; il suffit de les indiquer tous.
+        </paragraph>
+        <paragraph>
+          Par exemple : <formatted style="input">rm texte1 texte2 texte3 texte4</formatted> supprime les 4 fichiers indiqués.
+        </paragraph>
+        <paragraph>
+          On voudrait aller plus loin et éviter de taper explicitement chaque nom. Par exemple, on pourrait avoir envie de dire :
+          <list listStyle="ordered">
+            <item>Supprime tous les fichiers qui commencent par « texte » ;</item>
+            <item>Supprime tous les fichiers Java (qui se terminent par .java) ;</item>
+            <item>...</item>
+          </list>
+          C'est possible grâce à la notion de « joker ». 
+          On ne va pas donner explicitement un nom de fichier mais un « motif », c'est-à-dire une description des noms de fichiers concernés.
+        </paragraph>
+        <paragraph>
+          Il y a essentiellement deux jokers : 
+          <list listStyle="unordered">
+          <item>
+            <formatted style="input">?</formatted> : lorsque le bash rencontre un <formatted style="code">?</formatted> 
+            dans un nom de fichier il sait qu'il peut le remplacer par n'importe quel caractère ;
+          </item>
+          <item>
+            et <formatted style="input">*</formatted> : lorsque le bash rencontre un <formatted style="code">*'</formatted> 
+            dans un nom de fichier il sait qu'il peut le remplacer par n'importe quelle suite de caractères  (0, 1 ou plusieurs caractères).
+          </item>
+          </list>
+        </paragraph>
+      </clarify>
+      
+      <clarify>
+        <paragraph title="Exercices" icon="icon_experiment"/> 
+        <list listStyle="ordered">
+          <item>
+            Copiez dans votre répertoire td3 tous les fichiers du répertoire 
+            <formatted style="code">/eCours/java/td/td3</formatted> dont la deuxième lettre est un '<formatted style="code">x</formatted>'.
+          </item>  
+          <item>
+            Copiez dans votre répertoire tdLinux tous les fichiers du répertoire
+            <formatted style="code">/eCours/java/td/td3</formatted> dont l'extension est <formatted style="code">.java</formatted> 
+            (c'est possible sans passer par un <formatted style="input">cd /eCours/java/td/td3</formatted>)
+          </item>  
+          <item>
+            Listez le contenu des répertoires des étudiants (pour rappel, les répertoires des étudiants sont ceux 
+            qui se trouvent dans <formatted style="code">/home</formatted> et qui commencent par un '<formatted style="code">g</formatted>').
+          </item>  
+          <item>
+            Listez le contenu des répertoires des professeurs (pour rappel, les  
+            répertoires des professeurs sont ceux qui se trouvent dans <formatted style="code">/home</formatted> et qui sont composés de 3 lettres).
+          </item>  
+        </list>
+      </clarify>
+      
+      <clarify>
+        <paragraph title="Revenir à une commande précédente" icon="icon_reading"/> 
+        <paragraph>  
+          Il arrive souvent qu'il faille entrer une commande qu'on a déjà écrite il y a peu (ou en tout cas fort proche de ce qu'on a déjà écrit). 
+          C'est là que les flèches viennent à notre secours.  
+        </paragraph>  
+        <paragraph>  
+          La flèche vers le haut permet de revenir aux commandes précédentes et de les modifier. À utiliser sans modération...  
+        </paragraph>  
+      </clarify> 
+    </learningObject>
+  </unit>
+
+	
+	<!-- ======================================= -->
+	<unit label="Permissions" title="Les permissions">
+	<!-- ======================================= -->
+
+		<entry>
+		</entry>
+		<learningObject title="Les groupes d'un utilisateur">
+		<!-- ================================================ -->
+			<clarify>
+				<paragraph>
+					Les utilisateurs d'un système Linux sont groupés. 
+					Un groupe contient un ou plusieurs utilisateur(s) et un utilisateur appartient à un ou plusieurs groupe(s).
+				</paragraph>
+				<paragraph>
+				  Sur Linux1, 
+        </paragraph>
+        <paragraph>
+			    <multimedia src="../image/groupesLinux1.jpg" type="jpeg" />
+        </paragraph>
+				<paragraph>
+          <list listStyle="unordered">
+            <item>users : tous les utilisateurs sont dans ce groupe</item>
+            <item>enseignants : tous les professeurs sont dans ce groupe</item>
+            <item>etudiants : tous les étudiants sont dans ce groupe</item>
+            <item>etudiants1 : tous les étudiants de première année sont dans ce groupe</item>
+          </list>
+				</paragraph>
+				<paragraph>
+				  La commande <formatted style="input">groups</formatted> permet de connaitre tous les groupes 
+				  auxquels l'utilisateur appartient.
+				</paragraph>
+				<paragraph>
+				  Parmi tous les groupes d'un utilisateur, il y en a un qui est le groupe principal (c'est le premier donné par la commande <formatted style="input">groups</formatted>). 
+				  C'est celui qui sera utilisé par défaut lors de certaines opérations (par exemple, lors de la création d'un fichier)
+				</paragraph>
+			</clarify>
+		</learningObject>
+		<learningObject title="Propriétaire et groupe d'un fichier">
+			<clarify>
+				<paragraph>
+					Tous les fichiers ont un propriétaire et appartiennent à un groupe.
+					C'est la base pour définir les permissions sur ce fichier.
+					On pourra ainsi donner des permissions différentes :
+					<list listStyle="unordered">
+					  <item>au propriétaire du fichier ;</item>
+            <item>aux utilisateurs qui appartiennent au même groupe que le fichier ;</item>
+            <item> à tous les autres. </item>
+          </list>
+				</paragraph>
+				<paragraph>
+				  Lister au format long le contenu du répertoire nous permet de voir les infos suivantes :
+				</paragraph>
+				<paragraph>
+			    <multimedia src="../image/permissions.jpg" type="jpeg" />
+        </paragraph>
+        <paragraph>
+          Sur le schéma ci-dessus, on peut lire, par exemple, que le fichier <formatted style="code">Max.java</formatted> 
+          appartient à <formatted style="code">g32671</formatted> et a été placé dans le groupe users.
+        </paragraph>
+        <paragraph>
+          Nous vous disions qu'il existait un groupe principal (le premier donné par la commande <formatted style="input">groups</formatted>)
+          et que c'est celui qui serait utilisé par défaut lors de certaines opérations.
+        </paragraph>
+        <paragraph>
+          C'est le cas par exemple ici,
+          quand l'utilisateur <formatted style="code">g32671</formatted> a créé son fichier <formatted style="code">Max.java</formatted>,
+          ce fichier s'est retrouvé dans le groupe par défaut <formatted style="code">users</formatted>.
+        </paragraph>
+        <paragraph>
+          Or, 
+        </paragraph>
+        <paragraph>
+			    <multimedia src="../image/groupesLinux1.jpg" type="jpeg" />
+        </paragraph>
+        <paragraph>
+          le groupe <formatted style="input">users</formatted> contient à la fois 
+          le groupe <formatted style="input">étudiants</formatted>/<formatted style="input">étudiants1</formatted> et
+          aussi le groupe <formatted style="input">enseignants</formatted>.
+        </paragraph>
+        <paragraph>
+					Comme nous avons vu que nous pouvions donner des permissions différentes :
+					<list listStyle="unordered">
+					  <item>au propriétaire du fichier ;</item>
+            <item>aux utilisateurs qui appartiennent au même groupe que le fichier ;</item>
+            <item> à tous les autres. </item>
+          </list>
+          Si le groupe du fichier est <formatted style="code">users</formatted>, 
+          les utilisateurs qui appartiennent au même groupe que le fichier sont à la fois
+          des <formatted style="input">étudiants</formatted>/<formatted style="input">étudiants1</formatted> 
+          et des <formatted style="input">enseignants</formatted>.
+        </paragraph>
+				<paragraph>
+           On ne pourrait donc pas distinguer les permissions des étudiants de celles des enseignants.
+				</paragraph>
+				<paragraph>
+				  Pour faire la distinction entre étudiants et enseignants, il faudrait changer le groupe auquel appartient le fichier.
+				</paragraph>
+				<paragraph>
+				  <formatted style="input">chgrp etudiants1 Max.java</formatted> indique que le fichier <formatted style="code">Max.java</formatted> doit être placé dans le
+				  groupe <formatted style="code">etudiants1</formatted> (le propriétaire du fichier peut exécuter cette commande mais il doit obligatoirement indiquer un groupe auquel il appartient).
+				</paragraph>
+				<paragraph>
+				  Il existe aussi une commande que seul l'administrateur peut exécuter <formatted style="input">chown g32000 Max.java</formatted> 
+				  qui change le propriétaire du fichier<formatted style="code"> Max.java</formatted> à <formatted style="code">g32000</formatted>.
+        </paragraph>
+			</clarify>
+			
+			<act>
+				<paragraph title="Exercices" icon="act"/> 
+				<list listStyle="ordered">
+					<item>Visualisez le propriétaire des fichiers de votre dossier personnel.</item>  
+					<item>Créez un répertoire <formatted style="code">tdLinux</formatted> dans votre dossier personnel ;</item>
+					<item>Visualisez le propriétaire des fichiers de votre dossier <formatted style="code">tdLinux</formatted>.
+					</item>  
+				</list>
+			</act>
+      
+			<act>
+				<paragraph title="Exercices" icon="act"/> 
+				<list listStyle="ordered">
+					<item>Visualiser les groupes auxquels vous appartenez.</item>  
+					<item>Visualiser le groupe auquel appartient votre dossier <formatted style="code">tdLinux</formatted>.</item>  
+					<item>Quel est votre groupe principal ? </item>  
+					<item>Quels sont les groupes auxquels appartient votre professeur ?</item>  
+					<item>Avez-vous un groupe en commun avec lui ?</item>  
+					<item>Quel(s) groupe(s) Linux avez-vous en commun avec les autres étudiants de votre groupe ESI ?</item>  
+					<item>Changez le groupe de  votre dossier <formatted style="code">tdLinux</formatted> 
+					pour que les enseignants puissent avoir des permissions différentes de celles des étudiants .</item>  
+				</list>
+			</act>
+      
+			<act>
+				<paragraph title="Exercices" icon="act"/> 
+				<list listStyle="ordered">
+					<item>Visualisez vos fichiers et déterminez à quel groupe ils appartiennent.</item>  
+					<item>Créez un fichier de test et modifiez le groupe auquel il appartient.</item>  
+				</list>
+			</act>
+      
+			<clarify>
+				<paragraph title="FAQ" icon="icon_faq"/> 
+				<paragraph>  
+					<formatted style="bold">Les fichiers dans mon dossier personnel ne sont pas automatiquement à moi ?</formatted>  
+				</paragraph>  
+				<paragraph>  
+					Non. En pratique c'est généralement le cas, 
+					mais on peut très bien trouver dans un dossier personnel un fichier qui appartient à quelqu'un d'autre.  
+				</paragraph>  
+			</clarify>
+		</learningObject>
+    
+		<learningObject title="Les permissions">
+		<!-- ================================================ -->
+		  <paragraph title="Les permissions sur un fichier" icon="icon_reading" />
+			<clarify>
+				<paragraph>
+					Vous savez qu'un fichier appartient à un utilisateur et est placé dans un groupe.
+				</paragraph>
+				<paragraph>
+					Vous savez aussi que vous pouvez donner des permissions différentes :
+					<list listStyle="unordered">
+					  <item>au propriétaire du fichier ;</item>
+            <item>aux utilisateurs qui appartiennent au même groupe que le fichier ;</item>
+            <item> à tous les autres. </item>
+          </list>
+				</paragraph>
+				<paragraph>
+					Voyons maintenant quelles sont ces permissions.
+					Il existe 3 types de permissions : en lecture, en écriture et en exécution.
+					<list listStyle="unordered">
+					  <item>Lecture : si une personne a le droit en lecture sur un fichier, il peut en voir le contenu. Par exemple, avec cat, more ou encore view.</item>
+					  <item>Écriture : Si une personne a le droit en écriture sur un fichier, il peut en modifier le contenu. Par exemple, avec nano.</item>
+					  <item>Exécution : Cette permission concerne les exécutables. Un exécutable est un fichier qui contient un programme en langage machine directement exécutable par le processeur.</item>
+          </list>
+          Ces 3 permissions peuvent évidemment être combinées (exemple : on donne l'accès en lecture ET en écriture). 
+				</paragraph>
+				<paragraph>
+				  En pratique, on ne veut pas donner les mêmes droits à tout le monde. On pourra préciser :
+				  <list listStyle="unordered">
+					  <item>les droits du propriétaire d'un fichier ;</item>
+					  <item>les droits des utilisateurs qui appartiennent au même groupe que le fichier ;</item>
+					  <item>les droits pour toutes les personnes non reprises dans une catégorie ci-dessus (les autres).</item>
+          </list>
+				</paragraph>
+				<paragraph>
+				  Lister au format long le contenu du répertoire nous permet de voir les infos suivantes :
+				</paragraph>
+				<paragraph>
+			    <multimedia src="../image/permissions2.jpg" type="jpeg" />
+        </paragraph>
+        <paragraph>
+          Les permissions sont indiquées avec des lettres (r pour la lecture, w pour l'écriture et x pour l'exécution) 
+          dans cet ordre en mettant un tiret (-) si la permission n'est pas donnée. 
+        </paragraph>
+        <paragraph>
+          Il y a 3 blocs de 3 données pour les droits du propriétaire, des utilisateurs du groupe auquel le fichier est attribué et enfin, des autres (dans cet ordre).
+        </paragraph>
+        <paragraph>
+          Sur l'exemple ci-dessus, on peut voir que le fichier<formatted style="code"> Max.java</formatted> :
+          <list listStyle="unordered">
+					  <item>est en lecture/écriture pour le propriétaire (g32671) ; </item>
+					  <item>est en lecture seule pour tous les utilisateurs du groupe users (en fait tout le monde sur linux1) ; </item>
+					  <item>est en lecture seule pour les autres (en fait personne sur linux1).</item>
+          </list>
+        </paragraph>
+			</clarify>
+			<clarify>
+				<paragraph title="Les permissions sur un répertoire." icon="icon_reading" />
+				<paragraph>
+					Tout comme pour les fichiers, on peut donner des permissions au dossier.
+        </paragraph>
+        <paragraph>
+					  La situation est sensiblement la même : 
+					  <list listStyle="unordered">
+					    <item>un dossier a un propriétaire et un groupe ;</item>
+					    <item>on indique les mêmes permissions r, w et x ;</item>
+					    <item>on spécifie des permissions pour le propriétaire, le groupe et les autres.</item>
+          </list>
+        </paragraph>
+				<paragraph>
+          Ce qui change, c'est la signification des permissions. Que veut dire « exécuter » un dossier par exemple ?
+				</paragraph>
+				<paragraph>
+					Explicitons à présent le sens de chaque droit :
+					 <list listStyle="unordered">
+					    <item>lecture : on a le droit de lister le contenu du dossier, de voir ce qu'ilcontient. On peut par exemple faire un ls du dossier.</item>
+					    <item>écriture : on peut modifier le contenu du dossier. On peut ainsi effacer un fichier (via la commande rm).
+					    On remarque ainsi que pour effacer un fichier il ne faut pas de droit en écriture sur le fichier mais bien sur le dossier qui le contient.</item>
+					    <item>exécution : on peut « ouvrir » le dossier / entrer dedans. 
+					    On peut ainsi en faire son dossier courant (cd td1) ou le traverser dans un chemin (cat td1/monTexte1).</item>
+            </list>
+        </paragraph>
+			</clarify>
+		<clarify>
+				<paragraph title="Changer les permissions." icon="icon_reading" />
+				<paragraph>
+					Lorsqu'un fichier est créé, il l'est avec des permissions par défaut définies par l'administrateur du système.
+				</paragraph>
+				<paragraph>
+				  On peut évidemment les changer via la commande <formatted style="input">chmod</formatted>.
+				</paragraph>
+				<paragraph>
+				  Il existe 2 notations fort différentes pour indiquer les permissions : avec un nombre et avec des lettres.
+				</paragraph>
+				<paragraph title="Changer les permissions avec un nombre." icon="icon_reading" />
+				<paragraph>
+				  Pour changer les permissions avec un nombre, vous donnez d'un coup toutes les permissions que vous autorisez 
+				  <list listStyle="unordered">
+					  <item>d'abord, au propriétaire du dossier/fichier ;</item>
+            <item>ensuite, aux utilisateurs qui appartiennent au même groupe que le dossier/fichier ;</item>
+            <item>enfin, à tous les autres. </item>
+          </list>
+          Vous avez vu qu'il y a une permission de lecture, d'écriture et d'exécuter/de traverser.
+          Si vous avez fait un peu attention, vous aurez remarqué que chacune de ces permissions se situe dans un ordre bien précis :
+          <list listStyle="unordered">
+					  <item>d'abord une permission de lecture (r) ;</item>
+            <item>ensuite une permission d'écrire (w) ;</item>
+            <item>enfin une permission d'exécuter/de traverser (x). </item>
+          </list>
+          <formatted style="input">rwx</formatted> avec à chaque fois la possibilité ou non d'avoir cette permission.
+				</paragraph>
+				<paragraph>
+				  On pourrait 
+				  <list listStyle="unordered">
+            <item>
+              avoir uniquement un droit de lecture : <formatted style="input">r--</formatted> 
+              qu'on pourrait écrire <formatted style="input">100</formatted>
+              et convertir en 4 (100 en base 2)
+            </item>
+            <item>
+              avoir uniquement un droit d'écriture : <formatted style="input">-w-</formatted> 
+              qu'on pourrait écrire <formatted style="input">010</formatted>
+              et convertir en 2 (010 en base 2)
+            </item>
+            <item>
+              avoir uniquement un droit d'exécution/de traverser : <formatted style="input">--x</formatted> 
+              qu'on pourrait écrire <formatted style="input">001</formatted>
+              et convertir en 1 (001 en base 2)
+            </item>
+            <item>
+              avoir un droit de lecture et d'écriture : <formatted style="input">rw-</formatted> 
+              qu'on pourrait écrire <formatted style="input">110</formatted>
+              et convertir en 6 (110 en base 2)
+            </item>
+            <item>
+              avoir un droit de lecture et d'exécution/de traverser : <formatted style="input">r-x</formatted> 
+              qu'on pourrait écrire <formatted style="input">101</formatted>
+              et convertir en 5 (101 en base 2)
+            </item>
+            <item>
+              avoir un droit d'écriture et d'exécution/de traverser : <formatted style="input">-wx</formatted> 
+              qu'on pourrait écrire <formatted style="input">011</formatted>
+              et convertir en 3 (011 en base 2)
+            </item>
+            <item>
+              avoir tous les droits (de lecture, d'écriture et d'exécution/de traverser) : <formatted style="input">rwx</formatted> 
+              qu'on pourrait écrire <formatted style="input">111</formatted>
+              et convertir en 7 (111 en base 2)
+            </item>
+            <item>
+              avoir n'avoir aucun droit (ni de lecture, ni d'écriture ni d'exécution/de traverser) : <formatted style="input">---</formatted> 
+              qu'on pourrait écrire <formatted style="input">000</formatted>
+              et convertir en 0 (000 en base 2)
+            </item>
+				</list>
+				C'est ce nombre trouvé pour les permissions qu'on donnera 
+				<list listStyle="unordered">
+					  <item>d'abord, au propriétaire du dossier/fichier ;</item>
+            <item>ensuite, aux utilisateurs qui appartiennent au même groupe que le dossier/fichier ;</item>
+            <item>enfin, à tous les autres. </item>
+          </list>
+          On combine alors les nombres obtenus pour les 3 sortes d'utilisateurs.
+				</paragraph>
+				<paragraph>
+				  <formatted style="input">chmod 640 monFichier.java</formatted> donne 
+				  <list listStyle="unordered">
+					  <item>au propriétaire le droit en lecture/écriture ;</item>
+					  <item>aux utilisateurs dans le même groupe que le fichier le droit en lecture uniquement ; </item>
+            <item>et aucun droit aux autres.</item>
+          </list>
+				</paragraph>
+				
+				<paragraph title="Changer les permissions avec des lettres." icon="icon_reading" />
+				<paragraph>
+				  Pour changer les permissions avec des lettres, vous dites les permissions que vous ajoutez/retirez, à qui vous les ajoutez/retirez et ce,sans toucher aux autres droits.
+				  <list listStyle="unordered">
+					  <item>
+					    Il faut d'abord dire à qui on modifie les droits :
+					    <list listStyle="unordered">
+					      <item><formatted style="code">u</formatted> pour le propriétaire <formatted style="italic">(user)</formatted></item>
+					      <item><formatted style="code">g</formatted> pour le groupe auquel le fichier/dossier appartient <formatted style="italic">(group)</formatted></item>
+					      <item><formatted style="code">o</formatted> pour les autres <formatted style="italic">(other)</formatted></item>
+					      <item><formatted style="code">a</formatted> pour tous (le propriétaire, le groupe auquel le fichier/dossier appartient, les autres) <formatted style="italic">(all)</formatted></item>
+              </list>
+					  </item>
+            <item>
+              ensuite, spécifier 
+              <list listStyle="unordered">
+					      <item><formatted style="code">+</formatted> si on ajoute des droits ;</item>
+					      <item><formatted style="code">-</formatted> si on en retire.</item>
+              </list>
+            </item>
+            <item>
+              On indique enfin quel(s) droit(s) on ajoute ou enlève 
+                <list listStyle="unordered">
+                  <item>r</item>
+                  <item>w</item>
+                  <item>x</item>
+                </list>
+            </item>
+          </list>
+        </paragraph>
+        <paragraph>
+          <formatted style="input">chmod a+w monFichier.java</formatted> 
+				  <list listStyle="unordered">
+					  <item>ajoute</item> 
+					  <item>le droit d'écriture</item>
+            <item>à tous</item>
+          </list>
+          pour le fichier <formatted style="code">monFichier.java</formatted>.
+        </paragraph>
+        
+        <paragraph>
+          <formatted style="input">chmod go-wx monFichier.exe</formatted> 
+				  <list listStyle="unordered">
+					  <item>retire</item> 
+					  <item>les droits d'écriture et d'exécution</item>
+            <item>aux utilisateurs du même groupe que celui auquel appartient le fichier et aux autres (c-à-d à tout lemonde sauf le propriétaire)</item>
+          </list>
+          pour le fichier <formatted style="code">monFichier.exe</formatted>.
+        </paragraph>
+			</clarify>
+			<act>
+				<paragraph title="Exercices" icon="act" />
+				
+				<selfCheck title="Déterminez les bonnes permissions" shuffle="no">
+					<fillInBlanks>
+						<question>  
+							Remplissez les blancs avec la permission correcte (r, w, x ou -). 
+							Il s'agit de trouver la permission minimale à mettre pour répondre à la demande.   
+						</question>
+						<gapText> 
+							<list listStyle="unordered">
+								<item>
+									Pour un fichier Java, la permission la plus adéquate est
+									<gap answers="r">r</gap> 
+									<gap answers="w">w</gap> 
+									<gap answers="-">-</gap> 
+								</item>  
+								<item>
+									Pour la version compilée (le bytecode), la permission la plus adéquate est
+									<gap answers="r">r</gap> 
+									<gap answers="w">-</gap> 
+									<gap answers="-">-</gap> 
+								</item>  
+								<item>
+									Le fichier qui contient (l'exécutable de) la machine virtuelle a probablement comme permisson
+									<gap answers="-">-</gap> 
+									<gap answers="-">-</gap> 
+									<gap answers="x">x</gap> 
+								</item>  
+							</list> 
+						</gapText>
+						<solution>
+						  Pour la version compilée, la permission suffisante pour l'exécuter par la jvm est <formatted style="code">r--</formatted> <newLine/>
+						  mais il est vrai que, lorsque le compilateur génère le bytecode, la permission <formatted style="code">-w-</formatted> y est également.
+            </solution>
+					</fillInBlanks>
+				</selfCheck>
+
+				<paragraph title="Exercice " icon="icon_question"/> 
+				<paragraph>  
+					Soit le fichier <formatted style="code">Max.java</formatted> de la capture d'écran ci-dessous.  
+				</paragraph>  
+				<multimedia src="../image/ls-l.jpg" type="jpeg" legend="Contenu détaillé d'un dossier"/>
+				<paragraph>
+					Est-ce qu'un professeur peut l'éditer ? 
+				</paragraph>
+				<popup title="la réponse" cadre="yes"> Non ! Le droit d'écriture n'est accordé qu'au propriétaire.  </popup> 
+
+				<selfCheck title="Déterminez les bonnes permissions" shuffle="no">
+					<fillInBlanks>
+						<question>
+							Soit le fichier "Max.java" de la capture d'écran ci-dessus.
+							<newLine/>
+							On voudrait que l'étudiant <formatted style="code">g32671</formatted> puisse travailler  
+							normalement, que les autres étudiants ne puissent pas tricher sur  
+							lui mais que les professeurs puissent lire son travail.   
+						</question>
+						<gapText> 
+							<list listStyle="unordered">
+								<item>
+									Quel groupe faut-il donner au fichier ?
+									<newLine/>
+									<gap answers="etudiants, etudiants1">etudiants</gap> 
+								</item>  
+								<item>
+									Quelle commande permet de donner ce groupe au fichier ?
+									<newLine/>
+									<gap answers="chgrp">chgrp</gap> 
+									<gap answers="etudiants, etudiants1">etudiants</gap> 
+									<gap answers="Max.java">Max.java</gap> 
+								</item>  
+								<item>
+									Quelles permissions minimales donner au fichier ?                
+									<newLine/>
+				               <gap answers="r">r</gap> 
+				               <gap answers="w">w</gap> 
+				               <gap answers="-">-</gap> 
+				               <gap answers="-">-</gap> 
+				               <gap answers="-">-</gap> 
+				               <gap answers="-">-</gap> 
+				               <gap answers="r">r</gap> 
+				               <gap answers="-">-</gap> 
+				               <gap answers="-">-</gap> 
+								</item>  
+								<item>
+									Quelle commande permet de donner ces permissions au fichier ?
+									<newLine/>
+									<gap answers="chmod">chmod</gap> 
+									<gap answers="604">604</gap> 
+									<gap answers="Max.java">Max.java</gap> 
+								</item>  
+							</list>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+
+				<paragraph title="Exercice" icon="act"/> 
+				<paragraph>  
+					Reprenez les permissions affichées dans la capture d'écran ci-dessous 
+					et exprimez-les avec un nombre de 3 chiffres.  
+				</paragraph>  
+				<multimedia src="../image/ls-l-permissions.jpg" type="jpeg" width="500" legend="Contenu détaillé d'un dossier"/>
+
+				<paragraph cssClass="pagebreak"/>
+				<paragraph title="Permissions par défaut" icon="icon_experiment"/> 
+				<list listStyle="ordered">
+					<item>Si ce n'est pas encore fait, créez un dossier "tdLinux".</item>  
+					<item>Créez-y un fichier vide.</item>  
+					<item>Demandez les détails du fichier (propriétaire, groupe, permission)</item>  
+				</list> 
+				<paragraph> 
+					On constate qu'un nouveau fichier appartient à celui qui l'a créé 
+					(on s'en doute) et au groupe principal du créateur. 
+					Il y a aussi des permissions par défaut (plutôt permissives dans notre cas).  
+				</paragraph>
+
+				<paragraph title="Modifier les permissions" icon="icon_reading"/> 
+				<paragraph>  
+					Vous savez que la commande qui permet de modifier les permissions d'un fichier est 
+					<formatted style="input">chmod</formatted>.  
+				</paragraph>  
+				<paragraph>  
+					Prenez le temps de <formatted style="bold">lire</formatted> 
+					la page de <formatted style="bold">manuel</formatted> de cette commande.   
+				</paragraph>
+
+				<paragraph title="Exercices" icon="act"/> 
+				<list listStyle="ordered">
+					<item>Créez un fichier <formatted style="code">brol</formatted> dans le dossier <formatted style="code">tdLinux</formatted> avec quelques mots.</item>  
+					<item>Faites en sorte que personne d'autre ne puisse en voir le contenu.</item>  
+					<item>Faites en sorte que tout le monde puisse voir son contenu mais pas le modifier. </item>  
+					<item>
+					  Faites en sorte que les autres étudiants ne puissent pas voir son contenu mais les professeurs bien. 
+					  Attention, pour ce faire, il faut pouvoir distinguer les étudiants des enseignants; et donc, distinguer les groupes.
+					</item>  
+				</list>
+
+				<paragraph title="Exercices" icon="act"/> 
+				<paragraph>  
+					Modifiez les droits de votre dossier <formatted style="code">tdLinux</formatted> et, si nécessaire, 
+					des fichiers qui s'y trouvent pour que tout le monde puisse  
+				</paragraph>  
+				<list listStyle="ordered">
+		         <item>voir quels fichiers s'y trouvent mais sans pouvoir lire le contenu de ces fichiers;</item>  
+		         <item>modifier le contenu d'un des fichiers mais pas supprimer ce fichier;</item>  
+		         <item>supprimer un fichier mais pas modifier son contenu.</item>  
+				</list>
+      </act>
+		
+			<act>
+				<selfCheck title="Les commandes linux" shuffle="yes">
+					<fillInBlanks>
+						<question>Quelle commande linux permet de faire l'action suivante ?</question>
+						<gapText> 
+							<list listStyle="unordered">
+								<item>se déconnecter <gap answers="">exit</gap></item>  
+								<item>changer son mot de passe <gap answers="">passwd</gap></item>  
+								<item>nettoyer l'écran <gap answer="">clear</gap></item>
+								<item>voir le contenu d'un dossier au format long
+									<gap answers="">ls</gap> <gap answers="">-l</gap> 
+								</item>  
+								<item>créer un répertoire <gap answers="">mkdir</gap></item>  
+								<item>déplacer un fichier <gap answers="">mv</gap></item>  
+								<item>connaitre les groupes d'un utilisateur <gap answers="">groups</gap></item>  
+								<item>modifier le groupe d'un fichier <gap answers="">chgrp</gap></item>  
+								<item>modifier le propriétaire d'un fichier (par le super-utilisateur!)         
+									<gap answers="">chown</gap> 
+								</item>  
+								<item>
+								  retirer la permission de traverser le répertoire 
+									<formatted style="code">tds</formatted> à tous       
+									<gap answers="">chmod</gap> 
+									<gap answers="">a-x</gap> 
+									<gap answers="">tds</gap> 
+								</item>  
+								<item>
+								  placer le fichier <formatted style="code">Hello.java</formatted> 
+									dans le groupe <formatted style="code">etudiants1</formatted> 
+									<gap answers="">chgrp</gap> 
+									<gap answers="">etudiants1</gap> 
+									<gap answers="">Hello.java</gap> 
+								</item>  
+							</list>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+
+				<selfCheck title="Les permissions" shuffle="yes">
+					<fillInBlanks>
+						<question>Remplissez les blancs avec la permission minimale correcte (r, w, x ou -),</question>
+						<gapText> 
+							<list listStyle="ordered">
+								<item>
+									pour que le répertoire <formatted style="code">/home/gxxxxx/td3</formatted> 
+									permette à un autre étudiant d'y créer le fichier  
+									<formatted style="code">/home/gxxxxx/td3/fichier</formatted>
+									<newLine/>
+									<gap answers="">-</gap> 
+									<gap answers="">-</gap> 
+									<gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">w</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+								</item>  
+								<item>
+									pour que le répertoire <formatted style="code">/home/gxxxxx/td3</formatted> 
+									permette à un autre étudiant d'accéder au fichier  
+									<formatted style="code">/home/gxxxxx/td3/fichier</formatted>
+									dont il connait le chemin
+									<newLine/>
+				               <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap>  
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">x</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+								</item>
+              </list> 
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+				
+				<selfCheck title="" shuffle="no">
+					<fillInBlanks>
+						<question>Modifiez les permissions </question>
+						<gapText> 
+							<list listStyle="unordered">
+								<item>
+									pour que le fichier <formatted style="code">/home/gxxxxx/td3/fichier</formatted> 
+									puisse être lu et modifié par votre professeur et vous même mais seulement lu par les autres étudiants 
+									<newLine/>
+				                <gap answers="">chmod</gap> 
+			                  <gap answers="6,7">6</gap> 
+			                  <gap answers="4,5">4</gap>  
+			                  <gap answers="6,7">6</gap> 
+			                  <gap answers="/home/gxxxxx/td3/fichier,fichier">/home/gxxxxx/td3/fichier</gap> 
+								</item> 
+								<item>
+								  À quel groupe ce fichier doit-il appartenir ?
+									<newLine/>
+				               <gap answers="etudiants,etudiants1">etudiants</gap> 
+								</item> 
+								<item>
+								  Quelle commande permet de modifier le groupe du fichier afin de l'adapter à ce qui est demandé ci-dessus ?
+									<newLine/>
+									      <gap answers="">chgrp</gap> 
+				               <gap answers="etudiants,etudiants1">etudiants</gap> 
+								</item> 
+							</list> 
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+
+				<selfCheck title="Sélection multiple" shuffle="yes">
+					<multipleChoice>
+						<question>Parmi les propositions suivantes, lesquelles représentent des chemins absolus ?</question>
+						<answer feedback="" correct="yes"><formatted style="code">/usr/local/java/</formatted></answer>
+						<answer feedback="" correct="yes"><formatted style="code">/home/g31000/td3</formatted></answer>
+						<answer feedback="" correct="no"><formatted style="code">g31000/td3</formatted></answer>
+						<answer feedback="" correct="yes"><formatted style="code">~/td3</formatted></answer>
+						<answer feedback="" correct="no"><formatted style="code">td3</formatted></answer>
+						<answer feedback="" correct="yes"><formatted style="code">~g31000/td3</formatted></answer>
+					</multipleChoice>
+				</selfCheck>
+			</act>
+		</learningObject>
+	</unit>
+	
+	
+	<!-- ============================ -->
+	<unit label="Wc" title="Compter (wc)">
+	<!-- ============================ -->
+	
+		<learningObject title="Compter (wc)">
+		<!-- ================================================ -->
+			<act>
+				<paragraph>
+					Vous vous demandez peut-être
+					combien de lignes fait un programme
+					que vous avez écrit
+					ou encore 
+					combien de lignes vous avez écrites aujourd'hui.
+					La commande 
+					<formatted style="code">wc</formatted>
+					peut vous répondre ;
+					elle indique le nombre de lignes,
+					de mots et de caractères
+					contenus dans les fichiers donnés.
+					<newLine/>
+					Syntaxe : 
+					<formatted style="input">wc fichier...</formatted>										
+				</paragraph>
+				<paragraph title="Exemple" icon="icon_experiment">
+					La commande : 
+					<formatted style="input">wc Ex2.java</formatted>
+					affiche le nombre de lignes, mots et caractères
+					contenus dans le fichier
+					<formatted style="code">Ex2.java</formatted>.
+				</paragraph>
+				<paragraph title="Exercices" icon="act">
+					<list listStyle="ordered">
+						<item>
+							Comment afficher le nombres de lignes
+							de tous les fichiers Java de votre dossier courant.
+						</item>
+						<item>
+							Examinez les options de la commande
+							et trouvez comment n'afficher
+							<formatted style="bold">que</formatted>
+							le nombre de lignes
+							et pas le nombre de mots et de caractères.
+						</item>
+						<item>
+							Une convention d'écriture Java
+							indique de ne pas dépasser la
+							colonne 80 dans les programmes.
+							Trouvez l'option qui permet de
+							vérifier que tous vos programmes
+							actuels vérifient cette convention.
+						</item>
+					</list>
+					<paragraph cssClass="cadre" lines="3" visible="print"/>
+				</paragraph>
+			</act>
+		</learningObject>
+</unit>
+
+	
+	<!-- ============================================== -->
+	<unit label="Grep" title="Recherche dans des fichiers (grep)">
+	<!-- ============================================== -->
+	
+		<learningObject title="Recherche dans des fichiers (grep)">
+		<!-- ================================================ -->
+			<act>
+				<paragraph>
+					Il est parfois difficile de s'y retrouver dans les fichiers.
+					Vous allez être amenés à vous poser des questions du genre :
+				</paragraph>
+				<list>
+					<item>
+						Dans quel fichier ai-je écrit un programme qui vérifie si une année est bissextile ?
+					</item>
+					<item>
+						Dans quel fichier ai-je déjà utilisé un switch ?
+					</item>
+				</list>
+				<paragraph>
+					La commande <formatted style="code">grep</formatted> peut venir à votre secours.
+					Dans son utilisation la plus simple, elle permet d'extraire de fichiers
+					toutes les lignes qui contiennent un certain texte (appelé 
+					<formatted style="italic">pattern</formatted>).
+					<newLine/>
+					Syntaxe : 
+					<formatted style="input">grep pattern fichier...</formatted>	
+				</paragraph>
+				<paragraph title="Exemple" icon="icon_experiment">
+					Pour trouver dans quel fichier vous avez utilisé une variable nommée "bissextile",
+					vous pouvez écrire :
+					<newLine/>
+					<newLine/>
+					<formatted style="input">grep bissextile *.java</formatted> 
+				</paragraph>
+				<paragraph title="Exercices" icon="act">
+					<list listStyle="ordered">
+						<item>
+							Comment trouver les programmes Java
+							du TD4
+							où vous avez déjà utilisé un "switch" ?
+						</item>
+						<item>
+							Comment trouver,
+							parmi <formatted style="bold">tous</formatted>
+							les programmes Java
+							que vous avez déjà écrits,
+							ceux qui utilisent des booléens ?
+						</item>
+					</list>
+					<paragraph cssClass="cadre" lines="2" visible="print"/>
+				</paragraph>
+			</act>
+		</learningObject>
+</unit>
+
+
+	<!-- ======================================== -->
+	<unit label="Find" title="Recherche de fichier (find)">
+	<!-- ======================================== -->
+	
+	<learningObject title="Recherche de fichier (find)">
+	<!-- ================================================ -->
+
+		<clarify>
+			<paragraph>
+				<formatted style="code">find</formatted> est une commande linux 
+				très puissante qui vous fera gagner beaucoup de temps.
+				Elle permet de rechercher dans une arborescence de fichiers 
+				ceux qui correspondent à un critère donné 
+				(taille, droits, nom, dates...).
+				Elle permet également d'appliquer une commande à chacun 
+				des fichiers ainsi trouvés.
+			</paragraph>
+			<paragraph>
+				Attention à ne pas la confondre
+				avec la commande
+				<formatted style="code">grep</formatted>
+				qui va examiner le contenu des fichiers.
+			</paragraph>
+		</clarify>
+
+		<look>
+			<paragraph title="Exemple" icon="look"/>
+			<paragraph cssClass="java">
+find ~ -name Ex.java
+			</paragraph>
+			<paragraph>
+				Recherche, chez vous 
+				(<formatted style="code">~</formatted>),
+				un fichier nommé 
+				<formatted style="code">Ex.java</formatted>
+			</paragraph>
+		</look>
+
+		<act>
+
+			<paragraph title="Exercice" icon="act"/>
+
+			<paragraph>
+				Trouvez avec la commande 
+				<formatted style="code">find</formatted>
+				tous les fichiers Java que vous avez déjà écrits.
+			</paragraph>
+			<paragraph cssClass="cadre" lines="1"/>
+			
+			<paragraph>
+				Nous avons écrit pour vous une classe
+				<formatted style="code">Color</formatted>
+				mais nous ne savons plus très bien
+				où nous l'avons stockée.
+				Nous nous rappelons juste l'avoir mise
+				quelque part dans 
+				<formatted style="code">/eCours</formatted>.
+				Pouvez-vous la retrouver pour nous ?
+			</paragraph>
+			<paragraph cssClass="cadre" lines="1"/>
+
+		</act>
+	</learningObject>
+</unit>
+
+
+<!-- =================================== -->
+<unit label="Redirections" title="Redirections">
+<!-- =================================== -->
+
+		<learningObject title="Entrées et sorties standards">
+		<!-- ================================================ -->
+			
+			<clarify>
+				<box>
+					<paragraph>
+						Tout programme qui s'exécute dispose 
+						de trois fichiers ouverts d'office 
+						par le système pour lui :
+						l'entrée standard, la sortie standard et la sortie d'erreur,
+						identifiés respectivement par les numéros 0, 1 et 2.
+					</paragraph>
+					<paragraph>
+						En Java, on retrouve ces trois fichiers :
+					</paragraph>
+					<list listStyle="unordered">
+					<item>
+						<formatted style="code">System.in</formatted>
+						pour 0 (entrée standard) 
+						qu'on retrouve dans la déclaration
+						<formatted style="code">Scanner clavier = new Scanner(System.in);</formatted>
+					</item>
+					<item>
+						<formatted style="code">System.out</formatted>
+						pour 1 (sortie standard) 
+						qu'on retrouve dans l'instruction
+						<formatted style="code">System.out.println();</formatted> 
+					</item>
+					<item>
+						<formatted style="code">System.err</formatted>
+						pour 2 (erreur standard) 
+						qu'on retrouve dans l'instruction
+						<formatted style="code">System.err.println();</formatted> 
+					</item>
+					</list>
+				</box>
+				
+				<paragraph>
+					Cela peut vous paraitre bizarre de dire
+					que le clavier et l'écran sont des fichiers
+					mais c'est bien ainsi que le programme
+					les voit.
+					Et c'est pratique,
+					car nous allons pouvoir
+					<formatted style="italic">rediriger</formatted>
+					ces entrées et ces sorties vers de vrais fichiers
+					de façon tout à fait transparente pour le
+					programme ; il ne sera pas nécessaire de le modifier.
+				</paragraph>
+			</clarify>
+			
+		</learningObject>
+		
+    <learningObject title="Rediriger la sortie">
+		<!-- ================================================ -->
+	
+			<clarify>
+				<paragraph>
+					Il est possible,
+					au moment où on lance un programme,
+					de rediriger sa sortie.
+					Tout ce que le programme enverra
+					sur sa sortie standard
+					(par exemple avec un
+					<formatted style="code">System.out.println()</formatted>
+					en Java) ne sera pas visible à l'écran
+					mais sera envoyé dans, par exemple, un fichier.
+				</paragraph>
+				<box>
+					Une redirection de sortie standard se note 
+					«>» ou «1>» lors du lancement du programme.
+					Ces redirections sont réalisées par le shell avant 
+					l'exécution de la commande 
+					et sont transparentes pour cette commande.
+				</box>
+			</clarify>
+	
+			<look>
+				<paragraph title="Exemple" icon="look"/>
+				<paragraph cssClass="java">
+<![CDATA[ls -l > liste
+]]></paragraph>
+					ou
+				<paragraph cssClass="java">
+<![CDATA[ls -l 1> liste
+]]></paragraph>
+				<paragraph>
+					Ces deux commandes sont équivalentes;
+					elles n'affichent pas le résultat à l'écran,
+					mais l'écrivent dans le fichier 
+					<formatted style="code">liste</formatted> créé ici ou écrasé 
+					s'il préexistait.
+					Par défaut <formatted style="code">ls -l</formatted> 
+					affiche le résultat à l'écran.
+					Nous avons <formatted style="italic">redirigé</formatted> 
+					cette sortie standard vers un fichier, 
+					en l'occurrence <formatted style="code">liste</formatted>.
+				</paragraph>
+				<paragraph>
+					Faites l'essai et vérifiez le contenu du fichier créé.
+				</paragraph>
+			</look>
+	
+			<act>
+				
+				<paragraph title="Exercice" icon="act"/>
+				<list  listStyle="ordered">
+					<item>
+						Reprenez votre programme qui affiche
+						des suites de nombres et plus précisément
+						celui qui affiche la suite appelée :
+						"le pas croissant".
+						Exécutez-le pour
+						afficher les 1000 premiers nombres de cette suite.
+					</item>
+					<item>
+						Sauvez le résultat dans un fichier
+						pour pouvoir l'examiner à votre aise.
+						<formatted style="bold">Rappel</formatted> :
+						pour examiner le contenu d'un fichier,
+						inutile de passer par un éditeur,
+						la commande
+						<formatted style="code">more</formatted>
+						suffit.
+					</item>
+					<item>
+						Est-ce que le nombre 15007 en fait partie ?
+						(aide : vous vous rappelez de la commande
+						<formatted style="code">grep</formatted> ?)
+					</item>
+				</list>	
+			</act>
+			
+			<clarify>
+				<paragraph title="Note"/>
+				<paragraph>
+					Avec la simple redirection en sortie, 
+					si le fichier existe déjà, il est écrasé. 
+					Nous pouvons choisir de ne pas l'écraser, 
+					mais de le compléter 
+					(ajouter du contenu à la fin du fichier) 
+					via la double redirection (en sortie) notée 
+					<formatted style="code"><![CDATA[>>]]></formatted>.			
+				</paragraph>
+			</clarify>
+
+		</learningObject>
+
+		<learningObject title="Rediriger l'entrée">
+		<!-- ================================================ -->
+			
+			<clarify>
+		
+				<paragraph>
+					L'«entrée standard» peut être associée à un 
+					fichier au lieu du clavier.
+					Cela permet d'utiliser les données à partir du fichier 
+					au lieu de les entrer au clavier.
+					C'est ce qu'on appelle une redirection de l'entrée.
+				</paragraph>
+				
+				<box>
+					La redirection d'entrée se note «&lt;».			
+				</box>
+			</clarify>
+			
+			<look>
+				<paragraph title="Exemple"/>
+				<paragraph>
+					<formatted style="code">commande &lt; data</formatted>
+					<newLine/>
+					Les lectures de la commande se feront dans
+					le fichier <formatted style="code">data</formatted>
+					et pas au clavier.
+				</paragraph>
+		
+				<paragraph title="Expérimentation" icon="act"/>
+				
+					<paragraph>
+						Nous avons écrit pour vous une petite classe
+						<formatted style="code">Multiples5</formatted>
+						qui lit une série de nombres et n'affiche
+						que ceux qui sont des multiples de 5.
+						À la fin, elle affiche le nombre de multiples de 5.
+					</paragraph>
+		
+					<list listStyle="ordered">
+						
+					<item>
+						Copiez-la chez vous ; vous la trouverez
+						quelque part dans <formatted style="code">/eCours/java</formatted>.
+					</item>
+					
+					<item>
+						Lancez l'application et entrez des nombres au clavier.
+						La combinaison de touches 
+						<formatted style="code">Ctrl-d</formatted> est l'équivalent 
+						de la marque «fin de fichier» pour le clavier,
+						c'est ainsi que vous terminerez l'acquisition de la série 
+						de nombres au clavier.
+					</item>
+					
+					<item>
+						Il ne faut pas confondre 
+						<formatted style="code">Ctrl-d</formatted> 
+						et <formatted style="code">Ctrl-c</formatted>
+						qui tue le processus.
+						Comment mettre en évidence la différence ?
+					</item>
+					
+					<item>
+						Exécutez la classe en associant le clavier 
+						à un petit fichier texte
+						où vous aurez écrit les nombres au préalable,
+						séparés par des blancs ou des caractères équivalents 
+						(pas de <formatted style="code">Ctrl-d	ici</formatted> ;-) ).						
+					</item>
+
+				</list>
+			</look>
+			<act>
+				<paragraph title="Exercice" icon="act"/>
+				
+				<paragraph>
+					On vous demande d'afficher,
+					parmi les 1000 premiers nombres 
+					de la suite des pas croissants,
+					tous ceux qui sont des multiples de 5.
+					Combien y en a-t-il ?
+				</paragraph>
+				
+			</act>
+		</learningObject>
+		
+		<learningObject title="Les tubes (pipes en anglais)">
+		<!-- ================================================ -->
+
+			<clarify>
+					<paragraph>
+						Pour résoudre l'exercice de la
+						section précédente, 
+						vous avez dû créer un fichier
+						temporaire qui n'a servi qu'à ça.
+						Vous avez redirigé la sortie de la première
+						commande dans un fichier et
+						redirigé ce fichier comme entrée
+						de la seconde commande.
+					</paragraph>
+
+					<box>
+						Le symbole «|» permet de chainer des commandes ;
+						la sortie de l'une sert d'entrée à la suivante. 
+						On parle de "pipe" en anglais et de "tube"
+						en français.
+					</box>
+
+					<paragraph>
+						C'est une situation qui se présente souvent,
+						surtout en Linux qui propose de nombreuses
+						commandes qui font une seule chose
+						(plutôt bien)
+						et qu'on combine pour obtenir 
+						un résultat plus conséquent.
+						Des commandes comme
+						<formatted style="code">more</formatted>,
+						<formatted style="code">grep</formatted>,
+						<formatted style="code">wc</formatted>...
+						peuvent prendre leurs données
+						sur l'entrée standard.
+					</paragraph>
+
+			</clarify>
+	
+			<look>
+				<paragraph title="Exemple"/>
+				<paragraph>
+					La commande <formatted style="code">more</formatted>
+					permet d'afficher un message page par page.
+					Si on ne lui donne pas de nom de fichier,
+					il pagine les données reçues sur l'entrée standard. 
+				</paragraph>
+				<paragraph>
+					On peut donc remplacer
+				</paragraph>
+				<paragraph cssClass="java">
+					ls /home >temp
+					more temp
+				</paragraph>
+				<paragraph>
+					par
+				</paragraph>
+				<paragraph cssClass="java">
+					ls /home | more
+				</paragraph>
+			</look>
+			
+			<act>
+				<paragraph title="Exercice" icon="act"/>
+				À vous d'utiliser des pipes.
+				<list listStyle="ordered">
+					<item>
+						Utilisez un pipe pour afficher
+						parmi les 1000 premiers nombres 
+						de la suite des pas croissants,
+						tous ceux qui sont des multiples de 5.
+					</item>
+					<item>
+						Supprimez du programme
+						<formatted style="code">Multiples5</formatted>
+						la ligne finale qui affiche 
+						le nombre de multiples trouvés. 
+					</item>
+					<item>
+						Relancez votre commande de l'exercice précédent.
+						Vous ne voyez plus, à la fin,
+						le nombre de multiples, ce qui est normal.
+						Quelle enchainement de commandes
+						permet d'afficher ce nombre
+						(et uniquement ce nombre) ?
+						Rappelez-vous,
+						il existe une commande Linux qui "compte". 
+					</item>
+					<item>
+						Affichez,
+						parmi les 1000 premiers nombres 
+						de la suite des pas croissants,
+						tous ceux qui contiennent un 0.
+					</item>
+				</list>
+
+			</act>
+			
+		</learningObject>
+		
+		<learningObject title="Rediriger les erreurs">
+		<!-- ================================================ -->
+	
+			<clarify>
+				<paragraph>
+					On a vu qu'il est possible de rediriger
+					la sortie d'un programme.
+					Il est aussi possible de rediriger ses erreurs.
+				</paragraph>
+				<paragraph>
+					Attention !
+					C'est au programme à décider ce qui 
+					est un message d'erreur (en utilisant
+					<formatted style="code">err</formatted>
+					au lieu de <formatted style="code">out</formatted>).
+				</paragraph>
+				<box>
+					Une redirection de la sortie d'erreur se note «2>».
+				</box>
+
+			</clarify>
+
+			<look>
+				<paragraph title="Exemple"/>
+				<paragraph>
+					Supposons que vous ayez écrit une classe
+					<formatted style="code">Malfaite</formatted> 
+					qui provoque beaucoup d'erreurs à la compilation.
+					Pour les regarder à votre aise,
+					vous pouvez les rediriger dans un fichier 
+					<formatted style="code">erreur</formatted> via :
+					<formatted style="code">javac MalFaite.java 2>erreur</formatted>.
+					Vous pouvez alors examiner les erreurs en
+					ouvrant le fichier <formatted style="code">erreur</formatted>,
+					par exemple via un 
+					<formatted style="code">more erreur</formatted>.
+				</paragraph>
+			</look>
+
+			<act>
+				<paragraph title="Exercice" icon="act"/>
+			<paragraph>
+					Les professeurs se demandent combien
+					d'étudiants ont déjà copié chez eux
+					le fichier 
+					<formatted style="code">Multiple5.java</formatted>.
+					Pouvez-vous indiquer la (suite de) commande(s)
+					qui permet de répondre à la question ?
+				</paragraph>
+			</act>
+		</learningObject>
+	</unit>
+
+
+<!-- ========================================= -->
+	<unit label="Processus" title="Les filtres Linux">
+<!-- ========================================= -->
+
+    <learningObject title="Les filtres Linux">
+		<!-- ========================================== -->
+
+			<clarify>
+				<paragraph>
+					De nombreuses commandes Linux
+					sont basées sur le principe 
+					<formatted style="code">KISS</formatted>
+					(Keep It Simple, Stupid).
+					Elles font peu,
+					mais le font bien
+					et surtout,
+					peuvent facilement coopérer
+					pour, au final,
+					obtenir un résultat bluffant.
+					Parmi toutes les commandes,
+					les filtres sont à mettre en évidence.
+				</paragraph>
+				<box>
+					Un <formatted style="code">filtre</formatted>
+					est une commande Linux 
+					qui acquiert des données sur l'entrée standard 
+					et les envoie vers la sortie standard 
+					après les avoir éventuellement transformées.
+				</box>
+				<paragraph>
+					Nous allons nous concentrer sur les
+					filtres suivants :
+					<formatted style="code">tr</formatted>, 
+					<formatted style="code">cut</formatted>,
+					<formatted style="code">cat</formatted>, 
+					<formatted style="code">sort</formatted>, 
+					<formatted style="code">head</formatted>,
+					<formatted style="code">tail</formatted>, 
+					<formatted style="code">split</formatted>, 
+					<formatted style="code">uniq</formatted>,
+					<formatted style="code">grep</formatted>, 
+					<formatted style="code">more</formatted>, 
+					<formatted style="code">less</formatted>,
+					<formatted style="code">wc</formatted>, 
+					<formatted style="code">grep</formatted>, ...
+					Vous en connaissez déjà ;
+					voyez-en les pages de manuel respectives et l'aide 
+					(<formatted style="code">--help</formatted>) 
+					pour en connaitre le détail.
+				</paragraph>
+			</clarify>
+	
+			<look>
+				<paragraph title="Exemple" icon="look"/>
+				<paragraph>
+					On voudrait connaitre 
+					le nombre d'utilisateurs qui
+					sont connectés à linux1 pour le moment.
+				</paragraph>
+				<paragraph>
+					Voyons, étape par étape, comment on peut
+					obtenir le résultat.
+				</paragraph>
+				<list listStyle="ordered">
+					<item>
+						La première étape est de penser
+						à la commande 
+						<formatted style="code">who</formatted>
+						qui affiche toutes les connexions actives.
+					</item>
+					<item>
+						C'est gagné, il suffit de compter
+						le nombre de lignes, direz-vous !
+						Allons ! Ne nous arrêtons pas là ;
+						l'ordinateur peut compter pour nous,
+						ce qui donne :
+						<paragraph cssClass="java">
+	who | wc -l
+						</paragraph>
+					</item>
+					<item>
+						<paragraph>
+							Cette fois, ça y est, on a la réponse !
+							Ben, non !
+							Il y a un piège 
+							car la commande
+							<formatted style="code">who</formatted>
+							ne donne pas les utilisateurs
+							mais les connexions
+							ce qui n'est pas tout à fait
+							la même chose ;
+							un utilisateur peut avoir
+							ouvert plusieurs fenêtres "putty". 
+						</paragraph>
+						<paragraph>
+							La commande 
+							<formatted style="code">uniq</formatted>
+							peut venir à notre secours en supprimant
+							les doublons mais il faut que les
+							lignes soient parfaitement identiques
+							et contigües.
+						</paragraph>
+						<paragraph>
+							Parfait !
+							La commande
+							<formatted style="code">cut</formatted>
+							peut ne garder que certaines colonnes
+							et la commande
+							<formatted style="code">sort</formatted>
+							peut trier les lignes.
+							On obtient alors :							
+						</paragraph>
+						<paragraph cssClass="java">
+	who | cut -f 1 -d ' ' | sort | uniq | wc -l
+						</paragraph>
+						<paragraph>
+							Je ne me réjouis pas trop vite ;
+							je suis sûr que vous allez encore
+							trouver une faille, n'est-ce pas ?
+							Non, pas cette-fois ; on y est !
+						</paragraph>
+					</item>
+
+				</list>
+			</look>
+			
+			<act>
+				<paragraph title="Exercice 1 - Nombre de connexions d'un utilisateur" icon="act"/>
+				<paragraph>
+					Trouvez un enchainement de commandes
+					qui permet de donner le nombre de connexions
+					d'un utilisateur donné.
+				</paragraph>
+				<paragraph>
+					Il existe de nombreuses façons de résoudre
+					cet exercice. 
+					Celle à laquelle nous pensons fait intervenir :
+					<formatted style="code">grep</formatted>,
+					<formatted style="code">wc</formatted>,
+					et <formatted style="code">who</formatted>.
+				</paragraph>
+
+				<paragraph title="Exercice 2 - Nombre de PC connectés" icon="act"/>
+				<paragraph>
+					Trouvez un enchainement de commandes
+					qui permet de donner le nombre de PC
+					connectés à linux1.
+					Ce n'est pas exactement le nombre d'utilisateurs
+					car un utilisateur pourrait être connecté
+					sur plusieurs machines.
+				</paragraph>
+				<paragraph>
+					À nouveau,
+					il existe de nombreuses façons de résoudre
+					cet exercice. 
+					Celle à laquelle nous pensons fait intervenir
+					la commande 
+					<formatted style="code">tr -s ' '</formatted>
+					qui supprime plusieurs occurences
+					consécutives d'un même caractère
+					facilitant ainsi la sélection par colonne
+					de la commande 
+					<formatted style="code">cut</formatted>.
+				</paragraph>
+
+				<paragraph title="Exercice 3 - Droits sur les dossiers personnels" icon="act"/>
+				<paragraph>
+					Trouvez un enchainement de commandes
+					qui permet de donner 
+					le nombre de professeurs
+					qui ont donné le droit à ceux qui
+					ne font pas partie de leur groupe
+					d'entrer dans leur dossier personnel.
+				</paragraph>
+				<paragraph>
+					À votre imagination...
+				</paragraph>
+
+			</act>
+
+		</learningObject>
+		
+	</unit>
+	
+	<!-- ========================================= -->
+	<unit label="Transfert" title="Transfert de fichiers">
+	<!-- ========================================= -->
+
+	  <learningObject title="Transfert de fichiers"> 
+	  <!-- ========================================= -->
+    
+      <clarify>
+      <paragraph>  
+          Il est bon de pouvoir récupérer ce que vous avez déjà fait sur linux1. <newLine/>
+          Il existe plusieurs méthodes décrites dans l'aide-mémoire (dans le répertoire <formatted style="italic">aide</formatted>). 
+        </paragraph>
+        <paragraph>
+          <list listStyle="unordered">
+          <item>
+            La solution la plus complète : la commande DOS ftp.
+            Pour ce faire :
+            Ouvrir une console DOS (Start/Run.../cmd) et entrer la commande ftp linux1,
+            s'identifier (login/password),
+            commandes put pour envoyer un fichier de DOS vers Linux et get pour l’opération inverse
+            commandes mput et mget pour envoyer/recevoir plusieurs fichiers 
+            quit pour quitter.
+          </item>
+          <item>
+            <list listStyle="ordered">
+              <item>Ouvrez l'explorateur de fichier Windows (par exemple en cliquant sur l'icône "My Computer").</item>  
+              <item>
+                Dans le champ d'adresse, tapez l'adresse <formatted style="input">ftp://linux1</formatted><newLine/>
+                <popup title="une capture d'écran">
+                  <multimedia src="../image/transfert.jpg" type="jpeg"/>
+                </popup>
+              </item>  
+              <item>Une boite de dialogue vous demande votre login et mot de passe (sur <formatted style="italic">linux1</formatted>).</item>  
+              <item>Vous voyez apparaitre un dossier "linux1" qui correspond à votre dossier sur <formatted style="italic">linux1</formatted>. </item>
+              <item>
+                Vous pouvez y prendre/déposer des fichiers comme vous le feriez pour un dossier Windows. 
+                Vous pouvez par exemple les mettre sur une <formatted style="bold">clé USB</formatted>.
+              </item>
+            </list>  
+          </item>
+          <item>
+            La solution la plus moderne: un logiciel de transfert ftp
+            Il existe moult logiciels faisant ce genre de travail. Celui installé à l'école s'appelle FileZilla. Pas besoin d'explication, 
+            dès que vous serez connecté –et après l'installation—  vous verrez apparaitre votre répertoire local et votre répertoire distant ... 
+            un glisser-déplacer (drag and drop) devrait faire l'affaire. 
+          </item>
+        </list>
+        </paragraph>
+        <paragraph>  
+          Il est bon de pouvoir récupérer ce que vous avez déjà fait sur linux1. <newLine/>
+          Il existe plusieurs méthodes décrites dans l'aide-mémoire (dans le répertoire <formatted style="italic">aide</formatted>). <newLine/>
+          En voici une.  <newLine/>
+        </paragraph>  
+        
+        <list listStyle="ordered">
+          <item>Ouvrez l'explorateur de fichier Windows (par exemple en cliquant sur l'icône "My Computer").</item>  
+          <item>
+            Dans le champ d'adresse, tapez l'adresse <formatted style="input">ftp://linux1</formatted><newLine/>
+            <popup title="une capture d'écran">
+				<multimedia src="../image/transfert.jpg" type="jpeg"/>
+			</popup>
+            </item>  
+          <item>Une boite de dialogue vous demande votre login et mot de passe (sur <formatted style="italic">linux1</formatted>).</item>  
+          <item>Vous voyez apparaitre un dossier "linux1" qui correspond à votre dossier sur <formatted style="italic">linux1</formatted>. </item>
+          <item>
+            Vous pouvez y prendre/déposer des fichiers comme vous le feriez pour un dossier Windows. 
+            Vous pouvez par exemple les mettre sur une <formatted style="bold">clé USB</formatted>.
+          </item>
+        </list>  
+      </clarify>
+    </learningObject>
+</unit>
+	
+	<!-- ========================================= -->
+	<unit label="Processus" title="Gestion des processus">
+	<!-- ========================================= -->
+
+		<learningObject title="Gestion des processus">
+		<!-- ========================================= -->
+			
+			<clarify>
+				<paragraph>
+					Les programmes contenant des boucles
+					peuvent poser quelques soucis.
+					Par exemple, une boucle mal écrite peut
+					donner un processus qui tourne
+					indéfiniment.
+					Ou encore un processus peut prendre
+					beaucoup de temps et ralentir
+					les autres processus
+					tournant sur la même machine.
+					Voyons comment gérer les processus.
+				</paragraph>
+
+				<box>
+					<list listStyle="unordered">
+					<item>
+						La commande <formatted style="code">ps</formatted>
+						affiche une image statique de l'état des processus en cours.
+					</item>
+					<item>
+						La commande <formatted style="code">kill</formatted>
+						envoie un signal à un processus.
+						(Un signal est un message simple envoyé à un processus.
+						Les signaux ont un nom et un ou plusieurs numéro(s)
+						selon le système d'exploitation).
+					</item>
+					<item>
+						Tout processus est identifié par un
+						<formatted style="code">PID</formatted> (Processus Id)</item>
+					</list>
+				</box>
+			</clarify>
+
+			<look>
+				<paragraph title="Exemple" icon="look"/>
+				<multimedia src="../image/capt1.png" type="png" 
+						legend="ps et kill" width="100" units="percent"/>
+				<paragraph>
+					<list listStyle="unordered">
+					<item>
+						<formatted style="code">kill 3599</formatted>
+						envoie au processus de PID 
+						<formatted style="code">3599</formatted>
+						le signal n° 15 (SIGTERM, signal par défaut),
+						qui demande au processus de se terminer.
+					</item>
+					<item>
+						<formatted style="code">kill -SIGKILL 3599</formatted> 
+						ou <formatted style="code">kill -9 3599</formatted>
+						envoie explicitement le signal n° 9 (SIGKILL) au processus 
+						<formatted style="code">3599</formatted>; ceci le tuera.
+					</item>
+					<item>
+						La touche clavier <formatted style="code">Ctrl-c</formatted>
+						envoie le signal n° 2 (SIGINT) au processus lié au terminal
+						et a comme effet de le
+						<formatted style="bold">terminer</formatted>.
+					</item>
+					<item>
+						La touche clavier <formatted style="code">Ctrl-z</formatted>
+						envoie le signal n° 20 (SIGTSTP) au processus lié au terminal
+						et a comme effet de le 
+						<formatted style="bold">suspendre</formatted>.
+						Ce dernier reste donc dans le système.
+					</item>
+					<item>
+						Pour obtenir la liste de tous les signaux :
+						<formatted style="code">kill -l</formatted> ou 
+						encore <formatted style="code">man 7 signal</formatted>.
+					</item>
+					</list>
+				</paragraph>
+			</look>
+	
+			<act>
+				<paragraph title="Expérimentation - La boucle infinie" icon="act"/>
+				<list listStyle="ordered">
+					<item>
+						Écrivez un programme minimal 
+						contenant une boucle infinie
+						<paragraph cssClass="java">
+	while(true){}
+						</paragraph>
+					</item>
+					<item>
+						Visualisez vos processus en cours en utilisant la commande 
+						<formatted style="code">ps u</formatted>.
+					</item>
+					<item>
+						Ouvrez une seconde fenêtre putty, et exécutez-y 
+						votre boucle infinie.
+						Exécutez à nouveau la commande 
+						<formatted style="code">ps u</formatted>
+						dans la première fenêtre.
+					</item>
+					<item>
+						<paragraph>
+						Retrouvez le processus correspondant au programme 
+						qui cycle (son PID)
+						et tuez-le en utilisant la commande kill
+						avec les bons paramètres. Quel nom a le programme à tuer ?
+						</paragraph>
+						<paragraph>
+						Sur linux1,
+						le système tue les processus après un temps défini
+						d'utilisation du CPU (timeout). Il se pourrait donc
+						qu'il s'arrête avant l'effet de votre action ;
+						ce n'est pas le moment de s'endormir ;-).
+						</paragraph>
+					</item>
+					<item>
+						Lancez une deuxième exécution et suspendez votre programme 
+						par <formatted style="code">Ctrl-z</formatted>.
+						Vérifiez l'état du processus stoppé par la commande 
+						<formatted style="code">ps</formatted>
+						(<formatted style="code">man ps</formatted> et recherchez 
+						la signification du champ 
+						<formatted style="code">STAT</formatted>).
+					</item>
+					<item>
+						Reprenez le processus interrompu en envoyant le signal 
+						SIGCONT (via la commande kill) 
+						et vérifiez son nouvel état avant qu'il ne soit éjecté par 
+						le système à cause du «timeout».
+					</item>
+					<item>
+						<paragraph>
+						Une deuxième manière de reprendre un processus suspendu
+						est de taper la commande
+						<formatted style="code">fg <formatted style="italic">num</formatted></formatted> 
+						(faites un <formatted style="code">man bash</formatted>),
+						cela doit être fait dans la console dans laquelle vous 
+						avez tapé <formatted style="code">Ctrl-z</formatted>.
+						Le numéro <formatted style="code"><formatted style=" italic">num</formatted></formatted>
+						est fourni par le système lorsque le processus 
+						a été suspendu par <formatted style="code">Ctrl-z</formatted>.
+						</paragraph>
+						<paragraph>
+						Essayez aussi <formatted style="code">fg</formatted> 
+						pour reprendre le dernier processus suspendu.
+						</paragraph>
+					</item>
+				</list>
+			</act>
+		</learningObject>
+
+	</unit>
+	
+	<unit label="Conclusion" title="Conclusion">
+		
+		<learningObject title="Félicitations">
+			<clarify>
+				<paragraph>
+					Vous êtes arrivés au bout de ce premier TD.
+        				</paragraph>
+        				<paragraph>
+					Avant de quitter le laboratoire, n'oubliez pas de 
+					quitter proprement la connexion avec <formatted style="code">linux1</formatted>
+						(<formatted style="input">exit</formatted>).
+					et d'éteindre l'ordinateur ou de vous déloguer.
+					</paragraph>
+				<paragraph>
+					Attention, afin d'arriver au laboratoire dans les meilleures conditions, il est 
+					bien de revoir la matière qui sera mise en pratique.
+					C'est pourquoi nous vous fournissons quelques <formatted style="bold">exercices préparatoires</formatted> à faire à la maison 
+					pour vous permettre d'évaluer si vous êtes prêt.
+					Afin de vérifier que vous préparez bien ces exercices, une
+					<formatted style="bold">interrogation</formatted>
+					sera faite avant de démarrer chaque labo.
+				</paragraph>
+				<paragraph>
+					À la semaine prochaine et soyez à l'heure !
+				</paragraph>
+			</clarify>
+		</learningObject>
+	</unit>
+	
+	<!--metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>1</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2013 - 2014</version>
+				<contribute>
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata-->
+
+</lesson>

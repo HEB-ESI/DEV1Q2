@@ -1,0 +1,50 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Consignes}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Ressources}{2}{subsection.1.2}
+\contentsline {section}{\numberline {2}Windows}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Imprimer}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Changer le mot de passe sous Windows}{3}{subsection.2.2}
+\contentsline {subparagraph}{R\'eflexion}{3}{section*.2}
+\contentsline {subparagraph}{Exemples de mots de passe}{3}{section*.3}
+\contentsline {subparagraph}{Changer le mot de passe}{3}{section*.4}
+\contentsline {subparagraph}{FAQ Windows}{4}{section*.5}
+\contentsline {section}{\numberline {3}Linux}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Pr\'esentation}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Se connecter}{4}{subsection.3.2}
+\contentsline {subparagraph}{Connectez-vous \`a linux1}{5}{section*.6}
+\contentsline {subsection}{\numberline {3.3}Le mode console}{5}{subsection.3.3}
+\contentsline {subparagraph}{Ma premi\`ere commande}{5}{section*.7}
+\contentsline {subparagraph}{Il faut \^etre pr\'ecis !}{6}{section*.8}
+\contentsline {subsection}{\numberline {3.4}Changer le mot de passe sous Linux}{6}{subsection.3.4}
+\contentsline {subparagraph}{\`A vous !}{6}{section*.9}
+\contentsline {subparagraph}{V\'erification}{7}{section*.10}
+\contentsline {subsection}{\numberline {3.5}Le dossier personnel et le dossier courant}{7}{subsection.3.5}
+\contentsline {subparagraph}{Examiner son dossier}{7}{section*.11}
+\contentsline {subparagraph}{Exp\'erimentation}{7}{section*.12}
+\contentsline {subparagraph}{Le dossier courant}{8}{section*.13}
+\contentsline {subparagraph}{Exp\'erimentation}{8}{section*.14}
+\contentsline {subparagraph}{Question}{8}{section*.15}
+\contentsline {subsection}{\numberline {3.6}L'\'editeur}{9}{subsection.3.6}
+\contentsline {subparagraph}{Exp\'erimentation}{9}{section*.16}
+\contentsline {subsection}{\numberline {3.7}Quelques commandes courantes}{9}{subsection.3.7}
+\contentsline {subparagraph}{Faisons le point}{9}{section*.17}
+\contentsline {subparagraph}{Quelques commandes en plus...}{9}{section*.18}
+\contentsline {subparagraph}{Exercice 1}{10}{section*.19}
+\contentsline {subparagraph}{Exercice 2}{10}{section*.20}
+\contentsline {subparagraph}{Exercice 3}{10}{section*.21}
+\contentsline {subparagraph}{Exercice 4}{10}{section*.22}
+\contentsline {subparagraph}{FAQ Linux}{11}{section*.23}
+\contentsline {section}{\numberline {4}Les outils virtuels}{11}{section.4}
+\contentsline {subsection}{\numberline {4.1}Les outils virtuels}{11}{subsection.4.1}
+\contentsline {subparagraph}{A. Le site de l'\'ecole}{11}{section*.24}
+\contentsline {subparagraph}{Exercice}{11}{section*.25}
+\contentsline {subparagraph}{B. po\'ESI}{12}{section*.26}
+\contentsline {subparagraph}{C. Le mail}{12}{section*.27}
+\contentsline {subparagraph}{D. Le drive}{12}{section*.28}
+\contentsline {subparagraph}{Exercice}{12}{section*.29}
+\contentsline {subparagraph}{E. L'agenda}{12}{section*.30}
+\contentsline {subparagraph}{F. Fora}{13}{section*.31}
+\contentsline {subparagraph}{Exercice}{13}{section*.32}
+\contentsline {section}{\numberline {5}Conclusion}{13}{section.5}
+\contentsline {subsection}{\numberline {5.1}F\'elicitations}{13}{subsection.5.1}

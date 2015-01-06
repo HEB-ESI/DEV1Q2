@@ -1,0 +1,140 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TDLinux - Prise en main de l’environnement, rappels, linux avancé: Rediriger la sortie. Exemple. Exercice. Note. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TDLinux - Prise en main de l’environnement, rappels, linux avancé, eLML" />
+      <title>1.8.2. Rediriger la sortie</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TDLinux - Prise en main de l’environnement, rappels, linux avancé</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Bases.html">1.1. Les commandes de base de Linux</a></li>
+               <li class="navigationLink"><a href="unit_Syst%C3%A8meDeFichiers.html">1.2. Système de fichiers, chemin absolu et relatif</a></li>
+               <li class="navigationLink"><a href="unit_LigneDeCommande.html">1.3. La ligne de commande</a></li>
+               <li class="navigationLink"><a href="unit_Permissions.html">1.4. Les permissions</a></li>
+               <li class="navigationLink"><a href="unit_Wc.html">1.5. Compter (wc)</a></li>
+               <li class="navigationLink"><a href="unit_Grep.html">1.6. Recherche dans des fichiers (grep)</a></li>
+               <li class="navigationLink"><a href="unit_Find.html">1.7. Recherche de fichier (find)</a></li>
+               <li class="navigationLink"><a href="unit_Redirections.html">1.8. Redirections</a><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="Redirections_learningObject1.html">1.8.1. Entrées et sorties standards</a></li>
+                     <li class="navigationActual"><strong>1.8.2. Rediriger la sortie</strong></li>
+                     <li class="navigationLink"><a href="Redirections_learningObject3.html">1.8.3. Rediriger l'entrée</a></li>
+                     <li class="navigationLink"><a href="Redirections_learningObject4.html">1.8.4. Les tubes (pipes en anglais)</a></li>
+                     <li class="navigationLink"><a href="Redirections_learningObject5.html">1.8.5. Rediriger les erreurs</a></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Processus.html">1.9. Les filtres Linux</a></li>
+               <li class="navigationLink"><a href="unit_Transfert.html">1.10. Transfert de fichiers</a></li>
+               <li class="navigationLink"><a href="unit_Processus.html">1.11. Gestion des processus</a></li>
+               <li class="navigationLink"><a href="unit_Conclusion.html">1.12. Conclusion</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="Redirections_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Redirections_learningObject3.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Redirections_learningObject2.html">1.8.2. Rediriger la sortie</h1>
+      <div id="d8e1859.html" class="clarify">
+         <p class="paragraph" id="d8e1860">
+            					Il est possible,
+            					au moment où on lance un programme,
+            					de rediriger sa sortie.
+            					Tout ce que le programme enverra
+            					sur sa sortie standard
+            					(par exemple avec un
+            					<code>System.out.println()</code>
+            					en Java) ne sera pas visible à l'écran
+            					mais sera envoyé dans, par exemple, un fichier.
+            				
+         </p>
+         <div class="box" id="d8e1865">
+            					Une redirection de sortie standard se note 
+            					«&gt;» ou «1&gt;» lors du lancement du programme.
+            					Ces redirections sont réalisées par le shell avant 
+            					l'exécution de la commande 
+            					et sont transparentes pour cette commande.
+            				
+         </div>
+      </div>
+      <div id="d8e1867.html" class="look">
+         <h4>Exemple<img src="../../../_templates/java/icons/look.gif" title="look" alt="look" class="icon" /></h4>
+         <p class="paragraph" title="Exemple" id="d8e1868"></p><pre>
+ls -l &gt; liste
+</pre>
+         					ou
+         				<pre>
+ls -l 1&gt; liste
+</pre><p class="paragraph" id="d8e1874">
+            					Ces deux commandes sont équivalentes;
+            					elles n'affichent pas le résultat à l'écran,
+            					mais l'écrivent dans le fichier 
+            					<code>liste</code> créé ici ou écrasé 
+            					s'il préexistait.
+            					Par défaut <code>ls -l</code> 
+            					affiche le résultat à l'écran.
+            					Nous avons <i>redirigé</i> 
+            					cette sortie standard vers un fichier, 
+            					en l'occurrence <code>liste</code>.
+            				
+         </p>
+         <p class="paragraph" id="d8e1888">
+            					Faites l'essai et vérifiez le contenu du fichier créé.
+            				
+         </p>
+      </div>
+      <div id="d8e1890.html" class="act">
+         <h4>Exercice<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
+         <p class="paragraph" title="Exercice" id="d8e1891"></p>
+         <ol class="list" id="d8e1892">
+            <li class="itemAlt">
+               						Reprenez votre programme qui affiche
+               						des suites de nombres et plus précisément
+               						celui qui affiche la suite appelée :
+               						"le pas croissant".
+               						Exécutez-le pour
+               						afficher les 1000 premiers nombres de cette suite.
+               					
+            </li>
+            <li class="item">
+               						Sauvez le résultat dans un fichier
+               						pour pouvoir l'examiner à votre aise.
+               						<b>Rappel</b> :
+               						pour examiner le contenu d'un fichier,
+               						inutile de passer par un éditeur,
+               						la commande
+               						<code>more</code>
+               						suffit.
+               					
+            </li>
+            <li class="itemAlt">
+               						Est-ce que le nombre 15007 en fait partie ?
+               						(aide : vous vous rappelez de la commande
+               						<code>grep</code> ?)
+               					
+            </li>
+         </ol>
+      </div>
+      <div id="d8e1908.html" class="clarify">
+         <h4>Note</h4>
+         <p class="paragraph" title="Note" id="d8e1909"></p>
+         <p class="paragraph" id="d8e1910">
+            					Avec la simple redirection en sortie, 
+            					si le fichier existe déjà, il est écrasé. 
+            					Nous pouvons choisir de ne pas l'écraser, 
+            					mais de le compléter 
+            					(ajouter du contenu à la fin du fichier) 
+            					via la double redirection (en sortie) notée 
+            					<code>&gt;&gt;</code>.			
+            				
+         </p>
+      </div>
+      <hr />
+      <div class="navigation_arrows"><a href="Redirections_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Redirections_learningObject3.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 6.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDLinux.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

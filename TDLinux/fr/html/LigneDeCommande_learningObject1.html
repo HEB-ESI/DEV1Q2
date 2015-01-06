@@ -1,0 +1,188 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TDLinux - Prise en main de l’environnement, rappels, linux avancé: La ligne de commande. La complétion de la commande. Expérience. La complétion des noms de fichiers. Exercice. Joker. Exercices. Revenir à une commande précédente. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TDLinux - Prise en main de l’environnement, rappels, linux avancé, eLML" />
+      <title>1.3.1. La ligne de commande</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TDLinux - Prise en main de l’environnement, rappels, linux avancé</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Bases.html">1.1. Les commandes de base de Linux</a></li>
+               <li class="navigationLink"><a href="unit_Syst%C3%A8meDeFichiers.html">1.2. Système de fichiers, chemin absolu et relatif</a></li>
+               <li class="navigationLink"><a href="unit_LigneDeCommande.html">1.3. La ligne de commande</a><ul class="navigation nav_lo">
+                     <li class="navigationActual"><strong>1.3.1. La ligne de commande</strong></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Permissions.html">1.4. Les permissions</a></li>
+               <li class="navigationLink"><a href="unit_Wc.html">1.5. Compter (wc)</a></li>
+               <li class="navigationLink"><a href="unit_Grep.html">1.6. Recherche dans des fichiers (grep)</a></li>
+               <li class="navigationLink"><a href="unit_Find.html">1.7. Recherche de fichier (find)</a></li>
+               <li class="navigationLink"><a href="unit_Redirections.html">1.8. Redirections</a></li>
+               <li class="navigationLink"><a href="unit_Processus.html">1.9. Les filtres Linux</a></li>
+               <li class="navigationLink"><a href="unit_Transfert.html">1.10. Transfert de fichiers</a></li>
+               <li class="navigationLink"><a href="unit_Processus.html">1.11. Gestion des processus</a></li>
+               <li class="navigationLink"><a href="unit_Conclusion.html">1.12. Conclusion</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="unit_LigneDeCommande.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Permissions.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="LigneDeCommande_learningObject1.html">1.3.1. La ligne de commande</h1>
+      <div id="d8e745.html" class="clarify">
+         <p class="paragraph" id="d8e746">
+            Parfois, vous devez entrer une commande assez longue parce que les noms de fichiers
+            sont longs et/ou nombreux.
+            Linux offre plusieurs facilités pour simplifier l'entrée de longues commandes.  
+            
+         </p>
+      </div>
+      <div id="d8e748.html" class="clarify">
+         <h4>La complétion de la commande<img src="../../../_templates/java/icons/icon_reading.gif" title="icon_reading" alt="icon_reading" class="icon" /></h4>
+         <p class="paragraph" title="La complétion de la commande" id="d8e749"></p>
+         <p class="paragraph" id="d8e750">
+            Lorsque vous appuyez sur la touche <span class="input">TAB</span>,
+            le shell tente de compléter le début de commande que vous avez déjà tapé.
+            Si plusieurs possibilités existent, elles sont affichées si vous appuyez 2x sur  <span class="input">TAB</span>.  
+            
+         </p>
+      </div>
+      <div id="d8e758.html" class="clarify">
+         <h4>Expérience<img src="../../../_templates/java/icons/icon_experiment.gif" title="icon_experiment" alt="icon_experiment" class="icon" /></h4>
+         <p class="paragraph" title="Expérience" id="d8e759"></p>
+         <p class="paragraph" id="d8e760">  
+            Supposons que vous ne vous rappeliez plus très bien de la commande qui permet de modifier
+            le mot de passe.
+            Vous vous rappelez juste qu'elle commence par <span class="input">pas</span>.  
+            
+         </p>
+         <ol class="list" id="d8e765">
+            <li class="itemAlt">
+               			  Tapez <span class="input">pas</span>  
+               			  puis appuyez 2x sur la touche <span class="input">TAB</span>.
+            </li>
+            <li class="item">
+               			Entrez un <span class="input">s</span>  
+               puis appuyez à nouveau sur <span class="input">TAB</span>.
+               
+            </li>
+         </ol>
+      </div>
+      <div id="d8e782.html" class="clarify">
+         <h4>La complétion des noms de fichiers<img src="../../../_templates/java/icons/icon_reading.gif" title="icon_reading" alt="icon_reading" class="icon" /></h4>
+         <p class="paragraph" title="La complétion des noms de fichiers" id="d8e783"></p>
+         <p class="paragraph" id="d8e784">
+            La touche de tabulation permet également de compléter un nom de fichier. 
+            
+         </p>
+      </div>
+      <div id="d8e786.html" class="act">
+         <h4>Exercice<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
+         <p class="paragraph" title="Exercice" id="d8e787"></p>
+         <ol class="list" id="d8e788">
+            <li class="itemAlt">
+               Dans votre dossier td3, copiez le fichier <br /><code>monfichieraunomtellementlongquilmeparaitpeuprobabledeletaper2xsanserreur</code>
+               qui se trouve dans le dossier <code>/eCours/java/td/td3</code>.
+               
+            </li>
+            <li class="item">Affichez le contenu de ce fichier en évitant de retaper son nom.</li>
+         </ol>
+      </div>
+      <div id="d8e800.html" class="clarify">
+         <h4>Joker<img src="../../../_templates/java/icons/icon_reading.gif" title="icon_reading" alt="icon_reading" class="icon" /></h4>
+         <p class="paragraph" title="Joker" id="d8e801"></p>
+         <p class="paragraph" id="d8e802">
+            Il faut savoir que beaucoup de commandes linux qui traitent un fichier peuvent en
+            traiter plusieurs à la fois; il suffit de les indiquer tous.
+            
+         </p>
+         <p class="paragraph" id="d8e804">
+            Par exemple : <span class="input">rm texte1 texte2 texte3 texte4</span> supprime les 4 fichiers indiqués.
+            
+         </p>
+         <p class="paragraph" id="d8e809">
+            On voudrait aller plus loin et éviter de taper explicitement chaque nom. Par exemple,
+            on pourrait avoir envie de dire :
+            
+            <ol class="list" id="d8e811">
+               <li class="itemAlt">Supprime tous les fichiers qui commencent par « texte » ;</li>
+               <li class="item">Supprime tous les fichiers Java (qui se terminent par .java) ;</li>
+               <li class="itemAlt">...</li>
+            </ol>
+            C'est possible grâce à la notion de « joker ». 
+            On ne va pas donner explicitement un nom de fichier mais un « motif », c'est-à-dire
+            une description des noms de fichiers concernés.
+            
+         </p>
+         <p class="paragraph" id="d8e819">
+            Il y a essentiellement deux jokers : 
+            
+            <ul class="list" id="d8e821">
+               <li class="itemAlt"><span class="input">?</span> : lorsque le bash rencontre un <code>?</code> 
+                  dans un nom de fichier il sait qu'il peut le remplacer par n'importe quel caractère
+                  ;
+                  
+               </li>
+               <li class="item">
+                  et <span class="input">*</span> : lorsque le bash rencontre un <code>*'</code> 
+                  dans un nom de fichier il sait qu'il peut le remplacer par n'importe quelle suite
+                  de caractères  (0, 1 ou plusieurs caractères).
+                  
+               </li>
+            </ul>
+         </p>
+      </div>
+      <div id="d8e837.html" class="clarify">
+         <h4>Exercices<img src="../../../_templates/java/icons/icon_experiment.gif" title="icon_experiment" alt="icon_experiment" class="icon" /></h4>
+         <p class="paragraph" title="Exercices" id="d8e838"></p>
+         <ol class="list" id="d8e839">
+            <li class="itemAlt">
+               Copiez dans votre répertoire td3 tous les fichiers du répertoire 
+               <code>/eCours/java/td/td3</code> dont la deuxième lettre est un '<code>x</code>'.
+               
+            </li>
+            <li class="item">
+               Copiez dans votre répertoire tdLinux tous les fichiers du répertoire
+               <code>/eCours/java/td/td3</code> dont l'extension est <code>.java</code> 
+               (c'est possible sans passer par un <span class="input">cd /eCours/java/td/td3</span>)
+               
+            </li>
+            <li class="itemAlt">
+               Listez le contenu des répertoires des étudiants (pour rappel, les répertoires des
+               étudiants sont ceux 
+               qui se trouvent dans <code>/home</code> et qui commencent par un '<code>g</code>').
+               
+            </li>
+            <li class="item">
+               Listez le contenu des répertoires des professeurs (pour rappel, les  
+               répertoires des professeurs sont ceux qui se trouvent dans <code>/home</code> et qui sont composés de 3 lettres).
+               
+            </li>
+         </ol>
+      </div>
+      <div id="d8e872.html" class="clarify">
+         <h4>Revenir à une commande précédente<img src="../../../_templates/java/icons/icon_reading.gif" title="icon_reading" alt="icon_reading" class="icon" /></h4>
+         <p class="paragraph" title="Revenir à une commande précédente" id="d8e873"></p>
+         <p class="paragraph" id="d8e874">  
+            Il arrive souvent qu'il faille entrer une commande qu'on a déjà écrite il y a peu
+            (ou en tout cas fort proche de ce qu'on a déjà écrit). 
+            C'est là que les flèches viennent à notre secours.  
+            
+         </p>
+         <p class="paragraph" id="d8e876">  
+            La flèche vers le haut permet de revenir aux commandes précédentes et de les modifier.
+            À utiliser sans modération...  
+            
+         </p>
+      </div>
+      <hr />
+      <div class="navigation_arrows"><a href="unit_LigneDeCommande.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Permissions.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 6.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDLinux.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>
