@@ -541,7 +541,7 @@
         </paragraph>
       </clarify>
       
-      <clarify>
+      <act>
         <paragraph title="Exercices" icon="icon_experiment"/> 
         <list listStyle="ordered">
           <item>
@@ -562,7 +562,59 @@
             répertoires des professeurs sont ceux qui se trouvent dans <formatted style="code">/home</formatted> et qui sont composés de 3 lettres).
           </item>  
         </list>
-      </clarify>
+      </act>
+      
+      <act>
+				<selfCheck title="Sélection multiple" shuffle="no">
+					<multipleChoice>
+					 	<question>La commande <formatted style="code">rm td*.java</formatted> supprime le(s) fichier(s) :
+						</question>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractère(s)" correct="yes"> 
+							td.java
+						</answer>
+			 			<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractère(s) mais le fichier doit se terminer par .java" correct="no"> 
+							td2
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractère(s)" correct="yes"> 
+							td2.java
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractère(s)" correct="yes"> 
+							td3Prepa.java
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractère(s)" correct="yes"> 
+							td3.java
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractère(s)" correct="yes"> 
+							td10.java
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+        
+        <selfCheck title="" shuffle="no">
+					<multipleChoice>
+						<question>La commande <formatted style="code">rm td?.java</formatted> supprime le(s) fichier(s) :
+						</question>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="no"> 
+              td.java
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère mais le fichier doit se terminer par .java" correct="no"> 
+							td2
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="yes"> 
+							td2.java
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="no"> 
+							td3Prepa.java
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="yes"> 
+							td3.java
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="no"> 
+							td10.java
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+			</act>
       
       <clarify>
         <paragraph title="Revenir à une commande précédente" icon="icon_reading"/> 

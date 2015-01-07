@@ -38,8 +38,8 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="unit_Processus.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Transfert.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Processus_learningObject1.html">1.9.1. Les filtres Linux</h1>
-      <div id="d8e2060.html" class="clarify">
-         <p class="paragraph" id="d8e2061">
+      <div id="d8e2099.html" class="clarify">
+         <p class="paragraph" id="d8e2100">
             					De nombreuses commandes Linux
             					sont basées sur le principe 
             					<code>KISS</code>
@@ -54,7 +54,7 @@
             					les filtres sont à mettre en évidence.
             				
          </p>
-         <div class="box" id="d8e2066">
+         <div class="box" id="d8e2105">
             					Un <code>filtre</code>
             					est une commande Linux 
             					qui acquiert des données sur l'entrée standard 
@@ -62,7 +62,7 @@
             					après les avoir éventuellement transformées.
             				
          </div>
-         <p class="paragraph" id="d8e2071">
+         <p class="paragraph" id="d8e2110">
             					Nous allons nous concentrer sur les
             					filtres suivants :
             					<code>tr</code>, 
@@ -85,21 +85,21 @@
             				
          </p>
       </div>
-      <div id="d8e2117.html" class="look">
+      <div id="d8e2156.html" class="look">
          <h4>Exemple<img src="../../../_templates/java/icons/look.gif" title="look" alt="look" class="icon" /></h4>
-         <p class="paragraph" title="Exemple" id="d8e2118"></p>
-         <p class="paragraph" id="d8e2119">
+         <p class="paragraph" title="Exemple" id="d8e2157"></p>
+         <p class="paragraph" id="d8e2158">
             					On voudrait connaitre 
             					le nombre d'utilisateurs qui
             					sont connectés à linux1 pour le moment.
             				
          </p>
-         <p class="paragraph" id="d8e2121">
+         <p class="paragraph" id="d8e2160">
             					Voyons, étape par étape, comment on peut
             					obtenir le résultat.
             				
          </p>
-         <ol class="list" id="d8e2123">
+         <ol class="list" id="d8e2162">
             <li class="itemAlt">
                						La première étape est de penser
                						à la commande 
@@ -117,7 +117,7 @@
 	who | wc -l
 						</pre></li>
             <li class="itemAlt">
-               <p class="paragraph" id="d8e2134">
+               <p class="paragraph" id="d8e2173">
                   							Cette fois, ça y est, on a la réponse !
                   							Ben, non !
                   							Il y a un piège 
@@ -131,7 +131,7 @@
                   							ouvert plusieurs fenêtres "putty". 
                   						
                </p>
-               <p class="paragraph" id="d8e2139">
+               <p class="paragraph" id="d8e2178">
                   							La commande 
                   							<code>uniq</code>
                   							peut venir à notre secours en supprimant
@@ -140,7 +140,7 @@
                   							et contigües.
                   						
                </p>
-               <p class="paragraph" id="d8e2144">
+               <p class="paragraph" id="d8e2183">
                   							Parfait !
                   							La commande
                   							<code>cut</code>
@@ -152,7 +152,7 @@
                   						
                </p><pre>
 	who | cut -f 1 -d ' ' | sort | uniq | wc -l
-						</pre><p class="paragraph" id="d8e2154">
+						</pre><p class="paragraph" id="d8e2193">
                   							Je ne me réjouis pas trop vite ;
                   							je suis sûr que vous allez encore
                   							trouver une faille, n'est-ce pas ?
@@ -162,16 +162,16 @@
             </li>
          </ol>
       </div>
-      <div id="d8e2156.html" class="act">
+      <div id="d8e2195.html" class="act">
          <h4>Exercice 1 - Nombre de connexions d'un utilisateur<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Exercice 1 - Nombre de connexions d'un utilisateur" id="d8e2157"></p>
-         <p class="paragraph" id="d8e2158">
+         <p class="paragraph" title="Exercice 1 - Nombre de connexions d'un utilisateur" id="d8e2196"></p>
+         <p class="paragraph" id="d8e2197">
             					Trouvez un enchainement de commandes
             					qui permet de donner le nombre de connexions
             					d'un utilisateur donné.
             				
          </p>
-         <p class="paragraph" id="d8e2160">
+         <p class="paragraph" id="d8e2199">
             					Il existe de nombreuses façons de résoudre
             					cet exercice. 
             					Celle à laquelle nous pensons fait intervenir :
@@ -181,8 +181,8 @@
             				
          </p>
          <h4>Exercice 2 - Nombre de PC connectés<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Exercice 2 - Nombre de PC connectés" id="d8e2171"></p>
-         <p class="paragraph" id="d8e2172">
+         <p class="paragraph" title="Exercice 2 - Nombre de PC connectés" id="d8e2210"></p>
+         <p class="paragraph" id="d8e2211">
             					Trouvez un enchainement de commandes
             					qui permet de donner le nombre de PC
             					connectés à linux1.
@@ -191,7 +191,7 @@
             					sur plusieurs machines.
             				
          </p>
-         <p class="paragraph" id="d8e2174">
+         <p class="paragraph" id="d8e2213">
             					À nouveau,
             					il existe de nombreuses façons de résoudre
             					cet exercice. 
@@ -206,8 +206,8 @@
             				
          </p>
          <h4>Exercice 3 - Droits sur les dossiers personnels<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Exercice 3 - Droits sur les dossiers personnels" id="d8e2182"></p>
-         <p class="paragraph" id="d8e2183">
+         <p class="paragraph" title="Exercice 3 - Droits sur les dossiers personnels" id="d8e2221"></p>
+         <p class="paragraph" id="d8e2222">
             					Trouvez un enchainement de commandes
             					qui permet de donner 
             					le nombre de professeurs
@@ -216,13 +216,13 @@
             					d'entrer dans leur dossier personnel.
             				
          </p>
-         <p class="paragraph" id="d8e2185">
+         <p class="paragraph" id="d8e2224">
             					À votre imagination...
             				
          </p>
       </div>
       <hr />
       <div class="navigation_arrows"><a href="unit_Processus.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Transfert.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 6.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDLinux.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 7.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDLinux.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

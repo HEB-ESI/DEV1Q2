@@ -1,0 +1,8 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Algorithmes s\'equentiels}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Le pseudo-code}{2}{subsection.1.1}
+\contentsline {section}{\numberline {2}Variables et types}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1} Les types autoris\'es en algo}{2}{subsection.2.1}
+\contentsline {subparagraph}{Les commandes de base}{3}{section*.2}
+\contentsline {subsection}{\numberline {2.2} Les types \'equivalents en java}{3}{subsection.2.2}
+\contentsline {subparagraph}{Les commandes de base}{3}{section*.3}

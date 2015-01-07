@@ -24,72 +24,74 @@
 \contentsline {subparagraph}{Exercice}{10}{section*.17}
 \contentsline {subparagraph}{Joker}{11}{section*.18}
 \contentsline {subparagraph}{Exercices}{11}{section*.19}
-\contentsline {subparagraph}{Revenir \`a une commande pr\'ec\'edente}{12}{section*.20}
+\contentsline {subparagraph}{S\'election multiple}{12}{section*.20}
+\contentsline {subparagraph}{}{12}{section*.21}
+\contentsline {subparagraph}{Revenir \`a une commande pr\'ec\'edente}{12}{section*.22}
 \contentsline {section}{\numberline {4}Les permissions}{12}{section.4}
 \contentsline {subsection}{\numberline {4.1}Les groupes d'un utilisateur}{12}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Propri\'etaire et groupe d'un fichier}{12}{subsection.4.2}
-\contentsline {subparagraph}{Exercices}{14}{section*.24}
-\contentsline {subparagraph}{Exercices}{14}{section*.25}
+\contentsline {subsection}{\numberline {4.2}Propri\'etaire et groupe d'un fichier}{13}{subsection.4.2}
 \contentsline {subparagraph}{Exercices}{14}{section*.26}
-\contentsline {subparagraph}{FAQ}{15}{section*.27}
+\contentsline {subparagraph}{Exercices}{15}{section*.27}
+\contentsline {subparagraph}{Exercices}{15}{section*.28}
+\contentsline {subparagraph}{FAQ}{15}{section*.29}
 \contentsline {subsection}{\numberline {4.3}Les permissions}{15}{subsection.4.3}
-\contentsline {subparagraph}{Les permissions sur un fichier}{15}{section*.28}
-\contentsline {subparagraph}{Les permissions sur un r\'epertoire.}{16}{section*.30}
-\contentsline {subparagraph}{Changer les permissions.}{16}{section*.31}
-\contentsline {subparagraph}{Changer les permissions avec un nombre.}{17}{section*.32}
-\contentsline {subparagraph}{Changer les permissions avec des lettres.}{18}{section*.33}
-\contentsline {subparagraph}{Exercices}{19}{section*.34}
-\contentsline {subparagraph}{D\'eterminez les bonnes permissions}{19}{section*.35}
-\contentsline {subparagraph}{Exercice }{19}{section*.36}
-\contentsline {subparagraph}{D\'eterminez les bonnes permissions}{19}{section*.38}
-\contentsline {subparagraph}{Exercice}{20}{section*.39}
-\contentsline {subparagraph}{Permissions par d\'efaut}{21}{section*.41}
-\contentsline {subparagraph}{Modifier les permissions}{21}{section*.42}
-\contentsline {subparagraph}{Exercices}{21}{section*.43}
-\contentsline {subparagraph}{Exercices}{21}{section*.44}
-\contentsline {subparagraph}{Les commandes linux}{21}{section*.45}
-\contentsline {subparagraph}{Les permissions}{22}{section*.46}
-\contentsline {subparagraph}{}{22}{section*.47}
-\contentsline {subparagraph}{S\'election multiple}{22}{section*.48}
-\contentsline {section}{\numberline {5}Compter (wc)}{23}{section.5}
-\contentsline {subsection}{\numberline {5.1}Compter (wc)}{23}{subsection.5.1}
-\contentsline {subparagraph}{Exemple}{23}{section*.49}
-\contentsline {subparagraph}{Exercices}{23}{section*.50}
-\contentsline {section}{\numberline {6}Recherche dans des fichiers (grep)}{24}{section.6}
-\contentsline {subsection}{\numberline {6.1}Recherche dans des fichiers (grep)}{24}{subsection.6.1}
+\contentsline {subparagraph}{Les permissions sur un fichier}{15}{section*.30}
+\contentsline {subparagraph}{Les permissions sur un r\'epertoire.}{17}{section*.32}
+\contentsline {subparagraph}{Changer les permissions.}{17}{section*.33}
+\contentsline {subparagraph}{Changer les permissions avec un nombre.}{17}{section*.34}
+\contentsline {subparagraph}{Changer les permissions avec des lettres.}{18}{section*.35}
+\contentsline {subparagraph}{Exercices}{19}{section*.36}
+\contentsline {subparagraph}{D\'eterminez les bonnes permissions}{19}{section*.37}
+\contentsline {subparagraph}{Exercice }{19}{section*.38}
+\contentsline {subparagraph}{D\'eterminez les bonnes permissions}{20}{section*.40}
+\contentsline {subparagraph}{Exercice}{20}{section*.41}
+\contentsline {subparagraph}{Permissions par d\'efaut}{22}{section*.43}
+\contentsline {subparagraph}{Modifier les permissions}{22}{section*.44}
+\contentsline {subparagraph}{Exercices}{22}{section*.45}
+\contentsline {subparagraph}{Exercices}{22}{section*.46}
+\contentsline {subparagraph}{Les commandes linux}{22}{section*.47}
+\contentsline {subparagraph}{Les permissions}{23}{section*.48}
+\contentsline {subparagraph}{}{23}{section*.49}
+\contentsline {subparagraph}{S\'election multiple}{23}{section*.50}
+\contentsline {section}{\numberline {5}Compter (wc)}{24}{section.5}
+\contentsline {subsection}{\numberline {5.1}Compter (wc)}{24}{subsection.5.1}
 \contentsline {subparagraph}{Exemple}{24}{section*.51}
 \contentsline {subparagraph}{Exercices}{24}{section*.52}
-\contentsline {section}{\numberline {7}Recherche de fichier (find)}{24}{section.7}
-\contentsline {subsection}{\numberline {7.1}Recherche de fichier (find)}{24}{subsection.7.1}
+\contentsline {section}{\numberline {6}Recherche dans des fichiers (grep)}{25}{section.6}
+\contentsline {subsection}{\numberline {6.1}Recherche dans des fichiers (grep)}{25}{subsection.6.1}
 \contentsline {subparagraph}{Exemple}{25}{section*.53}
-\contentsline {subparagraph}{Exercice}{25}{section*.54}
-\contentsline {section}{\numberline {8}Redirections}{25}{section.8}
-\contentsline {subsection}{\numberline {8.1}Entr\'ees et sorties standards}{25}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Rediriger la sortie}{26}{subsection.8.2}
+\contentsline {subparagraph}{Exercices}{25}{section*.54}
+\contentsline {section}{\numberline {7}Recherche de fichier (find)}{25}{section.7}
+\contentsline {subsection}{\numberline {7.1}Recherche de fichier (find)}{25}{subsection.7.1}
 \contentsline {subparagraph}{Exemple}{26}{section*.55}
 \contentsline {subparagraph}{Exercice}{26}{section*.56}
-\contentsline {subparagraph}{Note}{26}{section*.57}
-\contentsline {subsection}{\numberline {8.3}Rediriger l'entr\'ee}{27}{subsection.8.3}
-\contentsline {subparagraph}{Exemple}{27}{section*.58}
-\contentsline {subparagraph}{Exp\'erimentation}{27}{section*.59}
-\contentsline {subparagraph}{Exercice}{27}{section*.60}
-\contentsline {subsection}{\numberline {8.4}Les tubes (pipes en anglais)}{27}{subsection.8.4}
-\contentsline {subparagraph}{Exemple}{28}{section*.61}
+\contentsline {section}{\numberline {8}Redirections}{26}{section.8}
+\contentsline {subsection}{\numberline {8.1}Entr\'ees et sorties standards}{26}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Rediriger la sortie}{27}{subsection.8.2}
+\contentsline {subparagraph}{Exemple}{27}{section*.57}
+\contentsline {subparagraph}{Exercice}{27}{section*.58}
+\contentsline {subparagraph}{Note}{27}{section*.59}
+\contentsline {subsection}{\numberline {8.3}Rediriger l'entr\'ee}{28}{subsection.8.3}
+\contentsline {subparagraph}{Exemple}{28}{section*.60}
+\contentsline {subparagraph}{Exp\'erimentation}{28}{section*.61}
 \contentsline {subparagraph}{Exercice}{28}{section*.62}
-\contentsline {subsection}{\numberline {8.5}Rediriger les erreurs}{28}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.4}Les tubes (pipes en anglais)}{28}{subsection.8.4}
 \contentsline {subparagraph}{Exemple}{29}{section*.63}
 \contentsline {subparagraph}{Exercice}{29}{section*.64}
-\contentsline {section}{\numberline {9}Les filtres Linux}{29}{section.9}
-\contentsline {subsection}{\numberline {9.1}Les filtres Linux}{29}{subsection.9.1}
-\contentsline {subparagraph}{Exemple}{29}{section*.65}
-\contentsline {subparagraph}{Exercice 1 - Nombre de connexions d'un utilisateur}{30}{section*.66}
-\contentsline {subparagraph}{Exercice 2 - Nombre de PC connect\'es}{30}{section*.67}
-\contentsline {subparagraph}{Exercice 3 - Droits sur les dossiers personnels}{30}{section*.68}
-\contentsline {section}{\numberline {10}Transfert de fichiers}{31}{section.10}
-\contentsline {subsection}{\numberline {10.1}Transfert de fichiers}{31}{subsection.10.1}
-\contentsline {section}{\numberline {11}Gestion des processus}{32}{section.11}
-\contentsline {subsection}{\numberline {11.1}Gestion des processus}{32}{subsection.11.1}
-\contentsline {subparagraph}{Exemple}{32}{section*.69}
-\contentsline {subparagraph}{Exp\'erimentation - La boucle infinie}{33}{section*.71}
-\contentsline {section}{\numberline {12}Conclusion}{33}{section.12}
-\contentsline {subsection}{\numberline {12.1}F\'elicitations}{33}{subsection.12.1}
+\contentsline {subsection}{\numberline {8.5}Rediriger les erreurs}{29}{subsection.8.5}
+\contentsline {subparagraph}{Exemple}{30}{section*.65}
+\contentsline {subparagraph}{Exercice}{30}{section*.66}
+\contentsline {section}{\numberline {9}Les filtres Linux}{30}{section.9}
+\contentsline {subsection}{\numberline {9.1}Les filtres Linux}{30}{subsection.9.1}
+\contentsline {subparagraph}{Exemple}{30}{section*.67}
+\contentsline {subparagraph}{Exercice 1 - Nombre de connexions d'un utilisateur}{31}{section*.68}
+\contentsline {subparagraph}{Exercice 2 - Nombre de PC connect\'es}{31}{section*.69}
+\contentsline {subparagraph}{Exercice 3 - Droits sur les dossiers personnels}{31}{section*.70}
+\contentsline {section}{\numberline {10}Transfert de fichiers}{32}{section.10}
+\contentsline {subsection}{\numberline {10.1}Transfert de fichiers}{32}{subsection.10.1}
+\contentsline {section}{\numberline {11}Gestion des processus}{33}{section.11}
+\contentsline {subsection}{\numberline {11.1}Gestion des processus}{33}{subsection.11.1}
+\contentsline {subparagraph}{Exemple}{33}{section*.71}
+\contentsline {subparagraph}{Exp\'erimentation - La boucle infinie}{34}{section*.73}
+\contentsline {section}{\numberline {12}Conclusion}{34}{section.12}
+\contentsline {subsection}{\numberline {12.1}F\'elicitations}{34}{subsection.12.1}

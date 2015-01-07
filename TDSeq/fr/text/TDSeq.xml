@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="TDSeq" title="TD Séquentiel - Rappels de base">
+	
+	<entry>
+		<paragraph>
+			Ce TD a pour but de 
+			<paragraph>
+			    <!--multimedia src="../image/fs.jpeg" type="jpeg" /-->
+        </paragraph>
+		</paragraph>
+	</entry>
+	
+	<!-- =========================================================== -->
+	<unit label="Séquentiel" title="Algorithmes séquentiels">
+	<!-- =========================================================== -->
+
+    <entry>Revoyons ici les bases du pseudo-code et leur traduction en Java.</entry>
+    
+		<learningObject title="Le pseudo-code">
+		<!-- ================================================ -->
+		  <paragraph>
+		    Le pseudo-code ou Langage de Description des Algorithmes (LDA en abrégé) est un langage
+        formel et symbolique utilisant :
+        <list listStyle="unordered">
+			    <item>
+            des noms symboliques destinés à représenter les objets sur lesquels s’effectuent des
+            actions ;
+          </item>
+          <item>
+            des opérateurs symboliques ou des mots-clés traduisant les opérations primitives
+            exécutables par un exécutant donné ;
+          </item>
+          <item>
+            des structures de contrôle types.
+          </item>
+        </list>
+		  </paragraph>
+		</learningObject>
+
+	</unit>
+		
+	<!-- =================================================================== -->
+	<unit label="VariablesEtTypes" title="Variables et types">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Nous savons que les opérations que l’ordinateur devra exécuter portent sur des éléments qui
+        sont les <formatted style="bold">données</formatted> du problème.
+      </paragraph>
+      <paragraph>
+        Lorsqu’on attribue un <formatted style="bold">nom</formatted> 
+        et un <formatted style="bold">type</formatted> à ces données, on
+        parle alors de <formatted style="bold">variables</formatted>. 
+      </paragraph>
+      <paragraph>
+        Dans un algorithme, une variable conserve toujours son nom et
+        son type, mais peut changer de <formatted style="bold">valeur</formatted>.
+         <list listStyle="unordered">
+			    <item>
+            Le <formatted style="bold">nom</formatted> d’une variable permet de la caractériser et de la reconnaitre ;
+          </item>
+          <item>
+            le <formatted style="bold">type</formatted> d’une variable décrit la nature de son contenu.
+          </item>
+        </list>
+			</paragraph>
+    </entry>
+    
+			<learningObject title=" Les types autorisés en algo">
+			<!-- ================================================ -->
+			  <clarify>
+        <paragraph>
+          Dans un premier temps, les seuls types utilisés sont :
+          <list listStyle="unordered">
+            <item><formatted style="code">entier</formatted> pour les nombres entiers ;</item>
+            <item><formatted style="code">réel</formatted> pour les nombres réels ;</item>
+            <item><formatted style="code">caractère</formatted> pour les différentes lettres et caractères
+              (par exemple ceux qui apparaissent sur un clavier : ‘a’, ‘1’, ‘#’, etc.)</item>
+            <item><formatted style="code">chaine</formatted> pour les variables contenant un ou plusieurs caractère(s) ou aucun (la chaine vide)
+              (par exemple : "Bonjour", "Bonjour le monde", "a", "", etc.)</item>
+            <item><formatted style="code">booléen</formatted> les variables de ce type 
+            ne peuvent valoir que <formatted style="code">vrai</formatted> ou <formatted style="code">faux</formatted></item>
+          </list>
+        </paragraph>
+        </clarify>
+      
+        <act>
+				<selfCheck title="Les commandes de base" shuffle="yes">
+						<fillInBlanks>
+							<question> 
+								Quel(s) type(s) de données utiliseriez-vous pour représenter :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>une date du calendrier ? <gap answers="3 entiers,trois entiers,2 entiers 1 chaine,1 chaine 2 entiers">3 entiers</gap></item>  
+									<item>un moment dans la journée ? <gap answers="3 entiers, trois entiers">3 entiers</gap></item>  
+									<item>le prix d’un produit en grande surface ?<gap answers="1 réel,un réel, réel">1 réel</gap></item>  
+									<item>votre nom ? <gap answers="une chaine,1 chaine, chaine">1 chaine</gap></item>  
+									<item>vos initiales ?<gap answers="2 caractères,3 caractères">2 caractères</gap></item>  
+									<item>votre adresse ? <gap answers="1 chaine">1 chaine</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+				</act>
+      </learningObject>
+      
+      
+			<learningObject title=" Les types équivalents en java">
+			<!-- ================================================ -->
+			  <clarify>
+        <paragraph>
+          Dans un premier temps, les seuls types utilisés sont :
+          <list listStyle="unordered">
+            <item><formatted style="code">entier</formatted> pour les nombres entiers ;</item>
+            <item><formatted style="code">réel</formatted> pour les nombres réels ;</item>
+            <item><formatted style="code">caractère</formatted> pour les différentes lettres et caractères
+              (par exemple ceux qui apparaissent sur un clavier : ‘a’, ‘1’, ‘#’, etc.)</item>
+            <item><formatted style="code">chaine</formatted> pour les variables contenant un ou plusieurs caractère(s) ou aucun (la chaine vide)
+              (par exemple : "Bonjour", "Bonjour le monde", "a", "", etc.)</item>
+            <item><formatted style="code">booléen</formatted> les variables de ce type 
+            ne peuvent valoir que <formatted style="code">vrai</formatted> ou <formatted style="code">faux</formatted></item>
+          </list>
+        </paragraph>
+        </clarify>
+      
+        <act>
+				<selfCheck title="Les commandes de base" shuffle="yes">
+						<fillInBlanks>
+							<question> 
+								Quel(s) type(s) de données utiliseriez-vous pour représenter :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>une date du calendrier ? <gap answers="3 entiers,trois entiers,2 entiers 1 chaine,1 chaine 2 entiers">3 entiers</gap></item>  
+									<item>un moment dans la journée ? <gap answers="3 entiers, trois entiers">3 entiers</gap></item>  
+									<item>le prix d’un produit en grande surface ?<gap answers="1 réel,un réel, réel">1 réel</gap></item>  
+									<item>votre nom ? <gap answers="une chaine,1 chaine, chaine">1 chaine</gap></item>  
+									<item>vos initiales ?<gap answers="2 caractères,3 caractères">2 caractères</gap></item>  
+									<item>votre adresse ? <gap answers="1 chaine">1 chaine</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+				</act>
+      
+      </learningObject>
+	</unit>
+	
+	<!--metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>1</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2013 - 2014</version>
+				<contribute>
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata-->
+
+</lesson>

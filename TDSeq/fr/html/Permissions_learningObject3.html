@@ -1,0 +1,593 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Séquentiel - Rappels de base: Les permissions. Les permissions sur un fichier. Les permissions sur un répertoire. Changer les permissions. Changer les permissions avec un nombre. Changer les permissions avec des lettres. Exercices. Déterminez les bonnes permissions. Exercice . la réponse. Déterminez les bonnes permissions. Exercice. Permissions par défaut. Modifier les permissions. Exercices. Exercices. Les commandes linux. Les permissions. . Sélection multiple. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Séquentiel - Rappels de base, eLML" />
+      <title>1.4.3. Les permissions</title>
+      		
+      <link href="selfCheck.css" type="text/css" rel="stylesheet" media="screen" />
+      		<script src="selfCheck.js" type="text/javascript">
+         <!----></script><link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Séquentiel - Rappels de base</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_S%C3%A9quentiel.html">1.1. Algorithmes séquentiels</a></li>
+               <li class="navigationLink"><a href="unit_VariablesEtTypes.html">1.2. Variables et types</a></li>
+               <li class="navigationLink"><a href="unit_LigneDeCommande.html">1.3. La ligne de commande</a></li>
+               <li class="navigationLink"><a href="unit_Permissions.html">1.4. Les permissions</a><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="Permissions_learningObject1.html">1.4.1. Les groupes d'un utilisateur</a></li>
+                     <li class="navigationLink"><a href="Permissions_learningObject2.html">1.4.2. Propriétaire et groupe d'un fichier</a></li>
+                     <li class="navigationActual"><strong>1.4.3. Les permissions</strong></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Wc.html">1.5. Compter (wc)</a></li>
+               <li class="navigationLink"><a href="unit_Grep.html">1.6. Recherche dans des fichiers (grep)</a></li>
+               <li class="navigationLink"><a href="unit_Find.html">1.7. Recherche de fichier (find)</a></li>
+               <li class="navigationLink"><a href="unit_Redirections.html">1.8. Redirections</a></li>
+               <li class="navigationLink"><a href="unit_Processus.html">1.9. Les filtres Linux</a></li>
+               <li class="navigationLink"><a href="unit_Transfert.html">1.10. Transfert de fichiers</a></li>
+               <li class="navigationLink"><a href="unit_Processus.html">1.11. Gestion des processus</a></li>
+               <li class="navigationLink"><a href="unit_Conclusion.html">1.12. Conclusion</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="Permissions_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Wc.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Permissions_learningObject3.html">1.4.3. Les permissions</h1>
+      <h4>Les permissions sur un fichier<img src="../../../_templates/java/icons/icon_reading.gif" title="icon_reading" alt="icon_reading" class="icon" /></h4>
+      <p class="paragraph" title="Les permissions sur un fichier" id="d8e720"></p>
+      <div id="d8e721.html" class="clarify">
+         <p class="paragraph" id="d8e722">
+            					Vous savez qu'un fichier appartient à un utilisateur et est placé dans un groupe.
+            				
+         </p>
+         <p class="paragraph" id="d8e724">
+            					Vous savez aussi que vous pouvez donner des permissions différentes :
+            					
+            <ul class="list" id="d8e726">
+               <li class="itemAlt">au propriétaire du fichier ;</li>
+               <li class="item">aux utilisateurs qui appartiennent au même groupe que le fichier ;</li>
+               <li class="itemAlt"> à tous les autres. </li>
+            </ul>
+         </p>
+         <p class="paragraph" id="d8e733">
+            					Voyons maintenant quelles sont ces permissions.
+            					Il existe 3 types de permissions : en lecture, en écriture et en exécution.
+            					
+            <ul class="list" id="d8e735">
+               <li class="itemAlt">Lecture : si une personne a le droit en lecture sur un fichier, il peut en voir le
+                  contenu. Par exemple, avec cat, more ou encore view.
+               </li>
+               <li class="item">Écriture : Si une personne a le droit en écriture sur un fichier, il peut en modifier
+                  le contenu. Par exemple, avec nano.
+               </li>
+               <li class="itemAlt">Exécution : Cette permission concerne les exécutables. Un exécutable est un fichier
+                  qui contient un programme en langage machine directement exécutable par le processeur.
+               </li>
+            </ul>
+            Ces 3 permissions peuvent évidemment être combinées (exemple : on donne l'accès en
+            lecture ET en écriture). 
+            				
+         </p>
+         <p class="paragraph" id="d8e743">
+            				  En pratique, on ne veut pas donner les mêmes droits à tout le monde. On pourra
+            préciser :
+            				  
+            <ul class="list" id="d8e745">
+               <li class="itemAlt">les droits du propriétaire d'un fichier ;</li>
+               <li class="item">les droits des utilisateurs qui appartiennent au même groupe que le fichier ;</li>
+               <li class="itemAlt">les droits pour toutes les personnes non reprises dans une catégorie ci-dessus (les
+                  autres).
+               </li>
+            </ul>
+         </p>
+         <p class="paragraph" id="d8e752">
+            				  Lister au format long le contenu du répertoire nous permet de voir les infos
+            suivantes :
+            				
+         </p>
+         <p class="paragraph" id="d8e754">
+            Les permissions sont indiquées avec des lettres (r pour la lecture, w pour l'écriture
+            et x pour l'exécution) 
+            dans cet ordre en mettant un tiret (-) si la permission n'est pas donnée. 
+            
+         </p>
+         <p class="paragraph" id="d8e756">
+            Il y a 3 blocs de 3 données pour les droits du propriétaire, des utilisateurs du groupe
+            auquel le fichier est attribué et enfin, des autres (dans cet ordre).
+            
+         </p>
+         <p class="paragraph" id="d8e758">
+            Sur l'exemple ci-dessus, on peut voir que le fichier<code> Max.java</code> :
+            
+            <ul class="list" id="d8e763">
+               <li class="itemAlt">est en lecture/écriture pour le propriétaire (g32671) ; </li>
+               <li class="item">est en lecture seule pour tous les utilisateurs du groupe users (en fait tout le monde
+                  sur linux1) ; 
+               </li>
+               <li class="itemAlt">est en lecture seule pour les autres (en fait personne sur linux1).</li>
+            </ul>
+         </p>
+      </div>
+      <div id="d8e770.html" class="clarify">
+         <h4>Les permissions sur un répertoire.<img src="../../../_templates/java/icons/icon_reading.gif" title="icon_reading" alt="icon_reading" class="icon" /></h4>
+         <p class="paragraph" title="Les permissions sur un répertoire." id="d8e771"></p>
+         <p class="paragraph" id="d8e772">
+            					Tout comme pour les fichiers, on peut donner des permissions au dossier.
+            
+         </p>
+         <p class="paragraph" id="d8e774">
+            					  La situation est sensiblement la même : 
+            					  
+            <ul class="list" id="d8e776">
+               <li class="itemAlt">un dossier a un propriétaire et un groupe ;</li>
+               <li class="item">on indique les mêmes permissions r, w et x ;</li>
+               <li class="itemAlt">on spécifie des permissions pour le propriétaire, le groupe et les autres.</li>
+            </ul>
+         </p>
+         <p class="paragraph" id="d8e783">
+            Ce qui change, c'est la signification des permissions. Que veut dire « exécuter »
+            un dossier par exemple ?
+            				
+         </p>
+         <p class="paragraph" id="d8e785">
+            					Explicitons à présent le sens de chaque droit :
+            					 
+            <ul class="list" id="d8e787">
+               <li class="itemAlt">lecture : on a le droit de lister le contenu du dossier, de voir ce qu'ilcontient.
+                  On peut par exemple faire un ls du dossier.
+               </li>
+               <li class="item">écriture : on peut modifier le contenu du dossier. On peut ainsi effacer un fichier
+                  (via la commande rm).
+                  					    On remarque ainsi que pour effacer un fichier il ne faut pas de droit en
+                  écriture sur le fichier mais bien sur le dossier qui le contient.
+               </li>
+               <li class="itemAlt">exécution : on peut « ouvrir » le dossier / entrer dedans. 
+                  					    On peut ainsi en faire son dossier courant (cd td1) ou le traverser dans
+                  un chemin (cat td1/monTexte1).
+               </li>
+            </ul>
+         </p>
+      </div>
+      <div id="d8e794.html" class="clarify">
+         <h4>Changer les permissions.<img src="../../../_templates/java/icons/icon_reading.gif" title="icon_reading" alt="icon_reading" class="icon" /></h4>
+         <p class="paragraph" title="Changer les permissions." id="d8e795"></p>
+         <p class="paragraph" id="d8e796">
+            					Lorsqu'un fichier est créé, il l'est avec des permissions par défaut définies
+            par l'administrateur du système.
+            				
+         </p>
+         <p class="paragraph" id="d8e798">
+            				  On peut évidemment les changer via la commande <span class="input">chmod</span>.
+            				
+         </p>
+         <p class="paragraph" id="d8e803">
+            				  Il existe 2 notations fort différentes pour indiquer les permissions : avec
+            un nombre et avec des lettres.
+            				
+         </p>
+         <h4>Changer les permissions avec un nombre.<img src="../../../_templates/java/icons/icon_reading.gif" title="icon_reading" alt="icon_reading" class="icon" /></h4>
+         <p class="paragraph" title="Changer les permissions avec un nombre." id="d8e805"></p>
+         <p class="paragraph" id="d8e806">
+            				  Pour changer les permissions avec un nombre, vous donnez d'un coup toutes les
+            permissions que vous autorisez 
+            				  
+            <ul class="list" id="d8e808">
+               <li class="itemAlt">d'abord, au propriétaire du dossier/fichier ;</li>
+               <li class="item">ensuite, aux utilisateurs qui appartiennent au même groupe que le dossier/fichier
+                  ;
+               </li>
+               <li class="itemAlt">enfin, à tous les autres. </li>
+            </ul>
+            Vous avez vu qu'il y a une permission de lecture, d'écriture et d'exécuter/de traverser.
+            Si vous avez fait un peu attention, vous aurez remarqué que chacune de ces permissions
+            se situe dans un ordre bien précis :
+            
+            <ul class="list" id="d8e816">
+               <li class="itemAlt">d'abord une permission de lecture (r) ;</li>
+               <li class="item">ensuite une permission d'écrire (w) ;</li>
+               <li class="itemAlt">enfin une permission d'exécuter/de traverser (x). </li>
+            </ul><span class="input">rwx</span> avec à chaque fois la possibilité ou non d'avoir cette permission.
+            				
+         </p>
+         <p class="paragraph" id="d8e826">
+            				  On pourrait 
+            				  
+            <ul class="list" id="d8e828">
+               <li class="itemAlt">
+                  avoir uniquement un droit de lecture : <span class="input">r--</span> 
+                  qu'on pourrait écrire <span class="input">100</span>
+                  et convertir en 4 (100 en base 2)
+                  
+               </li>
+               <li class="item">
+                  avoir uniquement un droit d'écriture : <span class="input">-w-</span> 
+                  qu'on pourrait écrire <span class="input">010</span>
+                  et convertir en 2 (010 en base 2)
+                  
+               </li>
+               <li class="itemAlt">
+                  avoir uniquement un droit d'exécution/de traverser : <span class="input">--x</span> 
+                  qu'on pourrait écrire <span class="input">001</span>
+                  et convertir en 1 (001 en base 2)
+                  
+               </li>
+               <li class="item">
+                  avoir un droit de lecture et d'écriture : <span class="input">rw-</span> 
+                  qu'on pourrait écrire <span class="input">110</span>
+                  et convertir en 6 (110 en base 2)
+                  
+               </li>
+               <li class="itemAlt">
+                  avoir un droit de lecture et d'exécution/de traverser : <span class="input">r-x</span> 
+                  qu'on pourrait écrire <span class="input">101</span>
+                  et convertir en 5 (101 en base 2)
+                  
+               </li>
+               <li class="item">
+                  avoir un droit d'écriture et d'exécution/de traverser : <span class="input">-wx</span> 
+                  qu'on pourrait écrire <span class="input">011</span>
+                  et convertir en 3 (011 en base 2)
+                  
+               </li>
+               <li class="itemAlt">
+                  avoir tous les droits (de lecture, d'écriture et d'exécution/de traverser) : <span class="input">rwx</span> 
+                  qu'on pourrait écrire <span class="input">111</span>
+                  et convertir en 7 (111 en base 2)
+                  
+               </li>
+               <li class="item">
+                  avoir n'avoir aucun droit (ni de lecture, ni d'écriture ni d'exécution/de traverser)
+                  : <span class="input">---</span> 
+                  qu'on pourrait écrire <span class="input">000</span>
+                  et convertir en 0 (000 en base 2)
+                  
+               </li>
+            </ul>
+            				C'est ce nombre trouvé pour les permissions qu'on donnera 
+            				
+            <ul class="list" id="d8e894">
+               <li class="itemAlt">d'abord, au propriétaire du dossier/fichier ;</li>
+               <li class="item">ensuite, aux utilisateurs qui appartiennent au même groupe que le dossier/fichier
+                  ;
+               </li>
+               <li class="itemAlt">enfin, à tous les autres. </li>
+            </ul>
+            On combine alors les nombres obtenus pour les 3 sortes d'utilisateurs.
+            				
+         </p>
+         <p class="paragraph" id="d8e902"><span class="input">chmod 640 monFichier.java</span> donne 
+            				  
+            <ul class="list" id="d8e906">
+               <li class="itemAlt">au propriétaire le droit en lecture/écriture ;</li>
+               <li class="item">aux utilisateurs dans le même groupe que le fichier le droit en lecture uniquement
+                  ; 
+               </li>
+               <li class="itemAlt">et aucun droit aux autres.</li>
+            </ul>
+         </p>
+         <h4>Changer les permissions avec des lettres.<img src="../../../_templates/java/icons/icon_reading.gif" title="icon_reading" alt="icon_reading" class="icon" /></h4>
+         <p class="paragraph" title="Changer les permissions avec des lettres." id="d8e913"></p>
+         <p class="paragraph" id="d8e914">
+            				  Pour changer les permissions avec des lettres, vous dites les permissions que
+            vous ajoutez/retirez, à qui vous les ajoutez/retirez et ce,sans toucher aux autres
+            droits.
+            				  
+            <ul class="list" id="d8e916">
+               <li class="itemAlt">
+                  					    Il faut d'abord dire à qui on modifie les droits :
+                  					    
+                  <ul class="list" id="d8e919">
+                     <li class="itemAlt"><code>u</code> pour le propriétaire <i>(user)</i></li>
+                     <li class="item"><code>g</code> pour le groupe auquel le fichier/dossier appartient <i>(group)</i></li>
+                     <li class="itemAlt"><code>o</code> pour les autres <i>(other)</i></li>
+                     <li class="item"><code>a</code> pour tous (le propriétaire, le groupe auquel le fichier/dossier appartient, les autres)
+                        <i>(all)</i></li>
+                  </ul>
+               </li>
+               <li class="item">
+                  ensuite, spécifier 
+                  
+                  <ul class="list" id="d8e946">
+                     <li class="itemAlt"><code>+</code> si on ajoute des droits ;
+                     </li>
+                     <li class="item"><code>-</code> si on en retire.
+                     </li>
+                  </ul>
+               </li>
+               <li class="itemAlt">
+                  On indique enfin quel(s) droit(s) on ajoute ou enlève 
+                  
+                  <ul class="list" id="d8e957">
+                     <li class="itemAlt">r</li>
+                     <li class="item">w</li>
+                     <li class="itemAlt">x</li>
+                  </ul>
+               </li>
+            </ul>
+         </p>
+         <p class="paragraph" id="d8e964"><span class="input">chmod a+w monFichier.java</span><ul class="list" id="d8e967">
+               <li class="itemAlt">ajoute</li>
+               <li class="item">le droit d'écriture</li>
+               <li class="itemAlt">à tous</li>
+            </ul>
+            pour le fichier <code>monFichier.java</code>.
+            
+         </p>
+         <p class="paragraph" id="d8e979"><span class="input">chmod go-wx monFichier.exe</span><ul class="list" id="d8e982">
+               <li class="itemAlt">retire</li>
+               <li class="item">les droits d'écriture et d'exécution</li>
+               <li class="itemAlt">aux utilisateurs du même groupe que celui auquel appartient le fichier et aux autres
+                  (c-à-d à tout lemonde sauf le propriétaire)
+               </li>
+            </ul>
+            pour le fichier <code>monFichier.exe</code>.
+            
+         </p>
+      </div>
+      <div id="d8e993.html" class="act">
+         <h4>Exercices<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
+         <p class="paragraph" title="Exercices" id="d8e994"></p>
+         <h4>Déterminez les bonnes permissions</h4>
+         <div id="selfCheck2.html" class="fillInBlanks">
+            <div class="itemQuestion">  
+               							Remplissez les blancs avec la permission correcte (r, w, x ou -). 
+               							Il s'agit de trouver la permission minimale à mettre pour répondre à la demande.
+               
+               						
+            </div>
+            <div class="itemAnswer">
+               <div class="itemLabel">
+                  <ul class="list" id="d8e1000">
+                     <li class="itemAlt">
+                        									Pour un fichier Java, la permission la plus adéquate est
+                        									<input type="text" value="" class="itemText" id="_d8e1003" style="width:12px" /> <span class="gapText">,r,r</span><input type="text" value="" class="itemText" id="_d8e1005" style="width:12px" /> <span class="gapText">,w,w</span><input type="text" value="" class="itemText" id="_d8e1007" style="width:12px" /> <span class="gapText">,-,-</span></li>
+                     <li class="item">
+                        									Pour la version compilée (le bytecode), la permission la plus adéquate est
+                        									<input type="text" value="" class="itemText" id="_d8e1011" style="width:12px" /> <span class="gapText">,r,r</span><input type="text" value="" class="itemText" id="_d8e1013" style="width:12px" /> <span class="gapText">,-,w</span><input type="text" value="" class="itemText" id="_d8e1015" style="width:12px" /> <span class="gapText">,-,-</span></li>
+                     <li class="itemAlt">
+                        									Le fichier qui contient (l'exécutable de) la machine virtuelle a probablement
+                        comme permisson
+                        									<input type="text" value="" class="itemText" id="_d8e1019" style="width:12px" /> <span class="gapText">,-,-</span><input type="text" value="" class="itemText" id="_d8e1021" style="width:12px" /> <span class="gapText">,-,-</span><input type="text" value="" class="itemText" id="_d8e1023" style="width:12px" /> <span class="gapText">,x,x</span></li>
+                  </ul>
+               </div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemSolution">
+               						  Pour la version compilée, la permission suffisante pour l'exécuter par la
+               jvm est <code>r--</code><br />
+               						  mais il est vrai que, lorsque le compilateur génère le bytecode, la permission
+               <code>-w-</code> y est également.
+               
+            </div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck2.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck2.html_solution" onclick="solutionGaps('selfCheck2.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div>
+         <h4>Exercice <img src="../../../_templates/java/icons/icon_question.gif" title="icon_question" alt="icon_question" class="icon" /></h4>
+         <p class="paragraph" title="Exercice " id="d8e1034"></p>
+         <p class="paragraph" id="d8e1035">  
+            					Soit le fichier <code>Max.java</code> de la capture d'écran ci-dessous.  
+            				
+            					Est-ce qu'un professeur peut l'éditer ? 
+            				
+         </p>
+         <p id="d8e1040" class="popupTitle" style="cursor: pointer;" onclick="onBlock('solutiond8e1040')">Cliquez pour voir la réponse</p>
+         <div id="solutiond8e1040text" style="display: none; cursor: pointer;" class="popup" title="la réponse" onclick="off('solutiond8e1040')">
+            <p> Non ! Le droit d'écriture n'est accordé qu'au propriétaire.  </p>
+         </div>
+         <h4>Déterminez les bonnes permissions</h4>
+         <div id="selfCheck6.html" class="fillInBlanks">
+            <div class="itemQuestion">
+               							Soit le fichier "Max.java" de la capture d'écran ci-dessus.
+               							<br />
+               							On voudrait que l'étudiant <code>g32671</code> puisse travailler  
+               							normalement, que les autres étudiants ne puissent pas tricher sur  
+               							lui mais que les professeurs puissent lire son travail.   
+               						
+            </div>
+            <div class="itemAnswer">
+               <div class="itemLabel">
+                  <ul class="list" id="d8e1052">
+                     <li class="itemAlt">
+                        									Quel groupe faut-il donner au fichier ?
+                        									<br /><input type="text" value="" class="itemText" id="_d8e1056" style="width:100px" /> <span class="gapText">,etudiants,etudiants, etudiants1</span></li>
+                     <li class="item">
+                        									Quelle commande permet de donner ce groupe au fichier ?
+                        									<br /><input type="text" value="" class="itemText" id="_d8e1061" style="width:50px" /> <span class="gapText">,chgrp,chgrp</span><input type="text" value="" class="itemText" id="_d8e1063" style="width:100px" /> <span class="gapText">,etudiants,etudiants, etudiants1</span><input type="text" value="" class="itemText" id="_d8e1065" style="width:100px" /> <span class="gapText">,Max.java,Max.java</span></li>
+                     <li class="itemAlt">
+                        									Quelles permissions minimales donner au fichier ?                
+                        									<br /><input type="text" value="" class="itemText" id="_d8e1070" style="width:12px" /> <span class="gapText">,r,r</span><input type="text" value="" class="itemText" id="_d8e1072" style="width:12px" /> <span class="gapText">,w,w</span><input type="text" value="" class="itemText" id="_d8e1074" style="width:12px" /> <span class="gapText">,-,-</span><input type="text" value="" class="itemText" id="_d8e1076" style="width:12px" /> <span class="gapText">,-,-</span><input type="text" value="" class="itemText" id="_d8e1078" style="width:12px" /> <span class="gapText">,-,-</span><input type="text" value="" class="itemText" id="_d8e1080" style="width:12px" /> <span class="gapText">,-,-</span><input type="text" value="" class="itemText" id="_d8e1082" style="width:12px" /> <span class="gapText">,r,r</span><input type="text" value="" class="itemText" id="_d8e1084" style="width:12px" /> <span class="gapText">,-,-</span><input type="text" value="" class="itemText" id="_d8e1086" style="width:12px" /> <span class="gapText">,-,-</span></li>
+                     <li class="item">
+                        									Quelle commande permet de donner ces permissions au fichier ?
+                        									<br /><input type="text" value="" class="itemText" id="_d8e1091" style="width:50px" /> <span class="gapText">,chmod,chmod</span><input type="text" value="" class="itemText" id="_d8e1093" style="width:25px" /> <span class="gapText">,604,604</span><input type="text" value="" class="itemText" id="_d8e1095" style="width:100px" /> <span class="gapText">,Max.java,Max.java</span></li>
+                  </ul>
+               </div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemSolution"></div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck6.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck6.html_solution" onclick="solutionGaps('selfCheck6.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div>
+         <h4>Exercice<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
+         <p class="paragraph" title="Exercice" id="d8e1098"></p>
+         <p class="paragraph" id="d8e1099">  
+            					Reprenez les permissions affichées dans la capture d'écran ci-dessous 
+            					et exprimez-les avec un nombre de 3 chiffres.  
+            				
+         </p>
+         <p class="pagebreak" id="d8e1101"></p>
+         <h4>Permissions par défaut<img src="../../../_templates/java/icons/icon_experiment.gif" title="icon_experiment" alt="icon_experiment" class="icon" /></h4>
+         <p class="paragraph" title="Permissions par défaut" id="d8e1102"></p>
+         <ol class="list" id="d8e1103">
+            <li class="itemAlt">Si ce n'est pas encore fait, créez un dossier "tdLinux".</li>
+            <li class="item">Créez-y un fichier vide.</li>
+            <li class="itemAlt">Demandez les détails du fichier (propriétaire, groupe, permission)</li>
+         </ol>
+         <p class="paragraph" id="d8e1111"> 
+            					On constate qu'un nouveau fichier appartient à celui qui l'a créé 
+            					(on s'en doute) et au groupe principal du créateur. 
+            					Il y a aussi des permissions par défaut (plutôt permissives dans notre cas).
+            
+            				
+         </p>
+         <h4>Modifier les permissions<img src="../../../_templates/java/icons/icon_reading.gif" title="icon_reading" alt="icon_reading" class="icon" /></h4>
+         <p class="paragraph" title="Modifier les permissions" id="d8e1113"></p>
+         <p class="paragraph" id="d8e1114">  
+            					Vous savez que la commande qui permet de modifier les permissions d'un fichier
+            est 
+            					<span class="input">chmod</span>.  
+            				
+         </p>
+         <p class="paragraph" id="d8e1119">  
+            					Prenez le temps de <b>lire</b> 
+            					la page de <b>manuel</b> de cette commande.   
+            				
+         </p>
+         <h4>Exercices<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
+         <p class="paragraph" title="Exercices" id="d8e1127"></p>
+         <ol class="list" id="d8e1128">
+            <li class="itemAlt">Créez un fichier <code>brol</code> dans le dossier <code>tdLinux</code> avec quelques mots.
+            </li>
+            <li class="item">Faites en sorte que personne d'autre ne puisse en voir le contenu.</li>
+            <li class="itemAlt">Faites en sorte que tout le monde puisse voir son contenu mais pas le modifier. </li>
+            <li class="item">
+               					  Faites en sorte que les autres étudiants ne puissent pas voir son contenu mais
+               les professeurs bien. 
+               					  Attention, pour ce faire, il faut pouvoir distinguer les étudiants des enseignants;
+               et donc, distinguer les groupes.
+               					
+            </li>
+         </ol>
+         <h4>Exercices<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
+         <p class="paragraph" title="Exercices" id="d8e1143"></p>
+         <p class="paragraph" id="d8e1144">  
+            					Modifiez les droits de votre dossier <code>tdLinux</code> et, si nécessaire, 
+            					des fichiers qui s'y trouvent pour que tout le monde puisse  
+            				
+         </p>
+         <ol class="list" id="d8e1149">
+            <li class="itemAlt">voir quels fichiers s'y trouvent mais sans pouvoir lire le contenu de ces fichiers;</li>
+            <li class="item">modifier le contenu d'un des fichiers mais pas supprimer ce fichier;</li>
+            <li class="itemAlt">supprimer un fichier mais pas modifier son contenu.</li>
+         </ol>
+      </div>
+      <div id="d8e1156.html" class="act">
+         <h4>Les commandes linux</h4>
+         <div id="selfCheck1.html" class="fillInBlanksShuffle">
+            <div class="itemQuestion">Quelle commande linux permet de faire l'action suivante ?</div>
+            <div class="itemAnswer">
+               <div class="itemLabel">
+                  <ul class="list" id="d8e1162">
+                     <li class="itemAlt">se déconnecter <input type="text" value="" class="itemText" id="_d8e1165" style="width:50px" /> <span class="gapText">,exit</span></li>
+                     <li class="item">changer son mot de passe <input type="text" value="" class="itemText" id="_d8e1169" style="width:50px" /> <span class="gapText">,passwd</span></li>
+                     <li class="itemAlt">nettoyer l'écran <input type="text" value="" class="itemText" id="_d8e1173" style="width:50px" /> <span class="gapText">,clear</span></li>
+                     <li class="item">voir le contenu d'un dossier au format long
+                        									<input type="text" value="" class="itemText" id="_d8e1177" style="width:25px" /> <span class="gapText">,ls</span><input type="text" value="" class="itemText" id="_d8e1179" style="width:25px" /> <span class="gapText">,-l</span></li>
+                     <li class="itemAlt">créer un répertoire <input type="text" value="" class="itemText" id="_d8e1183" style="width:50px" /> <span class="gapText">,mkdir</span></li>
+                     <li class="item">déplacer un fichier <input type="text" value="" class="itemText" id="_d8e1187" style="width:25px" /> <span class="gapText">,mv</span></li>
+                     <li class="itemAlt">connaitre les groupes d'un utilisateur <input type="text" value="" class="itemText" id="_d8e1191" style="width:50px" /> <span class="gapText">,groups</span></li>
+                     <li class="item">modifier le groupe d'un fichier <input type="text" value="" class="itemText" id="_d8e1195" style="width:50px" /> <span class="gapText">,chgrp</span></li>
+                     <li class="itemAlt">modifier le propriétaire d'un fichier (par le super-utilisateur!)         
+                        									<input type="text" value="" class="itemText" id="_d8e1199" style="width:50px" /> <span class="gapText">,chown</span></li>
+                     <li class="item">
+                        								  retirer la permission de traverser le répertoire 
+                        									<code>tds</code> à tous       
+                        									<input type="text" value="" class="itemText" id="_d8e1206" style="width:50px" /> <span class="gapText">,chmod</span><input type="text" value="" class="itemText" id="_d8e1208" style="width:25px" /> <span class="gapText">,a-x</span><input type="text" value="" class="itemText" id="_d8e1210" style="width:25px" /> <span class="gapText">,tds</span></li>
+                     <li class="itemAlt">
+                        								  placer le fichier <code>Hello.java</code> 
+                        									dans le groupe <code>etudiants1</code><input type="text" value="" class="itemText" id="_d8e1219" style="width:50px" /> <span class="gapText">,chgrp</span><input type="text" value="" class="itemText" id="_d8e1221" style="width:100px" /> <span class="gapText">,etudiants1</span><input type="text" value="" class="itemText" id="_d8e1223" style="width:100px" /> <span class="gapText">,Hello.java</span></li>
+                  </ul>
+               </div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemSolution"></div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck1.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck1.html_solution" onclick="solutionGaps('selfCheck1.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div>
+         <h4>Les permissions</h4>
+         <div id="selfCheck2.html" class="fillInBlanksShuffle">
+            <div class="itemQuestion">Remplissez les blancs avec la permission minimale correcte (r, w, x ou -),</div>
+            <div class="itemAnswer">
+               <div class="itemLabel">
+                  <ol class="list" id="d8e1231">
+                     <li class="itemAlt">
+                        									pour que le répertoire <code>/home/gxxxxx/td3</code> 
+                        									permette à un autre étudiant d'y créer le fichier  
+                        									<code>/home/gxxxxx/td3/fichier</code><br /><input type="text" value="" class="itemText" id="_d8e1240" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1242" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1244" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1246" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1248" style="width:12px" /> <span class="gapText">,w</span><input type="text" value="" class="itemText" id="_d8e1250" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1253" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1255" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1257" style="width:12px" /> <span class="gapText">,-</span></li>
+                     <li class="item">
+                        									pour que le répertoire <code>/home/gxxxxx/td3</code> 
+                        									permette à un autre étudiant d'accéder au fichier  
+                        									<code>/home/gxxxxx/td3/fichier</code>
+                        									dont il connait le chemin
+                        									<br /><input type="text" value="" class="itemText" id="_d8e1268" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1270" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1272" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1274" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1276" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1279" style="width:12px" /> <span class="gapText">,x</span><input type="text" value="" class="itemText" id="_d8e1281" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1283" style="width:12px" /> <span class="gapText">,-</span><input type="text" value="" class="itemText" id="_d8e1285" style="width:12px" /> <span class="gapText">,-</span></li>
+                  </ol>
+               </div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemSolution"></div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck2.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck2.html_solution" onclick="solutionGaps('selfCheck2.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div>
+         <h4></h4>
+         <div id="selfCheck3.html" class="fillInBlanks">
+            <div class="itemQuestion">Modifiez les permissions </div>
+            <div class="itemAnswer">
+               <div class="itemLabel">
+                  <ul class="list" id="d8e1293">
+                     <li class="itemAlt">
+                        									pour que le fichier <code>/home/gxxxxx/td3/fichier</code> 
+                        									puisse être lu et modifié par votre professeur et vous même mais seulement
+                        lu par les autres étudiants 
+                        									<br /><input type="text" value="" class="itemText" id="_d8e1300" style="width:50px" /> <span class="gapText">,chmod</span><input type="text" value="" class="itemText" id="_d8e1302" style="width:12px" /> <span class="gapText">,6,6,7</span><input type="text" value="" class="itemText" id="_d8e1304" style="width:12px" /> <span class="gapText">,4,4,5</span><input type="text" value="" class="itemText" id="_d8e1306" style="width:12px" /> <span class="gapText">,6,6,7</span><input type="text" value="" class="itemText" id="_d8e1308" style="width:160px" /> <span class="gapText">,/home/gxxxxx/td3/fichier,/home/gxxxxx/td3/fichier,fichier</span></li>
+                     <li class="item">
+                        								  À quel groupe ce fichier doit-il appartenir ?
+                        									<br /><input type="text" value="" class="itemText" id="_d8e1313" style="width:100px" /> <span class="gapText">,etudiants,etudiants,etudiants1</span></li>
+                     <li class="itemAlt">
+                        								  Quelle commande permet de modifier le groupe du fichier afin de l'adapter
+                        à ce qui est demandé ci-dessus ?
+                        									<br /><input type="text" value="" class="itemText" id="_d8e1318" style="width:50px" /> <span class="gapText">,chgrp</span><input type="text" value="" class="itemText" id="_d8e1320" style="width:100px" /> <span class="gapText">,etudiants,etudiants,etudiants1</span></li>
+                  </ul>
+               </div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemSolution"></div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck3.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck3.html_solution" onclick="solutionGaps('selfCheck3.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div>
+         <h4>Sélection multiple</h4>
+         <div id="selfCheck4.html" class="multipleChoiceShuffle">
+            <div class="itemQuestion">Parmi les propositions suivantes, lesquelles représentent des chemins absolus ?</div>
+            <div class="itemAnswer"><input type="checkbox" name="selfCheck4.html" value="1" class="itemRadio" id="selfCheck4.html_d8e1327" /><div class="itemLabel"><label for="selfCheck4.html_d8e1327"><code>/usr/local/java/</code> <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="checkbox" name="selfCheck4.html" value="1" class="itemRadio" id="selfCheck4.html_d8e1330" /><div class="itemLabel"><label for="selfCheck4.html_d8e1330"><code>/home/g31000/td3</code> <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="checkbox" name="selfCheck4.html" value="0" class="itemRadio" id="selfCheck4.html_d8e1333" /><div class="itemLabel"><label for="selfCheck4.html_d8e1333"><code>g31000/td3</code> <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="checkbox" name="selfCheck4.html" value="1" class="itemRadio" id="selfCheck4.html_d8e1336" /><div class="itemLabel"><label for="selfCheck4.html_d8e1336"><code>~/td3</code> <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="checkbox" name="selfCheck4.html" value="0" class="itemRadio" id="selfCheck4.html_d8e1339" /><div class="itemLabel"><label for="selfCheck4.html_d8e1339"><code>td3</code> <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="checkbox" name="selfCheck4.html" value="1" class="itemRadio" id="selfCheck4.html_d8e1342" /><div class="itemLabel"><label for="selfCheck4.html_d8e1342"><code>~g31000/td3</code> <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck4.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck4.html_solution" onclick="solutionChoice('selfCheck4.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div><script src="wz_tooltip.js" type="text/javascript">
+            <!----></script></div>
+      <hr />
+      <div class="navigation_arrows"><a href="Permissions_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Wc.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 7.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

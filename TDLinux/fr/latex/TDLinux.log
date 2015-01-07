@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  6 JAN 2015 22:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  7 JAN 2015 20:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -822,7 +822,7 @@ LaTeX Info: Redefining \nameref on input line 143.
 \openout5 = `TDLinux.out'.
 
 
-<../../../_templates/java/icons/logo-esi.jpg, id=140, 45.16875pt x 85.31876pt>
+<../../../_templates/java/icons/logo-esi.jpg, id=148, 45.16875pt x 85.31876pt>
 File: ../../../_templates/java/icons/logo-esi.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/logo-esi.jpg>
@@ -866,7 +866,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 152.
 
-<../../../_templates/java/icons/cc-gris.jpg, id=141, 88.33pt x 31.11626pt>
+<../../../_templates/java/icons/cc-gris.jpg, id=149, 88.33pt x 31.11626pt>
 File: ../../../_templates/java/icons/cc-gris.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/cc-gris.jpg>
@@ -910,7 +910,7 @@ cc-gris.jpg>])
 \openout6 = `TDLinux.toc'.
 
  [2]
-Overfull \hbox (6.67908pt too wide) in paragraph at lines 218--221
+Overfull \hbox (6.67908pt too wide) in paragraph at lines 217--220
 [][]\T1/lmtt/m/n/10.95 mv nomDuFichiernomDuDossier \T1/lmr/m/n/10.95 per-met de
  \T1/lmr/bx/n/10.95 dé-pla-cer \T1/lmr/m/n/10.95 le fi-chier nommé
  []
@@ -919,13 +919,13 @@ Overfull \hbox (6.67908pt too wide) in paragraph at lines 218--221
 
 ] [4]
 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/arborescenceUnix.png, id=2
-09, 600.2425pt x 442.65375pt>
+19, 600.2425pt x 442.65375pt>
 File: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/arborescenceUnix.png 
 Graphic file (type png)
 
 <use /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/arborescenceUnix.png>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ar
-borescenceUnix.png used on input line 328.
+borescenceUnix.png used on input line 327.
 (pdftex.def)             Requested size: 288.00322pt x 212.39032pt.
 
 [5 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/arborescenceUnix.png>]
@@ -934,7 +934,7 @@ Graphic file (type png)
 
 <use /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/arborescenceUnix.png>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ar
-borescenceUnix.png used on input line 411.
+borescenceUnix.png used on input line 410.
 (pdftex.def)             Requested size: 288.00322pt x 212.39032pt.
 
 [6]
@@ -943,7 +943,7 @@ Graphic file (type png)
 
 <use /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/arborescenceUnix.png>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ar
-borescenceUnix.png used on input line 442.
+borescenceUnix.png used on input line 441.
 (pdftex.def)             Requested size: 288.00322pt x 212.39032pt.
 
 [7]
@@ -952,243 +952,238 @@ Graphic file (type png)
 
 <use /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/arborescenceUnix.png>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ar
-borescenceUnix.png used on input line 527.
+borescenceUnix.png used on input line 526.
 (pdftex.def)             Requested size: 288.00322pt x 212.39032pt.
 
-Overfull \hbox (33.40808pt too wide) in paragraph at lines 547--550
+Overfull \hbox (33.40808pt too wide) in paragraph at lines 546--549
 \T1/lmr/m/n/10.95 contenu en uti-li-sant un che-min ab-solu? []$[]$[] 
  []
 
 
-Overfull \hbox (39.40059pt too wide) in paragraph at lines 553--557
+Overfull \hbox (39.40059pt too wide) in paragraph at lines 552--556
 \T1/lmr/m/n/10.95 toire []\T1/lmtt/m/n/10.95 eve \T1/lmr/m/n/10.95 en uti-li-sa
 nt un che-min re-la-tif? []$[]$[] 
  []
 
 [8]
-</home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/fs.jpeg, id=236, 396.48125
+</home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/fs.jpeg, id=246, 396.48125
 pt x 203.76125pt>
 File: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/fs.jpeg Graphic file 
 (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/fs.jpeg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/fs
-.jpeg used on input line 567.
+.jpeg used on input line 566.
 (pdftex.def)             Requested size: 288.00719pt x 148.01381pt.
 
-Overfull \hbox (33.40808pt too wide) in paragraph at lines 584--587
+Overfull \hbox (33.40808pt too wide) in paragraph at lines 583--586
 \T1/lmr/m/n/10.95 contenu en uti-li-sant un che-min ab-solu? []$[]$[] 
  []
 
 
-Overfull \hbox (31.2487pt too wide) in paragraph at lines 587--590
+Overfull \hbox (31.2487pt too wide) in paragraph at lines 586--589
 \T1/lmr/m/n/10.95 contenu en uti-li-sant un che-min re-la-tif? []$[]$[] 
  []
 
 
-Overfull \hbox (28.63281pt too wide) in paragraph at lines 590--594
+Overfull \hbox (28.63281pt too wide) in paragraph at lines 589--593
 []\T1/lmtt/m/n/10.95 g32000 \T1/lmr/m/n/10.95 en uti-li-sant un che-min re-la-t
 if? []$[]$[] 
  []
 
 [9 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/fs.jpeg>]
-Overfull \hbox (86.7588pt too wide) in paragraph at lines 670--672
+Overfull \hbox (86.7588pt too wide) in paragraph at lines 669--671
 [][]\T1/lmtt/m/n/10.95 monfichieraunomtellementlongquilmeparaitpeuprobabledelet
 aper2xsanserreur
  []
 
 [10]
-Overfull \hbox (71.82545pt too wide) in paragraph at lines 730--732
+Overfull \hbox (71.82545pt too wide) in paragraph at lines 729--731
 []\T1/lmr/m/n/10.95 Copiez dans votre ré-per-toire td3 tous les fi-chiers du ré
 -per-toire []\T1/lmtt/m/n/10.95 /eCours/java/td/td3
  []
 
 [11]
-</home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/groupesLinux1.jpg, id=269,
+</home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/groupesLinux1.jpg, id=279,
  415.5525pt x 136.25906pt>
 File: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/groupesLinux1.jpg Gra
 phic file (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/groupesLinux1.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/gr
-oupesLinux1.jpg used on input line 774.
+oupesLinux1.jpg used on input line 841.
 (pdftex.def)             Requested size: 288.01237pt x 94.43883pt.
 
-[12 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/groupesLinux1.jpg>]
-</home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/permissions.jpg, id=276, 3
+[12]
+</home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/permissions.jpg, id=287, 3
 59.09157pt x 142.28156pt>
 File: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/permissions.jpg Graph
 ic file (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/permissions.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/pe
-rmissions.jpg used on input line 820.
+rmissions.jpg used on input line 887.
 (pdftex.def)             Requested size: 288.01881pt x 114.12065pt.
+
+[13 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/groupesLinux1.jpg> </h
+ome/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/permissions.jpg>]
 File: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/groupesLinux1.jpg Gra
 phic file (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/groupesLinux1.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/gr
-oupesLinux1.jpg used on input line 849.
+oupesLinux1.jpg used on input line 916.
 (pdftex.def)             Requested size: 288.01237pt x 94.43883pt.
 
-[13 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/permissions.jpg>]
-Overfull \hbox (1.01535pt too wide) in paragraph at lines 886--888
+Overfull \hbox (1.01535pt too wide) in paragraph at lines 953--955
 [][]\T1/lmtt/m/n/10.95 chgrp etudiants1 Max.java \T1/lmr/m/n/10.95 in-dique que
  le fi-chier []\T1/lmtt/m/n/10.95 Max.java \T1/lmr/m/n/10.95 doit être placé
  []
 
 
-Overfull \hbox (85.66446pt too wide) in paragraph at lines 891--893
+Overfull \hbox (85.66446pt too wide) in paragraph at lines 958--960
 []\T1/lmr/m/n/10.95 Il existe aussi une com-mande que seul l'ad-mi-nis-tra-teur
  peut exé-cu-ter []\T1/lmtt/m/n/10.95 chown g32000 Max.java
  []
 
-[14]
-</home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/permissions2.jpg, id=304, 
+[14] [15]
+</home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/permissions2.jpg, id=322, 
 485.815pt x 184.69pt>
 File: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/permissions2.jpg Grap
 hic file (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/permissions2.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/pe
-rmissions2.jpg used on input line 1009.
+rmissions2.jpg used on input line 1076.
 (pdftex.def)             Requested size: 287.99976pt x 109.48749pt.
 
-[15] [16 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/permissions2.jpg>
-] [17] [18]
-</home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls-l.jpg, id=328, 473.77pt
+[16 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/permissions2.jpg>]
+[17] [18]
+</home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls-l.jpg, id=340, 473.77pt
  x 153.57375pt>
 File: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls-l.jpg Graphic file
  (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls-l.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls
--l.jpg used on input line 1300.
+-l.jpg used on input line 1367.
 (pdftex.def)             Requested size: 288.00888pt x 93.3588pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 1309--1309
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 1376--1376
 [][][][]
  []
 
-[19 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls-l.jpg>]
+[19]
 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls-l-permissions.jpg, id=3
-41, 485.815pt x 184.69pt>
+49, 485.815pt x 184.69pt>
 File: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls-l-permissions.jpg 
 Graphic file (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls-l-permissions.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls
--l-permissions.jpg used on input line 1354.
+-l-permissions.jpg used on input line 1421.
 (pdftex.def)             Requested size: 287.99976pt x 109.48749pt.
 
-[20 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls-l-permissions.jpg>]
-[21
+[20 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls-l.jpg>] [21 </home/
+clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ls-l-permissions.jpg>] [22
 
 ]
-Overfull \hbox (79.97646pt too wide) in paragraph at lines 1457--1459
+Overfull \hbox (79.97646pt too wide) in paragraph at lines 1524--1526
 []\T1/lmr/m/n/10.95 placer le fi-chier []\T1/lmtt/m/n/10.95 Hello.java \T1/lmr/
 m/n/10.95 dans le groupe []\T1/lmtt/m/n/10.95 etudiants1 []$[]$[] []$[]$[]
  []
 
 
-Overfull \hbox (0.3759pt too wide) in paragraph at lines 1474--1478
+Overfull \hbox (0.3759pt too wide) in paragraph at lines 1541--1545
 \T1/lmr/m/n/10.95 diant d'ac-cé-der au fi-chier []\T1/lmtt/m/n/10.95 /home/gxxx
 xx/td3/fichier \T1/lmr/m/n/10.95 dont il connait
  []
 
-[22]
-Overfull \hbox (14.09998pt too wide) in paragraph at lines 1585--1585
-[][][][] 
- []
-
 [23]
-Overfull \hbox (14.09998pt too wide) in paragraph at lines 1648--1648
+Overfull \hbox (14.09998pt too wide) in paragraph at lines 1652--1652
 [][][][] 
  []
 
-[24] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[24]
+Overfull \hbox (14.09998pt too wide) in paragraph at lines 1715--1715
+[][][][] 
+ []
+
+[25] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 1674.
+(Font)              <9> on input line 1741.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1674.
+(Font)              <5> on input line 1741.
 
-Overfull \hbox (14.09998pt too wide) in paragraph at lines 1697--1697
+Overfull \hbox (14.09998pt too wide) in paragraph at lines 1764--1764
 [][][][] 
  []
 
 
-Overfull \hbox (14.09998pt too wide) in paragraph at lines 1711--1711
+Overfull \hbox (14.09998pt too wide) in paragraph at lines 1778--1778
 [][][][] 
  []
 
-[25] [26]
-Overfull \hbox (10.68857pt too wide) in paragraph at lines 1906--1908
+[26] [27]
+Overfull \hbox (10.68857pt too wide) in paragraph at lines 1973--1975
 []\T1/lmr/m/n/10.95 Copiez-la chez vous; vous la trou-ve-rez quelque part dans 
 []\T1/lmtt/m/n/10.95 /eCours/java\T1/lmr/m/n/10.95 . 
  []
 
-[27] [28] [29] [30] [31]
-</home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/capt1.png, id=479, 949.547
+[28] [29] [30] [31] [32]
+</home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/capt1.png, id=495, 949.547
 5pt x 282.05376pt>
 File: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/capt1.png Graphic fil
 e (type png)
 
 <use /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/capt1.png>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/ca
-pt1.png used on input line 2415.
+pt1.png used on input line 2482.
 (pdftex.def)             Requested size: 359.99144pt x 106.93192pt.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 2426
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 2493
 .
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [32 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/capt1.png>]
-Overfull \hbox (24.07104pt too wide) in paragraph at lines 2448--2451
+) [33 </home/clr/Documents/Cours/DEV1EnQ2/TDLinux/fr/image/capt1.png>]
+Overfull \hbox (24.07104pt too wide) in paragraph at lines 2515--2518
 []\T1/lmr/m/n/10.95 Pour ob-te-nir la liste de tous les si-gnaux : []\T1/lmtt/m
 /n/10.95 kill -l \T1/lmr/m/n/10.95 ou en-core []\T1/lmtt/m/n/10.95 man 7 signal
 \T1/lmr/m/n/10.95 . 
  []
 
 
-Overfull \hbox (9.47046pt too wide) in paragraph at lines 2499--2506
+Overfull \hbox (9.47046pt too wide) in paragraph at lines 2566--2573
 []\T1/lmtt/m/n/10.95 Ctrl-z\T1/lmr/m/n/10.95 . Vé-ri-fiez l'état du pro-ces-sus
  stoppé par la com-mande []\T1/lmtt/m/n/10.95 ps \T1/lmr/m/n/10.95 ([]\T1/lmtt/
 m/n/10.95 man ps
  []
 
 
-Overfull \hbox (14.36877pt too wide) in paragraph at lines 2537--2541
+Overfull \hbox (14.36877pt too wide) in paragraph at lines 2604--2608
 []\T1/lmr/m/n/10.95 Avant de quit-ter le la-bo-ra-toire, n'ou-bliez pas de quit
 -ter pro-pre-ment la connexion
  []
 
-[33]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2558.
- [34]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2558.
+[34]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2625.
+ [35]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2625.
  (./TDLinux.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2558.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2558.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2625.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2625.
 
-
-
-Package rerunfilecheck Warning: File `TDLinux.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `TDLinux.out':
-(rerunfilecheck)             Before: 9D3E661AE1AF01EB10D19F55C3776AEA;2393
-(rerunfilecheck)             After:  721063138CE1E0E5BEEB09C3478E8364;2530.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2558.
+Package rerunfilecheck Info: File `TDLinux.out' has not changed.
+(rerunfilecheck)             Checksum: 721063138CE1E0E5BEEB09C3478E8364;2530.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2625.
  ) 
 Here is how much of TeX's memory you used:
- 12693 strings out of 493304
- 186390 string characters out of 6139871
- 298553 words of memory out of 5000000
- 15661 multiletter control sequences out of 15000+600000
+ 12698 strings out of 493304
+ 186448 string characters out of 6139871
+ 298556 words of memory out of 5000000
+ 15663 multiletter control sequences out of 15000+600000
  83891 words of font info for 58 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,43p,434b,1249s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1207,10 +1202,10 @@ hare/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/zapfding/uzdr.pfb>
-Output written on TDLinux.pdf (34 pages, 645755 bytes).
+Output written on TDLinux.pdf (35 pages, 646700 bytes).
 PDF statistics:
- 626 PDF objects out of 1000 (max. 8388607)
- 554 compressed objects within 6 object streams
- 230 named destinations out of 1000 (max. 500000)
- 323 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 640 PDF objects out of 1000 (max. 8388607)
+ 567 compressed objects within 6 object streams
+ 233 named destinations out of 1000 (max. 500000)
+ 339 words of extra memory for PDF output out of 10000 (max. 10000000)
 
