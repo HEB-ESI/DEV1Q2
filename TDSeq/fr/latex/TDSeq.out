@@ -1,5 +1,19 @@
 \BOOKMARK [1][]{section.1}{1 Algorithmes s\351quentiels}{}% 1
 \BOOKMARK [2][]{subsection.1.1}{1.1 Le pseudo-code}{section.1}% 2
 \BOOKMARK [1][]{section.2}{2 Variables et types}{}% 3
-\BOOKMARK [2][]{subsection.2.1}{2.1 \040Les types autoris\351s en algo}{section.2}% 4
-\BOOKMARK [2][]{subsection.2.2}{2.2 \040Les types \351quivalents en java}{section.2}% 5
+\BOOKMARK [2][]{subsection.2.1}{2.1 Les types autoris\351s en algo}{section.2}% 4
+\BOOKMARK [2][]{subsection.2.2}{2.2 Les types \351quivalents en java}{section.2}% 5
+\BOOKMARK [2][]{subsection.2.3}{2.3 D\351claration de variables en algo}{section.2}% 6
+\BOOKMARK [2][]{subsection.2.4}{2.4 D\351claration de variables en Java}{section.2}% 7
+\BOOKMARK [1][]{section.3}{3 Op\351rateurs et expressions}{}% 8
+\BOOKMARK [2][]{subsection.3.1}{3.1 Les op\351rateurs arithm\351tiques \351l\351mentaires en algo}{section.3}% 9
+\BOOKMARK [2][]{subsection.3.2}{3.2 Les op\351rateurs arithm\351tiques \351l\351mentaires en Java}{section.3}% 10
+\BOOKMARK [2][]{subsection.3.3}{3.3 Les op\351rateurs DIV et MOD en algo}{section.3}% 11
+\BOOKMARK [2][]{subsection.3.4}{3.4 Les op\351rateurs DIV et MOD en Java}{section.3}% 12
+\BOOKMARK [2][]{subsection.3.5}{3.5 Les fonctions math\351matiques complexes en algo}{section.3}% 13
+\BOOKMARK [2][]{subsection.3.6}{3.6 Les fonctions math\351matiques complexes en Java}{section.3}% 14
+\BOOKMARK [1][]{section.4}{4 L'affectation d'une valeur \340 une variable}{}% 15
+\BOOKMARK [2][]{subsection.4.1}{4.1 Affectation interne en algo}{section.4}% 16
+\BOOKMARK [2][]{subsection.4.2}{4.2 Affectation interne en Java}{section.4}% 17
+\BOOKMARK [2][]{subsection.4.3}{4.3 Affectation externe en algo}{section.4}% 18
+\BOOKMARK [2][]{subsection.4.4}{4.4 Affectation externe en Java}{section.4}% 19

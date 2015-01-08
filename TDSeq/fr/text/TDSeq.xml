@@ -69,7 +69,7 @@
 			</paragraph>
     </entry>
     
-			<learningObject title=" Les types autorisés en algo">
+			<learningObject title="Les types autorisés en algo">
 			<!-- ================================================ -->
 			  <clarify>
         <paragraph>
@@ -83,6 +83,47 @@
               (par exemple : "Bonjour", "Bonjour le monde", "a", "", etc.)</item>
             <item><formatted style="code">booléen</formatted> les variables de ce type 
             ne peuvent valoir que <formatted style="code">vrai</formatted> ou <formatted style="code">faux</formatted></item>
+          </list>
+        </paragraph>
+        </clarify>
+      
+        <act>
+				<selfCheck title="Le type des données" shuffle="yes">
+						<fillInBlanks>
+							<question> 
+								Quel(s) type(s) de données utiliseriez-vous pour représenter :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>une date du calendrier ? <gap answers="3 entiers,trois entiers,2 entiers 1 chaine,1 chaine 2 entiers">3 entiers</gap></item>  
+									<item>un moment dans la journée ? <gap answers="3 entiers, trois entiers">3 entiers</gap></item>  
+									<item>le prix d’un produit en grande surface ?<gap answers="1 réel,un réel, réel">1 réel</gap></item>  
+									<item>votre nom ? <gap answers="une chaine,1 chaine, chaine">1 chaine</gap></item>  
+									<item>vos initiales ?<gap answers="2 caractères,3 caractères">2 caractères</gap></item>  
+									<item>votre adresse ? <gap answers="1 chaine">1 chaine</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+				</act>
+      </learningObject>
+      
+      
+			<learningObject title="Les types équivalents en java">
+			<!-- ================================================ -->
+			  <clarify>
+        <paragraph>
+          Les équivalents Java des types donnés en algo sont
+          <list listStyle="unordered">
+            <item><formatted style="code">int</formatted> pour le type <formatted style="code">entier</formatted> pour les nombres entiers ;</item>
+            <item><formatted style="code">double</formatted>pour le type <formatted style="code">réel</formatted> pour les nombres réels ;</item>
+            <item><formatted style="code">char</formatted> pour le type <formatted style="code">caractère</formatted> pour les différentes lettres et caractères</item>
+            <item><formatted style="code">String</formatted> pour le type <formatted style="code">chaine</formatted> 
+              pour les variables contenant un ou plusieurs caractère(s) ou aucun (la chaine vide)
+            </item>
+            <item><formatted style="code">boolean</formatted> pour le type <formatted style="code">booléen</formatted> les variables de ce type 
+            ne peuvent valoir, en Java, que <formatted style="code">true</formatted> ou <formatted style="code">false</formatted></item>
           </list>
         </paragraph>
         </clarify>
@@ -110,47 +151,492 @@
       </learningObject>
       
       
-			<learningObject title=" Les types équivalents en java">
+			<learningObject title="Déclaration de variables en algo">
 			<!-- ================================================ -->
 			  <clarify>
         <paragraph>
-          Dans un premier temps, les seuls types utilisés sont :
+          La <formatted style="bold">déclaration</formatted> d’une variable est l’instruction qui définit son <formatted style="bold">nom</formatted> 
+          et son <formatted style="bold">type</formatted>.
+        </paragraph>
+        <paragraph>
+          <formatted style="input">num1, num2 : entiers</formatted>
+        </paragraph>
+        <paragraph>
+          L’ensemble des instructions de la forme <formatted style="input">variable1, variable2,. . . : type</formatted>
+          forme la partie d’un algorithme nommée <formatted style="bold">déclaration des variables</formatted>. 
+        </paragraph>
+        <paragraph>
+          La déclaration des informations apparaitra toujours en <formatted style="bold">début</formatted> d’algorithme, ou dans un bloc annexe appelé
+          dictionnaire des variables ou encore dictionnaire des données.
+        </paragraph>
+        
+        <paragraph title="Attention" icon="important" />
+        <paragraph>
+          Attention, lors de la déclaration d’une variable, <formatted style="bold">celle-ci n’a pas de valeur</formatted> ! 
+          Nous verrons que c’est l’instruction d’affectation qui va servir à donner un contenu aux variables déclarées.
+        </paragraph>
+        </clarify>
+      
+			  <clarify>
+			  <paragraph title="Comment nommer correctement une variable ?" icon="icon_question" />
+        <paragraph>
+          Le but est de trouver un nom qui soit suffisamment <formatted style="bold">court</formatted>, 
+          tout en restant <formatted style="bold">explicite</formatted> et ne prêtant <formatted style="bold">pas à confusion</formatted>.
+        </paragraph>
+        <paragraph>
+          Ainsi <formatted style="italic">num1</formatted> est plus approprié pour désigner le premier numérateur 
+          que <formatted style="italic">zozo1</formatted>, <formatted style="italic">tintin</formatted>, <formatted style="italic">bidule</formatted>
+          ou <formatted style="italic">premierNumérateur</formatted>. 
+          De même, ne pas appeler <formatted style="italic">den</formatted> la variable représentant le numérateur.
+        </paragraph>
+        <paragraph>
+          Il faut aussi tenir compte que les langages de programmation imposent certaines limitations
+          (parfois différentes d’un langage à l’autre) ce qui peut nécessiter une modification du nom
+          lors de la traduction.
+        </paragraph>
+        <paragraph>
+          Voici quelques règles et limitations traditionnelles dans les langages de programmation :
           <list listStyle="unordered">
-            <item><formatted style="code">entier</formatted> pour les nombres entiers ;</item>
-            <item><formatted style="code">réel</formatted> pour les nombres réels ;</item>
-            <item><formatted style="code">caractère</formatted> pour les différentes lettres et caractères
-              (par exemple ceux qui apparaissent sur un clavier : ‘a’, ‘1’, ‘#’, etc.)</item>
-            <item><formatted style="code">chaine</formatted> pour les variables contenant un ou plusieurs caractère(s) ou aucun (la chaine vide)
-              (par exemple : "Bonjour", "Bonjour le monde", "a", "", etc.)</item>
-            <item><formatted style="code">booléen</formatted> les variables de ce type 
-            ne peuvent valoir que <formatted style="code">vrai</formatted> ou <formatted style="code">faux</formatted></item>
+            <item>
+            Un nom de variable est généralement une suite de caractères alphanumériques d’un
+            seul tenant (pas de caractères blancs) et ne commençant jamais par un chiffre. Ainsi
+            x1 est correct mais pas 1x.
+            </item>
+            <item>
+            Pour donner un nom composé à une variable, on peut utiliser le « tiret bas » ou underscore 
+            (par ex. premier_numérateur) mais on déconseille d’utiliser le signe « – » qui est
+            plutôt réservé à la soustraction. Ainsi, dans la plupart des langages, premier-numérateur
+            serait interprété comme la soustraction des variables premier et numérateur.
+            </item>
+            <item>
+            Une alternative à l’utilisation du tiret bas pour l’écriture de noms de variables composés
+            est la notation « chameau » (camelCase en anglais), qui consiste à mettre une majuscule
+            au début des mots (généralement à partir du deuxième), par exemple premierNombre
+            ou dateNaissance.
+            </item>
+            <item>
+            Les indices et exposants sont proscrits.
+            </item>
+            <item>
+            Les mots-clés du langage sont interdits (par exemple for, if, while pour Java et Cobol)
+            et on déconseille d’utiliser les mots-clés du pseudo-code (tels que Lire, Afficher, pour. . .)
+            </item>
+            <item>
+            Certains langages n’autorisent pas les caractères accentués (tels que à, ç, ê, ø, etc.)
+            ou les lettres des alphabets non latins mais d’autres oui ; certains font la
+            distinction entre les minuscules et majuscules, d’autres non. En algorithmique, nous
+            admettons, dans les noms de variables les caractères accentués du français, par ex. :
+            durée, intérêts, etc.
+            </item>
           </list>
         </paragraph>
         </clarify>
       
         <act>
-				<selfCheck title="Les commandes de base" shuffle="yes">
+				<selfCheck title="Comment déclarer" shuffle="yes">
 						<fillInBlanks>
-							<question> 
-								Quel(s) type(s) de données utiliseriez-vous pour représenter :
+							<question>
+							  Quelle instruction permet de déclarer :
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
-									<item>une date du calendrier ? <gap answers="3 entiers,trois entiers,2 entiers 1 chaine,1 chaine 2 entiers">3 entiers</gap></item>  
-									<item>un moment dans la journée ? <gap answers="3 entiers, trois entiers">3 entiers</gap></item>  
-									<item>le prix d’un produit en grande surface ?<gap answers="1 réel,un réel, réel">1 réel</gap></item>  
-									<item>votre nom ? <gap answers="une chaine,1 chaine, chaine">1 chaine</gap></item>  
-									<item>vos initiales ?<gap answers="2 caractères,3 caractères">2 caractères</gap></item>  
-									<item>votre adresse ? <gap answers="1 chaine">1 chaine</gap></item>  
+									<item>le jour d'une date ?<gap answers="jour : entier">jours : entier</gap></item>  
+									<item>l'heure d'un moment ? <gap answers="heure : entier">heure : entier</gap></item>  
+									<item>le prix d’un produit en grande surface ?<gap answers="prix : réel">prix : réel</gap></item>  
+									<item>votre nom ? <gap answers="nom : chaine">nom : chaine</gap></item>  
 								</list>  
 							</gapText>
 							<solution></solution>
 						</fillInBlanks>
 					</selfCheck>
 				</act>
+      </learningObject>
+	
+			<learningObject title="Déclaration de variables en Java">
+			<!-- ================================================ -->
+			  <clarify>
+        <paragraph>
+          La <formatted style="bold">déclaration</formatted> d’une variable est l’instruction qui définit son <formatted style="bold">nom</formatted> 
+          et son <formatted style="bold">type</formatted>.
+        </paragraph>
+        <paragraph>
+          <formatted style="input">int num1;</formatted>
+        </paragraph>
+        <paragraph>
+          L’ensemble des instructions de la forme <formatted style="input">type nom;</formatted>
+          forme la <formatted style="bold">déclaration des variables</formatted>. 
+        </paragraph>
+        <paragraph>
+          La déclaration des informations apparaitra en <formatted style="bold">début</formatted> de bloc.
+        </paragraph>
+        
+        <paragraph title="Attention" icon="important" />
+        <paragraph>
+          Attention, comme en algo, lors de la déclaration d’une variable, <formatted style="bold">celle-ci n’a pas de valeur</formatted> ! 
+          Nous verrons que c’est l’instruction d’affectation qui va servir à donner un contenu aux variables déclarées.
+        </paragraph>
+        </clarify>
       
+			  <clarify>
+			  <paragraph title="Comment nommer correctement une variable ?" icon="icon_question" />
+        <paragraph>
+          Le but est de trouver un nom qui soit suffisamment <formatted style="bold">court</formatted>, 
+          tout en restant <formatted style="bold">explicite</formatted> et ne prêtant <formatted style="bold">pas à confusion</formatted>.
+        </paragraph>
+        <paragraph>
+          Il faut aussi tenir compte des limitations du langage.
+          <list listStyle="unordered">
+            <item>
+            Un nom de variable est généralement une suite de caractères alphanumériques d’un
+            seul tenant (pas de caractères blancs) et ne commençant jamais par un chiffre. Ainsi
+            x1 est correct mais pas 1x.
+            </item>
+            <item>
+            un nom de variable ne peut comporter que des lettres, des chiffres, les caractères <formatted style="italic">_</formatted> et <formatted style="italic">$</formatted>.
+            </item>
+            <item>
+            L’écriture de noms de variables composés
+            est la notation « chameau » (camelCase en anglais), qui consiste à mettre une majuscule
+            au début des mots (généralement à partir du deuxième), par exemple premierNombre
+            ou dateNaissance.
+            </item>
+            <item>
+            Pour donner un nom composé à une variable entièrement en majuscules, on peut utiliser le « tiret bas » ou underscore 
+            (par ex. PREMIER_NUMERATEUR).
+            </item>
+            <item>
+            Les mots-clés du langage sont interdits (par exemple for, if, while)
+            </item>
+          </list>
+        </paragraph>
+        </clarify>
+        
+        <act>
+				<selfCheck title="Comment déclarer" shuffle="yes">
+						<fillInBlanks>
+							<question>
+							  Quelle instruction permet de déclarer :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>le jour d'une date ?<gap answers="int jour;">int jour;</gap></item>  
+									<item>l'heure d'un moment ? <gap answers="int heure;">int heure;</gap></item>  
+									<item>le prix d’un produit en grande surface ?<gap answers="double prix;">double prix;</gap></item>  
+									<item>votre nom ? <gap answers="String nom;">String nom;</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+				</act>
       </learningObject>
 	</unit>
+	
+	
+	<!-- =================================================================== -->
+	<unit label="OpérateursEtExpressions" title="Opérateurs et expressions">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Les <formatted style="bold">opérateurs</formatted> agissent sur les <formatted style="bold">variables</formatted> 
+				et les <formatted style="bold">constantes</formatted> pour former des <formatted style="bold">expressions</formatted>. 
+      </paragraph>
+      <paragraph>
+				Une expression est donc une combinaison cohérente de variables, de constantes et d’opérateurs,
+				éventuellement accompagnés de parenthèses.
+			</paragraph>
+    </entry>
+    
+			<learningObject title="Les opérateurs arithmétiques élémentaires en algo">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          Ce sont les opérateurs binaires bien connus :
+          <list listStyle="unordered">
+            <item><formatted style="code">+</formatted> addition</item>
+            <item><formatted style="code">-</formatted> soustraction</item>
+            <item><formatted style="code">*</formatted> multiplication</item>
+            <item><formatted style="code">/</formatted> division réelle</item>
+          </list>
+          Ils agissent sur des variables ou expressions à valeurs entières ou réelles. 
+        </paragraph>
+        <paragraph>
+          Plusieurs opérateurs peuvent être utilisés pour former des expressions plus ou moins complexes, 
+          en tenant compte des règles de calcul habituelles, notamment la priorité de la multiplication et de la division
+          sur l’addition et la soustraction. 
+        </paragraph>
+        <paragraph>
+          Il est aussi permis d’utiliser des parenthèses, par exemple <formatted style="input">a – (b + c * d)/x</formatted>. 
+        </paragraph>
+        <paragraph>
+          Tout emploi de la division devra être accompagné d’une réflexion sur la
+          valeur du dénominateur, une division par 0 entrainant toujours l’arrêt d’un algorithme.
+        </paragraph>
+        </clarify>
+      </learningObject>
+      
+      
+			<learningObject title="Les opérateurs arithmétiques élémentaires en Java">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          Ce sont les opérateurs binaires bien connus :
+          <list listStyle="unordered">
+            <item><formatted style="code">+</formatted> addition</item>
+            <item><formatted style="code">-</formatted> soustraction</item>
+            <item><formatted style="code">*</formatted> multiplication</item>
+            <item><formatted style="code">/</formatted> division réelle si au moins un des deux opérandes est réel</item>
+            <item><formatted style="code">/</formatted> division entière si les deux opérandes sont entiers</item>
+          </list>
+          Ils agissent sur des variables ou expressions à valeurs entières ou réelles. 
+        </paragraph>
+        <paragraph>
+          Plusieurs opérateurs peuvent être utilisés pour former des expressions plus ou moins complexes, 
+          en tenant compte des règles de calcul habituelles, notamment la priorité de la multiplication et de la division
+          sur l’addition et la soustraction. 
+        </paragraph>
+        <paragraph>
+          Il est aussi permis d’utiliser des parenthèses, par exemple <formatted style="input">a – (b + c * d)/x</formatted>. 
+        </paragraph>
+        <paragraph>
+          Tout emploi de la division devra être accompagné d’une réflexion sur la
+          valeur du dénominateur, une division par 0 entrainant un arrêt du programme.
+        </paragraph>
+        </clarify>
+      </learningObject>
+      
+			<learningObject title="Les opérateurs DIV et MOD en algo">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          Ce sont deux opérateurs très importants qui ne peuvent s’utiliser qu’avec des variables entières :
+          <list listStyle="unordered">
+            <item><formatted style="code">DIV</formatted> division entière</item>
+            <item><formatted style="code">MOD</formatted> reste de la division entière</item>
+          </list>
+        </paragraph>
+        </clarify>
+      </learningObject>
+      
+			<learningObject title="Les opérateurs DIV et MOD en Java">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          Ce sont deux opérateurs très importants qui ne peuvent s’utiliser qu’avec des variables entières :
+          <list listStyle="unordered">
+            <item><formatted style="code">/</formatted> division entière si les deux opérandes sont entiers</item>
+            <item><formatted style="code">%</formatted> reste de la division entière</item>
+          </list>
+        </paragraph>
+        </clarify>
+      </learningObject>
+      
+      <learningObject title="Les fonctions mathématiques complexes en algo">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          <list listStyle="unordered">
+            <item>L’élévation à la puissance sera notée ** ou ˆ . </item>
+            <item>Pour la racine carrée d’une variable x nous écrirons √x . Attention, pour ce dernier, de veiller à ne l’utiliser qu’avec un radicant positif !
+            Exemple : <formatted style="code">(−b +√(b ∗ ∗2 − 4 ∗ a ∗ c))/(2 ∗ a)</formatted></item>
+            <item> À votre avis, pourquoi ne pas avoir écrit « 4ac » et « 2a » ?</item>
+            <item>Si nécessaire, on se permettra d’utiliser les autres fonctions mathématiques sous leur forme
+            la plus courante dans la plupart des langages de programmation (exemples : sin(x), tan(x), log(x), exp(x). . .)</item>
+          </list>
+        </paragraph>
+      </clarify>
+    </learningObject>
+    
+    <learningObject title="Les fonctions mathématiques complexes en Java">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+        L'essentiel des fonctions mathématiques se trouvent dans la classe Math.
+          <list listStyle="unordered">
+            <item>Math.pow(a,b) est l'élévation à la puissance aˆb</item>
+            <item>Math.sqrt(x) est la racine carrée d’une variable x, √x . Attention, pour ce dernier, de veiller à ne l’utiliser qu’avec un radicant positif !</item>
+            <item>Si nécessaire,les autres fonctions mathématiques Math.sin(x), Math.tan(x), Math.log(x), Math.exp(x). . .)</item>
+          </list>
+        </paragraph>
+      </clarify>
+    </learningObject>
+    </unit>
+    
+    
+	<!-- =================================================================== -->
+	<unit label="Affectation" title="L’affectation d’une valeur à une variable">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Cette opération est probablement l’opération la plus importante. En effet, une variable ne
+        prend son sens réel que si elle reçoit à un moment donné une valeur. Il y a deux moyens de
+        donner une valeur à une variable.
+      </paragraph>
+    </entry>
+    
+			<learningObject title="Affectation interne en algo">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          On parle d’<formatted style="bold">affectation interne</formatted> lorsque la valeur d’une variable est « calculée » par l’exécutant
+          de l’algorithme lui-même à partir de données qu’il connait déjà :
+          <formatted style="input">nomVariable ← expression</formatted>
+          Rappelons qu’une expression est une combinaison de variables et d’opérateurs. <formatted style="bold">L’expression a une valeur</formatted>.
+        </paragraph>
+        </clarify>
+        
+        <act>
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>Les exemples d’affectation sont-ils corrects ?
+						</question>
+						<answer feedback="" correct="yes">somme ← nombre1 + nombre2</answer>
+						<answer feedback="" correct="yes">denRes ← den1 * den2</answer>
+						<answer feedback="" correct="yes">cpt ← cpt + 1</answer>
+						<answer feedback="" correct="yes">delta ← b**2 – 4*a*c</answer>
+						<answer feedback="" correct="yes">maChaine ← "Bonjour"</answer>
+						<answer feedback="" correct="yes">test ← a = b</answer>
+						<answer feedback="" correct="no">somme + 1 ← 3</answer>
+						<answer feedback="" correct="no">somme ← 3n</answer>
+					</multipleChoice>
+				</selfCheck>
+				</act>
+				<paragraph>
+				Remarques
+				<list listStyle="unordered">
+            <item>
+              Il est de règle que le résultat de l’expression à droite du signe d’affectation (←) soit de
+              même type que la variable à sa gauche. On tolère certaines exceptions :
+              <list listStyle="unordered">
+                <item>
+                  varEntière ← varRéelle : dans ce cas le contenu de la variable sera la valeur tronquée de l’expression réelle. 
+                  Par exemple si « nb » est une variable de type entier,
+                  son contenu après l’instruction <formatted style="input">nb ← 15/4 »</formatted> sera 3
+                </item>
+                <item>varRéelle ← varEntière : ici, il n’y a pas de perte de valeur.</item>
+                <item>varChaine ← varCaractère : équivalent à varChaine ← chaine(varCaractère).</item>
+                <item>Le contraire n’est évidemment pas accepté.</item>
+              </list>
+            </item>
+            <item>
+            Seules les variables déclarées peuvent être affectées, que ce soit par l’affectation externe
+            ou interne !
+            </item>
+            <item>
+            Nous ne mélangerons pas la déclaration d’une variable et son affectation interne dans
+            une même ligne de code, donc pas d’instructions hybrides du genre x ← 2 : entier ou
+            encore x : entier(0).
+            </item>
+            <item>
+            Pour l’affectation interne, toutes les variables apparaissant dans l’expression doivent
+            avoir été affectées préalablement. Le contraire provoquerait un arrêt de l’algorithme.
+            </item>
+          </list>
+        </paragraph>
+      </learningObject>
+      
+      <learningObject title="Affectation interne en Java">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          On parle d’<formatted style="bold">affectation interne</formatted> lorsque la valeur d’une variable est « calculée » par l’exécutant
+          de l’algorithme lui-même à partir de données qu’il connait déjà :
+          <formatted style="input">nomVariable = expression;</formatted>
+          Rappelons qu’une expression est une combinaison de variables et d’opérateurs. <formatted style="bold">L’expression a une valeur</formatted>.
+        </paragraph>
+        </clarify>
+        
+        <act>
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>Les exemples d’affectation sont-ils corrects ?
+						</question>
+						<answer feedback="" correct="yes">somme = nombre1 + nombre2;</answer>
+						<answer feedback="" correct="yes">denRes = den1 * den2;</answer>
+						<answer feedback="" correct="yes">cpt = cpt + 1;</answer>
+						<answer feedback="" correct="yes">delta = b**2 – 4*a*c;</answer>
+						<answer feedback="" correct="yes">maChaine = "Bonjour";</answer>
+						<answer feedback="" correct="no">somme + 1 = 3;</answer>
+						<answer feedback="" correct="no">somme = 3n;</answer>
+					</multipleChoice>
+				</selfCheck>
+				</act>
+      </learningObject>
+      
+			<learningObject title="Affectation externe en algo">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          On parle d’<formatted style="bold">affectation externe</formatted> lorsque la valeur à affecter à une variable
+           est donnée par l’utilisateur qui la communique à l’exécutant quand celui-ci le lui demande : cette valeur est
+          donc externe à la procédure (l’ordinateur ne peut la deviner lui-même !)
+        </paragraph>
+        <paragraph>
+          L’affectation externe est donc la primitive qui permet de recevoir de l’utilisateur, au moment
+          où l’algorithme se déroule, une ou plusieurs valeur(s) et de les affecter à des variables en
+          mémoire. 
+        </paragraph>
+        <paragraph>
+          Nous noterons :
+          <formatted style="input">lire liste_de_variables_à_lire</formatted>
+        </paragraph>
+        <paragraph>
+          Exemples
+          <formatted style="input">lire nombre1, nombre2</formatted>
+          <formatted style="input">lire num1, den1, num2, den2</formatted>
+        </paragraph>
+        <paragraph>
+          L’exécution de cette instruction provoque une pause dans le déroulement de l’algorithme ;
+          l’exécutant demande alors à l’utilisateur les valeurs des variables à lire. Ces valeurs viennent
+          donc de l’extérieur ; une fois introduites dans le système, elles sont affectées aux variables
+          concernées et l’algorithme peut reprendre son cours. Les possibilités d’introduction de don-
+          nées sont nombreuses : citons par exemple l’encodage de données au clavier, un clic de souris,
+          le toucher d’un écran tactile, des données provenant d’un fichier, etc.
+        </paragraph>
+        </clarify>
+        </learningObject>
+        
+        
+			<learningObject title="Affectation externe en Java">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          On parle d’<formatted style="bold">affectation externe</formatted> lorsque la valeur à affecter à une variable
+           est donnée par l’utilisateur qui la communique à l’exécutant quand celui-ci le lui demande : cette valeur est
+          donc externe à la procédure (l’ordinateur ne peut la deviner lui-même !)
+        </paragraph>
+        <paragraph>
+          L’affectation externe est donc la primitive qui permet de recevoir de l’utilisateur, au moment
+          où l’algorithme se déroule, une ou plusieurs valeur(s) et de les affecter à des variables en
+          mémoire. 
+        </paragraph>
+        <paragraph>
+          Nous noterons :
+          </paragraph>
+          <paragraph cssClass="java">
+ import java. util .Scanner;
+// ...
+Scanner clavier = new Scanner(System.in);
+// ...
+int nombre1 = clavier. nextInt ();
+				</paragraph>
+        <paragraph>
+          Les différentes lectures possibles sont :
+          <list listStyle="unordered">
+            <item>pour un entier : clavier.nextInt();</item>
+            <item>pour un réel : clavier.nextDouble();</item>
+            <item>pour un booléen : clavier.nextBoolean();</item>
+            <item>pour un mot : clavier.next()</item>
+            <item>pour une ligne : clavier.nextLine();</item>
+            <item>pour un caractère : clavier.next.charAt(0);</item>
+          </list>
+        </paragraph>
+        </clarify>
+        </learningObject>
+    </unit>
+      
 	
 	<!--metadata>
 		<organisation level="1ère année" module="Laboratoires Java">

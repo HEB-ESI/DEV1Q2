@@ -231,7 +231,7 @@
 					\end{itemize}
 				
             \par
-        \subsection{ Les types autoris\'es en algo}
+        \subsection{Les types autoris\'es en algo}
           Dans un premier temps, les seuls types utilis\'es sont :
           
 					\begin{itemize}
@@ -244,6 +244,39 @@
               (par exemple : "Bonjour", "Bonjour le monde", "a", "", etc.)
 			\item \verb@booléen@ les variables de ce type 
             ne peuvent valoir que \verb@vrai@ ou \verb@faux@
+					\end{itemize}
+				
+            \par
+        
+			
+		\subparagraph{Le type des donn\'ees} 
+		
+                \textcolor{white}{.} \par
+             
+								Quel(s) type(s) de donn\'ees utiliseriez-vous pour repr\'esenter :
+							
+					\begin{itemize}
+				
+			\item une date du calendrier ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item un moment dans la journ\'ee ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item le prix d'un produit en grande surface ? \textcolor{gray}{\underline{\hspace*{5em}}} 
+			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item vos initiales ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item votre adresse ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+					\end{itemize}
+				\subsection{Les types \'equivalents en java}
+          Les \'equivalents Java des types donn\'es en algo sont
+          
+					\begin{itemize}
+				
+			\item \verb@int@ pour le type \verb@entier@ pour les nombres entiers ;
+			\item \verb@double@pour le type \verb@réel@ pour les nombres r\'eels ;
+			\item \verb@char@ pour le type \verb@caractère@ pour les diff\'erentes lettres et caract\`eres
+			\item \verb@String@ pour le type \verb@chaine@ 
+              pour les variables contenant un ou plusieurs caract\`ere(s) ou aucun (la chaine vide)
+            
+			\item \verb@boolean@ pour le type \verb@booléen@ les variables de ce type 
+            ne peuvent valoir, en Java, que \verb@true@ ou \verb@false@
 					\end{itemize}
 				
             \par
@@ -264,39 +297,482 @@
 			\item vos initiales ? \textcolor{gray}{\underline{\hspace*{10em}}} 
 			\item votre adresse ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 					\end{itemize}
-				\subsection{ Les types \'equivalents en java}
-          Dans un premier temps, les seuls types utilis\'es sont :
+				\subsection{D\'eclaration de variables en algo}
+          La \textbf{d\'eclaration} d'une variable est l'instruction qui d\'efinit son \textbf{nom} 
+          et son \textbf{type}.
+        
+            \par
+        \,\verb|num1, num2 : entiers|\,
+            \par
+        
+          L'ensemble des instructions de la forme \,\verb|variable1, variable2,. . . : type|\,
+          forme la partie d'un algorithme nomm\'ee \textbf{d\'eclaration des variables}. 
+        
+            \par
+        
+          La d\'eclaration des informations apparaitra toujours en \textbf{d\'ebut} d'algorithme, ou dans un bloc annexe appel\'e
+          dictionnaire des variables ou encore dictionnaire des donn\'ees.
+        
+            \par
+        
+			
+		\subparagraph{Attention} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        
+          Attention, lors de la d\'eclaration d'une variable, \textbf{celle-ci n'a pas de valeur} ! 
+          Nous verrons que c'est l'instruction d'affectation qui va servir \`a donner un contenu aux variables d\'eclar\'ees.
+        
+            \par
+        
+			
+		\subparagraph{Comment nommer correctement une variable ?} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        
+          Le but est de trouver un nom qui soit suffisamment \textbf{court}, 
+          tout en restant \textbf{explicite} et ne pr\^etant \textbf{pas \`a confusion}.
+        
+            \par
+        
+          Ainsi \textit{num1} est plus appropri\'e pour d\'esigner le premier num\'erateur 
+          que \textit{zozo1}, \textit{tintin}, \textit{bidule}
+          ou \textit{premierNum\'erateur}. 
+          De m\^eme, ne pas appeler \textit{den} la variable repr\'esentant le num\'erateur.
+        
+            \par
+        
+          Il faut aussi tenir compte que les langages de programmation imposent certaines limitations
+          (parfois diff\'erentes d'un langage \`a l'autre) ce qui peut n\'ecessiter une modification du nom
+          lors de la traduction.
+        
+            \par
+        
+          Voici quelques r\`egles et limitations traditionnelles dans les langages de programmation :
           
 					\begin{itemize}
 				
-			\item \verb@entier@ pour les nombres entiers ;
-			\item \verb@réel@ pour les nombres r\'eels ;
-			\item \verb@caractère@ pour les diff\'erentes lettres et caract\`eres
-              (par exemple ceux qui apparaissent sur un clavier : 'a', '1', '\#', etc.)
-			\item \verb@chaine@ pour les variables contenant un ou plusieurs caract\`ere(s) ou aucun (la chaine vide)
-              (par exemple : "Bonjour", "Bonjour le monde", "a", "", etc.)
-			\item \verb@booléen@ les variables de ce type 
-            ne peuvent valoir que \verb@vrai@ ou \verb@faux@
+			\item 
+            Un nom de variable est g\'en\'eralement une suite de caract\`eres alphanum\'eriques d'un
+            seul tenant (pas de caract\`eres blancs) et ne commen\c cant jamais par un chiffre. Ainsi
+            x1 est correct mais pas 1x.
+            
+			\item 
+            Pour donner un nom compos\'e \`a une variable, on peut utiliser le \guillemotleft  tiret bas \guillemotright  ou underscore 
+            (par ex. premier\_num\'erateur) mais on d\'econseille d'utiliser le signe \guillemotleft  - \guillemotright  qui est
+            plut\^ot r\'eserv\'e \`a la soustraction. Ainsi, dans la plupart des langages, premier-num\'erateur
+            serait interpr\'et\'e comme la soustraction des variables premier et num\'erateur.
+            
+			\item 
+            Une alternative \`a l'utilisation du tiret bas pour l'\'ecriture de noms de variables compos\'es
+            est la notation \guillemotleft  chameau \guillemotright  (camelCase en anglais), qui consiste \`a mettre une majuscule
+            au d\'ebut des mots (g\'en\'eralement \`a partir du deuxi\`eme), par exemple premierNombre
+            ou dateNaissance.
+            
+			\item 
+            Les indices et exposants sont proscrits.
+            
+			\item 
+            Les mots-cl\'es du langage sont interdits (par exemple for, if, while pour Java et Cobol)
+            et on d\'econseille d'utiliser les mots-cl\'es du pseudo-code (tels que Lire, Afficher, pour. . .)
+            
+			\item 
+            Certains langages n'autorisent pas les caract\`eres accentu\'es (tels que \`a, \c c, \^e, \o, etc.)
+            ou les lettres des alphabets non latins mais d'autres oui ; certains font la
+            distinction entre les minuscules et majuscules, d'autres non. En algorithmique, nous
+            admettons, dans les noms de variables les caract\`eres accentu\'es du fran\c cais, par ex. :
+            dur\'ee, int\'er\^ets, etc.
+            
 					\end{itemize}
 				
             \par
         
 			
-		\subparagraph{Les commandes de base} 
+		\subparagraph{Comment d\'eclarer} 
 		
                 \textcolor{white}{.} \par
-             
-								Quel(s) type(s) de donn\'ees utiliseriez-vous pour repr\'esenter :
+            
+							  Quelle instruction permet de d\'eclarer :
 							
 					\begin{itemize}
 				
-			\item une date du calendrier ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item un moment dans la journ\'ee ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item le prix d'un produit en grande surface ? \textcolor{gray}{\underline{\hspace*{5em}}} 
+			\item le jour d'une date ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item l'heure d'un moment ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item le prix d'un produit en grande surface ? \textcolor{gray}{\underline{\hspace*{10em}}} 
 			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item vos initiales ? \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item votre adresse ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+					\end{itemize}
+				\subsection{D\'eclaration de variables en Java}
+          La \textbf{d\'eclaration} d'une variable est l'instruction qui d\'efinit son \textbf{nom} 
+          et son \textbf{type}.
+        
+            \par
+        \,\verb|int num1;|\,
+            \par
+        
+          L'ensemble des instructions de la forme \,\verb|type nom;|\,
+          forme la \textbf{d\'eclaration des variables}. 
+        
+            \par
+        
+          La d\'eclaration des informations apparaitra en \textbf{d\'ebut} de bloc.
+        
+            \par
+        
+			
+		\subparagraph{Attention} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        
+          Attention, comme en algo, lors de la d\'eclaration d'une variable, \textbf{celle-ci n'a pas de valeur} ! 
+          Nous verrons que c'est l'instruction d'affectation qui va servir \`a donner un contenu aux variables d\'eclar\'ees.
+        
+            \par
+        
+			
+		\subparagraph{Comment nommer correctement une variable ?} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        
+          Le but est de trouver un nom qui soit suffisamment \textbf{court}, 
+          tout en restant \textbf{explicite} et ne pr\^etant \textbf{pas \`a confusion}.
+        
+            \par
+        
+          Il faut aussi tenir compte des limitations du langage.
+          
+					\begin{itemize}
+				
+			\item 
+            Un nom de variable est g\'en\'eralement une suite de caract\`eres alphanum\'eriques d'un
+            seul tenant (pas de caract\`eres blancs) et ne commen\c cant jamais par un chiffre. Ainsi
+            x1 est correct mais pas 1x.
+            
+			\item 
+            un nom de variable ne peut comporter que des lettres, des chiffres, les caract\`eres \textit{\_} et \textit{\$}.
+            
+			\item 
+            L'\'ecriture de noms de variables compos\'es
+            est la notation \guillemotleft  chameau \guillemotright  (camelCase en anglais), qui consiste \`a mettre une majuscule
+            au d\'ebut des mots (g\'en\'eralement \`a partir du deuxi\`eme), par exemple premierNombre
+            ou dateNaissance.
+            
+			\item 
+            Pour donner un nom compos\'e \`a une variable enti\`erement en majuscules, on peut utiliser le \guillemotleft  tiret bas \guillemotright  ou underscore 
+            (par ex. PREMIER\_NUMERATEUR).
+            
+			\item 
+            Les mots-cl\'es du langage sont interdits (par exemple for, if, while)
+            
 					\end{itemize}
 				
+            \par
+        
+			
+		\subparagraph{Comment d\'eclarer} 
+		
+                \textcolor{white}{.} \par
+            
+							  Quelle instruction permet de d\'eclarer :
+							
+					\begin{itemize}
+				
+			\item le jour d'une date ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item l'heure d'un moment ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item le prix d'un produit en grande surface ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+					\end{itemize}
+				\section{Op\'erateurs et expressions}
+				Les \textbf{op\'erateurs} agissent sur les \textbf{variables} 
+				et les \textbf{constantes} pour former des \textbf{expressions}. 
+      
+            \par
+        
+				Une expression est donc une combinaison coh\'erente de variables, de constantes et d'op\'erateurs,
+				\'eventuellement accompagn\'es de parenth\`eses.
+			
+            \par
+        \subsection{Les op\'erateurs arithm\'etiques \'el\'ementaires en algo}
+          Ce sont les op\'erateurs binaires bien connus :
+          
+					\begin{itemize}
+				
+			\item \verb@+@ addition
+			\item \verb@-@ soustraction
+			\item \verb@*@ multiplication
+			\item \verb@/@ division r\'eelle
+					\end{itemize}
+				
+          Ils agissent sur des variables ou expressions \`a valeurs enti\`eres ou r\'eelles. 
+        
+            \par
+        
+          Plusieurs op\'erateurs peuvent \^etre utilis\'es pour former des expressions plus ou moins complexes, 
+          en tenant compte des r\`egles de calcul habituelles, notamment la priorit\'e de la multiplication et de la division
+          sur l'addition et la soustraction. 
+        
+            \par
+        
+          Il est aussi permis d'utiliser des parenth\`eses, par exemple \,\verb|a – (b + c * d)/x|\,. 
+        
+            \par
+        
+          Tout emploi de la division devra \^etre accompagn\'e d'une r\'eflexion sur la
+          valeur du d\'enominateur, une division par 0 entrainant toujours l'arr\^et d'un algorithme.
+        
+            \par
+        \subsection{Les op\'erateurs arithm\'etiques \'el\'ementaires en Java}
+          Ce sont les op\'erateurs binaires bien connus :
+          
+					\begin{itemize}
+				
+			\item \verb@+@ addition
+			\item \verb@-@ soustraction
+			\item \verb@*@ multiplication
+			\item \verb@/@ division r\'eelle si au moins un des deux op\'erandes est r\'eel
+			\item \verb@/@ division enti\`ere si les deux op\'erandes sont entiers
+					\end{itemize}
+				
+          Ils agissent sur des variables ou expressions \`a valeurs enti\`eres ou r\'eelles. 
+        
+            \par
+        
+          Plusieurs op\'erateurs peuvent \^etre utilis\'es pour former des expressions plus ou moins complexes, 
+          en tenant compte des r\`egles de calcul habituelles, notamment la priorit\'e de la multiplication et de la division
+          sur l'addition et la soustraction. 
+        
+            \par
+        
+          Il est aussi permis d'utiliser des parenth\`eses, par exemple \,\verb|a – (b + c * d)/x|\,. 
+        
+            \par
+        
+          Tout emploi de la division devra \^etre accompagn\'e d'une r\'eflexion sur la
+          valeur du d\'enominateur, une division par 0 entrainant un arr\^et du programme.
+        
+            \par
+        \subsection{Les op\'erateurs DIV et MOD en algo}
+          Ce sont deux op\'erateurs tr\`es importants qui ne peuvent s'utiliser qu'avec des variables enti\`eres :
+          
+					\begin{itemize}
+				
+			\item \verb@DIV@ division enti\`ere
+			\item \verb@MOD@ reste de la division enti\`ere
+					\end{itemize}
+				
+            \par
+        \subsection{Les op\'erateurs DIV et MOD en Java}
+          Ce sont deux op\'erateurs tr\`es importants qui ne peuvent s'utiliser qu'avec des variables enti\`eres :
+          
+					\begin{itemize}
+				
+			\item \verb@/@ division enti\`ere si les deux op\'erandes sont entiers
+			\item \verb@%@ reste de la division enti\`ere
+					\end{itemize}
+				
+            \par
+        \subsection{Les fonctions math\'ematiques complexes en algo}
+					\begin{itemize}
+				
+			\item L'\'el\'evation \`a la puissance sera not\'ee ** ou ˆ . 
+			\item Pour la racine carr\'ee d'une variable x nous \'ecrirons √x . Attention, pour ce dernier, de veiller \`a ne l'utiliser qu'avec un radicant positif !
+            Exemple : \verb@(−b +√(b ∗ ∗2 − 4 ∗ a ∗ c))/(2 ∗ a)@
+			\item  \`A votre avis, pourquoi ne pas avoir \'ecrit \guillemotleft  4ac \guillemotright  et \guillemotleft  2a \guillemotright  ?
+			\item Si n\'ecessaire, on se permettra d'utiliser les autres fonctions math\'ematiques sous leur forme
+            la plus courante dans la plupart des langages de programmation (exemples : sin(x), tan(x), log(x), exp(x). . .)
+					\end{itemize}
+				
+            \par
+        \subsection{Les fonctions math\'ematiques complexes en Java}
+        L'essentiel des fonctions math\'ematiques se trouvent dans la classe Math.
+          
+					\begin{itemize}
+				
+			\item Math.pow(a,b) est l'\'el\'evation \`a la puissance aˆb
+			\item Math.sqrt(x) est la racine carr\'ee d'une variable x, √x . Attention, pour ce dernier, de veiller \`a ne l'utiliser qu'avec un radicant positif !
+			\item Si n\'ecessaire,les autres fonctions math\'ematiques Math.sin(x), Math.tan(x), Math.log(x), Math.exp(x). . .)
+					\end{itemize}
+				
+            \par
+        \section{L'affectation d'une valeur \`a une variable}
+				Cette op\'eration est probablement l'op\'eration la plus importante. En effet, une variable ne
+        prend son sens r\'eel que si elle re\c coit \`a un moment donn\'e une valeur. Il y a deux moyens de
+        donner une valeur \`a une variable.
+      
+            \par
+        \subsection{Affectation interne en algo}
+          On parle d'\textbf{affectation interne} lorsque la valeur d'une variable est \guillemotleft  calcul\'ee \guillemotright  par l'ex\'ecutant
+          de l'algorithme lui-m\^eme \`a partir de donn\'ees qu'il connait d\'ej\`a :
+          \,\verb|nomVariable ← expression|\,
+          Rappelons qu'une expression est une combinaison de variables et d'op\'erateurs. \textbf{L'expression a une valeur}.
+        
+            \par
+        
+			
+		\subparagraph{} 
+		
+                \textcolor{white}{.} \par
+            Les exemples d'affectation sont-ils corrects ?
+						
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] somme ← nombre1 + nombre2
+        
+            \item[ \ding{"6F} ] denRes ← den1 * den2
+        
+            \item[ \ding{"6F} ] cpt ← cpt + 1
+        
+            \item[ \ding{"6F} ] delta ← b**2 - 4*a*c
+        
+            \item[ \ding{"6F} ] maChaine ← "Bonjour"
+        
+            \item[ \ding{"6F} ] test ← a = b
+        
+            \item[ \ding{"6F} ] somme + 1 ← 3
+        
+            \item[ \ding{"6F} ] somme ← 3n
+        
+            \end{itemize} 
+        
+				Remarques
+				
+					\begin{itemize}
+				
+			\item 
+              Il est de r\`egle que le r\'esultat de l'expression \`a droite du signe d'affectation (←) soit de
+              m\^eme type que la variable \`a sa gauche. On tol\`ere certaines exceptions :
+              
+					\begin{itemize}
+				
+			\item 
+                  varEnti\`ere ← varR\'eelle : dans ce cas le contenu de la variable sera la valeur tronqu\'ee de l'expression r\'eelle. 
+                  Par exemple si \guillemotleft  nb \guillemotright  est une variable de type entier,
+                  son contenu apr\`es l'instruction \,\verb|nb ← 15/4 »|\, sera 3
+                
+			\item varR\'eelle ← varEnti\`ere : ici, il n'y a pas de perte de valeur.
+			\item varChaine ← varCaract\`ere : \'equivalent \`a varChaine ← chaine(varCaract\`ere).
+			\item Le contraire n'est \'evidemment pas accept\'e.
+					\end{itemize}
+				
+			\item 
+            Seules les variables d\'eclar\'ees peuvent \^etre affect\'ees, que ce soit par l'affectation externe
+            ou interne !
+            
+			\item 
+            Nous ne m\'elangerons pas la d\'eclaration d'une variable et son affectation interne dans
+            une m\^eme ligne de code, donc pas d'instructions hybrides du genre x ← 2 : entier ou
+            encore x : entier(0).
+            
+			\item 
+            Pour l'affectation interne, toutes les variables apparaissant dans l'expression doivent
+            avoir \'et\'e affect\'ees pr\'ealablement. Le contraire provoquerait un arr\^et de l'algorithme.
+            
+					\end{itemize}
+				
+            \par
+        \subsection{Affectation interne en Java}
+          On parle d'\textbf{affectation interne} lorsque la valeur d'une variable est \guillemotleft  calcul\'ee \guillemotright  par l'ex\'ecutant
+          de l'algorithme lui-m\^eme \`a partir de donn\'ees qu'il connait d\'ej\`a :
+          \,\verb|nomVariable = expression;|\,
+          Rappelons qu'une expression est une combinaison de variables et d'op\'erateurs. \textbf{L'expression a une valeur}.
+        
+            \par
+        
+			
+		\subparagraph{} 
+		
+                \textcolor{white}{.} \par
+            Les exemples d'affectation sont-ils corrects ?
+						
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] somme = nombre1 + nombre2;
+        
+            \item[ \ding{"6F} ] denRes = den1 * den2;
+        
+            \item[ \ding{"6F} ] cpt = cpt + 1;
+        
+            \item[ \ding{"6F} ] delta = b**2 - 4*a*c;
+        
+            \item[ \ding{"6F} ] maChaine = "Bonjour";
+        
+            \item[ \ding{"6F} ] somme + 1 = 3;
+        
+            \item[ \ding{"6F} ] somme = 3n;
+        
+            \end{itemize} 
+        \subsection{Affectation externe en algo}
+          On parle d'\textbf{affectation externe} lorsque la valeur \`a affecter \`a une variable
+           est donn\'ee par l'utilisateur qui la communique \`a l'ex\'ecutant quand celui-ci le lui demande : cette valeur est
+          donc externe \`a la proc\'edure (l'ordinateur ne peut la deviner lui-m\^eme !)
+        
+            \par
+        
+          L'affectation externe est donc la primitive qui permet de recevoir de l'utilisateur, au moment
+          o\`u l'algorithme se d\'eroule, une ou plusieurs valeur(s) et de les affecter \`a des variables en
+          m\'emoire. 
+        
+            \par
+        
+          Nous noterons :
+          \,\verb|lire liste_de_variables_à_lire|\,
+            \par
+        
+          Exemples
+          \,\verb|lire nombre1, nombre2|\,\,\verb|lire num1, den1, num2, den2|\,
+            \par
+        
+          L'ex\'ecution de cette instruction provoque une pause dans le d\'eroulement de l'algorithme ;
+          l'ex\'ecutant demande alors \`a l'utilisateur les valeurs des variables \`a lire. Ces valeurs viennent
+          donc de l'ext\'erieur ; une fois introduites dans le syst\`eme, elles sont affect\'ees aux variables
+          concern\'ees et l'algorithme peut reprendre son cours. Les possibilit\'es d'introduction de don-
+          n\'ees sont nombreuses : citons par exemple l'encodage de donn\'ees au clavier, un clic de souris,
+          le toucher d'un \'ecran tactile, des donn\'ees provenant d'un fichier, etc.
+        
+            \par
+        \subsection{Affectation externe en Java}
+          On parle d'\textbf{affectation externe} lorsque la valeur \`a affecter \`a une variable
+           est donn\'ee par l'utilisateur qui la communique \`a l'ex\'ecutant quand celui-ci le lui demande : cette valeur est
+          donc externe \`a la proc\'edure (l'ordinateur ne peut la deviner lui-m\^eme !)
+        
+            \par
+        
+          L'affectation externe est donc la primitive qui permet de recevoir de l'utilisateur, au moment
+          o\`u l'algorithme se d\'eroule, une ou plusieurs valeur(s) et de les affecter \`a des variables en
+          m\'emoire. 
+        
+            \par
+        
+          Nous noterons :
+          
+            \par
+        \begin{Java}
+ import java. util .Scanner;
+// ...
+Scanner clavier = new Scanner(System.in);
+// ...
+int nombre1 = clavier. nextInt ();
+				\end{Java}
+          Les diff\'erentes lectures possibles sont :
+          
+					\begin{itemize}
+				
+			\item pour un entier : clavier.nextInt();
+			\item pour un r\'eel : clavier.nextDouble();
+			\item pour un bool\'een : clavier.nextBoolean();
+			\item pour un mot : clavier.next()
+			\item pour une ligne : clavier.nextLine();
+			\item pour un caract\`ere : clavier.next.charAt(0);
+					\end{itemize}
+				
+            \par
+        
 				\end{document}
 			

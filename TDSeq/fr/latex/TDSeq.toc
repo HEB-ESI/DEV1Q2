@@ -2,7 +2,29 @@
 \contentsline {section}{\numberline {1}Algorithmes s\'equentiels}{2}{section.1}
 \contentsline {subsection}{\numberline {1.1}Le pseudo-code}{2}{subsection.1.1}
 \contentsline {section}{\numberline {2}Variables et types}{2}{section.2}
-\contentsline {subsection}{\numberline {2.1} Les types autoris\'es en algo}{2}{subsection.2.1}
-\contentsline {subparagraph}{Les commandes de base}{3}{section*.2}
-\contentsline {subsection}{\numberline {2.2} Les types \'equivalents en java}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.1}Les types autoris\'es en algo}{2}{subsection.2.1}
+\contentsline {subparagraph}{Le type des donn\'ees}{3}{section*.2}
+\contentsline {subsection}{\numberline {2.2}Les types \'equivalents en java}{3}{subsection.2.2}
 \contentsline {subparagraph}{Les commandes de base}{3}{section*.3}
+\contentsline {subsection}{\numberline {2.3}D\'eclaration de variables en algo}{3}{subsection.2.3}
+\contentsline {subparagraph}{Attention}{4}{section*.4}
+\contentsline {subparagraph}{Comment nommer correctement une variable ?}{4}{section*.5}
+\contentsline {subparagraph}{Comment d\'eclarer}{5}{section*.6}
+\contentsline {subsection}{\numberline {2.4}D\'eclaration de variables en Java}{5}{subsection.2.4}
+\contentsline {subparagraph}{Attention}{5}{section*.7}
+\contentsline {subparagraph}{Comment nommer correctement une variable ?}{5}{section*.8}
+\contentsline {subparagraph}{Comment d\'eclarer}{6}{section*.9}
+\contentsline {section}{\numberline {3}Op\'erateurs et expressions}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Les op\'erateurs arithm\'etiques \'el\'ementaires en algo}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Les op\'erateurs arithm\'etiques \'el\'ementaires en Java}{6}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Les op\'erateurs DIV et MOD en algo}{7}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Les op\'erateurs DIV et MOD en Java}{7}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Les fonctions math\'ematiques complexes en algo}{7}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Les fonctions math\'ematiques complexes en Java}{7}{subsection.3.6}
+\contentsline {section}{\numberline {4}L'affectation d'une valeur \`a une variable}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Affectation interne en algo}{8}{subsection.4.1}
+\contentsline {subparagraph}{}{8}{section*.10}
+\contentsline {subsection}{\numberline {4.2}Affectation interne en Java}{9}{subsection.4.2}
+\contentsline {subparagraph}{}{9}{section*.11}
+\contentsline {subsection}{\numberline {4.3}Affectation externe en algo}{9}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Affectation externe en Java}{10}{subsection.4.4}
