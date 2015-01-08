@@ -28,3 +28,4 @@
 \contentsline {subparagraph}{}{9}{section*.11}
 \contentsline {subsection}{\numberline {4.3}Affectation externe en algo}{9}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Affectation externe en Java}{10}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Communication des r\'esultats en algo}{10}{subsection.4.5}

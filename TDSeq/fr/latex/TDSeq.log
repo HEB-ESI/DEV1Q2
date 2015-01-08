@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  8 JAN 2015 01:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  8 JAN 2015 20:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -948,21 +948,33 @@ haine(varCaractère).
 [8] [9] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 777.
+Overfull \hbox (102.27141pt too wide) in paragraph at lines 782--787
+[]\T1/lmr/m/n/10.95 Nous no-te-rons : []\T1/lmtt/m/n/10.95 afficher expression 
+ou liste de variables séparées par des virgules
+ []
 
 [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 777.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 809.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 809.
  (./TDSeq.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 777.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 777.
-Package rerunfilecheck Info: File `TDSeq.out' has not changed.
-(rerunfilecheck)             Checksum: B59CF0987D0B0E8617C2C1AE9F454294;1594.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 777.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 809.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 809.
+
+
+Package rerunfilecheck Warning: File `TDSeq.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TDSeq.out':
+(rerunfilecheck)             Before: B59CF0987D0B0E8617C2C1AE9F454294;1594
+(rerunfilecheck)             After:  BFAB3995D703BFD21C9129296EE15DD7;1685.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 809.
  ) 
 Here is how much of TeX's memory you used:
- 13796 strings out of 493304
- 196159 string characters out of 6139871
- 306260 words of memory out of 5000000
+ 13798 strings out of 493304
+ 196180 string characters out of 6139871
+ 307260 words of memory out of 5000000
  16956 multiletter control sequences out of 15000+600000
  67415 words of font info for 47 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -981,10 +993,10 @@ pe1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr
 .pfb>
-Output written on TDSeq.pdf (10 pages, 348753 bytes).
+Output written on TDSeq.pdf (11 pages, 350213 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 219 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
  163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

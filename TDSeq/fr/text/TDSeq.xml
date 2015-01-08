@@ -635,6 +635,39 @@ int nombre1 = clavier. nextInt ();
         </paragraph>
         </clarify>
         </learningObject>
+        
+        <learningObject title="Communication des résultats en algo">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          L’instruction de communication des résultats consiste à donner à l’extérieur (donc à l’utilisateur) 
+          la valeur d’un résultat calculé au cours de l’exécution de l’algorithme.
+        </paragraph>
+        <paragraph>
+          Nous noterons :
+          <formatted style="input">afficher expression ou liste de variables séparées par des virgules</formatted>
+          qui signifie que la valeur d’une expression (ou celles des différentes variables mentionnées) 
+          sera fournie à l’utilisateur (par exemple par un affichage à l’écran ou par impression sur
+          listing via l’imprimante, etc.).
+          </paragraph>
+          <paragraph>
+          Remarques :
+          <list listStyle="unordered">
+            <item>
+              Ce ne serait pas une erreur fondamentale de remplacer lire par recevoir ou afficher
+              par écrire. Il n’y a évidemment pas de confusion possible à partir du moment où l’on
+              sait qu’il s’agit de primitives d’échange entre l’extérieur et l’ordinateur exécutant la
+              procédure, mais par principe, il est conseillé d’utiliser une syntaxe commune et limitée
+              à un petit nombre de mots-clés.
+            </item>
+            <item>
+              Comme pour l’affectation interne, on ne peut afficher que des expressions dont les
+              variables qui la composent ont été affectées préalablement.
+            </item>
+          </list>
+          </paragraph>
+        </clarify>
+        </learningObject>
     </unit>
       
 	
