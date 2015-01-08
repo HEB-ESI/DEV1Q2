@@ -1,0 +1,940 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="InitLinux" title="InitLinux - Que devez-vous revoir ?">
+	
+	<entry>
+		<paragraph>
+			Cet exercice a pour but de vous situer par rapport à vos connaissances 
+			<formatted style="code">Linux</formatted>.
+		</paragraph>
+	</entry>
+	
+	<!-- =========================================================== -->
+	<unit label="Bases" title="Les commandes de base de Linux">
+	<!-- =========================================================== -->
+		
+		<learningObject title="Quelques commandes courantes">
+		<!-- ================================================ -->
+			<act>
+				<selfCheck title="Les commandes de base" shuffle="yes">
+						<fillInBlanks>
+							<question> 
+								La commande pour :  
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>voir le contenu d'un dossier (la liste de ce qu'il contient) est <gap answers="ls">ls</gap></item>  
+									<item>voir le contenu d'un dossier (la liste de ce qu'il contient) au format long est <gap answers="ls -l">ls -l</gap></item>  
+									<item>voir le contenu d'un dossier (la liste de ce qu'il contient), y compris les fichiers cachés est <gap answers="ls -a">ls -a</gap></item>  
+									<item>éditer le contenu d'un fichier est <gap answers="nano">nano</gap></item>  
+									<item>changer son mot de passe est <gap answers="passwd">passwd</gap></item>  
+									<item>se déconnecter de linux1 est <gap answers="exit">exit</gap></item>  
+									<item>copier un fichier est <gap answers="cp">cp</gap></item>  
+									<item>renommer un fichier est <gap answers="mv">mv</gap></item>  
+									<item>déplacer un fichier est <gap answers="mv">mv</gap></item>  
+									<item>changer de dossier courant est <gap answers="cd">cd</gap></item>  
+									<item>créer un répertoire est <gap answers="mkdir">mkdir</gap></item>  
+									<item>visualiser le contenu d'un fichier sans l'éditer est <gap answers="cat">cat</gap></item>  
+									<item>voir quel est le dossier courant (son chemin) est <gap answers="pwd">pwd</gap></item>  
+									<item>détruire un fichier est <gap answers="rm">rm</gap></item>  
+									<item>détruire un dossier vide est <gap answers="rmdir,rm -r">rmdir</gap></item>  
+									<item>détruire un dossier pas forcément vide est <gap answers="rm -r">rm -r</gap></item>  
+									<item>d'obtenir la liste des options de la commande rm est <gap answers="man rm">man rm</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+      
+					<selfCheck title="La ligne de commande" shuffle="no">
+						<fillInBlanks>
+							<question/>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										Qu'est-ce qui permet de distinguer / séparer les différentes parties d'une commande ? 
+										<gap answers="l'espace,espace">l'espace</gap> 
+									</item>  
+									<item>
+										Dans la commande <formatted style="input">rmdir</formatted>, combien y a-t-il de parties ?  
+										<gap answers="1,un,une">1</gap> 
+									</item>  
+									<item>
+										Dans la commande <formatted style="input">rm dir</formatted>, combien y a-t-il de parties ?  
+										<gap answers="2,deux">2</gap> 
+									</item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+					
+          <paragraph>Si vous avez répondu correctement à moins de 17 questions, <link uri="../../../TDLinux/fr/html/unit_Bases.html">révisez ici</link></paragraph>
+          
+				</act>
+		  </learningObject>
+
+	</unit>
+		
+	<!-- =================================================================== -->
+	<unit label="SystèmeDeFichiers" title="Système de fichiers, chemin absolu et relatif">
+	<!-- =================================================================== -->
+		
+		<learningObject title="Exercices">
+		<!-- ================================================ -->
+			<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>La racine du système de fichier sous Linux est
+						</question>
+						<answer feedback="" correct="no">.</answer>
+						<answer feedback="" correct="no">..</answer>
+						<answer feedback="" correct="no">~</answer>
+						<answer feedback="" correct="no">~g12345</answer>
+						<answer feedback="" correct="yes">/</answer>
+						<answer feedback="" correct="no">/home</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>Le(s)quel(s) de ces chemins est/sont un chemin absolu ?
+						</question>
+						<answer feedback="" correct="yes">/home/g54321/tdLinux</answer>
+						<answer feedback="" correct="yes">~g54321/tdLinux</answer>
+						<answer feedback="" correct="no">g54321/tdLinux</answer>
+						<answer feedback="" correct="no">tdLinux</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>Le(s)quel(s) de ces chemins est/sont un chemin relatif ?
+						</question>
+						<answer feedback="" correct="yes">tdLinux</answer>
+						<answer feedback="" correct="yes">../tdLinux</answer>
+						<answer feedback="" correct="yes">./.././eCours/tdLinux</answer>
+						<answer feedback="" correct="no">/eCours/java/tds/tdLinux</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<paragraph>Si vous n'avez répondu correctement à ces 3 questions, <link uri="../../../TDLinux/fr/html/unit_SystèmeDeFichiers.html">révisez ici</link></paragraph>
+		
+		  <paragraph>
+			    <multimedia src="../image/arborescenceUnix.png" type="png" />
+			    
+			    [source : franceftars.us.62-152-34-99.ppa.listkom.ru]
+        </paragraph>
+		<selfCheck title="La ligne de commande" shuffle="no">
+						<fillInBlanks>
+							<question>
+							Supposons que le répertoire courant est le dossier personnel <formatted style="input">/home/adam</formatted>
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										Quelle commande permet de supprimer le répertoire <formatted style="input">imgs</formatted> et son contenu en utilisant un chemin absolu ?
+										<gap answers="rm -r /home/adam/imgs,rm -r ~/imgs">rm -r /home/adam/imgs</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de supprimer le répertoire <formatted style="input">imgs</formatted> et son contenu en utilisant un chemin relatif ?
+										<gap answers="rm -r imgs,rm -r ./imgs">rm -r imgs</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de créer un répertoire <formatted style="input">imgs</formatted> 
+										dans le répertoire <formatted style="input">eve</formatted> en utilisant un chemin relatif ?
+										<gap answers="mkdir ../eve/imgs,mkdir ./../eve/imgs">mkdir ../eve/imgs</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de créer un fichier <formatted style="input">mesImages</formatted> 
+										dans le répertoire <formatted style="input">imgs</formatted> du répertoire <formatted style="input">eve</formatted> en utilisant un chemin absolu ?
+										<gap answers="nano /home/eve/imgs/mesImages">nano /home/eve/imgs/mesImages</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de copier ce fichier <formatted style="input">mesImages</formatted> 
+										que vous venez de créer dans le répertoire courant en utilisant que des chemins relatifs ?
+										<gap answers="cp ../eve/imgs/mesImages .">cp ../eve/imgs/mesImages .</gap> 
+									</item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+					
+					<paragraph>
+			    <multimedia src="../image/fs.jpeg" type="jpeg" />
+        </paragraph>
+        <act>
+		      <selfCheck title="La ligne de commande" shuffle="no">
+						<fillInBlanks>
+							<question>
+							Supposons que le répertoire courant est le dossier personnel <formatted style="code">/home/g31000</formatted>
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										Quelle commande permet de supprimer le répertoire <formatted style="code">java</formatted> et son contenu en utilisant un chemin absolu ?
+										<gap answers="rm -r /eCours/java">rm -r /eCours/java</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de supprimer le répertoire <formatted style="code">java</formatted> et son contenu en utilisant un chemin relatif ?
+										<gap answers="rm -r ../../eCours/java,rm -r ./../../eCours/java">rm -r ../../eCours/java</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de créer un répertoire <formatted style="code">tds</formatted> 
+										dans le répertoire <formatted style="code">g32000</formatted> en utilisant un chemin relatif ?
+										<gap answers="mkdir ../g32000/tds,mkdir ./../g32000/tds">mkdir ../g32000/tds</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de créer un fichier <formatted style="code">Ex.java</formatted> 
+										dans le répertoire <formatted style="code">tds</formatted> 
+										du répertoire <formatted style="code">g32000</formatted> en utilisant un chemin relatif ?
+										<gap answers="nano ../g32000/tds/Ex.java,nano ./../g32000/tds/Ex.java">nano ../g32000/tds/Ex.java</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de copier ce fichier <formatted style="code">Ex.java</formatted> 
+										que vous venez de créer dans le répertoire courant en utilisant que des chemins relatifs ?
+										<gap answers="cp ../g32000/tds/Ex.java .,cp ./../g32000/tds/Ex.java .">cp ../g32000/tds/Ex.java .</gap> 
+									</item>  
+									<item>
+										Quelle commande permet de lister au format long le dossier personnel en utilisant un chemin absolu ?
+										<gap answers="ls -l ~, ls -l /home/g31000">ls -l ~</gap> 
+									</item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+					<paragraph>Si vous avez fait plus de 2 erreurs, <link uri="../../../TDLinux/fr/html/unit_SystèmeDeFichiers.html">révisez ici</link></paragraph>
+					</act>
+		  </learningObject>
+	</unit>
+	
+	
+	<!-- =========================================================== -->
+	<unit label="LigneDeCommande" title="La ligne de commande">
+	<!-- =========================================================== -->
+
+	  <learningObject title="La ligne de commande"> 
+	  <!-- ================================================ -->
+	  
+	  
+      <act>
+        <paragraph title="Exercice" icon="act"/> 
+        <list listStyle="ordered">
+          <item>
+            Dans votre dossier td3, copiez le fichier <newLine/>
+            <formatted style="code">monfichieraunomtellementlongquilmeparaitpeuprobabledeletaper2xsanserreur</formatted>
+            qui se trouve dans le dossier <formatted style="code">/eCours/java/td/td3</formatted>.
+          </item>  
+          <item>Affichez le contenu de ce fichier en évitant de retaper son nom.</item>  
+        </list>
+      </act>
+      
+      
+      <act>
+        <paragraph title="Exercices" icon="icon_experiment"/> 
+        <list listStyle="ordered">
+          <item>
+            Copiez dans votre répertoire td3 tous les fichiers du répertoire 
+            <formatted style="code">/eCours/java/td/td3</formatted> dont la deuxième lettre est un '<formatted style="code">x</formatted>'.
+          </item>  
+          <item>
+            Copiez dans votre répertoire tdLinux tous les fichiers du répertoire
+            <formatted style="code">/eCours/java/td/td3</formatted> dont l'extension est <formatted style="code">.java</formatted> 
+            (c'est possible sans passer par un <formatted style="input">cd /eCours/java/td/td3</formatted>)
+          </item>  
+          <item>
+            Listez le contenu des répertoires des étudiants (pour rappel, les répertoires des étudiants sont ceux 
+            qui se trouvent dans <formatted style="code">/home</formatted> et qui commencent par un '<formatted style="code">g</formatted>').
+          </item>  
+          <item>
+            Listez le contenu des répertoires des professeurs (pour rappel, les  
+            répertoires des professeurs sont ceux qui se trouvent dans <formatted style="code">/home</formatted> et qui sont composés de 3 lettres).
+          </item>  
+        </list>
+      </act>
+      
+      <act>
+				<selfCheck title="Sélection multiple" shuffle="no">
+					<multipleChoice>
+					 	<question>La commande <formatted style="code">rm td*.java</formatted> supprime le(s) fichier(s) :
+						</question>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractère(s)" correct="yes"> 
+							td.java
+						</answer>
+			 			<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractère(s) mais le fichier doit se terminer par .java" correct="no"> 
+							td2
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractère(s)" correct="yes"> 
+							td2.java
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractère(s)" correct="yes"> 
+							td3Prepa.java
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractère(s)" correct="yes"> 
+							td3.java
+						</answer>
+						<answer feedback="L' * est remplacée par 0, 1 ou plusieurs caractère(s)" correct="yes"> 
+							td10.java
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+        
+        <selfCheck title="" shuffle="no">
+					<multipleChoice>
+						<question>La commande <formatted style="code">rm td?.java</formatted> supprime le(s) fichier(s) :
+						</question>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="no"> 
+              td.java
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère mais le fichier doit se terminer par .java" correct="no"> 
+							td2
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="yes"> 
+							td2.java
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="no"> 
+							td3Prepa.java
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="yes"> 
+							td3.java
+						</answer>
+						<answer feedback="Le ? est remplacé par un et un seul caractère" correct="no"> 
+							td10.java
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+			</act>
+			<paragraph>Si vous vous êtes trompé dans un de ces exercices, <link uri="../../../TDLinux/fr/html/LigneDeCommande_learningObject1.html">révisez ici</link></paragraph>
+    </learningObject>
+  </unit>
+			
+			
+	<!-- ======================================= -->
+	<unit label="Permissions" title="Les permissions">
+	<!-- ======================================= -->
+	
+    <learningObject title="Les permissions"> 
+	  <!-- ================================================ -->
+			<act>
+				<paragraph title="Exercices" icon="act"/> 
+				<list listStyle="ordered">
+					<item>Visualisez le propriétaire des fichiers de votre dossier personnel.</item>  
+					<item>Créez un répertoire <formatted style="code">tdLinux</formatted> dans votre dossier personnel ;</item>
+					<item>Visualisez le propriétaire des fichiers de votre dossier <formatted style="code">tdLinux</formatted>.
+					</item>  
+				</list>
+			</act>
+      
+			<act>
+				<paragraph title="Exercices" icon="act"/> 
+				<list listStyle="ordered">
+					<item>Visualiser les groupes auxquels vous appartenez.</item>  
+					<item>Visualiser le groupe auquel appartient votre dossier <formatted style="code">tdLinux</formatted>.</item>  
+					<item>Quel est votre groupe principal ? </item>  
+					<item>Quels sont les groupes auxquels appartient votre professeur ?</item>  
+					<item>Avez-vous un groupe en commun avec lui ?</item>  
+					<item>Quel(s) groupe(s) Linux avez-vous en commun avec les autres étudiants de votre groupe ESI ?</item>  
+					<item>Changez le groupe de  votre dossier <formatted style="code">tdLinux</formatted> 
+					pour que les enseignants puissent avoir des permissions différentes de celles des étudiants .</item>  
+				</list>
+			</act>
+      
+			<act>
+				<paragraph title="Exercices" icon="act"/> 
+				<list listStyle="ordered">
+					<item>Visualisez vos fichiers et déterminez à quel groupe ils appartiennent.</item>  
+					<item>Créez un fichier de test et modifiez le groupe auquel il appartient.</item>  
+				</list>
+			</act>
+			
+			<paragraph>Si vous avez fait plus de 2 erreurs, <link uri="../../../TDLinux/fr/html/unit_Permissions.html">révisez ici</link></paragraph>
+    
+      <act>
+    <selfCheck title="Déterminez les bonnes permissions" shuffle="no">
+					<fillInBlanks>
+						<question>  
+							Remplissez les blancs avec la permission correcte (r, w, x ou -). 
+							Il s'agit de trouver la permission minimale à mettre pour répondre à la demande.   
+						</question>
+						<gapText> 
+							<list listStyle="unordered">
+								<item>
+									Pour un fichier Java, la permission la plus adéquate est
+									<gap answers="r">r</gap> 
+									<gap answers="w">w</gap> 
+									<gap answers="-">-</gap> 
+								</item>  
+								<item>
+									Pour la version compilée (le bytecode), la permission la plus adéquate est
+									<gap answers="r">r</gap> 
+									<gap answers="w">-</gap> 
+									<gap answers="-">-</gap> 
+								</item>  
+								<item>
+									Le fichier qui contient (l'exécutable de) la machine virtuelle a probablement comme permisson
+									<gap answers="-">-</gap> 
+									<gap answers="-">-</gap> 
+									<gap answers="x">x</gap> 
+								</item>  
+							</list> 
+						</gapText>
+						<solution>
+						  Pour la version compilée, la permission suffisante pour l'exécuter par la jvm est <formatted style="code">r--</formatted> <newLine/>
+						  mais il est vrai que, lorsque le compilateur génère le bytecode, la permission <formatted style="code">-w-</formatted> y est également.
+            </solution>
+					</fillInBlanks>
+				</selfCheck>
+
+				<paragraph title="Exercice " icon="icon_question"/> 
+				<paragraph>  
+					Soit le fichier <formatted style="code">Max.java</formatted> de la capture d'écran ci-dessous.  
+				</paragraph>  
+				<multimedia src="../image/ls-l.jpg" type="jpeg" legend="Contenu détaillé d'un dossier"/>
+				<paragraph>
+					Est-ce qu'un professeur peut l'éditer ? 
+				</paragraph>
+				<popup title="la réponse" cadre="yes"> Non ! Le droit d'écriture n'est accordé qu'au propriétaire.  </popup> 
+
+				<selfCheck title="Déterminez les bonnes permissions" shuffle="no">
+					<fillInBlanks>
+						<question>
+							Soit le fichier "Max.java" de la capture d'écran ci-dessus.
+							<newLine/>
+							On voudrait que l'étudiant <formatted style="code">g32671</formatted> puisse travailler  
+							normalement, que les autres étudiants ne puissent pas tricher sur  
+							lui mais que les professeurs puissent lire son travail.   
+						</question>
+						<gapText> 
+							<list listStyle="unordered">
+								<item>
+									Quel groupe faut-il donner au fichier ?
+									<newLine/>
+									<gap answers="etudiants, etudiants1">etudiants</gap> 
+								</item>  
+								<item>
+									Quelle commande permet de donner ce groupe au fichier ?
+									<newLine/>
+									<gap answers="chgrp">chgrp</gap> 
+									<gap answers="etudiants, etudiants1">etudiants</gap> 
+									<gap answers="Max.java">Max.java</gap> 
+								</item>  
+								<item>
+									Quelles permissions minimales donner au fichier ?                
+									<newLine/>
+				               <gap answers="r">r</gap> 
+				               <gap answers="w">w</gap> 
+				               <gap answers="-">-</gap> 
+				               <gap answers="-">-</gap> 
+				               <gap answers="-">-</gap> 
+				               <gap answers="-">-</gap> 
+				               <gap answers="r">r</gap> 
+				               <gap answers="-">-</gap> 
+				               <gap answers="-">-</gap> 
+								</item>  
+								<item>
+									Quelle commande permet de donner ces permissions au fichier ?
+									<newLine/>
+									<gap answers="chmod">chmod</gap> 
+									<gap answers="604">604</gap> 
+									<gap answers="Max.java">Max.java</gap> 
+								</item>  
+							</list>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+
+				<paragraph title="Exercice" icon="act"/> 
+				<paragraph>  
+					Reprenez les permissions affichées dans la capture d'écran ci-dessous 
+					et exprimez-les avec un nombre de 3 chiffres.  
+				</paragraph>  
+				<multimedia src="../image/ls-l-permissions.jpg" type="jpeg" width="500" legend="Contenu détaillé d'un dossier"/>
+
+				<paragraph cssClass="pagebreak"/>
+				<paragraph title="Permissions par défaut" icon="icon_experiment"/> 
+				<list listStyle="ordered">
+					<item>Si ce n'est pas encore fait, créez un dossier "tdLinux".</item>  
+					<item>Créez-y un fichier vide.</item>  
+					<item>Demandez les détails du fichier (propriétaire, groupe, permission)</item>  
+				</list> 
+				<paragraph> 
+					On constate qu'un nouveau fichier appartient à celui qui l'a créé 
+					(on s'en doute) et au groupe principal du créateur. 
+					Il y a aussi des permissions par défaut (plutôt permissives dans notre cas).  
+				</paragraph>
+
+				<paragraph title="Modifier les permissions" icon="icon_reading"/> 
+				<paragraph>  
+					Vous savez que la commande qui permet de modifier les permissions d'un fichier est 
+					<formatted style="input">chmod</formatted>.  
+				</paragraph>  
+				<paragraph>  
+					Prenez le temps de <formatted style="bold">lire</formatted> 
+					la page de <formatted style="bold">manuel</formatted> de cette commande.   
+				</paragraph>
+
+				<paragraph title="Exercices" icon="act"/> 
+				<list listStyle="ordered">
+					<item>Créez un fichier <formatted style="code">brol</formatted> dans le dossier <formatted style="code">tdLinux</formatted> avec quelques mots.</item>  
+					<item>Faites en sorte que personne d'autre ne puisse en voir le contenu.</item>  
+					<item>Faites en sorte que tout le monde puisse voir son contenu mais pas le modifier. </item>  
+					<item>
+					  Faites en sorte que les autres étudiants ne puissent pas voir son contenu mais les professeurs bien. 
+					  Attention, pour ce faire, il faut pouvoir distinguer les étudiants des enseignants; et donc, distinguer les groupes.
+					</item>  
+				</list>
+
+				<paragraph title="Exercices" icon="act"/> 
+				<paragraph>  
+					Modifiez les droits de votre dossier <formatted style="code">tdLinux</formatted> et, si nécessaire, 
+					des fichiers qui s'y trouvent pour que tout le monde puisse  
+				</paragraph>  
+				<list listStyle="ordered">
+		         <item>voir quels fichiers s'y trouvent mais sans pouvoir lire le contenu de ces fichiers;</item>  
+		         <item>modifier le contenu d'un des fichiers mais pas supprimer ce fichier;</item>  
+		         <item>supprimer un fichier mais pas modifier son contenu.</item>  
+				</list>
+      
+				<selfCheck title="Les permissions" shuffle="yes">
+					<fillInBlanks>
+						<question>Remplissez les blancs avec la permission minimale correcte (r, w, x ou -),</question>
+						<gapText> 
+							<list listStyle="ordered">
+								<item>
+									pour que le répertoire <formatted style="code">/home/gxxxxx/td3</formatted> 
+									permette à un autre étudiant d'y créer le fichier  
+									<formatted style="code">/home/gxxxxx/td3/fichier</formatted>
+									<newLine/>
+									<gap answers="">-</gap> 
+									<gap answers="">-</gap> 
+									<gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">w</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+								</item>  
+								<item>
+									pour que le répertoire <formatted style="code">/home/gxxxxx/td3</formatted> 
+									permette à un autre étudiant d'accéder au fichier  
+									<formatted style="code">/home/gxxxxx/td3/fichier</formatted>
+									dont il connait le chemin
+									<newLine/>
+				               <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap>  
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">x</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+			                  <gap answers="">-</gap> 
+								</item>
+              </list> 
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+				
+				<selfCheck title="" shuffle="no">
+					<fillInBlanks>
+						<question>Modifiez les permissions </question>
+						<gapText> 
+							<list listStyle="unordered">
+								<item>
+									pour que le fichier <formatted style="code">/home/gxxxxx/td3/fichier</formatted> 
+									puisse être lu et modifié par votre professeur et vous même mais seulement lu par les autres étudiants 
+									<newLine/>
+				                <gap answers="">chmod</gap> 
+			                  <gap answers="6,7">6</gap> 
+			                  <gap answers="4,5">4</gap>  
+			                  <gap answers="6,7">6</gap> 
+			                  <gap answers="/home/gxxxxx/td3/fichier,fichier">/home/gxxxxx/td3/fichier</gap> 
+								</item> 
+								<item>
+								  À quel groupe ce fichier doit-il appartenir ?
+									<newLine/>
+				               <gap answers="etudiants,etudiants1">etudiants</gap> 
+								</item> 
+								<item>
+								  Quelle commande permet de modifier le groupe du fichier afin de l'adapter à ce qui est demandé ci-dessus ?
+									<newLine/>
+									      <gap answers="">chgrp</gap> 
+				               <gap answers="etudiants,etudiants1">etudiants</gap> 
+								</item> 
+							</list> 
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+
+				<selfCheck title="Sélection multiple" shuffle="yes">
+					<multipleChoice>
+						<question>Parmi les propositions suivantes, lesquelles représentent des chemins absolus ?</question>
+						<answer feedback="" correct="yes"><formatted style="code">/usr/local/java/</formatted></answer>
+						<answer feedback="" correct="yes"><formatted style="code">/home/g31000/td3</formatted></answer>
+						<answer feedback="" correct="no"><formatted style="code">g31000/td3</formatted></answer>
+						<answer feedback="" correct="yes"><formatted style="code">~/td3</formatted></answer>
+						<answer feedback="" correct="no"><formatted style="code">td3</formatted></answer>
+						<answer feedback="" correct="yes"><formatted style="code">~g31000/td3</formatted></answer>
+					</multipleChoice>
+				</selfCheck>
+				
+      <paragraph>Si vous avez fait plus de 2 erreurs, <link uri="../../../TDLinux/fr/html/unit_Permissions.html">révisez ici</link></paragraph>
+			</act>
+		</learningObject>
+	</unit>
+	
+	
+	<!-- ===================================== -->
+	<unit label="Commandes" title="Commandes">
+	<!-- ===================================== -->
+	
+		<learningObject title="Commandes">
+		<!-- =========================== -->
+		
+		  <act>
+		    <paragraph title="Exercices" icon="act">
+					<list listStyle="ordered">
+						<item>
+							Comment trouver les programmes Java
+							du TD4
+							où vous avez déjà utilisé un "switch" ?
+						</item>
+						<item>
+							Comment trouver,
+							parmi <formatted style="bold">tous</formatted>
+							les programmes Java
+							que vous avez déjà écrits,
+							ceux qui utilisent des booléens ?
+						</item>
+					</list>
+					<paragraph cssClass="cadre" lines="2" visible="print"/>
+				</paragraph>
+      </act>
+      
+      <paragraph> Si vous vous êtes trompé, <link uri="../../../TDLinux/fr/html/Grep_learningObject1.html">révisez ici</link></paragraph>
+      
+      <act>
+        <paragraph title="Exercice" icon="act"/>
+        <paragraph>
+          Trouvez avec la commande 
+          <formatted style="code">find</formatted>
+          tous les fichiers Java que vous avez déjà écrits.
+        </paragraph>
+        <paragraph cssClass="cadre" lines="1"/>
+        
+        <paragraph>
+          Nous avons écrit pour vous une classe
+          <formatted style="code">Color</formatted>
+          mais nous ne savons plus très bien
+          où nous l'avons stockée.
+          Nous nous rappelons juste l'avoir mise
+          quelque part dans 
+          <formatted style="code">/eCours</formatted>.
+          Pouvez-vous la retrouver pour nous ?
+        </paragraph>
+        <paragraph cssClass="cadre" lines="1"/>
+		  </act>
+      
+      <paragraph> Si vous vous êtes trompé, <link uri="../../../TDLinux/fr/html/Find_learningObject1.html">révisez ici</link></paragraph>
+      
+	  </learningObject>
+  </unit>
+  
+  
+<!-- =================================== -->
+<unit label="Redirections" title="Redirections">
+<!-- =================================== -->
+
+		<learningObject title="Entrées et sorties standards">
+		<!-- ================================================ -->
+			
+			<act>
+				<paragraph title="Exercice" icon="act"/>
+				<list  listStyle="ordered">
+					<item>
+						Reprenez votre programme qui affiche
+						des suites de nombres et plus précisément
+						celui qui affiche la suite appelée :
+						"le pas croissant".
+						Exécutez-le pour
+						afficher les 1000 premiers nombres de cette suite.
+					</item>
+					<item>
+						Sauvez le résultat dans un fichier
+						pour pouvoir l'examiner à votre aise.
+						<formatted style="bold">Rappel</formatted> :
+						pour examiner le contenu d'un fichier,
+						inutile de passer par un éditeur,
+						la commande
+						<formatted style="code">more</formatted>
+						suffit.
+					</item>
+					<item>
+						Est-ce que le nombre 15007 en fait partie ?
+						(aide : vous vous rappelez de la commande
+						<formatted style="code">grep</formatted> ?)
+					</item>
+				</list>	
+			  
+			  <paragraph>Si vous vous êtes trompé, <link uri="../../../TDLinux/fr/html/unit_Redirections.html">révisez ici</link></paragraph>
+      </act>
+    </learningObject>
+
+		<learningObject title="Rediriger l'entrée">
+		<!-- ================================================ -->
+			<act>
+				<paragraph title="Exercice" icon="act"/>
+				
+				<paragraph>
+					On vous demande d'afficher,
+					parmi les 1000 premiers nombres 
+					de la suite des pas croissants,
+					tous ceux qui sont des multiples de 5.
+					Combien y en a-t-il ?
+				</paragraph>
+				
+			  <paragraph>Si vous vous êtes trompé, <link uri="../../../TDLinux/fr/html/unit_Redirections.html">révisez ici</link></paragraph>
+      </act>
+    </learningObject>
+    
+		<learningObject title="Les tubes (pipes en anglais)">
+		  <!-- ================================================ -->
+        <act>
+          <paragraph title="Exercice" icon="act"/>
+          <list listStyle="ordered">
+            <item>
+              Utilisez un pipe pour afficher
+              parmi les 1000 premiers nombres 
+              de la suite des pas croissants,
+              tous ceux qui sont des multiples de 5.
+            </item>
+            <item>
+              Supprimez du programme
+              <formatted style="code">Multiples5</formatted>
+              la ligne finale qui affiche 
+              le nombre de multiples trouvés. 
+            </item>
+            <item>
+              Relancez votre commande de l'exercice précédent.
+              Vous ne voyez plus, à la fin,
+              le nombre de multiples, ce qui est normal.
+              Quelle enchainement de commandes
+              permet d'afficher ce nombre
+              (et uniquement ce nombre) ?
+              Rappelez-vous,
+              il existe une commande Linux qui "compte". 
+            </item>
+            <item>
+              Affichez,
+              parmi les 1000 premiers nombres 
+              de la suite des pas croissants,
+              tous ceux qui contiennent un 0.
+            </item>
+          </list>
+          <paragraph> Si vous vous êtes trompé, <link uri="../../../TDLinux/fr/html/unit_Redirections.html">révisez ici</link></paragraph>
+        </act>
+      </learningObject>
+		
+		<learningObject title="Rediriger les erreurs">
+		<!-- ================================================ -->
+		  
+			<act>
+				<paragraph title="Exercice" icon="act"/>
+			<paragraph>
+					Les professeurs se demandent combien
+					d'étudiants ont déjà copié chez eux
+					le fichier 
+					<formatted style="code">Multiple5.java</formatted>.
+					Pouvez-vous indiquer la (suite de) commande(s)
+					qui permet de répondre à la question ?
+				</paragraph>
+		    <paragraph> Si vous vous êtes trompé, <link uri="../../../TDLinux/fr/html/unit_Redirections.html">révisez ici</link></paragraph>
+      </act>
+		</learningObject>
+  </unit>
+	
+	
+<!-- ========================================= -->
+	<unit label="Filtres" title="Les filtres Linux">
+<!-- ========================================= -->
+
+    <learningObject title="Les filtres Linux">
+		<!-- ========================================== -->
+		  
+			<act>
+				<paragraph title="Exercice 1 - Nombre de connexions d'un utilisateur" icon="act"/>
+				<paragraph>
+					Trouvez un enchainement de commandes
+					qui permet de donner le nombre de connexions
+					d'un utilisateur donné.
+				</paragraph>
+				<paragraph>
+					Il existe de nombreuses façons de résoudre
+					cet exercice. 
+					Celle à laquelle nous pensons fait intervenir :
+					<formatted style="code">grep</formatted>,
+					<formatted style="code">wc</formatted>,
+					et <formatted style="code">who</formatted>.
+				</paragraph>
+
+				<paragraph title="Exercice 2 - Nombre de PC connectés" icon="act"/>
+				<paragraph>
+					Trouvez un enchainement de commandes
+					qui permet de donner le nombre de PC
+					connectés à linux1.
+					Ce n'est pas exactement le nombre d'utilisateurs
+					car un utilisateur pourrait être connecté
+					sur plusieurs machines.
+				</paragraph>
+				<paragraph>
+					À nouveau,
+					il existe de nombreuses façons de résoudre
+					cet exercice. 
+					Celle à laquelle nous pensons fait intervenir
+					la commande 
+					<formatted style="code">tr -s ' '</formatted>
+					qui supprime plusieurs occurences
+					consécutives d'un même caractère
+					facilitant ainsi la sélection par colonne
+					de la commande 
+					<formatted style="code">cut</formatted>.
+				</paragraph>
+
+				<paragraph title="Exercice 3 - Droits sur les dossiers personnels" icon="act"/>
+				<paragraph>
+					Trouvez un enchainement de commandes
+					qui permet de donner 
+					le nombre de professeurs
+					qui ont donné le droit à ceux qui
+					ne font pas partie de leur groupe
+					d'entrer dans leur dossier personnel.
+				</paragraph>
+				
+        <paragraph> Si vous vous êtes trompé, <link uri="../../../TDLinux/fr/html/Filtres_learningObject1.html">révisez ici</link></paragraph>
+			</act>
+    </learningObject>
+  </unit>
+  
+  
+	<!-- ========================================= -->
+	<unit label="Processus" title="Gestion des processus">
+	<!-- ========================================= -->
+
+		<learningObject title="Gestion des processus">
+		<!-- ========================================= -->
+		
+		</learningObject>
+		
+		
+			<act>
+				<paragraph title="Expérimentation - La boucle infinie" icon="act"/>
+				<list listStyle="ordered">
+					<item>
+						Écrivez un programme minimal 
+						contenant une boucle infinie
+						<paragraph cssClass="java">
+	while(true){}
+						</paragraph>
+					</item>
+					<item>
+						Visualisez vos processus en cours en utilisant la commande 
+						<formatted style="code">ps u</formatted>.
+					</item>
+					<item>
+						Ouvrez une seconde fenêtre putty, et exécutez-y 
+						votre boucle infinie.
+						Exécutez à nouveau la commande 
+						<formatted style="code">ps u</formatted>
+						dans la première fenêtre.
+					</item>
+					<item>
+						<paragraph>
+						Retrouvez le processus correspondant au programme 
+						qui cycle (son PID)
+						et tuez-le en utilisant la commande kill
+						avec les bons paramètres. Quel nom a le programme à tuer ?
+						</paragraph>
+						<paragraph>
+						Sur linux1,
+						le système tue les processus après un temps défini
+						d'utilisation du CPU (timeout). Il se pourrait donc
+						qu'il s'arrête avant l'effet de votre action ;
+						ce n'est pas le moment de s'endormir ;-).
+						</paragraph>
+					</item>
+					<item>
+						Lancez une deuxième exécution et suspendez votre programme 
+						par <formatted style="code">Ctrl-z</formatted>.
+						Vérifiez l'état du processus stoppé par la commande 
+						<formatted style="code">ps</formatted>
+						(<formatted style="code">man ps</formatted> et recherchez 
+						la signification du champ 
+						<formatted style="code">STAT</formatted>).
+					</item>
+					<item>
+						Reprenez le processus interrompu en envoyant le signal 
+						SIGCONT (via la commande kill) 
+						et vérifiez son nouvel état avant qu'il ne soit éjecté par 
+						le système à cause du «timeout».
+					</item>
+					<item>
+						<paragraph>
+						Une deuxième manière de reprendre un processus suspendu
+						est de taper la commande
+						<formatted style="code">fg <formatted style="italic">num</formatted></formatted> 
+						(faites un <formatted style="code">man bash</formatted>),
+						cela doit être fait dans la console dans laquelle vous 
+						avez tapé <formatted style="code">Ctrl-z</formatted>.
+						Le numéro <formatted style="code"><formatted style=" italic">num</formatted></formatted>
+						est fourni par le système lorsque le processus 
+						a été suspendu par <formatted style="code">Ctrl-z</formatted>.
+						</paragraph>
+						<paragraph>
+						Essayez aussi <formatted style="code">fg</formatted> 
+						pour reprendre le dernier processus suspendu.
+						</paragraph>
+					</item>
+				</list>
+				
+				<paragraph> Si vous vous êtes trompé, <link uri="../../../TDLinux/fr/html/Processus_learningObject1.html">révisez ici</link></paragraph>
+			</act>
+  </unit>
+
+	
+	<!--metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>1</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2013 - 2014</version>
+				<contribute>
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata-->
+
+</lesson>
