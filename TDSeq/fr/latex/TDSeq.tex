@@ -270,13 +270,99 @@
 					\begin{itemize}
 				
 			\item \verb@int@ pour le type \verb@entier@ pour les nombres entiers ;
-			\item \verb@double@pour le type \verb@réel@ pour les nombres r\'eels ;
+			\item \verb@double@ pour le type \verb@réel@ pour les nombres r\'eels ;
 			\item \verb@char@ pour le type \verb@caractère@ pour les diff\'erentes lettres et caract\`eres
 			\item \verb@String@ pour le type \verb@chaine@ 
               pour les variables contenant un ou plusieurs caract\`ere(s) ou aucun (la chaine vide)
             
 			\item \verb@boolean@ pour le type \verb@booléen@ les variables de ce type 
             ne peuvent valoir, en Java, que \verb@true@ ou \verb@false@
+					\end{itemize}
+				
+            \par
+        
+			
+		\subparagraph{Les commandes de base} 
+		
+                \textcolor{white}{.} \par
+             
+								Quel(s) type(s) de donn\'ees utiliseriez-vous pour repr\'esenter :
+							
+					\begin{itemize}
+				
+			\item une date du calendrier ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item un moment dans la journ\'ee ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item le prix d'un produit en grande surface ? \textcolor{gray}{\underline{\hspace*{5em}}} 
+			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item vos initiales ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item votre adresse ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+					\end{itemize}
+				\subsection{Java est un langage fortement typ\'e.}
+			    Java est un langage fortement typ\'e.
+			  
+            \par
+        
+          Toute donn\'ee a un type. Quels types ?
+          
+					\begin{itemize}
+				
+			\item \verb@primitifs prédéfinis : @ entier, r\'eel, bool\'een (logique) ;
+			\item \verb@références prédéfinis :@ tableaux, String, . . . ;
+			\item \verb@références définis par le programmeur@
+					\end{itemize}
+				
+            \par
+        
+			
+		\subparagraph{Les types primitifs} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        \begin{figure}[hbt]
+				    \begin{center}
+					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png}
+						\end{center}
+                
+                    \caption[primitifs.png]{primitifs.png}
+                \end{figure}
+                    
+            \par
+        
+			
+		\subparagraph{Les types primitifs num\'eriques entiers} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        
+          Les types primitifs num\'eriques entiers sont
+          \verb@byte@, \verb@short@, 
+          \verb@int@ et \verb@long@ (\verb@char@ sera vu \`a part),
+          
+					\begin{itemize}
+				
+			\item  ce sont des nombres sign\'es (en compl\'ement \`a 2)
+			\item  ils sont cod\'es sur 
+              
+					\begin{itemize}
+				
+			\item  8-bit pour un \verb@byte@ ;
+			\item  16-bit pour un \verb@short@ ;
+			\item  32-bit pour un \verb@int@ ;
+			\item  64-bit pour un \verb@long@ ;
+					\end{itemize}
+				
+			\item  ils comprennent donc les valeurs :
+              
+					\begin{itemize}
+				
+			\item  -128 \`a 127 pour un \verb@byte@ ;
+			\item  -32768 \`a 32767 pour un \verb@short@ ;
+			\item  -2147483648 \`a 2147483647 pour un \verb@int@ ;
+			\item  -9223372036854775808 \`a 9223372036854775807 pour un \verb@long@ ;
+					\end{itemize}
+				
 					\end{itemize}
 				
             \par
@@ -805,6 +891,19 @@ int nombre1 = clavier. nextInt ();
 					\end{itemize}
 				
             \par
+        \subsection{Communication des r\'esultats en Java}
+          L'affichage de la valeur d'une variable \,\verb|var|\,  est donn\'ee par l'instruction
+          
+            \par
+        \begin{Java}
+ System.out.println (var);
+				\end{Java}
+          Si nous voulons pr\'ec\'eder l'affichage de la valeur d'une variable \,\verb|var|\,  par un message, 
+          nous utiliserons l'instruction
         
+            \par
+        \begin{Java}
+ System.out.println ("La variable var vaut " + var);
+				\end{Java}
 				\end{document}
 			

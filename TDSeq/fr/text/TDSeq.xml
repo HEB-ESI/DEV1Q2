@@ -117,7 +117,7 @@
           Les équivalents Java des types donnés en algo sont
           <list listStyle="unordered">
             <item><formatted style="code">int</formatted> pour le type <formatted style="code">entier</formatted> pour les nombres entiers ;</item>
-            <item><formatted style="code">double</formatted>pour le type <formatted style="code">réel</formatted> pour les nombres réels ;</item>
+            <item><formatted style="code">double</formatted> pour le type <formatted style="code">réel</formatted> pour les nombres réels ;</item>
             <item><formatted style="code">char</formatted> pour le type <formatted style="code">caractère</formatted> pour les différentes lettres et caractères</item>
             <item><formatted style="code">String</formatted> pour le type <formatted style="code">chaine</formatted> 
               pour les variables contenant un ou plusieurs caractère(s) ou aucun (la chaine vide)
@@ -128,6 +128,127 @@
         </paragraph>
         </clarify>
       
+        <act>
+				<selfCheck title="Les commandes de base" shuffle="yes">
+						<fillInBlanks>
+							<question> 
+								Quel(s) type(s) de données utiliseriez-vous pour représenter :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>une date du calendrier ? <gap answers="3 entiers,trois entiers,2 entiers 1 chaine,1 chaine 2 entiers">3 entiers</gap></item>  
+									<item>un moment dans la journée ? <gap answers="3 entiers, trois entiers">3 entiers</gap></item>  
+									<item>le prix d’un produit en grande surface ?<gap answers="1 réel,un réel, réel">1 réel</gap></item>  
+									<item>votre nom ? <gap answers="une chaine,1 chaine, chaine">1 chaine</gap></item>  
+									<item>vos initiales ?<gap answers="2 caractères,3 caractères">2 caractères</gap></item>  
+									<item>votre adresse ? <gap answers="1 chaine">1 chaine</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+				</act>
+      </learningObject>
+      
+      <learningObject title="Java est un langage fortement typé.">
+			<!-- ================================================ -->
+			  <clarify>
+			  <paragraph>
+			    Java est un langage fortement typé.
+			  </paragraph>
+        <paragraph>
+          Toute donnée a un type. Quels types ?
+          <list listStyle="unordered">
+            <item><formatted style="code">primitifs prédéfinis : </formatted> entier, réel, booléen (logique) ;</item>
+            <item><formatted style="code">références prédéfinis :</formatted> tableaux, String, . . . ;</item>
+            <item><formatted style="code">références définis par le programmeur</formatted> </item>
+          </list>
+        </paragraph>
+        
+        <paragraph title="Les types primitifs" icon="important" />
+        <paragraph>
+			    <multimedia src="../image/primitifs.png" type="png" />
+        </paragraph>
+        
+        <paragraph title="Les types primitifs numériques entiers" icon="important" />
+        <paragraph>
+          Les types primitifs numériques entiers sont
+          <formatted style="code">byte</formatted>, <formatted style="code">short</formatted>, 
+          <formatted style="code">int</formatted> et <formatted style="code">long</formatted> (<formatted style="code">char</formatted> sera vu à part),
+          <list listStyle="unordered">
+            <item> ce sont des nombres signés (en complément à 2)</item>
+            <item> ils sont codés sur 
+              <list listStyle="unordered">
+                <item> 8-bit pour un <formatted style="code">byte</formatted> ;</item>
+                <item> 16-bit pour un <formatted style="code">short</formatted> ;</item>
+                <item> 32-bit pour un <formatted style="code">int</formatted> ;</item>
+                <item> 64-bit pour un <formatted style="code">long</formatted> ;</item>
+              </list>
+            </item>
+            <item> ils comprennent donc les valeurs :
+              <list listStyle="unordered">
+                <item> -128 à 127 pour un <formatted style="code">byte</formatted> ;</item>
+                <item> -32768 à 32767 pour un <formatted style="code">short</formatted> ;</item>
+                <item> -2147483648 à 2147483647 pour un <formatted style="code">int</formatted> ;</item>
+                <item> -9223372036854775808 à 9223372036854775807 pour un <formatted style="code">long</formatted> ;</item>
+              </list>
+            </item>
+          </list>
+        </paragraph>
+        
+        <paragraph title="Les littéraux pour les types primitifs numériques entiers" icon="important" />
+        <paragraph>
+          Un <formatted style="bold">littéral</formatted>, c'est une notation pour représenter une valeur fixée directement dans un code  source.
+        </paragraph>
+        <paragraph>
+          Un <formatted style="bold">littéral numérique décimal</formatted> est
+            <list listStyle="unordered">
+                <item>une suite de chiffres</item>
+                <item>éventuellement séparés par<formatted style="input">_</formatted> pour la lisibilité</item>
+                <item>suivi éventuellement du suffixe ( <formatted style="input">l</formatted> ou <formatted style="input">L</formatted>) 
+                qui distingue un <formatted style="code">int</formatted> d’un <formatted style="code">long</formatted></item>
+                <item>pas de <formatted style="code">byte</formatted> ou <formatted style="code">short</formatted>, 
+                un littéral est <formatted style="code">int</formatted> (ou <formatted style="code">long</formatted>)</item>
+              </list>
+        </paragraph>
+        
+        <paragraph>
+          Un <formatted style="bold">littéral numérique octal</formatted> est
+            <list listStyle="unordered">
+                <item>une suite de chiffres de 0 à 7</item>
+                <item>précédé de 0.</item>
+              </list>
+        </paragraph>
+        
+        <paragraph>
+          Un <formatted style="bold">littéral numérique hexadécimal</formatted> est
+            <list listStyle="unordered">
+                <item>une suite de chiffres et lettres a,b,c,d,e,f (minuscules/majuscules)</item>
+                <item>précédé de 0x ou 0X</item>
+            </list>
+          </paragraph>
+          
+          <paragraph>
+          Un <formatted style="bold">littéral numérique binaire</formatted> est
+            <list listStyle="unordered">
+                <item>une suite de chiffres 0 et 1</item>
+                <item>précédé de 0b ou 0B</item>
+            </list>
+          </paragraph>
+          
+          <paragraph>
+          Par exemple, la quantité 100 de type <formatted style="code">int</formatted> peut s'écrire 
+            <list listStyle="unordered">
+                <item>100</item>
+                <item>1_0_0</item>
+                <item>0144</item>
+                <item>01_44</item>
+                <item>0x64</item>
+                <item>0b110_0100</item>
+              </list>
+            </paragraph>
+        </clarify>
+        
         <act>
 				<selfCheck title="Les commandes de base" shuffle="yes">
 						<fillInBlanks>
@@ -666,6 +787,25 @@ int nombre1 = clavier. nextInt ();
             </item>
           </list>
           </paragraph>
+        </clarify>
+        </learningObject>
+        
+        <learningObject title="Communication des résultats en Java">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          L’affichage de la valeur d'une variable <formatted style="input">var</formatted>  est donnée par l'instruction
+          </paragraph>
+          <paragraph cssClass="java">
+ System.out.println (var);
+				</paragraph>
+        <paragraph>
+          Si nous voulons précéder l'affichage de la valeur d'une variable <formatted style="input">var</formatted>  par un message, 
+          nous utiliserons l'instruction
+        </paragraph>
+        <paragraph cssClass="java">
+ System.out.println ("La variable var vaut " + var);
+				</paragraph>
         </clarify>
         </learningObject>
     </unit>
