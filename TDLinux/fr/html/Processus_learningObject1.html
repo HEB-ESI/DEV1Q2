@@ -5,11 +5,11 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <meta http-equiv="Content-Style-Type" content="text/css" />
-      <meta name="description" content="TDLinux - Prise en main de l’environnement, rappels, linux avancé: Les filtres Linux. Exemple. Exercice 1 - Nombre de connexions d'un utilisateur. Exercice 2 - Nombre de PC connectés. Exercice 3 - Droits sur les dossiers personnels. " />
+      <meta name="description" content="TDLinux - Prise en main de l’environnement, rappels, linux avancé: Gestion des processus. Exemple. Expérimentation - La boucle infinie. " />
       <meta name="copyright" content="" />
       <meta name="author" content="" />
       <meta name="keywords" content="TDLinux - Prise en main de l’environnement, rappels, linux avancé, eLML" />
-      <title>1.9.1. Les filtres Linux</title>
+      <title>1.11.1. Gestion des processus</title>
       <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
          <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
@@ -24,10 +24,7 @@
                <li class="navigationLink"><a href="unit_Grep.html">1.6. Recherche dans des fichiers (grep)</a></li>
                <li class="navigationLink"><a href="unit_Find.html">1.7. Recherche de fichier (find)</a></li>
                <li class="navigationLink"><a href="unit_Redirections.html">1.8. Redirections</a></li>
-               <li class="navigationLink"><a href="unit_Processus.html">1.9. Les filtres Linux</a><ul class="navigation nav_lo">
-                     <li class="navigationActual"><strong>1.9.1. Les filtres Linux</strong></li>
-                  </ul>
-               </li>
+               <li class="navigationLink"><a href="unit_Filtres.html">1.9. Les filtres Linux</a></li>
                <li class="navigationLink"><a href="unit_Transfert.html">1.10. Transfert de fichiers</a></li>
                <li class="navigationLink"><a href="unit_Processus.html">1.11. Gestion des processus</a><ul class="navigation nav_lo">
                      <li class="navigationActual"><strong>1.11.1. Gestion des processus</strong></li>
@@ -37,192 +34,164 @@
             </ul>
          </li>
       </ul>
-      <div class="navigation_arrows"><a href="unit_Processus.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Transfert.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Processus_learningObject1.html">1.9.1. Les filtres Linux</h1>
-      <div id="d8e2099.html" class="clarify">
-         <p class="paragraph" id="d8e2100">
-            					De nombreuses commandes Linux
-            					sont basées sur le principe 
-            					<code>KISS</code>
-            					(Keep It Simple, Stupid).
-            					Elles font peu,
-            					mais le font bien
-            					et surtout,
-            					peuvent facilement coopérer
-            					pour, au final,
-            					obtenir un résultat bluffant.
-            					Parmi toutes les commandes,
-            					les filtres sont à mettre en évidence.
+      <div class="navigation_arrows"><a href="unit_Processus.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Conclusion.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Processus_learningObject1.html">1.11.1. Gestion des processus</h1>
+      <div id="d8e2308.html" class="clarify">
+         <p class="paragraph" id="d8e2309">
+            					Les programmes contenant des boucles
+            					peuvent poser quelques soucis.
+            					Par exemple, une boucle mal écrite peut
+            					donner un processus qui tourne
+            					indéfiniment.
+            					Ou encore un processus peut prendre
+            					beaucoup de temps et ralentir
+            					les autres processus
+            					tournant sur la même machine.
+            					Voyons comment gérer les processus.
             				
          </p>
-         <div class="box" id="d8e2105">
-            					Un <code>filtre</code>
-            					est une commande Linux 
-            					qui acquiert des données sur l'entrée standard 
-            					et les envoie vers la sortie standard 
-            					après les avoir éventuellement transformées.
-            				
+         <div class="box" id="d8e2311">
+            <ul class="list" id="d8e2312">
+               <li class="itemAlt">
+                  						La commande <code>ps</code>
+                  						affiche une image statique de l'état des processus en cours.
+                  					
+               </li>
+               <li class="item">
+                  						La commande <code>kill</code>
+                  						envoie un signal à un processus.
+                  						(Un signal est un message simple envoyé à un processus.
+                  						Les signaux ont un nom et un ou plusieurs numéro(s)
+                  						selon le système d'exploitation).
+                  					
+               </li>
+               <li class="itemAlt">
+                  						Tout processus est identifié par un
+                  						<code>PID</code> (Processus Id)
+               </li>
+            </ul>
          </div>
-         <p class="paragraph" id="d8e2110">
-            					Nous allons nous concentrer sur les
-            					filtres suivants :
-            					<code>tr</code>, 
-            					<code>cut</code>,
-            					<code>cat</code>, 
-            					<code>sort</code>, 
-            					<code>head</code>,
-            					<code>tail</code>, 
-            					<code>split</code>, 
-            					<code>uniq</code>,
-            					<code>grep</code>, 
-            					<code>more</code>, 
-            					<code>less</code>,
-            					<code>wc</code>, 
-            					<code>grep</code>, ...
-            					Vous en connaissez déjà ;
-            					voyez-en les pages de manuel respectives et l'aide 
-            					(<code>--help</code>) 
-            					pour en connaitre le détail.
-            				
+      </div>
+      <div id="d8e2328.html" class="look">
+         <h4>Exemple<img src="../../../_templates/java/icons/look.gif" title="look" alt="look" class="icon" /></h4>
+         <p class="paragraph" title="Exemple" id="d8e2329"></p><span class="multimedia_paragraph_left"><img class="multimedia" id="d8e2330" src="../image/capt1.png" width="100%" title="ps et kill" alt="ps et kill" /><span class="legend" style="display:block">ps et kill</span></span><p class="paragraph" id="d8e2331">
+            <ul class="list" id="d8e2332">
+               <li class="itemAlt"><code>kill 3599</code>
+                  						envoie au processus de PID 
+                  						<code>3599</code>
+                  						le signal n° 15 (SIGTERM, signal par défaut),
+                  						qui demande au processus de se terminer.
+                  					
+               </li>
+               <li class="item"><code>kill -SIGKILL 3599</code> 
+                  						ou <code>kill -9 3599</code>
+                  						envoie explicitement le signal n° 9 (SIGKILL) au processus 
+                  						<code>3599</code>; ceci le tuera.
+                  					
+               </li>
+               <li class="itemAlt">
+                  						La touche clavier <code>Ctrl-c</code>
+                  						envoie le signal n° 2 (SIGINT) au processus lié au terminal
+                  						et a comme effet de le
+                  						<b>terminer</b>.
+                  					
+               </li>
+               <li class="item">
+                  						La touche clavier <code>Ctrl-z</code>
+                  						envoie le signal n° 20 (SIGTSTP) au processus lié au terminal
+                  						et a comme effet de le 
+                  						<b>suspendre</b>.
+                  						Ce dernier reste donc dans le système.
+                  					
+               </li>
+               <li class="itemAlt">
+                  						Pour obtenir la liste de tous les signaux :
+                  						<code>kill -l</code> ou 
+                  						encore <code>man 7 signal</code>.
+                  					
+               </li>
+            </ul>
          </p>
       </div>
-      <div id="d8e2156.html" class="look">
-         <h4>Exemple<img src="../../../_templates/java/icons/look.gif" title="look" alt="look" class="icon" /></h4>
-         <p class="paragraph" title="Exemple" id="d8e2157"></p>
-         <p class="paragraph" id="d8e2158">
-            					On voudrait connaitre 
-            					le nombre d'utilisateurs qui
-            					sont connectés à linux1 pour le moment.
-            				
-         </p>
-         <p class="paragraph" id="d8e2160">
-            					Voyons, étape par étape, comment on peut
-            					obtenir le résultat.
-            				
-         </p>
-         <ol class="list" id="d8e2162">
+      <div id="d8e2374.html" class="act">
+         <h4>Expérimentation - La boucle infinie<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
+         <p class="paragraph" title="Expérimentation - La boucle infinie" id="d8e2375"></p>
+         <ol class="list" id="d8e2376">
             <li class="itemAlt">
-               						La première étape est de penser
-               						à la commande 
-               						<code>who</code>
-               						qui affiche toutes les connexions actives.
+               						Écrivez un programme minimal 
+               						contenant une boucle infinie
+               						<pre>
+	while(true){}
+						</pre></li>
+            <li class="item">
+               						Visualisez vos processus en cours en utilisant la commande 
+               						<code>ps u</code>.
+               					
+            </li>
+            <li class="itemAlt">
+               						Ouvrez une seconde fenêtre putty, et exécutez-y 
+               						votre boucle infinie.
+               						Exécutez à nouveau la commande 
+               						<code>ps u</code>
+               						dans la première fenêtre.
                					
             </li>
             <li class="item">
-               						C'est gagné, il suffit de compter
-               						le nombre de lignes, direz-vous !
-               						Allons ! Ne nous arrêtons pas là ;
-               						l'ordinateur peut compter pour nous,
-               						ce qui donne :
-               						<pre>
-	who | wc -l
-						</pre></li>
+               <p class="paragraph" id="d8e2392">
+                  						Retrouvez le processus correspondant au programme 
+                  						qui cycle (son PID)
+                  						et tuez-le en utilisant la commande kill
+                  						avec les bons paramètres. Quel nom a le programme à tuer ?
+                  						
+               </p>
+               <p class="paragraph" id="d8e2394">
+                  						Sur linux1,
+                  						le système tue les processus après un temps défini
+                  						d'utilisation du CPU (timeout). Il se pourrait donc
+                  						qu'il s'arrête avant l'effet de votre action ;
+                  						ce n'est pas le moment de s'endormir ;-).
+                  						
+               </p>
+            </li>
             <li class="itemAlt">
-               <p class="paragraph" id="d8e2173">
-                  							Cette fois, ça y est, on a la réponse !
-                  							Ben, non !
-                  							Il y a un piège 
-                  							car la commande
-                  							<code>who</code>
-                  							ne donne pas les utilisateurs
-                  							mais les connexions
-                  							ce qui n'est pas tout à fait
-                  							la même chose ;
-                  							un utilisateur peut avoir
-                  							ouvert plusieurs fenêtres "putty". 
+               						Lancez une deuxième exécution et suspendez votre programme 
+               						par <code>Ctrl-z</code>.
+               						Vérifiez l'état du processus stoppé par la commande 
+               						<code>ps</code>
+               						(<code>man ps</code> et recherchez 
+               						la signification du champ 
+               						<code>STAT</code>).
+               					
+            </li>
+            <li class="item">
+               						Reprenez le processus interrompu en envoyant le signal 
+               						SIGCONT (via la commande kill) 
+               						et vérifiez son nouvel état avant qu'il ne soit éjecté par 
+               						le système à cause du «timeout».
+               					
+            </li>
+            <li class="itemAlt">
+               <p class="paragraph" id="d8e2413">
+                  						Une deuxième manière de reprendre un processus suspendu
+                  						est de taper la commande
+                  						<code>fg <i>num</i></code> 
+                  						(faites un <code>man bash</code>),
+                  						cela doit être fait dans la console dans laquelle vous 
+                  						avez tapé <code>Ctrl-z</code>.
+                  						Le numéro <code>num</code>
+                  						est fourni par le système lorsque le processus 
+                  						a été suspendu par <code>Ctrl-z</code>.
                   						
                </p>
-               <p class="paragraph" id="d8e2178">
-                  							La commande 
-                  							<code>uniq</code>
-                  							peut venir à notre secours en supprimant
-                  							les doublons mais il faut que les
-                  							lignes soient parfaitement identiques
-                  							et contigües.
-                  						
-               </p>
-               <p class="paragraph" id="d8e2183">
-                  							Parfait !
-                  							La commande
-                  							<code>cut</code>
-                  							peut ne garder que certaines colonnes
-                  							et la commande
-                  							<code>sort</code>
-                  							peut trier les lignes.
-                  							On obtient alors :							
-                  						
-               </p><pre>
-	who | cut -f 1 -d ' ' | sort | uniq | wc -l
-						</pre><p class="paragraph" id="d8e2193">
-                  							Je ne me réjouis pas trop vite ;
-                  							je suis sûr que vous allez encore
-                  							trouver une faille, n'est-ce pas ?
-                  							Non, pas cette-fois ; on y est !
+               <p class="paragraph" id="d8e2433">
+                  						Essayez aussi <code>fg</code> 
+                  						pour reprendre le dernier processus suspendu.
                   						
                </p>
             </li>
          </ol>
       </div>
-      <div id="d8e2195.html" class="act">
-         <h4>Exercice 1 - Nombre de connexions d'un utilisateur<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Exercice 1 - Nombre de connexions d'un utilisateur" id="d8e2196"></p>
-         <p class="paragraph" id="d8e2197">
-            					Trouvez un enchainement de commandes
-            					qui permet de donner le nombre de connexions
-            					d'un utilisateur donné.
-            				
-         </p>
-         <p class="paragraph" id="d8e2199">
-            					Il existe de nombreuses façons de résoudre
-            					cet exercice. 
-            					Celle à laquelle nous pensons fait intervenir :
-            					<code>grep</code>,
-            					<code>wc</code>,
-            					et <code>who</code>.
-            				
-         </p>
-         <h4>Exercice 2 - Nombre de PC connectés<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Exercice 2 - Nombre de PC connectés" id="d8e2210"></p>
-         <p class="paragraph" id="d8e2211">
-            					Trouvez un enchainement de commandes
-            					qui permet de donner le nombre de PC
-            					connectés à linux1.
-            					Ce n'est pas exactement le nombre d'utilisateurs
-            					car un utilisateur pourrait être connecté
-            					sur plusieurs machines.
-            				
-         </p>
-         <p class="paragraph" id="d8e2213">
-            					À nouveau,
-            					il existe de nombreuses façons de résoudre
-            					cet exercice. 
-            					Celle à laquelle nous pensons fait intervenir
-            					la commande 
-            					<code>tr -s ' '</code>
-            					qui supprime plusieurs occurences
-            					consécutives d'un même caractère
-            					facilitant ainsi la sélection par colonne
-            					de la commande 
-            					<code>cut</code>.
-            				
-         </p>
-         <h4>Exercice 3 - Droits sur les dossiers personnels<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Exercice 3 - Droits sur les dossiers personnels" id="d8e2221"></p>
-         <p class="paragraph" id="d8e2222">
-            					Trouvez un enchainement de commandes
-            					qui permet de donner 
-            					le nombre de professeurs
-            					qui ont donné le droit à ceux qui
-            					ne font pas partie de leur groupe
-            					d'entrer dans leur dossier personnel.
-            				
-         </p>
-         <p class="paragraph" id="d8e2224">
-            					À votre imagination...
-            				
-         </p>
-      </div>
       <hr />
-      <div class="navigation_arrows"><a href="unit_Processus.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Transfert.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 7.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDLinux.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <div class="navigation_arrows"><a href="unit_Processus.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Conclusion.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 8.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDLinux.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

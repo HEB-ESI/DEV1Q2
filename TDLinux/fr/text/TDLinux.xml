@@ -634,8 +634,6 @@
 	<unit label="Permissions" title="Les permissions">
 	<!-- ======================================= -->
 
-		<entry>
-		</entry>
 		<learningObject title="Les groupes d'un utilisateur">
 		<!-- ================================================ -->
 			<clarify>
@@ -783,6 +781,7 @@
     
 		<learningObject title="Les permissions">
 		<!-- ================================================ -->
+		
 		  <paragraph title="Les permissions sur un fichier" icon="icon_reading" />
 			<clarify>
 				<paragraph>
@@ -1003,7 +1002,6 @@
         </paragraph>
 			</clarify>
 			<act>
-				<paragraph title="Exercices" icon="act" />
 				
 				<selfCheck title="Déterminez les bonnes permissions" shuffle="no">
 					<fillInBlanks>
@@ -1856,7 +1854,7 @@ find ~ -name Ex.java
 
 
 <!-- ========================================= -->
-	<unit label="Processus" title="Les filtres Linux">
+	<unit label="Filtres" title="Les filtres Linux">
 <!-- ========================================= -->
 
     <learningObject title="Les filtres Linux">
