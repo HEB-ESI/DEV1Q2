@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  8 JAN 2015 23:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  9 JAN 2015 10:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,96 +910,122 @@ Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primit
 ifs.png used on input line 324.
 (pdftex.def)             Requested size: 288.0125pt x 161.09172pt.
  [4]
-[5 </home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png>]
-Overfull \hbox (16.9221pt too wide) in paragraph at lines 394--396
+[5 </home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png>] [6]
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-34.def
+File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
+)
+Overfull \hbox (16.9221pt too wide) in paragraph at lines 579--581
 []\T1/lmr/m/n/10.95 L'ensemble des ins-truc-tions de la forme []\T1/lmtt/m/n/10
 .95 variable1, variable2,. . . : type
  []
 
-[6] [7]
-Overfull \hbox (6.12563pt too wide) in paragraph at lines 584--586
+[7] [8] [9]
+Overfull \hbox (55.94803pt too wide) in paragraph at lines 740--742
+\T1/lmr/m/n/10.95 cules, on peut uti-li-ser le ^^Sti-ret bas ^^Tou un-ders-core
+ (par ex. []\T1/lmtt/m/n/10.95 PREMIER_NUMERATEUR\T1/lmr/m/n/10.95 ). 
+ []
+
+
+Overfull \hbox (6.12563pt too wide) in paragraph at lines 770--772
 []\T1/lmr/m/n/10.95 Une ex-pres-sion est donc une com-bi-nai-son co-hé-rente de
  va-riables, de constantes
  []
 
-[8] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-Overfull \hbox (12.08646pt too wide) in paragraph at lines 609--610
+Overfull \hbox (12.08646pt too wide) in paragraph at lines 795--796
 []\T1/lmr/m/n/10.95 Il est aussi per-mis d'uti-li-ser des pa-ren-thèses, par ex
 emple []\T1/lmtt/m/n/10.95 a ^^U (b + c * d)/x\T1/lmr/m/n/10.95 . 
  []
 
-
-Overfull \hbox (12.08646pt too wide) in paragraph at lines 639--640
+[10]
+Overfull \hbox (12.08646pt too wide) in paragraph at lines 825--826
 []\T1/lmr/m/n/10.95 Il est aussi per-mis d'uti-li-ser des pa-ren-thèses, par ex
 emple []\T1/lmtt/m/n/10.95 a ^^U (b + c * d)/x\T1/lmr/m/n/10.95 . 
  []
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-2.def
 File: uni-2.def 2013/05/13 UCS: Unicode data U+0200..U+02FF
-) [9]
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-34.def
-File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
-)
-Overfull \hbox (25.5632pt too wide) in paragraph at lines 686--687
-[]\T1/lmr/m/n/10.95 Si né-ces-saire,les autres fonc-tions ma-thé-ma-tiques Math
-.sin(x), Math.tan(x),
+) [11]
+Overfull \hbox (38.82286pt too wide) in paragraph at lines 872--874
+[]\T1/lmr/m/n/10.95 Si né-ces-saire, les autres fonc-tions ma-thé-ma-tiques []\
+T1/lmtt/m/n/10.95 Math.sin(x)\T1/lmr/m/n/10.95 , []\T1/lmtt/m/n/10.95 Math.tan(
+x)\T1/lmr/m/n/10.95 ,
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 874.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 874.
+
+Overfull \hbox (4.3861pt too wide) in paragraph at lines 874--875
+[]\T1/lmr/m/n/10.95 Toutes les in-for-ma-tions se trouvent dans l'API ([][]$\T1
+/lmtt/m/n/9 docs . oracle . com / javase /
  []
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
-) [10]
-Overfull \hbox (48.43576pt too wide) in paragraph at lines 746--747
-[]\T1/lmr/m/n/10.95 varChaine $\OMS/lmsy/m/n/10.95  $ \T1/lmr/m/n/10.95 var-Ca-
-rac-tère : équi-valent à var-Chaine $\OMS/lmsy/m/n/10.95  $ \T1/lmr/m/n/10.95 c
-haine(varCaractère). 
+) [12]
+Overfull \hbox (91.26125pt too wide) in paragraph at lines 934--935
+[][]\T1/lmtt/m/n/10.95 varChaine $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 var
+Caractère \T1/lmr/m/n/10.95 : équi-valent à []\T1/lmtt/m/n/10.95 varChaine $\OM
+S/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 chaine(varCaractère)\T1/lmr/m/n/10.95 . 
+
  []
 
-[11] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[13] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [12]
-Overfull \hbox (102.27141pt too wide) in paragraph at lines 868--873
+) [14]
+Overfull \hbox (102.27141pt too wide) in paragraph at lines 1059--1064
 []\T1/lmr/m/n/10.95 Nous no-te-rons : []\T1/lmtt/m/n/10.95 afficher expression 
 ou liste de variables séparées par des virgules
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 908.
-[13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 908.
+
+Overfull \hbox (78.72879pt too wide) in paragraph at lines 1071--1072
+[][]\T1/lmtt/m/n/10.95 afficher "Le premier nombre vaut ", nb1, " et le seconde
+ nombre vaut ", nb2  
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1106.
+[15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1106.
  (./TDSeq.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 908.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 908.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1106.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1106.
+
 Package rerunfilecheck Info: File `TDSeq.out' has not changed.
 (rerunfilecheck)             Checksum: 592DE220FCDDBD76D9DCCBE8BB2E51E8;1867.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 908.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1106.
  ) 
 Here is how much of TeX's memory you used:
- 13827 strings out of 493304
- 196812 string characters out of 6139871
- 308026 words of memory out of 5000000
- 16971 multiletter control sequences out of 15000+600000
- 73005 words of font info for 49 fonts, out of 8000000 for 9000
+ 13856 strings out of 493304
+ 197082 string characters out of 6139871
+ 307723 words of memory out of 5000000
+ 16980 multiletter control sequences out of 15000+600000
+ 80511 words of font info for 56 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,43p,333b,1240s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathsy.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/latxfont/lcirclew.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr
-.pfb>
-Output written on TDSeq.pdf (13 pages, 359782 bytes).
+ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/zapfding/uzdr.pfb>
+Output written on TDSeq.pdf (15 pages, 387886 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 251 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
+ 321 PDF objects out of 1000 (max. 8388607)
+ 279 compressed objects within 3 object streams
+ 74 named destinations out of 1000 (max. 500000)
  192 words of extra memory for PDF output out of 10000 (max. 10000000)
 

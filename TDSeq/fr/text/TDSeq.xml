@@ -179,10 +179,10 @@
             <item> ce sont des nombres signés (en complément à 2)</item>
             <item> ils sont codés sur 
               <list listStyle="unordered">
-                <item> 8-bit pour un <formatted style="code">byte</formatted> ;</item>
-                <item> 16-bit pour un <formatted style="code">short</formatted> ;</item>
-                <item> 32-bit pour un <formatted style="code">int</formatted> ;</item>
-                <item> 64-bit pour un <formatted style="code">long</formatted> ;</item>
+                <item> 8 bits pour un <formatted style="code">byte</formatted> ;</item>
+                <item> 16 bits pour un <formatted style="code">short</formatted> ;</item>
+                <item> 32 bits pour un <formatted style="code">int</formatted> ;</item>
+                <item> 64 bits pour un <formatted style="code">long</formatted> ;</item>
               </list>
             </item>
             <item> ils comprennent donc les valeurs :
@@ -249,26 +249,100 @@
             </paragraph>
         </clarify>
         
-        <act>
-				<selfCheck title="Les commandes de base" shuffle="yes">
-						<fillInBlanks>
-							<question> 
-								Quel(s) type(s) de données utiliseriez-vous pour représenter :
-							</question>
-							<gapText> 
-								<list listStyle="unordered">
-									<item>une date du calendrier ? <gap answers="3 entiers,trois entiers,2 entiers 1 chaine,1 chaine 2 entiers">3 entiers</gap></item>  
-									<item>un moment dans la journée ? <gap answers="3 entiers, trois entiers">3 entiers</gap></item>  
-									<item>le prix d’un produit en grande surface ?<gap answers="1 réel,un réel, réel">1 réel</gap></item>  
-									<item>votre nom ? <gap answers="une chaine,1 chaine, chaine">1 chaine</gap></item>  
-									<item>vos initiales ?<gap answers="2 caractères,3 caractères">2 caractères</gap></item>  
-									<item>votre adresse ? <gap answers="1 chaine">1 chaine</gap></item>  
-								</list>  
-							</gapText>
-							<solution></solution>
-						</fillInBlanks>
-					</selfCheck>
-				</act>
+        <clarify>
+        <paragraph title="Le type numérique caractère" icon="important" />
+        <paragraph>
+          <formatted style="code">char</formatted> est
+          <list listStyle="unordered">
+            <item>un caractère Unicode codé en UTF16</item>
+            <item>un entier non signé sur 16 bits</item>
+            <item>assimilé à un entier </item>
+          </list>
+        </paragraph>
+        <paragraph>
+          Pour un littéral de type char : un caractère entre single quote.
+          Par exemple : 'a', '1', ' ', ...
+        </paragraph>
+        <paragraph>
+          Il existe des séquences d’échappement pour représenter certains caractères spéciaux :
+          <list listStyle="unordered">
+            <item><formatted style="code">\n</formatted> pour représenter un <formatted style="bold">saut de ligne</formatted></item>
+            <item><formatted style="code">\t</formatted> pour représenter une <formatted style="bold">tabulation</formatted></item>
+            <item><formatted style="code">\'</formatted> pour représenter le caractère <formatted style="bold">'</formatted></item>
+            <item><formatted style="code">\"</formatted> pour représenter le caractère <formatted style="bold">"</formatted></item>
+          </list>
+        </paragraph>
+      </clarify>
+      
+      <clarify>
+        <paragraph title="Les types primitifs numériques flottants" icon="important" />
+        <paragraph>
+          Les types primitifs numériques flottants sont
+          <formatted style="code">float</formatted> et <formatted style="code">double</formatted>.
+          <list listStyle="unordered">
+            <item>ils respectent la norme IEEE754 ;</item>
+            <item> ils sont codés sur 
+              <list listStyle="unordered">
+                <item> 32 bits pour un <formatted style="code">float</formatted> ;</item>
+                <item> 64 bits pour un <formatted style="code">double</formatted> ;</item>
+              </list>
+            </item>
+            <item>on utilisera plus souvent le type <formatted style="code">double</formatted> ;</item>
+            <item>il s'agit d'une <formatted style="bold">modélisation</formatted> de la notion mathématique.</item>
+          </list>
+        </paragraph>
+        
+        <paragraph title="Les littéraux pour les types primitifs numériques flottants" icon="important" />
+        <paragraph>
+          Un <formatted style="bold">littéral</formatted>, c'est une notation pour représenter une valeur fixée directement dans un code  source.
+        </paragraph>
+        <paragraph>
+          Un <formatted style="bold">littéral numérique flottant se compose de parties optionnelles (mais pas ensemble)</formatted> :
+            <list listStyle="ordered">
+                <item>une partie entière</item>
+                <item>.</item>
+                <item>partie décimale</item>
+                <item>E ou e</item>
+                <item>exposant</item>
+                <item>suffixe (en l’absence de suffixe : un double)</item>
+              </list>
+        </paragraph>
+        <paragraph>
+          Par exemple : 1.2E3, 1.F, .1, 1e−2d, 1f
+        </paragraph>
+        <paragraph>
+          Par contre : 1, .E1, E1 ne sont pas des littéraux pour les types primitifs numériques flottants
+        </paragraph>
+      </clarify>
+      
+      <clarify>
+        <paragraph title="Le type primitif booléen" icon="important" />
+        <paragraph>
+          <formatted style="code">boolean</formatted>
+          <list listStyle="unordered">
+            <item>aussi appelé logique ; </item>
+            <item> il peut prendre 2 valeurs :
+              <list listStyle="unordered">
+                <item><formatted style="code">true</formatted> ;</item>
+                <item><formatted style="code">false</formatted> ;</item>
+              </list>
+            </item>
+            <item>il prend 1 octet en mémoire.</item>
+          </list>
+        </paragraph>
+      </clarify>
+      
+      
+        <paragraph title="Les types références prédéfinis : les chaines de caractères" icon="important" />
+        <paragraph>
+			    <formatted style="code">String</formatted>
+			    <list listStyle="unordered">
+            <item>il s'agit de caractères entre double quote : par exemple : "Java", "Bonjour tout le monde", "a",...  ; </item>
+            <item>est un type référence prédéfini ;</item>
+            <item> Attention <formatted style="code">char</formatted> ≠ <formatted style="code">String</formatted></item>
+          </list>
+        </paragraph>
+        
       </learningObject>
       
       
@@ -291,7 +365,7 @@
           dictionnaire des variables ou encore dictionnaire des données.
         </paragraph>
         
-        <paragraph title="Attention" icon="important" />
+        <paragraph title="Valeur initiale ?" icon="important" />
         <paragraph>
           Attention, lors de la déclaration d’une variable, <formatted style="bold">celle-ci n’a pas de valeur</formatted> ! 
           Nous verrons que c’est l’instruction d’affectation qui va servir à donner un contenu aux variables déclarées.
@@ -385,13 +459,14 @@
         </paragraph>
         <paragraph>
           L’ensemble des instructions de la forme <formatted style="input">type nom;</formatted>
+          (où le <formatted style="code">type</formatted> peut être un type primitif, un type référence prédéfini ou un type référence défini par l'utilisateur) 
           forme la <formatted style="bold">déclaration des variables</formatted>. 
         </paragraph>
         <paragraph>
           La déclaration des informations apparaitra en <formatted style="bold">début</formatted> de bloc.
         </paragraph>
         
-        <paragraph title="Attention" icon="important" />
+        <paragraph title="Valeur initiale ?" icon="important" />
         <paragraph>
           Attention, comme en algo, lors de la déclaration d’une variable, <formatted style="bold">celle-ci n’a pas de valeur</formatted> ! 
           Nous verrons que c’est l’instruction d’affectation qui va servir à donner un contenu aux variables déclarées.
@@ -410,23 +485,23 @@
             <item>
             Un nom de variable est généralement une suite de caractères alphanumériques d’un
             seul tenant (pas de caractères blancs) et ne commençant jamais par un chiffre. Ainsi
-            x1 est correct mais pas 1x.
+            <formatted style="code">x1</formatted> est correct mais pas <formatted style="code">1x</formatted>.
             </item>
             <item>
-            un nom de variable ne peut comporter que des lettres, des chiffres, les caractères <formatted style="italic">_</formatted> et <formatted style="italic">$</formatted>.
+            un nom de variable ne peut comporter que des lettres, des chiffres, les caractères <formatted style="code">_</formatted> et <formatted style="code">$</formatted>.
             </item>
             <item>
             L’écriture de noms de variables composés
             est la notation « chameau » (camelCase en anglais), qui consiste à mettre une majuscule
-            au début des mots (généralement à partir du deuxième), par exemple premierNombre
-            ou dateNaissance.
+            au début des mots (généralement à partir du deuxième), par exemple <formatted style="code">premierNombre</formatted>
+            ou <formatted style="code">dateNaissance</formatted>.
             </item>
             <item>
             Pour donner un nom composé à une variable entièrement en majuscules, on peut utiliser le « tiret bas » ou underscore 
-            (par ex. PREMIER_NUMERATEUR).
+            (par ex. <formatted style="code">PREMIER_NUMERATEUR</formatted>).
             </item>
             <item>
-            Les mots-clés du langage sont interdits (par exemple for, if, while)
+            Les mots-clés du langage sont interdits (par exemple <formatted style="code">for</formatted>, <formatted style="code">if</formatted>, <formatted style="code">while</formatted>)
             </item>
           </list>
         </paragraph>
@@ -575,9 +650,11 @@
         <paragraph>
         L'essentiel des fonctions mathématiques se trouvent dans la classe Math.
           <list listStyle="unordered">
-            <item>Math.pow(a,b) est l'élévation à la puissance aˆb</item>
-            <item>Math.sqrt(x) est la racine carrée d’une variable x, √x . Attention, pour ce dernier, de veiller à ne l’utiliser qu’avec un radicant positif !</item>
-            <item>Si nécessaire,les autres fonctions mathématiques Math.sin(x), Math.tan(x), Math.log(x), Math.exp(x). . .)</item>
+            <item><formatted style="code">Math.pow(a,b)</formatted> est l'élévation à la puissance aˆb</item>
+            <item><formatted style="code">Math.sqrt(x)</formatted> est la racine carrée d’une variable x, √x . Attention, pour ce dernier, de veiller à ne l’utiliser qu’avec un radicant positif, sinon, une exception sera générée !</item>
+            <item>Si nécessaire, les autres fonctions mathématiques <formatted style="code">Math.sin(x)</formatted>, 
+            <formatted style="code">Math.tan(x)</formatted>, <formatted style="code">Math.log(x)</formatted>, <formatted style="code">Math.exp(x)</formatted>. . .</item>
+            <item>Toutes les informations se trouvent dans l'<link uri="http://docs.oracle.com/javase/8/docs/api/">API</link>, à la classe Math.</item>
           </list>
         </paragraph>
       </clarify>
@@ -604,7 +681,7 @@
           On parle d’<formatted style="bold">affectation interne</formatted> lorsque la valeur d’une variable est « calculée » par l’exécutant
           de l’algorithme lui-même à partir de données qu’il connait déjà :
           <formatted style="input">nomVariable ← expression</formatted>
-          Rappelons qu’une expression est une combinaison de variables et d’opérateurs. <formatted style="bold">L’expression a une valeur</formatted>.
+          (une expression est une combinaison de variables et d’opérateurs). <formatted style="bold">L’expression a une valeur</formatted>.
         </paragraph>
         </clarify>
         
@@ -632,12 +709,12 @@
               même type que la variable à sa gauche. On tolère certaines exceptions :
               <list listStyle="unordered">
                 <item>
-                  varEntière ← varRéelle : dans ce cas le contenu de la variable sera la valeur tronquée de l’expression réelle. 
+                  <formatted style="code">varEntière ← varRéelle</formatted> : dans ce cas le contenu de la variable sera la valeur tronquée de l’expression réelle. <newLine/>
                   Par exemple si « nb » est une variable de type entier,
-                  son contenu après l’instruction <formatted style="input">nb ← 15/4 »</formatted> sera 3
+                  son contenu après l’instruction <formatted style="input">nb ← 15/4 »</formatted> sera 3.
                 </item>
-                <item>varRéelle ← varEntière : ici, il n’y a pas de perte de valeur.</item>
-                <item>varChaine ← varCaractère : équivalent à varChaine ← chaine(varCaractère).</item>
+                <item><formatted style="code">varRéelle ← varEntière</formatted> : ici, il n’y a pas de perte de valeur.</item>
+                <item><formatted style="code">varChaine ← varCaractère</formatted> : équivalent à <formatted style="code">varChaine ← chaine(varCaractère)</formatted>.</item>
                 <item>Le contraire n’est évidemment pas accepté.</item>
               </list>
             </item>
@@ -647,8 +724,8 @@
             </item>
             <item>
             Nous ne mélangerons pas la déclaration d’une variable et son affectation interne dans
-            une même ligne de code, donc pas d’instructions hybrides du genre x ← 2 : entier ou
-            encore x : entier(0).
+            une même ligne de code, donc pas d’instructions hybrides du genre <formatted style="code">x ← 2 : entier</formatted> ou
+            encore <formatted style="code">x : entier(0)</formatted>.
             </item>
             <item>
             Pour l’affectation interne, toutes les variables apparaissant dans l’expression doivent
@@ -665,7 +742,7 @@
           On parle d’<formatted style="bold">affectation interne</formatted> lorsque la valeur d’une variable est « calculée » par l’exécutant
           de l’algorithme lui-même à partir de données qu’il connait déjà :
           <formatted style="input">nomVariable = expression;</formatted>
-          Rappelons qu’une expression est une combinaison de variables et d’opérateurs. <formatted style="bold">L’expression a une valeur</formatted>.
+          (une expression est une combinaison de variables et d’opérateurs). <formatted style="bold">L’expression a une valeur</formatted>.
         </paragraph>
         </clarify>
         
@@ -704,8 +781,8 @@
           <formatted style="input">lire liste_de_variables_à_lire</formatted>
         </paragraph>
         <paragraph>
-          Exemples
-          <formatted style="input">lire nombre1, nombre2</formatted>
+          Exemples <newLine/><newLine/>
+          <formatted style="input">lire nombre1, nombre2</formatted><newLine/><newLine/>
           <formatted style="input">lire num1, den1, num2, den2</formatted>
         </paragraph>
         <paragraph>
@@ -771,6 +848,11 @@ int nombre1 = clavier. nextInt ();
           sera fournie à l’utilisateur (par exemple par un affichage à l’écran ou par impression sur
           listing via l’imprimante, etc.).
           </paragraph>
+          <paragraph>
+          Exemples <newLine/><newLine/>
+          <formatted style="input">afficher nb1</formatted><newLine/><newLine/>
+          <formatted style="input">afficher "Le premier nombre vaut ", nb1, " et le seconde nombre vaut ", nb2 </formatted>
+        </paragraph>
           <paragraph>
           Remarques :
           <list listStyle="unordered">

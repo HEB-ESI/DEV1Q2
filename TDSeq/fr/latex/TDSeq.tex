@@ -347,10 +347,10 @@
               
 					\begin{itemize}
 				
-			\item  8-bit pour un \verb@byte@ ;
-			\item  16-bit pour un \verb@short@ ;
-			\item  32-bit pour un \verb@int@ ;
-			\item  64-bit pour un \verb@long@ ;
+			\item  8 bits pour un \verb@byte@ ;
+			\item  16 bits pour un \verb@short@ ;
+			\item  32 bits pour un \verb@int@ ;
+			\item  64 bits pour un \verb@long@ ;
 					\end{itemize}
 				
 			\item  ils comprennent donc les valeurs :
@@ -368,22 +368,207 @@
             \par
         
 			
-		\subparagraph{Les commandes de base} 
+		\subparagraph{Les litt\'eraux pour les types primitifs num\'eriques entiers} 
 		
-                \textcolor{white}{.} \par
-             
-								Quel(s) type(s) de donn\'ees utiliseriez-vous pour repr\'esenter :
-							
+					\textcolor{white}{.} \par
+				
+            \par
+        
+          Un \textbf{litt\'eral}, c'est une notation pour repr\'esenter une valeur fix\'ee directement dans un code  source.
+        
+            \par
+        
+          Un \textbf{litt\'eral num\'erique d\'ecimal} est
+            
 					\begin{itemize}
 				
-			\item une date du calendrier ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item un moment dans la journ\'ee ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item le prix d'un produit en grande surface ? \textcolor{gray}{\underline{\hspace*{5em}}} 
-			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item vos initiales ? \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item votre adresse ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item une suite de chiffres
+			\item \'eventuellement s\'epar\'es par\,\verb|_|\, pour la lisibilit\'e
+			\item suivi \'eventuellement du suffixe ( \,\verb|l|\, ou \,\verb|L|\,) 
+                qui distingue un \verb@int@ d'un \verb@long@
+			\item pas de \verb@byte@ ou \verb@short@, 
+                un litt\'eral est \verb@int@ (ou \verb@long@)
 					\end{itemize}
-				\subsection{D\'eclaration de variables en algo}
+				
+            \par
+        
+          Un \textbf{litt\'eral num\'erique octal} est
+            
+					\begin{itemize}
+				
+			\item une suite de chiffres de 0 \`a 7
+			\item pr\'ec\'ed\'e de 0.
+					\end{itemize}
+				
+            \par
+        
+          Un \textbf{litt\'eral num\'erique hexad\'ecimal} est
+            
+					\begin{itemize}
+				
+			\item une suite de chiffres et lettres a,b,c,d,e,f (minuscules/majuscules)
+			\item pr\'ec\'ed\'e de 0x ou 0X
+					\end{itemize}
+				
+            \par
+        
+          Un \textbf{litt\'eral num\'erique binaire} est
+            
+					\begin{itemize}
+				
+			\item une suite de chiffres 0 et 1
+			\item pr\'ec\'ed\'e de 0b ou 0B
+					\end{itemize}
+				
+            \par
+        
+          Par exemple, la quantit\'e 100 de type \verb@int@ peut s'\'ecrire 
+            
+					\begin{itemize}
+				
+			\item 100
+			\item 1\_0\_0
+			\item 0144
+			\item 01\_44
+			\item 0x64
+			\item 0b110\_0100
+					\end{itemize}
+				
+            \par
+        
+			
+		\subparagraph{Le type num\'erique caract\`ere} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        \verb@char@ est
+          
+					\begin{itemize}
+				
+			\item un caract\`ere Unicode cod\'e en UTF16
+			\item un entier non sign\'e sur 16 bits
+			\item assimil\'e \`a un entier 
+					\end{itemize}
+				
+            \par
+        
+          Pour un litt\'eral de type char : un caract\`ere entre single quote.
+          Par exemple : 'a', '1', ' ', ...
+        
+            \par
+        
+          Il existe des s\'equences d'\'echappement pour repr\'esenter certains caract\`eres sp\'eciaux :
+          
+					\begin{itemize}
+				
+			\item \verb@\n@ pour repr\'esenter un \textbf{saut de ligne}
+			\item \verb@\t@ pour repr\'esenter une \textbf{tabulation}
+			\item \verb@\'@ pour repr\'esenter le caract\`ere \textbf{'}
+			\item \verb@\"@ pour repr\'esenter le caract\`ere \textbf{"}
+					\end{itemize}
+				
+            \par
+        
+			
+		\subparagraph{Les types primitifs num\'eriques flottants} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        
+          Les types primitifs num\'eriques flottants sont
+          \verb@float@ et \verb@double@.
+          
+					\begin{itemize}
+				
+			\item ils respectent la norme IEEE754 ;
+			\item  ils sont cod\'es sur 
+              
+					\begin{itemize}
+				
+			\item  32 bits pour un \verb@float@ ;
+			\item  64 bits pour un \verb@double@ ;
+					\end{itemize}
+				
+			\item on utilisera plus souvent le type \verb@double@ ;
+			\item il s'agit d'une \textbf{mod\'elisation} de la notion math\'ematique.
+					\end{itemize}
+				
+            \par
+        
+			
+		\subparagraph{Les litt\'eraux pour les types primitifs num\'eriques flottants} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        
+          Un \textbf{litt\'eral}, c'est une notation pour repr\'esenter une valeur fix\'ee directement dans un code  source.
+        
+            \par
+        
+          Un \textbf{litt\'eral num\'erique flottant se compose de parties optionnelles (mais pas ensemble)} :
+            
+					\begin{enumerate}
+				
+			\item une partie enti\`ere
+			\item .
+			\item partie d\'ecimale
+			\item E ou e
+			\item exposant
+			\item suffixe (en l'absence de suffixe : un double)
+					\end{enumerate}
+				
+            \par
+        
+          Par exemple : 1.2E3, 1.F, .1, 1e−2d, 1f
+        
+            \par
+        
+          Par contre : 1, .E1, E1 ne sont pas des litt\'eraux pour les types primitifs num\'eriques flottants
+        
+            \par
+        
+			
+		\subparagraph{Le type primitif bool\'een} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        \verb@boolean@
+					\begin{itemize}
+				
+			\item aussi appel\'e logique ; 
+			\item  il peut prendre 2 valeurs :
+              
+					\begin{itemize}
+				
+			\item \verb@true@ ;
+			\item \verb@false@ ;
+					\end{itemize}
+				
+			\item il prend 1 octet en m\'emoire.
+					\end{itemize}
+				
+            \par
+        
+			
+		\subparagraph{Les types r\'ef\'erences pr\'ed\'efinis : les chaines de caract\`eres} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        \verb@String@
+					\begin{itemize}
+				
+			\item il s'agit de caract\`eres entre double quote : par exemple : "Java", "Bonjour tout le monde", "a",...  ; 
+			\item est un type r\'ef\'erence pr\'ed\'efini ;
+			\item  Attention \verb@char@ ≠ \verb@String@
+					\end{itemize}
+				
+            \par
+        \subsection{D\'eclaration de variables en algo}
           La \textbf{d\'eclaration} d'une variable est l'instruction qui d\'efinit son \textbf{nom} 
           et son \textbf{type}.
         
@@ -402,7 +587,7 @@
             \par
         
 			
-		\subparagraph{Attention} 
+		\subparagraph{Valeur initiale ?} 
 		
 					\textcolor{white}{.} \par
 				
@@ -500,6 +685,7 @@
             \par
         
           L'ensemble des instructions de la forme \,\verb|type nom;|\,
+          (o\`u le \verb@type@ peut \^etre un type primitif, un type r\'ef\'erence pr\'ed\'efini ou un type r\'ef\'erence d\'efini par l'utilisateur) 
           forme la \textbf{d\'eclaration des variables}. 
         
             \par
@@ -509,7 +695,7 @@
             \par
         
 			
-		\subparagraph{Attention} 
+		\subparagraph{Valeur initiale ?} 
 		
 					\textcolor{white}{.} \par
 				
@@ -539,23 +725,23 @@
 			\item 
             Un nom de variable est g\'en\'eralement une suite de caract\`eres alphanum\'eriques d'un
             seul tenant (pas de caract\`eres blancs) et ne commen\c cant jamais par un chiffre. Ainsi
-            x1 est correct mais pas 1x.
+            \verb@x1@ est correct mais pas \verb@1x@.
             
 			\item 
-            un nom de variable ne peut comporter que des lettres, des chiffres, les caract\`eres \textit{\_} et \textit{\$}.
+            un nom de variable ne peut comporter que des lettres, des chiffres, les caract\`eres \verb@_@ et \verb@$@.
             
 			\item 
             L'\'ecriture de noms de variables compos\'es
             est la notation \guillemotleft  chameau \guillemotright  (camelCase en anglais), qui consiste \`a mettre une majuscule
-            au d\'ebut des mots (g\'en\'eralement \`a partir du deuxi\`eme), par exemple premierNombre
-            ou dateNaissance.
+            au d\'ebut des mots (g\'en\'eralement \`a partir du deuxi\`eme), par exemple \verb@premierNombre@
+            ou \verb@dateNaissance@.
             
 			\item 
             Pour donner un nom compos\'e \`a une variable enti\`erement en majuscules, on peut utiliser le \guillemotleft  tiret bas \guillemotright  ou underscore 
-            (par ex. PREMIER\_NUMERATEUR).
+            (par ex. \verb@PREMIER_NUMERATEUR@).
             
 			\item 
-            Les mots-cl\'es du langage sont interdits (par exemple for, if, while)
+            Les mots-cl\'es du langage sont interdits (par exemple \verb@for@, \verb@if@, \verb@while@)
             
 					\end{itemize}
 				
@@ -681,9 +867,11 @@
           
 					\begin{itemize}
 				
-			\item Math.pow(a,b) est l'\'el\'evation \`a la puissance aˆb
-			\item Math.sqrt(x) est la racine carr\'ee d'une variable x, √x . Attention, pour ce dernier, de veiller \`a ne l'utiliser qu'avec un radicant positif !
-			\item Si n\'ecessaire,les autres fonctions math\'ematiques Math.sin(x), Math.tan(x), Math.log(x), Math.exp(x). . .)
+			\item \verb@Math.pow(a,b)@ est l'\'el\'evation \`a la puissance aˆb
+			\item \verb@Math.sqrt(x)@ est la racine carr\'ee d'une variable x, √x . Attention, pour ce dernier, de veiller \`a ne l'utiliser qu'avec un radicant positif, sinon, une exception sera g\'en\'er\'ee !
+			\item Si n\'ecessaire, les autres fonctions math\'ematiques \verb@Math.sin(x)@, 
+            \verb@Math.tan(x)@, \verb@Math.log(x)@, \verb@Math.exp(x)@. . .
+			\item Toutes les informations se trouvent dans l'API (\url{docs.oracle.com/javase/8/docs/api/}), \`a la classe Math.
 					\end{itemize}
 				
             \par
@@ -697,7 +885,7 @@
           On parle d'\textbf{affectation interne} lorsque la valeur d'une variable est \guillemotleft  calcul\'ee \guillemotright  par l'ex\'ecutant
           de l'algorithme lui-m\^eme \`a partir de donn\'ees qu'il connait d\'ej\`a :
           \,\verb|nomVariable ← expression|\,
-          Rappelons qu'une expression est une combinaison de variables et d'op\'erateurs. \textbf{L'expression a une valeur}.
+          (une expression est une combinaison de variables et d'op\'erateurs). \textbf{L'expression a une valeur}.
         
             \par
         
@@ -737,13 +925,13 @@
               
 					\begin{itemize}
 				
-			\item 
-                  varEnti\`ere ← varR\'eelle : dans ce cas le contenu de la variable sera la valeur tronqu\'ee de l'expression r\'eelle. 
+			\item \verb@varEntière ← varRéelle@ : dans ce cas le contenu de la variable sera la valeur tronqu\'ee de l'expression r\'eelle. \par
+				
                   Par exemple si \guillemotleft  nb \guillemotright  est une variable de type entier,
-                  son contenu apr\`es l'instruction \,\verb|nb ← 15/4 »|\, sera 3
+                  son contenu apr\`es l'instruction \,\verb|nb ← 15/4 »|\, sera 3.
                 
-			\item varR\'eelle ← varEnti\`ere : ici, il n'y a pas de perte de valeur.
-			\item varChaine ← varCaract\`ere : \'equivalent \`a varChaine ← chaine(varCaract\`ere).
+			\item \verb@varRéelle ← varEntière@ : ici, il n'y a pas de perte de valeur.
+			\item \verb@varChaine ← varCaractère@ : \'equivalent \`a \verb@varChaine ← chaine(varCaractère)@.
 			\item Le contraire n'est \'evidemment pas accept\'e.
 					\end{itemize}
 				
@@ -753,8 +941,8 @@
             
 			\item 
             Nous ne m\'elangerons pas la d\'eclaration d'une variable et son affectation interne dans
-            une m\^eme ligne de code, donc pas d'instructions hybrides du genre x ← 2 : entier ou
-            encore x : entier(0).
+            une m\^eme ligne de code, donc pas d'instructions hybrides du genre \verb@x ← 2 : entier@ ou
+            encore \verb@x : entier(0)@.
             
 			\item 
             Pour l'affectation interne, toutes les variables apparaissant dans l'expression doivent
@@ -767,7 +955,7 @@
           On parle d'\textbf{affectation interne} lorsque la valeur d'une variable est \guillemotleft  calcul\'ee \guillemotright  par l'ex\'ecutant
           de l'algorithme lui-m\^eme \`a partir de donn\'ees qu'il connait d\'ej\`a :
           \,\verb|nomVariable = expression;|\,
-          Rappelons qu'une expression est une combinaison de variables et d'op\'erateurs. \textbf{L'expression a une valeur}.
+          (une expression est une combinaison de variables et d'op\'erateurs). \textbf{L'expression a une valeur}.
         
             \par
         
@@ -811,8 +999,11 @@
           \,\verb|lire liste_de_variables_à_lire|\,
             \par
         
-          Exemples
-          \,\verb|lire nombre1, nombre2|\,\,\verb|lire num1, den1, num2, den2|\,
+          Exemples \par
+				\par
+				\,\verb|lire nombre1, nombre2|\,\par
+				\par
+				\,\verb|lire num1, den1, num2, den2|\,
             \par
         
           L'ex\'ecution de cette instruction provoque une pause dans le d\'eroulement de l'algorithme ;
@@ -871,6 +1062,13 @@ int nombre1 = clavier. nextInt ();
           sera fournie \`a l'utilisateur (par exemple par un affichage \`a l'\'ecran ou par impression sur
           listing via l'imprimante, etc.).
           
+            \par
+        
+          Exemples \par
+				\par
+				\,\verb|afficher nb1|\,\par
+				\par
+				\,\verb|afficher "Le premier nombre vaut ", nb1, " et le seconde nombre vaut ", nb2 |\,
             \par
         
           Remarques :
