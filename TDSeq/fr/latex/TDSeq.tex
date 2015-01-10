@@ -1102,6 +1102,383 @@ int nombre1 = clavier. nextInt ();
             \par
         \begin{Java}
  System.out.println ("La variable var vaut " + var);
-				\end{Java}
+				\end{Java}\section{Documenter son code}
+				On n'insistera jamais assez sur la n\'ecessit\'e de documenter un algorithme en y ins\'erant 
+        des commentaires judicieux, clairs et suffisants !
+      
+            \par
+        \subsection{Documenter son algorithme}
+        Un commentaire est un texte plac\'e dans l'algorithme et destin\'e \`a faciliter au maximum 
+        la compr\'ehension d'un algorithme par le lecteur (parfois une autre personne, 
+        mais aussi souvent l'auteur qui se perd dans son propre texte lorsqu'il s'y replonge apr\`es une interruption). 
+      
+            \par
+        
+        Ces commentaires (introduits par \guillemotleft  // \guillemotright ) seront bien entendu ignor\'es par l'ex\'ecutant de l'algorithme.
+      
+            \par
+        
+        Notez qu'un exc\`es de commentaires peut \^etre aussi nuisible qu'un trop-peu pour la 
+        compr\'ehension d'un algorithme. 
+        Par exemple, un choix judicieux de noms de variables peut s'av\'erer bien plus efficace que des commentaires superflus.
+      
+            \par
+        
+        Nous prendrons l'habitude de commenter chaque module en pr\'ecisant ce qu'il fait.
+      
+            \par
+        \subsection{Documenter son code Java}Il existe plusieurs mani\`eres d'ajouter un commentaire
+            \par
+        \begin{Java}
+// Commentaire sur une ligne
+\end{Java}\begin{Java}
+  /∗ Commentaire sur
+  plusieurs lignes ∗/
+\end{Java}\section{Structure g\'en\'erale}
+				Voyons maintenant comment d\'emarrer les algo et le code Java.
+      
+            \par
+        \subsection{Structure g\'en\'erale d'un algorithme}
+          La traduction d'un algorithme en pseudo-code constituera le contenu d'un module. 
+          Un module contient donc la solution algorithmique d'un probl\`eme donn\'e (ou d'une de ses parties).
+          Sa structure g\'en\'erale sera la suivante :
+        
+            \par
+        \begin{verbatim}
+module nomDuModule()
+    déclaration des variables et constantes utilisées dans le module
+    lecture des données
+    instructions utilisant les données lues
+    communication des résultats
+fin module
+				\end{verbatim}
+          Remarques :
+          
+					\begin{itemize}
+				
+			\item Le code d'un algorithme sera toujours compris entre la premi\`ere ligne, 
+            appel\'ee \guillemotleft  \textbf{ent\^ete} \guillemotright  qui commence par le mot \guillemotleft  module \guillemotright  suivi du nom choisi pour l'algorithme,
+            et la ligne finale \guillemotleft  fin module \guillemotright .
+            
+			\item Le code compris entre l'ent\^ete et la ligne finale sera toujours l\'eg\`erement d\'ecal\'e vers la droite, 
+              c'est un premier exemple d'\textbf{indentation} indispensable pour la lisibilit\'e d'un programme, 
+              nous y reviendrons lors de l'\'etude des structures alternatives et r\'ep\'etitives.
+            
+			\item Comme pour les variables, le \textbf{nomDuModule} 
+            devra \^etre \textbf{appropri\'e} au contenu ! 
+            Par exemple, sommerNombres(), additionnerFractions() plut\^ot que goPartez() ! 
+            
+			\item Le r\^ole des \textbf{parenth\`eses} qui suivent le nom du module sera expliqu\'e plus tard.
+			\item Il va de soi que toutes les parties de cette structure g\'en\'erale ne seront pas toujours 
+            n\'ecessaires : certains algorithmes ne n\'ecessiteront pas de lecture de donn\'ees, d'autres 
+            ne devront pas communiquer des r\'esultats...
+            
+			\item Pour la \textbf{lisibilit\'e}, 
+            on veillera toujours \`a ce qu'un module tienne sur une vingtaine de 
+            lignes (donc, en pratique, sur un \'ecran de 40 x 80 caract\`eres ou une page). Ceci implique 
+            que si le module devait \^etre plus long, il faudrait le d\'ecouper, comme nous le verrons 
+            plus loin.
+            
+					\end{itemize}
+				
+            \par
+        \subsection{Structure g\'en\'erale d'un programme Java}
+          Tout programme Java s'\'ecrit dans une \textbf{classe}. 
+          
+					\begin{itemize}
+				
+			\item Cette classe doit porter le m\^eme nom que le fichier ;
+			\item elle commence par une majuscule ; 
+			\item elle doit avoir un nom explicite.
+					\end{itemize}
+				
+            \par
+        \,\verb|$cat NomClasse.java|\,
+            \par
+        \begin{Java}
+public class NomClasse {
+    // insert code here
+}
+        \end{Java}
+			
+		\subparagraph{Attention \`a la casse} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        
+          Attention Java est sensible \`a la casse, il diff\'erencie majuscules et minuscules.
+        
+            \par
+        
+          Quand un programme Java s'ex\'ecute, il d\'emarre \`a la m\'ethode principale.
+          \textbf{M\'ethode} est le mot Java \'equivalent de module en algo.
+        
+            \par
+        
+          La m\'ethode principale s'appelle \,\verb|public static void main(String [] args) |\, et s'ins\`ere dans la classe de la fa\c con suivante :
+        
+            \par
+        \begin{Java}
+public class NomClasse {
+    public static void main(String [] args) {
+        // insert code here
+    }
+}
+        \end{Java}
+          On peut aussi y ajouter une lecture au clavier par exemple :
+        
+            \par
+        \begin{Java}
+import java.util.Scanner;
+public class NomClasse {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb = clavier.nextInt();
+        System.out.println("Le nombre lu vaut" + nb);
+    }
+}
+        \end{Java}\section{Compiler et ex\'ecuter un programme Java}
+				Nous avons vu maintenant comment \'ecrire un programme en Java. Il faut maintenant voir comment le "lancer".
+      
+            \par
+        \subsection{Java est un langage compil\'e puis interpr\'et\'e}\begin{figure}[hbt]
+				    \begin{center}
+					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png}
+						\end{center}
+                
+                    \caption[java-jvm-jvm.png]{java-jvm-jvm.png}
+                \end{figure}
+                    
+            \par
+        
+          Prenons un exemple (fichier\verb@ Hello . java@)
+          
+            \par
+        \begin{Java}
+// Mon premier programme
+public class Hello {
+    public static void main(String [] args) {
+        System.out. println ("Bonjour !");
+    }
+}
+        \end{Java}
+					\begin{itemize}
+				
+			\item Compilons-le \,\verb|javac Hello.java|\,
+			\item On obtient la version compil\'ee, le bytecode (\verb@Hello . class@ )
+			\item On peut l'ex\'ecuter \,\verb|java Hello|\,
+			\item On voit alors apparaitre \`a l'\'ecran \verb@Bonjour !@
+					\end{itemize}
+				
+            \par
+        \section{Exercices}
+				Maintenant, mettons tout \c ca en pratique.
+      
+            \par
+        \subsection{Compr\'ehension d'algorithme}
+          Pour ces exercices, nous vous demandons de comprendre des algorithmes donn\'es. 
+          
+			
+		\subparagraph{Compr\'ehension} 
+		
+                \textcolor{white}{.} \par
+            
+							  Que vont-ils afficher si \`a chaque fois les deux nombres lus au d\'epart sont successivement 2 et 3 ?
+							
+					\begin{itemize}
+				
+			\item \begin{verbatim}
+module exerciceA()
+  lire a, b
+  b ← b+2*a
+  afficher b
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{verbatim}
+module exerciceB()
+  a,b : entiers
+  lire a, b
+  a ← a+2*b
+  afficher a
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{verbatim}
+module exerciceC()
+  a,b : entiers
+  lire b, a
+  b ← b+2*a
+  afficher b
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{verbatim}
+module exerciceD()
+  a,b : entiers
+  quotient : réel
+  lire b, a
+  quotient ← a / b
+  afficher quotient
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{verbatim}
+module exerciceE()
+  a, b, c, d : entiers
+  lire c, d
+  a ← 2*c+5*d
+  b ← 2+c*3+d
+  c ← a MOD b
+  afficher a DIV c
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{verbatim}
+module exerciceF()
+  x, y : réels
+  lire x, y
+  x ← x*x 
+  x ← x*x+y*y 
+  x ← √x
+  afficher x
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{verbatim}
+module exerciceG()
+  x, y : réels
+  lire x, x
+  x ← x MOD x + (x + 1) DIV 2
+  afficher x + 3
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
+					\end{itemize}
+				
+            \par
+        \subsection{Compr\'ehension de codes Java}
+          Pour ces exercices, nous vous demandons de comprendre des codes Java donn\'es. 
+          
+			
+		\subparagraph{Compr\'ehension} 
+		
+                \textcolor{white}{.} \par
+            
+							  Que vont-ils afficher si \`a chaque fois les deux nombres lus au d\'epart sont successivement 2 et 3 ?
+							
+					\begin{itemize}
+				
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice1 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb1 + " " + nb2);
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice2 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = 2*nb1 + nb2;
+        System.out.println(nb3);
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice3 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb2 = clavier.nextInt();
+        int nb1 = clavier.nextInt();
+        int nb3 = 2*nb1 + nb2;
+        System.out.println(nb3);
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice4 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(2*nb1 + nb2);
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice5 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb2/nb1);
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice6 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb1%nb2);
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice7 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        nb1 = clavier.nextInt();
+        nb1 = nb1 * nb1;
+        System.out.println(Math.sqrt(nb1));
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
+					\end{itemize}
+				
+            \par
+        \subsection{\`A vous de jouer...}
+          Il est temps de se lancer et d'\'ecrire vos premiers modules et programmes Java correspondant. 
+          Voici quelques conseils pour vous guider dans la r\'esolution de tels probl\`emes :
+          
+					\begin{itemize}
+				
+			\item il convient d'abord de bien comprendre le probl\`eme pos\'e ; assurez-vous qu'il est parfaitement sp\'ecifi\'e ;
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans l'algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites ;
+			\item mettez en \'evidence les variables \guillemotleft  donn\'ees \guillemotright , les variables \guillemotleft  r\'esultats \guillemotright  et les variables de travail ;
+			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e.
+			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
+					\end{itemize}
+				
+            \par
+        
+        \'Ecrivez les algorithmes et codez les programmes Java correspondant qui 
+          
+					\begin{enumerate}
+				
+			\item calcule et affiche la surface d'un carr\'e en lisant la valeur de son c\^ot\'e au clavier.
+			\item calcule et affiche la surface d'un rectangle  en lisant les valeurs de sa longueur et sa largeur.
+			\item calcule et affiche la surface d'un cercle en lisant la valeur de son rayon au clavier.  (Pensez \`a aller voir la classe Math pour obtenir la valeur de PI ;))
+			\item \'etant donn\'e le prix unitaire d'un produit (hors TVA), le taux de TVA (en \%) 
+            et la quantit\'e de produit vendue \`a un client, calcule et affiche le prix total \`a payer par ce client.
+			\item r\'ealise la permutation du contenu de deux variables.
+			\item calcule la somme des chiffres d'un nombre entier de 3 chiffres. R\'eflexion : l'algorithme est-il aussi valide pour les entiers inf\'erieurs \`a 100 ?
+			\item \'etant donn\'e un moment dans la journ\'ee donn\'e par trois nombres lus, \`a savoir, heure, minute et seconde, calcule le nombre de secondes \'ecoul\'ees depuis minuit.
+			\item \'etant donn\'e un temps \'ecoul\'e dans la journ\'ee exprim\'e en secondes, calcule et affiche ce temps sous la forme de trois nombres (heure, minute et seconde). \par
+				
+            Ex : 10000 secondes donnera 2h 46'40”
+					\end{enumerate}
+				
+            \par
+        
 				\end{document}
 			

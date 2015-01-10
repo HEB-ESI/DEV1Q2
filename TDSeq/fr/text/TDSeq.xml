@@ -7,7 +7,7 @@
 		<paragraph>
 			Ce TD a pour but de 
 			<paragraph>
-			    <!--multimedia src="../image/fs.jpeg" type="jpeg" /-->
+			    <!--multimedia src="../image/**.jpeg" type="jpeg" /-->
         </paragraph>
 		</paragraph>
 	</entry>
@@ -891,7 +891,479 @@ int nombre1 = clavier. nextInt ();
         </clarify>
         </learningObject>
     </unit>
+    
+    
+    <!-- =================================================================== -->
+	<unit label="Commentaires" title="Documenter son code">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				On n’insistera jamais assez sur la nécessité de documenter un algorithme en y insérant 
+        des commentaires judicieux, clairs et suffisants !
+      </paragraph>
+    </entry>
+    
+    
+    <learningObject title="Documenter son algorithme">
+    <!-- ============================================================ -->
+    <clarify>
+      <paragraph>
+        Un commentaire est un texte placé dans l’algorithme et destiné à faciliter au maximum 
+        la compréhension d’un algorithme par le lecteur (parfois une autre personne, 
+        mais aussi souvent l’auteur qui se perd dans son propre texte lorsqu’il s’y replonge après une interruption). 
+      </paragraph>
+      <paragraph>
+        Ces commentaires (introduits par « // ») seront bien entendu ignorés par l’exécutant de l’algorithme.
+      </paragraph>
+      <paragraph>
+        Notez qu’un excès de commentaires peut être aussi nuisible qu’un trop-peu pour la 
+        compréhension d’un algorithme. 
+        Par exemple, un choix judicieux de noms de variables peut s’avérer bien plus efficace que des commentaires superflus.
+      </paragraph>
+      <paragraph>
+        Nous prendrons l’habitude de commenter chaque module en précisant ce qu’il fait.
+      </paragraph>
+    </clarify>
+    </learningObject>
+    
+    <learningObject title="Documenter son code Java">
+    <!-- ============================================================ -->
+    <clarify>
+      <paragraph>Il existe plusieurs manières d’ajouter un commentaire</paragraph>
+      <paragraph cssClass="java">
+// Commentaire sur une ligne
+</paragraph>
+      <paragraph cssClass="java">
+  /∗ Commentaire sur
+  plusieurs lignes ∗/
+</paragraph>
+    </clarify>
+    </learningObject>
+  </unit>
+  
+	<!-- =================================================================== -->
+	<unit label="Structure" title="Structure générale">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Voyons maintenant comment démarrer les algo et le code Java.
+      </paragraph>
+    </entry>
+    
+    <learningObject title="Structure générale d’un algorithme">
+    <!-- ============================================================ -->
+      <clarify>
+        <paragraph>
+          La traduction d’un algorithme en pseudo-code constituera le contenu d’un module. 
+          Un module contient donc la solution algorithmique d’un problème donné (ou d’une de ses parties).
+          Sa structure générale sera la suivante :
+        </paragraph>
+        <paragraph cssClass="code">
+module nomDuModule()
+    déclaration des variables et constantes utilisées dans le module
+    lecture des données
+    instructions utilisant les données lues
+    communication des résultats
+fin module
+				</paragraph>
+        <paragraph>
+          Remarques :
+          <list listStyle="unordered">
+            <item>Le code d’un algorithme sera toujours compris entre la première ligne, 
+            appelée « <formatted style="bold">entête</formatted> » qui commence par le mot « module » suivi du nom choisi pour l’algorithme,
+            et la ligne finale « fin module ».
+            </item> 
+            <item>Le code compris entre l’entête et la ligne finale sera toujours légèrement décalé vers la droite, 
+              c’est un premier exemple d’<formatted style="bold">indentation</formatted> indispensable pour la lisibilité d’un programme, 
+              nous y reviendrons lors de l’étude des structures alternatives et répétitives.
+            </item>
+            <item>Comme pour les variables, le <formatted style="bold">nomDuModule</formatted> 
+            devra être <formatted style="bold">approprié</formatted> au contenu ! 
+            Par exemple, sommerNombres(), additionnerFractions() plutôt que goPartez() ! 
+            </item>
+            <item>Le rôle des <formatted style="bold">parenthèses</formatted> qui suivent le nom du module sera expliqué plus tard.</item>
+            <item>Il va de soi que toutes les parties de cette structure générale ne seront pas toujours 
+            nécessaires : certains algorithmes ne nécessiteront pas de lecture de données, d’autres 
+            ne devront pas communiquer des résultats...
+            </item>
+            <item>Pour la <formatted style="bold">lisibilité</formatted>, 
+            on veillera toujours à ce qu’un module tienne sur une vingtaine de 
+            lignes (donc, en pratique, sur un écran de 40 x 80 caractères ou une page). Ceci implique 
+            que si le module devait être plus long, il faudrait le découper, comme nous le verrons 
+            plus loin.
+            </item>
+          </list>
+        </paragraph>
+      </clarify>
+    </learningObject>
+    
+    <learningObject title="Structure générale d’un programme Java">
+    <!-- ============================================================ -->
+      <clarify>
+        <paragraph>
+          Tout programme Java s'écrit dans une <formatted style="bold">classe</formatted>. 
+          <list listStyle="unordered">
+            <item>Cette classe doit porter le même nom que le fichier ;</item>
+            <item>elle commence par une majuscule ; </item>
+            <item>elle doit avoir un nom explicite.</item>
+          </list>
+        </paragraph>
+        <paragraph>
+          <formatted style="input">$cat NomClasse.java</formatted>
+        </paragraph>
+        <paragraph cssClass="java">
+public class NomClasse {
+    // insert code here
+}
+        </paragraph>
+        <paragraph title="Attention à la casse" icon="important" />
+        <paragraph>
+          Attention Java est sensible à la casse, il différencie majuscules et minuscules.
+        </paragraph>
+      </clarify>
+      <clarify>
+        <paragraph>
+          Quand un programme Java s'exécute, il démarre à la méthode principale.
+          <formatted style="bold">Méthode</formatted> est le mot Java équivalent de module en algo.
+        </paragraph>
+        <paragraph>
+          La méthode principale s'appelle <formatted style="input">public static void main(String [] args) </formatted> et s'insère dans la classe de la façon suivante :
+        </paragraph>
+        <paragraph cssClass="java">
+public class NomClasse {
+    public static void main(String [] args) {
+        // insert code here
+    }
+}
+        </paragraph>
+        <paragraph>
+          On peut aussi y ajouter une lecture au clavier par exemple :
+        </paragraph>
+        <paragraph cssClass="java">
+import java.util.Scanner;
+public class NomClasse {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb = clavier.nextInt();
+        System.out.println("Le nombre lu vaut" + nb);
+    }
+}
+        </paragraph>
+      </clarify>
+    </learningObject>
+  </unit>
+  
+  <!-- =================================================================== -->
+	<unit label="CompilerExécuter" title="Compiler et exécuter un programme Java">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Nous avons vu maintenant comment écrire un programme en Java. Il faut maintenant voir comment le "lancer".
+      </paragraph>
+    </entry>
+    
+    <learningObject title="Java est un langage compilé puis interprété">
+    <!-- ============================================================ -->
+      <clarify>
+        <paragraph>
+			    <multimedia src="../image/java-jvm-jvm.png" type="png" />
+        </paragraph>
+        
+        <paragraph>
+          Prenons un exemple (fichier<formatted style="code"> Hello . java</formatted>)
+          </paragraph>
+          
+        <paragraph cssClass="java">
+// Mon premier programme
+public class Hello {
+    public static void main(String [] args) {
+        System.out. println ("Bonjour !");
+    }
+}
+        </paragraph>
+        <paragraph>
+        <list listStyle="unordered">
+            <item>Compilons-le <formatted style="input">javac Hello.java</formatted></item>
+            <item>On obtient la version compilée, le bytecode (<formatted style="code">Hello . class</formatted> )</item>
+            <item>On peut l’exécuter <formatted style="input">java Hello</formatted></item>
+            <item>On voit alors apparaitre à l'écran <formatted style="code">Bonjour !</formatted></item>
+          </list>
+        </paragraph>
+      </clarify>
+    </learningObject>
+  </unit>
+  
+  
+	<!-- =================================================================== -->
+	<unit label="Exercices" title="Exercices">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Maintenant, mettons tout ça en pratique.
+      </paragraph>
+    </entry>
+    
+    <learningObject title="Compréhension d’algorithme">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph>
+          Pour ces exercices, nous vous demandons de comprendre des algorithmes donnés. 
+          <selfCheck title="Compréhension" shuffle="no">
+						<fillInBlanks>
+							<question>
+							  Que vont-ils afficher si à chaque fois les deux nombres lus au départ sont successivement 2 et 3 ?
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										<paragraph cssClass="code">
+module exerciceA()
+  lire a, b
+  b ← b+2*a
+  afficher b
+fin module
+				</paragraph>
+				            <gap answers="7">7</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="code">
+module exerciceB()
+  a,b : entiers
+  lire a, b
+  a ← a+2*b
+  afficher a
+fin module
+				</paragraph>
+				            <gap answers="8">8</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="code">
+module exerciceC()
+  a,b : entiers
+  lire b, a
+  b ← b+2*a
+  afficher b
+fin module
+				</paragraph>
+				            <gap answers="8">8</gap> 
+									</item>
+									<item>
+										<paragraph cssClass="code">
+module exerciceD()
+  a,b : entiers
+  quotient : réel
+  lire b, a
+  quotient ← a / b
+  afficher quotient
+fin module
+				</paragraph>
+				            <gap answers="1.5">1.5</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="code">
+module exerciceE()
+  a, b, c, d : entiers
+  lire c, d
+  a ← 2*c+5*d
+  b ← 2+c*3+d
+  c ← a MOD b
+  afficher a DIV c
+fin module
+				</paragraph>
+				            <gap answers="2">2</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="code">
+module exerciceF()
+  x, y : réels
+  lire x, y
+  x ← x*x 
+  x ← x*x+y*y 
+  x ← √x
+  afficher x
+fin module
+				</paragraph>
+				            <gap answers="5">5</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="code">
+module exerciceG()
+  x, y : réels
+  lire x, x
+  x ← x MOD x + (x + 1) DIV 2
+  afficher x + 3
+fin module
+				</paragraph>
+				            <gap answers="5">5</gap> 
+									</item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+        </paragraph>
+      </act>
+    </learningObject>
       
+    <learningObject title="Compréhension de codes Java">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph>
+          Pour ces exercices, nous vous demandons de comprendre des codes Java donnés. 
+          <selfCheck title="Compréhension" shuffle="no">
+						<fillInBlanks>
+							<question>
+							  Que vont-ils afficher si à chaque fois les deux nombres lus au départ sont successivement 2 et 3 ?
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice1 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb1 + " " + nb2);
+    }
+}
+        </paragraph>
+				            <gap answers="2 3">2 3</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice2 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = 2*nb1 + nb2;
+        System.out.println(nb3);
+    }
+}
+        </paragraph>
+				            <gap answers="7">7</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice3 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb2 = clavier.nextInt();
+        int nb1 = clavier.nextInt();
+        int nb3 = 2*nb1 + nb2;
+        System.out.println(nb3);
+    }
+}
+        </paragraph>
+				            <gap answers="8">8</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice4 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(2*nb1 + nb2);
+    }
+}
+        </paragraph>
+				            <gap answers="7">7</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice5 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb2/nb1);
+    }
+}
+        </paragraph>
+				            <gap answers="1">1</gap> 
+									</item> 
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice6 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb1%nb2);
+    }
+}
+        </paragraph>
+				            <gap answers="2">2</gap> 
+									</item> 
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice7 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        nb1 = clavier.nextInt();
+        nb1 = nb1 * nb1;
+        System.out.println(Math.sqrt(nb1));
+    }
+}
+        </paragraph>
+				            <gap answers="3">3</gap> 
+									</item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+        </paragraph>
+      </act>
+    </learningObject>
+    
+    <learningObject title="À vous de jouer...">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph>
+          Il est temps de se lancer et d’écrire vos premiers modules et programmes Java correspondant. 
+          Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
+          <list listStyle="unordered">
+            <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites ;</item>
+            <item>mettez en évidence les variables « données », les variables « résultats » et les variables de travail ;</item>
+            <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé.</item>
+            <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+          </list>
+        </paragraph>
+        
+        <paragraph>
+        Écrivez les algorithmes et codez les programmes Java correspondant qui 
+          <list listStyle="ordered">
+            <item>calcule et affiche la surface d’un carré en lisant la valeur de son côté au clavier.</item>
+            <item>calcule et affiche la surface d’un rectangle  en lisant les valeurs de sa longueur et sa largeur.</item>
+            <item>calcule et affiche la surface d’un cercle en lisant la valeur de son rayon au clavier.  (Pensez à aller voir la classe Math pour obtenir la valeur de PI ;))</item>
+            <item>étant donné le prix unitaire d’un produit (hors TVA), le taux de TVA (en %) 
+            et la quantité de produit vendue à un client, calcule et affiche le prix total à payer par ce client.</item>
+            <item>réalise la permutation du contenu de deux variables.</item>
+            <item>calcule la somme des chiffres d’un nombre entier de 3 chiffres. Réflexion : l’algorithme est-il aussi valide pour les entiers inférieurs à 100 ?</item>
+            <item>étant donné un moment dans la journée donné par trois nombres lus, à savoir, heure, minute et seconde, calcule le nombre de secondes écoulées depuis minuit.</item>
+            <item>étant donné un temps écoulé dans la journée exprimé en secondes, calcule et affiche ce temps sous la forme de trois nombres (heure, minute et seconde). <newLine/>
+            Ex : 10000 secondes donnera 2h 46’40”</item>
+          </list>
+        </paragraph>
+      </act>
+    </learningObject>
+  </unit>
 	
 	<!--metadata>
 		<organisation level="1ère année" module="Laboratoires Java">
