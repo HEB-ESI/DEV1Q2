@@ -1,0 +1,1095 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="InitSeq" title="TD Séquentiel - Rappels de base">
+	
+	<entry>
+		<paragraph>
+			<paragraph>
+			Cet exercice a pour but de vérifier que vous avez fixé les bases du LDA et de la programmation Java.
+		</paragraph>
+			<paragraph>
+			    <!--multimedia src="../image/**.jpeg" type="jpeg" /-->
+        </paragraph>
+		</paragraph>
+	</entry>
+
+		
+	<!-- =================================================================== -->
+	<unit label="VariablesEtTypes" title="Variables et types">
+	<!-- =================================================================== -->
+        <learningObject title="Les variables et les types">
+			<!-- ================================================ -->
+        <act>
+				<selfCheck title="Le type des données" shuffle="yes">
+						<fillInBlanks>
+							<question> 
+								Comment déclarer en algorithmique :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>un montant d'un ticket de caisse ? <gap answers="">montant : réel</gap></item>  
+									<item>une cote sur le bulletin (pas de demi-point autorisé) ? <gap answers="">cote : entier</gap></item>  
+									<item>le titre d'un film ?<gap answers="">titre : chaine</gap></item>
+									<item>l'initiale de votre nom ?<gap answers="">nom : caractère</gap></item>
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+				</act>
+				
+				<act>
+				<selfCheck title="Le type des données" shuffle="yes">
+						<fillInBlanks>
+							<question> 
+								Comment déclarer en Java :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>un montant d'un ticket de caisse ? <gap answers="">double montant;</gap></item>  
+									<item>une cote sur le bulletin (pas de demi-point autorisé) ? <gap answers="">int cote;</gap></item>  
+									<item>le titre d'un film ?<gap answers="">String titre;</gap></item>
+									<item>l'initiale de votre nom ?<gap answers="">char nom;</gap></item>
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+				</act>
+				
+				<act>
+				  <selfCheck title="Types Java" shuffle="yes">
+            <fillInBlanks>
+              <question>
+                <paragraph>
+                  Donnez l'équivalent Java des types vus en algorithmique. 
+                </paragraph>
+              </question>
+              <gapText> 
+                entier 		<gap answers="int">int</gap><newLine/>
+                réel   		<gap answers="double">double</gap> <newLine/>
+                chaine 		<gap answers="String">String</gap> <newLine/>
+                caractère	<gap answers="char">char</gap> <newLine/>
+                booléen     <gap answers="boolean">boolean</gap> <newLine/>
+              </gapText>
+              <solution></solution>
+            </fillInBlanks>
+          </selfCheck>
+        </act>
+        
+        <act>
+				<selfCheck title="Conventions de nom" shuffle="yes">
+					<multipleChoice>
+						<question>Cochez les noms qui respectent les conventions (sachant que nous travaillons dans le cadre de la tva)</question>
+						<answer feedback="Pour une variable, le nom doit être tout en minuscules sauf les débuts de noms composés qui sont en majuscule." correct="no"> 
+							<formatted style="code">double Taxe;</formatted>  
+						</answer>
+		            <answer feedback="Pour une constante, le nom doit être tout en majuscules et utiliser &quot;_&quot; pour séparer les mot." correct="yes"> 
+		               <formatted style="java">final double TVA;</formatted>
+		            </answer>
+		            <answer feedback="Dans tous les cas : le nom doit être explicite (sauf abréviations courantes). Ici, taxeValeurAjoutée est accepté quoique un peu long et tva est tellement courant..." correct="yes"> 
+		               <formatted style="code">double taxeValeurAjoutée;</formatted>  
+		            </answer>
+		            <answer feedback="Pour une constante, le nom doit être tout en majuscules et utiliser &quot;_&quot; pour séparer les mot." correct="no"> 
+		               <formatted style="code">final double TAUXTVA;</formatted> 
+		            </answer>
+		            <answer feedback="Pour une constante, le nom doit être tout en majuscules et utiliser &quot;_&quot; pour séparer les mot." correct="yes"> 
+		               <formatted style="java">final double TAUX_TVA</formatted> 
+		            </answer>
+		            <answer feedback="Dans tous les cas : le nom doit être explicite (sauf abréviations courantes)." correct="no"> 
+		               <formatted style="code">double t;</formatted>
+		            </answer>
+					</multipleChoice>
+				</selfCheck>
+        
+				<paragraph title="final"/>
+				<paragraph>
+					Soit le code :
+				</paragraph>
+				<paragraph cssClass="java">
+	public class Final {  
+		public static void main (String[] args) {
+			final double tva = 21.5; 
+			System.out.println ((1000/100)*tva);  
+			tva = 19;
+		}
+	}			</paragraph>
+				<paragraph>
+					qui, à la compilation, génère le message d'erreur 
+				</paragraph>
+				<paragraph cssClass="code">
+	Final.java:5:: cannot assign a value to final variable tva</paragraph>
+				<selfCheck shuffle="yes" >
+					<multipleChoice>
+						<question>ce message veut dire que</question>
+						<answer feedback="Non, ce  n'est pas ça !" correct="no">le nom tva ne respecte pas la convention de nom</answer>
+						<answer feedback="Non, ce  n'est pas ça !" correct="no">final n'est pas un mot reconnu</answer>
+						<answer feedback="En effet, une variable déclarée final est constante et ne peut être affectée qu'une seule fois !" correct="yes">on ne peut assigner une deuxième fois une valeur à une variable final</answer>
+						<answer feedback="Non, ce  n'est pas ça !" correct="no">on ne peut assigner une valeur entière à tva </answer>
+					</multipleChoice>
+				</selfCheck>  
+			</act> 
+				
+				<paragraph>Si vous n'avez pas répondu correctement à toutes les questions, au nom de variable près,
+				<link uri="../../../TDSeq/fr/html/unit_VariablesEtTypes.html">révisez ici</link></paragraph>
+          
+      </learningObject>
+      
+      <learningObject title="Java est un langage fortement typé.">
+			<!-- ================================================ -->
+			  <act>
+				<selfCheck title="Le type des données" shuffle="no">
+						<fillInBlanks>
+							<question> 
+								Toute donnée a un type. Il existe 3 grands types de données. Lesquels ?
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item><gap answers="primitifs prédéfinis,références prédéfinis,références définis par le programmeurs">primitifs prédéfinis</gap></item>  
+									<item><gap answers="primitifs prédéfinis,références prédéfinis,références définis par le programmeurs">références prédéfinis</gap></item>  
+									<item><gap answers="primitifs prédéfinis,références prédéfinis,références définis par le programmeurs">références définis par le programmeur</gap></item>
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+					  <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+				    <link uri="../../../TDSeq/fr/html/VariablesEtTypes_learningObject3.html">révisez ici</link></paragraph>
+				</act>
+				
+				<act>
+				<selfCheck title="Les types primitifs numériques entiers" shuffle="no">
+						<fillInBlanks>
+							<question> 
+								Donnez les types primitifs numériques entiers dans l'ordre (de celui quiprend le moins de place en mémoire à celui qui en prend le plus) :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item><gap answers="byte">byte</gap></item>  
+									<item><gap answers="short,char">short</gap></item>  
+									<item><gap answers="short,char">char</gap></item>  
+									<item><gap answers="int">int</gap></item>  
+									<item><gap answers="long">long</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+					  <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+				    <link uri="../../../TDSeq/fr/html/VariablesEtTypes_learningObject3.html">révisez ici</link></paragraph>
+				</act>
+				
+				<act>
+				<selfCheck title="Les types primitifs numériques flottants" shuffle="no">
+						<fillInBlanks>
+							<question> 
+								Donnez les types primitifs numériques flottants dans l'ordre (de celui quiprend le moins de place en mémoire à celui qui en prend le plus) :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item><gap answers="float">float</gap></item>  
+									<item><gap answers="double">double</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+					  <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+				    <link uri="../../../TDSeq/fr/html/VariablesEtTypes_learningObject3.html">révisez ici</link></paragraph>
+				</act>
+				
+				
+				<act>
+				<selfCheck title="Le type primitif non numérique" shuffle="no">
+						<fillInBlanks>
+							<question> 
+								Donnez le type primitif non numériques :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item><gap answers="boolean">boolean</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+          <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+          <link uri="../../../TDSeq/fr/html/VariablesEtTypes_learningObject3.html">révisez ici</link></paragraph>
+				</act>
+        
+    </learningObject>
+    
+  </unit>
+	<!-- =================================================================== -->
+	<unit label="OpérateursEtExpressions" title="Opérateurs et expressions">
+	<!-- =================================================================== -->
+    
+			<learningObject title="Opérateurs et expressions">
+			<!-- ============================================================ -->
+			  <act>
+          <selfCheck title="Opérateurs Java" shuffle="yes">
+            <fillInBlanks>
+              <question>
+                <paragraph>
+                  Donnez l'équivalent Java des opérateurs vu en algorithmique.
+                </paragraph>
+              </question>
+              <gapText> 
+                *  <gap answers="*">*</gap> <newLine/>
+                /  <gap answers="/">/</gap> entre 2 réels <newLine/>
+                DIV  <gap answers="/">/</gap> entre 2 entiers <newLine/>
+                MOD  <gap answers="%">%</gap> <newLine/>
+              </gapText>
+              <solution></solution>
+            </fillInBlanks>
+          </selfCheck>
+        </act>
+        
+        <act>
+          <selfCheck title="Que vaut ?" shuffle="yes">
+            <fillInBlanks>
+              <question>Que vaut l'expression java</question>
+              <gapText>
+                5DIV3 : <gap answers="">1</gap>
+              </gapText>
+              <solution>Il s'agit de la division entière.</solution>
+            </fillInBlanks>
+				  </selfCheck>
+        </act>
+        
+        <act>
+          <selfCheck title="Que vaut ?" shuffle="yes">
+            <fillInBlanks>
+              <question>Que vaut l'expression java</question>
+              <gapText>
+                5MOD3 : <gap answers="">2</gap>
+              </gapText>
+              <solution>Il s'agit du reste de la division entière.</solution>
+            </fillInBlanks>
+				  </selfCheck>
+        </act>
+        
+        <act>
+          <selfCheck title="Que vaut ?" shuffle="yes">
+            <fillInBlanks>
+              <question>Que vaut l'expression java</question>
+              <gapText>
+                11/2 : <gap answers="">5</gap>
+              </gapText>
+              <solution>Il s'agit bien de la division entière car les 2 opérandes sont entiers.</solution>
+            </fillInBlanks>
+				  </selfCheck>
+        </act>
+        
+        <act>
+          <selfCheck title="Que vaut ?" shuffle="yes">
+            <fillInBlanks>
+              <question>Que vaut l'expression java</question>
+              <gapText>
+                11.0/2 : <gap answers="">5.5</gap>
+              </gapText>
+              <solution>Il s'agit bien de la division réelle car un des 2 opérandes est réel.</solution>
+            </fillInBlanks>
+				  </selfCheck>
+        </act>
+        
+        <act>
+          <selfCheck title="Que vaut ?" shuffle="yes">
+            <fillInBlanks>
+              <question>Que vaut l'expression java</question>
+              <gapText>
+                11%3 : <gap answers="">2</gap>
+              </gapText>
+              <solution>Il s'agitdu reste de la division entière.</solution>
+            </fillInBlanks>
+				  </selfCheck>
+				  <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+          <link uri="../../../TDSeq/fr/html/unit_OpérateursEtExpressions.html">révisez ici</link></paragraph>
+        </act>
+        
+        <act>
+          <selfCheck title="Comment calculer ?" shuffle="yes">
+            <fillInBlanks>
+              <question>Comment calculer en Java</question>
+              <gapText>
+                la racine carrée d'une variable nommée nb ? : <gap answers="">Math.sqrt(nb);</gap>
+              </gapText>
+              <solution></solution>
+            </fillInBlanks>
+				  </selfCheck>
+				  <paragraph>Si vous n'avez pas répondu correctement à la question, 
+          <link uri="../../../TDSeq/fr/html/OpérateursEtExpressions_learningObject6.html">révisez ici</link></paragraph>
+        </act>
+      </learningObject>
+  </unit>
+  
+  
+	<!-- =================================================================== -->
+	<unit label="Affectation" title="L’affectation d’une valeur à une variable">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Cette opération est probablement l’opération la plus importante. En effet, une variable ne
+        prend son sens réel que si elle reçoit à un moment donné une valeur. Il y a deux moyens de
+        donner une valeur à une variable.
+      </paragraph>
+    </entry>
+    
+			<learningObject title="Affectation interne en algo">
+			<!-- ============================================================ -->
+			  
+        <act>
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>Les exemples d’affectation sont-ils corrects ?
+						</question>
+						<answer feedback="" correct="yes"><paragraph cssClass="code">
+
+somme, nombre1, nombre2 : entiers 
+nombre1 ← 3 
+nombre2 ← 5 
+somme ← nombre1 + nombre2</paragraph>
+            </answer>
+						<answer feedback="" correct="yes"><paragraph cssClass="code">
+
+denRes, den1, den2 : réels 
+den1 ← 3.5 
+den2 ← 1 
+denRes ← den1 * den2</paragraph>
+            </answer>
+						<answer feedback="" correct="no"><paragraph cssClass="code">
+						
+cpt : entier 
+cpt ← cpt + 1</paragraph>
+            </answer>
+						<answer feedback="" correct="yes"><paragraph cssClass="code">
+						
+delta, a, b, c : réels 
+a ← 4 
+b ← 3/2 
+c ← 7/4 
+delta ← b**2 – 4*a*c</paragraph>
+						</answer>
+						<answer feedback="" correct="yes"><paragraph cssClass="code">
+						
+maChaine : chaine 
+maChaine ← "Bonjour"</paragraph>
+						</answer>
+						<answer feedback="" correct="yes"><paragraph cssClass="code">
+						
+a, b : entier 
+test : booléen 
+a ← 4 
+b ← 3 
+test ← a = b</paragraph>
+						</answer>
+						<answer feedback="" correct="no"><paragraph cssClass="code">
+						
+somme : entier 
+somme + 1 ← 3</paragraph>
+						</answer>
+						<answer feedback="" correct="no"><paragraph cssClass="code">
+						
+somme, n : entier 
+n ← 4 
+somme ← 3n</paragraph>
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+        <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+        <link uri="../../../TDSeq/fr/html/Affectation_learningObject1.html">révisez ici</link></paragraph>
+				</act>
+      </learningObject>
+      
+      <learningObject title="Affectation interne en Java">
+			<!-- ============================================================ -->
+        
+        <act>
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>Les exemples d’affectation sont-ils corrects ?
+						</question>
+						<answer feedback="" correct="yes"><paragraph cssClass="java">
+  
+int somme;
+int nombre1;
+int nombre 2;
+nombre1 = 3;
+nombre2 = -8;
+somme = nombre1 + nombre2;</paragraph>
+            </answer>
+						<answer feedback="" correct="yes"><paragraph cssClass="java">
+
+double denRes;
+double den1;
+double den2;
+den1 = 3.5;
+den2 = 1;
+denRes = den1 * den2;</paragraph>
+            </answer>
+						<answer feedback="" correct="no"><paragraph cssClass="java">
+						
+int cpt; 
+cpt = cpt + 1;</paragraph>
+            </answer>
+						<answer feedback="" correct="yes"><paragraph cssClass="java">
+						
+double delta; 
+double a; 
+double b; 
+double c; 
+a = 4; 
+b = 3.0/2; 
+c = 7.0/4; 
+delta = b*b - 4*a*c;</paragraph>
+						</answer>
+						<answer feedback="" correct="yes"><paragraph cssClass="java">
+						
+String maChaine; 
+maChaine = "Bonjour";</paragraph>
+						</answer>
+						<answer feedback="" correct="no"><paragraph cssClass="java">
+						
+int a; 
+int b; 
+boolean test;
+a = 4;
+b = 3;
+test = a = b;</paragraph>
+						</answer>
+						<answer feedback="" correct="no"><paragraph cssClass="java">
+						
+int somme; 
+somme + 1 = 3;</paragraph>
+						</answer>
+						<answer feedback="" correct="no"><paragraph cssClass="java">
+						
+int somme;
+int n;
+n = 4;
+somme = 3n;</paragraph>
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+        <link uri="../../../TDSeq/fr/html/Affectation_learningObject2.html">révisez ici</link></paragraph>
+				</act>
+      </learningObject>
+      
+			<learningObject title="Affectation externe en algo">
+			<!-- ============================================================ -->
+			  
+        <act>
+				<selfCheck title="" shuffle="yes">
+					<multipleChoice>
+						<question>Les exemples d’affectation sont-ils corrects ?
+						</question>
+						<answer feedback="" correct="yes">nombre1, nombre2 : entiers <newLine/>
+						lire nombre1, nombre2</answer>
+						<answer feedback="" correct="yes">nombre1 : entier <newLine/>
+						lire nombre1</answer>
+						<answer feedback="" correct="yes">maChaine : chaine <newLine/>
+						lire maChaine</answer>
+						<answer feedback="" correct="no">maChaine : chaine <newLine/>
+						lire "Entrez une chaine", maChaine</answer>
+						<answer feedback="" correct="no">lire nombre1 + nombre2</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+        <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+        <link uri="../../../TDSeq/fr/html/Affectation_learningObject3.html">révisez ici</link></paragraph>
+				</act>
+        </learningObject>
+        
+        
+			<learningObject title="Affectation externe en Java">
+			<!-- ============================================================ -->
+			  <act>
+        
+				<selfCheck title="Sélection multiple" shuffle="no">
+					<multipleChoice>
+						<question>Quels morceaux de code, parmi les suivants, NE sont PAS corrects ? Pourquoi ?
+						</question>
+						<answer feedback="On a besoin de la ligne d'import" correct="yes"> 
+							code 1
+							<paragraph cssClass="java">
+    public class Exercice { 
+        public static void main(String[] args) { 
+            Scanner clavier = new Scanner(System.in); 
+            int nombre1; 
+            nombre1 = clavier.nextInt();
+        } 
+    }						</paragraph>
+						</answer>          
+            
+						<answer feedback="En effet, ce code est tout à fait correct" correct="no"> 
+							code 2
+							<paragraph cssClass="java">
+    import java.util.Scanner;
+    public class Exercice {  
+        public static void main(String[] args) {
+            Scanner clavier = new Scanner(System.in);
+            int nombre1;
+            nombre1 = clavier.nextInt();
+        }  
+    }						</paragraph>
+						</answer>
+            
+						<answer feedback="En effet, ce code est tout à fait correct" correct="no"> 
+							code 3
+							<paragraph cssClass="java">
+    import java.util.Scanner;
+    public class Exercice {
+        public static void main(String[] args ) {
+            Scanner clavier = new Scanner(System.in); 
+            double nombre1;  
+            nombre1 = clavier.nextDouble();  
+        }
+    }						</paragraph>
+						</answer>
+            
+						<answer feedback="On a besoin de la déclaration et de la création d'un objet Scanner" correct="yes"> 
+							code 4
+							<paragraph cssClass="java">
+    import java.util.Scanner;
+    public class Exercice { 
+        public static void main(String[] args) {
+            int nombre1;  
+            nombre1 = clavier.nextInt(); 
+        }
+    }						</paragraph>
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+        
+				<selfCheck title="Méthodes de Scanner" shuffle="yes">
+					<fillInBlanks>
+						<question>Complétez les méthodes suivantes afin de permettre une lecture au clavier adéquate.</question>
+						<gapText>
+							<paragraph cssClass="javawithblanks">
+import java.util.Scanner;
+public class ReadingExercice {
+    public static void main (String[] args) {  
+        Scanner keyboard = new Scanner(System.in);  
+        int integerNb = keyboard.<gap answers="">nextInt()</gap>;
+        double realNb = keyboard.<gap answers="">nextDouble()</gap> ;
+        boolean ok = keyboard.<gap answers="">nextBoolean()</gap> ;
+        String string1 = keyboard.<gap answers="">next()</gap> ; // We read a word
+        String string2 = keyboard.<gap answers="">nextLine()</gap> ; // We read a line 
+        char aCharacter = keyboard.<gap answers="">next().charAt()</gap> ;
+    }
+}							</paragraph>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+        
+        <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+        <link uri="../../../TDSeq/fr/html/Affectation_learningObject4.html">révisez ici</link></paragraph>
+			  </act>
+        </learningObject>
+        
+        <learningObject title="Communication des résultats en algo">
+			<!-- ============================================================ -->
+			  
+        <act>
+				<selfCheck title=""  shuffle="yes">
+					<multipleChoice>
+						<question>Les exemples de communication des résultats sont-ils corrects ?
+						</question>
+						<answer feedback="" correct="yes"><paragraph cssClass="code">
+
+somme, nombre1, nombre2 : entiers 
+nombre1 ← 3 
+nombre2 ← 5 
+somme ← nombre1 + nombre2
+afficher somme</paragraph>
+            </answer>
+						<answer feedback="" correct="yes"><paragraph cssClass="code">
+
+denRes, den1, den2 : réels 
+den1 ← 3.5 
+den2 ← 1 
+denRes ← den1 * den2
+afficher den1, "/", den2, " ", denRes </paragraph>
+            </answer>
+						<answer feedback="" correct="no"><paragraph cssClass="code">
+						
+cpt : entier 
+afficher cpt</paragraph>
+            </answer>
+						<answer feedback="" correct="yes"><paragraph cssClass="code">
+						
+a, b, c : réels 
+a ← 4 
+b ← 3/2 
+c ← 7/4 
+afficher b**2 – 4*a*c</paragraph>
+						</answer>
+						<answer feedback="" correct="yes"><paragraph cssClass="code">
+						
+afficher "Bonjour"</paragraph>
+						</answer>
+						<answer feedback="" correct="yes"><paragraph cssClass="code">
+						
+a, b : entier 
+test : booléen 
+a ← 4 
+b ← 3 
+afficher a = b</paragraph>
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+        <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+        <link uri="../../../TDSeq/fr/html/Affectation_learningObject5.html">révisez ici</link></paragraph>
+				</act>
+        </learningObject>
+        
+        <learningObject title="Communication des résultats en Java">
+			<!-- ============================================================ -->
+			  <act>
+        
+				<selfCheck title="Sélection multiple" shuffle="no">
+					<multipleChoice>
+						<question>Quels morceaux de code, parmi les suivants, sont corrects ? Pourquoi ?
+						</question>
+						<answer feedback="" correct="yes"> 
+							code 1
+							<paragraph cssClass="java">
+    import java.util.Scanner;
+    public class Exercice { 
+        public static void main(String[] args) { 
+            Scanner clavier = new Scanner(System.in); 
+            int nombre1; 
+            nombre1 = clavier.nextInt();
+            System.out.println(nombre1);
+        } 
+    }						</paragraph>
+						</answer>          
+            
+						<answer feedback="" correct="yes"> 
+							code 2
+							<paragraph cssClass="java">
+    import java.util.Scanner;
+    public class Exercice {  
+        public static void main(String[] args) {
+            Scanner clavier = new Scanner(System.in);
+            int nombre1;
+            int nombre2;
+            nombre1 = clavier.nextInt();
+            nombre2 = clavier.nextInt();
+            System.out.println(nombre1 + nombre2);
+        }  
+    }						</paragraph>
+						</answer>
+            
+						<answer feedback="" correct="yes"> 
+							code 3
+							<paragraph cssClass="java">
+    import java.util.Scanner;
+    public class Exercice {  
+        public static void main(String[] args) {
+            Scanner clavier = new Scanner(System.in);
+            int nombre1;
+            int nombre2;
+            nombre1 = clavier.nextInt();
+            nombre2 = clavier.nextInt();
+            System.out.println(nombre1 + " " + nombre2);
+        }  
+    }						</paragraph>
+						</answer>
+						
+						<answer feedback="Le séparateur dans la méthode println n'est pas la virgule mais le +" correct="no"> 
+							code 4
+							<paragraph cssClass="java">
+    import java.util.Scanner;
+    public class Exercice {  
+        public static void main(String[] args) {
+            Scanner clavier = new Scanner(System.in);
+            int nombre1;
+            int nombre2;
+            nombre1 = clavier.nextInt();
+            nombre2 = clavier.nextInt();
+            System.out.println(nombre1, nombre2);
+        }  
+    }						</paragraph>
+						</answer> 
+						
+					</multipleChoice>
+				</selfCheck>
+        
+				<selfCheck title="Méthodes de Scanner" shuffle="yes">
+					<fillInBlanks>
+						<question>Complétez les méthodes suivantes afin de permettre une lecture au clavier adéquate.</question>
+						<gapText>
+							<paragraph cssClass="javawithblanks">
+import java.util.Scanner;
+public class ReadingExercice {
+    public static void main (String[] args) {  
+        Scanner keyboard = new Scanner(System.in);  
+        int integerNb = keyboard.<gap answers="">nextInt()</gap>;
+        double realNb = keyboard.<gap answers="">nextDouble()</gap> ;
+        boolean ok = keyboard.<gap answers="">nextBoolean()</gap> ;
+        String string1 = keyboard.<gap answers="">next()</gap> ; // We read a word
+        String string2 = keyboard.<gap answers="">nextLine()</gap> ; // We read a line 
+        char aCharacter = keyboard.<gap answers="">next().charAt()</gap> ;
+    }
+}							</paragraph>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+        
+        <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+        <link uri="../../../TDSeq/fr/html/Affectation_learningObject6.html">révisez ici</link></paragraph>
+			  </act>
+        </learningObject>
+    </unit>
+    
+  
+	<!-- =================================================================== -->
+	<unit label="Structure" title="Structure générale">
+	<!-- =================================================================== -->
+    
+    <learningObject title="Structure générale d’un algorithme">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph>
+          Pour ces exercices, nous vous demandons de comprendre des algorithmes donnés. 
+          <selfCheck title="Compréhension" shuffle="no">
+						<fillInBlanks>
+							<question>
+							  Que vont-ils afficher si à chaque fois les deux nombres lus au départ sont successivement 2 et 3 ?
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										<paragraph cssClass="code">
+module exerciceA()
+  a,b : entiers
+  quotient : réel
+  lire b, a
+  quotient ← a / b
+  afficher quotient
+fin module
+				</paragraph>
+				            <gap answers="1.5">1.5</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="code">
+module exerciceB()
+  a, b, c, d : entiers
+  lire c, d
+  a ← 2*c+5*d
+  b ← 2+c*3+d
+  c ← a MOD b
+  afficher a DIV c
+fin module
+				</paragraph>
+				            <gap answers="2">2</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="code">
+module exerciceC()
+  x, y : réels
+  lire x, y
+  x ← x*x 
+  x ← x*x+y*y 
+  x ← √x
+  afficher x
+fin module
+				</paragraph>
+				            <gap answers="5">5</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="code">
+module exerciceD()
+  x, y : réels
+  lire x, x
+  x ← x MOD x + (x + 1) DIV 2
+  afficher x + 3
+fin module
+				</paragraph>
+				            <gap answers="5">5</gap> 
+									</item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+        </paragraph>
+      <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+        <link uri="../../../TDSeq/fr/html/Structure_learningObject1.html">révisez ici</link></paragraph>
+      </act>
+    </learningObject>
+    
+    <learningObject title="Structure générale d’un programme Java, comment le compiler et l'exécuter.">
+    <!-- ================================================================================= -->
+      <act>
+				<selfCheck title="Structure d'un programme" shuffle="no">
+					<multipleChoice>
+						<question>Quelles structures générales d'un programme sont correctes 
+							(c-à-d qu'il doit compiler et respecter les conventions) parmi les suivantes ?
+						</question>
+						<answer feedback="Java est sensible à la casse, il différencie donc majuscule et minuscule." correct="no"> 
+							code 1
+							<paragraph cssClass="code">
+    public class exercice {
+        // put methods here  
+    }</paragraph>
+						</answer>
+						<answer feedback="les mots clé public et class doivent être en minuscule" correct="no"> 
+							code 2
+							<paragraph cssClass="code">
+    public CLASS Exercice {
+        // put methods here  
+    }</paragraph>
+						</answer>
+						<answer feedback="le nom de la classe commence par une majuscule" correct="yes">
+							code 3 
+							<paragraph cssClass="code">
+    public class Exercice {  
+        // put methods here  
+    }</paragraph>
+						</answer>
+						<answer feedback="le nom de la classe commence par une majuscule" correct="yes"> 
+							code 4 
+							<paragraph cssClass="code">
+    public class MonExercice {  
+        // put methods here  
+    }</paragraph>
+						</answer>
+						<answer feedback="" correct="no"> 
+							code 5 
+							<paragraph cssClass="code">
+    PUBLIC CLASS EXERCICE { 
+        // put methods here  
+    }</paragraph>
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+      </act>
+      <act>
+				<selfCheck title="Nom d'un programme" shuffle="yes">
+					<fillInBlanks>
+						<question>Quels noms doivent avoir les fichiers dans lesquels sont placés les programmes suivants :</question>
+						<gapText> 
+							<paragraph cssClass="java">
+    public class Exercice {  
+        // Methods    
+    }						</paragraph>
+							<gap answers="Exercice.java">Exercice.java</gap> 
+							<paragraph cssClass="java">
+    public class SommeChiffres {
+        // Methods    
+    }						</paragraph>
+							<gap answers="SommeChiffres.java">SommeChiffres.java</gap> 
+							<paragraph cssClass="java">
+    public class sommechiffres {    
+        // Methods    
+    }						</paragraph>
+							<gap answers="sommechiffres.java">sommechiffres.java</gap> 
+						</gapText>
+						<solution>
+							Le nom du fichier est le même nom que la classe avec l'extension ".java"
+							Attention, pour le dernier exemple, nous avons volontairement écrit le nom de la classe sans majuscule... 
+							par convention, ce n'est pas correct!!!
+						</solution>
+					</fillInBlanks>
+				</selfCheck>
+      </act>
+      <act>
+				<selfCheck title="Compiler/exécuter" shuffle="no">
+					<fillInBlanks>
+						<question>  </question>
+						<gapText> 
+							Quelle commande permet de compiler le fichier nommé <formatted style="code">SommeChiffres.java</formatted> ?  
+							<newLine/>
+							<gap answers="javac">javac</gap> 
+							<gap answers="SommeChiffre.java">SommeChiffres.java</gap> 
+							<newLine/>
+							Quelle commande permet d'exécuter ce programme ?  
+							<newLine/>
+							<gap answers="java">java</gap> 
+							<gap answers="SommeChiffre">SommeChiffres</gap> 
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+      </act>
+      <act>
+				<selfCheck title="Méthode principale" shuffle="no">
+					<fillInBlanks>
+						<question>
+							<paragraph>
+								Comment s'écrit l'entête de la méthode principale (1 mot par case) ?
+							</paragraph>
+						</question>
+						<gapText> 
+							<gap answers="public">public</gap> 
+							<gap answers="static">static</gap> 
+							<gap answers="void">void</gap> 
+							<gap answers="main">main</gap> 
+							(            
+							<gap answers="String">String</gap> 
+							<gap answers="[],[ ]">[]</gap> 
+							<gap answers="args">args</gap> 
+							)   
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+      </act>
+
+      <act>
+        <paragraph>
+          Pour ces exercices, nous vous demandons de comprendre des codes Java donnés. 
+          <selfCheck title="Compréhension" shuffle="no">
+						<fillInBlanks>
+							<question>
+							  Que vont-ils afficher si à chaque fois les deux nombres lus au départ sont successivement 2 et 3 ?
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice1 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb1 + " " + nb2);
+    }
+}
+        </paragraph>
+				            <gap answers="2 3">2 3</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice2 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = 2*nb1 + nb2;
+        System.out.println(nb3);
+    }
+}
+									</paragraph>
+									</item>
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice3 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb2/nb1);
+    }
+}
+        </paragraph>
+				            <gap answers="1">1</gap> 
+									</item> 
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice4 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb1%nb2);
+    }
+}
+        </paragraph>
+				            <gap answers="2">2</gap> 
+									</item> 
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice5 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        nb1 = clavier.nextInt();
+        nb1 = nb1 * nb1;
+        System.out.println(Math.sqrt(nb1));
+    }
+}
+        </paragraph>
+				            <gap answers="3">3</gap> 
+									</item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+        </paragraph>
+        <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+        <link uri="../../../TDSeq/fr/html/Structure_learningObject2.html">révisez ici</link></paragraph>
+      </act>
+    </learningObject>
+  </unit>
+    
+  
+	<!-- =================================================================== -->
+	<unit label="Exercices" title="Exercices complets">
+	<!-- =================================================================== -->
+    
+    <learningObject title="À vous de jouer...">
+    <!-- ============================================================ -->
+    <act>
+        <paragraph>
+        Écrivez les algorithmes et codez les programmes Java correspondant qui 
+          <list listStyle="ordered">
+            <item>réalise la permutation du contenu de deux variables.</item>
+            <item>étant donné un moment dans la journée donné par trois nombres lus, à savoir, heure, minute et seconde, calcule le nombre de secondes écoulées depuis minuit.</item>
+            <item>étant donné un temps écoulé dans la journée exprimé en secondes, calcule et affiche ce temps sous la forme de trois nombres (heure, minute et seconde). <newLine/>
+            Ex : 10000 secondes donnera 2h 46’40”</item>
+          </list>
+        </paragraph>
+        <paragraph>Pour plus d'exercices, 
+        <link uri="../../../TDSeq/fr/html/unit_Exercices.html">révisez ici</link></paragraph>
+      </act>
+    </learningObject>
+  </unit>
+	
+	<!--metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>1</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2013 - 2014</version>
+				<contribute>
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata-->
+
+</lesson>

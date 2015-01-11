@@ -1,0 +1,1049 @@
+\documentclass[11pt,a4paper]{article}
+			\usepackage[french]{babel}
+					
+				\usepackage{pifont}  
+				\usepackage[utf8x]{inputenc}
+				\usepackage[T1]{fontenc} 
+				\usepackage{lmodern}			
+				\usepackage{fancyhdr}
+				\usepackage{textcomp}
+				\usepackage{makeidx}
+				\usepackage{tabularx}
+				\usepackage{multicol}
+				\usepackage{multirow}
+				\usepackage{longtable}
+				\usepackage{color}
+				\usepackage{soul}
+				\usepackage{boxedminipage}
+				\usepackage{shadow}
+				\usepackage{framed}			
+				\usepackage{array}
+				\usepackage{url}
+				\usepackage{ragged2e}
+				\usepackage{fancybox}
+				\newcommand{\cadretitre}[2]{
+				  \vspace*{0.8\baselineskip}
+				  \begin{center}%
+				  \boxput*(0,1){%
+					%\colorbox{white}{\Large\textbf{\ #1\ }}%
+				  }%
+				  {%
+					\setlength{\fboxsep}{10pt}%
+				    \Ovalbox{\begin{minipage}{.8\linewidth}\begin{center}\Large\sffamily{#2}\end{center}\end{minipage}}}%
+				  \end{center}
+				  \vspace*{2\baselineskip}
+				  }
+			
+			\makeatletter
+			\def\@seccntformat#1{\protect\makebox[0pt][r]{\csname the#1\endcsname\quad}}
+			\makeatother
+
+				% Permet d'afficher qqchose à une positin absolue
+				\usepackage[absolute]{textpos}
+				\setlength{\TPHorizModule}{1cm}
+				\setlength{\TPVertModule}{\TPHorizModule}
+	
+				\usepackage[titles]{tocloft}
+				\setlength{\cftbeforesecskip}{0.5ex}
+				\setlength{\cftbeforesubsecskip}{0.2ex}
+				\addto\captionsfrench{\renewcommand\contentsname{}}
+				
+				\usepackage[font=scriptsize]{caption}
+				
+				\usepackage{listings}
+\lstdefinestyle{lstverb}
+  {
+    basicstyle=\footnotesize,
+    frameround=tttt, frame=trbl, framerule=0pt, rulecolor=\color{gray},
+    lineskip=-1pt,   % pour rapprocher les lignes
+    flexiblecolumns, escapechar=\\,
+    tabsize=4, extendedchars=true
+  }
+\lstnewenvironment{Java}[1][]{\lstset{style=lstverb,language=java,#1}}{}
+				\ifx\pdfoutput\undefined
+					\usepackage{graphicx}
+				\else
+					\usepackage[pdftex]{graphicx}
+				\fi
+				\usepackage[a4paper, hyperfigures=true, colorlinks, linkcolor=black, citecolor=blue,urlcolor=blue, pagebackref=true, bookmarks=true, bookmarksopen=true,bookmarksnumbered=true,
+                pdfauthor={}, pdftitle={TD Séquentiel - Rappels de base}, pdfkeywords={TD S\'equentiel - Rappels de base, },pdfpagemode=UseOutlines,pdfpagetransition=Dissolve,nesting=true,
+				backref, pdffitwindow=true, bookmarksnumbered=true]{hyperref}
+				\usepackage{supertabular}
+				\usepackage[table]{xcolor}
+				\usepackage{url}
+				\usepackage{caption} 
+				\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+				\setlength{\parindent}{0pt}
+				
+				\makeatletter
+				\def\url@leostyle{ \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\footnotesize\ttfamily}}}
+				\makeatother
+				\urlstyle{leo}
+				
+				\definecolor{examplecolor}{rgb}{0.156,0.333,0.443}
+				\definecolor{definitioncolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{exercisecolor}{rgb}{0.49,0.639,0}
+				\definecolor{hintcolor}{rgb}{0.941,0.674,0.196}
+				\definecolor{tableHeadercolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{tablerowAltcolor}{rgb}{.866,.905,.737}
+				\definecolor{tablerowAlt2color}{rgb}{.968,.976,.933}
+				\definecolor{verylightgray}{rgb}{0.98,0.98,0.98}
+				
+				\newenvironment{fshaded}{
+				\def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}
+				\MakeFramed {\FrameRestore}}
+				{\endMakeFramed}
+				
+				\newenvironment{fexample}[1][]{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.156,.333,.443}
+				\begin{fshaded}}{\end{fshaded}} 
+				
+				\newenvironment{fdefinition}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.709,.784,.454}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fexercise}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.49,.639,0}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fhint}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.941,.674,.196}
+				\begin{fshaded}}{\end{fshaded}}	
+				
+				\newcommand{\PreserveBackslash}[1]{
+				\let\temp=\\#1\let\\=\temp
+				}
+				\let\PBS=\PreserveBackslash
+				\newcolumntype{A}{>{\PBS\raggedright\small\hspace{0pt}}X}
+				\newcolumntype{L}[1]{>{\PBS\raggedright\small\hspace{0pt}}p{#1}}
+				\newcolumntype{R}[1]{>{\PBS\raggedleft\small\hspace{0pt}}p{#1}}
+				\newcolumntype{C}[1]{>{\PBS\centering\small\hspace{0pt}}p{#1}}
+				
+				\makeindex
+				
+				\title{TD S\'equentiel - Rappels de base}	
+			\date{}
+			\author{\scriptsize{}}
+			\definecolor{light-gray}{gray}{0.8}
+			\renewcommand{\headrulewidth}{0pt}
+			\fancyhead[L]{
+				\footnotesize\textsc{Haute \'Ecole de Bruxelles}\\
+	    			\footnotesize\textsc{\'Ecole Sup\'erieure d'Informatique}
+			}
+			\fancyhead[R]{
+				\footnotesize{Bachelor en Informatique}\\
+				\footnotesize{Laboratoires Java} - 
+			\footnotesize{1\`ere ann\'ee}}
+				\fancyfoot[L]{ }
+				\fancyfoot[C]{}
+				\fancyfoot[R]{\scriptsize{\textcolor{gray}{version 2014-2015 (\today)}}}
+				\pagestyle{plain}
+				\reversemarginpar
+				\usepackage{rotating}						
+				\begin{document}
+					\begin{textblock}{9}(2,3.2)
+						\includegraphics[width=2cm]{../../../_templates/java/icons/logo-esi}
+					\end{textblock}
+				
+				
+				
+				
+				%\maketitle
+				\cadretitre{TD1}{TD S\'equentiel - Rappels de base}
+				\thispagestyle{fancy}
+        \marginpar{\begin{sideways}
+            \begin{minipage}[t]{1cm}
+            \begin{tiny}
+            \includegraphics[width=1\linewidth,height=1\textheight,keepaspectratio=true]{../../../_templates/java/icons/cc-gris.jpg}
+			\end{tiny}
+			\end{minipage}
+            \begin{minipage}[b]{19cm}
+            \begin{tiny}
+            \textcolor{gray}{Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique 
+            (\texttt{http://creativecommons.org/licenses/by-sa/2.0/be/})
+			\vspace{-1em}
+			\\Les autorisations au-delà du champ de cette licence peuvent être obtenues à 
+			\texttt{http://www.heb.be/esi}
+			- \texttt{mcodutti@heb.be}
+			}\end{tiny}
+			\end{minipage}
+        \end{sideways}}
+            \begin{abstract}
+			Cet exercice a pour but de v\'erifier que vous avez fix\'e les bases du LDA et de la programmation Java.
+		
+            \par
+        
+            \par
+        
+            \par
+        \end{abstract}
+				\vspace{-2em}\tableofcontents
+				\pagestyle{plain}
+            \clearpage
+            \fancyhead[L,C,R]{}
+            \fancyfoot[L,C]{}
+            \fancyfoot[R]{ \scriptsize{\textcolor{gray}{
+				InitSeq - page \thepage}}}
+				\thispagestyle{fancy}
+				\pagestyle{fancy}
+	   
+            \section{Variables et types}\subsection{Les variables et les types}
+			
+		\subparagraph{Le type des donn\'ees} 
+		
+                \textcolor{white}{.} \par
+             
+								Comment d\'eclarer en algorithmique :
+							
+					\begin{itemize}
+				
+			\item un montant d'un ticket de caisse ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item une cote sur le bulletin (pas de demi-point autoris\'e) ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item le titre d'un film ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item l'initiale de votre nom ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+					\end{itemize}
+				
+			
+		\subparagraph{Le type des donn\'ees} 
+		
+                \textcolor{white}{.} \par
+             
+								Comment d\'eclarer en Java :
+							
+					\begin{itemize}
+				
+			\item un montant d'un ticket de caisse ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item une cote sur le bulletin (pas de demi-point autoris\'e) ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item le titre d'un film ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item l'initiale de votre nom ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+					\end{itemize}
+				
+			
+		\subparagraph{Types Java} 
+		
+                \textcolor{white}{.} \par
+            
+                  Donnez l'\'equivalent Java des types vus en algorithmique. 
+                
+            \par
+         
+                entier 		 \textcolor{gray}{\underline{\hspace*{2em}}} \par
+				
+                r\'eel   		 \textcolor{gray}{\underline{\hspace*{5em}}} \par
+				
+                chaine 		 \textcolor{gray}{\underline{\hspace*{5em}}} \par
+				
+                caract\`ere	 \textcolor{gray}{\underline{\hspace*{3em}}} \par
+				
+                bool\'een      \textcolor{gray}{\underline{\hspace*{5em}}} \par
+				
+			
+		\subparagraph{Conventions de nom} 
+		
+                \textcolor{white}{.} \par
+            Cochez les noms qui respectent les conventions (sachant que nous travaillons dans le cadre de la tva)
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] \verb@double Taxe;@
+        
+            \item[ \ding{"6F} ] \verb|final double TVA;|
+        
+            \item[ \ding{"6F} ] \verb@double taxeValeurAjoutée;@
+        
+            \item[ \ding{"6F} ] \verb@final double TAUXTVA;@
+        
+            \item[ \ding{"6F} ] \verb|final double TAUX_TVA|
+        
+            \item[ \ding{"6F} ] \verb@double t;@
+        
+            \end{itemize} 
+        
+			
+		\subparagraph{final} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        
+					Soit le code :
+				
+            \par
+        \begin{Java}
+	public class Final {  
+		public static void main (String[] args) {
+			final double tva = 21.5; 
+			System.out.println ((1000/100)*tva);  
+			tva = 19;
+		}
+	}			\end{Java}
+					qui, \`a la compilation, g\'en\`ere le message d'erreur 
+				
+            \par
+        \begin{verbatim}
+	Final.java:5:: cannot assign a value to final variable tva\end{verbatim}ce message veut dire que
+            \begin{itemize} 
+        
+            \item[ \ding{"6D} ] le nom tva ne respecte pas la convention de nom
+        
+            \item[ \ding{"6D} ] final n'est pas un mot reconnu
+        
+            \item[ \ding{"6D} ] on ne peut assigner une deuxi\`eme fois une valeur \`a une variable final
+        
+            \item[ \ding{"6D} ] on ne peut assigner une valeur enti\`ere \`a tva 
+        
+            \end{itemize} 
+        Si vous n'avez pas r\'epondu correctement \`a toutes les questions, au nom de variable pr\`es,
+				r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/unit\_VariablesEtTypes.html})
+            \par
+        \subsection{Java est un langage fortement typ\'e.}
+			
+		\subparagraph{Le type des donn\'ees} 
+		
+                \textcolor{white}{.} \par
+             
+								Toute donn\'ee a un type. Il existe 3 grands types de donn\'ees. Lesquels ?
+							
+					\begin{itemize}
+				
+			\item  \textcolor{gray}{\underline{\hspace*{16em}}} 
+			\item  \textcolor{gray}{\underline{\hspace*{16em}}} 
+			\item  \textcolor{gray}{\underline{\hspace*{20em}}} 
+					\end{itemize}
+				Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+				    r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/VariablesEtTypes\_learningObject3.html})
+            \par
+        
+			
+		\subparagraph{Les types primitifs num\'eriques entiers} 
+		
+                \textcolor{white}{.} \par
+             
+								Donnez les types primitifs num\'eriques entiers dans l'ordre (de celui quiprend le moins de place en m\'emoire \`a celui qui en prend le plus) :
+							
+					\begin{itemize}
+				
+			\item  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item  \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item  \textcolor{gray}{\underline{\hspace*{3em}}} 
+					\end{itemize}
+				Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+				    r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/VariablesEtTypes\_learningObject3.html})
+            \par
+        
+			
+		\subparagraph{Les types primitifs num\'eriques flottants} 
+		
+                \textcolor{white}{.} \par
+             
+								Donnez les types primitifs num\'eriques flottants dans l'ordre (de celui quiprend le moins de place en m\'emoire \`a celui qui en prend le plus) :
+							
+					\begin{itemize}
+				
+			\item  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item  \textcolor{gray}{\underline{\hspace*{5em}}} 
+					\end{itemize}
+				Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+				    r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/VariablesEtTypes\_learningObject3.html})
+            \par
+        
+			
+		\subparagraph{Le type primitif non num\'erique} 
+		
+                \textcolor{white}{.} \par
+             
+								Donnez le type primitif non num\'eriques :
+							
+					\begin{itemize}
+				
+			\item  \textcolor{gray}{\underline{\hspace*{5em}}} 
+					\end{itemize}
+				Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+          r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/VariablesEtTypes\_learningObject3.html})
+            \par
+        \section{Op\'erateurs et expressions}\subsection{Op\'erateurs et expressions}
+			
+		\subparagraph{Op\'erateurs Java} 
+		
+                \textcolor{white}{.} \par
+            
+                  Donnez l'\'equivalent Java des op\'erateurs vu en algorithmique.
+                
+            \par
+         
+                *   \textcolor{gray}{\underline{\hspace*{1em}}} \par
+				
+                /   \textcolor{gray}{\underline{\hspace*{1em}}}  entre 2 r\'eels \par
+				
+                DIV   \textcolor{gray}{\underline{\hspace*{1em}}}  entre 2 entiers \par
+				
+                MOD   \textcolor{gray}{\underline{\hspace*{1em}}} \par
+				
+			
+		\subparagraph{Que vaut ?} 
+		
+                \textcolor{white}{.} \par
+            Que vaut l'expression java
+                5DIV3 :  \textcolor{gray}{\underline{\hspace*{1em}}} 
+			
+		\subparagraph{Que vaut ?} 
+		
+                \textcolor{white}{.} \par
+            Que vaut l'expression java
+                5MOD3 :  \textcolor{gray}{\underline{\hspace*{1em}}} 
+			
+		\subparagraph{Que vaut ?} 
+		
+                \textcolor{white}{.} \par
+            Que vaut l'expression java
+                11/2 :  \textcolor{gray}{\underline{\hspace*{1em}}} 
+			
+		\subparagraph{Que vaut ?} 
+		
+                \textcolor{white}{.} \par
+            Que vaut l'expression java
+                11.0/2 :  \textcolor{gray}{\underline{\hspace*{2em}}} 
+			
+		\subparagraph{Que vaut ?} 
+		
+                \textcolor{white}{.} \par
+            Que vaut l'expression java
+                11\%3 :  \textcolor{gray}{\underline{\hspace*{1em}}} Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+          r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/unit\_Op\'erateursEtExpressions.html})
+            \par
+        
+			
+		\subparagraph{Comment calculer ?} 
+		
+                \textcolor{white}{.} \par
+            Comment calculer en Java
+                la racine carr\'ee d'une variable nomm\'ee nb ? :  \textcolor{gray}{\underline{\hspace*{10em}}} Si vous n'avez pas r\'epondu correctement \`a la question, 
+          r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/Op\'erateursEtExpressions\_learningObject6.html})
+            \par
+        \section{L'affectation d'une valeur \`a une variable}
+				Cette op\'eration est probablement l'op\'eration la plus importante. En effet, une variable ne
+        prend son sens r\'eel que si elle re\c coit \`a un moment donn\'e une valeur. Il y a deux moyens de
+        donner une valeur \`a une variable.
+      
+            \par
+        \subsection{Affectation interne en algo}
+			
+		\subparagraph{} 
+		
+                \textcolor{white}{.} \par
+            Les exemples d'affectation sont-ils corrects ?
+						
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+
+somme, nombre1, nombre2 : entiers 
+nombre1 ← 3 
+nombre2 ← 5 
+somme ← nombre1 + nombre2\end{verbatim}
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+
+denRes, den1, den2 : réels 
+den1 ← 3.5 
+den2 ← 1 
+denRes ← den1 * den2\end{verbatim}
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+						
+cpt : entier 
+cpt ← cpt + 1\end{verbatim}
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+						
+delta, a, b, c : réels 
+a ← 4 
+b ← 3/2 
+c ← 7/4 
+delta ← b**2 – 4*a*c\end{verbatim}
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+						
+maChaine : chaine 
+maChaine ← "Bonjour"\end{verbatim}
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+						
+a, b : entier 
+test : booléen 
+a ← 4 
+b ← 3 
+test ← a = b\end{verbatim}
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+						
+somme : entier 
+somme + 1 ← 3\end{verbatim}
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+						
+somme, n : entier 
+n ← 4 
+somme ← 3n\end{verbatim}
+        
+            \end{itemize} 
+        Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+        r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/Affectation\_learningObject1.html})
+            \par
+        \subsection{Affectation interne en Java}
+			
+		\subparagraph{} 
+		
+                \textcolor{white}{.} \par
+            Les exemples d'affectation sont-ils corrects ?
+						
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] \begin{Java}
+  
+int somme;
+int nombre1;
+int nombre 2;
+nombre1 = 3;
+nombre2 = -8;
+somme = nombre1 + nombre2;\end{Java}
+        
+            \item[ \ding{"6F} ] \begin{Java}
+
+double denRes;
+double den1;
+double den2;
+den1 = 3.5;
+den2 = 1;
+denRes = den1 * den2;\end{Java}
+        
+            \item[ \ding{"6F} ] \begin{Java}
+						
+int cpt; 
+cpt = cpt + 1;\end{Java}
+        
+            \item[ \ding{"6F} ] \begin{Java}
+						
+double delta; 
+double a; 
+double b; 
+double c; 
+a = 4; 
+b = 3.0/2; 
+c = 7.0/4; 
+delta = b*b - 4*a*c;\end{Java}
+        
+            \item[ \ding{"6F} ] \begin{Java}
+						
+String maChaine; 
+maChaine = "Bonjour";\end{Java}
+        
+            \item[ \ding{"6F} ] \begin{Java}
+						
+int a; 
+int b; 
+boolean test;
+a = 4;
+b = 3;
+test = a = b;\end{Java}
+        
+            \item[ \ding{"6F} ] \begin{Java}
+						
+int somme; 
+somme + 1 = 3;\end{Java}
+        
+            \item[ \ding{"6F} ] \begin{Java}
+						
+int somme;
+int n;
+n = 4;
+somme = 3n;\end{Java}
+        
+            \end{itemize} 
+        Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+        r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/Affectation\_learningObject2.html})
+            \par
+        \subsection{Affectation externe en algo}
+			
+		\subparagraph{} 
+		
+                \textcolor{white}{.} \par
+            Les exemples d'affectation sont-ils corrects ?
+						
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] nombre1, nombre2 : entiers \par
+				
+						lire nombre1, nombre2
+        
+            \item[ \ding{"6F} ] nombre1 : entier \par
+				
+						lire nombre1
+        
+            \item[ \ding{"6F} ] maChaine : chaine \par
+				
+						lire maChaine
+        
+            \item[ \ding{"6F} ] maChaine : chaine \par
+				
+						lire "Entrez une chaine", maChaine
+        
+            \item[ \ding{"6F} ] lire nombre1 + nombre2
+        
+            \end{itemize} 
+        Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+        r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/Affectation\_learningObject3.html})
+            \par
+        \subsection{Affectation externe en Java}
+			
+		\subparagraph{S\'election multiple} 
+		
+                \textcolor{white}{.} \par
+            Quels morceaux de code, parmi les suivants, NE sont PAS corrects ? Pourquoi ?
+						
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ]  
+							code 1
+							\begin{Java}
+    public class Exercice { 
+        public static void main(String[] args) { 
+            Scanner clavier = new Scanner(System.in); 
+            int nombre1; 
+            nombre1 = clavier.nextInt();
+        } 
+    }						\end{Java}
+        
+            \item[ \ding{"6F} ]  
+							code 2
+							\begin{Java}
+    import java.util.Scanner;
+    public class Exercice {  
+        public static void main(String[] args) {
+            Scanner clavier = new Scanner(System.in);
+            int nombre1;
+            nombre1 = clavier.nextInt();
+        }  
+    }						\end{Java}
+        
+            \item[ \ding{"6F} ]  
+							code 3
+							\begin{Java}
+    import java.util.Scanner;
+    public class Exercice {
+        public static void main(String[] args ) {
+            Scanner clavier = new Scanner(System.in); 
+            double nombre1;  
+            nombre1 = clavier.nextDouble();  
+        }
+    }						\end{Java}
+        
+            \item[ \ding{"6F} ]  
+							code 4
+							\begin{Java}
+    import java.util.Scanner;
+    public class Exercice { 
+        public static void main(String[] args) {
+            int nombre1;  
+            nombre1 = clavier.nextInt(); 
+        }
+    }						\end{Java}
+        
+            \end{itemize} 
+        
+			
+		\subparagraph{M\'ethodes de Scanner} 
+		
+                \textcolor{white}{.} \par
+            Compl\'etez les m\'ethodes suivantes afin de permettre une lecture au clavier ad\'equate.\begin{Java}
+import java.util.Scanner;
+public class ReadingExercice {
+    public static void main (String[] args) {  
+        Scanner keyboard = new Scanner(System.in);  
+        int integerNb = keyboard. \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ ;
+        double realNb = keyboard. \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_  ;
+        boolean ok = keyboard. \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_  ;
+        String string1 = keyboard. \\_\\_\\_\\_\\_\\_\\_\\_  ; // We read a word
+        String string2 = keyboard. \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_  ; // We read a line 
+        char aCharacter = keyboard. \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_  ;
+    }
+}							\end{Java}Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+        r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/Affectation\_learningObject4.html})
+            \par
+        \subsection{Communication des r\'esultats en algo}
+			
+		\subparagraph{} 
+		
+                \textcolor{white}{.} \par
+            Les exemples de communication des r\'esultats sont-ils corrects ?
+						
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+
+somme, nombre1, nombre2 : entiers 
+nombre1 ← 3 
+nombre2 ← 5 
+somme ← nombre1 + nombre2
+afficher somme\end{verbatim}
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+
+denRes, den1, den2 : réels 
+den1 ← 3.5 
+den2 ← 1 
+denRes ← den1 * den2
+afficher den1, "/", den2, " ", denRes \end{verbatim}
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+						
+cpt : entier 
+afficher cpt\end{verbatim}
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+						
+a, b, c : réels 
+a ← 4 
+b ← 3/2 
+c ← 7/4 
+afficher b**2 – 4*a*c\end{verbatim}
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+						
+afficher "Bonjour"\end{verbatim}
+        
+            \item[ \ding{"6F} ] \begin{verbatim}
+						
+a, b : entier 
+test : booléen 
+a ← 4 
+b ← 3 
+afficher a = b\end{verbatim}
+        
+            \end{itemize} 
+        Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+        r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/Affectation\_learningObject5.html})
+            \par
+        \subsection{Communication des r\'esultats en Java}
+			
+		\subparagraph{S\'election multiple} 
+		
+                \textcolor{white}{.} \par
+            Quels morceaux de code, parmi les suivants, sont corrects ? Pourquoi ?
+						
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ]  
+							code 1
+							\begin{Java}
+    import java.util.Scanner;
+    public class Exercice { 
+        public static void main(String[] args) { 
+            Scanner clavier = new Scanner(System.in); 
+            int nombre1; 
+            nombre1 = clavier.nextInt();
+            System.out.println(nombre1);
+        } 
+    }						\end{Java}
+        
+            \item[ \ding{"6F} ]  
+							code 2
+							\begin{Java}
+    import java.util.Scanner;
+    public class Exercice {  
+        public static void main(String[] args) {
+            Scanner clavier = new Scanner(System.in);
+            int nombre1;
+            int nombre2;
+            nombre1 = clavier.nextInt();
+            nombre2 = clavier.nextInt();
+            System.out.println(nombre1 + nombre2);
+        }  
+    }						\end{Java}
+        
+            \item[ \ding{"6F} ]  
+							code 3
+							\begin{Java}
+    import java.util.Scanner;
+    public class Exercice {  
+        public static void main(String[] args) {
+            Scanner clavier = new Scanner(System.in);
+            int nombre1;
+            int nombre2;
+            nombre1 = clavier.nextInt();
+            nombre2 = clavier.nextInt();
+            System.out.println(nombre1 + " " + nombre2);
+        }  
+    }						\end{Java}
+        
+            \item[ \ding{"6F} ]  
+							code 4
+							\begin{Java}
+    import java.util.Scanner;
+    public class Exercice {  
+        public static void main(String[] args) {
+            Scanner clavier = new Scanner(System.in);
+            int nombre1;
+            int nombre2;
+            nombre1 = clavier.nextInt();
+            nombre2 = clavier.nextInt();
+            System.out.println(nombre1, nombre2);
+        }  
+    }						\end{Java}
+        
+            \end{itemize} 
+        
+			
+		\subparagraph{M\'ethodes de Scanner} 
+		
+                \textcolor{white}{.} \par
+            Compl\'etez les m\'ethodes suivantes afin de permettre une lecture au clavier ad\'equate.\begin{Java}
+import java.util.Scanner;
+public class ReadingExercice {
+    public static void main (String[] args) {  
+        Scanner keyboard = new Scanner(System.in);  
+        int integerNb = keyboard. \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ ;
+        double realNb = keyboard. \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_  ;
+        boolean ok = keyboard. \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_  ;
+        String string1 = keyboard. \\_\\_\\_\\_\\_\\_\\_\\_  ; // We read a word
+        String string2 = keyboard. \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_  ; // We read a line 
+        char aCharacter = keyboard. \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_  ;
+    }
+}							\end{Java}Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+        r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/Affectation\_learningObject6.html})
+            \par
+        \section{Structure g\'en\'erale}\subsection{Structure g\'en\'erale d'un algorithme}
+          Pour ces exercices, nous vous demandons de comprendre des algorithmes donn\'es. 
+          
+			
+		\subparagraph{Compr\'ehension} 
+		
+                \textcolor{white}{.} \par
+            
+							  Que vont-ils afficher si \`a chaque fois les deux nombres lus au d\'epart sont successivement 2 et 3 ?
+							
+					\begin{itemize}
+				
+			\item \begin{verbatim}
+module exerciceA()
+  a,b : entiers
+  quotient : réel
+  lire b, a
+  quotient ← a / b
+  afficher quotient
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{verbatim}
+module exerciceB()
+  a, b, c, d : entiers
+  lire c, d
+  a ← 2*c+5*d
+  b ← 2+c*3+d
+  c ← a MOD b
+  afficher a DIV c
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{verbatim}
+module exerciceC()
+  x, y : réels
+  lire x, y
+  x ← x*x 
+  x ← x*x+y*y 
+  x ← √x
+  afficher x
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{verbatim}
+module exerciceD()
+  x, y : réels
+  lire x, x
+  x ← x MOD x + (x + 1) DIV 2
+  afficher x + 3
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
+					\end{itemize}
+				
+            \par
+        Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+        r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/Structure\_learningObject1.html})
+            \par
+        \subsection{Structure g\'en\'erale d'un programme Java, comment le compiler et l'ex\'ecuter.}
+			
+		\subparagraph{Structure d'un programme} 
+		
+                \textcolor{white}{.} \par
+            Quelles structures g\'en\'erales d'un programme sont correctes 
+							(c-\`a-d qu'il doit compiler et respecter les conventions) parmi les suivantes ?
+						
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ]  
+							code 1
+							\begin{verbatim}
+    public class exercice {
+        // put methods here  
+    }\end{verbatim}
+        
+            \item[ \ding{"6F} ]  
+							code 2
+							\begin{verbatim}
+    public CLASS Exercice {
+        // put methods here  
+    }\end{verbatim}
+        
+            \item[ \ding{"6F} ] 
+							code 3 
+							\begin{verbatim}
+    public class Exercice {  
+        // put methods here  
+    }\end{verbatim}
+        
+            \item[ \ding{"6F} ]  
+							code 4 
+							\begin{verbatim}
+    public class MonExercice {  
+        // put methods here  
+    }\end{verbatim}
+        
+            \item[ \ding{"6F} ]  
+							code 5 
+							\begin{verbatim}
+    PUBLIC CLASS EXERCICE { 
+        // put methods here  
+    }\end{verbatim}
+        
+            \end{itemize} 
+        
+			
+		\subparagraph{Nom d'un programme} 
+		
+                \textcolor{white}{.} \par
+            Quels noms doivent avoir les fichiers dans lesquels sont plac\'es les programmes suivants :\begin{Java}
+    public class Exercice {  
+        // Methods    
+    }						\end{Java} \textcolor{gray}{\underline{\hspace*{10em}}} \begin{Java}
+    public class SommeChiffres {
+        // Methods    
+    }						\end{Java} \textcolor{gray}{\underline{\hspace*{16em}}} \begin{Java}
+    public class sommechiffres {    
+        // Methods    
+    }						\end{Java} \textcolor{gray}{\underline{\hspace*{16em}}} 
+			
+		\subparagraph{Compiler/ex\'ecuter} 
+		
+                \textcolor{white}{.} \par
+             
+							Quelle commande permet de compiler le fichier nomm\'e \verb@SommeChiffres.java@ ?  
+							\par
+				 \textcolor{gray}{\underline{\hspace*{3em}}}  \textcolor{gray}{\underline{\hspace*{16em}}} \par
+				
+							Quelle commande permet d'ex\'ecuter ce programme ?  
+							\par
+				 \textcolor{gray}{\underline{\hspace*{3em}}}  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			
+		\subparagraph{M\'ethode principale} 
+		
+                \textcolor{white}{.} \par
+            
+								Comment s'\'ecrit l'ent\^ete de la m\'ethode principale (1 mot par case) ?
+							
+            \par
+         \textcolor{gray}{\underline{\hspace*{5em}}}  \textcolor{gray}{\underline{\hspace*{5em}}}  \textcolor{gray}{\underline{\hspace*{3em}}}  \textcolor{gray}{\underline{\hspace*{3em}}}  
+							(            
+							 \textcolor{gray}{\underline{\hspace*{5em}}}  \textcolor{gray}{\underline{\hspace*{2em}}}  \textcolor{gray}{\underline{\hspace*{3em}}}  
+							)   
+						
+          Pour ces exercices, nous vous demandons de comprendre des codes Java donn\'es. 
+          
+			
+		\subparagraph{Compr\'ehension} 
+		
+                \textcolor{white}{.} \par
+            
+							  Que vont-ils afficher si \`a chaque fois les deux nombres lus au d\'epart sont successivement 2 et 3 ?
+							
+					\begin{itemize}
+				
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice1 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb1 + " " + nb2);
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice2 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = 2*nb1 + nb2;
+        System.out.println(nb3);
+    }
+}
+									\end{Java}
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice3 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb2/nb1);
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice4 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb1%nb2);
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice5 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        nb1 = clavier.nextInt();
+        nb1 = nb1 * nb1;
+        System.out.println(Math.sqrt(nb1));
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
+					\end{itemize}
+				
+            \par
+        Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
+        r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/Structure\_learningObject2.html})
+            \par
+        \section{Exercices complets}\subsection{\`A vous de jouer...}
+        \'Ecrivez les algorithmes et codez les programmes Java correspondant qui 
+          
+					\begin{enumerate}
+				
+			\item r\'ealise la permutation du contenu de deux variables.
+			\item \'etant donn\'e un moment dans la journ\'ee donn\'e par trois nombres lus, \`a savoir, heure, minute et seconde, calcule le nombre de secondes \'ecoul\'ees depuis minuit.
+			\item \'etant donn\'e un temps \'ecoul\'e dans la journ\'ee exprim\'e en secondes, calcule et affiche ce temps sous la forme de trois nombres (heure, minute et seconde). \par
+				
+            Ex : 10000 secondes donnera 2h 46'40”
+					\end{enumerate}
+				
+            \par
+        Pour plus d'exercices, 
+        r\'evisez ici (\url{www.heb.be/esi/InitSeq/fr/../../TDSeq/fr/html/unit\_Exercices.html})
+            \par
+        
+				\end{document}
+			

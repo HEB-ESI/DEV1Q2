@@ -1,0 +1,48 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Variables et types}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Les variables et les types}{2}{subsection.1.1}
+\contentsline {subparagraph}{Le type des donn\'ees}{2}{section*.2}
+\contentsline {subparagraph}{Le type des donn\'ees}{2}{section*.3}
+\contentsline {subparagraph}{Types Java}{2}{section*.4}
+\contentsline {subparagraph}{Conventions de nom}{2}{section*.5}
+\contentsline {subparagraph}{final}{3}{section*.6}
+\contentsline {subsection}{\numberline {1.2}Java est un langage fortement typ\'e.}{3}{subsection.1.2}
+\contentsline {subparagraph}{Le type des donn\'ees}{3}{section*.7}
+\contentsline {subparagraph}{Les types primitifs num\'eriques entiers}{3}{section*.8}
+\contentsline {subparagraph}{Les types primitifs num\'eriques flottants}{4}{section*.9}
+\contentsline {subparagraph}{Le type primitif non num\'erique}{4}{section*.10}
+\contentsline {section}{\numberline {2}Op\'erateurs et expressions}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Op\'erateurs et expressions}{4}{subsection.2.1}
+\contentsline {subparagraph}{Op\'erateurs Java}{4}{section*.11}
+\contentsline {subparagraph}{Que vaut ?}{4}{section*.12}
+\contentsline {subparagraph}{Que vaut ?}{5}{section*.13}
+\contentsline {subparagraph}{Que vaut ?}{5}{section*.14}
+\contentsline {subparagraph}{Que vaut ?}{5}{section*.15}
+\contentsline {subparagraph}{Que vaut ?}{5}{section*.16}
+\contentsline {subparagraph}{Comment calculer ?}{5}{section*.17}
+\contentsline {section}{\numberline {3}L'affectation d'une valeur \`a une variable}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Affectation interne en algo}{5}{subsection.3.1}
+\contentsline {subparagraph}{}{5}{section*.18}
+\contentsline {subsection}{\numberline {3.2}Affectation interne en Java}{6}{subsection.3.2}
+\contentsline {subparagraph}{}{6}{section*.19}
+\contentsline {subsection}{\numberline {3.3}Affectation externe en algo}{8}{subsection.3.3}
+\contentsline {subparagraph}{}{8}{section*.20}
+\contentsline {subsection}{\numberline {3.4}Affectation externe en Java}{8}{subsection.3.4}
+\contentsline {subparagraph}{S\'election multiple}{8}{section*.21}
+\contentsline {subparagraph}{M\'ethodes de Scanner}{9}{section*.22}
+\contentsline {subsection}{\numberline {3.5}Communication des r\'esultats en algo}{9}{subsection.3.5}
+\contentsline {subparagraph}{}{9}{section*.23}
+\contentsline {subsection}{\numberline {3.6}Communication des r\'esultats en Java}{10}{subsection.3.6}
+\contentsline {subparagraph}{S\'election multiple}{10}{section*.24}
+\contentsline {subparagraph}{M\'ethodes de Scanner}{11}{section*.25}
+\contentsline {section}{\numberline {4}Structure g\'en\'erale}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Structure g\'en\'erale d'un algorithme}{12}{subsection.4.1}
+\contentsline {subparagraph}{Compr\'ehension}{12}{section*.26}
+\contentsline {subsection}{\numberline {4.2}Structure g\'en\'erale d'un programme Java, comment le compiler et l'ex\'ecuter.}{13}{subsection.4.2}
+\contentsline {subparagraph}{Structure d'un programme}{13}{section*.27}
+\contentsline {subparagraph}{Nom d'un programme}{13}{section*.28}
+\contentsline {subparagraph}{Compiler/ex\'ecuter}{14}{section*.29}
+\contentsline {subparagraph}{M\'ethode principale}{14}{section*.30}
+\contentsline {subparagraph}{Compr\'ehension}{14}{section*.31}
+\contentsline {section}{\numberline {5}Exercices complets}{15}{section.5}
+\contentsline {subsection}{\numberline {5.1}\`A vous de jouer...}{15}{subsection.5.1}

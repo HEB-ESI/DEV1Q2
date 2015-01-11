@@ -1,0 +1,245 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Séquentiel - Rappels de base: Structure générale d’un programme Java, comment le compiler et l'exécuter.. Structure d'un programme. Nom d'un programme. Compiler/exécuter. Méthode principale. Compréhension. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Séquentiel - Rappels de base, eLML" />
+      <title>1.4.2. Structure générale d’un programme Java, comment le compiler et l'exécuter.</title>
+      		
+      <link href="selfCheck.css" type="text/css" rel="stylesheet" media="screen" />
+      		<script src="selfCheck.js" type="text/javascript">
+         <!----></script><link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Séquentiel - Rappels de base</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_VariablesEtTypes.html">1.1. Variables et types</a></li>
+               <li class="navigationLink"><a href="unit_Op%C3%A9rateursEtExpressions.html">1.2. Opérateurs et expressions</a></li>
+               <li class="navigationLink"><a href="unit_Affectation.html">1.3. L’affectation d’une valeur à une variable</a></li>
+               <li class="navigationLink"><a href="unit_Structure.html">1.4. Structure générale</a><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="Structure_learningObject1.html">1.4.1. Structure générale d’un algorithme</a></li>
+                     <li class="navigationActual"><strong>1.4.2. Structure générale d’un programme Java, comment le compiler et l'exécuter.</strong></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.5. Exercices complets</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="Structure_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Structure_learningObject2.html">1.4.2. Structure générale d’un programme Java, comment le compiler et l'exécuter.</h1>
+      <div id="d8e610.html" class="act">
+         <h4>Structure d'un programme</h4>
+         <div id="selfCheck1.html" class="multipleChoice">
+            <div class="itemQuestion">Quelles structures générales d'un programme sont correctes 
+               							(c-à-d qu'il doit compiler et respecter les conventions) parmi les suivantes
+               ?
+               						
+            </div>
+            <div class="itemAnswer"><input type="checkbox" name="selfCheck1.html" value="0" class="itemRadio" id="selfCheck1.html_d8e615" /><div class="itemLabel"><label for="selfCheck1.html_d8e615"> 
+                     							code 1
+                     							<pre>
+    public class exercice {
+        // put methods here  
+    }</pre> <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip('Java est sensible à la casse, il différencie donc majuscule et minuscule.')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="itemAnswer"><input type="checkbox" name="selfCheck1.html" value="0" class="itemRadio" id="selfCheck1.html_d8e619" /><div class="itemLabel"><label for="selfCheck1.html_d8e619"> 
+                     							code 2
+                     							<pre>
+    public CLASS Exercice {
+        // put methods here  
+    }</pre> <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip('les mots clé public et class doivent être en minuscule')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="itemAnswer"><input type="checkbox" name="selfCheck1.html" value="1" class="itemRadio" id="selfCheck1.html_d8e623" /><div class="itemLabel"><label for="selfCheck1.html_d8e623">
+                     							code 3 
+                     							<pre>
+    public class Exercice {  
+        // put methods here  
+    }</pre> <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip('le nom de la classe commence par une majuscule')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="itemAnswer"><input type="checkbox" name="selfCheck1.html" value="1" class="itemRadio" id="selfCheck1.html_d8e627" /><div class="itemLabel"><label for="selfCheck1.html_d8e627"> 
+                     							code 4 
+                     							<pre>
+    public class MonExercice {  
+        // put methods here  
+    }</pre> <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip('le nom de la classe commence par une majuscule')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="itemAnswer"><input type="checkbox" name="selfCheck1.html" value="0" class="itemRadio" id="selfCheck1.html_d8e631" /><div class="itemLabel"><label for="selfCheck1.html_d8e631"> 
+                     							code 5 
+                     							<pre>
+    PUBLIC CLASS EXERCICE { 
+        // put methods here  
+    }</pre> <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck1.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck1.html_solution" onclick="solutionChoice('selfCheck1.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div><script src="wz_tooltip.js" type="text/javascript">
+            <!----></script></div>
+      <div id="d8e635.html" class="act">
+         <h4>Nom d'un programme</h4>
+         <div id="selfCheck1.html" class="fillInBlanksShuffle">
+            <div class="itemQuestion">Quels noms doivent avoir les fichiers dans lesquels sont placés les programmes suivants
+               :
+            </div>
+            <div class="itemAnswer">
+               <div class="itemLabel"><pre>
+    public class Exercice {  
+        // Methods    
+    }						</pre><input type="text" value="" class="itemText" id="selfCheck1.html_d8e643" style="width:100px" /> <span class="gapText">,Exercice.java,Exercice.java</span><pre>
+    public class SommeChiffres {
+        // Methods    
+    }						</pre><input type="text" value="" class="itemText" id="selfCheck1.html_d8e647" style="width:160px" /> <span class="gapText">,SommeChiffres.java,SommeChiffres.java</span><pre>
+    public class sommechiffres {    
+        // Methods    
+    }						</pre><input type="text" value="" class="itemText" id="selfCheck1.html_d8e651" style="width:160px" /> <span class="gapText">,sommechiffres.java,sommechiffres.java</span></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemSolution">
+               							Le nom du fichier est le même nom que la classe avec l'extension ".java"
+               							Attention, pour le dernier exemple, nous avons volontairement écrit le nom
+               de la classe sans majuscule... 
+               							par convention, ce n'est pas correct!!!
+               						
+            </div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck1.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck1.html_solution" onclick="solutionGaps('selfCheck1.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div>
+      </div>
+      <div id="d8e655.html" class="act">
+         <h4>Compiler/exécuter</h4>
+         <div id="selfCheck1.html" class="fillInBlanks">
+            <div class="itemQuestion"></div>
+            <div class="itemAnswer">
+               <div class="itemLabel"> 
+                  							Quelle commande permet de compiler le fichier nommé <code>SommeChiffres.java</code> ?  
+                  							<br /><input type="text" value="" class="itemText" id="selfCheck1.html_d8e665" style="width:50px" /> <span class="gapText">,javac,javac</span><input type="text" value="" class="itemText" id="selfCheck1.html_d8e667" style="width:160px" /> <span class="gapText">,SommeChiffres.java,SommeChiffre.java</span><br />
+                  							Quelle commande permet d'exécuter ce programme ?  
+                  							<br /><input type="text" value="" class="itemText" id="selfCheck1.html_d8e672" style="width:50px" /> <span class="gapText">,java,java</span><input type="text" value="" class="itemText" id="selfCheck1.html_d8e674" style="width:100px" /> <span class="gapText">,SommeChiffres,SommeChiffre</span></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemSolution"></div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck1.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck1.html_solution" onclick="solutionGaps('selfCheck1.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div>
+      </div>
+      <div id="d8e677.html" class="act">
+         <h4>Méthode principale</h4>
+         <div id="selfCheck1.html" class="fillInBlanks">
+            <div class="itemQuestion">
+               <p class="paragraph" id="d8e681">
+                  								Comment s'écrit l'entête de la méthode principale (1 mot par case) ?
+                  							
+               </p>
+            </div>
+            <div class="itemAnswer">
+               <div class="itemLabel"><input type="text" value="" class="itemText" id="selfCheck1.html_d8e684" style="width:50px" /> <span class="gapText">,public,public</span><input type="text" value="" class="itemText" id="selfCheck1.html_d8e686" style="width:50px" /> <span class="gapText">,static,static</span><input type="text" value="" class="itemText" id="selfCheck1.html_d8e688" style="width:50px" /> <span class="gapText">,void,void</span><input type="text" value="" class="itemText" id="selfCheck1.html_d8e690" style="width:50px" /> <span class="gapText">,main,main</span> 
+                  							(            
+                  							<input type="text" value="" class="itemText" id="selfCheck1.html_d8e693" style="width:50px" /> <span class="gapText">,String,String</span><input type="text" value="" class="itemText" id="selfCheck1.html_d8e695" style="width:25px" /> <span class="gapText">,[],[],[ ]</span><input type="text" value="" class="itemText" id="selfCheck1.html_d8e697" style="width:50px" /> <span class="gapText">,args,args</span> 
+                  							)   
+                  						
+               </div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemSolution"></div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck1.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck1.html_solution" onclick="solutionGaps('selfCheck1.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div>
+      </div>
+      <div id="d8e701.html" class="act">
+         <p class="paragraph" id="d8e702">
+            Pour ces exercices, nous vous demandons de comprendre des codes Java donnés. 
+            
+            <h4>Compréhension</h4>
+            <div id="selfCheck2.html" class="fillInBlanks">
+               <div class="itemQuestion">
+                  							  Que vont-ils afficher si à chaque fois les deux nombres lus au départ sont
+                  successivement 2 et 3 ?
+                  							
+               </div>
+               <div class="itemAnswer">
+                  <div class="itemLabel">
+                     <ul class="list" id="d8e709">
+                        <li class="itemAlt"><pre>
+import java.util.Scanner;
+public class Exercice1 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb1 + " " + nb2);
+    }
+}
+        </pre><input type="text" value="" class="itemText" id="_d8e713" style="width:25px" /> <span class="gapText">,2 3,2 3</span></li>
+                        <li class="item"><pre>
+import java.util.Scanner;
+public class Exercice2 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = 2*nb1 + nb2;
+        System.out.println(nb3);
+    }
+}
+									</pre></li>
+                        <li class="itemAlt"><pre>
+import java.util.Scanner;
+public class Exercice3 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb2/nb1);
+    }
+}
+        </pre><input type="text" value="" class="itemText" id="_d8e721" style="width:12px" /> <span class="gapText">,1,1</span></li>
+                        <li class="item"><pre>
+import java.util.Scanner;
+public class Exercice4 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        System.out.println(nb1%nb2);
+    }
+}
+        </pre><input type="text" value="" class="itemText" id="_d8e726" style="width:12px" /> <span class="gapText">,2,2</span></li>
+                        <li class="itemAlt"><pre>
+import java.util.Scanner;
+public class Exercice5 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        nb1 = clavier.nextInt();
+        nb1 = nb1 * nb1;
+        System.out.println(Math.sqrt(nb1));
+    }
+}
+        </pre><input type="text" value="" class="itemText" id="_d8e731" style="width:12px" /> <span class="gapText">,3,3</span></li>
+                     </ul>
+                  </div>
+                  <div class="itemHelp_disabled">    </div>
+               </div>
+               <div class="itemSolution"></div>
+               <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck2.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck2.html_solution" onclick="solutionGaps('selfCheck2.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+            </div>
+         </p>
+         <p class="paragraph" id="d8e734">Si vous n'avez pas répondu correctement à toutes les questions, 
+            <a class="link" href="../../../TDSeq/fr/html/Structure_learningObject2.html" rel="external" title="révisez ici">révisez ici</a></p>
+      </div>
+      <hr />
+      <div class="navigation_arrows"><a href="Structure_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 12.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/InitSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>
