@@ -169,10 +169,8 @@
 			\end{minipage}
         \end{sideways}}
             \begin{abstract}
-			Ce TD a pour but de 
-			
-            \par
-        
+			Ce TD a pour but de fixer les bases du LDA et de la programmation Java.
+		
             \par
         \end{abstract}
 				\vspace{-2em}\tableofcontents
@@ -676,7 +674,18 @@
 			\item le prix d'un produit en grande surface ? \textcolor{gray}{\underline{\hspace*{10em}}} 
 			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 					\end{itemize}
-				\subsection{D\'eclaration de variables en Java}
+				
+				  Une constante est une information pour laquelle nom, type et valeur sont fig\'es.
+          La liste des constantes utilis\'ees dans un algorithme apparaitra dans la section d\'eclaration des variables sous la forme suivante : 
+          \,\verb|constante PI = 3,14|\,\,\verb|constante ESI = "École Supérieure d’Informatique"|\,
+          Il est inutile de sp\'ecifier leur type, celui-ci \'etant d\'efini implicitement par la valeur de la constante.
+        
+            \par
+        
+          Le nom des constantes s'\'ecrit en majuscules.
+        
+            \par
+        \subsection{D\'eclaration de variables en Java}
           La \textbf{d\'eclaration} d'une variable est l'instruction qui d\'efinit son \textbf{nom} 
           et son \textbf{type}.
         
@@ -761,7 +770,18 @@
 			\item le prix d'un produit en grande surface ? \textcolor{gray}{\underline{\hspace*{10em}}} 
 			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 					\end{itemize}
-				\section{Op\'erateurs et expressions}
+				
+				    Une constante s'\'ecrit gr\^ace au mot cl\'e \verb@final@.
+            Par exemple,
+\begin{Java}
+final int X = 1;
+final int Y;
+Y = 2*X;
+X = 2; // Erreur : a une valeur
+Y = 3; // Idem
+\end{Java}
+            \par
+        \section{Op\'erateurs et expressions}
 				Les \textbf{op\'erateurs} agissent sur les \textbf{variables} 
 				et les \textbf{constantes} pour former des \textbf{expressions}. 
       
@@ -847,6 +867,68 @@
 				
 			\item \verb@/@ division enti\`ere si les deux op\'erandes sont entiers
 			\item \verb@%@ reste de la division enti\`ere
+					\end{itemize}
+				
+            \par
+        \subsection{Les op\'erateurs de comparaison en algo}
+          Ce sont des op\'erateurs tr\`es importants qui ne peuvent s'utiliser qu'avec des expressions num\'eriques ou des chaines :
+          
+					\begin{itemize}
+				
+			\item \verb@<@ inf\'erieur 
+			\item \verb@≤@ inf\'erieur ou \'egal 
+			\item \verb@>@ sup\'erieur 
+			\item \verb@≥@ sup\'erieur ou \'egal 
+					\end{itemize}
+				
+          Et il y a 2 op\'erateurs qui peuvent s'utiliser avec des expressions de tous les types :
+          
+					\begin{itemize}
+				
+			\item \verb@=@ \'egal 
+			\item \verb@<>@ ou \verb@≠@ diff\'erent 
+					\end{itemize}
+				
+            \par
+        \subsection{Les op\'erateurs de comparaison en Java}
+          Ce sont des op\'erateurs tr\`es importants qui ne peuvent s'utiliser qu'avec des expressions num\'eriques :
+          
+					\begin{itemize}
+				
+			\item \verb@<@ inf\'erieur 
+			\item \verb@<=@ inf\'erieur ou \'egal 
+			\item \verb@>@ sup\'erieur 
+			\item \verb@>=@ sup\'erieur ou \'egal 
+					\end{itemize}
+				
+          Et il y a 2 op\'erateurs qui peuvent s'utiliser avec des expressions de tous les types :
+          
+					\begin{itemize}
+				
+			\item \verb@==@ \'egal 
+			\item \verb@!=@ diff\'erent 
+					\end{itemize}
+				
+            \par
+        \subsection{Les op\'erateurs bool\'eens en algo}
+          Ce sont des op\'erateurs qui ne peuvent s'utiliser qu'avec des expressions bool\'eennes :
+          
+					\begin{itemize}
+				
+			\item \verb@ET@ et 
+			\item \verb@OU@ ou 
+			\item \verb@NON@ n\'egation 
+					\end{itemize}
+				
+            \par
+        \subsection{Les op\'erateurs bool\'eens en Java}
+          Ce sont des op\'erateurs tr\`es importants qui ne peuvent s'utiliser qu'avec des expressions bool\'eennes :
+          
+					\begin{itemize}
+				
+			\item \verb@&&@ et 
+			\item \verb@||@ ou 
+			\item \verb@!@ n\'egation 
 					\end{itemize}
 				
             \par
@@ -1132,8 +1214,8 @@ int nombre1 = clavier. nextInt ();
         \begin{Java}
 // Commentaire sur une ligne
 \end{Java}\begin{Java}
-  /∗ Commentaire sur
-  plusieurs lignes ∗/
+  /* Commentaire sur
+  plusieurs lignes */
 \end{Java}\section{Structure g\'en\'erale}
 				Voyons maintenant comment d\'emarrer les algo et le code Java.
       

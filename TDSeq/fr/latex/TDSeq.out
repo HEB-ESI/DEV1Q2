@@ -11,24 +11,28 @@
 \BOOKMARK [2][]{subsection.3.2}{3.2 Les op\351rateurs arithm\351tiques \351l\351mentaires en Java}{section.3}% 11
 \BOOKMARK [2][]{subsection.3.3}{3.3 Les op\351rateurs DIV et MOD en algo}{section.3}% 12
 \BOOKMARK [2][]{subsection.3.4}{3.4 Les op\351rateurs DIV et MOD en Java}{section.3}% 13
-\BOOKMARK [2][]{subsection.3.5}{3.5 Les fonctions math\351matiques complexes en algo}{section.3}% 14
-\BOOKMARK [2][]{subsection.3.6}{3.6 Les fonctions math\351matiques complexes en Java}{section.3}% 15
-\BOOKMARK [1][]{section.4}{4 L'affectation d'une valeur \340 une variable}{}% 16
-\BOOKMARK [2][]{subsection.4.1}{4.1 Affectation interne en algo}{section.4}% 17
-\BOOKMARK [2][]{subsection.4.2}{4.2 Affectation interne en Java}{section.4}% 18
-\BOOKMARK [2][]{subsection.4.3}{4.3 Affectation externe en algo}{section.4}% 19
-\BOOKMARK [2][]{subsection.4.4}{4.4 Affectation externe en Java}{section.4}% 20
-\BOOKMARK [2][]{subsection.4.5}{4.5 Communication des r\351sultats en algo}{section.4}% 21
-\BOOKMARK [2][]{subsection.4.6}{4.6 Communication des r\351sultats en Java}{section.4}% 22
-\BOOKMARK [1][]{section.5}{5 Documenter son code}{}% 23
-\BOOKMARK [2][]{subsection.5.1}{5.1 Documenter son algorithme}{section.5}% 24
-\BOOKMARK [2][]{subsection.5.2}{5.2 Documenter son code Java}{section.5}% 25
-\BOOKMARK [1][]{section.6}{6 Structure g\351n\351rale}{}% 26
-\BOOKMARK [2][]{subsection.6.1}{6.1 Structure g\351n\351rale d'un algorithme}{section.6}% 27
-\BOOKMARK [2][]{subsection.6.2}{6.2 Structure g\351n\351rale d'un programme Java}{section.6}% 28
-\BOOKMARK [1][]{section.7}{7 Compiler et ex\351cuter un programme Java}{}% 29
-\BOOKMARK [2][]{subsection.7.1}{7.1 Java est un langage compil\351 puis interpr\351t\351}{section.7}% 30
-\BOOKMARK [1][]{section.8}{8 Exercices}{}% 31
-\BOOKMARK [2][]{subsection.8.1}{8.1 Compr\351hension d'algorithme}{section.8}% 32
-\BOOKMARK [2][]{subsection.8.2}{8.2 Compr\351hension de codes Java}{section.8}% 33
-\BOOKMARK [2][]{subsection.8.3}{8.3 \300 vous de jouer...}{section.8}% 34
+\BOOKMARK [2][]{subsection.3.5}{3.5 Les op\351rateurs de comparaison en algo}{section.3}% 14
+\BOOKMARK [2][]{subsection.3.6}{3.6 Les op\351rateurs de comparaison en Java}{section.3}% 15
+\BOOKMARK [2][]{subsection.3.7}{3.7 Les op\351rateurs bool\351ens en algo}{section.3}% 16
+\BOOKMARK [2][]{subsection.3.8}{3.8 Les op\351rateurs bool\351ens en Java}{section.3}% 17
+\BOOKMARK [2][]{subsection.3.9}{3.9 Les fonctions math\351matiques complexes en algo}{section.3}% 18
+\BOOKMARK [2][]{subsection.3.10}{3.10 Les fonctions math\351matiques complexes en Java}{section.3}% 19
+\BOOKMARK [1][]{section.4}{4 L'affectation d'une valeur \340 une variable}{}% 20
+\BOOKMARK [2][]{subsection.4.1}{4.1 Affectation interne en algo}{section.4}% 21
+\BOOKMARK [2][]{subsection.4.2}{4.2 Affectation interne en Java}{section.4}% 22
+\BOOKMARK [2][]{subsection.4.3}{4.3 Affectation externe en algo}{section.4}% 23
+\BOOKMARK [2][]{subsection.4.4}{4.4 Affectation externe en Java}{section.4}% 24
+\BOOKMARK [2][]{subsection.4.5}{4.5 Communication des r\351sultats en algo}{section.4}% 25
+\BOOKMARK [2][]{subsection.4.6}{4.6 Communication des r\351sultats en Java}{section.4}% 26
+\BOOKMARK [1][]{section.5}{5 Documenter son code}{}% 27
+\BOOKMARK [2][]{subsection.5.1}{5.1 Documenter son algorithme}{section.5}% 28
+\BOOKMARK [2][]{subsection.5.2}{5.2 Documenter son code Java}{section.5}% 29
+\BOOKMARK [1][]{section.6}{6 Structure g\351n\351rale}{}% 30
+\BOOKMARK [2][]{subsection.6.1}{6.1 Structure g\351n\351rale d'un algorithme}{section.6}% 31
+\BOOKMARK [2][]{subsection.6.2}{6.2 Structure g\351n\351rale d'un programme Java}{section.6}% 32
+\BOOKMARK [1][]{section.7}{7 Compiler et ex\351cuter un programme Java}{}% 33
+\BOOKMARK [2][]{subsection.7.1}{7.1 Java est un langage compil\351 puis interpr\351t\351}{section.7}% 34
+\BOOKMARK [1][]{section.8}{8 Exercices}{}% 35
+\BOOKMARK [2][]{subsection.8.1}{8.1 Compr\351hension d'algorithme}{section.8}% 36
+\BOOKMARK [2][]{subsection.8.2}{8.2 Compr\351hension de codes Java}{section.8}% 37
+\BOOKMARK [2][]{subsection.8.3}{8.3 \300 vous de jouer...}{section.8}% 38

@@ -5,10 +5,7 @@
 	
 	<entry>
 		<paragraph>
-			Ce TD a pour but de 
-			<paragraph>
-			    <!--multimedia src="../image/**.jpeg" type="jpeg" /-->
-        </paragraph>
+			Ce TD a pour but de fixer les bases du LDA et de la programmation Java.
 		</paragraph>
 	</entry>
 	
@@ -330,9 +327,7 @@
             <item>il prend 1 octet en mémoire.</item>
           </list>
         </paragraph>
-      </clarify>
-      
-      
+        
         <paragraph title="Les types références prédéfinis : les chaines de caractères" icon="important" />
         <paragraph>
 			    <formatted style="code">String</formatted>
@@ -342,7 +337,7 @@
             <item> Attention <formatted style="code">char</formatted> ≠ <formatted style="code">String</formatted></item>
           </list>
         </paragraph>
-        
+        </clarify>
       </learningObject>
       
       
@@ -445,6 +440,19 @@
 						</fillInBlanks>
 					</selfCheck>
 				</act>
+				
+				<clarify>
+				<paragraph>
+				  Une constante est une information pour laquelle nom, type et valeur sont figés.
+          La liste des constantes utilisées dans un algorithme apparaitra dans la section déclaration des variables sous la forme suivante : 
+          <formatted style="input">constante PI = 3,14</formatted>  
+          <formatted style="input">constante ESI = "École Supérieure d’Informatique"</formatted>
+          Il est inutile de spécifier leur type, celui-ci étant défini implicitement par la valeur de la constante.
+        </paragraph>
+        <paragraph>
+          Le nom des constantes s'écrit en majuscules.
+        </paragraph>
+				</clarify>
       </learningObject>
 	
 			<learningObject title="Déclaration de variables en Java">
@@ -525,6 +533,20 @@
 						</fillInBlanks>
 					</selfCheck>
 				</act>
+				
+				<clarify>
+				  <paragraph>
+				    Une constante s’écrit grâce au mot clé <formatted style="code">final</formatted>.
+            Par exemple,
+<paragraph cssClass="java">
+final int X = 1;
+final int Y;
+Y = 2*X;
+X = 2; // Erreur : a une valeur
+Y = 3; // Idem
+</paragraph>
+				  </paragraph>
+				</clarify>
       </learningObject>
 	</unit>
 	
@@ -623,6 +645,74 @@
           <list listStyle="unordered">
             <item><formatted style="code">/</formatted> division entière si les deux opérandes sont entiers</item>
             <item><formatted style="code">%</formatted> reste de la division entière</item>
+          </list>
+        </paragraph>
+        </clarify>
+      </learningObject>
+      
+      
+      <learningObject title="Les opérateurs de comparaison en algo">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          Ce sont des opérateurs très importants qui ne peuvent s’utiliser qu’avec des expressions numériques ou des chaines :
+          <list listStyle="unordered">
+            <item><formatted style="code"><![CDATA[<]]></formatted> inférieur </item>
+            <item><formatted style="code"><![CDATA[≤]]></formatted> inférieur ou égal </item>
+            <item><formatted style="code"><![CDATA[>]]></formatted> supérieur </item>
+            <item><formatted style="code"><![CDATA[≥]]></formatted> supérieur ou égal </item></list>
+          Et il y a 2 opérateurs qui peuvent s’utiliser avec des expressions de tous les types :
+          <list listStyle="unordered">
+            <item><formatted style="code"><![CDATA[=]]></formatted> égal </item>
+            <item><formatted style="code"><![CDATA[<>]]></formatted> ou <formatted style="code"><![CDATA[≠]]></formatted> différent </item>
+          </list>
+        </paragraph>
+        </clarify>
+      </learningObject>
+      
+      <learningObject title="Les opérateurs de comparaison en Java">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          Ce sont des opérateurs très importants qui ne peuvent s’utiliser qu’avec des expressions numériques :
+          <list listStyle="unordered">
+            <item><formatted style="code"><![CDATA[<]]></formatted> inférieur </item>
+            <item><formatted style="code"><![CDATA[<=]]></formatted> inférieur ou égal </item>
+            <item><formatted style="code"><![CDATA[>]]></formatted> supérieur </item>
+            <item><formatted style="code"><![CDATA[>=]]></formatted> supérieur ou égal </item>
+          </list>
+          Et il y a 2 opérateurs qui peuvent s’utiliser avec des expressions de tous les types :
+          <list listStyle="unordered">
+            <item><formatted style="code"><![CDATA[==]]></formatted> égal </item>
+            <item><formatted style="code"><![CDATA[!=]]></formatted> différent </item>
+          </list>
+        </paragraph>
+        </clarify>
+      </learningObject>
+      
+      <learningObject title="Les opérateurs booléens en algo">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          Ce sont des opérateurs qui ne peuvent s’utiliser qu’avec des expressions booléennes :
+          <list listStyle="unordered">
+            <item><formatted style="code">ET</formatted> et </item>
+            <item><formatted style="code">OU</formatted> ou </item>
+            <item><formatted style="code">NON</formatted> négation </item>
+          </list>
+        </paragraph>
+        </clarify>
+      </learningObject>
+      
+      <learningObject title="Les opérateurs booléens en Java">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          Ce sont des opérateurs très importants qui ne peuvent s’utiliser qu’avec des expressions booléennes :
+          <list listStyle="unordered">
+            <item><formatted style="code"><![CDATA[&&]]></formatted> et </item>
+            <item><formatted style="code"><![CDATA[||]]></formatted> ou </item>
+            <item><formatted style="code"><![CDATA[!]]></formatted> négation </item>
           </list>
         </paragraph>
         </clarify>
@@ -935,8 +1025,8 @@ int nombre1 = clavier. nextInt ();
 // Commentaire sur une ligne
 </paragraph>
       <paragraph cssClass="java">
-  /∗ Commentaire sur
-  plusieurs lignes ∗/
+  /* Commentaire sur
+  plusieurs lignes */
 </paragraph>
     </clarify>
     </learningObject>

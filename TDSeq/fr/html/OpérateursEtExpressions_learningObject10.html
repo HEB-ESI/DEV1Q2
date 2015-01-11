@@ -5,11 +5,11 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <meta http-equiv="Content-Style-Type" content="text/css" />
-      <meta name="description" content="TD Séquentiel - Rappels de base: Les opérateurs DIV et MOD en algo. " />
+      <meta name="description" content="TD Séquentiel - Rappels de base: Les fonctions mathématiques complexes en Java. " />
       <meta name="copyright" content="" />
       <meta name="author" content="" />
       <meta name="keywords" content="TD Séquentiel - Rappels de base, eLML" />
-      <title>1.3.3. Les opérateurs DIV et MOD en algo</title>
+      <title>1.3.10. Les fonctions mathématiques complexes en Java</title>
       <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
          <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
@@ -21,14 +21,14 @@
                <li class="navigationLink"><a href="unit_Op%C3%A9rateursEtExpressions.html">1.3. Opérateurs et expressions</a><ul class="navigation nav_lo">
                      <li class="navigationLink"><a href="Op%C3%A9rateursEtExpressions_learningObject1.html">1.3.1. Les opérateurs arithmétiques élémentaires en algo</a></li>
                      <li class="navigationLink"><a href="Op%C3%A9rateursEtExpressions_learningObject2.html">1.3.2. Les opérateurs arithmétiques élémentaires en Java</a></li>
-                     <li class="navigationActual"><strong>1.3.3. Les opérateurs DIV et MOD en algo</strong></li>
+                     <li class="navigationLink"><a href="Op%C3%A9rateursEtExpressions_learningObject3.html">1.3.3. Les opérateurs DIV et MOD en algo</a></li>
                      <li class="navigationLink"><a href="Op%C3%A9rateursEtExpressions_learningObject4.html">1.3.4. Les opérateurs DIV et MOD en Java</a></li>
                      <li class="navigationLink"><a href="Op%C3%A9rateursEtExpressions_learningObject5.html">1.3.5. Les opérateurs de comparaison en algo</a></li>
                      <li class="navigationLink"><a href="Op%C3%A9rateursEtExpressions_learningObject6.html">1.3.6. Les opérateurs de comparaison en Java</a></li>
                      <li class="navigationLink"><a href="Op%C3%A9rateursEtExpressions_learningObject7.html">1.3.7. Les opérateurs booléens en algo</a></li>
                      <li class="navigationLink"><a href="Op%C3%A9rateursEtExpressions_learningObject8.html">1.3.8. Les opérateurs booléens en Java</a></li>
                      <li class="navigationLink"><a href="Op%C3%A9rateursEtExpressions_learningObject9.html">1.3.9. Les fonctions mathématiques complexes en algo</a></li>
-                     <li class="navigationLink"><a href="Op%C3%A9rateursEtExpressions_learningObject10.html">1.3.10. Les fonctions mathématiques complexes en Java</a></li>
+                     <li class="navigationActual"><strong>1.3.10. Les fonctions mathématiques complexes en Java</strong></li>
                   </ul>
                </li>
                <li class="navigationLink"><a href="unit_Affectation.html">1.4. L’affectation d’une valeur à une variable</a></li>
@@ -39,22 +39,27 @@
             </ul>
          </li>
       </ul>
-      <div class="navigation_arrows"><a href="Op%C3%A9rateursEtExpressions_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Op%C3%A9rateursEtExpressions_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="OpérateursEtExpressions_learningObject3.html">1.3.3. Les opérateurs DIV et MOD en algo</h1>
-      <div id="d8e865.html" class="clarify">
-         <p class="paragraph" id="d8e866">
-            Ce sont deux opérateurs très importants qui ne peuvent s’utiliser qu’avec des variables
-            entières :
+      <div class="navigation_arrows"><a href="Op%C3%A9rateursEtExpressions_learningObject9.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Affectation.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="OpérateursEtExpressions_learningObject10.html">1.3.10. Les fonctions mathématiques complexes en Java</h1>
+      <div id="d8e1012.html" class="clarify">
+         <p class="paragraph" id="d8e1013">
+            L'essentiel des fonctions mathématiques se trouvent dans la classe Math.
             
-            <ul class="list" id="d8e868">
-               <li class="itemAlt"><code>DIV</code> division entière
+            <ul class="list" id="d8e1015">
+               <li class="itemAlt"><code>Math.pow(a,b)</code> est l'élévation à la puissance aˆb
                </li>
-               <li class="item"><code>MOD</code> reste de la division entière
+               <li class="item"><code>Math.sqrt(x)</code> est la racine carrée d’une variable x, √x . Attention, pour ce dernier, de veiller
+                  à ne l’utiliser qu’avec un radicant positif, sinon, une exception sera générée !
+               </li>
+               <li class="itemAlt">Si nécessaire, les autres fonctions mathématiques <code>Math.sin(x)</code>, 
+                  <code>Math.tan(x)</code>, <code>Math.log(x)</code>, <code>Math.exp(x)</code>. . .
+               </li>
+               <li class="item">Toutes les informations se trouvent dans l'<a class="link" href="http://docs.oracle.com/javase/8/docs/api/" target="_blank" rel="external" title="API">API</a>, à la classe Math.
                </li>
             </ul>
          </p>
       </div>
       <hr />
-      <div class="navigation_arrows"><a href="Op%C3%A9rateursEtExpressions_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Op%C3%A9rateursEtExpressions_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <div class="navigation_arrows"><a href="Op%C3%A9rateursEtExpressions_learningObject9.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Affectation.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
       <p class="footer"> Update: 12.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>
