@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="InitAlt" title="TD Alternatives">
+	
+	<entry>
+		<paragraph>
+			Ces exercices ont pour but de vérifier que vous avez fixé les structures alternatives qui permettent de conditionner
+      des parties d’algorithmes, de code.
+		</paragraph>
+	</entry>
+	
+	<!-- =========================================================== -->
+	<unit label="Alternatives" title="Alternatives">
+	<!-- =========================================================== -->
+    
+    <learningObject title="À vous de jouer...">
+    <!-- ============================================================ -->
+      <act>
+      
+        <paragraph>
+        Écrivez les algorithmes et codez les programmes Java correspondant qui répondent aux questions suivantes :
+        <list listStyle="unordered">
+            <item>
+              À Bruxelles, lors de chaque projection cinématographique, une taxe de 0,5 euro 
+              est prélevée sur le prix du billet de chaque spectateur.
+              Écrivez un module qui lit le nombre de spectateurs et qui affiche le prix de la taxe à payer.
+            </item>
+            <item>
+              Dans ma commune, les taxes communales des enlèvements des immondices s’élèvent à
+              <list listStyle="unordered">
+                <item>80 euros pour une personne isolée ;</item>
+                <item>135 euros pour une famille de 2 ou 3 personnes ;</item>
+                <item>175 euros pour une famille de 4 personnes ou plus.</item>
+              </list>
+              Écrivez un module qui lit le nombre de personnes composant la famille et qui affiche le prix de la taxe à payer.
+            </item>
+          </list>
+        </paragraph>
+      </act>
+    </learningObject>
+  </unit>
+	
+	<!--metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>1</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2013 - 2014</version>
+				<contribute>
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata-->
+
+</lesson>
