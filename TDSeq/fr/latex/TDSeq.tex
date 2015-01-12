@@ -921,6 +921,59 @@ Y = 3; // Idem
 					\end{itemize}
 				
             \par
+        
+            On d\'efinit deux modes d'\'evaluation des op\'erateurs ET et OU :
+          
+            \par
+        
+          L'\'evaluation compl\`ete :
+          pour connaitre la valeur de cond1 ET cond2 (respectivement cond1 OU cond2), les deux
+          conditions sont chacune \'evalu\'ees, apr\`es quoi on \'evalue la valeur de v\'erit\'e de l'ensemble de
+          l'expression.
+          
+            \par
+        
+          L'\'evaluation court-circuit\'ee :
+          dans un premier temps, seule la premi\`ere condition est test\'ee. 
+          
+            \par
+        
+          Dans le cas du ET, si cond1 s'av\`ere faux, il est inutile d'\'evaluer cond2 puisque le r\'esultat sera faux de toute fa\c con ;
+          l'\'evaluation de cond2 et de l'ensemble de la conjonction ne se fera que si cond1 est vrai.
+          
+            \par
+        
+          De m\^eme, dans le cas du OU, si cond1 s'av\`ere vrai, il est inutile d'\'evaluer cond2 puisque le
+          r\'esultat sera vrai de toute fa\c con ; l'\'evaluation de cond2 et de l'ensemble de la disjonction
+          ne se fera que si cond1 est faux.
+          
+            \par
+        
+          Dans le cadre de ce cours, nous opterons pour la deuxi\`eme interpr\'etation. 
+          
+            \par
+        
+          Montrons son avantage sur un exemple. 
+          
+            \par
+        
+          Consid\'erons l'expression n ≠ 0 ET m/n > 10. Si on teste sa valeur
+          de v\'erit\'e avec une valeur de n non nulle, la premi\`ere condition est vraie et le r\'esultat de
+          la conjonction d\'ependra de la valeur de la deuxi\`eme condition. Supposons \`a pr\'esent que n
+          soit nul. L'\'evaluation court-circuit\'ee donne le r\'esultat faux imm\'ediatement apr\`es test de la
+          premi\`ere condition sans \'evaluer la seconde, tandis que l'\'evaluation compl\`ete entrainerait un
+          arr\^et de l'algorithme pour cause de division par 0 !
+          
+            \par
+        
+          Notez que l'\'evaluation court-circuit\'ee a pour cons\'equence la non-commutativit\'e du ET et
+          du OU : cond1 ET cond2 n'est donc pas \'equivalent \`a cond2 ET cond1, puisque l'ordre des
+          \'evaluations des deux conditions entre en jeu. Nous conseillons cependant de limiter les cas
+          d'utilisation de l'\'evaluation court-circuit\'ee et d'opter pour des expressions dont l'\'evalua-
+          tion serait similaire dans les deux cas. La justification d'utiliser l'\'evaluation court-circuit\'ee
+          apparaitra dans plusieurs exemples tout au long du cours.
+          
+            \par
         \subsection{Les op\'erateurs bool\'eens en Java}
           Ce sont des op\'erateurs tr\`es importants qui ne peuvent s'utiliser qu'avec des expressions bool\'eennes :
           

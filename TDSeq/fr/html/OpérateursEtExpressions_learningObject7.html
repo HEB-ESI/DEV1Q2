@@ -55,6 +55,74 @@
             </ul>
          </p>
       </div>
+      <div id="d8e976.html" class="clarify">
+         <p class="paragraph" id="d8e977">
+            On définit deux modes d’évaluation des opérateurs ET et OU :
+            
+         </p>
+         <p class="paragraph" id="d8e979">
+            L’évaluation complète :
+            pour connaitre la valeur de cond1 ET cond2 (respectivement cond1 OU cond2), les deux
+            conditions sont chacune évaluées, après quoi on évalue la valeur de vérité de l’ensemble
+            de
+            l’expression.
+            
+         </p>
+         <p class="paragraph" id="d8e981">
+            L’évaluation court-circuitée :
+            dans un premier temps, seule la première condition est testée. 
+            
+         </p>
+         <p class="paragraph" id="d8e983">
+            Dans le cas du ET, si cond1 s’avère faux, il est inutile d’évaluer cond2 puisque le
+            résultat sera faux de toute façon ;
+            l’évaluation de cond2 et de l’ensemble de la conjonction ne se fera que si cond1 est
+            vrai.
+            
+         </p>
+         <p class="paragraph" id="d8e985">
+            De même, dans le cas du OU, si cond1 s’avère vrai, il est inutile d’évaluer cond2
+            puisque le
+            résultat sera vrai de toute façon ; l’évaluation de cond2 et de l’ensemble de la disjonction
+            ne se fera que si cond1 est faux.
+            
+         </p>
+         <p class="paragraph" id="d8e987">
+            Dans le cadre de ce cours, nous opterons pour la deuxième interprétation. 
+            
+         </p>
+         <p class="paragraph" id="d8e989">
+            Montrons son avantage sur un exemple. 
+            
+         </p>
+         <p class="paragraph" id="d8e991">
+            Considérons l’expression n ≠ 0 ET m/n &gt; 10. Si on teste sa valeur
+            de vérité avec une valeur de n non nulle, la première condition est vraie et le résultat
+            de
+            la conjonction dépendra de la valeur de la deuxième condition. Supposons à présent
+            que n
+            soit nul. L’évaluation court-circuitée donne le résultat faux immédiatement après
+            test de la
+            première condition sans évaluer la seconde, tandis que l’évaluation complète entrainerait
+            un
+            arrêt de l’algorithme pour cause de division par 0 !
+            
+         </p>
+         <p class="paragraph" id="d8e993">
+            Notez que l’évaluation court-circuitée a pour conséquence la non-commutativité du
+            ET et
+            du OU : cond1 ET cond2 n’est donc pas équivalent à cond2 ET cond1, puisque l’ordre
+            des
+            évaluations des deux conditions entre en jeu. Nous conseillons cependant de limiter
+            les cas
+            d’utilisation de l’évaluation court-circuitée et d’opter pour des expressions dont
+            l’évalua-
+            tion serait similaire dans les deux cas. La justification d’utiliser l’évaluation
+            court-circuitée
+            apparaitra dans plusieurs exemples tout au long du cours.
+            
+         </p>
+      </div>
       <hr />
       <div class="navigation_arrows"><a href="Op%C3%A9rateursEtExpressions_learningObject6.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Op%C3%A9rateursEtExpressions_learningObject8.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
       <p class="footer"> Update: 12.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>

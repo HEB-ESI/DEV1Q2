@@ -702,6 +702,52 @@ Y = 3; // Idem
           </list>
         </paragraph>
         </clarify>
+        <clarify>
+          <paragraph>
+            On définit deux modes d’évaluation des opérateurs ET et OU :
+          </paragraph>
+          <paragraph>
+          L’évaluation complète :
+          pour connaitre la valeur de cond1 ET cond2 (respectivement cond1 OU cond2), les deux
+          conditions sont chacune évaluées, après quoi on évalue la valeur de vérité de l’ensemble de
+          l’expression.
+          </paragraph>
+          <paragraph>
+          L’évaluation court-circuitée :
+          dans un premier temps, seule la première condition est testée. 
+          </paragraph>
+          <paragraph>
+          Dans le cas du ET, si cond1 s’avère faux, il est inutile d’évaluer cond2 puisque le résultat sera faux de toute façon ;
+          l’évaluation de cond2 et de l’ensemble de la conjonction ne se fera que si cond1 est vrai.
+          </paragraph>
+          <paragraph>
+          De même, dans le cas du OU, si cond1 s’avère vrai, il est inutile d’évaluer cond2 puisque le
+          résultat sera vrai de toute façon ; l’évaluation de cond2 et de l’ensemble de la disjonction
+          ne se fera que si cond1 est faux.
+          </paragraph>
+          <paragraph>
+          Dans le cadre de ce cours, nous opterons pour la deuxième interprétation. 
+          </paragraph>
+          <paragraph>
+          Montrons son avantage sur un exemple. 
+          </paragraph>
+          <paragraph>
+          Considérons l’expression n ≠ 0 ET m/n > 10. Si on teste sa valeur
+          de vérité avec une valeur de n non nulle, la première condition est vraie et le résultat de
+          la conjonction dépendra de la valeur de la deuxième condition. Supposons à présent que n
+          soit nul. L’évaluation court-circuitée donne le résultat faux immédiatement après test de la
+          première condition sans évaluer la seconde, tandis que l’évaluation complète entrainerait un
+          arrêt de l’algorithme pour cause de division par 0 !
+          </paragraph>
+          <paragraph>
+          Notez que l’évaluation court-circuitée a pour conséquence la non-commutativité du ET et
+          du OU : cond1 ET cond2 n’est donc pas équivalent à cond2 ET cond1, puisque l’ordre des
+          évaluations des deux conditions entre en jeu. Nous conseillons cependant de limiter les cas
+          d’utilisation de l’évaluation court-circuitée et d’opter pour des expressions dont l’évalua-
+          tion serait similaire dans les deux cas. La justification d’utiliser l’évaluation court-circuitée
+          apparaitra dans plusieurs exemples tout au long du cours.
+          </paragraph>
+        </clarify>
       </learningObject>
       
       <learningObject title="Les opérateurs booléens en Java">
