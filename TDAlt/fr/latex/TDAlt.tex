@@ -1,0 +1,727 @@
+\documentclass[11pt,a4paper]{article}
+			\usepackage[french]{babel}
+					
+				\usepackage{pifont}  
+				\usepackage[utf8x]{inputenc}
+				\usepackage[T1]{fontenc} 
+				\usepackage{lmodern}			
+				\usepackage{fancyhdr}
+				\usepackage{textcomp}
+				\usepackage{makeidx}
+				\usepackage{tabularx}
+				\usepackage{multicol}
+				\usepackage{multirow}
+				\usepackage{longtable}
+				\usepackage{color}
+				\usepackage{soul}
+				\usepackage{boxedminipage}
+				\usepackage{shadow}
+				\usepackage{framed}			
+				\usepackage{array}
+				\usepackage{url}
+				\usepackage{ragged2e}
+				\usepackage{fancybox}
+				\newcommand{\cadretitre}[2]{
+				  \vspace*{0.8\baselineskip}
+				  \begin{center}%
+				  \boxput*(0,1){%
+					%\colorbox{white}{\Large\textbf{\ #1\ }}%
+				  }%
+				  {%
+					\setlength{\fboxsep}{10pt}%
+				    \Ovalbox{\begin{minipage}{.8\linewidth}\begin{center}\Large\sffamily{#2}\end{center}\end{minipage}}}%
+				  \end{center}
+				  \vspace*{2\baselineskip}
+				  }
+			
+			\makeatletter
+			\def\@seccntformat#1{\protect\makebox[0pt][r]{\csname the#1\endcsname\quad}}
+			\makeatother
+
+				% Permet d'afficher qqchose à une positin absolue
+				\usepackage[absolute]{textpos}
+				\setlength{\TPHorizModule}{1cm}
+				\setlength{\TPVertModule}{\TPHorizModule}
+	
+				\usepackage[titles]{tocloft}
+				\setlength{\cftbeforesecskip}{0.5ex}
+				\setlength{\cftbeforesubsecskip}{0.2ex}
+				\addto\captionsfrench{\renewcommand\contentsname{}}
+				
+				\usepackage[font=scriptsize]{caption}
+				
+				\usepackage{listings}
+\lstdefinestyle{lstverb}
+  {
+    basicstyle=\footnotesize,
+    frameround=tttt, frame=trbl, framerule=0pt, rulecolor=\color{gray},
+    lineskip=-1pt,   % pour rapprocher les lignes
+    flexiblecolumns, escapechar=\\,
+    tabsize=4, extendedchars=true
+  }
+\lstnewenvironment{Java}[1][]{\lstset{style=lstverb,language=java,#1}}{}
+				\ifx\pdfoutput\undefined
+					\usepackage{graphicx}
+				\else
+					\usepackage[pdftex]{graphicx}
+				\fi
+				\usepackage[a4paper, hyperfigures=true, colorlinks, linkcolor=black, citecolor=blue,urlcolor=blue, pagebackref=true, bookmarks=true, bookmarksopen=true,bookmarksnumbered=true,
+                pdfauthor={}, pdftitle={TD Alternatives}, pdfkeywords={TD Alternatives, },pdfpagemode=UseOutlines,pdfpagetransition=Dissolve,nesting=true,
+				backref, pdffitwindow=true, bookmarksnumbered=true]{hyperref}
+				\usepackage{supertabular}
+				\usepackage[table]{xcolor}
+				\usepackage{url}
+				\usepackage{caption} 
+				\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+				\setlength{\parindent}{0pt}
+				
+				\makeatletter
+				\def\url@leostyle{ \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\footnotesize\ttfamily}}}
+				\makeatother
+				\urlstyle{leo}
+				
+				\definecolor{examplecolor}{rgb}{0.156,0.333,0.443}
+				\definecolor{definitioncolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{exercisecolor}{rgb}{0.49,0.639,0}
+				\definecolor{hintcolor}{rgb}{0.941,0.674,0.196}
+				\definecolor{tableHeadercolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{tablerowAltcolor}{rgb}{.866,.905,.737}
+				\definecolor{tablerowAlt2color}{rgb}{.968,.976,.933}
+				\definecolor{verylightgray}{rgb}{0.98,0.98,0.98}
+				
+				\newenvironment{fshaded}{
+				\def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}
+				\MakeFramed {\FrameRestore}}
+				{\endMakeFramed}
+				
+				\newenvironment{fexample}[1][]{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.156,.333,.443}
+				\begin{fshaded}}{\end{fshaded}} 
+				
+				\newenvironment{fdefinition}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.709,.784,.454}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fexercise}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.49,.639,0}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fhint}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.941,.674,.196}
+				\begin{fshaded}}{\end{fshaded}}	
+				
+				\newcommand{\PreserveBackslash}[1]{
+				\let\temp=\\#1\let\\=\temp
+				}
+				\let\PBS=\PreserveBackslash
+				\newcolumntype{A}{>{\PBS\raggedright\small\hspace{0pt}}X}
+				\newcolumntype{L}[1]{>{\PBS\raggedright\small\hspace{0pt}}p{#1}}
+				\newcolumntype{R}[1]{>{\PBS\raggedleft\small\hspace{0pt}}p{#1}}
+				\newcolumntype{C}[1]{>{\PBS\centering\small\hspace{0pt}}p{#1}}
+				
+				\makeindex
+				
+				\title{TD Alternatives}	
+			\date{}
+			\author{\scriptsize{}}
+			\definecolor{light-gray}{gray}{0.8}
+			\renewcommand{\headrulewidth}{0pt}
+			\fancyhead[L]{
+				\footnotesize\textsc{Haute \'Ecole de Bruxelles}\\
+	    			\footnotesize\textsc{\'Ecole Sup\'erieure d'Informatique}
+			}
+			\fancyhead[R]{
+				\footnotesize{Bachelor en Informatique}\\
+				\footnotesize{Laboratoires Java} - 
+			\footnotesize{1\`ere ann\'ee}}
+				\fancyfoot[L]{ }
+				\fancyfoot[C]{}
+				\fancyfoot[R]{\scriptsize{\textcolor{gray}{version 2014-2015 (\today)}}}
+				\pagestyle{plain}
+				\reversemarginpar
+				\usepackage{rotating}						
+				\begin{document}
+					\begin{textblock}{9}(2,3.2)
+						\includegraphics[width=2cm]{../../../_templates/java/icons/logo-esi}
+					\end{textblock}
+				
+				
+				
+				
+				%\maketitle
+				\cadretitre{TD1}{TD Alternatives}
+				\thispagestyle{fancy}
+        \marginpar{\begin{sideways}
+            \begin{minipage}[t]{1cm}
+            \begin{tiny}
+            \includegraphics[width=1\linewidth,height=1\textheight,keepaspectratio=true]{../../../_templates/java/icons/cc-gris.jpg}
+			\end{tiny}
+			\end{minipage}
+            \begin{minipage}[b]{19cm}
+            \begin{tiny}
+            \textcolor{gray}{Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique 
+            (\texttt{http://creativecommons.org/licenses/by-sa/2.0/be/})
+			\vspace{-1em}
+			\\Les autorisations au-delà du champ de cette licence peuvent être obtenues à 
+			\texttt{http://www.heb.be/esi}
+			- \texttt{mcodutti@heb.be}
+			}\end{tiny}
+			\end{minipage}
+        \end{sideways}}
+            \begin{abstract}
+			Ce TD a pour but d'aborder les structures alternatives qui permettent de conditionner
+      des parties d'algorithmes, de code. Elles ne seront ex\'ecut\'ees que si une condition est satisfaite.
+		
+            \par
+        \end{abstract}
+				\vspace{-2em}\tableofcontents
+				\pagestyle{plain}
+            \clearpage
+            \fancyhead[L,C,R]{}
+            \fancyfoot[L,C]{}
+            \fancyfoot[R]{ \scriptsize{\textcolor{gray}{
+				TDAlt - page \thepage}}}
+				\thispagestyle{fancy}
+				\pagestyle{fancy}
+	   
+            \section{si - alors - sinon}Cette structure permet d'ex\'ecuter une partie de code 
+    ou une autre en fonction de la valeur de v\'erit\'e d'une condition.\subsection{si-alors-fin si}En pseudo-code :
+            \par
+        \begin{verbatim}
+si condition alors
+      // instructions à réaliser si la condition est VRAIE
+fin si
+      \end{verbatim}
+        La \textbf{condition} est une expression d\'elivrant un r\'esultat 
+        \textbf{bool\'een} (vrai ou faux) ; elle associe
+        des variables, constantes, expressions arithm\'etiques, au moyen des op\'erateurs logiques ou de
+        comparaison. En particulier, cette condition peut \^etre r\'eduite \`a une seule variable bool\'eenne.
+      
+            \par
+        
+        Dans cette structure, lorsque la \textbf{condition est vraie}, il y a ex\'ecution 
+        de la s\'equence d'instructions contenue entre les mots \textbf{alors} 
+        et \textbf{fin si} ; ensuite, l'algorithme continue de fa\c con
+        s\'equentielle.
+      
+            \par
+        
+        Lorsque la \textbf{condition est fausse}, 
+        les instructions se trouvant entre \textbf{alors} 
+        et \textbf{fin si} sont tout simplement \textbf{ignor\'ees}.
+      
+            \par
+        \begin{verbatim}
+module Test
+    nombre1 : entier
+    lire nombre1 
+    si (nombre1 < 0) alors
+      afficher nombre1, " est négatif"
+    fin si
+fin module
+    \end{verbatim}En Java :
+            \par
+        \begin{Java}
+if (condition) { 
+      // instructions si la condition est VRAIE
+}
+      \end{Java}
+        La \textbf{condition} est une expression d\'elivrant un r\'esultat 
+        \textbf{bool\'een} (true ou false) ; elle associe
+        des variables, constantes, expressions arithm\'etiques, au moyen des op\'erateurs logiques ou de
+        comparaison. En particulier, cette condition peut \^etre r\'eduite \`a une seule variable bool\'eenne.
+      
+            \par
+        
+        Dans cette structure, lorsque la \textbf{condition est vraie}, il y a ex\'ecution 
+        de la s\'equence d'instructions contenue entre les mots \textbf{{} 
+        et \textbf{}} ; ensuite, l'algorithme continue de fa\c con
+        s\'equentielle.
+      
+            \par
+        
+        Lorsque la \textbf{condition est fausse}, 
+        les instructions se trouvant entre \textbf{{} 
+        et \textbf{}} sont tout simplement \textbf{ignor\'ees}.
+      
+            \par
+        \begin{Java}
+import java. util .Scanner;
+public class Test {
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      int nombre1;
+      nombre1 = clavier. nextInt ();
+      if (nombre1 < 0) {
+        System.out.println (nombre1 + " est negatif");
+      }
+    }
+}
+    \end{Java}\subsection{si-alors-sinon-fin si}En pseudo-code :
+            \par
+        \begin{verbatim}
+si condition alors
+      // instructions à réaliser si la condition est VRAIE
+sinon
+      // instructions à réaliser si la condition est FAUSSE
+fin si
+      \end{verbatim}
+        Dans cette structure, une et une seule des deux s\'equences est ex\'ecut\'ee.
+      
+            \par
+        \begin{verbatim}
+// Lit un nombre et affiche si ce nombre est positif (zéro inclus) ou strictement négatif
+module signeNombre()
+    nb : entier
+    lire nb
+    si nb < 0 alors
+      afficher "le nombre", nb, " est négatif"
+    sinon
+      afficher "le nombre", nb, " est positif ou nul"
+    fin si
+fin module
+    \end{verbatim}En Java :
+            \par
+        \begin{Java}
+if (condition) { 
+      // instructions si la condition est VRAIE
+} else { 
+      // instructions si la condition est FAUSSE
+} 
+      \end{Java}\begin{Java}
+import java. util .Scanner;
+public class Test {
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      int nombre1;
+      nombre1 = clavier. nextInt ();
+      System.out. println (nombre1 + " est un nombre ");
+      if (nombre1 < 0) {
+        System.out. println (" negatif ");
+      } else {
+        System.out. println (" positif ");
+      }
+    }
+}
+    \end{Java}\section{selon que}Avec ces structures, plusieurs branches d'ex\'ecution sont disponibles. L'ordinateur choisit la
+    branche \`a ex\'ecuter en fonction de la valeur d'une variable (ou parfois d'une expression) ou
+    de la condition qui est vraie.\subsection{selon que (version avec listes de valeurs)}En pseudo-code :
+            \par
+        \begin{verbatim}
+selon que variable vaut
+    liste_1 de valeurs séparées par des virgules :
+      // instructions lorsque la valeur de la variable est dans liste_1
+    liste_2 de valeurs séparées par des virgules :
+      // instructions lorsque la valeur de la variable est dans liste_2
+    ...
+    liste_n de valeurs séparées par des virgules :
+      // instructions lorsque la valeur de la variable est dans liste_n
+    autres :
+      // instructions lorsque la valeur de la variable
+      // ne se trouve dans aucune des listes précédentes
+fin selon que
+      \end{verbatim}Notez que le cas \verb@autres@ est facultatif.
+            \par
+        
+        Dans ce type de structure, comme pour la structure si-alors-sinon, une seule des s\'equences
+        d'instructions sera ex\'ecut\'ee. On veillera \`a ne pas faire apparaitre une m\^eme valeur dans
+        plusieurs listes. Cette structure est une simplification d'\'ecriture de plusieurs alternatives
+        imbriqu\'ees.
+      
+            \par
+        
+        Elle est \'equivalente \`a : 
+      
+            \par
+        \begin{verbatim}
+si variable = une des valeurs de la liste_1 alors
+    // instructions lorsque la valeur est dans liste_1
+sinon
+    si variable = une des valeurs de la liste_2 alors
+      // instructions lorsque la valeur est dans liste_2
+    sinon
+      ...
+      si variable = une des valeurs de la liste_n alors
+        // instructions lorsque la valeur est dans liste_n
+      sinon
+        // instructions lorsque la valeur de la variable
+        // ne se trouve dans aucune des listes précédentes
+      fin si
+    fin si
+fin si
+      \end{verbatim}
+        \'Ecrire un algorithme qui lit un jour de la semaine sous forme d'un nombre entier (1 pour
+        lundi, . . ., 7 pour dimanche) et qui affiche en clair ce jour de la semaine.
+      
+            \par
+        \begin{verbatim}
+// Lit un nombre entre 1 et 7 et affiche en clair le jour de la semaine correspondant.
+module jourSemaine()
+    jour : entier
+    lire jour
+    selon que jour vaut
+      1 : afficher "lundi"
+      2 : afficher "mardi"
+      3 : afficher "mercredi"
+      4 : afficher "jeudi"
+      5 : afficher "vendredi"
+      6 : afficher "samedi"
+      7 : afficher "dimanche"
+    fin selon que
+fin module
+    \end{verbatim}En Java :
+            \par
+        \begin{verbatim}
+switch (variable){
+    case val1 :
+      // instructions lorsque la valeur de la variable est val1
+      break;
+    case val2 :
+    case val3 :
+    case val4 :
+      // instructions lorsque la valeur de la variable est val2 ou val3 ou val4
+      break;
+    ...
+    case valN  :
+      // instructions lorsque la valeur de la variable est valN
+      break;
+    default :
+      // instructions lorsque la valeur de la variable
+      // ne se trouve dans aucune des listes précédentes
+}
+      \end{verbatim}Notez que le cas \verb@default@ est facultatif.
+            \par
+        
+        Notez le \verb@break@ \`a la fin de chaque\verb@ case@.
+      
+            \par
+        
+        La variable peut \^etre de type \verb@byte@, \verb@short@, 
+        \verb@char@, \verb@int@\verb@String@ et 
+        les types \'enum\'er\'es que nous verrons plus tard.
+      
+            \par
+        
+        Elle est \'equivalente \`a : 
+      
+            \par
+        \begin{Java}
+if (variable == val1){
+      // instructions lorsque la valeur de la variable est val1
+} else if (variable ==  val2 || variable ==  val3 || variable == val4){
+      // instructions lorsque la valeur de la variable est val2 ou val3 ou val4
+} else if (variable == valN){
+      // instructions lorsque la valeur de la variable est valN
+} else {
+      // instructions lorsque la valeur de la variable
+      // ne se trouve dans aucune des listes precedentes
+}      \end{Java}\begin{Java}
+import java.util.Scanner;
+public class Test{
+  public static void main(String[] args){
+      Scanner clavier = new Scanner(System.in);
+      String produit = clavier.next();
+      switch(produit) {
+        case "Coca" :
+        case "Sprite" :
+        case "Fanta" :
+        prixDistributeur = 60;
+        break;
+      case "IceTea" :
+        prixDistributeur = 70;
+        break;
+      default :
+        prixDistributeur = 0;
+        break;
+      }
+      System.out.println(prixDistributeur);
+    }
+}
+      \end{Java}\subsection{selon que (version avec conditions)}En pseudo-code :
+            \par
+        \begin{verbatim}
+selon que
+    condition_1 :
+      // instructions lorsque la condition_1 est vraie
+    condition_2 :
+      // instructions lorsque la condition_2 est vraie
+    ...
+    condition_n :
+      // instructions lorsque la condition_n est vraie
+    autres :
+      // instructions à exécuter quand aucune
+      // des conditions précédentes n’est vérifiée
+fin selon que
+      \end{verbatim}
+        Comme pr\'ec\'edemment, une et une seule des s\'equences d'instructions est ex\'ecut\'ee. On
+        veillera \`a ce que les conditions ne se \guillemotleft  recouvrent \guillemotright  pas, c'est-\`a-dire que deux d'entre elles
+        ne soient jamais vraies simultan\'ement. 
+      
+            \par
+        C'est \'equivalent \`a : 
+            \par
+        \begin{verbatim}
+si condition_1 alors
+    // instructions lorsque la condition_1 est vraie
+sinon
+    si condition_2 alors
+      // instructions lorsque la condition_2 est vraie
+    sinon
+      ...
+      si condition_n alors
+        // instructions lorsque la condition_n est vraie
+      sinon
+        // instructions à exécuter quand aucune
+        // des conditions précédentes n’est vérifiée
+      fin si
+    fin si
+fin si
+      \end{verbatim}Par exemple : 
+            \par
+        \begin{verbatim}
+// Lit un nombre et affiche si ce nombre est strictement positif , strictement négatif ou nul.
+module signeNombre()
+    nb : entier
+    lire nb
+    selon que 
+      nb < 0 :
+        afficher "le nombre", nb, " est négatif"
+      nb > 0 :
+        afficher "le nombre", nb, " est positif"
+      autres : 
+        afficher "le nombre", nb, " est nul"
+    fin selon que
+fin module
+    \end{verbatim}En Java :
+            \par
+        Il n'existe pas de \verb@switch@ avec condition, 
+		  il faut l'\'ecrire comme une succession de \verb@if@.
+            \par
+        \begin{Java}
+if (condition_1){
+      // instructions lorsque la condition_1 est vraie
+}else if (condition_2){
+      // instructions lorsque la condition_2 est vraie
+} ... 
+} else if (condition_n){
+      // instructions lorsque la condition_n est vraie
+} else {
+      // instructions a executer quand aucune
+      // des conditions precedentes n est verifiee
+}
+      \end{Java}Par exemple : 
+            \par
+        \begin{Java}
+import java. util .Scanner;
+public class Test {
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      int nb = clavier.nextInt();
+      if (nb>0) {
+        System.out. println (" positif ");
+      } else if (nb==0) {
+        System.out. println ("nul");
+      } else {
+        System.out. println (" negatif ");
+      }
+    }
+}
+    \end{Java}\section{Exercices}
+				Maintenant, mettons tout \c ca en pratique.
+      
+            \par
+        \subsection{Compr\'ehension d'algorithme}
+          Pour ces exercices, nous vous demandons de comprendre des algorithmes donn\'es. 
+          
+			
+		\subparagraph{Compr\'ehension} 
+		
+                \textcolor{white}{.} \par
+            
+							  Que vont-ils afficher ?
+              
+					\begin{itemize}
+				
+			\item \begin{verbatim}
+module exerciceA()
+  a,b : entier
+  lire a,b
+  si a > b alors
+    a ← a+2*b
+  fin si
+  afficher a
+fin module
+				\end{verbatim}Si les nombres lus sont respectivement 2 et 3 ? 
+            \par
+         \textcolor{gray}{\underline{\hspace*{1em}}} Si les nombres lus sont respectivement 4 et 1 ? 
+            \par
+         \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{verbatim}
+module exerciceB()
+    a,b,c : entier
+    lire b,a
+    si a > b alors
+      c ← a DIV b
+    sinon
+      c ← b MOD a
+    fin si
+    afficher c
+fin module
+				\end{verbatim}Si les nombres lus sont respectivement 2 et 3 ? 
+            \par
+         \textcolor{gray}{\underline{\hspace*{1em}}} Si les nombres lus sont respectivement 4 et 1 ? 
+            \par
+         \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{verbatim}
+module exerciceC ()
+    x1, x2 : entier
+    ok : booléen
+    lire x1, x2
+    ok ← x1 > x2
+    si ok alors
+      ok ← ok ET x1 = 4
+    sinon
+      ok ← ok OU x2 = 3
+    fin si
+    si ok alors
+      x1 ← x1 * 1000
+    fin si
+    afficher x1 + x2
+fin module
+				\end{verbatim}Si les nombres lus sont respectivement 2 et 3 ? 
+            \par
+         \textcolor{gray}{\underline{\hspace*{3em}}} Si les nombres lus sont respectivement 4 et 1 ? 
+            \par
+         \textcolor{gray}{\underline{\hspace*{3em}}} 
+					\end{itemize}
+				
+            \par
+        \subsection{Compr\'ehension de codes Java}
+          Pour ces exercices, nous vous demandons de comprendre des codes Java donn\'es. 
+          
+			
+		\subparagraph{Compr\'ehension} 
+		
+                \textcolor{white}{.} \par
+            
+							  Que vont-ils afficher si \`a chaque fois les deux nombres lus au d\'epart sont successivement 2, 3 et 4 ?
+							
+					\begin{itemize}
+				
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice1 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = clavier.nextInt();
+        if (nb1 < nb2){
+          System.out.println(nb1);
+        } else {
+          System.out.println(nb2);
+        } 
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice2 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = clavier.nextInt();
+        if (nb1 > nb2 && nb1 > nb3){
+          System.out.println(nb1);
+        } else {
+            if (nb2 > nb3){
+              System.out.println(nb2);
+            } else {
+              System.out.println(nb3);
+            }
+        } 
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice3 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = clavier.nextInt();
+        switch (nb1){
+          case 1 : System.out.println("premier"); break;
+          case 2 : System.out.println("deuxieme"); break;
+          case 3 : System.out.println("troisieme"); break;
+          default : System.out.println("pas dans le trio");
+        } 
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item \begin{Java}
+import java.util.Scanner;
+public class Exercice3 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = clavier.nextInt();
+        switch (nb1){
+          case 1 : System.out.println("premier");
+          case 2 : System.out.println("deuxieme");
+          case 3 : System.out.println("troisieme");
+          default : System.out.println("pas dans le trio");
+        } 
+    }
+}
+        \end{Java} \textcolor{gray}{\underline{\hspace*{20em}}} 
+					\end{itemize}
+				
+            \par
+        \subsection{\`A vous de jouer...}
+          Il est temps de se lancer et d'\'ecrire vos premiers modules et programmes Java correspondant. 
+          Voici quelques conseils pour vous guider dans la r\'esolution de tels probl\`emes :
+          
+					\begin{itemize}
+				
+			\item il convient d'abord de bien comprendre le probl\`eme pos\'e ; assurez-vous qu'il est parfaitement sp\'ecifi\'e ;
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans l'algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites ;
+			\item mettez en \'evidence les variables \guillemotleft  donn\'ees \guillemotright , les variables \guillemotleft  r\'esultats \guillemotright  et les variables de travail ;
+			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e.
+			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
+					\end{itemize}
+				
+            \par
+        
+        \'Ecrivez les algorithmes et codez les programmes Java correspondant qui 
+          
+					\begin{enumerate}
+				
+			\item \'etant donn\'e deux nombres quelconques, recherche et affiche le plus
+              grand des deux. Attention ! On ne veut pas savoir si c'est le premier ou le deuxi\`eme qui est
+              le plus grand mais bien quelle est cette plus grande valeur. Le probl\`eme est donc bien d\'efini
+              m\^eme si les deux nombres sont identiques.
+            
+			\item \'etant donn\'e trois nombres quelconques, recherche et affiche le plus grand des trois.
+			\item affiche un message indiquant si un entier est strictement n\'egatif, nul ou strictement positif.
+			\item \'etant donn\'e trois nombres, recherche et affiche si le premier des 
+            trois appartient \`a l'intervalle donn\'e par le plus petit et le plus grand des deux autres (bornes exclues). 
+            Qu'est-ce qui change si on inclut les bornes ?
+			\item \'etant donn\'e une \'equation du deuxi\`eme degr\'e, d\'etermin\'ee par le coefficient de x\texttwosuperior  , le coefficient de x et le terme ind\'ependant, 
+            recherche et affiche la (ou les) racine(s) de l'\'equation (ou un message ad\'equat s'il n'existe pas de racine r\'eelle).
+			\item \`a partir d'un moment exprim\'e par 2 entiers, heure et minute, affiche le moment qu'il sera une minute plus tard.
+			\item v\'erifie si une ann\'ee est bissextile. Pour rappel, les ann\'ees bissextiles sont les ann\'ees multiples de 4.
+             Font exception, les multiples de 100 (sauf les multiples de 400 qui sont bien bissextiles). Ainsi 2012 et 2400 sont bissextile mais pas 2010 ni 2100.
+			\item Dans une rue o\`u se pratique le stationnement alternatif, du 1 au 15 du mois, on se gare du c\^ot\'e des maisons ayant un num\'ero impair, 
+            et le reste du mois, on se gare de l'autre c\^ot\'e.
+            \'Ecrivez un algorithme et le code java correspondant qui, sur base de la date du jour et du num\'ero de maison devant laquelle
+            vous vous \^etes arr\^et\'e, indique si vous \^etes bien stationn\'e ou non.
+					\end{enumerate}
+				
+            \par
+        
+				\end{document}
+			

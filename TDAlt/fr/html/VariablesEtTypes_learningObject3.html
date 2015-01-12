@@ -1,0 +1,263 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Alternatives: Java est un langage fortement typé.. Les types primitifs. Les types primitifs numériques entiers. Les littéraux pour les types primitifs numériques entiers. Le type numérique caractère. Les types primitifs numériques flottants. Les littéraux pour les types primitifs numériques flottants. Le type primitif booléen. Les types références prédéfinis : les chaines de caractères. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Alternatives, eLML" />
+      <title>1.2.3. Java est un langage fortement typé.</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Alternatives</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_siAlorsSinon.html">1.1. si – alors – sinon</a></li>
+               <li class="navigationLink"><a href="unit_VariablesEtTypes.html">1.2. Variables et types</a><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="VariablesEtTypes_learningObject1.html">1.2.1. Les types autorisés en algo</a></li>
+                     <li class="navigationLink"><a href="VariablesEtTypes_learningObject2.html">1.2.2. Les types équivalents en java</a></li>
+                     <li class="navigationActual"><strong>1.2.3. Java est un langage fortement typé.</strong></li>
+                     <li class="navigationLink"><a href="VariablesEtTypes_learningObject4.html">1.2.4. Déclaration de variables en algo</a></li>
+                     <li class="navigationLink"><a href="VariablesEtTypes_learningObject5.html">1.2.5. Déclaration de variables en Java</a></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Op%C3%A9rateursEtExpressions.html">1.3. Opérateurs et expressions</a></li>
+               <li class="navigationLink"><a href="unit_Affectation.html">1.4. L’affectation d’une valeur à une variable</a></li>
+               <li class="navigationLink"><a href="unit_Commentaires.html">1.5. Documenter son code</a></li>
+               <li class="navigationLink"><a href="unit_Structure.html">1.6. Structure générale</a></li>
+               <li class="navigationLink"><a href="unit_CompilerEx%C3%A9cuter.html">1.7. Compiler et exécuter un programme Java</a></li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.8. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="VariablesEtTypes_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="VariablesEtTypes_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="VariablesEtTypes_learningObject3.html">1.2.3. Java est un langage fortement typé.</h1>
+      <div id="d8e274.html" class="clarify">
+         <p class="paragraph" id="d8e275">
+            			    Java est un langage fortement typé.
+            			  
+         </p>
+         <p class="paragraph" id="d8e277">
+            Toute donnée a un type. Quels types ?
+            
+            <ul class="list" id="d8e279">
+               <li class="itemAlt"><code>primitifs prédéfinis : </code> entier, réel, booléen (logique) ;
+               </li>
+               <li class="item"><code>références prédéfinis :</code> tableaux, String, . . . ;
+               </li>
+               <li class="itemAlt"><code>références définis par le programmeur</code></li>
+            </ul>
+         </p>
+         <h4>Les types primitifs<img src="../../../_templates/java/icons/important.gif" title="important" alt="important" class="icon" /></h4>
+         <p class="paragraph" title="Les types primitifs" id="d8e291"></p>
+         <p class="paragraph" id="d8e292"><span class="multimedia_inline"><img class="multimedia" id="d8e293" src="../image/primitifs.png" alt="" /></span></p>
+         <h4>Les types primitifs numériques entiers<img src="../../../_templates/java/icons/important.gif" title="important" alt="important" class="icon" /></h4>
+         <p class="paragraph" title="Les types primitifs numériques entiers" id="d8e294"></p>
+         <p class="paragraph" id="d8e295">
+            Les types primitifs numériques entiers sont
+            <code>byte</code>, <code>short</code>, 
+            <code>int</code> et <code>long</code> (<code>char</code> sera vu à part),
+            
+            <ul class="list" id="d8e313">
+               <li class="itemAlt"> ce sont des nombres signés (en complément à 2)</li>
+               <li class="item"> ils sont codés sur 
+                  
+                  <ul class="list" id="d8e318">
+                     <li class="itemAlt"> 8 bits pour un <code>byte</code> ;
+                     </li>
+                     <li class="item"> 16 bits pour un <code>short</code> ;
+                     </li>
+                     <li class="itemAlt"> 32 bits pour un <code>int</code> ;
+                     </li>
+                     <li class="item"> 64 bits pour un <code>long</code> ;
+                     </li>
+                  </ul>
+               </li>
+               <li class="itemAlt"> ils comprennent donc les valeurs :
+                  
+                  <ul class="list" id="d8e341">
+                     <li class="itemAlt"> -128 à 127 pour un <code>byte</code> ;
+                     </li>
+                     <li class="item"> -32768 à 32767 pour un <code>short</code> ;
+                     </li>
+                     <li class="itemAlt"> -2147483648 à 2147483647 pour un <code>int</code> ;
+                     </li>
+                     <li class="item"> -9223372036854775808 à 9223372036854775807 pour un <code>long</code> ;
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+         </p>
+         <h4>Les littéraux pour les types primitifs numériques entiers<img src="../../../_templates/java/icons/important.gif" title="important" alt="important" class="icon" /></h4>
+         <p class="paragraph" title="Les littéraux pour les types primitifs numériques entiers" id="d8e362"></p>
+         <p class="paragraph" id="d8e363">
+            Un <b>littéral</b>, c'est une notation pour représenter une valeur fixée directement dans un code  source.
+            
+         </p>
+         <p class="paragraph" id="d8e368">
+            Un <b>littéral numérique décimal</b> est
+            
+            <ul class="list" id="d8e373">
+               <li class="itemAlt">une suite de chiffres</li>
+               <li class="item">éventuellement séparés par<span class="input">_</span> pour la lisibilité
+               </li>
+               <li class="itemAlt">suivi éventuellement du suffixe ( <span class="input">l</span> ou <span class="input">L</span>) 
+                  qui distingue un <code>int</code> d’un <code>long</code></li>
+               <li class="item">pas de <code>byte</code> ou <code>short</code>, 
+                  un littéral est <code>int</code> (ou <code>long</code>)
+               </li>
+            </ul>
+         </p>
+         <p class="paragraph" id="d8e408">
+            Un <b>littéral numérique octal</b> est
+            
+            <ul class="list" id="d8e413">
+               <li class="itemAlt">une suite de chiffres de 0 à 7</li>
+               <li class="item">précédé de 0.</li>
+            </ul>
+         </p>
+         <p class="paragraph" id="d8e418">
+            Un <b>littéral numérique hexadécimal</b> est
+            
+            <ul class="list" id="d8e423">
+               <li class="itemAlt">une suite de chiffres et lettres a,b,c,d,e,f (minuscules/majuscules)</li>
+               <li class="item">précédé de 0x ou 0X</li>
+            </ul>
+         </p>
+         <p class="paragraph" id="d8e429">
+            Un <b>littéral numérique binaire</b> est
+            
+            <ul class="list" id="d8e434">
+               <li class="itemAlt">une suite de chiffres 0 et 1</li>
+               <li class="item">précédé de 0b ou 0B</li>
+            </ul>
+         </p>
+         <p class="paragraph" id="d8e439">
+            Par exemple, la quantité 100 de type <code>int</code> peut s'écrire 
+            
+            <ul class="list" id="d8e444">
+               <li class="itemAlt">100</li>
+               <li class="item">1_0_0</li>
+               <li class="itemAlt">0144</li>
+               <li class="item">01_44</li>
+               <li class="itemAlt">0x64</li>
+               <li class="item">0b110_0100</li>
+            </ul>
+         </p>
+      </div>
+      <div id="d8e457.html" class="clarify">
+         <h4>Le type numérique caractère<img src="../../../_templates/java/icons/important.gif" title="important" alt="important" class="icon" /></h4>
+         <p class="paragraph" title="Le type numérique caractère" id="d8e458"></p>
+         <p class="paragraph" id="d8e459"><code>char</code> est
+            
+            <ul class="list" id="d8e463">
+               <li class="itemAlt">un caractère Unicode codé en UTF16</li>
+               <li class="item">un entier non signé sur 16 bits</li>
+               <li class="itemAlt">assimilé à un entier </li>
+            </ul>
+         </p>
+         <p class="paragraph" id="d8e470">
+            Pour un littéral de type char : un caractère entre single quote.
+            Par exemple : 'a', '1', ' ', ...
+            
+         </p>
+         <p class="paragraph" id="d8e472">
+            Il existe des séquences d’échappement pour représenter certains caractères spéciaux
+            :
+            
+            <ul class="list" id="d8e474">
+               <li class="itemAlt"><code>\n</code> pour représenter un <b>saut de ligne</b></li>
+               <li class="item"><code>\t</code> pour représenter une <b>tabulation</b></li>
+               <li class="itemAlt"><code>\'</code> pour représenter le caractère <b>'</b></li>
+               <li class="item"><code>\"</code> pour représenter le caractère <b>"</b></li>
+            </ul>
+         </p>
+      </div>
+      <div id="d8e499.html" class="clarify">
+         <h4>Les types primitifs numériques flottants<img src="../../../_templates/java/icons/important.gif" title="important" alt="important" class="icon" /></h4>
+         <p class="paragraph" title="Les types primitifs numériques flottants" id="d8e500"></p>
+         <p class="paragraph" id="d8e501">
+            Les types primitifs numériques flottants sont
+            <code>float</code> et <code>double</code>.
+            
+            <ul class="list" id="d8e509">
+               <li class="itemAlt">ils respectent la norme IEEE754 ;</li>
+               <li class="item"> ils sont codés sur 
+                  
+                  <ul class="list" id="d8e514">
+                     <li class="itemAlt"> 32 bits pour un <code>float</code> ;
+                     </li>
+                     <li class="item"> 64 bits pour un <code>double</code> ;
+                     </li>
+                  </ul>
+               </li>
+               <li class="itemAlt">on utilisera plus souvent le type <code>double</code> ;
+               </li>
+               <li class="item">il s'agit d'une <b>modélisation</b> de la notion mathématique.
+               </li>
+            </ul>
+         </p>
+         <h4>Les littéraux pour les types primitifs numériques flottants<img src="../../../_templates/java/icons/important.gif" title="important" alt="important" class="icon" /></h4>
+         <p class="paragraph" title="Les littéraux pour les types primitifs numériques flottants" id="d8e535"></p>
+         <p class="paragraph" id="d8e536">
+            Un <b>littéral</b>, c'est une notation pour représenter une valeur fixée directement dans un code  source.
+            
+         </p>
+         <p class="paragraph" id="d8e541">
+            Un <b>littéral numérique flottant se compose de parties optionnelles (mais pas ensemble)</b> :
+            
+            <ol class="list" id="d8e546">
+               <li class="itemAlt">une partie entière</li>
+               <li class="item">.</li>
+               <li class="itemAlt">partie décimale</li>
+               <li class="item">E ou e</li>
+               <li class="itemAlt">exposant</li>
+               <li class="item">suffixe (en l’absence de suffixe : un double)</li>
+            </ol>
+         </p>
+         <p class="paragraph" id="d8e559">
+            Par exemple : 1.2E3, 1.F, .1, 1e−2d, 1f
+            
+         </p>
+         <p class="paragraph" id="d8e561">
+            Par contre : 1, .E1, E1 ne sont pas des littéraux pour les types primitifs numériques
+            flottants
+            
+         </p>
+      </div>
+      <div id="d8e563.html" class="clarify">
+         <h4>Le type primitif booléen<img src="../../../_templates/java/icons/important.gif" title="important" alt="important" class="icon" /></h4>
+         <p class="paragraph" title="Le type primitif booléen" id="d8e564"></p>
+         <p class="paragraph" id="d8e565"><code>boolean</code><ul class="list" id="d8e568">
+               <li class="itemAlt">aussi appelé logique ; </li>
+               <li class="item"> il peut prendre 2 valeurs :
+                  
+                  <ul class="list" id="d8e573">
+                     <li class="itemAlt"><code>true</code> ;
+                     </li>
+                     <li class="item"><code>false</code> ;
+                     </li>
+                  </ul>
+               </li>
+               <li class="itemAlt">il prend 1 octet en mémoire.</li>
+            </ul>
+         </p>
+         <h4>Les types références prédéfinis : les chaines de caractères<img src="../../../_templates/java/icons/important.gif" title="important" alt="important" class="icon" /></h4>
+         <p class="paragraph" title="Les types références prédéfinis : les chaines de caractères" id="d8e584"></p>
+         <p class="paragraph" id="d8e585"><code>String</code><ul class="list" id="d8e588">
+               <li class="itemAlt">il s'agit de caractères entre double quote : par exemple : "Java", "Bonjour tout le
+                  monde", "a",...  ; 
+               </li>
+               <li class="item">est un type référence prédéfini ;</li>
+               <li class="itemAlt"> Attention <code>char</code> ≠ <code>String</code></li>
+            </ul>
+         </p>
+      </div>
+      <hr />
+      <div class="navigation_arrows"><a href="VariablesEtTypes_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="VariablesEtTypes_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 12.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>
