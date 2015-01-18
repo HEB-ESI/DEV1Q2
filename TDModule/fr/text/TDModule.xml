@@ -1,0 +1,923 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="TDModule" title="TD Modules">
+	
+	<entry>
+		<paragraph>
+			Ce TD a pour but d'aborder pourquoi et comment découper un algorithme en modules
+      (morceaux d’algorithmes) et en méthodes (morceaux de code).
+		</paragraph>
+	</entry>
+	
+	<!-- =========================================================== -->
+	<unit label="Découper" title="Découper du code">
+	<!-- =========================================================== -->
+    <learningObject title="Découper du code : modules ou méthodes">
+    <entry>
+      Pourquoi ?
+      <list listStyle="unordered">
+        <item>Pour le réutiliser</item>
+        <item>Pour scinder la difficulté</item>
+        <item>Pour faciliter le déverminage</item>
+        <item>Pour accroitre la lisibilité</item>
+        <item>Pour diviser le travail</item>
+      </list>
+    </entry>
+    <entry>
+      Comment ?
+      <list listStyle="unordered">
+        <item>Il existe un nom qui décrit tout ce qu’il fait</item>
+        <item>Il résout un sous-problème bien précis</item>
+        <item>Il est fortement documenté</item>
+        <item>Il est le plus général possible</item>
+        <item>Il tient sur une page</item>
+      </list>
+    </entry>
+    <entry>
+      En algo,nous parlerons de <formatted style="bold">module</formatted>.
+      En Java nous parlerons de <formatted style="bold">méthode</formatted>.
+    </entry>
+    </learningObject>
+	</unit>
+	
+	<!-- =========================================================== -->
+	<unit label="PassageParametres" title="Passage de paramètres">
+	<!-- =========================================================== -->
+
+    
+		<learningObject title="Module">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+        Pour pouvoir faire communiquer les modules entre eux, il faut les équiper d’une « interface »
+        de transmission des variables appelée l’<formatted style="bold">en-tête</formatted> du module et qui contient une déclaration
+        de variables qu’on appellera ici <formatted style="bold">paramètres</formatted> du module.
+      </paragraph>
+      <paragraph>
+        Les variables accompagnées d’une flèche vers le bas (↓) sont des <formatted style="bold">paramètres d’entrée</formatted> qui
+        reçoivent des <formatted style="bold">données</formatted> au début de l’exécution du module (données qui ne doivent donc plus
+        être lues) tandis que celles accompagnées d’une flèche vers le haut (↑) sont des <formatted style="bold">paramètres
+        de sortie</formatted> qui permettent de renvoyer des résultats à l’<formatted style="bold">issue</formatted> de l’exécution du module
+        (résultats qui ne doivent donc plus être affichés).
+      </paragraph>
+      <paragraph>Par exemple, ceci donnerait pour le module max2 : </paragraph>
+      <paragraph cssClass="code">
+module max2 (a↓, b↓ : réels, max↑ : réel)
+    si a > b alors
+      max ← a
+    sinon
+      max ← b
+    fin si
+fin module
+      </paragraph>
+      <paragraph>
+        Sous cette forme, ce module est devenu « inactif », <formatted style="bold">il ne lit rien ni n’affiche rien</formatted>,
+        mais il est cependant prêt à être utilisé. Il suffit pour cela de lui fournir les valeurs de <formatted style="code">a</formatted> 
+        et <formatted style="code">b</formatted> (paramètres d’entrée) pour qu’il entre en action. Une fois le maximum calculé, celui-ci est
+        affecté à la variable max qui – en tant que paramètre de sortie – contiendra et renverra le
+        résultat voulu.
+      </paragraph>
+    </clarify>
+    </learningObject>
+    
+    <learningObject title="Appel de module">
+		<!-- ================================================ -->
+		<clarify>
+      <paragraph>
+        Pour faire appel aux services de ce module, il suffit à présent d’écrire son nom suivi d’un
+        nombre de variables (ou, en entrée, d’expressions) en accord avec son en-tête. 
+      </paragraph>
+      <paragraph>Montrons par un exemple comment le module max3 peut faire appel au module max2 : </paragraph>
+      <paragraph cssClass="code">
+module max3 ()
+    a, b, c, temp, max : réels
+    lire a, b, c
+    max2( a, b, temp )
+    max2( temp, c, max )
+    afficher max
+fin module
+      </paragraph>
+      <paragraph>
+        L’instruction max2(a, b, temp) se déroule comme suit :
+        <list listStyle="unordered">
+            <item>le contenu des variables a et b est affecté aux paramètres d’entrée a et b du module max2, puis ce module peut entrer en action ;</item>
+            <item>à l’issue du module max2, la valeur du paramètre de sortie max est communiquée à la variable temp, qui contient à présent le maximum de a et b</item>
+          </list>
+      </paragraph>
+      <paragraph>
+        L’instruction max2(temp, c, max) se déroule comme suit :
+        <list listStyle="unordered">
+            <item>le contenu des variables temp et c est affecté aux paramètres d’entrée a et b du module max2, puis ce module peut entrer en action ;</item>
+            <item>à l’issue du module max2, la valeur du paramètre de sortie max est communiquée à la variable max qui contient à présent le maximum des 3 nombres de départ.</item>
+          </list>
+      </paragraph>
+      <paragraph>
+        Implicitement, on a introduit ici un nouveau type de primitive, l’appel à un module qui
+        consiste en la simple écriture de son nom dans le code. Cette instruction est reconnue comme
+        telle car elle ne s’apparente pas aux autres types d’instruction vus précédemment (primitives
+        lire, afficher, ← , structures de contrôle si, selon que, tant que, pour. . .). Lorsque l’ordina-
+        teur rencontre cette instruction, il va rechercher si un module portant ce nom existe. Une
+        fois ce module trouvé, les paramètres ad hoc lui sont communiqués et toutes les instructions
+        le composant sont exécutées séquentiellement. Arrivé à l’issue du module, les paramètres de
+        sortie sont communiqués au module appelant et le déroulement de celui-ci se poursuit là où
+        il avait été interrompu.
+      </paragraph>
+      <paragraph>
+        Remarques : 
+        <list listStyle="unordered">
+            <item>un paramètre peut être à la fois paramètre d’entrée et de sortie ; on le fait suivre alors de la double flèche ↓↑ ;</item>
+            <item>si tous les paramètres sont en entrée, on peut omettre les flèches ;</item>
+            <item>
+              la présence de ces paramètres n’est pas obligatoire, on peut envisager un module sans
+              paramètre de sortie (par ex. un module qui reçoit en entrée un nombre et dont la seule
+              fonction est de l’afficher à l’écran), ou inversement sans paramètre d’entrée (un module
+              qui simule un lancer de dé, et renvoie en paramètre une valeur aléatoire entre 1 et 6) ;
+            </item>
+            <item>
+              pour appeler correctement un module, il faut fournir des noms de variables, des expressions ou des constantes 
+              en <formatted style="bold">même nombre</formatted> et en <formatted style="bold">même ordre</formatted> 
+              que les paramètres du module ;
+            </item>
+            <item>en outre, les types des variables doivent correspondre entre l’appel et l’en-tête du module ;</item>
+            <item>ne peut être affectée à un paramètre d’entrée du module qu’une constante, une expression ou une variable préalablement affectée ;</item>
+            <item>à un paramètre de sortie d’un module doit toujours correspondre une autre variable, jamais une constante ou une expression ;</item>
+            <item>il faut s’assurer qu’à l’issue du module, tous les paramètres de sortie aient été affectés lors de l’exécution de ce module.</item>
+          </list>
+      </paragraph>
+    </clarify>
+    </learningObject>
+	</unit>
+		
+  
+	<!-- =========================================================== -->
+	<unit label="RetournerValeur" title="Module renvoyant une valeur">
+	<!-- =========================================================== -->
+
+    <entry>Un deuxième type de module est le module renvoyant une valeur. 
+    (On désigne aussi ce type de modules par le terme fonction).</entry>
+    
+		<learningObject title="En algo">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>Son en-tête est du type suivant :</paragraph>
+		   <paragraph cssClass="code">
+module exemple (var1↓ : type1, var2↓ : type2, . . ., varN↓ : typeN) -> typeRes
+      </paragraph>
+      <paragraph>
+        Il se distingue du module précédemment étudié par la flèche de renvoi à droite,
+        et possède les particularités suivantes :
+      </paragraph>
+      <paragraph>
+        <list listStyle="unordered">
+            <item>ce module renvoie une valeur qui n’est pas affectée à une variable de sortie ;</item>
+            <item>à droite de la flèche de renvoi ne se trouve donc pas le nom d’un paramètre de sortie,
+            mais le <formatted style="bold">type</formatted> de la valeur renvoyée ;</item>
+            <item>typeRes est le type de la valeur renvoyée ; en théorie, ce peut être un type simple
+            (entier, réel, booléen, chaine, caractère), un type structuré ou même un tableau (ces
+            types seront vus dans les chapitres suivants). En pratique il conviendra de s’en tenir
+            aux limitations du langage utilisé ;</item>
+            <item>var1, . . ., varN sont les paramètres du module 
+            (aussi appelés <formatted style="bold">arguments</formatted> ) ; ce sont, le
+            plus souvent, des paramètres d’entrée, les paramètres de sortie étant plus rares dans
+            ce type de module ;</item>
+            <item>ces arguments deviennent automatiquement des variables locales du module ; déclarées
+            dans son en-tête, elles ne doivent plus l’être dans la partie déclarative ;</item>
+            <item>la valeur renvoyée est définie à la fin du module via la primitive retourner résultat, où
+            résultat est une variable (ou plus généralement une expression) de type typeRes ;</item>
+            <item>pour appeler ce type de module, on utilise son nom comme celui d’une variable ou
+            dans une expression apparaissant dans le module appelant, mais jamais à gauche du
+            signe d’affectation.</item>
+          </list>
+        </paragraph>
+        <paragraph>
+          Comme précédemment, il faut veiller, lors de l’appel de ce type de module, à ce que le
+          nombre d’arguments ainsi que leur type correspondent à ceux spécifiés dans l’en-tête.
+        </paragraph>
+      </clarify>
+      <look>
+         <paragraph>Par exemple, ceci donnerait pour le module max2 : </paragraph>
+      <paragraph cssClass="code">
+module max2 (a↓, b↓ : réels)-> réel
+    si a > b alors
+      max ← a
+    sinon
+      max ← b
+    fin si
+    retourner max
+fin module
+      </paragraph>
+      <paragraph>
+        Pour faire appel aux services de ce module, il suffit à présent d’écrire son nom suivi d’un
+        nombre de variables (ou, en entrée, d’expressions) en accord avec son en-tête. 
+      </paragraph>
+      <paragraph>Montrons par un exemple comment le module max3 peut faire appel au module max2 : </paragraph>
+      <paragraph cssClass="code">
+module max3 ()
+    a, b, c, temp, max : réels
+    lire a, b, c
+    temp ← max2( a, b)
+    max ← max2( temp, c)
+    afficher max
+fin module
+      </paragraph>
+    </look>
+    </learningObject>
+  </unit>
+  
+  
+  <!-- =================================================================== -->
+	<unit label="Methodes" title="Méthodes et appel de méthodes">
+	<!-- =================================================================== -->
+    <learningObject title="Méthode">
+		<!-- ================================================ -->
+		<clarify>
+		  Syntaxe : 
+		  <paragraph cssClass="code">
+<![CDATA[
+public static <typeRetour> nomMéthode ([paramètre, paramètre, ...]) {
+    // instructions
+    <return résultat>;
+}]]>				</paragraph>
+		</clarify>
+		<clarify>
+		  <paragraph>
+        En algorithmique, il y a 3 passages de paramètres :
+        en entrée ↓, en sortie ↑, en entrée-sortie ↓↑
+      </paragraph>
+      <paragraph>
+        En Java, le passage de paramètre se fait uniquement par valeur ; 
+        c-à-d que la valeur est copiée dans le paramètre.
+        Pour les typesprimitifs, c'est léquivalent d'un paramètre en entrée.
+      </paragraph>
+		</clarify>
+		</learningObject>
+		
+		<learningObject title="Appel de méthode">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+		    Une méthode est une <formatted style="bold">boite noire</formatted> : 
+		  </paragraph>
+      <paragraph>
+        <multimedia src="../image/methode.jpg" type="jpeg"/>
+		  </paragraph>
+		  <paragraph> 
+		    Pour l’utiliser, il faut connaitre : 
+		    <list listStyle="unordered">
+            <item>son nom ;</item>
+            <item>ce dont elle a besoin ;</item>
+            <item>ce qu’elle retourne ;</item>
+            <item>mais <formatted style="bold">pas comment</formatted> elle fait ;</item>
+          </list>
+		  </paragraph>
+		</clarify>
+		<clarify>
+		  <paragraph> 
+		    On peut appeler une méthode 
+		    <list listStyle="unordered">
+          <item>à partir du code d’une autre classe : <formatted style="input">NomClasse.nomMéthode(...)</formatted></item>
+          <item>au sein de la même classe : <formatted style="input">nomMéthode(...)</formatted></item>
+        </list>
+      </paragraph>
+    </clarify>
+    </learningObject>
+    
+       <learningObject title="Exemples">
+		<!-- ================================================ -->
+		<look>
+		  <paragraph>Par exemple : </paragraph>
+		  <paragraph cssClass="java">
+<![CDATA[
+public static double moyenne ( double nb1, double nb2 ) {
+    double moyenne = (nb1 + nb2) / 2.0;
+    return moyenne;
+}]]>				</paragraph>
+      <paragraph>
+        Appel possible (si dans la même classe) :
+      </paragraph>
+<paragraph cssClass="java">
+<![CDATA[
+double cote = moyenne(12.5, 17.5);
+]]>				</paragraph>
+		</look>
+		<look>
+		  <paragraph>Par exemple : </paragraph>
+		  <paragraph cssClass="java">
+<![CDATA[
+public static int absolu ( int nb ) {
+    int abs;
+    if (nb<0) {
+      abs = -nb;
+    } else {
+      abs = nb;
+    }
+    return abs;
+}]]>				</paragraph>
+      <paragraph>
+        Appels possibles (si dans la même classe) :
+      </paragraph>
+<paragraph cssClass="java">
+<![CDATA[
+int resultat = absolu(4);
+int ecart = -10;
+int ecartAbsolu = absolu(ecart );
+]]>				</paragraph>
+		</look>
+		<look>
+		  <paragraph>Par exemple : </paragraph>
+		  <paragraph cssClass="java">
+<![CDATA[
+public static void presenter (String nomPgm) {
+    System.out. println ("Programme "+nomPgm);
+}]]>				</paragraph>
+      <paragraph>
+        Appel possible (si dans la même classe) :
+      </paragraph>
+<paragraph cssClass="java">
+<![CDATA[
+presenter ("moyenne de 2 nombres");
+]]>				</paragraph>
+		</look>
+		<look>
+		  <paragraph>Par exemple : </paragraph>
+		  <paragraph cssClass="java">
+<![CDATA[
+public static int lireEntier () {
+    Scanner clavier = new Scanner(System.in);
+    int nb;
+    System.out. println ("Entrez un nombre entier!");
+    nb = clavier . nextInt ();
+    return nb;
+}]]>				</paragraph>
+      <paragraph>
+        Appel possible (si dans la même classe) :
+      </paragraph>
+<paragraph cssClass="java">
+<![CDATA[
+int nb = lireEntier ();
+]]>				</paragraph>
+		</look>
+		<look>
+    <paragraph>Montrons par un exemple comment écrire la méthode max2 : </paragraph>
+      <paragraph cssClass="java">
+<![CDATA[
+import java.util.Scanner;
+public class Test{
+  public static double max2(double nb1, double nb2){
+    double max = nb1;
+		if (nb1 < nb2) {
+			max = nb2;
+		}
+		return max;
+  }
+}]]>				</paragraph>
+		</look>
+    </learningObject>
+    
+    <learningObject title="Commenter une méthode">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+		    <list listStyle="unordered">
+          <item>
+            Pour qui ?
+            <list listStyle="unordered">
+              <item>Le programmeur qui va utiliser le code</item>
+              <item>Le programmeur qui va maintenir le code (peut-être vous)</item>
+            </list>
+            </item>
+            <item>
+              Quel type de documentation ?
+            <list listStyle="unordered">
+              <item>Ce que fait la méthode/classe</item>
+              <item>Comment elle le fait (peut être réduit au minimum si code lisible)</item>
+            </list>
+            </item>
+            <item>
+              Qui est intéressé par quoi ?
+            <list listStyle="unordered">
+              <item>Le programmeur-utilisateur : intéressé uniquement par le quoi</item>
+              <item>Le programmeur-mainteneur : intéressé par le quoi et le comment</item>
+            </list>
+          </item>
+          <item>
+              Où mettre la documentation ?
+            <list listStyle="unordered">
+              <item>
+                Avec le code
+                  <list listStyle="unordered">
+                    <item>Plus facile pour le maintenir</item>
+                    <item>Plus de chance de garder la synchronisation avec le code</item>
+                  </list>
+              </item>
+              <item>Mais le programmeur-utilisateur n’a pas à voir le code pour l’utiliser</item>
+            </list>
+          </item>
+        </list>
+		  </paragraph>
+		  
+		  <paragraph title="litterate programming">
+		    <list listStyle="unordered">
+          <item>la documentation accompagne le code</item>
+          <item>un outil extrait cette documentation pour en faire un document facile à lire</item>
+          <item>toute la documentation suit la même structure, le même style -> plus facile à lire</item>
+        </list>
+		  </paragraph>
+		  
+		  <paragraph>
+		    Regardons ce qui existe. 
+		    Par exemple, la méthode <formatted style="code">abs</formatted> de la classe <formatted style="code">Math</formatted> :
+		  </paragraph>
+		  <paragraph>
+        <multimedia src="../image/Mathabs.png" type="png"/>
+		  </paragraph>
+		  <paragraph>
+		    Il est essentiel de commenter chaque méthode. C'est ce qui permet de pouvoir les utiliser facilement.
+		  </paragraph>
+		  <paragraph>
+		    Comment écrire la nôtre :
+		  </paragraph>
+		  
+		  <paragraph title="javadoc">
+		    <list listStyle="unordered">
+          <item>Le commentaire javadoc est identifié par <formatted style="code">/**... */</formatted> ;</item>
+          <item>la documentation est produite au format HTML ;</item>
+          <item>On commente essentiellement
+            <list listStyle="unordered">
+              <item>la classe : rôle et fonctionnement</item>
+              <item>les méthodes publiques : ce que ça fait, paramètres et résultats</item>
+            </list>
+          </item>
+          <item>Le commentaire se met <formatted style="bold">juste au dessus</formatted> de ce qui est commenté.</item>
+        </list>
+		  </paragraph>
+		  
+		  <paragraph title="Tag">
+		    On utilise des <formatted style="bold">tags</formatted> pour identifier certains éléments.
+		    Les plus courants :
+		    <list listStyle="unordered">
+          <item>@param : décrit les paramètres</item>
+          <item>@return : décrit ce qui est retourné</item>
+          <item>@throws : spécifie les exceptions lancées</item>
+          <item>@author : note sur l’auteur</item>
+        </list>
+		  </paragraph>
+		  
+		  <paragraph cssClass="java">
+<![CDATA[
+/**
+* Donne la racine carree d un nombre.
+* @param nb le nombre dont on veut la racine carree .
+* @return la racine carree du nombre.
+* @throws IllegalArgumentException si le nombre est negatif .
+*/
+public static double sqrt( double nb ) {
+    if(nb<0) {
+      throw new IllegalArgumentException("Nombre negatif");
+    
+    return Math.sqrt(nb);
+}]]>				</paragraph>
+
+<paragraph>
+		    Exemple : la valeur absolue
+      </paragraph>
+      <paragraph cssClass="java">
+<![CDATA[
+/**
+* Calcul de la valeur absolue .
+* @param nb le nombre dont on veut la valeur absolue .
+* @return la valeur absolue de <code>nb</code>
+*/
+public static int absolu ( int nb ) {
+    int abs;
+    if (nb<0) {
+      abs = -nb;
+    } else {
+      abs = nb;
+    }
+    return abs;
+}]]>				</paragraph>
+
+      <paragraph>
+        <list listStyle="unordered">
+          <item>Les types sont déduits de la signature et ajoutés à la documentation.</item>
+          <item>La première phrase (terminée par un <formatted style="code">.</formatted>) sert de résumé.</item>
+        </list>
+      </paragraph>
+		  
+		  <paragraph title="html">
+		    La documentation peut contenir des balises HTML.
+		  </paragraph>
+		  <paragraph cssClass="java">
+<![CDATA[
+/**
+* Indique si l annee est bissextile . Pour rappel :
+* <ul>
+*   <li>Une annee qui n est pas divisible par 4 n est pas bissextile (ex: 2009)</li>
+*   <li>Une annee qui est divisible par 4</li>
+*   <ul>
+*     <li>est en general bissextile (ex: 2008)</li>
+*     <li>sauf si c est un multiple de 100 mais pas de 400 (ex: 1900, 2100)</li>
+*     <li>les multiples de 400 sont donc bien bissextiles (ex: 2000, 2400)</li>
+*   </ul>
+* </ul>
+* Plus formellement, <code>a</code> est bissextile si et seulement si <br/>
+* <code>a MOD 400 = 0 OU (a MOD 4 = 0 ET a MOD 100 != 0)</code>
+* @param annee l annee dont on se demande si elle est bissextile
+* @return vrai si l annee est bissextile
+*/}]]>				</paragraph>
+      <paragraph>
+        Ce qui donne : 
+        <multimedia src="../image/javadocBissextile.png" type="png"/>
+      </paragraph>
+      
+      <paragraph title="Produire la documentation">
+        La commande javadoc : 
+        <list listStyle="unordered">
+          <item>javadoc Temps.java</item>
+          <item>javadoc ∗.java</item>
+          <item>javadoc −d doc ∗.java</item>
+          <item>javadoc −charset utf−8 ∗.java</item>
+          <item>. . . et beaucoup d’autres options (cf. documentation de javadoc)</item>
+        </list>
+      </paragraph>
+      
+      <paragraph title="Une bonne documentation">
+        Une bonne javadoc décrit le quoi mais jamais le comment -> ne jamais parler de ce qui est privé.
+      </paragraph>
+      <paragraph>
+        Mauvais exemples :
+        <list listStyle="unordered">
+          <item>On utilise un for pour parcourir le tableau.</item>
+          <item>Pour aller plus vite, on stocke le <formatted style="code">prix hors tva</formatted> dans une variable temporaire.</item>
+        </list>
+      </paragraph>
+      <paragraph>
+        Ne pas écrire ce que javadoc écrit lui-même :
+      </paragraph>
+      <paragraph>
+        Mauvais exemples :
+        <list listStyle="unordered">
+          <item>nb - un entier qui ...</item>
+          <item>La méthode sqrt ...</item>
+          <item>Cette méthode ne retourne rien.</item>
+        </list>
+      </paragraph>
+      <paragraph>
+        Pour en savoir plus : 
+        <link uri="http://www.oracle.com/technetwork/articles/java/index-137868.html">http://www.oracle.com/technetwork/articles/java/index-137868.html</link>
+      </paragraph>
+		</clarify>
+		</learningObject>
+		
+		<learningObject title="Un exemple complet">
+		<!-- ================================================ -->
+		<look>
+		  <paragraph cssClass="java">
+<![CDATA[
+import java. util .Scanner;
+public class MaxEntiers {
+    /**
+    * Donne le maximum de 2 nombres.
+    * @param nb1 le premier nombre.
+    * @param nb2 le deuxieme nombre.
+    * @return la valeur la plus grande entre <code>nb1</code> et <code>nb2</code>
+    */
+    public static int max ( int nb1, int nb2 ) {
+      int max=0;
+      if (nb1 > nb2) {
+        max = nb1;
+      } else {
+        max = nb2;
+      }
+      return max;
+    }
+    
+    /**
+    * Lit un nombre entier .
+    * Le nombre est lu sur l entree standard ( le clavier ).
+    * @return le nombre entier lu .
+    */
+    public static int lireEntier () {
+    Scanner clavier = new Scanner(System.in);
+    System.out. println ("Entrez un nombre entier!");
+      return clavier . nextInt ();
+    }
+    
+    /**
+    * Affiche le maximum de 2 nombres entres au clavier.
+    * @param args pas utilise.
+    */
+    public static void main ( String [] args ) {
+      int max; // Le max des nombres lus
+      int nb1, nb2; // Chacun des nombres lus
+      nb1 = lireEntier ();
+      nb2 = lireEntier ();
+      max = max(nb1,nb2);
+      System.out. println ("max = " + max);
+    }
+}]]>				</paragraph>
+		</look>
+		</learningObject>
+		
+  </unit>
+	
+	<!-- =================================================================== -->
+	<unit label="Exercices" title="Exercices">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Maintenant, mettons tout ça en pratique.
+      </paragraph>
+    </entry>
+    
+    <learningObject title="Compréhension d’algorithme">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph>
+          Pour ces exercices, nous vous demandons de comprendre des algorithmes donnés. 
+          <selfCheck title="Compréhension" shuffle="no">
+						<fillInBlanks>
+							<question>
+							  Que vont-ils afficher ?
+              </question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										<paragraph cssClass="code">
+module ex1 ()
+    x, y : entiers
+    addition(3, 4, x)
+    afficher x
+    x ← 3
+    y ← 5
+    addition(x, y, y)
+    afficher y
+fin module
+
+module addition(a↓, b↓, c↑ : entiers)
+    somme : entier
+    somme ← a + b
+    c ← somme
+fin module
+				</paragraph>
+				            <gap answers="7">7</gap>  <gap answers="8">8</gap> 
+                  </item>
+									<item>
+										<paragraph cssClass="code">
+module ex2 ()
+    a, b : entiers
+    addition(3, 4, a)
+    afficher a
+    a ← 3
+    b ← 5
+    addition(b, a, b)
+    afficher b
+fin module
+
+module addition(a↓, b↓, c↑ : entiers)
+    somme : entier
+    somme ← a + b
+    c ← somme
+fin module
+				</paragraph>
+				            <gap answers="7">7</gap>  <gap answers="8">8</gap> 
+                  </item>
+									<item>
+										<paragraph cssClass="code">
+module ex3 ()
+    a, b, c : entiers
+    calcul(3, 4, c)
+    afficher c
+    a ← 3
+    b ← 4
+    c ← 5
+    calcul(b, c, a)
+    afficher a, b, c
+fin module
+
+module calcul(a↓, b↓, c↑ : entiers)
+    a ← 2*a
+    b ← 3*b
+    c ← a+b
+fin module
+				            </paragraph>
+				            <gap answers="18">18</gap>  <gap answers="23">23</gap> 
+                  </item>
+                  
+                  <item>
+										<paragraph cssClass="code">
+module ex4 ()
+    a, b, c : entiers
+    a ← 3
+    b ← 4
+    c ← f(b)
+    afficher c
+    calcul2(a, b, c)
+    afficher a, b, c
+fin module
+
+module calcul2 (a↓, b↓, c↑ : entiers)
+    a ← f(a) 
+    c ← 3*b 
+    c ← a+c
+fin module
+
+module f (a↓ : entier) → entier
+    b : entier
+    b ← 2*a+1
+    retourner b
+fin module
+				            </paragraph>
+				            <gap answers="9">9</gap>  <gap answers="3">3</gap> <gap answers="4">4</gap> <gap answers="19">19</gap> 
+                  </item>
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+        </paragraph>
+        
+        
+      </act>
+    </learningObject>
+      
+    <learningObject title="Compréhension de codes Java">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph>
+          Pour ces exercices, nous vous demandons de comprendre des codes Java donnés. 
+          <selfCheck title="Compréhension" shuffle="no">
+						<fillInBlanks>
+							<question>
+							  Que vont-ils afficher si à chaque fois les deux nombres lus au départ sont successivement 2, 3 et 4 ?
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice1 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = clavier.nextInt();
+        if (nb1 <![CDATA[<]]> nb2){
+          System.out.println(nb1);
+        } else {
+          System.out.println(nb2);
+        } 
+    }
+}
+        </paragraph>
+				            <gap answers="2">2</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice2 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = clavier.nextInt();
+        if (nb1 <![CDATA[>]]> nb2 <![CDATA[&&]]> nb1 <![CDATA[>]]> nb3){
+          System.out.println(nb1);
+        } else {
+            if (nb2 <![CDATA[>]]> nb3){
+              System.out.println(nb2);
+            } else {
+              System.out.println(nb3);
+            }
+        } 
+    }
+}
+        </paragraph>
+				            <gap answers="4">4</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice3 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = clavier.nextInt();
+        switch (nb1){
+          case 1 : System.out.println("premier"); break;
+          case 2 : System.out.println("deuxieme"); break;
+          case 3 : System.out.println("troisieme"); break;
+          default : System.out.println("pas dans le trio");
+        } 
+    }
+}
+        </paragraph>
+				            <gap answers="deuxième">deuxième</gap> 
+									</item>  
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice3 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb1 = clavier.nextInt();
+        int nb2 = clavier.nextInt();
+        int nb3 = clavier.nextInt();
+        switch (nb1){
+          case 1 : System.out.println("premier");
+          case 2 : System.out.println("deuxieme");
+          case 3 : System.out.println("troisieme");
+          default : System.out.println("pas dans le trio");
+        } 
+    }
+}
+        </paragraph>
+				            <gap answers="premierdeuxiemetroisiemepas dans le trio">premierdeuxiemetroisiemepas dans le trio</gap> 
+									</item>  
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+        </paragraph>
+      </act>
+    </learningObject>
+    
+    <learningObject title="À vous de jouer...">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph>
+          Il est temps de se lancer et d’écrire vos premiers modules et programmes Java correspondant. 
+          Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
+          <list listStyle="unordered">
+            <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites ;</item>
+            <item>mettez en évidence les variables « données », les variables « résultats » et les variables de travail ;</item>
+            <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé.</item>
+            <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+          </list>
+        </paragraph>
+        
+        <paragraph>
+        Écrivez les algorithmes et codez les programmes Java correspondant qui 
+          <list listStyle="ordered">
+            <item>étant donné deux nombres quelconques, recherche et affiche le plus
+              grand des deux. Attention ! On ne veut pas savoir si c’est le premier ou le deuxième qui est
+              le plus grand mais bien quelle est cette plus grande valeur. Le problème est donc bien défini
+              même si les deux nombres sont identiques.
+            </item>
+            <item>étant donné trois nombres quelconques, recherche et affiche le plus grand des trois.</item>
+            <item>affiche un message indiquant si un entier est strictement négatif, nul ou strictement positif.</item>
+            <item>étant donné trois nombres, recherche et affiche si le premier des 
+            trois appartient à l’intervalle donné par le plus petit et le plus grand des deux autres (bornes exclues). 
+            Qu’est-ce qui change si on inclut les bornes ?</item>
+            <item>étant donné une équation du deuxième degré, déterminée par le coefficient de x² , le coefficient de x et le terme indépendant, 
+            recherche et affiche la (ou les) racine(s) de l’équation (ou un message adéquat s’il n’existe pas de racine réelle).</item>
+            <item>à partir d’un moment exprimé par 2 entiers, heure et minute, affiche le moment qu’il sera une minute plus tard.</item>
+            <item>vérifie si une année est bissextile. Pour rappel, les années bissextiles sont les années multiples de 4.
+             Font exception, les multiples de 100 (sauf les multiples de 400 qui sont bien bissextiles). Ainsi 2012 et 2400 sont bissextile mais pas 2010 ni 2100.</item>
+            <item>Dans une rue où se pratique le stationnement alternatif, du 1 au 15 du mois, on se gare du côté des maisons ayant un numéro impair, 
+            et le reste du mois, on se gare de l’autre côté.
+            Écrivez un algorithme et le code java correspondant qui, sur base de la date du jour et du numéro de maison devant laquelle
+            vous vous êtes arrêté, indique si vous êtes bien stationné ou non.</item>
+          </list>
+        </paragraph>
+      </act>
+    </learningObject>
+  </unit>
+	
+	<!--metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>1</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2013 - 2014</version>
+				<contribute>
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata-->
+
+</lesson>
