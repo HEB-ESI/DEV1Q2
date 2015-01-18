@@ -752,6 +752,7 @@ fin module
           <selfCheck title="Compréhension" shuffle="no">
 						<fillInBlanks>
 							<question>
+							  ***********************************A FAIRE***************************************************
 							  Que vont-ils afficher si à chaque fois les deux nombres lus au départ sont successivement 2, 3 et 4 ?
 							</question>
 							<gapText> 
@@ -865,13 +866,11 @@ public class Exercice3 {
         <paragraph>
         Écrivez les algorithmes et codez les programmes Java correspondant qui 
           <list listStyle="ordered">
-            <item>étant donné deux nombres quelconques, recherche et affiche le plus
-              grand des deux. Attention ! On ne veut pas savoir si c’est le premier ou le deuxième qui est
-              le plus grand mais bien quelle est cette plus grande valeur. Le problème est donc bien défini
-              même si les deux nombres sont identiques.
+            <item>échange le contenu de deux variables entières passées en paramètres.
             </item>
-            <item>étant donné trois nombres quelconques, recherche et affiche le plus grand des trois.</item>
-            <item>affiche un message indiquant si un entier est strictement négatif, nul ou strictement positif.</item>
+            <item>retourne le maximum de 4 nombres donnés en paramètre en utilisant 
+              les modules <formatted style="code">max2</formatted> et/ou <formatted style="code">max3</formatted> déjà développés dans ce chapitre.</item>
+            <item>valide une date donnée par trois entiers : l’année, le mois et le jour.</item>
             <item>étant donné trois nombres, recherche et affiche si le premier des 
             trois appartient à l’intervalle donné par le plus petit et le plus grand des deux autres (bornes exclues). 
             Qu’est-ce qui change si on inclut les bornes ?</item>
