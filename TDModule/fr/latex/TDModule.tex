@@ -829,58 +829,79 @@ public class MaxEntiers {
 				
 			\item \begin{verbatim}
 module ex1 ()
-  x, y : entiers
-  addition(3, 4, x)
-  afficher x
-  x ← 3
-  y ← 5
-  addition(x, y, y)
-  afficher y
+    x, y : entiers
+    addition(3, 4, x)
+    afficher x
+    x ← 3
+    y ← 5
+    addition(x, y, y)
+    afficher y
 fin module
 
 module addition(a↓, b↓, c↑ : entiers)
-  somme : entier
-  somme ← a + b
-  c ← somme
+    somme : entier
+    somme ← a + b
+    c ← somme
 fin module
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}}  \textcolor{gray}{\underline{\hspace*{1em}}} 
 			\item \begin{verbatim}
-module exerciceB()
-    a,b,c : entier
-    lire b,a
-    si a > b alors
-      c ← a DIV b
-    sinon
-      c ← b MOD a
-    fin si
-    afficher c
+module ex2 ()
+    a, b : entiers
+    addition(3, 4, a)
+    afficher a
+    a ← 3
+    b ← 5
+    addition(b, a, b)
+    afficher b
 fin module
-				\end{verbatim}Si les nombres lus sont respectivement 2 et 3 ? 
-            \par
-         \textcolor{gray}{\underline{\hspace*{1em}}} Si les nombres lus sont respectivement 4 et 1 ? 
-            \par
-         \textcolor{gray}{\underline{\hspace*{1em}}} 
+
+module addition(a↓, b↓, c↑ : entiers)
+    somme : entier
+    somme ← a + b
+    c ← somme
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}}  \textcolor{gray}{\underline{\hspace*{1em}}} 
 			\item \begin{verbatim}
-module exerciceC ()
-    x1, x2 : entier
-    ok : booléen
-    lire x1, x2
-    ok ← x1 > x2
-    si ok alors
-      ok ← ok ET x1 = 4
-    sinon
-      ok ← ok OU x2 = 3
-    fin si
-    si ok alors
-      x1 ← x1 * 1000
-    fin si
-    afficher x1 + x2
+module ex3 ()
+    a, b, c : entiers
+    calcul(3, 4, c)
+    afficher c
+    a ← 3
+    b ← 4
+    c ← 5
+    calcul(b, c, a)
+    afficher a, b, c
 fin module
-				\end{verbatim}Si les nombres lus sont respectivement 2 et 3 ? 
-            \par
-         \textcolor{gray}{\underline{\hspace*{3em}}} Si les nombres lus sont respectivement 4 et 1 ? 
-            \par
-         \textcolor{gray}{\underline{\hspace*{3em}}} 
+
+module calcul(a↓, b↓, c↑ : entiers)
+    a ← 2*a
+    b ← 3*b
+    c ← a+b
+fin module
+				            \end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}}  \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{verbatim}
+module ex4 ()
+    a, b, c : entiers
+    a ← 3
+    b ← 4
+    c ← f(b)
+    afficher c
+    calcul2(a, b, c)
+    afficher a, b, c
+fin module
+
+module calcul2 (a↓, b↓, c↑ : entiers)
+    a ← f(a) 
+    c ← 3*b 
+    c ← a+c
+fin module
+
+module f (a↓ : entier) → entier
+    b : entier
+    b ← 2*a+1
+    retourner b
+fin module
+				            \end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}}  \textcolor{gray}{\underline{\hspace*{1em}}}  \textcolor{gray}{\underline{\hspace*{1em}}}  \textcolor{gray}{\underline{\hspace*{2em}}} 
 					\end{itemize}
 				
             \par

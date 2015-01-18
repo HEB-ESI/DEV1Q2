@@ -48,50 +48,79 @@
                      <ul class="list" id="d8e458">
                         <li class="itemAlt"><pre>
 module ex1 ()
-  x, y : entiers
-  addition(3, 4, x)
-  afficher x
-  x ← 3
-  y ← 5
-  addition(x, y, y)
-  afficher y
+    x, y : entiers
+    addition(3, 4, x)
+    afficher x
+    x ← 3
+    y ← 5
+    addition(x, y, y)
+    afficher y
 fin module
 
 module addition(a↓, b↓, c↑ : entiers)
-  somme : entier
-  somme ← a + b
-  c ← somme
+    somme : entier
+    somme ← a + b
+    c ← somme
 fin module
 				</pre><input type="text" value="" class="itemText" id="_d8e462" style="width:12px" /> <span class="gapText">,7,7</span><input type="text" value="" class="itemText" id="_d8e464" style="width:12px" /> <span class="gapText">,8,8</span></li>
                         <li class="item"><pre>
-module exerciceB()
-    a,b,c : entier
-    lire b,a
-    si a &gt; b alors
-      c ← a DIV b
-    sinon
-      c ← b MOD a
-    fin si
-    afficher c
+module ex2 ()
+    a, b : entiers
+    addition(3, 4, a)
+    afficher a
+    a ← 3
+    b ← 5
+    addition(b, a, b)
+    afficher b
 fin module
-				</pre><p class="paragraph" id="d8e469">Si les nombres lus sont respectivement 2 et 3 ? </p><input type="text" value="" class="itemText" id="_d8e471" style="width:12px" /> <span class="gapText">,1,1</span><p class="paragraph" id="d8e473">Si les nombres lus sont respectivement 4 et 1 ? </p><input type="text" value="" class="itemText" id="_d8e475" style="width:12px" /> <span class="gapText">,0,0</span></li>
+
+module addition(a↓, b↓, c↑ : entiers)
+    somme : entier
+    somme ← a + b
+    c ← somme
+fin module
+				</pre><input type="text" value="" class="itemText" id="_d8e469" style="width:12px" /> <span class="gapText">,7,7</span><input type="text" value="" class="itemText" id="_d8e471" style="width:12px" /> <span class="gapText">,8,8</span></li>
                         <li class="itemAlt"><pre>
-module exerciceC ()
-    x1, x2 : entier
-    ok : booléen
-    lire x1, x2
-    ok ← x1 &gt; x2
-    si ok alors
-      ok ← ok ET x1 = 4
-    sinon
-      ok ← ok OU x2 = 3
-    fin si
-    si ok alors
-      x1 ← x1 * 1000
-    fin si
-    afficher x1 + x2
+module ex3 ()
+    a, b, c : entiers
+    calcul(3, 4, c)
+    afficher c
+    a ← 3
+    b ← 4
+    c ← 5
+    calcul(b, c, a)
+    afficher a, b, c
 fin module
-				</pre><p class="paragraph" id="d8e480">Si les nombres lus sont respectivement 2 et 3 ? </p><input type="text" value="" class="itemText" id="_d8e482" style="width:50px" /> <span class="gapText">,2003,2003</span><p class="paragraph" id="d8e484">Si les nombres lus sont respectivement 4 et 1 ? </p><input type="text" value="" class="itemText" id="_d8e486" style="width:50px" /> <span class="gapText">,4001,4001</span></li>
+
+module calcul(a↓, b↓, c↑ : entiers)
+    a ← 2*a
+    b ← 3*b
+    c ← a+b
+fin module
+				            </pre><input type="text" value="" class="itemText" id="_d8e476" style="width:25px" /> <span class="gapText">,18,18</span><input type="text" value="" class="itemText" id="_d8e478" style="width:25px" /> <span class="gapText">,23,23</span></li>
+                        <li class="item"><pre>
+module ex4 ()
+    a, b, c : entiers
+    a ← 3
+    b ← 4
+    c ← f(b)
+    afficher c
+    calcul2(a, b, c)
+    afficher a, b, c
+fin module
+
+module calcul2 (a↓, b↓, c↑ : entiers)
+    a ← f(a) 
+    c ← 3*b 
+    c ← a+c
+fin module
+
+module f (a↓ : entier) → entier
+    b : entier
+    b ← 2*a+1
+    retourner b
+fin module
+				            </pre><input type="text" value="" class="itemText" id="_d8e483" style="width:12px" /> <span class="gapText">,9,9</span><input type="text" value="" class="itemText" id="_d8e485" style="width:12px" /> <span class="gapText">,3,3</span><input type="text" value="" class="itemText" id="_d8e487" style="width:12px" /> <span class="gapText">,4,4</span><input type="text" value="" class="itemText" id="_d8e489" style="width:25px" /> <span class="gapText">,19,19</span></li>
                      </ul>
                   </div>
                   <div class="itemHelp_disabled">    </div>
