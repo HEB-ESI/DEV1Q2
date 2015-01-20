@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  20 JAN 2015 13:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  20 JAN 2015 13:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -893,11 +893,6 @@ Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/ChallengeSeq/fr/image
 /boulier.jpg used on input line 182.
 (pdftex.def)             Requested size: 288.01591pt x 273.61511pt.
 
-(./ChallengeSeq.toc)
-\tf@toc=\write6
-\openout6 = `ChallengeSeq.toc'.
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 22.58452pt.
@@ -908,16 +903,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../../../_templates/java/icons/logo-esi.jpg> <../../../_templates/java/icons/
 cc-gris.jpg> </home/clr/Documents/Cours/DEV1Q2/ChallengeSeq/fr/image/boulier.jp
-g>] [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 216.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 216.
+g>] (./ChallengeSeq.toc)
+\tf@toc=\write6
+\openout6 = `ChallengeSeq.toc'.
 
-(./ChallengeSeq.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 216.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 216.
+
+[2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
+ (./ChallengeSeq.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
 Package rerunfilecheck Info: File `ChallengeSeq.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 216.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
  ) 
 Here is how much of TeX's memory you used:
  11959 strings out of 493304
@@ -934,7 +933,7 @@ r/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
 12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on ChallengeSeq.pdf (2 pages, 220508 bytes).
+Output written on ChallengeSeq.pdf (2 pages, 220987 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
