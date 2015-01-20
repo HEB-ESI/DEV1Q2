@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="ChallengeSeq" title="Challenge : algorithme séquentiel">
+	
+	<entry>
+		<paragraph>
+			Avez-vous compris les algorithmes séquentiels ? Voyons ça en relevant le défi suivant :
+		</paragraph>
+    <paragraph>
+      Le boulier est un abaque (outil servant à calculer) formé d’un cadre rectangulaire muni de tiges sur lesquelles coulissent des boules.
+      Les bouliers en base 10 sont ceux pour lesquels chaque boule représente, selon la tige sur laquelle elle se trouve, une unité, une dizaine, une centaine, un millier, un dix millier, … 
+    </paragraph>
+    <paragraph>
+      <multimedia src="../image/boulier.jpg" type="jpeg" />
+    </paragraph>
+    <paragraph>
+      Un boulier d'école avec représentation du nombre 37 925.
+    </paragraph>
+    <paragraph>
+      [Wikipedia, consulté en janvier 2015]
+		</paragraph>
+		<paragraph>
+		  Écrivez un module <formatted style="bold">boulier</formatted> qui reçoit un entier de 5 chiffres et qui affiche
+      le nombre de billes pour les cinq dernières tiges, c'est à dire celles des <formatted style="bold">unité</formatted>s, 
+      des <formatted style="bold">dizaine</formatted>s, des <formatted style="bold">centaine</formatted>s, des <formatted style="bold">millier</formatted>s
+      et des <formatted style="bold">dixMillier</formatted>s.
+		</paragraph>
+	</entry>
+
+	<!--metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>1</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2013 - 2014</version>
+				<contribute>
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata-->
+
+</lesson>
