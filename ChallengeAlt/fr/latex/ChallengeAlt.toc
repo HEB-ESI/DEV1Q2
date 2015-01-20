@@ -1,0 +1,4 @@
+\select@language {french}
+\contentsline {subparagraph}{Afficher le titre}{1}{section*.1}
+\contentsline {subparagraph}{Calcul des points pour un 100m}{1}{section*.2}
+\contentsline {subparagraph}{Calcul de la cat\'egorie}{1}{section*.3}

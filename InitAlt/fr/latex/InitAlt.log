@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  12 JAN 2015 13:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  20 JAN 2015 23:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -701,8 +701,7 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rotFPbot=\skip116
 \rot@float@box=\box64
 \rot@mess@toks=\toks35
-)
-No file InitAlt.aux.
+) (./InitAlt.aux)
 \openout1 = `InitAlt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
@@ -719,6 +718,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
 LaTeX Font Info:    ... okay on input line 143.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 143.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -792,11 +792,13 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 143.
 LaTeX Info: Redefining \pageref on input line 143.
 LaTeX Info: Redefining \nameref on input line 143.
+
+(./InitAlt.out) (./InitAlt.out)
 \@outlinefile=\write5
 \openout5 = `InitAlt.out'.
 
 
-<../../../_templates/java/icons/logo-esi.jpg, id=4, 45.16875pt x 85.31876pt>
+<../../../_templates/java/icons/logo-esi.jpg, id=20, 45.16875pt x 85.31876pt>
 File: ../../../_templates/java/icons/logo-esi.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/logo-esi.jpg>
@@ -840,7 +842,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 152.
 
-<../../../_templates/java/icons/cc-gris.jpg, id=5, 88.33pt x 31.11626pt>
+<../../../_templates/java/icons/cc-gris.jpg, id=21, 88.33pt x 31.11626pt>
 File: ../../../_templates/java/icons/cc-gris.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/cc-gris.jpg>
@@ -869,8 +871,10 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 LaTeX Warning: Marginpar on page 1 moved.
 
+(./InitAlt.toc)
 \tf@toc=\write6
 \openout6 = `InitAlt.toc'.
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -882,46 +886,64 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../../../_templates/java/icons/logo-esi.jpg> <../../../_templates/java/icons/
 cc-gris.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
- [2
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
+File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
+) [2
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 276.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 276.
 
-(./InitAlt.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 213.
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+) [3] [4]
+[5] [6] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 513.
 
 
-Package rerunfilecheck Warning: File `InitAlt.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `InitAlt.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  C8045F68377110E00938220C5B7A1651;121.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 213.
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 583.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 583.
+ (./InitAlt.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 583.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 583.
+Package rerunfilecheck Info: File `InitAlt.out' has not changed.
+(rerunfilecheck)             Checksum: DE93D5B88EEA2AD5CE1263229732E1AD;284.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 583.
  ) 
 Here is how much of TeX's memory you used:
- 11943 strings out of 493304
- 176591 string characters out of 6139871
- 280738 words of memory out of 5000000
- 15172 multiletter control sequences out of 15000+600000
- 52579 words of font info for 42 fonts, out of 8000000 for 9000
+ 13005 strings out of 493304
+ 188624 string characters out of 6139871
+ 321731 words of memory out of 5000000
+ 16057 multiletter control sequences out of 15000+600000
+ 66760 words of font info for 53 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,12n,43p,335b,687s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-r9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmtt8.pfb>
-Output written on InitAlt.pdf (2 pages, 219827 bytes).
+ 41i,12n,43p,335b,1937s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
+vips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on InitAlt.pdf (8 pages, 340401 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 315 PDF objects out of 1000 (max. 8388607)
+ 283 compressed objects within 3 object streams
+ 152 named destinations out of 1000 (max. 500000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

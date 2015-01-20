@@ -44,14 +44,14 @@ fin selon que
       </pre><p class="paragraph" id="d8e127">Notez que le cas <code>autres</code> est facultatif.
          </p>
          <p class="paragraph" id="d8e132">
-            Dans ce type de structure, comme pour la structure si-alors-sinon, une seule des séquences
+            Dans ce type de structure, comme pour la structure <code>si-alors-sinon</code>, une seule des séquences
             d’instructions sera exécutée. On veillera à ne pas faire apparaitre une même valeur
             dans
             plusieurs listes. Cette structure est une simplification d’écriture de plusieurs alternatives
             imbriquées.
             
          </p>
-         <p class="paragraph" id="d8e134">
+         <p class="paragraph" id="d8e137">
             Elle est équivalente à : 
             
          </p><pre>
@@ -71,10 +71,10 @@ sinon
     fin si
 fin si
       </pre></div>
-      <div id="d8e138.html" class="look">
-         <p class="paragraph" id="d8e139">
-            Écrire un algorithme qui lit un jour de la semaine sous forme d’un nombre entier (1
-            pour
+      <div id="d8e141.html" class="look">
+         <p class="paragraph" id="d8e142">
+            Écrivons un algorithme qui lit un jour de la semaine sous forme d’un nombre entier
+            (1 pour
             lundi, . . ., 7 pour dimanche) et qui affiche en clair ce jour de la semaine.
             
          </p><pre>
@@ -93,8 +93,8 @@ module jourSemaine()
     fin selon que
 fin module
     </pre></div>
-      <div id="d8e143.html" class="clarify">
-         <p class="paragraph" id="d8e144">En Java :</p><pre>
+      <div id="d8e146.html" class="clarify">
+         <p class="paragraph" id="d8e147">En Java :</p><pre>
 switch (variable){
     case val1 :
       // instructions lorsque la valeur de la variable est val1
@@ -112,19 +112,19 @@ switch (variable){
       // instructions lorsque la valeur de la variable
       // ne se trouve dans aucune des listes précédentes
 }
-      </pre><p class="paragraph" id="d8e148">Notez que le cas <code>default</code> est facultatif.
+      </pre><p class="paragraph" id="d8e151">Notez que le cas <code>default</code> est facultatif.
          </p>
-         <p class="paragraph" id="d8e153">
-            Notez le <code>break</code> à la fin de chaque<code> case</code>.
+         <p class="paragraph" id="d8e156">
+            Notez le <code>break</code> à la fin de chaque (groupe de)<code> case</code>.
             
          </p>
-         <p class="paragraph" id="d8e161">
+         <p class="paragraph" id="d8e164">
             La variable peut être de type <code>byte</code>, <code>short</code>, 
             <code>char</code>, <code>int</code><code>String</code> et 
             les types énumérés que nous verrons plus tard.
             
          </p>
-         <p class="paragraph" id="d8e177">
+         <p class="paragraph" id="d8e180">
             Elle est équivalente à : 
             
          </p><pre>
@@ -138,7 +138,8 @@ if (variable == val1){
       // instructions lorsque la valeur de la variable
       // ne se trouve dans aucune des listes precedentes
 }      </pre></div>
-      <div id="d8e181.html" class="look"><pre>
+      <div id="d8e184.html" class="look">
+         <p class="paragraph" id="d8e185">Par exemple : </p><pre>
 import java.util.Scanner;
 public class Test{
   public static void main(String[] args){
@@ -163,6 +164,6 @@ public class Test{
       </pre></div>
       <hr />
       <div class="navigation_arrows"><a href="unit_SelonQue.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="SelonQue_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 12.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 20.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

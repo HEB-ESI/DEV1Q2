@@ -27,8 +27,8 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="SelonQue_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="SelonQue_learningObject2.html">1.2.2. selon que (version avec conditions)</h1>
-      <div id="d8e186.html" class="clarify">
-         <p class="paragraph" id="d8e187">En pseudo-code :</p><pre>
+      <div id="d8e191.html" class="clarify">
+         <p class="paragraph" id="d8e192">En pseudo-code :</p><pre>
 selon que
     condition_1 :
       // instructions lorsque la condition_1 est vraie
@@ -41,14 +41,14 @@ selon que
       // instructions à exécuter quand aucune
       // des conditions précédentes n’est vérifiée
 fin selon que
-      </pre><p class="paragraph" id="d8e191">
+      </pre><p class="paragraph" id="d8e196">
             Comme précédemment, une et une seule des séquences d’instructions est exécutée. On
             veillera à ce que les conditions ne se « recouvrent » pas, c’est-à-dire que deux d’entre
             elles
             ne soient jamais vraies simultanément. 
             
          </p>
-         <p class="paragraph" id="d8e193">C’est équivalent à : </p><pre>
+         <p class="paragraph" id="d8e198">C’est équivalent à : </p><pre>
 si condition_1 alors
     // instructions lorsque la condition_1 est vraie
 sinon
@@ -65,8 +65,8 @@ sinon
     fin si
 fin si
       </pre></div>
-      <div id="d8e197.html" class="look">
-         <p class="paragraph" id="d8e198">Par exemple : </p><pre>
+      <div id="d8e202.html" class="look">
+         <p class="paragraph" id="d8e203">Par exemple : </p><pre>
 // Lit un nombre et affiche si ce nombre est strictement positif , strictement négatif ou nul.
 module signeNombre()
     nb : entier
@@ -81,14 +81,14 @@ module signeNombre()
     fin selon que
 fin module
     </pre></div>
-      <div id="d8e202.html" class="clarify">
-         <p class="paragraph" id="d8e203">En Java :</p>
-         <p class="paragraph" id="d8e205">Il n'existe pas de <code>switch</code> avec condition, 
+      <div id="d8e207.html" class="clarify">
+         <p class="paragraph" id="d8e208">En Java :</p>
+         <p class="paragraph" id="d8e210">Il n'existe pas de <code>switch</code> avec condition, 
             		  il faut l'écrire comme une succession de <code>if</code>.
          </p><pre>
 if (condition_1){
       // instructions lorsque la condition_1 est vraie
-}else if (condition_2){
+} else if (condition_2){
       // instructions lorsque la condition_2 est vraie
 } ... 
 } else if (condition_n){
@@ -98,8 +98,8 @@ if (condition_1){
       // des conditions precedentes n est verifiee
 }
       </pre></div>
-      <div id="d8e215.html" class="look">
-         <p class="paragraph" id="d8e216">Par exemple : </p><pre>
+      <div id="d8e220.html" class="look">
+         <p class="paragraph" id="d8e221">Par exemple : </p><pre>
 import java. util .Scanner;
 public class Test {
     public static void main(String [] args) {
@@ -117,6 +117,6 @@ public class Test {
     </pre></div>
       <hr />
       <div class="navigation_arrows"><a href="SelonQue_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 12.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 20.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

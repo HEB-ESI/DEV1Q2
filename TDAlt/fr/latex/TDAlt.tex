@@ -227,16 +227,13 @@ if (condition) {
 }
       \end{Java}
         La \textbf{condition} est une expression d\'elivrant un r\'esultat 
-        \textbf{bool\'een} (true ou false) ; elle associe
-        des variables, constantes, expressions arithm\'etiques, au moyen des op\'erateurs logiques ou de
-        comparaison. En particulier, cette condition peut \^etre r\'eduite \`a une seule variable bool\'eenne.
+        \textbf{bool\'een} (true ou false).
       
             \par
         
         Dans cette structure, lorsque la \textbf{condition est vraie}, il y a ex\'ecution 
         de la s\'equence d'instructions contenue entre les mots \textbf{{} 
-        et \textbf{}} ; ensuite, l'algorithme continue de fa\c con
-        s\'equentielle.
+        et \textbf{}} ; ensuite, le code continue de fa\c con s\'equentielle.
       
             \par
         
@@ -323,7 +320,7 @@ fin selon que
       \end{verbatim}Notez que le cas \verb@autres@ est facultatif.
             \par
         
-        Dans ce type de structure, comme pour la structure si-alors-sinon, une seule des s\'equences
+        Dans ce type de structure, comme pour la structure \verb@si-alors-sinon@, une seule des s\'equences
         d'instructions sera ex\'ecut\'ee. On veillera \`a ne pas faire apparaitre une m\^eme valeur dans
         plusieurs listes. Cette structure est une simplification d'\'ecriture de plusieurs alternatives
         imbriqu\'ees.
@@ -350,7 +347,7 @@ sinon
     fin si
 fin si
       \end{verbatim}
-        \'Ecrire un algorithme qui lit un jour de la semaine sous forme d'un nombre entier (1 pour
+        \'Ecrivons un algorithme qui lit un jour de la semaine sous forme d'un nombre entier (1 pour
         lundi, . . ., 7 pour dimanche) et qui affiche en clair ce jour de la semaine.
       
             \par
@@ -392,7 +389,7 @@ switch (variable){
       \end{verbatim}Notez que le cas \verb@default@ est facultatif.
             \par
         
-        Notez le \verb@break@ \`a la fin de chaque\verb@ case@.
+        Notez le \verb@break@ \`a la fin de chaque (groupe de)\verb@ case@.
       
             \par
         
@@ -415,7 +412,9 @@ if (variable == val1){
 } else {
       // instructions lorsque la valeur de la variable
       // ne se trouve dans aucune des listes precedentes
-}      \end{Java}\begin{Java}
+}      \end{Java}Par exemple : 
+            \par
+        \begin{Java}
 import java.util.Scanner;
 public class Test{
   public static void main(String[] args){
@@ -500,7 +499,7 @@ fin module
         \begin{Java}
 if (condition_1){
       // instructions lorsque la condition_1 est vraie
-}else if (condition_2){
+} else if (condition_2){
       // instructions lorsque la condition_2 est vraie
 } ... 
 } else if (condition_n){
@@ -617,9 +616,9 @@ public class Exercice1 {
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
         if (nb1 < nb2){
-          System.out.println(nb1);
+          System.out.print(nb1);
         } else {
-          System.out.println(nb2);
+          System.out.print(nb2);
         } 
     }
 }
@@ -633,12 +632,12 @@ public class Exercice2 {
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
         if (nb1 > nb2 && nb1 > nb3){
-          System.out.println(nb1);
+          System.out.print(nb1);
         } else {
             if (nb2 > nb3){
-              System.out.println(nb2);
+              System.out.print(nb2);
             } else {
-              System.out.println(nb3);
+              System.out.print(nb3);
             }
         } 
     }
@@ -653,10 +652,10 @@ public class Exercice3 {
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
         switch (nb1){
-          case 1 : System.out.println("premier"); break;
-          case 2 : System.out.println("deuxieme"); break;
-          case 3 : System.out.println("troisieme"); break;
-          default : System.out.println("pas dans le trio");
+          case 1 : System.out.print("premier"); break;
+          case 2 : System.out.print("deuxieme"); break;
+          case 3 : System.out.print("troisieme"); break;
+          default : System.out.print("pas dans le trio");
         } 
     }
 }
@@ -670,10 +669,10 @@ public class Exercice3 {
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
         switch (nb1){
-          case 1 : System.out.println("premier");
-          case 2 : System.out.println("deuxieme");
-          case 3 : System.out.println("troisieme");
-          default : System.out.println("pas dans le trio");
+          case 1 : System.out.print("premier");
+          case 2 : System.out.print("deuxieme");
+          case 3 : System.out.print("troisieme");
+          default : System.out.print("pas dans le trio");
         } 
     }
 }
@@ -689,7 +688,7 @@ public class Exercice3 {
 				
 			\item il convient d'abord de bien comprendre le probl\`eme pos\'e ; assurez-vous qu'il est parfaitement sp\'ecifi\'e ;
 			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans l'algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites ;
-			\item mettez en \'evidence les variables \guillemotleft  donn\'ees \guillemotright , les variables \guillemotleft  r\'esultats \guillemotright  et les variables de travail ;
+			\item \textbf{mettez en \'evidence les variables \guillemotleft  donn\'ees \guillemotright , les variables \guillemotleft  r\'esultats \guillemotright  et les variables de travail ;}
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
 					\end{itemize}
@@ -715,11 +714,85 @@ public class Exercice3 {
 			\item \`a partir d'un moment exprim\'e par 2 entiers, heure et minute, affiche le moment qu'il sera une minute plus tard.
 			\item v\'erifie si une ann\'ee est bissextile. Pour rappel, les ann\'ees bissextiles sont les ann\'ees multiples de 4.
              Font exception, les multiples de 100 (sauf les multiples de 400 qui sont bien bissextiles). Ainsi 2012 et 2400 sont bissextile mais pas 2010 ni 2100.
-			\item Dans une rue o\`u se pratique le stationnement alternatif, du 1 au 15 du mois, on se gare du c\^ot\'e des maisons ayant un num\'ero impair, 
-            et le reste du mois, on se gare de l'autre c\^ot\'e.
-            \'Ecrivez un algorithme et le code java correspondant qui, sur base de la date du jour et du num\'ero de maison devant laquelle
-            vous vous \^etes arr\^et\'e, indique si vous \^etes bien stationn\'e ou non.
 					\end{enumerate}
+				
+            \par
+        
+			
+		\subparagraph{Stationnement alternatif} 
+		
+					\textcolor{white}{.} \par
+				
+          Dans une rue o\`u se pratique le stationnement alternatif, du 1 au 15 du mois, on se gare du c\^ot\'e des maisons ayant un num\'ero impair, 
+          et le reste du mois, on se gare de l'autre c\^ot\'e.
+          \'Ecrivez un algorithme et le code java correspondant qui, sur base de la date du jour et du num\'ero de maison devant laquelle
+          vous vous \^etes arr\^et\'e, indique si vous \^etes bien stationn\'e ou non.
+        
+            \par
+        
+			
+		\subparagraph{La fi\`evre monte} 
+		
+					\textcolor{white}{.} \par
+				
+          Chez l'humain la temp\'erature corporelle normale moyenne est de 37 \textdegree C (entre 36,5 \textdegree C et 37,5 \textdegree C selon les individus). 
+          La fi\`evre est d\'efinie par une temp\'erature rectale au repos sup\'erieure ou \'egale \`a 38,0 \textdegree C. 
+          Une fi\`evre au-del\`a de 40 \textdegree C  est consid\'er\'ee comme un risque de sant\'e majeur et imm\'ediat. 
+          Lorsque la fi\`evre est mod\'er\'ee (de 37,7 \textdegree C \`a 37,9 \textdegree C), on parle de f\'ebricule.\par
+				
+          [Wikipedia]
+        
+            \par
+        
+          \'Ecrivez un module fi\`evre qui lit une temp\'erature au clavier et qui affiche si le patient a de la
+          temp\'erature (sup\'erieure ou \'egale \`a 38,0\textdegree C) ET si cette cette fi\`evre est mod\'er\'ee (entre 38,0\textdegree C 
+          et 40,0\textdegree C) ou \`a risque (strictement sup\'erieur \`a 40,0\textdegree C). 
+          Rien ne doit \^etre affich\'e si le patient n'a pas de fi\`evre.
+        
+            \par
+        \'Ecrivez le code java correspondant.
+            \par
+        
+			
+		\subparagraph{Taxes communales} 
+		
+					\textcolor{white}{.} \par
+				
+          Dans ma commune, les taxes communales des enl\`evements des immondices s'\'el\`event \`a
+          
+					\begin{itemize}
+				
+			\item 80€ pour une personne isol\'ee ;
+			\item 135€ pour une famille de 2 ou 3 personnes ;
+			\item 175€ pour une famille de 4 personnes ou plus.
+					\end{itemize}
+				
+          \'Ecrivez un module qui lit le nombre de personnes composant la famille et qui affiche le prix de la taxe \`a payer.
+        
+            \par
+        \'Ecrivez le code java correspondant.
+            \par
+        
+			
+		\subparagraph{Au cin\'ema} 
+		
+					\textcolor{white}{.} \par
+				
+          \`A Bruxelles, lors de chaque projection cin\'ematographique, une taxe de 0,5€ est
+          pr\'elev\'ee sur le prix du billet de chaque spectateur.
+          
+					\begin{itemize}
+				
+			\item \'Ecrivez un module qui lit le nombre de spectateurs et qui affiche le prix de la taxe \`a payer.
+			\item \'Ecrivez le code java correspondant.
+			\item 
+              Si le film projet\'e est un documentaire, aucune taxe n'est pr\'elev\'ee. 
+              \'Ecrivez un module qui lit le nombre de spectateurs et un bool\'een (\`a vrai
+              si le film est un documentaire et faux sinon) et qui affiche le prix de la taxe
+              \`a payer.
+            
+			\item \'Ecrivez le code java correspondant.
+					\end{itemize}
 				
             \par
         

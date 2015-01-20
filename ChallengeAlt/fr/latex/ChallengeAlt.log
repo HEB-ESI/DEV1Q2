@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  20 JAN 2015 23:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  21 JAN 2015 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**TDAlt.tex
-(./TDAlt.tex
+**ChallengeAlt.tex
+(./ChallengeAlt.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -686,10 +686,10 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 \@indexfile=\write4
-\openout4 = `TDAlt.idx'.
+\openout4 = `ChallengeAlt.idx'.
 
 
-Writing index file TDAlt.idx
+Writing index file ChallengeAlt.idx
 (/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 
@@ -701,8 +701,8 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rotFPbot=\skip116
 \rot@float@box=\box64
 \rot@mess@toks=\toks35
-) (./TDAlt.aux)
-\openout1 = `TDAlt.aux'.
+) (./ChallengeAlt.aux)
+\openout1 = `ChallengeAlt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
 LaTeX Font Info:    ... okay on input line 143.
@@ -718,7 +718,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
 LaTeX Font Info:    ... okay on input line 143.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 143.
-
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -793,12 +792,12 @@ LaTeX Info: Redefining \ref on input line 143.
 LaTeX Info: Redefining \pageref on input line 143.
 LaTeX Info: Redefining \nameref on input line 143.
 
-(./TDAlt.out) (./TDAlt.out)
+(./ChallengeAlt.out) (./ChallengeAlt.out)
 \@outlinefile=\write5
-\openout5 = `TDAlt.out'.
+\openout5 = `ChallengeAlt.out'.
 
 
-<../../../_templates/java/icons/logo-esi.jpg, id=44, 45.16875pt x 85.31876pt>
+<../../../_templates/java/icons/logo-esi.jpg, id=4, 45.16875pt x 85.31876pt>
 File: ../../../_templates/java/icons/logo-esi.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/logo-esi.jpg>
@@ -842,7 +841,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 152.
 
-<../../../_templates/java/icons/cc-gris.jpg, id=45, 88.33pt x 31.11626pt>
+<../../../_templates/java/icons/cc-gris.jpg, id=5, 88.33pt x 31.11626pt>
 File: ../../../_templates/java/icons/cc-gris.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/cc-gris.jpg>
@@ -871,9 +870,25 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 LaTeX Warning: Marginpar on page 1 moved.
 
-(./TDAlt.toc)
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-34.def
+File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 195.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 195.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 195.
+
+Overfull \hbox (37.05441pt too wide) in paragraph at lines 195--196
+[]\T1/lmr/m/n/10 Pour le 100m, la for-mule est : []\T1/lmtt/m/n/10 points = 25.
+4347 $\OMS/lmsy/m/n/10 ^^C$ \T1/lmtt/m/n/10 (18 $\OMS/lmsy/m/n/10 ^^@$ \T1/lmtt
+/m/n/10 temps)^(1.81)
+ []
+
+(./ChallengeAlt.toc)
 \tf@toc=\write6
-\openout6 = `TDAlt.toc'.
+\openout6 = `ChallengeAlt.toc'.
 
 
 
@@ -886,110 +901,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../../../_templates/java/icons/logo-esi.jpg> <../../../_templates/java/icons/
 cc-gris.jpg>]
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [2
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 240.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
 
-]
-Overfull \hbox (151.63728pt too wide) in paragraph at lines 280--280
-[]\T1/lmtt/m/n/10.95 // Lit un nombre et affiche si ce nombre est positif (zéro
- inclus) ou strictement négatif[] 
- []
-
-[3]
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 320--320
-[]      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
- dans liste_1[] 
- []
-
-
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 320--320
-[]      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
- dans liste_2[] 
- []
-
-
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 320--320
-[]      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
- dans liste_n[] 
- []
-
-[4]
-Overfull \hbox (134.39108pt too wide) in paragraph at lines 369--369
-[]\T1/lmtt/m/n/10.95 // Lit un nombre entre 1 et 7 et affiche en clair le jour 
-de la semaine correspondant.[] 
- []
-
-[5]
-Overfull \hbox (2.17021pt too wide) in paragraph at lines 389--389
-[]      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
- val1[] 
- []
-
-
-Overfull \hbox (94.14995pt too wide) in paragraph at lines 389--389
-[]      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
- val2 ou val3 ou val4[] 
- []
-
-
-Overfull \hbox (2.17021pt too wide) in paragraph at lines 389--389
-[]      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
- valN[] 
- []
-
-[6] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [7]
-Overfull \hbox (180.38095pt too wide) in paragraph at lines 494--494
-[]\T1/lmtt/m/n/10.95 // Lit un nombre et affiche si ce nombre est strictement p
-ositif , strictement négatif ou nul.[] 
- []
-
-[8] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
-File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
-) [9] [10]
-[11]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 712.
-
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [12] [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 799.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 799.
- (./TDAlt.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 799.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 799.
-Package rerunfilecheck Info: File `TDAlt.out' has not changed.
-(rerunfilecheck)             Checksum: 3969608BD9DCA1474AA916F6C1FF589C;706.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 799.
+(./ChallengeAlt.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 240.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 240.
+Package rerunfilecheck Info: File `ChallengeAlt.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 240.
  ) 
 Here is how much of TeX's memory you used:
- 13059 strings out of 493304
- 189311 string characters out of 6139871
- 324275 words of memory out of 5000000
- 16067 multiletter control sequences out of 15000+600000
- 63517 words of font info for 47 fonts, out of 8000000 for 9000
+ 12619 strings out of 493304
+ 183935 string characters out of 6139871
+ 283803 words of memory out of 5000000
+ 15830 multiletter control sequences out of 15000+600000
+ 60682 words of font info for 51 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,12n,43p,333b,1937s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
-vips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmtt8.pfb>
-Output written on TDAlt.pdf (14 pages, 350992 bytes).
+ 41i,12n,43p,340b,717s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathsy.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/latxfont/lcirclew.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+r9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
+Output written on ChallengeAlt.pdf (1 page, 232628 bytes).
 PDF statistics:
- 406 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
- 202 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 65 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

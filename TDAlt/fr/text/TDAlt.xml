@@ -66,15 +66,12 @@ if (condition) {
       </paragraph>
       <paragraph>
         La <formatted style="bold">condition</formatted> est une expression délivrant un résultat 
-        <formatted style="bold">booléen</formatted> (true ou false) ; elle associe
-        des variables, constantes, expressions arithmétiques, au moyen des opérateurs logiques ou de
-        comparaison. En particulier, cette condition peut être réduite à une seule variable booléenne.
+        <formatted style="bold">booléen</formatted> (true ou false).
       </paragraph>
       <paragraph>
         Dans cette structure, lorsque la <formatted style="bold">condition est vraie</formatted>, il y a exécution 
         de la séquence d’instructions contenue entre les mots <formatted style="bold">{</formatted> 
-        et <formatted style="bold">}</formatted> ; ensuite, l’algorithme continue de façon
-        séquentielle.
+        et <formatted style="bold">}</formatted> ; ensuite, le code continue de façon séquentielle.
       </paragraph>
       <paragraph>
         Lorsque la <formatted style="bold">condition est fausse</formatted>, 
@@ -192,7 +189,7 @@ fin selon que
       </paragraph>
       <paragraph>Notez que le cas <formatted style="code">autres</formatted> est facultatif.</paragraph>
       <paragraph>
-        Dans ce type de structure, comme pour la structure si-alors-sinon, une seule des séquences
+        Dans ce type de structure, comme pour la structure <formatted style="code">si-alors-sinon</formatted>, une seule des séquences
         d’instructions sera exécutée. On veillera à ne pas faire apparaitre une même valeur dans
         plusieurs listes. Cette structure est une simplification d’écriture de plusieurs alternatives
         imbriquées.
@@ -221,7 +218,7 @@ fin si
     
     <look>
       <paragraph>
-        Écrire un algorithme qui lit un jour de la semaine sous forme d’un nombre entier (1 pour
+        Écrivons un algorithme qui lit un jour de la semaine sous forme d’un nombre entier (1 pour
         lundi, . . ., 7 pour dimanche) et qui affiche en clair ce jour de la semaine.
       </paragraph>
       <paragraph cssClass="code">
@@ -265,7 +262,7 @@ switch (variable){
       </paragraph>
       <paragraph>Notez que le cas <formatted style="code">default</formatted> est facultatif.</paragraph>
       <paragraph>
-        Notez le <formatted style="code">break</formatted> à la fin de chaque<formatted style="code"> case</formatted>.
+        Notez le <formatted style="code">break</formatted> à la fin de chaque (groupe de)<formatted style="code"> case</formatted>.
       </paragraph>
       <paragraph>
         La variable peut être de type <formatted style="code">byte</formatted>, <formatted style="code">short</formatted>, 
@@ -289,6 +286,7 @@ if (variable == val1){
     </clarify>
     
     <look>
+      <paragraph>Par exemple : </paragraph>
       <paragraph cssClass="java">
 import java.util.Scanner;
 public class Test{
@@ -385,7 +383,7 @@ fin module
       <paragraph cssClass="java">
 if (condition_1){
       // instructions lorsque la condition_1 est vraie
-}else if (condition_2){
+} else if (condition_2){
       // instructions lorsque la condition_2 est vraie
 } ... 
 } else if (condition_n){
@@ -418,6 +416,7 @@ public class Test {
 		</learningObject>
 
 	</unit>
+	
 	
 	<!-- =================================================================== -->
 	<unit label="Exercices" title="Exercices">
@@ -529,9 +528,9 @@ public class Exercice1 {
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
         if (nb1 <![CDATA[<]]> nb2){
-          System.out.println(nb1);
+          System.out.print(nb1);
         } else {
-          System.out.println(nb2);
+          System.out.print(nb2);
         } 
     }
 }
@@ -548,12 +547,12 @@ public class Exercice2 {
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
         if (nb1 <![CDATA[>]]> nb2 <![CDATA[&&]]> nb1 <![CDATA[>]]> nb3){
-          System.out.println(nb1);
+          System.out.print(nb1);
         } else {
             if (nb2 <![CDATA[>]]> nb3){
-              System.out.println(nb2);
+              System.out.print(nb2);
             } else {
-              System.out.println(nb3);
+              System.out.print(nb3);
             }
         } 
     }
@@ -571,10 +570,10 @@ public class Exercice3 {
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
         switch (nb1){
-          case 1 : System.out.println("premier"); break;
-          case 2 : System.out.println("deuxieme"); break;
-          case 3 : System.out.println("troisieme"); break;
-          default : System.out.println("pas dans le trio");
+          case 1 : System.out.print("premier"); break;
+          case 2 : System.out.print("deuxieme"); break;
+          case 3 : System.out.print("troisieme"); break;
+          default : System.out.print("pas dans le trio");
         } 
     }
 }
@@ -591,10 +590,10 @@ public class Exercice3 {
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
         switch (nb1){
-          case 1 : System.out.println("premier");
-          case 2 : System.out.println("deuxieme");
-          case 3 : System.out.println("troisieme");
-          default : System.out.println("pas dans le trio");
+          case 1 : System.out.print("premier");
+          case 2 : System.out.print("deuxieme");
+          case 3 : System.out.print("troisieme");
+          default : System.out.print("pas dans le trio");
         } 
     }
 }
@@ -619,7 +618,7 @@ public class Exercice3 {
           <list listStyle="unordered">
             <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
             <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites ;</item>
-            <item>mettez en évidence les variables « données », les variables « résultats » et les variables de travail ;</item>
+            <item><formatted style="bold">mettez en évidence les variables « données », les variables « résultats » et les variables de travail ;</formatted></item>
             <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
           </list>
@@ -643,10 +642,55 @@ public class Exercice3 {
             <item>à partir d’un moment exprimé par 2 entiers, heure et minute, affiche le moment qu’il sera une minute plus tard.</item>
             <item>vérifie si une année est bissextile. Pour rappel, les années bissextiles sont les années multiples de 4.
              Font exception, les multiples de 100 (sauf les multiples de 400 qui sont bien bissextiles). Ainsi 2012 et 2400 sont bissextile mais pas 2010 ni 2100.</item>
-            <item>Dans une rue où se pratique le stationnement alternatif, du 1 au 15 du mois, on se gare du côté des maisons ayant un numéro impair, 
-            et le reste du mois, on se gare de l’autre côté.
-            Écrivez un algorithme et le code java correspondant qui, sur base de la date du jour et du numéro de maison devant laquelle
-            vous vous êtes arrêté, indique si vous êtes bien stationné ou non.</item>
+          </list>
+        </paragraph>
+        
+        <paragraph title="Stationnement alternatif">
+          Dans une rue où se pratique le stationnement alternatif, du 1 au 15 du mois, on se gare du côté des maisons ayant un numéro impair, 
+          et le reste du mois, on se gare de l’autre côté.
+          Écrivez un algorithme et le code java correspondant qui, sur base de la date du jour et du numéro de maison devant laquelle
+          vous vous êtes arrêté, indique si vous êtes bien stationné ou non.
+        </paragraph>
+        
+        <paragraph title="La fièvre monte">
+          Chez l'humain la température corporelle normale moyenne est de 37 °C (entre 36,5 °C et 37,5 °C selon les individus). 
+          La fièvre est définie par une température rectale au repos supérieure ou égale à 38,0 °C. 
+          Une fièvre au-delà de 40 °C  est considérée comme un risque de santé majeur et immédiat. 
+          Lorsque la fièvre est modérée (de 37,7 °C à 37,9 °C), on parle de fébricule.<newLine/>
+          [Wikipedia]
+        </paragraph>
+        <paragraph>
+          Écrivez un module fièvre qui lit une température au clavier et qui affiche si le patient a de la
+          température (supérieure ou égale à 38,0°C) ET si cette cette fièvre est modérée (entre 38,0°C 
+          et 40,0°C) ou à risque (strictement supérieur à 40,0°C). 
+          Rien ne doit être affiché si le patient n'a pas de fièvre.
+        </paragraph>
+        <paragraph>Écrivez le code java correspondant.</paragraph>
+        
+        <paragraph title="Taxes communales">
+          Dans ma commune, les taxes communales des enlèvements des immondices s’élèvent à
+          <list listStyle="unordered">
+            <item>80€ pour une personne isolée ;</item>
+            <item>135€ pour une famille de 2 ou 3 personnes ;</item>
+            <item>175€ pour une famille de 4 personnes ou plus.</item>
+          </list>
+          Écrivez un module qui lit le nombre de personnes composant la famille et qui affiche le prix de la taxe à payer.
+        </paragraph>
+        <paragraph>Écrivez le code java correspondant.</paragraph>
+        
+        <paragraph title="Au cinéma">
+          À Bruxelles, lors de chaque projection cinématographique, une taxe de 0,5€ est
+          prélevée sur le prix du billet de chaque spectateur.
+          <list listStyle="unordered">
+            <item>Écrivez un module qui lit le nombre de spectateurs et qui affiche le prix de la taxe à payer.</item>
+            <item>Écrivez le code java correspondant.</item>
+            <item>
+              Si le film projeté est un documentaire, aucune taxe n’est prélevée. 
+              Écrivez un module qui lit le nombre de spectateurs et un booléen (à vrai
+              si le film est un documentaire et faux sinon) et qui affiche le prix de la taxe
+              à payer.
+            </item>
+            <item>Écrivez le code java correspondant.</item>
           </list>
         </paragraph>
       </act>
