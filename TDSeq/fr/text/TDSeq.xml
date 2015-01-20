@@ -92,12 +92,12 @@
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
+									<item>un prix hors tva ?<gap answers="1 réel,un réel, réel">réel</gap></item>  
+									<item>votre nom ? <gap answers="une chaine,1 chaine, chaine">chaine</gap></item>  
+									<item>vos initiales ?<gap answers="2 caractères,3 caractères">2 caractères</gap></item>  
+									<item>la longueur d'un rectangle ? <gap answers="réel,1 réel">réel</gap></item>  
 									<item>une date du calendrier ? <gap answers="3 entiers,trois entiers,2 entiers 1 chaine,1 chaine 2 entiers">3 entiers</gap></item>  
 									<item>un moment dans la journée ? <gap answers="3 entiers, trois entiers">3 entiers</gap></item>  
-									<item>le prix d’un produit en grande surface ?<gap answers="1 réel,un réel, réel">1 réel</gap></item>  
-									<item>votre nom ? <gap answers="une chaine,1 chaine, chaine">1 chaine</gap></item>  
-									<item>vos initiales ?<gap answers="2 caractères,3 caractères">2 caractères</gap></item>  
-									<item>votre adresse ? <gap answers="1 chaine">1 chaine</gap></item>  
 								</list>  
 							</gapText>
 							<solution></solution>
@@ -133,12 +133,12 @@
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
-									<item>une date du calendrier ? <gap answers="3 entiers,trois entiers,2 entiers 1 chaine,1 chaine 2 entiers">3 entiers</gap></item>  
-									<item>un moment dans la journée ? <gap answers="3 entiers, trois entiers">3 entiers</gap></item>  
-									<item>le prix d’un produit en grande surface ?<gap answers="1 réel,un réel, réel">1 réel</gap></item>  
-									<item>votre nom ? <gap answers="une chaine,1 chaine, chaine">1 chaine</gap></item>  
-									<item>vos initiales ?<gap answers="2 caractères,3 caractères">2 caractères</gap></item>  
-									<item>votre adresse ? <gap answers="1 chaine">1 chaine</gap></item>  
+									<item>un prix hors tva ?<gap answers="double">double</gap></item>  
+									<item>votre nom ? <gap answers="String">String</gap></item>  
+									<item>une de vos initiales ?<gap answers="char">char</gap></item>  
+									<item>la longueur d'un rectangle ? <gap answers="double">double</gap></item>  
+									<item>le jour d'une date du calendrier ? <gap answers="int">int</gap></item>  
+									<item>les heures d'un moment dans la journée ? <gap answers="int">int</gap></item>  
 								</list>  
 							</gapText>
 							<solution></solution>
@@ -442,10 +442,14 @@
 				</act>
 				
 				<clarify>
-				<paragraph>
+				<paragraph title="Constante">
 				  Une constante est une information pour laquelle nom, type et valeur sont figés.
           La liste des constantes utilisées dans un algorithme apparaitra dans la section déclaration des variables sous la forme suivante : 
+        </paragraph>
+        <paragraph>
           <formatted style="input">constante PI = 3,14</formatted>  
+        </paragraph>
+        <paragraph>
           <formatted style="input">constante ESI = "École Supérieure d’Informatique"</formatted>
           Il est inutile de spécifier leur type, celui-ci étant défini implicitement par la valeur de la constante.
         </paragraph>
@@ -707,21 +711,22 @@ Y = 3; // Idem
             On définit deux modes d’évaluation des opérateurs ET et OU :
           </paragraph>
           <paragraph>
-          L’évaluation complète :
-          pour connaitre la valeur de cond1 ET cond2 (respectivement cond1 OU cond2), les deux
+          <formatted style="bold">L’évaluation complète</formatted> :
+          pour connaitre la valeur de <formatted style="code">cond1 ET cond2</formatted> 
+          (respectivement <formatted style="code">cond1 OU cond2</formatted>), les deux
           conditions sont chacune évaluées, après quoi on évalue la valeur de vérité de l’ensemble de
           l’expression.
           </paragraph>
           <paragraph>
-          L’évaluation court-circuitée :
+          <formatted style="bold">L’évaluation court-circuitée</formatted> :
           dans un premier temps, seule la première condition est testée. 
           </paragraph>
           <paragraph>
-          Dans le cas du ET, si cond1 s’avère faux, il est inutile d’évaluer cond2 puisque le résultat sera faux de toute façon ;
+          Dans le cas du <formatted style="code">ET</formatted>, si cond1 s’avère faux, il est inutile d’évaluer cond2 puisque le résultat sera faux de toute façon ;
           l’évaluation de cond2 et de l’ensemble de la conjonction ne se fera que si cond1 est vrai.
           </paragraph>
           <paragraph>
-          De même, dans le cas du OU, si cond1 s’avère vrai, il est inutile d’évaluer cond2 puisque le
+          De même, dans le cas du <formatted style="code">OU</formatted>, si cond1 s’avère vrai, il est inutile d’évaluer cond2 puisque le
           résultat sera vrai de toute façon ; l’évaluation de cond2 et de l’ensemble de la disjonction
           ne se fera que si cond1 est faux.
           </paragraph>
@@ -732,7 +737,7 @@ Y = 3; // Idem
           Montrons son avantage sur un exemple. 
           </paragraph>
           <paragraph>
-          Considérons l’expression n ≠ 0 ET m/n > 10. Si on teste sa valeur
+          Considérons l’expression <formatted style="code">n ≠ 0 ET m/n > 10</formatted>. Si on teste sa valeur
           de vérité avec une valeur de n non nulle, la première condition est vraie et le résultat de
           la conjonction dépendra de la valeur de la deuxième condition. Supposons à présent que n
           soit nul. L’évaluation court-circuitée donne le résultat faux immédiatement après test de la
@@ -740,12 +745,10 @@ Y = 3; // Idem
           arrêt de l’algorithme pour cause de division par 0 !
           </paragraph>
           <paragraph>
-          Notez que l’évaluation court-circuitée a pour conséquence la non-commutativité du ET et
-          du OU : cond1 ET cond2 n’est donc pas équivalent à cond2 ET cond1, puisque l’ordre des
-          évaluations des deux conditions entre en jeu. Nous conseillons cependant de limiter les cas
-          d’utilisation de l’évaluation court-circuitée et d’opter pour des expressions dont l’évalua-
-          tion serait similaire dans les deux cas. La justification d’utiliser l’évaluation court-circuitée
-          apparaitra dans plusieurs exemples tout au long du cours.
+          Notez que l’évaluation court-circuitée a pour conséquence la non-commutativité du 
+          <formatted style="code">ET</formatted> et du <formatted style="code">OU</formatted> : 
+          <formatted style="code">cond1 ET cond2</formatted> ≠ <formatted style="code">cond2 ET cond1</formatted>, 
+          puisque l’ordre des évaluations des deux conditions entre en jeu.
           </paragraph>
         </clarify>
       </learningObject>
@@ -794,6 +797,59 @@ Y = 3; // Idem
           </list>
         </paragraph>
       </clarify>
+    </learningObject>
+    
+    <learningObject title="Exercices">
+			<!-- ============================================================ -->
+			  <act>
+				<selfCheck title="Que vaut ?" shuffle="yes">
+						<fillInBlanks>
+							<question>
+							  en algo :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+								  <item>15 + 3 ?<gap answers="18">18</gap></item>  
+								  <item>17 - 2 ?<gap answers="15">15</gap></item>  
+								  <item>13/2 ?<gap answers="6.5">6.5</gap></item>  
+								  <item>4.5*3 ?<gap answers="13.5">13.5</gap></item>  
+									<item>15 DIV 4 ?<gap answers="3">3</gap></item>  
+									<item>17 MOD 3 ? <gap answers="2">2</gap></item>  
+									<item>'x'='y' ?<gap answers="faux">faux</gap></item>  
+									<item>7<![CDATA[<]]>8 ? <gap answers="vrai">vrai</gap></item>  
+									<item>0<![CDATA[≥]]>0 ? <gap answers="vrai">vrai</gap></item>  
+									<item>3<![CDATA[≥]]>4 ET 4<![CDATA[<]]>8 ? <gap answers="faux">faux</gap></item>  
+									<item>3<![CDATA[≥]]>4 OU 4<![CDATA[<]]>8 ? <gap answers="vrai">vrai</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+          </selfCheck>
+        
+				<selfCheck title="Que vaut ?" shuffle="yes">
+						<fillInBlanks>
+							<question>
+							  en java :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+								  <item>21 + 3 ?<gap answers="24">24</gap></item>  
+								  <item>1 - 2 ?<gap answers="-1">-1</gap></item>  
+								  <item>13/2 ?<gap answers="6">6</gap></item>  
+								  <item>4.5*3 ?<gap answers="13.5">13.5</gap></item>  
+									<item>13.0/2 ?<gap answers="6.5">6.5</gap></item>  
+									<item>15 % 3 ? <gap answers="0">0</gap></item>  
+									<item>'a'=='b' ?<gap answers="faux">faux</gap></item>  
+									<item>7<![CDATA[<]]>8 ? <gap answers="vrai">vrai</gap></item>  
+									<item>0<![CDATA[<=]]>0 ? <gap answers="vrai">vrai</gap></item>  
+									<item>-1<![CDATA[<=]]>4 ET 4<![CDATA[>]]>8 ? <gap answers="faux">faux</gap></item>  
+									<item>-1<![CDATA[≥]]>4 OU 4<![CDATA[<]]>8 ? <gap answers="vrai">vrai</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+				</act>
     </learningObject>
     </unit>
     
@@ -1026,6 +1082,71 @@ int nombre1 = clavier. nextInt ();
 				</paragraph>
         </clarify>
         </learningObject>
+        
+        
+    <learningObject title="Exercices">
+			<!-- ============================================================ -->
+			  <act>
+				<selfCheck title="Que vaut ?" shuffle="yes">
+						<fillInBlanks>
+							<question>
+							  en algo :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+								  <item>Quel est le contenu de la variable entière n à l'issue de ces 2 lignes de code?<newLine/>
+                    n ← 5<newLine/>
+                    n ← 1 + n*2<newLine/>
+                    <gap answers="11">11</gap></item>  
+								  <item>Quel est le contenu de la variable entière n à l'issue de ces 3 lignes de code?<newLine/>
+                    n ← 25<newLine/>
+                    n ← n DIV 2<newLine/>
+                    n ← n MOD 7 ?<newLine/>
+                    <gap answers="5">5</gap></item>  
+								  <item>Quelle est la ligne de code qui réalise l'affectation externe de la variable capital ?<gap answers="lire capital">lire capital</gap></item>  
+								  <item>Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire ?<gap answers="afficher salaire">afficher salaire</gap></item>  
+									<item>Dans un algorithme, on veut mettre dans la variable c le produit des contenus des
+									  variables a et b. Que doit-on écrire?<gap answers="c ← a*b">c ← a*b</gap></item>  
+									<item>Écrivez l'instruction qui a pour effet de mettre clr dans la variable acronyme (de type chaine) <gap answers="">acronyme ← "clr"</gap></item>  
+									<item>Que va afficher le programme suivant si l’utilisateur encode « Toto » ?<newLine/>
+									  monNom : chaine<newLine/>
+									  lire monNom<newLine/>
+                    afficher « monNom »<newLine/>
+                    <gap answers="monNom">monNom</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+          </selfCheck>
+        
+				<selfCheck title="Que vaut ?" shuffle="yes">
+						<fillInBlanks>
+							<question>
+							  en java :
+							</question>
+							<gapText> 
+								<list listStyle="unordered">
+								  <item>Quel est le contenu de la variable entière n à l'issue de ces 2 lignes de code?<newLine/>
+                    int n = 8;<newLine/>
+                    n = 6 + n/3;<newLine/>
+                    <gap answers="8">8</gap></item>  
+								  <item>Quel est le contenu de la variable entière n à l'issue de ces 3 lignes de code?<newLine/>
+                    int n = 13<newLine/>
+                    n ← n / 2<newLine/>
+                    n ← n % 3 ?<newLine/>
+                    <gap answers="0">0</gap></item>  
+								  <item>Quelle est la ligne de code qui réalise l'affectation externe de la variabl réelle capital ?<gap answers="">capital=clavier.nextDouble();</gap></item>  
+								  <item>Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire ?<gap answers="">System.out.println(salaire);</gap></item>  
+									<item>Dans un code java, on veut mettre dans la variable c le produit des contenus des
+									  variables a et b. Que doit-on écrire?<gap answers="c = a*b;">c = a*b;</gap></item>  
+									<item>Écrivez l'instruction qui a pour effet de mettre clr dans la variable acronyme (de type chaine) <gap answers="">acronyme = "clr";</gap></item>  
+								</list>  
+							</gapText>
+							<solution></solution>
+						</fillInBlanks>
+					</selfCheck>
+				</act>
+    </learningObject>
     </unit>
     
     
@@ -1464,25 +1585,177 @@ public class Exercice7 {
 						</fillInBlanks>
 					</selfCheck>
         </paragraph>
+        
+        
+				<selfCheck title="Comprendre les erreurs" shuffle="yes">
+					<multipleChoice>
+						<question>
+							<paragraph>
+								Soit le code :
+							</paragraph>
+							<paragraph cssClass="java">
+  public class ErrCompilation{
+	  public static void main ( string[] args ) {
+		  System.out.println("Hello !");
+	  }
+  }							</paragraph>
+							<paragraph>
+								la commande "<formatted style="java">javac ErrCompilation.java</formatted>"  provoque l'erreur suivante :
+							</paragraph>
+							<paragraph cssClass="code">
+  ErrCompilation.java:2:
+  cannot find symbol
+  symbol : class string
+  location:class ErrCompilation
+  public static void main ( string[] args ) {
+  ^ 
+  1
+  error						</paragraph>
+							<paragraph>
+								Quelle est l'erreur ?
+							</paragraph>
+						</question>
+			            <answer feedback="Non non, qu'il y ait 0, 1 ou plusieurs espaces ne change rien..." correct="no">il faut insérer des espaces dans la parenthèse</answer>
+			            <answer feedback="En effet, il s'agit bien de String et non string" correct="yes">string doit être écrit avec une majuscule au début</answer>
+			            <answer feedback="Non non, le fichier doit bien avoir le même nom que la classe avec l'extension java, c-à-d ErrCompilation.java" correct="no">le fichier doit s'appeler string.java</answer>
+			            <answer feedback="Non non, ce sont bien des parenthèses..." correct="no">il faut remplacer les parenthèses par des accolades</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<selfCheck title="Comprendre les erreurs" shuffle="yes">
+					<multipleChoice>
+						<question>
+							<paragraph>
+								Soit le code :
+							</paragraph>
+ 							<paragraph cssClass="java">
+  public class ErrExecution {
+      public void main ( String[] args ) {
+          System.out.println(10);
+      }
+  }							</paragraph>
+							<paragraph>
+								la suite de commandes 
+							</paragraph>
+							<paragraph cssClass="code">
+  javac ErrExecution.java 
+  java ErrExecution			</paragraph>
+							<paragraph>
+								provoque l'erreur suivante :
+							</paragraph>
+							<paragraph cssClass="code">
+  Exception in thread "main" java.lang.NoSuchMethodError: main</paragraph>
+							<paragraph>
+								il s'agit d'une erreur générée par la machine virtuelle java car :
+							</paragraph>
+						</question>
+						<answer feedback="" correct="no">la machine virtuelle est mal installée</answer>
+						<answer feedback="" correct="no">le source n'a pas été compilé</answer>
+						<answer feedback="il manque le mot clé static" correct="yes">l'entête de la méthode main est incorrect</answer>
+						<answer feedback="" correct="no">on exécute la mauvaise classe</answer>
+						<solution>En effet, quel est-il d'ailleurs ?</solution>
+					</multipleChoice>
+				</selfCheck>
+
+				<selfCheck title="Comprendre les erreurs" shuffle="yes">
+					<multipleChoice>
+						<question>
+							<paragraph>
+								Soit le code :
+							</paragraph>
+							<paragraph cssClass="java">
+  public class ErrExecution {
+      public static void main ( String[] args ) {	
+          System.out.println(10);
+      }
+  }							</paragraph>
+							<paragraph>
+								la suite de commandes 
+							</paragraph>
+							<paragraph cssClass="code">
+  javac ErrExecution.java 
+  java ErrExecution.java	</paragraph>
+							<paragraph>
+								provoque l'erreur suivante :
+							</paragraph>
+							<paragraph cssClass="code">
+  Exception in thread "main" java.lang.NoClassDefFoundError: ErrExecution/java
+  caused by: java.lang.ClassNotFoundException: ErrExecution.java
+  [...]
+  Could not find the main class: ErrExecution.java. Program will exit.	</paragraph>
+							<paragraph>
+								il s'agit d'une erreur générée par la machine virtuelle java car :
+							</paragraph>
+						</question>
+						<answer feedback="" correct="no">la machine virtuelle est mal installée</answer>
+						<answer feedback="" correct="no">l'entête de la méthode main est incorrect</answer>
+						<answer feedback="En effet... quelle classe tente-t-il d'exécuter ? (Relisez bien la commande d'exécution)" correct="yes">on exécute la mauvaise classe</answer>
+						<solution></solution>
+					</multipleChoice>
+				</selfCheck>
+
       </act>
     </learningObject>
     
     <learningObject title="À vous de jouer...">
     <!-- ============================================================ -->
       <act>
-        <paragraph>
+        <paragraph title="Consignes">
           Il est temps de se lancer et d’écrire vos premiers modules et programmes Java correspondant. 
           Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
           <list listStyle="unordered">
             <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
-            <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites ;</item>
-            <item>mettez en évidence les variables « données », les variables « résultats » et les variables de travail ;</item>
-            <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé.</item>
+            <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
+            <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
           </list>
         </paragraph>
         
+        <paragraph title="Exercice résolu">
+          La somme des angles d’un triangle est égale dans tous les cas à 180°. Écrivez un algorithme qui lit la valeur de deux angles d’un triangle, et affiche la valeur du 3e. 
+        </paragraph>
         <paragraph>
+          Quelles sont les données ? :
+          <list listStyle="ordered">
+            <item>les 2 angles du triangle, ils sont lus au clavier.</item>
+          </list>
+          Que cherche-t-on ? :
+          <list listStyle="ordered">
+            <item>la valeur du 3e angle du triangle, à afficher à l'écran.</item>
+          </list>
+          Comment faire ? :
+          <list listStyle="ordered">
+            <item>On sait que la somme des 3 angles d'un triangle vaut 180°. (angle1 + angle2 + angle3 = 180)</item>
+            <item>On connait la valeur de 2 des angles, disons angle1 et angle2.</item>
+            <item>La valeur du troisième angle vaut donc 180 moins la somme des 2 autres angles.(angle3 = 180 - (angle1 + angle2))</item>
+          </list>
+          Écrivons l'algorithme :
+          <paragraph cssClass="code">
+module troisièmeAngleTriangle()
+    angle1, angle2, angle3 : réels
+    lire angle1, angle2
+    angle3 ← 180 - (angle1 + angle2)
+    afficher angle3
+fin module
+          </paragraph>
+          Traduisons cet algorithme en java :
+          <paragraph cssClass="java">
+import java.util.Scanner;
+public class Triangle{
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        double angle1 = clavier.nextDouble();
+        double angle2 = clavier.nextDouble();
+        double angle3 = 180 - (angle1 + angle2);
+        System.out.println(angle3);
+    }
+}
+        </paragraph>
+        Il nous reste à compiler <formatted style="input">javac Triangle.java</formatted> et à exécuter <formatted style="input">java Triangle</formatted> notre programme.
+        </paragraph>
+        
+        <paragraph title="À vous">
         Écrivez les algorithmes et codez les programmes Java correspondant qui 
           <list listStyle="ordered">
             <item>calcule et affiche la surface d’un carré en lisant la valeur de son côté au clavier.</item>

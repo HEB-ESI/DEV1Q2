@@ -5,7 +5,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <meta http-equiv="Content-Style-Type" content="text/css" />
-      <meta name="description" content="TD Séquentiel - Rappels de base: À vous de jouer.... " />
+      <meta name="description" content="TD Séquentiel - Rappels de base: À vous de jouer.... Consignes. Exercice résolu. À vous. " />
       <meta name="copyright" content="" />
       <meta name="author" content="" />
       <meta name="keywords" content="TD Séquentiel - Rappels de base, eLML" />
@@ -33,33 +33,87 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><img src="../../../_templates/java/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0" /></div><a name="top"></a><h1 id="Exercices_learningObject3.html">1.8.3. À vous de jouer...</h1>
-      <div id="d8e1527.html" class="act">
-         <p class="paragraph" id="d8e1528">
+      <div id="d8e1840.html" class="act">
+         <h4>Consignes</h4>
+         <p class="paragraph" title="Consignes" id="d8e1841">
             Il est temps de se lancer et d’écrire vos premiers modules et programmes Java correspondant.
             
             Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
             
-            <ul class="list" id="d8e1530">
+            <ul class="list" id="d8e1843">
                <li class="itemAlt">il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement
                   spécifié ;
                </li>
+               <li class="item">mettez en évidence les variables <b>« données »</b>, les variables <b>« résultats »</b> et les variables de travail ;
+               </li>
+               <li class="itemAlt">n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme
+                  définitif pseudo-codé ;
+               </li>
                <li class="item">déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme
-                  ; les noms des variables risquant de ne pas être suffisamment explicites ;
-               </li>
-               <li class="itemAlt">mettez en évidence les variables « données », les variables « résultats » et les variables
-                  de travail ;
-               </li>
-               <li class="item">n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme
-                  définitif pseudo-codé.
+                  ; les noms des variables risquant de ne pas être suffisamment explicites.
                </li>
                <li class="itemAlt">Écrivez la partie algorithmique <b>AVANT</b> de vous lancer dans la programmation en Java.
                </li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e1544">
+         <h4>Exercice résolu</h4>
+         <p class="paragraph" title="Exercice résolu" id="d8e1863">
+            La somme des angles d’un triangle est égale dans tous les cas à 180°. Écrivez un algorithme
+            qui lit la valeur de deux angles d’un triangle, et affiche la valeur du 3e. 
+            
+         </p>
+         <p class="paragraph" id="d8e1865">
+            Quelles sont les données ? :
+            
+            <ol class="list" id="d8e1867">
+               <li class="itemAlt">les 2 angles du triangle, ils sont lus au clavier.</li>
+            </ol>
+            Que cherche-t-on ? :
+            
+            <ol class="list" id="d8e1871">
+               <li class="itemAlt">la valeur du 3e angle du triangle, à afficher à l'écran.</li>
+            </ol>
+            Comment faire ? :
+            
+            <ol class="list" id="d8e1875">
+               <li class="itemAlt">On sait que la somme des 3 angles d'un triangle vaut 180°. (angle1 + angle2 + angle3
+                  = 180)
+               </li>
+               <li class="item">On connait la valeur de 2 des angles, disons angle1 et angle2.</li>
+               <li class="itemAlt">La valeur du troisième angle vaut donc 180 moins la somme des 2 autres angles.(angle3
+                  = 180 - (angle1 + angle2))
+               </li>
+            </ol>
+            Écrivons l'algorithme :
+            <pre>
+module troisièmeAngleTriangle()
+    angle1, angle2, angle3 : réels
+    lire angle1, angle2
+    angle3 ← 180 - (angle1 + angle2)
+    afficher angle3
+fin module
+          </pre>
+            Traduisons cet algorithme en java :
+            <pre>
+import java.util.Scanner;
+public class Triangle{
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        double angle1 = clavier.nextDouble();
+        double angle2 = clavier.nextDouble();
+        double angle3 = 180 - (angle1 + angle2);
+        System.out.println(angle3);
+    }
+}
+        </pre>
+            Il nous reste à compiler <span class="input">javac Triangle.java</span> et à exécuter <span class="input">java Triangle</span> notre programme.
+            
+         </p>
+         <h4>À vous</h4>
+         <p class="paragraph" title="À vous" id="d8e1896">
             Écrivez les algorithmes et codez les programmes Java correspondant qui 
             
-            <ol class="list" id="d8e1546">
+            <ol class="list" id="d8e1898">
                <li class="itemAlt">calcule et affiche la surface d’un carré en lisant la valeur de son côté au clavier.</li>
                <li class="item">calcule et affiche la surface d’un rectangle  en lisant les valeurs de sa longueur
                   et sa largeur.
@@ -87,6 +141,6 @@
       </div>
       <hr />
       <div class="navigation_arrows"><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><img src="../../../_templates/java/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0" /></div>
-      <p class="footer"> Update: 12.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 20.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

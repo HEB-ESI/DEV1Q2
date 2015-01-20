@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  12 JAN 2015 10:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  20 JAN 2015 00:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -810,7 +810,7 @@ LaTeX Info: Redefining \nameref on input line 143.
 \openout5 = `TDSeq.out'.
 
 
-<../../../_templates/java/icons/logo-esi.jpg, id=156, 45.16875pt x 85.31876pt>
+<../../../_templates/java/icons/logo-esi.jpg, id=164, 45.16875pt x 85.31876pt>
 File: ../../../_templates/java/icons/logo-esi.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/logo-esi.jpg>
@@ -854,7 +854,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 152.
 
-<../../../_templates/java/icons/cc-gris.jpg, id=157, 88.33pt x 31.11626pt>
+<../../../_templates/java/icons/cc-gris.jpg, id=165, 88.33pt x 31.11626pt>
 File: ../../../_templates/java/icons/cc-gris.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/cc-gris.jpg>
@@ -901,7 +901,7 @@ cc-gris.jpg>])
 [3
 
 ]
-</home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png, id=222, 414.548
+</home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png, id=232, 414.548
 75pt x 231.86626pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png Graphic fil
 e (type png)
@@ -922,15 +922,8 @@ Overfull \hbox (16.9221pt too wide) in paragraph at lines 577--579
 
 [7] [8] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-Overfull \hbox (299.03711pt too wide) in paragraph at lines 678--682
-\T1/lmr/m/n/10.95 sec-tion dé-cla-ra-tion des va-riables sous la forme sui-vant
-e : []\T1/lmtt/m/n/10.95 constante PI = 3,14[]constante ESI = "École Supérieure
- d'Informatique"
- []
-
-[9]
-Overfull \hbox (55.94803pt too wide) in paragraph at lines 749--751
+) [9]
+Overfull \hbox (55.94803pt too wide) in paragraph at lines 758--760
 \T1/lmr/m/n/10.95 cules, on peut uti-li-ser le ^^Sti-ret bas ^^Tou un-ders-core
  (par ex. []\T1/lmtt/m/n/10.95 PREMIER_NUMERATEUR\T1/lmr/m/n/10.95 ). 
  []
@@ -938,31 +931,31 @@ Overfull \hbox (55.94803pt too wide) in paragraph at lines 749--751
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 779.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 788.
 
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (6.12563pt too wide) in paragraph at lines 790--792
+Overfull \hbox (6.12563pt too wide) in paragraph at lines 799--801
 []\T1/lmr/m/n/10.95 Une ex-pres-sion est donc une com-bi-nai-son co-hé-rente de
  va-riables, de constantes
  []
 
 [10]
-Overfull \hbox (12.08646pt too wide) in paragraph at lines 815--816
+Overfull \hbox (12.08646pt too wide) in paragraph at lines 824--825
 []\T1/lmr/m/n/10.95 Il est aussi per-mis d'uti-li-ser des pa-ren-thèses, par ex
 emple []\T1/lmtt/m/n/10.95 a ^^U (b + c * d)/x\T1/lmr/m/n/10.95 . 
  []
 
 
-Overfull \hbox (12.08646pt too wide) in paragraph at lines 845--846
+Overfull \hbox (12.08646pt too wide) in paragraph at lines 854--855
 []\T1/lmr/m/n/10.95 Il est aussi per-mis d'uti-li-ser des pa-ren-thèses, par ex
 emple []\T1/lmtt/m/n/10.95 a ^^U (b + c * d)/x\T1/lmr/m/n/10.95 . 
  []
 
 [11] [12]
-Overfull \hbox (12.75688pt too wide) in paragraph at lines 969--975
+Overfull \hbox (12.75688pt too wide) in paragraph at lines 977--981
 []\T1/lmr/m/n/10.95 Notez que l'éva-lua-tion court-circuitée a pour consé-quenc
 e la non-commutativité
  []
@@ -970,91 +963,121 @@ e la non-commutativité
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-2.def
 File: uni-2.def 2013/05/13 UCS: Unicode data U+0200..U+02FF
 ) [13]
-Overfull \hbox (38.82286pt too wide) in paragraph at lines 1007--1009
+Overfull \hbox (38.82286pt too wide) in paragraph at lines 1013--1015
 []\T1/lmr/m/n/10.95 Si né-ces-saire, les autres fonc-tions ma-thé-ma-tiques []\
 T1/lmtt/m/n/10.95 Math.sin(x)\T1/lmr/m/n/10.95 , []\T1/lmtt/m/n/10.95 Math.tan(
 x)\T1/lmr/m/n/10.95 ,
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 1009.
+(Font)              <9> on input line 1015.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1009.
+(Font)              <5> on input line 1015.
 
-Overfull \hbox (4.3861pt too wide) in paragraph at lines 1009--1010
+Overfull \hbox (4.3861pt too wide) in paragraph at lines 1015--1016
 []\T1/lmr/m/n/10.95 Toutes les in-for-ma-tions se trouvent dans l'API ([][]$\T1
 /lmtt/m/n/9 docs . oracle . com / javase /
  []
 
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
+[14] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
-) [14]
-Overfull \hbox (91.26125pt too wide) in paragraph at lines 1069--1070
+) [15]
+Overfull \hbox (91.26125pt too wide) in paragraph at lines 1119--1120
 [][]\T1/lmtt/m/n/10.95 varChaine $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 var
 Caractère \T1/lmr/m/n/10.95 : équi-valent à []\T1/lmtt/m/n/10.95 varChaine $\OM
 S/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 chaine(varCaractère)\T1/lmr/m/n/10.95 . 
 
  []
 
-[15] [16]
-Overfull \hbox (102.27141pt too wide) in paragraph at lines 1194--1199
+[16] [17]
+Overfull \hbox (102.27141pt too wide) in paragraph at lines 1244--1249
 []\T1/lmr/m/n/10.95 Nous no-te-rons : []\T1/lmtt/m/n/10.95 afficher expression 
 ou liste de variables séparées par des virgules
  []
 
 
-Overfull \hbox (78.72879pt too wide) in paragraph at lines 1206--1207
+Overfull \hbox (78.72879pt too wide) in paragraph at lines 1256--1257
 [][]\T1/lmtt/m/n/10.95 afficher "Le premier nombre vaut ", nb1, " et le seconde
  nombre vaut ", nb2  
  []
 
-[17]
-Overfull \hbox (30.91388pt too wide) in paragraph at lines 1289--1289
+[18]
+Overfull \hbox (13.18239pt too wide) in paragraph at lines 1354--1356
+\T1/lmr/m/n/10.95 conte-nus des va-riables a et b. Que doit-on écrire? []$[]$[]
+ 
+ []
+
+[19] [20]
+Overfull \hbox (30.91388pt too wide) in paragraph at lines 1407--1407
 []    \T1/lmtt/m/n/10.95 déclaration des variables et constantes utilisées dans
  le module[] 
  []
 
-[18] [19]
-Overfull \hbox (22.88377pt too wide) in paragraph at lines 1354--1355
+[21]
+Overfull \hbox (22.88377pt too wide) in paragraph at lines 1472--1473
 []\T1/lmr/m/n/10.95 La mé-thode prin-ci-pale s'ap-pelle []\T1/lmtt/m/n/10.95 pu
 blic static void main(String [] args) 
  []
 
 
-</home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png, id=355, 397.
+</home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png, id=374, 397.
 485pt x 209.78375pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png Graphic 
 file (type png)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-j
-vm-jvm.png used on input line 1382.
+vm-jvm.png used on input line 1500.
 (pdftex.def)             Requested size: 288.00851pt x 152.00447pt.
- [20]
-[21 </home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png>]
-[22] [23] [24]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1618.
- [25]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1618.
+ [22]
+[23 </home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png>]
+[24] [25] [26] [27]
+Overfull \hbox (88.40121pt too wide) in paragraph at lines 1813--1813
+[]  \T1/lmtt/m/n/10.95 Exception in thread "main" java.lang.NoClassDefFoundErro
+r: ErrExecution/java[] 
+ []
+
+
+Overfull \hbox (7.91895pt too wide) in paragraph at lines 1813--1813
+[]  \T1/lmtt/m/n/10.95 caused by: java.lang.ClassNotFoundException: ErrExecutio
+n.java[] 
+ []
+
+
+Overfull \hbox (42.41135pt too wide) in paragraph at lines 1813--1813
+[]  \T1/lmtt/m/n/10.95 Could not find the main class: ErrExecution.java. Progra
+m will exit.[] 
+ []
+
+[28]
+Overfull \hbox (3.63113pt too wide) in paragraph at lines 1901--1902
+\T1/lmr/m/n/10.95 Il nous reste à com-pi-ler []\T1/lmtt/m/n/10.95 javac Triangl
+e.java \T1/lmr/m/n/10.95 et à exé-cu-ter []\T1/lmtt/m/n/10.95 java Triangle
+ []
+
+[29]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1929.
+ [30]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1929.
  (./TDSeq.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1618.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1618.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1929.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1929.
 
 Package rerunfilecheck Info: File `TDSeq.out' has not changed.
-(rerunfilecheck)             Checksum: 40D73040A5CC1666FFE55AC35B997DAD;3165.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1618.
+(rerunfilecheck)             Checksum: 08BFA43B8A2B9F55DAAC42C81EFF9EAE;3291.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1929.
  ) 
 Here is how much of TeX's memory you used:
- 14078 strings out of 493304
- 200636 string characters out of 6139871
- 328264 words of memory out of 5000000
- 17048 multiletter control sequences out of 15000+600000
- 81300 words of font info for 58 fonts, out of 8000000 for 9000
+ 14143 strings out of 493304
+ 201468 string characters out of 6139871
+ 324511 words of memory out of 5000000
+ 17060 multiletter control sequences out of 15000+600000
+ 81665 words of font info for 59 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,13n,43p,333b,2015s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
-vips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/te
-xmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texlive/texmf-dist/fonts/type1
+ 41i,13n,43p,333b,1937s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/shar
+e/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/latxfont/lcirclew.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/tex
@@ -1064,13 +1087,14 @@ ts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt
-9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on TDSeq.pdf (25 pages, 434540 bytes).
+m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt
+8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on TDSeq.pdf (30 pages, 449229 bytes).
 PDF statistics:
- 605 PDF objects out of 1000 (max. 8388607)
- 548 compressed objects within 6 object streams
- 222 named destinations out of 1000 (max. 500000)
- 325 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 697 PDF objects out of 1000 (max. 8388607)
+ 633 compressed objects within 7 object streams
+ 274 named destinations out of 1000 (max. 500000)
+ 341 words of extra memory for PDF output out of 10000 (max. 10000000)
 

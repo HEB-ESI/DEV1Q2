@@ -46,3 +46,5 @@
 \contentsline {subparagraph}{Compr\'ehension}{14}{section*.31}
 \contentsline {section}{\numberline {5}Exercices complets}{15}{section.5}
 \contentsline {subsection}{\numberline {5.1}\`A vous de jouer...}{15}{subsection.5.1}
+\contentsline {subparagraph}{Consignes}{15}{section*.32}
+\contentsline {subparagraph}{Exercices}{16}{section*.33}

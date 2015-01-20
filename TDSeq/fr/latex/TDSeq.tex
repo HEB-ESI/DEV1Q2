@@ -255,12 +255,12 @@
 							
 					\begin{itemize}
 				
+			\item un prix hors tva ? \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{5em}}} 
+			\item vos initiales ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item la longueur d'un rectangle ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
 			\item une date du calendrier ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 			\item un moment dans la journ\'ee ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item le prix d'un produit en grande surface ? \textcolor{gray}{\underline{\hspace*{5em}}} 
-			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item vos initiales ? \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item votre adresse ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 					\end{itemize}
 				\subsection{Les types \'equivalents en java}
           Les \'equivalents Java des types donn\'es en algo sont
@@ -288,12 +288,12 @@
 							
 					\begin{itemize}
 				
-			\item une date du calendrier ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item un moment dans la journ\'ee ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item le prix d'un produit en grande surface ? \textcolor{gray}{\underline{\hspace*{5em}}} 
-			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item vos initiales ? \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item votre adresse ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item un prix hors tva ? \textcolor{gray}{\underline{\hspace*{5em}}} 
+			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{5em}}} 
+			\item une de vos initiales ? \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item la longueur d'un rectangle ?  \textcolor{gray}{\underline{\hspace*{5em}}} 
+			\item le jour d'une date du calendrier ?  \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item les heures d'un moment dans la journ\'ee ?  \textcolor{gray}{\underline{\hspace*{2em}}} 
 					\end{itemize}
 				\subsection{Java est un langage fortement typ\'e.}
 			    Java est un langage fortement typ\'e.
@@ -675,9 +675,18 @@
 			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 					\end{itemize}
 				
+			
+		\subparagraph{Constante} 
+		
+					\textcolor{white}{.} \par
+				
 				  Une constante est une information pour laquelle nom, type et valeur sont fig\'es.
           La liste des constantes utilis\'ees dans un algorithme apparaitra dans la section d\'eclaration des variables sous la forme suivante : 
-          \,\verb|constante PI = 3,14|\,\,\verb|constante ESI = "École Supérieure d’Informatique"|\,
+        
+            \par
+        \,\verb|constante PI = 3,14|\,
+            \par
+        \,\verb|constante ESI = "École Supérieure d’Informatique"|\,
           Il est inutile de sp\'ecifier leur type, celui-ci \'etant d\'efini implicitement par la valeur de la constante.
         
             \par
@@ -925,25 +934,24 @@ Y = 3; // Idem
             On d\'efinit deux modes d'\'evaluation des op\'erateurs ET et OU :
           
             \par
-        
-          L'\'evaluation compl\`ete :
-          pour connaitre la valeur de cond1 ET cond2 (respectivement cond1 OU cond2), les deux
+        \textbf{L'\'evaluation compl\`ete} :
+          pour connaitre la valeur de \verb@cond1 ET cond2@ 
+          (respectivement \verb@cond1 OU cond2@), les deux
           conditions sont chacune \'evalu\'ees, apr\`es quoi on \'evalue la valeur de v\'erit\'e de l'ensemble de
           l'expression.
           
             \par
-        
-          L'\'evaluation court-circuit\'ee :
+        \textbf{L'\'evaluation court-circuit\'ee} :
           dans un premier temps, seule la premi\`ere condition est test\'ee. 
           
             \par
         
-          Dans le cas du ET, si cond1 s'av\`ere faux, il est inutile d'\'evaluer cond2 puisque le r\'esultat sera faux de toute fa\c con ;
+          Dans le cas du \verb@ET@, si cond1 s'av\`ere faux, il est inutile d'\'evaluer cond2 puisque le r\'esultat sera faux de toute fa\c con ;
           l'\'evaluation de cond2 et de l'ensemble de la conjonction ne se fera que si cond1 est vrai.
           
             \par
         
-          De m\^eme, dans le cas du OU, si cond1 s'av\`ere vrai, il est inutile d'\'evaluer cond2 puisque le
+          De m\^eme, dans le cas du \verb@OU@, si cond1 s'av\`ere vrai, il est inutile d'\'evaluer cond2 puisque le
           r\'esultat sera vrai de toute fa\c con ; l'\'evaluation de cond2 et de l'ensemble de la disjonction
           ne se fera que si cond1 est faux.
           
@@ -957,7 +965,7 @@ Y = 3; // Idem
           
             \par
         
-          Consid\'erons l'expression n ≠ 0 ET m/n > 10. Si on teste sa valeur
+          Consid\'erons l'expression \verb@n ≠ 0 ET m/n > 10@. Si on teste sa valeur
           de v\'erit\'e avec une valeur de n non nulle, la premi\`ere condition est vraie et le r\'esultat de
           la conjonction d\'ependra de la valeur de la deuxi\`eme condition. Supposons \`a pr\'esent que n
           soit nul. L'\'evaluation court-circuit\'ee donne le r\'esultat faux imm\'ediatement apr\`es test de la
@@ -966,12 +974,10 @@ Y = 3; // Idem
           
             \par
         
-          Notez que l'\'evaluation court-circuit\'ee a pour cons\'equence la non-commutativit\'e du ET et
-          du OU : cond1 ET cond2 n'est donc pas \'equivalent \`a cond2 ET cond1, puisque l'ordre des
-          \'evaluations des deux conditions entre en jeu. Nous conseillons cependant de limiter les cas
-          d'utilisation de l'\'evaluation court-circuit\'ee et d'opter pour des expressions dont l'\'evalua-
-          tion serait similaire dans les deux cas. La justification d'utiliser l'\'evaluation court-circuit\'ee
-          apparaitra dans plusieurs exemples tout au long du cours.
+          Notez que l'\'evaluation court-circuit\'ee a pour cons\'equence la non-commutativit\'e du 
+          \verb@ET@ et du \verb@OU@ : 
+          \verb@cond1 ET cond2@ ≠ \verb@cond2 ET cond1@, 
+          puisque l'ordre des \'evaluations des deux conditions entre en jeu.
           
             \par
         \subsection{Les op\'erateurs bool\'eens en Java}
@@ -1010,7 +1016,51 @@ Y = 3; // Idem
 					\end{itemize}
 				
             \par
-        \section{L'affectation d'une valeur \`a une variable}
+        \subsection{Exercices}
+			
+		\subparagraph{Que vaut ?} 
+		
+                \textcolor{white}{.} \par
+            
+							  en algo :
+							
+					\begin{itemize}
+				
+			\item 15 + 3 ? \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item 17 - 2 ? \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item 13/2 ? \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item 4.5*3 ? \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item 15 DIV 4 ? \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item 17 MOD 3 ?  \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item 'x'='y' ? \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item 7<8 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item 0≥0 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item 3≥4 ET 4<8 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item 3≥4 OU 4<8 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
+					\end{itemize}
+				
+			
+		\subparagraph{Que vaut ?} 
+		
+                \textcolor{white}{.} \par
+            
+							  en java :
+							
+					\begin{itemize}
+				
+			\item 21 + 3 ? \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item 1 - 2 ? \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item 13/2 ? \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item 4.5*3 ? \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item 13.0/2 ? \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item 15 \% 3 ?  \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item 'a'=='b' ? \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item 7<8 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item 0<=0 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item -1<=4 ET 4>8 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item -1≥4 OU 4<8 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
+					\end{itemize}
+				\section{L'affectation d'une valeur \`a une variable}
 				Cette op\'eration est probablement l'op\'eration la plus importante. En effet, une variable ne
         prend son sens r\'eel que si elle re\c coit \`a un moment donn\'e une valeur. Il y a deux moyens de
         donner une valeur \`a une variable.
@@ -1237,7 +1287,75 @@ int nombre1 = clavier. nextInt ();
             \par
         \begin{Java}
  System.out.println ("La variable var vaut " + var);
-				\end{Java}\section{Documenter son code}
+				\end{Java}\subsection{Exercices}
+			
+		\subparagraph{Que vaut ?} 
+		
+                \textcolor{white}{.} \par
+            
+							  en algo :
+							
+					\begin{itemize}
+				
+			\item Quel est le contenu de la variable enti\`ere n \`a l'issue de ces 2 lignes de code?\par
+				
+                    n ← 5\par
+				
+                    n ← 1 + n*2\par
+				 \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item Quel est le contenu de la variable enti\`ere n \`a l'issue de ces 3 lignes de code?\par
+				
+                    n ← 25\par
+				
+                    n ← n DIV 2\par
+				
+                    n ← n MOD 7 ?\par
+				 \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item Quelle est la ligne de code qui r\'ealise l'affectation externe de la variable capital ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire ? \textcolor{gray}{\underline{\hspace*{16em}}} 
+			\item Dans un algorithme, on veut mettre dans la variable c le produit des contenus des
+									  variables a et b. Que doit-on \'ecrire? \textcolor{gray}{\underline{\hspace*{5em}}} 
+			\item \'Ecrivez l'instruction qui a pour effet de mettre clr dans la variable acronyme (de type chaine)  \textcolor{gray}{\underline{\hspace*{16em}}} 
+			\item Que va afficher le programme suivant si l'utilisateur encode \guillemotleft  Toto \guillemotright  ?\par
+				
+									  monNom : chaine\par
+				
+									  lire monNom\par
+				
+                    afficher \guillemotleft  monNom \guillemotright \par
+				 \textcolor{gray}{\underline{\hspace*{5em}}} 
+					\end{itemize}
+				
+			
+		\subparagraph{Que vaut ?} 
+		
+                \textcolor{white}{.} \par
+            
+							  en java :
+							
+					\begin{itemize}
+				
+			\item Quel est le contenu de la variable enti\`ere n \`a l'issue de ces 2 lignes de code?\par
+				
+                    int n = 8;\par
+				
+                    n = 6 + n/3;\par
+				 \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item Quel est le contenu de la variable enti\`ere n \`a l'issue de ces 3 lignes de code?\par
+				
+                    int n = 13\par
+				
+                    n ← n / 2\par
+				
+                    n ← n \% 3 ?\par
+				 \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item Quelle est la ligne de code qui r\'ealise l'affectation externe de la variabl r\'eelle capital ? \textcolor{gray}{\underline{\hspace*{16em}}} 
+			\item Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire ? \textcolor{gray}{\underline{\hspace*{16em}}} 
+			\item Dans un code java, on veut mettre dans la variable c le produit des contenus des
+									  variables a et b. Que doit-on \'ecrire? \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item \'Ecrivez l'instruction qui a pour effet de mettre clr dans la variable acronyme (de type chaine)  \textcolor{gray}{\underline{\hspace*{16em}}} 
+					\end{itemize}
+				\section{Documenter son code}
 				On n'insistera jamais assez sur la n\'ecessit\'e de documenter un algorithme en y ins\'erant 
         des commentaires judicieux, clairs et suffisants !
       
@@ -1581,21 +1699,214 @@ public class Exercice7 {
 					\end{itemize}
 				
             \par
+        
+			
+		\subparagraph{Comprendre les erreurs} 
+		
+                \textcolor{white}{.} \par
+            
+								Soit le code :
+							
+            \par
+        \begin{Java}
+  public class ErrCompilation{
+	  public static void main ( string[] args ) {
+		  System.out.println("Hello !");
+	  }
+  }							\end{Java}
+								la commande "\verb|javac ErrCompilation.java|"  provoque l'erreur suivante :
+							
+            \par
+        \begin{verbatim}
+  ErrCompilation.java:2:
+  cannot find symbol
+  symbol : class string
+  location:class ErrCompilation
+  public static void main ( string[] args ) {
+  ^ 
+  1
+  error						\end{verbatim}
+								Quelle est l'erreur ?
+							
+            \par
+        
+            \begin{itemize} 
+        
+            \item[ \ding{"6D} ] il faut ins\'erer des espaces dans la parenth\`ese
+        
+            \item[ \ding{"6D} ] string doit \^etre \'ecrit avec une majuscule au d\'ebut
+        
+            \item[ \ding{"6D} ] le fichier doit s'appeler string.java
+        
+            \item[ \ding{"6D} ] il faut remplacer les parenth\`eses par des accolades
+        
+            \end{itemize} 
+        
+			
+		\subparagraph{Comprendre les erreurs} 
+		
+                \textcolor{white}{.} \par
+            
+								Soit le code :
+							
+            \par
+        \begin{Java}
+  public class ErrExecution {
+      public void main ( String[] args ) {
+          System.out.println(10);
+      }
+  }							\end{Java}
+								la suite de commandes 
+							
+            \par
+        \begin{verbatim}
+  javac ErrExecution.java 
+  java ErrExecution			\end{verbatim}
+								provoque l'erreur suivante :
+							
+            \par
+        \begin{verbatim}
+  Exception in thread "main" java.lang.NoSuchMethodError: main\end{verbatim}
+								il s'agit d'une erreur g\'en\'er\'ee par la machine virtuelle java car :
+							
+            \par
+        
+            \begin{itemize} 
+        
+            \item[ \ding{"6D} ] la machine virtuelle est mal install\'ee
+        
+            \item[ \ding{"6D} ] le source n'a pas \'et\'e compil\'e
+        
+            \item[ \ding{"6D} ] l'ent\^ete de la m\'ethode main est incorrect
+        
+            \item[ \ding{"6D} ] on ex\'ecute la mauvaise classe
+        
+            \end{itemize} 
+        
+			
+		\subparagraph{Comprendre les erreurs} 
+		
+                \textcolor{white}{.} \par
+            
+								Soit le code :
+							
+            \par
+        \begin{Java}
+  public class ErrExecution {
+      public static void main ( String[] args ) {	
+          System.out.println(10);
+      }
+  }							\end{Java}
+								la suite de commandes 
+							
+            \par
+        \begin{verbatim}
+  javac ErrExecution.java 
+  java ErrExecution.java	\end{verbatim}
+								provoque l'erreur suivante :
+							
+            \par
+        \begin{verbatim}
+  Exception in thread "main" java.lang.NoClassDefFoundError: ErrExecution/java
+  caused by: java.lang.ClassNotFoundException: ErrExecution.java
+  [...]
+  Could not find the main class: ErrExecution.java. Program will exit.	\end{verbatim}
+								il s'agit d'une erreur g\'en\'er\'ee par la machine virtuelle java car :
+							
+            \par
+        
+            \begin{itemize} 
+        
+            \item[ \ding{"6D} ] la machine virtuelle est mal install\'ee
+        
+            \item[ \ding{"6D} ] l'ent\^ete de la m\'ethode main est incorrect
+        
+            \item[ \ding{"6D} ] on ex\'ecute la mauvaise classe
+        
+            \end{itemize} 
         \subsection{\`A vous de jouer...}
+			
+		\subparagraph{Consignes} 
+		
+					\textcolor{white}{.} \par
+				
           Il est temps de se lancer et d'\'ecrire vos premiers modules et programmes Java correspondant. 
           Voici quelques conseils pour vous guider dans la r\'esolution de tels probl\`emes :
           
 					\begin{itemize}
 				
 			\item il convient d'abord de bien comprendre le probl\`eme pos\'e ; assurez-vous qu'il est parfaitement sp\'ecifi\'e ;
-			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans l'algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites ;
-			\item mettez en \'evidence les variables \guillemotleft  donn\'ees \guillemotright , les variables \guillemotleft  r\'esultats \guillemotright  et les variables de travail ;
-			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e.
+			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
+			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans l'algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
 					\end{itemize}
 				
             \par
         
+			
+		\subparagraph{Exercice r\'esolu} 
+		
+					\textcolor{white}{.} \par
+				
+          La somme des angles d'un triangle est \'egale dans tous les cas \`a 180\textdegree . \'Ecrivez un algorithme qui lit la valeur de deux angles d'un triangle, et affiche la valeur du 3e. 
+        
+            \par
+        
+          Quelles sont les donn\'ees ? :
+          
+					\begin{enumerate}
+				
+			\item les 2 angles du triangle, ils sont lus au clavier.
+					\end{enumerate}
+				
+          Que cherche-t-on ? :
+          
+					\begin{enumerate}
+				
+			\item la valeur du 3e angle du triangle, \`a afficher \`a l'\'ecran.
+					\end{enumerate}
+				
+          Comment faire ? :
+          
+					\begin{enumerate}
+				
+			\item On sait que la somme des 3 angles d'un triangle vaut 180\textdegree . (angle1 + angle2 + angle3 = 180)
+			\item On connait la valeur de 2 des angles, disons angle1 et angle2.
+			\item La valeur du troisi\`eme angle vaut donc 180 moins la somme des 2 autres angles.(angle3 = 180 - (angle1 + angle2))
+					\end{enumerate}
+				
+          \'Ecrivons l'algorithme :
+          \begin{verbatim}
+module troisièmeAngleTriangle()
+    angle1, angle2, angle3 : réels
+    lire angle1, angle2
+    angle3 ← 180 - (angle1 + angle2)
+    afficher angle3
+fin module
+          \end{verbatim}
+          Traduisons cet algorithme en java :
+          \begin{Java}
+import java.util.Scanner;
+public class Triangle{
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        double angle1 = clavier.nextDouble();
+        double angle2 = clavier.nextDouble();
+        double angle3 = 180 - (angle1 + angle2);
+        System.out.println(angle3);
+    }
+}
+        \end{Java}
+        Il nous reste \`a compiler \,\verb|javac Triangle.java|\, et \`a ex\'ecuter \,\verb|java Triangle|\, notre programme.
+        
+            \par
+        
+			
+		\subparagraph{\`A vous} 
+		
+					\textcolor{white}{.} \par
+				
         \'Ecrivez les algorithmes et codez les programmes Java correspondant qui 
           
 					\begin{enumerate}

@@ -37,9 +37,7 @@
 							<solution></solution>
 						</fillInBlanks>
 					</selfCheck>
-				</act>
 				
-				<act>
 				<selfCheck title="Le type des données" shuffle="yes">
 						<fillInBlanks>
 							<question> 
@@ -56,9 +54,7 @@
 							<solution></solution>
 						</fillInBlanks>
 					</selfCheck>
-				</act>
 				
-				<act>
 				  <selfCheck title="Types Java" shuffle="yes">
             <fillInBlanks>
               <question>
@@ -76,9 +72,7 @@
               <solution></solution>
             </fillInBlanks>
           </selfCheck>
-        </act>
         
-        <act>
 				<selfCheck title="Conventions de nom" shuffle="yes">
 					<multipleChoice>
 						<question>Cochez les noms qui respectent les conventions (sachant que nous travaillons dans le cadre de la tva)</question>
@@ -156,9 +150,7 @@
 					</selfCheck>
 					  <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
 				    <link uri="../../../TDSeq/fr/html/VariablesEtTypes_learningObject3.html">révisez ici</link></paragraph>
-				</act>
 				
-				<act>
 				<selfCheck title="Les types primitifs numériques entiers" shuffle="no">
 						<fillInBlanks>
 							<question> 
@@ -178,9 +170,7 @@
 					</selfCheck>
 					  <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
 				    <link uri="../../../TDSeq/fr/html/VariablesEtTypes_learningObject3.html">révisez ici</link></paragraph>
-				</act>
 				
-				<act>
 				<selfCheck title="Les types primitifs numériques flottants" shuffle="no">
 						<fillInBlanks>
 							<question> 
@@ -197,10 +187,7 @@
 					</selfCheck>
 					  <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
 				    <link uri="../../../TDSeq/fr/html/VariablesEtTypes_learningObject3.html">révisez ici</link></paragraph>
-				</act>
 				
-				
-				<act>
 				<selfCheck title="Le type primitif non numérique" shuffle="no">
 						<fillInBlanks>
 							<question> 
@@ -244,33 +231,27 @@
               <solution></solution>
             </fillInBlanks>
           </selfCheck>
-        </act>
         
-        <act>
           <selfCheck title="Que vaut ?" shuffle="yes">
             <fillInBlanks>
-              <question>Que vaut l'expression java</question>
+              <question>Que vaut l'expression en algo</question>
               <gapText>
-                5DIV3 : <gap answers="">1</gap>
+                5 DIV 3 : <gap answers="">1</gap>
               </gapText>
               <solution>Il s'agit de la division entière.</solution>
             </fillInBlanks>
 				  </selfCheck>
-        </act>
         
-        <act>
           <selfCheck title="Que vaut ?" shuffle="yes">
             <fillInBlanks>
-              <question>Que vaut l'expression java</question>
+              <question>Que vaut l'expression en algo</question>
               <gapText>
-                5MOD3 : <gap answers="">2</gap>
+                5 MOD 3 : <gap answers="">2</gap>
               </gapText>
               <solution>Il s'agit du reste de la division entière.</solution>
             </fillInBlanks>
 				  </selfCheck>
-        </act>
         
-        <act>
           <selfCheck title="Que vaut ?" shuffle="yes">
             <fillInBlanks>
               <question>Que vaut l'expression java</question>
@@ -280,9 +261,7 @@
               <solution>Il s'agit bien de la division entière car les 2 opérandes sont entiers.</solution>
             </fillInBlanks>
 				  </selfCheck>
-        </act>
         
-        <act>
           <selfCheck title="Que vaut ?" shuffle="yes">
             <fillInBlanks>
               <question>Que vaut l'expression java</question>
@@ -292,9 +271,7 @@
               <solution>Il s'agit bien de la division réelle car un des 2 opérandes est réel.</solution>
             </fillInBlanks>
 				  </selfCheck>
-        </act>
         
-        <act>
           <selfCheck title="Que vaut ?" shuffle="yes">
             <fillInBlanks>
               <question>Que vaut l'expression java</question>
@@ -306,9 +283,7 @@
 				  </selfCheck>
 				  <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
           <link uri="../../../TDSeq/fr/html/unit_OpérateursEtExpressions.html">révisez ici</link></paragraph>
-        </act>
         
-        <act>
           <selfCheck title="Comment calculer ?" shuffle="yes">
             <fillInBlanks>
               <question>Comment calculer en Java</question>
@@ -873,8 +848,7 @@ fin module
 						</answer>
 					</multipleChoice>
 				</selfCheck>
-      </act>
-      <act>
+
 				<selfCheck title="Nom d'un programme" shuffle="yes">
 					<fillInBlanks>
 						<question>Quels noms doivent avoir les fichiers dans lesquels sont placés les programmes suivants :</question>
@@ -902,10 +876,9 @@ fin module
 						</solution>
 					</fillInBlanks>
 				</selfCheck>
-      </act>
-      <act>
+
 				<selfCheck title="Compiler/exécuter" shuffle="no">
-					<fillInBlanks>
+      					<fillInBlanks>
 						<question>  </question>
 						<gapText> 
 							Quelle commande permet de compiler le fichier nommé <formatted style="code">SommeChiffres.java</formatted> ?  
@@ -921,10 +894,9 @@ fin module
 						<solution></solution>
 					</fillInBlanks>
 				</selfCheck>
-      </act>
-      <act>
+
 				<selfCheck title="Méthode principale" shuffle="no">
-					<fillInBlanks>
+      					<fillInBlanks>
 						<question>
 							<paragraph>
 								Comment s'écrit l'entête de la méthode principale (1 mot par case) ?
@@ -944,15 +916,11 @@ fin module
 						<solution></solution>
 					</fillInBlanks>
 				</selfCheck>
-      </act>
-
-      <act>
-        <paragraph>
-          Pour ces exercices, nous vous demandons de comprendre des codes Java donnés. 
+      
           <selfCheck title="Compréhension" shuffle="no">
 						<fillInBlanks>
 							<question>
-							  Que vont-ils afficher si à chaque fois les deux nombres lus au départ sont successivement 2 et 3 ?
+							  Que vont afficher les codes java suivants si à chaque fois les deux nombres lus au départ sont successivement 2 et 3 ?
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
@@ -983,6 +951,7 @@ public class Exercice2 {
     }
 }
 									</paragraph>
+									<gap answers="7">7</gap> 
 									</item>
 									<item>
 										<paragraph cssClass="java">
@@ -1032,7 +1001,7 @@ public class Exercice5 {
 							<solution/>
 						</fillInBlanks>
 					</selfCheck>
-        </paragraph>
+        
         <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
         <link uri="../../../TDSeq/fr/html/Structure_learningObject2.html">révisez ici</link></paragraph>
       </act>
@@ -1047,7 +1016,19 @@ public class Exercice5 {
     <learningObject title="À vous de jouer...">
     <!-- ============================================================ -->
     <act>
-        <paragraph>
+        <paragraph title="Consignes">
+          Il est temps de se lancer et d’écrire vos premiers modules et programmes Java correspondant. 
+          Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
+          <list listStyle="unordered">
+            <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
+            <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
+            <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+            <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+          </list>
+        </paragraph>
+    
+        <paragraph title="Exercices">
         Écrivez les algorithmes et codez les programmes Java correspondant qui 
           <list listStyle="ordered">
             <item>réalise la permutation du contenu de deux variables.</item>
@@ -1055,6 +1036,12 @@ public class Exercice5 {
             <item>étant donné un temps écoulé dans la journée exprimé en secondes, calcule et affiche ce temps sous la forme de trois nombres (heure, minute et seconde). <newLine/>
             Ex : 10000 secondes donnera 2h 46’40”</item>
           </list>
+        </paragraph>
+        
+        <paragraph>
+          Écrivez un algorithme qui lit un nombre pouvant prendre des valeurs de 100 à 999 et qui affiche ce même nombre mais renversé. 
+          Le dernier chiffre devient le premier et inversement. <newLine/>
+          Par exemple : le nombre 123 devient 321 et le nombre 410 deviendra 14.
         </paragraph>
         <paragraph>Pour plus d'exercices, 
         <link uri="../../../TDSeq/fr/html/unit_Exercices.html">révisez ici</link></paragraph>
