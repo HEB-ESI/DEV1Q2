@@ -1,0 +1,99 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Boucles: Compréhension d’algorithme. Compréhension. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Boucles, eLML" />
+      <title>1.3.1. Compréhension d’algorithme</title>
+      		
+      <link href="selfCheck.css" type="text/css" rel="stylesheet" media="screen" />
+      		<script src="selfCheck.js" type="text/javascript">
+         <!----></script><link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Boucles</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Boucles.html">1.1. Les boucles</a></li>
+               <li class="navigationLink"><a href="unit_SelonQue.html">1.2. selon que</a></li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.3. Exercices</a><ul class="navigation nav_lo">
+                     <li class="navigationActual"><strong>1.3.1. Compréhension d’algorithme</strong></li>
+                     <li class="navigationLink"><a href="Exercices_learningObject2.html">1.3.2. Compréhension de codes Java</a></li>
+                     <li class="navigationLink"><a href="Exercices_learningObject3.html">1.3.3. À vous de jouer...</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Exercices_learningObject1.html">1.3.1. Compréhension d’algorithme</h1>
+      <div id="d8e495.html" class="act">
+         <p class="paragraph" id="d8e496">
+            Pour ces exercices, nous vous demandons de comprendre des algorithmes donnés. 
+            
+            <h4>Compréhension</h4>
+            <div id="selfCheck2.html" class="fillInBlanks">
+               <div class="itemQuestion">
+                  							  Que vont-ils afficher ?
+                  
+               </div>
+               <div class="itemAnswer">
+                  <div class="itemLabel">
+                     <ul class="list" id="d8e503">
+                        <li class="itemAlt"><pre>
+module boucle1 ()
+    x : entier
+    x ← 0
+    tant que x &lt; 12 faire
+      x ← x+2
+    fin tant que
+    afficher x
+fin module
+				</pre><input type="text" value="" class="itemText" id="_d8e507" style="width:25px" /> <span class="gapText">,12,12</span></li>
+                        <li class="item"><pre>
+module exerciceB()
+    a,b,c : entier
+    lire b,a
+    si a &gt; b alors
+      c ← a DIV b
+    sinon
+      c ← b MOD a
+    fin si
+    afficher c
+fin module
+				</pre><p class="paragraph" id="d8e512">Si les nombres lus sont respectivement 2 et 3 ? </p><input type="text" value="" class="itemText" id="_d8e514" style="width:12px" /> <span class="gapText">,1,1</span><p class="paragraph" id="d8e516">Si les nombres lus sont respectivement 4 et 1 ? </p><input type="text" value="" class="itemText" id="_d8e518" style="width:12px" /> <span class="gapText">,0,0</span></li>
+                        <li class="itemAlt"><pre>
+module exerciceC ()
+    x1, x2 : entier
+    ok : booléen
+    lire x1, x2
+    ok ← x1 &gt; x2
+    si ok alors
+      ok ← ok ET x1 = 4
+    sinon
+      ok ← ok OU x2 = 3
+    fin si
+    si ok alors
+      x1 ← x1 * 1000
+    fin si
+    afficher x1 + x2
+fin module
+				</pre><p class="paragraph" id="d8e523">Si les nombres lus sont respectivement 2 et 3 ? </p><input type="text" value="" class="itemText" id="_d8e525" style="width:50px" /> <span class="gapText">,2003,2003</span><p class="paragraph" id="d8e527">Si les nombres lus sont respectivement 4 et 1 ? </p><input type="text" value="" class="itemText" id="_d8e529" style="width:50px" /> <span class="gapText">,4001,4001</span></li>
+                     </ul>
+                  </div>
+                  <div class="itemHelp_disabled">    </div>
+               </div>
+               <div class="itemSolution"></div>
+               <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck2.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck2.html_solution" onclick="solutionGaps('selfCheck2.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+            </div>
+         </p>
+      </div>
+      <hr />
+      <div class="navigation_arrows"><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 21.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

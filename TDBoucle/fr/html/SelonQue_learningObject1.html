@@ -1,0 +1,169 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Boucles: selon que (version avec listes de valeurs). " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Boucles, eLML" />
+      <title>1.2.1. selon que (version avec listes de valeurs)</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Boucles</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Boucles.html">1.1. Les boucles</a></li>
+               <li class="navigationLink"><a href="unit_SelonQue.html">1.2. selon que</a><ul class="navigation nav_lo">
+                     <li class="navigationActual"><strong>1.2.1. selon que (version avec listes de valeurs)</strong></li>
+                     <li class="navigationLink"><a href="SelonQue_learningObject2.html">1.2.2. selon que (version avec conditions)</a></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.3. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="unit_SelonQue.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="SelonQue_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="SelonQue_learningObject1.html">1.2.1. selon que (version avec listes de valeurs)</h1>
+      <div id="d8e384.html" class="clarify">
+         <p class="paragraph" id="d8e385">En pseudo-code :</p><pre>
+selon que variable vaut
+    liste_1 de valeurs séparées par des virgules :
+      // instructions lorsque la valeur de la variable est dans liste_1
+    liste_2 de valeurs séparées par des virgules :
+      // instructions lorsque la valeur de la variable est dans liste_2
+    ...
+    liste_n de valeurs séparées par des virgules :
+      // instructions lorsque la valeur de la variable est dans liste_n
+    autres :
+      // instructions lorsque la valeur de la variable
+      // ne se trouve dans aucune des listes précédentes
+fin selon que
+      </pre><p class="paragraph" id="d8e389">Notez que le cas <code>autres</code> est facultatif.
+         </p>
+         <p class="paragraph" id="d8e394">
+            Dans ce type de structure, comme pour la structure <code>si-alors-sinon</code>, une seule des séquences
+            d’instructions sera exécutée. On veillera à ne pas faire apparaitre une même valeur
+            dans
+            plusieurs listes. Cette structure est une simplification d’écriture de plusieurs alternatives
+            imbriquées.
+            
+         </p>
+         <p class="paragraph" id="d8e399">
+            Elle est équivalente à : 
+            
+         </p><pre>
+si variable = une des valeurs de la liste_1 alors
+    // instructions lorsque la valeur est dans liste_1
+sinon
+    si variable = une des valeurs de la liste_2 alors
+      // instructions lorsque la valeur est dans liste_2
+    sinon
+      ...
+      si variable = une des valeurs de la liste_n alors
+        // instructions lorsque la valeur est dans liste_n
+      sinon
+        // instructions lorsque la valeur de la variable
+        // ne se trouve dans aucune des listes précédentes
+      fin si
+    fin si
+fin si
+      </pre></div>
+      <div id="d8e403.html" class="look">
+         <p class="paragraph" id="d8e404">
+            Écrivons un algorithme qui lit un jour de la semaine sous forme d’un nombre entier
+            (1 pour
+            lundi, . . ., 7 pour dimanche) et qui affiche en clair ce jour de la semaine.
+            
+         </p><pre>
+// Lit un nombre entre 1 et 7 et affiche en clair le jour de la semaine correspondant.
+module jourSemaine()
+    jour : entier
+    lire jour
+    selon que jour vaut
+      1 : afficher "lundi"
+      2 : afficher "mardi"
+      3 : afficher "mercredi"
+      4 : afficher "jeudi"
+      5 : afficher "vendredi"
+      6 : afficher "samedi"
+      7 : afficher "dimanche"
+    fin selon que
+fin module
+    </pre></div>
+      <div id="d8e408.html" class="clarify">
+         <p class="paragraph" id="d8e409">En Java :</p><pre>
+switch (variable){
+    case val1 :
+      // instructions lorsque la valeur de la variable est val1
+      break;
+    case val2 :
+    case val3 :
+    case val4 :
+      // instructions lorsque la valeur de la variable est val2 ou val3 ou val4
+      break;
+    ...
+    case valN  :
+      // instructions lorsque la valeur de la variable est valN
+      break;
+    default :
+      // instructions lorsque la valeur de la variable
+      // ne se trouve dans aucune des listes précédentes
+}
+      </pre><p class="paragraph" id="d8e413">Notez que le cas <code>default</code> est facultatif.
+         </p>
+         <p class="paragraph" id="d8e418">
+            Notez le <code>break</code> à la fin de chaque (groupe de)<code> case</code>.
+            
+         </p>
+         <p class="paragraph" id="d8e426">
+            La variable peut être de type <code>byte</code>, <code>short</code>, 
+            <code>char</code>, <code>int</code><code>String</code> et 
+            les types énumérés que nous verrons plus tard.
+            
+         </p>
+         <p class="paragraph" id="d8e442">
+            Elle est équivalente à : 
+            
+         </p><pre>
+if (variable == val1){
+      // instructions lorsque la valeur de la variable est val1
+} else if (variable ==  val2 || variable ==  val3 || variable == val4){
+      // instructions lorsque la valeur de la variable est val2 ou val3 ou val4
+} else if (variable == valN){
+      // instructions lorsque la valeur de la variable est valN
+} else {
+      // instructions lorsque la valeur de la variable
+      // ne se trouve dans aucune des listes precedentes
+}      </pre></div>
+      <div id="d8e446.html" class="look">
+         <p class="paragraph" id="d8e447">Par exemple : </p><pre>
+import java.util.Scanner;
+public class Test{
+  public static void main(String[] args){
+      Scanner clavier = new Scanner(System.in);
+      String produit = clavier.next();
+      switch(produit) {
+        case "Coca" :
+        case "Sprite" :
+        case "Fanta" :
+        prixDistributeur = 60;
+        break;
+      case "IceTea" :
+        prixDistributeur = 70;
+        break;
+      default :
+        prixDistributeur = 0;
+        break;
+      }
+      System.out.println(prixDistributeur);
+    }
+}
+      </pre></div>
+      <hr />
+      <div class="navigation_arrows"><a href="unit_SelonQue.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="SelonQue_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 21.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

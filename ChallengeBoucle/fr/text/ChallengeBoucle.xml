@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="ChallengeBoucle" title="Challenge : les boucles">
+	
+	<entry>
+		<paragraph>
+			Avez-vous compris les alternatives ? Voyons ça en relevant le défi suivant :
+		</paragraph>
+    <paragraph title="Afficher le titre">
+      Écrivez un module qui affiche le texte :
+    </paragraph>
+    <paragraph cssClass="code">
+      DEV1 - Entête - Athlétisme - <formatted style="italic">votre nom</formatted>
+    </paragraph>
+    <paragraph title="Calcul des points pour un 100m">
+      Chaque performance à l’athlétisme peut être transformée en points via une formule qui
+      dépend de l’épreuve. C’est utilisé notamment pour établir des classements lors d’épreuves
+      multiples comme le décathlon. <newLine/>
+      Pour le 100m, la formule est : <formatted style="code">points = 25.4347 ∗ (18 − temps)^(1.81)</formatted> (arrondi à l’entier inférieur)
+      Par exemple, le record d’Usain Bolt à 9.58 s vaut 1202 points.<newLine/>
+      Modifiez votre module pour qu’il lise le temps mis pour parcourir 100m (un réel représentant le nombre de secondes)
+      et affiche les points obtenus (un entier)
+    </paragraph>
+    
+    <paragraph title="Calcul de la catégorie">
+      Comme dans beaucoup de disciplines, les athlètes sont répartis en catégories en fonction de
+      leur âge. Pour l’athlétisme les catégories sont :
+      <list listStyle="unordered">
+        <item>Junior si ils sont nés en 1996 ou 1997</item>
+        <item>Senior si ils sont nés entre 1980 et 1995</item>
+        <item>Master si ils sont nés avant 1980</item>
+      </list>
+      Modifiez votre module pour qu’il lise l’année de naissance de l’athlète et affiche sa
+      catégorie. On peut supposer que l’année entrée est correcte.
+    </paragraph>
+		<paragraph>Programmez maintenant votre module en Java.</paragraph>
+		<paragraph>
+        Aide en Java : pour prendre la partie entière d’un réel en Java, on peut écrire : entier = (int) réel;
+    </paragraph>
+	</entry>
+</lesson>

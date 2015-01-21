@@ -1,0 +1,194 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Boucles: pour. Afficher les nombres plus petits que n. Afficher les nombres pairs plus petits que 10. Afficher les nombres pairs plus petits que n. Afficher n nombres pairs. Somme de nombres. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Boucles, eLML" />
+      <title>1.1.3. pour</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Boucles</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Boucles.html">1.1. Les boucles</a><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="Boucles_learningObject1.html">1.1.1. tant que</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject2.html">1.1.2. faire - jusqu’à ce que</a></li>
+                     <li class="navigationActual"><strong>1.1.3. pour</strong></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject4.html">1.1.4. Quel type de boucle choisir ?</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject5.html">1.1.5. suite de nombres</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject6.html">1.1.6. 3 pas en avant, 2 pas en arrière</a></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_SelonQue.html">1.2. selon que</a></li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.3. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="Boucles_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Boucles_learningObject3.html">1.1.3. pour</h1>
+      <div id="d8e145.html" class="clarify">
+         <p class="paragraph" id="d8e146">
+            On va indiquer combien de fois la tâche doit être répétée. Cela se fait au travers
+            d’une <b>variable de contrôle</b> dont la valeur 
+            va évoluer <b>à partir d’une valeur de départ jusqu’à une valeur finale</b>.
+            
+         </p>
+         <p class="paragraph" id="d8e154">En pseudo-code :</p><pre>
+pour variable de début à fin [par pas] faire
+    séquence d’instructions à exécuter
+fin pour
+      </pre><p class="paragraph" id="d8e158"> est équivalent à </p><pre>
+variable ← début
+tant que variable ≤ fin faire
+    séquence d’instructions à exécuter
+    variable ← variable + pas // ou variable ← variable + 1 si le pas est omis.
+fin tant que
+      </pre><p class="paragraph" id="d8e162">
+            Dans ce type de structure, <code>début</code>, 
+            <code>fin</code> et <code>pas</code> 
+            peuvent être des constantes, des variables ou
+            des expressions (le plus souvent à valeurs entières mais on admettra parfois des réels).
+            
+            
+         </p>
+         <p class="paragraph" id="d8e173">
+            Le <code>pas</code> est facultatif, et généralement omis (dans ce cas, sa valeur par défaut est 1). 
+            
+         </p>
+         <p class="paragraph" id="d8e178">
+            Ce <code>pas</code> est parfois négatif, dans le cas d’un compte à rebours, 
+            par exemple <span class="input">pour n de 10 à 1 par -1</span>.
+            
+         </p>
+         <p class="paragraph" id="d8e186">
+            <ol class="list" id="d8e187">
+               <li class="itemAlt">
+                  Quand le <code>pas</code> est positif, 
+                  la boucle s’arrête lorsque la <code>variable</code> 
+                  dépasse la valeur de <code>fin</code>.
+                  
+               </li>
+               <li class="item">
+                  Par contre, avec un <code>pas</code> négatif, 
+                  la boucle s’arrête lorsque la <code>variable</code> 
+                  prend une valeur plus petite que la valeur de <code>fin</code>.
+                  
+               </li>
+            </ol>
+         </p>
+         <p class="paragraph" id="d8e210">
+            On considérera qu’au cas (à éviter) où
+            
+            <ol class="list" id="d8e212">
+               <li class="itemAlt"><code>début</code> est strictement supérieur à <code>fin</code> 
+                  et le <code>pas</code> est positif, la séquence d’instructions n’est
+                  jamais exécutée (mais ce n’est pas le cas dans tous les langages de programmation
+                  !). 
+                  
+               </li>
+               <li class="item">
+                  Idem si <code>début</code> est strictement inférieur à <code>fin</code> 
+                  mais avec un <code>pas</code> négatif.
+                  
+               </li>
+            </ol>
+         </p>
+         <p class="paragraph" id="d8e234">
+            Attention de <b>ne pas modifier</b> dans la séquence d’instructions une des variables de contrôle
+            <code>début</code>, <code>fin</code> ou <code>pas</code> ! 
+            
+         </p>
+         <p class="paragraph" id="d8e249">
+            Il est aussi fortement <b>déconseillé de modifier « manuellement </b>» 
+            la <code>variable</code> 
+            au sein de la boucle <code>pour</code>. 
+            Il ne faut pas l’initialiser en début de boucle, et ne pas s’occuper de sa modification,
+            l’instruction <code>variable ← variable + pas</code> étant automatique
+            et implicite à chaque étape de la boucle. 
+            
+         </p>
+         <p class="paragraph" id="d8e265">
+            Il est aussi déconseillé d’utiliser <code>variable</code> à la sortie
+            de la structure pour sans lui affecter une nouvelle valeur.
+            
+         </p>
+         <p class="paragraph" id="d8e270"><span class="multimedia_inline"><img class="multimedia" id="d8e271" src="../image/bouclePour.jpg" alt="" /></span></p>
+      </div>
+      <div id="d8e272.html" class="look">
+         <p class="paragraph" id="d8e273">Par exemple : </p><pre>
+// Affiche les nombres de 1 à 10.
+module compterJusque10 () // version avec pour
+    nb : entier
+    pour nb de 1 à 10 faire // par défaut le pas est de 1
+      afficher nb
+    fin pour
+fin module
+    </pre><h4>Afficher les nombres plus petits que n</h4>
+         <p class="paragraph" title="Afficher les nombres plus petits que n" id="d8e277">On affiche uniquement les nombres inférieurs (pas strictement) à n.</p><pre>
+// Reçoit un nombre et affiche les nombres de 1 à ce nombre.
+module afficherN(n↓ : entier)
+    nb : entier
+    pour nb de 1 à n faire
+      afficher nb
+    fin pour
+fin module
+    </pre><h4>Afficher les nombres pairs plus petits que 10</h4>
+         <p class="paragraph" title="Afficher les nombres pairs plus petits que 10" id="d8e281">On affiche uniquement les nombres pairs jusqu’à 10.</p><pre>
+// Reçoit un nombre et affiche les nombres pairs jusqu’à ce nombre.
+// n : limite des nombres à afficher.
+Exemple : si n vaut 10, les nombres pairs de 1 à 10 sont : 2, 4, 6, 8, 10.
+module afficherPair (n↓ : entier)
+    nb : entier
+    pour nb de 2 à n par 2 faire
+      afficher nb
+    fin pour
+fin module
+    </pre><h4>Afficher les nombres pairs plus petits que n</h4>
+         <p class="paragraph" title="Afficher les nombres pairs plus petits que n" id="d8e285">On affiche uniquement les nombres pairs jusqu’à la limite n.</p><pre>
+// Reçoit un nombre et affiche les nombres pairs jusqu’à ce nombre.
+// n : limite des nombres à afficher.
+// Exemple : si n vaut 10, les nombres pairs de 1 à 10 sont : 2, 4, 6, 8, 10.
+module afficherPair (n↓ : entier)
+    i: entier
+    pour i de 1 à n DIV 2 faire
+      afficher 2 * i
+    fin pour
+fin module
+    </pre><h4>Afficher n nombres pairs</h4>
+         <p class="paragraph" title="Afficher n nombres pairs" id="d8e289">On affiche les n premiers nombres pairs.</p><pre>
+// Reçoit un nombre et affiche ce nombre de nombres pairs.
+// n: le nombre de nombres à afficher.
+// Exemple : si n vaut 10, les 10 premiers nombres pairs sont : 2, 4, 6, 8, 10, 12, 14, 16, 18, 20.
+module afficherPair ()
+    i : entier
+    pour i de 1 à n faire
+      afficher 2 * i
+    fin pour
+fin module
+    </pre><h4>Somme de nombres</h4>
+         <p class="paragraph" title="Somme de nombres" id="d8e293">L’utilisateur indique le nombre de termes au départ.</p><pre>
+// Lit des valeurs entières et retourne la somme des valeurs lues.
+module sommeNombres() → entier
+    nbValeurs : entier // nb de valeurs à additionner
+    valeur : entier // un des termes de l’addition
+    somme : entier // la somme
+    i : entier // itérateur
+    somme ← 0 // la somme se construit petit à petit. Elle vaut 0 au départ
+    lire nbValeurs
+    pour i de 1 à nbValeurs faire
+      lire valeur
+      somme ← somme + valeur
+    fin pour
+    retourner somme
+fin module
+    </pre></div>
+      <hr />
+      <div class="navigation_arrows"><a href="Boucles_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 21.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

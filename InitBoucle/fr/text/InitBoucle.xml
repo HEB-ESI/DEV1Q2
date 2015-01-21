@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="InitBoucle" title="TD Boucles">
+	
+	<entry>
+		<paragraph>
+			Ces exercices ont pour but de vérifier que vous avez fixé les structures alternatives qui permettent de conditionner
+      des parties d’algorithmes, de code.
+		</paragraph>
+	</entry>
+	
+	<!-- =========================================================== -->
+	<unit label="Alternatives" title="Alternatives">
+	<!-- =========================================================== -->
+  
+      <learningObject title="Compréhension d’algorithme">
+    <!-- ============================================================ -->
+      <act>
+        			<selfCheck title="Complétez" shuffle="no">
+      					<fillInBlanks>
+						<question>
+							<paragraph>
+								Complétez la condition manquante pour donner du sens au code suivant :
+							</paragraph>
+						</question>
+						<gapText> 
+						  <paragraph cssClass="code">
+module multiple5()
+    n : entier
+    lire n
+    si <gap answers="n MOD 5 = 0,n MOD 5=0">n MOD 5 = 0</gap> alors
+        afficher n, "est divisible par 5"
+    sinon
+        afficher n, "n'est pas divisible par 5"
+    fin si
+fin module
+</paragraph>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+      
+				<selfCheck title="Structure d'un programme" shuffle="no">
+					<multipleChoice>
+					  <question>Le morceau d'algorithme suivant est-il correct ?
+					  <paragraph cssClass="code">
+lire n
+// n est un entier
+selon que n vaut
+1, 2, 3, 4 : n ← 3*n
+3, 5, 7, 9 : n ← 2*n
+fin selon</paragraph>
+						</question>
+						<answer feedback="La valeur 3 apparait dans deux cas différents." correct="no"> 
+							vrai
+            </answer>
+            <answer feedback="La valeur 3 apparait dans deux cas différents." correct="yes"> 
+							faux
+            </answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        <paragraph>
+          Pour ces exercices, nous vous demandons de comprendre des algorithmes donnés. 
+        </paragraph>
+          <selfCheck title="Compréhension" shuffle="no">
+						<fillInBlanks>
+							<question>
+							  Que vont-ils afficher ?
+              </question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										<paragraph cssClass="code">
+module exerciceA()
+    x : entier
+    ok : booléen
+    lire x
+    ok ← x > 2
+    si ok alors
+      afficher 2*x
+    sinon
+      afficher 3*x
+    fin si
+fin module
+				</paragraph>
+				            <paragraph>Si le nombre lu est 2 ? </paragraph>
+									  <gap answers="6">6</gap> 
+                  </item>
+									<item>
+										<paragraph cssClass="code">
+module exerciceB()
+    x : entier
+    ok : booléen
+    lire x
+    ok ← x MOD 2 = 0
+    si ok alors
+      afficher 2*x
+    sinon
+      afficher 3*x
+    fin si
+fin module
+				</paragraph>
+				            <paragraph>Si le nombre lu est 3 ? </paragraph>
+									  <gap answers="9">9</gap> 
+                  </item>
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+      </act>
+      <clarify>
+        <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+        <link uri="../../../TDAlt/fr/html/unit_SiAlorsSinon.html">révisez ici</link>
+        </paragraph>
+      </clarify>
+    </learningObject>
+      
+    <learningObject title="Compréhension de codes Java">
+    <!-- ============================================================ -->
+
+      <act>
+        			<selfCheck title="Complétez" shuffle="no">
+      					<fillInBlanks>
+						<question>
+							<paragraph>
+								Complétez la condition manquante pour donner du sens au code suivant :
+							</paragraph>
+						</question>
+						<gapText> 
+						  <paragraph cssClass="java">
+import java.util.Scanner;
+public class Exercice1 {
+    public static void main(String [] args) {
+        Scanner clavier = new Scanner(System.in);
+        int nb = clavier.nextInt();
+        if (<gap answers="nb % 2 == 0,nb%2 == 0,nb%2==0">nb % 2 == 0</gap>){
+          System.out.print(nb + "est pair");
+        } else {
+          System.out.print(nb + "est impair");
+        } 
+    }
+}</paragraph>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+      
+				<selfCheck title="Structure d'un programme" shuffle="no">
+					<multipleChoice>
+					  <question>Le morceau de code suivant est-il correct ?
+					  <paragraph cssClass="java">
+switch(produit) {
+        case "Coca", "Sprite", "Fanta" :
+          prixDistributeur = 60;
+          break;
+      case "IceTea" :
+          prixDistributeur = 70;
+          break;
+      default :
+          prixDistributeur = 0;
+          break;
+      }</paragraph>
+						</question>
+						<answer feedback="Ce n'est pas la façon correcte de regrouper plusieurs case." correct="no"> 
+							vrai
+            </answer>
+            <answer feedback="Ce n'est pas la façon correcte de regrouper plusieurs case." correct="yes"> 
+							faux
+            </answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        <paragraph>
+          Pour ces exercices, nous vous demandons de comprendre des codes donnés. 
+        </paragraph>
+          <selfCheck title="Compréhension" shuffle="no">
+						<fillInBlanks>
+							<question>
+							  Que vont-ils afficher ?
+              </question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Test{
+  public static void main(String[] args){
+      Scanner clavier = new Scanner(System.in);
+      int numeroJour = clavier.nextInt();
+      switch (numeroJour) {
+        case 0: System.out.print("samedi");
+        case 1: System.out.print("dimanche");
+        case 2: System.out.print("lundi");
+        case 3: System.out.print("mardi");
+        case 4: System.out.print("mercredi");
+        case 5: System.out.print("jeudi");
+        case 6: System.out.print("vendredi");
+      }
+      System.out.println(numeroJour);
+    }
+}
+				</paragraph>
+				            <paragraph>Si le numeroJour lu est 5 ? </paragraph>
+									  <gap answers="jeudivendredi">jeudivendredi</gap> 
+                  </item>
+									<item>
+										<paragraph cssClass="java">
+import java.util.Scanner;
+public class Test{
+  public static void main(String[] args){
+      Scanner clavier = new Scanner(System.in);
+      int numeroJour = clavier.nextInt();
+      switch (numeroJour) {
+        case 0: System.out.println("samedi"); break;
+        case 1: System.out.println("dimanche"); break;
+        case 2: System.out.println("lundi"); break;
+        case 3: System.out.println("mardi"); break;
+        case 4: System.out.println("mercredi"); break;
+        case 5: System.out.println("jeudi"); break;
+        case 6: System.out.println("vendredi"); break;
+      }
+      System.out.println(numeroJour);
+    }
+}
+				</paragraph>
+				            <paragraph>Si le numeroJour lu est 5 ? </paragraph>
+									  <gap answers="jeudi">jeudi</gap> 
+                  </item>
+                  
+                  <item>
+                  <paragraph cssClass="java">
+<![CDATA[
+import java. util .Scanner;
+public class Test {
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      double prixAmende = 0;
+      double tauxAlcool = clavier.nextDouble();
+      if (tauxAlcool>1.6) {
+        prixAmende = 10_000;
+      } else if (tauxAlcool>1.5){
+        prixAmende = 1100;
+      } else if (tauxAlcool>1.2){
+        prixAmende = 550;
+      } else if (tauxAlcool>0.8){
+        prixAmende = 400;
+      } else if (tauxAlcool>0.5){
+        prixAmende = 137.5;
+      } else {
+        prixAmende = 0;
+      }
+    }
+}]]>
+      </paragraph>
+                    <paragraph>Si le tauxAlcool lu est 0.9 ? </paragraph>
+									  <gap answers="400">400</gap> 
+                  </item>
+                  
+                  <item>
+                  <paragraph cssClass="java">
+<![CDATA[
+import java. util .Scanner;
+public class Test {
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      double prixAmende = 0;
+      double tauxAlcool = clavier.nextDouble();
+      if (tauxAlcool>0.5) {
+        if (tauxAlcool>0.8){
+          if (tauxAlcool>1.2){
+            if (tauxAlcool>1.5){
+              if (tauxAlcool>1.6){
+                prixAmende = 10_000;
+              } else {
+                prixAmende = 1100;
+              }
+            } else {
+              prixAmende = 550;
+            }
+          } else {
+            prixAmende = 400;
+          }
+        } else {
+          prixAmende = 137.5;
+      }
+    }
+}]]>
+      </paragraph>
+                    <paragraph>Si le tauxAlcool lu est 1.3 ? </paragraph>
+									  <gap answers="550">550</gap> 
+                  </item>
+                  
+                </list>
+              </gapText>
+            </fillInBlanks>
+          </selfCheck>
+          
+					<selfCheck title="Comprendre les erreurs" shuffle="yes">
+          <multipleChoice>
+            <question>  
+              Soit le code
+              <paragraph cssClass="java">
+<![CDATA[public class ErrCompilation {
+
+	public static int abs(int nombre) { 
+
+		int absolu;
+
+		if (nombre < 0) {		
+			absolu = -nombre;
+		} 
+		
+		return absolu;
+		
+	}
+
+}]]>				</paragraph>
+              <paragraph>
+                la commande
+              </paragraph>
+              <paragraph cssClass="code">
+  javac ErrCompilation.java 
+              </paragraph>
+              <paragraph>
+                provoque l'erreur suivante :
+              </paragraph>
+              <paragraph cssClass="code">
+ErrCompilation.java:7:
+variable absolu might not have been initialized
+return absolu;
+^
+1 error  
+              </paragraph>
+              <paragraph>
+                il s'agit d'une erreur générée par le compilateur javac car :
+              </paragraph>
+            </question>
+            <answer feedback="En effet, si on ne rentre pas dans le if, la variable absolu ne sera pas initialisée." correct="yes">
+              la variable <formatted style="java">absolu</formatted> n'est pas toujours initialisée
+            </answer>
+            <answer feedback="Non, ce n'est pas ça." correct="no">la variable <formatted style="java">absolu</formatted> a un nom invalide </answer>
+            <answer feedback="Non, ce n'est pas ça." correct="no">la variable <formatted style="java">absolu</formatted> n'est pas du bon type </answer>
+            <answer feedback="Non, ce n'est pas ça." correct="no">cette méthode ne doit pas avoir d'instruction return </answer>
+            <answer feedback="Non, ce n'est pas ça." correct="no">la valeur donnée à <formatted style="java">absolu</formatted> n'est pas du bon type </answer>
+          </multipleChoice>
+        </selfCheck>
+        
+      </act>
+      <clarify>
+        <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
+        <link uri="../../../TDAlt/fr/html/unit_SiAlorsSinon.html">révisez ici</link>
+        </paragraph>
+      </clarify>
+    </learningObject>
+    
+    <learningObject title="À vous de jouer...">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph title="À la pompe">
+          À la pompe à essence, le prix du carburant dépend du type de carburant. Reprenons ci-dessous le prix au litre pratiqué par ESI-Pompe. 
+          <list listStyle="unordered">
+            <item>Super 95 : 1,429 €/L</item>
+            <item>Super 98 : 1,604 €/L</item>
+            <item>Diesel : 1,249 €/L</item>
+            <item>LPG : 0,558 €/L</item>
+          </list>
+        </paragraph>
+        <paragraph>
+        Mettez en évidence les variables <formatted style="bold">« données »</formatted>, 
+        les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;
+      </paragraph>
+      <paragraph>
+          Écrivez un module qui lit le type de carburant et la quantité désirée (considérée positive) et qui affiche le prix à payer.<newLine/>
+          Exemple : pour du Super 95 et pour une quantité de 30,46 litres le module retourne le prix de 43,52 €.
+        </paragraph>
+        <paragraph>Écrivez le code java correspondant.</paragraph>
+        
+        <paragraph title="Métro">
+          L'horaire du métro bruxellois varie selon le jour et l'heure. La fréquence des passages est de 5
+          minutes en semaine de 6h à 10h et de 15h à 19h. De 7 minutes en semaine de 10h à 15h et le
+          samedi de 12h à 19h. De 10 min après 19h en semaine et le samedi et toute la journée de
+          dimanche. 
+        </paragraph>
+        <paragraph>
+          Mettez en évidence les variables <formatted style="bold">« données »</formatted>, 
+          les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;
+        </paragraph>
+        <paragraph>
+          Écrivez un module qui reçoit un nom de jour et une heure et qui retourne la fréquence pour ce moment. <newLine/>
+          Exemple : jour = « lundi » ; heure = 16 fréquence = 5
+        </paragraph>
+        <paragraph>Écrivez le code java correspondant.</paragraph>
+        
+        <paragraph title="Triple Pythagoricien">
+          Trois entiers constituent un triple Pythagoricien si le carré du plus grand des trois est égal à la somme des carrés des deux autres. 
+          Par exemple, 3, 5, 4 constituent un tel triple car 25 = 9 + 16.
+        </paragraph>
+        <paragraph>
+          Mettez en évidence les variables <formatted style="bold">« données »</formatted>, 
+          les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;
+        </paragraph>
+        <paragraph>
+          Écrivez un module qui vérifie si trois entiers donnés constituent un triple Pythagoricien.
+        </paragraph>
+        <paragraph>Écrivez le code java correspondant.</paragraph>
+        <paragraph>Pour plus d'exercices, 
+        <link uri="../../../TDAlt/fr/html/unit_Exercices.html">révisez ici</link></paragraph>
+      </act>
+    </learningObject>
+  </unit>
+</lesson>
