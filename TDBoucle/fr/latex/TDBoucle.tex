@@ -563,7 +563,15 @@ fin module
                 \end{figure}
                     
             \par
-        \subsection{suite de nombres}
+        \subsection{Sentinelle}
+      Quand l'utilisateur entre une valeur sp\'eciale pour indiquer la fin 
+      (d'une boucle \verb@tant que@ ou \verb@faire@), 
+      on parle de\textbf{ valeur sentinelle}.
+      Ceci n'est possible que si cette valeur sentinelle ne peut pas \^etre un terme valide. 
+      Par exemple, si on veut additionner des nombres positifs uniquement, la valeur -1 peut
+      servir de valeur sentinelle. Mais sans limite sur les nombres \`a additionner (positifs, n\'egatifs
+      ou nuls) il n'est pas possible de choisir une sentinelle.
+    \subsection{suite de nombres}
 		    Un exemple simple pourrait \^etre celui-ci : 
 		    \guillemotleft  \textit{\'Ecrire l'algorithme qui affiche les n premiers
         termes de la suite : 2, 4, 6. . . }\guillemotright 
@@ -664,232 +672,7 @@ fin module
         correct et lisible, \'egalement dans les cas particuliers.
       
             \par
-        \section{selon que}Avec ces structures, plusieurs branches d'ex\'ecution sont disponibles. L'ordinateur choisit la
-    branche \`a ex\'ecuter en fonction de la valeur d'une variable (ou parfois d'une expression) ou
-    de la condition qui est vraie.\subsection{selon que (version avec listes de valeurs)}En pseudo-code :
-            \par
-        \begin{verbatim}
-selon que variable vaut
-    liste_1 de valeurs séparées par des virgules :
-      // instructions lorsque la valeur de la variable est dans liste_1
-    liste_2 de valeurs séparées par des virgules :
-      // instructions lorsque la valeur de la variable est dans liste_2
-    ...
-    liste_n de valeurs séparées par des virgules :
-      // instructions lorsque la valeur de la variable est dans liste_n
-    autres :
-      // instructions lorsque la valeur de la variable
-      // ne se trouve dans aucune des listes précédentes
-fin selon que
-      \end{verbatim}Notez que le cas \verb@autres@ est facultatif.
-            \par
-        
-        Dans ce type de structure, comme pour la structure \verb@si-alors-sinon@, une seule des s\'equences
-        d'instructions sera ex\'ecut\'ee. On veillera \`a ne pas faire apparaitre une m\^eme valeur dans
-        plusieurs listes. Cette structure est une simplification d'\'ecriture de plusieurs alternatives
-        imbriqu\'ees.
-      
-            \par
-        
-        Elle est \'equivalente \`a : 
-      
-            \par
-        \begin{verbatim}
-si variable = une des valeurs de la liste_1 alors
-    // instructions lorsque la valeur est dans liste_1
-sinon
-    si variable = une des valeurs de la liste_2 alors
-      // instructions lorsque la valeur est dans liste_2
-    sinon
-      ...
-      si variable = une des valeurs de la liste_n alors
-        // instructions lorsque la valeur est dans liste_n
-      sinon
-        // instructions lorsque la valeur de la variable
-        // ne se trouve dans aucune des listes précédentes
-      fin si
-    fin si
-fin si
-      \end{verbatim}
-        \'Ecrivons un algorithme qui lit un jour de la semaine sous forme d'un nombre entier (1 pour
-        lundi, . . ., 7 pour dimanche) et qui affiche en clair ce jour de la semaine.
-      
-            \par
-        \begin{verbatim}
-// Lit un nombre entre 1 et 7 et affiche en clair le jour de la semaine correspondant.
-module jourSemaine()
-    jour : entier
-    lire jour
-    selon que jour vaut
-      1 : afficher "lundi"
-      2 : afficher "mardi"
-      3 : afficher "mercredi"
-      4 : afficher "jeudi"
-      5 : afficher "vendredi"
-      6 : afficher "samedi"
-      7 : afficher "dimanche"
-    fin selon que
-fin module
-    \end{verbatim}En Java :
-            \par
-        \begin{verbatim}
-switch (variable){
-    case val1 :
-      // instructions lorsque la valeur de la variable est val1
-      break;
-    case val2 :
-    case val3 :
-    case val4 :
-      // instructions lorsque la valeur de la variable est val2 ou val3 ou val4
-      break;
-    ...
-    case valN  :
-      // instructions lorsque la valeur de la variable est valN
-      break;
-    default :
-      // instructions lorsque la valeur de la variable
-      // ne se trouve dans aucune des listes précédentes
-}
-      \end{verbatim}Notez que le cas \verb@default@ est facultatif.
-            \par
-        
-        Notez le \verb@break@ \`a la fin de chaque (groupe de)\verb@ case@.
-      
-            \par
-        
-        La variable peut \^etre de type \verb@byte@, \verb@short@, 
-        \verb@char@, \verb@int@\verb@String@ et 
-        les types \'enum\'er\'es que nous verrons plus tard.
-      
-            \par
-        
-        Elle est \'equivalente \`a : 
-      
-            \par
-        \begin{Java}
-if (variable == val1){
-      // instructions lorsque la valeur de la variable est val1
-} else if (variable ==  val2 || variable ==  val3 || variable == val4){
-      // instructions lorsque la valeur de la variable est val2 ou val3 ou val4
-} else if (variable == valN){
-      // instructions lorsque la valeur de la variable est valN
-} else {
-      // instructions lorsque la valeur de la variable
-      // ne se trouve dans aucune des listes precedentes
-}      \end{Java}Par exemple : 
-            \par
-        \begin{Java}
-import java.util.Scanner;
-public class Test{
-  public static void main(String[] args){
-      Scanner clavier = new Scanner(System.in);
-      String produit = clavier.next();
-      switch(produit) {
-        case "Coca" :
-        case "Sprite" :
-        case "Fanta" :
-        prixDistributeur = 60;
-        break;
-      case "IceTea" :
-        prixDistributeur = 70;
-        break;
-      default :
-        prixDistributeur = 0;
-        break;
-      }
-      System.out.println(prixDistributeur);
-    }
-}
-      \end{Java}\subsection{selon que (version avec conditions)}En pseudo-code :
-            \par
-        \begin{verbatim}
-selon que
-    condition_1 :
-      // instructions lorsque la condition_1 est vraie
-    condition_2 :
-      // instructions lorsque la condition_2 est vraie
-    ...
-    condition_n :
-      // instructions lorsque la condition_n est vraie
-    autres :
-      // instructions à exécuter quand aucune
-      // des conditions précédentes n’est vérifiée
-fin selon que
-      \end{verbatim}
-        Comme pr\'ec\'edemment, une et une seule des s\'equences d'instructions est ex\'ecut\'ee. On
-        veillera \`a ce que les conditions ne se \guillemotleft  recouvrent \guillemotright  pas, c'est-\`a-dire que deux d'entre elles
-        ne soient jamais vraies simultan\'ement. 
-      
-            \par
-        C'est \'equivalent \`a : 
-            \par
-        \begin{verbatim}
-si condition_1 alors
-    // instructions lorsque la condition_1 est vraie
-sinon
-    si condition_2 alors
-      // instructions lorsque la condition_2 est vraie
-    sinon
-      ...
-      si condition_n alors
-        // instructions lorsque la condition_n est vraie
-      sinon
-        // instructions à exécuter quand aucune
-        // des conditions précédentes n’est vérifiée
-      fin si
-    fin si
-fin si
-      \end{verbatim}Par exemple : 
-            \par
-        \begin{verbatim}
-// Lit un nombre et affiche si ce nombre est strictement positif , strictement négatif ou nul.
-module signeNombre()
-    nb : entier
-    lire nb
-    selon que 
-      nb < 0 :
-        afficher "le nombre", nb, " est négatif"
-      nb > 0 :
-        afficher "le nombre", nb, " est positif"
-      autres : 
-        afficher "le nombre", nb, " est nul"
-    fin selon que
-fin module
-    \end{verbatim}En Java :
-            \par
-        Il n'existe pas de \verb@switch@ avec condition, 
-		  il faut l'\'ecrire comme une succession de \verb@if@.
-            \par
-        \begin{Java}
-if (condition_1){
-      // instructions lorsque la condition_1 est vraie
-} else if (condition_2){
-      // instructions lorsque la condition_2 est vraie
-} ... 
-} else if (condition_n){
-      // instructions lorsque la condition_n est vraie
-} else {
-      // instructions a executer quand aucune
-      // des conditions precedentes n est verifiee
-}
-      \end{Java}Par exemple : 
-            \par
-        \begin{Java}
-import java. util .Scanner;
-public class Test {
-    public static void main(String [] args) {
-      Scanner clavier = new Scanner(System.in);
-      int nb = clavier.nextInt();
-      if (nb>0) {
-        System.out. println (" positif ");
-      } else if (nb==0) {
-        System.out. println ("nul");
-      } else {
-        System.out. println (" negatif ");
-      }
-    }
-}
-    \end{Java}\section{Exercices}
+        \section{Exercices}
 				Maintenant, mettons tout \c ca en pratique.
       
             \par
@@ -916,131 +699,242 @@ module boucle1 ()
 fin module
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module exerciceB()
-    a,b,c : entier
-    lire b,a
-    si a > b alors
-      c ← a DIV b
-    sinon
-      c ← b MOD a
-    fin si
-    afficher c
-fin module
-				\end{verbatim}Si les nombres lus sont respectivement 2 et 3 ? 
-            \par
-         \textcolor{gray}{\underline{\hspace*{1em}}} Si les nombres lus sont respectivement 4 et 1 ? 
-            \par
-         \textcolor{gray}{\underline{\hspace*{1em}}} 
-			\item \begin{verbatim}
-module exerciceC ()
-    x1, x2 : entier
+module boucle2 ()
     ok : booléen
-    lire x1, x2
-    ok ← x1 > x2
-    si ok alors
-      ok ← ok ET x1 = 4
-    sinon
-      ok ← ok OU x2 = 3
-    fin si
-    si ok alors
-      x1 ← x1 * 1000
-    fin si
-    afficher x1 + x2
+    x : entier
+    ok ← vrai
+    x ← 5
+    tant que ok faire
+      x ← x+7
+      ok ← x MOD 11 ≠ 0
+    fin tant que
+    afficher x
 fin module
-				\end{verbatim}Si les nombres lus sont respectivement 2 et 3 ? 
-            \par
-         \textcolor{gray}{\underline{\hspace*{3em}}} Si les nombres lus sont respectivement 4 et 1 ? 
-            \par
-         \textcolor{gray}{\underline{\hspace*{3em}}} 
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{verbatim}
+module boucle3 ()
+    ok : booléen
+    cpt, x : entiers
+    x ← 10
+    cpt ← 0
+    ok ← vrai
+    tant que ok ET cpt < 3 faire
+      si x MOD 2 = 0 alors
+        x ← x+1
+        ok ← x < 20
+      sinon
+        x ← x+3
+        cpt ← cpt + 1
+      fin si
+    fin tant que
+    afficher x
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{verbatim}
+module boucle4 ()
+    pair, grand : booléens
+    p, x : entiers
+    x ← 1
+    p ← 1
+    faire
+      p ← 2*p
+      x ← x+p
+      pair ← x MOD 2 = 0
+      grand ← x > 15
+    jusqu’à ce que pair OU grand
+    afficher x
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{verbatim}
+module boucle5 ()
+    i, x : entiers
+    ok : booléen
+    x ← 3
+    ok ← vrai
+    pour i de 1 à 5 faire
+      x ← x+i
+      ok ← ok ET (x MOD 2 = 0)
+    fin pour
+    si ok alors
+      afficher x
+    sinon
+      afficher 2 * x
+    fin si
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{verbatim}
+module boucle6 ()
+    i, j, fin : entiers
+    pour i de 1 à 3 faire
+      fin ← 6 * i - 11
+      pour j de 1 à fin par 3 faire
+        afficher 10 * i + j
+      fin pour
+    fin pour
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{10em}}} 
 					\end{itemize}
 				
             \par
         \subsection{Compr\'ehension de codes Java}
-          Pour ces exercices, nous vous demandons de comprendre des codes Java donn\'es. 
-          
+			
+		\subparagraph{Instructions r\'ep\'etitives} 
+		
+                \textcolor{white}{.} \par
+            
+							Quelles instructions r\'ep\'etitives sont correctes parmi les suivantes? 
+							Expliquez pourquoi les autres ne le sont pas.
+						
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] proposition 1
+							\begin{Java}
+While ( condition ) {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 2
+							\begin{Java}
+do while ( condition ) {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 3
+							\begin{Java}
+while ( true ) {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 4
+							\begin{Java}
+while ( true ) do {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 5
+							\begin{Java}
+FOR ( int i=0; i<=10; i=i+2 ) DO {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 6
+							\begin{Java}
+for ( int i=0; i<=10; i=i+2 ) {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 7
+							\begin{Java}
+for ( int i=0; i<=10; i=i+2 ) do {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 8
+							\begin{Java}
+for ( int i=9; i>=0; i=i-2 ) {
+	// instructions
+}							\end{Java}
+        
+            \end{itemize} 
+        
+			
+		\subparagraph{Activit\'e 'remplir les blancs'} 
+		
+                \textcolor{white}{.} \par
+            
+								Quel op\'erateur de comparaison Java repr\'esente la relation suivante? 
+							
+            \par
+        
+					\begin{enumerate}
+				
+			\item "est \'egal \`a" ?                      \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item "est diff\'erent de" ?                \textcolor{gray}{\underline{\hspace*{2em}}} 
+					\end{enumerate}
+				
+								Quel op\'erateur bool\'een Java repr\'esente l'op\'erateur logique suivant? 
+							
+            \par
+        
+					\begin{enumerate}
+				
+			\item le ET :   \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item le OU :   \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item le NON :  \textcolor{gray}{\underline{\hspace*{1em}}} 
+					\end{enumerate}
+				
+			
+		\subparagraph{Exp\'erience} 
+		
+					\textcolor{white}{.} \par
+				
+					Indiquez l'affichage obtenu par ce code.
+				
+            \par
+        
 			
 		\subparagraph{Compr\'ehension} 
 		
                 \textcolor{white}{.} \par
             
-							  Que vont-ils afficher si \`a chaque fois les deux nombres lus au d\'epart sont successivement 2, 3 et 4 ?
-							
-					\begin{itemize}
+							  Que vont-ils afficher ?
+              \begin{Java}
+public class Boucles {
+
+	public static void main ( String[] args ) {
+		int facteur;
+		final int VALEUR = 3;
+	
+		for (facteur = 1 ; facteur <= 10 ; facteur++){		
+			System.out.print(facteur*VALEUR+" ");
+		}
+		System.out.println();
+	}
+}			\end{Java} \textcolor{gray}{\underline{\hspace*{16em}}} 
+			
+		\subparagraph{Exercice Tant que} 
+		
+					\textcolor{white}{.} \par
 				
-			\item \begin{Java}
-import java.util.Scanner;
-public class Exercice1 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb1 = clavier.nextInt();
-        int nb2 = clavier.nextInt();
-        int nb3 = clavier.nextInt();
-        if (nb1 < nb2){
-          System.out.print(nb1);
-        } else {
-          System.out.print(nb2);
-        } 
-    }
-}
-        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
-			\item \begin{Java}
-import java.util.Scanner;
-public class Exercice2 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb1 = clavier.nextInt();
-        int nb2 = clavier.nextInt();
-        int nb3 = clavier.nextInt();
-        if (nb1 > nb2 && nb1 > nb3){
-          System.out.print(nb1);
-        } else {
-            if (nb2 > nb3){
-              System.out.print(nb2);
-            } else {
-              System.out.print(nb3);
-            }
-        } 
-    }
-}
-        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
-			\item \begin{Java}
-import java.util.Scanner;
-public class Exercice3 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb1 = clavier.nextInt();
-        int nb2 = clavier.nextInt();
-        int nb3 = clavier.nextInt();
-        switch (nb1){
-          case 1 : System.out.print("premier"); break;
-          case 2 : System.out.print("deuxieme"); break;
-          case 3 : System.out.print("troisieme"); break;
-          default : System.out.print("pas dans le trio");
-        } 
-    }
-}
-        \end{Java} \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item \begin{Java}
-import java.util.Scanner;
-public class Exercice3 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb1 = clavier.nextInt();
-        int nb2 = clavier.nextInt();
-        int nb3 = clavier.nextInt();
-        switch (nb1){
-          case 1 : System.out.print("premier");
-          case 2 : System.out.print("deuxieme");
-          case 3 : System.out.print("troisieme");
-          default : System.out.print("pas dans le trio");
-        } 
-    }
-}
-        \end{Java} \textcolor{gray}{\underline{\hspace*{20em}}} 
-					\end{itemize}
+					\'Ecrivez en Java l'algorithme suivant.
 				
             \par
-        \subsection{\`A vous de jouer...}
+        \begin{verbatim}
+MODULE Test
+
+    nb, produit : Entier
+    produit ← 1 
+
+    LIRE nb
+    TANT QUE nb ≠ 0 FAIRE
+        produit ← produit * nb
+        LIRE nb 
+    FIN TANT QUE
+    AFFICHER produit
+    
+FIN MODULE
+			    \end{verbatim}
+			
+		\subparagraph{Exercice Pour} 
+		
+					\textcolor{white}{.} \par
+				
+					\'Ecrivez en Java l'algorithme suivant.
+				
+            \par
+        \begin{verbatim}
+MODULE Test
+
+    nb: Entier
+    i : Entier
+
+    LIRE nb
+    POUR i DE 1 A nb FAIRE
+        AFFICHER i
+    FIN POUR
+
+FIN MODULE
+			     \end{verbatim}\subsection{\`A vous de jouer...}
           Il est temps de se lancer et d'\'ecrire vos premiers modules et programmes Java correspondant. 
           Voici quelques conseils pour vous guider dans la r\'esolution de tels probl\`emes :
           
@@ -1059,101 +953,79 @@ public class Exercice3 {
           
 					\begin{enumerate}
 				
-			\item \'etant donn\'e deux nombres quelconques, recherche et affiche le plus
-              grand des deux. Attention ! On ne veut pas savoir si c'est le premier ou le deuxi\`eme qui est
-              le plus grand mais bien quelle est cette plus grande valeur. Le probl\`eme est donc bien d\'efini
-              m\^eme si les deux nombres sont identiques.
+			\item re\c coit un naturel \verb@n@ et affiche
+              
+					\begin{enumerate}
+				
+			\item les \verb@n@ premiers entiers strictement positifs ;
+			\item les \verb@n@ premiers entiers strictement positifs en ordre d\'ecroissant ;
+			\item les \verb@n@ premiers carr\'es parfaits ;
+			\item les \verb@n@ premiers naturels impairs ;
+			\item les naturels impairs qui sont inf\'erieurs ou \'egaux \`a \verb@n@.
+					\end{enumerate}
+				
+              Si le \verb@n@ re\c cu n'est pas strictement positif, votre programme s'arr\^etera en g\'en\'erant une erreur/une exception.
             
-			\item \'etant donn\'e trois nombres quelconques, recherche et affiche le plus grand des trois.
-			\item affiche un message indiquant si un entier est strictement n\'egatif, nul ou strictement positif.
-			\item \'etant donn\'e trois nombres, recherche et affiche si le premier des 
-            trois appartient \`a l'intervalle donn\'e par le plus petit et le plus grand des deux autres (bornes exclues). 
-            Qu'est-ce qui change si on inclut les bornes ?
-			\item \'etant donn\'e une \'equation du deuxi\`eme degr\'e, d\'etermin\'ee par le coefficient de x\texttwosuperior  , le coefficient de x et le terme ind\'ependant, 
-            recherche et affiche la (ou les) racine(s) de l'\'equation (ou un message ad\'equat s'il n'existe pas de racine r\'eelle).
-			\item \`a partir d'un moment exprim\'e par 2 entiers, heure et minute, affiche le moment qu'il sera une minute plus tard.
-			\item v\'erifie si une ann\'ee est bissextile. Pour rappel, les ann\'ees bissextiles sont les ann\'ees multiples de 4.
-             Font exception, les multiples de 100 (sauf les multiples de 400 qui sont bien bissextiles). Ainsi 2012 et 2400 sont bissextile mais pas 2010 ni 2100.
+			\item 
+              demande \`a l'utilisateur d'introduire un entier positif (non strictement). 
+              Ce module permet \`a l'utilisateur de se tromper \`a plusieurs reprises mais l'utilisateur devra donner
+              une bonne valeur pour arr\^eter le programme.
+              (On suppose tout de m\^eme que l'utilisateur ne donne que des valeurs enti\`eres !) 
+            
+			\item 
+              lit une s\'erie de nombres entiers positifs, jusqu'\`a ce que l'utilisateur
+              encode la valeur 0. Les nombres multiples de 3 seront affich\'es au fur et \`a mesure et le nombre
+              de ces multiples sera affich\'e en fin de traitement.
+              
+            \par
+        
+              Pensez \`a utiliser le module \'ecrit ci-dessus qui permet de lire un entier positif.
+              
+            \par
+        
+			\item 
+              retourne la somme des chiffres qui forment un nombre naturel \verb@n@
+              Attention, on donne au d\'epart le nombre et pas ses chiffres. Exemple : 133045 doit donner
+              comme r\'esultat 16, car 1 + 3 + 3 + 0 + 4 + 5 = 16.
+            
+			\item 
+              lit une suite de nombres positifs entr\'es au clavier et affiche
+              le maximum, le minimum, leur somme et la moyenne. \par
+				
+              La fin de la suite de nombre sera signifi\'ee par une valeur sentinelle que vous choisirez
+              judicieusement.
+            
+			\item 
+              v\'erifie si un entier donn\'e forme un palindrome ou non. Un nombre
+              palindrome est un nombre qui lu dans un sens (de gauche \`a droite) est identique au nombre
+              lu dans l'autre sens (de droite \`a gauche). Par exemple, 1047401 est un nombre palindrome.
+            
 					\end{enumerate}
 				
             \par
-        
-			
-		\subparagraph{Stationnement alternatif} 
-		
-					\textcolor{white}{.} \par
-				
-          Dans une rue o\`u se pratique le stationnement alternatif, du 1 au 15 du mois, on se gare du c\^ot\'e des maisons ayant un num\'ero impair, 
-          et le reste du mois, on se gare de l'autre c\^ot\'e.
-          \'Ecrivez un algorithme et le code java correspondant qui, sur base de la date du jour et du num\'ero de maison devant laquelle
-          vous vous \^etes arr\^et\'e, indique si vous \^etes bien stationn\'e ou non.
-        
+        En java, n'oubliez pas d'\'ecrire la javadoc et la m\'ethode main pour tester vos m\'ethodes.
             \par
         
 			
-		\subparagraph{La fi\`evre monte} 
+		\subparagraph{Jeu de la fourchette} 
 		
 					\textcolor{white}{.} \par
 				
-          Chez l'humain la temp\'erature corporelle normale moyenne est de 37 \textdegree C (entre 36,5 \textdegree C et 37,5 \textdegree C selon les individus). 
-          La fi\`evre est d\'efinie par une temp\'erature rectale au repos sup\'erieure ou \'egale \`a 38,0 \textdegree C. 
-          Une fi\`evre au-del\`a de 40 \textdegree C  est consid\'er\'ee comme un risque de sant\'e majeur et imm\'ediat. 
-          Lorsque la fi\`evre est mod\'er\'ee (de 37,7 \textdegree C \`a 37,9 \textdegree C), on parle de f\'ebricule.\par
-				
-          [Wikipedia]
-        
-            \par
-        
-          \'Ecrivez un module fi\`evre qui lit une temp\'erature au clavier et qui affiche si le patient a de la
-          temp\'erature (sup\'erieure ou \'egale \`a 38,0\textdegree C) ET si cette cette fi\`evre est mod\'er\'ee (entre 38,0\textdegree C 
-          et 40,0\textdegree C) ou \`a risque (strictement sup\'erieur \`a 40,0\textdegree C). 
-          Rien ne doit \^etre affich\'e si le patient n'a pas de fi\`evre.
+          \'Ecrivez un algorithme qui simule le jeu de la fourchette. Ce jeu consiste \`a essayer de d\'ecouvrir
+          un nombre quelconque compris entre 0 et 100 inclus, tir\'e au sort par l'ordinateur (la primitive
+          \verb@hasard(n : entier)@ retourne un entier entre 0 inclus et n exclus). 
+          L'utilisateur a droit \`a huit essais maximum.
+          \`A chaque essai, l'algorithme devra afficher un message indicatif \guillemotleft  nombre donn\'e trop petit \guillemotright 
+          ou \guillemotleft  nombre donn\'e trop grand \guillemotright . En conclusion, soit \guillemotleft  bravo, vous avez trouv\'e en [nombre]
+          essai(s) \guillemotright  soit \guillemotleft  d\'esol\'e, le nombre \'etait [valeur] \guillemotright .
         
             \par
         \'Ecrivez le code java correspondant.
             \par
         
-			
-		\subparagraph{Taxes communales} 
-		
-					\textcolor{white}{.} \par
-				
-          Dans ma commune, les taxes communales des enl\`evements des immondices s'\'el\`event \`a
-          
-					\begin{itemize}
-				
-			\item 80€ pour une personne isol\'ee ;
-			\item 135€ pour une famille de 2 ou 3 personnes ;
-			\item 175€ pour une famille de 4 personnes ou plus.
-					\end{itemize}
-				
-          \'Ecrivez un module qui lit le nombre de personnes composant la famille et qui affiche le prix de la taxe \`a payer.
-        
-            \par
-        \'Ecrivez le code java correspondant.
-            \par
-        
-			
-		\subparagraph{Au cin\'ema} 
-		
-					\textcolor{white}{.} \par
-				
-          \`A Bruxelles, lors de chaque projection cin\'ematographique, une taxe de 0,5€ est
-          pr\'elev\'ee sur le prix du billet de chaque spectateur.
-          
-					\begin{itemize}
-				
-			\item \'Ecrivez un module qui lit le nombre de spectateurs et qui affiche le prix de la taxe \`a payer.
-			\item \'Ecrivez le code java correspondant.
-			\item 
-              Si le film projet\'e est un documentaire, aucune taxe n'est pr\'elev\'ee. 
-              \'Ecrivez un module qui lit le nombre de spectateurs et un bool\'een (\`a vrai
-              si le film est un documentaire et faux sinon) et qui affiche le prix de la taxe
-              \`a payer.
-            
-			\item \'Ecrivez le code java correspondant.
-					\end{itemize}
-				
+        Aide en Java : un petit tour dans l'API de la classe Random devrait vous aider \`a trouver l'\'equivalent du
+        \verb@hasard(n : entier)@ en Java
+    
             \par
         
 				\end{document}

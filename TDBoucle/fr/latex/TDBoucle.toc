@@ -12,18 +12,18 @@
 \contentsline {subparagraph}{Afficher n nombres pairs}{9}{section*.11}
 \contentsline {subparagraph}{Somme de nombres}{9}{section*.12}
 \contentsline {subsection}{\numberline {1.4}Quel type de boucle choisir ?}{10}{subsection.1.4}
-\contentsline {subsection}{\numberline {1.5}suite de nombres}{10}{subsection.1.5}
-\contentsline {subsection}{\numberline {1.6}3 pas en avant, 2 pas en arri\`ere}{12}{subsection.1.6}
-\contentsline {section}{\numberline {2}selon que}{12}{section.2}
-\contentsline {subsection}{\numberline {2.1}selon que (version avec listes de valeurs)}{13}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}selon que (version avec conditions)}{15}{subsection.2.2}
-\contentsline {section}{\numberline {3}Exercices}{17}{section.3}
-\contentsline {subsection}{\numberline {3.1}Compr\'ehension d'algorithme}{17}{subsection.3.1}
-\contentsline {subparagraph}{Compr\'ehension}{17}{section*.14}
-\contentsline {subsection}{\numberline {3.2}Compr\'ehension de codes Java}{19}{subsection.3.2}
-\contentsline {subparagraph}{Compr\'ehension}{19}{section*.15}
-\contentsline {subsection}{\numberline {3.3}\`A vous de jouer...}{20}{subsection.3.3}
-\contentsline {subparagraph}{Stationnement alternatif}{21}{section*.16}
-\contentsline {subparagraph}{La fi\`evre monte}{21}{section*.17}
-\contentsline {subparagraph}{Taxes communales}{22}{section*.18}
-\contentsline {subparagraph}{Au cin\'ema}{22}{section*.19}
+\contentsline {subsection}{\numberline {1.5}Sentinelle}{10}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}suite de nombres}{11}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}3 pas en avant, 2 pas en arri\`ere}{12}{subsection.1.7}
+\contentsline {section}{\numberline {2}Exercices}{13}{section.2}
+\contentsline {subsection}{\numberline {2.1}Compr\'ehension d'algorithme}{13}{subsection.2.1}
+\contentsline {subparagraph}{Compr\'ehension}{13}{section*.14}
+\contentsline {subsection}{\numberline {2.2}Compr\'ehension de codes Java}{15}{subsection.2.2}
+\contentsline {subparagraph}{Instructions r\'ep\'etitives}{15}{section*.15}
+\contentsline {subparagraph}{Activit\'e 'remplir les blancs'}{16}{section*.16}
+\contentsline {subparagraph}{Exp\'erience}{16}{section*.17}
+\contentsline {subparagraph}{Compr\'ehension}{16}{section*.18}
+\contentsline {subparagraph}{Exercice Tant que}{17}{section*.19}
+\contentsline {subparagraph}{Exercice Pour}{17}{section*.20}
+\contentsline {subsection}{\numberline {2.3}\`A vous de jouer...}{17}{subsection.2.3}
+\contentsline {subparagraph}{Jeu de la fourchette}{19}{section*.21}

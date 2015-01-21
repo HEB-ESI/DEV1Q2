@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  21 JAN 2015 22:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  21 JAN 2015 23:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -798,7 +798,7 @@ LaTeX Info: Redefining \nameref on input line 143.
 \openout5 = `TDBoucle.out'.
 
 
-<../../../_templates/java/icons/logo-esi.jpg, id=20, 45.16875pt x 85.31876pt>
+<../../../_templates/java/icons/logo-esi.jpg, id=48, 45.16875pt x 85.31876pt>
 File: ../../../_templates/java/icons/logo-esi.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/logo-esi.jpg>
@@ -842,7 +842,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 152.
 
-<../../../_templates/java/icons/cc-gris.jpg, id=21, 88.33pt x 31.11626pt>
+<../../../_templates/java/icons/cc-gris.jpg, id=49, 88.33pt x 31.11626pt>
 File: ../../../_templates/java/icons/cc-gris.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/cc-gris.jpg>
@@ -889,7 +889,7 @@ cc-gris.jpg>]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleTq.jpg, id=37, 298.11
+</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleTq.jpg, id=76, 298.11
 375pt x 331.2375pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleTq.jpg Graphic f
 ile (type jpg)
@@ -926,7 +926,7 @@ que
  []
 
 
-</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleFaire.jpg, id=54, 251
+</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleFaire.jpg, id=93, 251
 .94125pt x 331.2375pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleFaire.jpg Graphi
 c file (type jpg)
@@ -969,8 +969,8 @@ pas
  []
 
 [6]
-</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/bouclePour.jpg, id=75, 398.
-48875pt x 598.235pt>
+</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/bouclePour.jpg, id=114, 398
+.48875pt x 598.235pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/bouclePour.jpg Graphic
  file (type jpg)
 
@@ -1022,8 +1022,8 @@ la somme se construit petit à petit. Elle vaut 0 au départ[]
  []
 
 [9]
-</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleChoixType.jpg, id=95,
- 582.175pt x 452.69125pt>
+</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleChoixType.jpg, id=134
+, 582.175pt x 452.69125pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleChoixType.jpg Gr
 aphic file (type jpg)
 
@@ -1034,80 +1034,37 @@ cleChoixType.jpg used on input line 559.
 
 [10 </home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleChoixType.jpg>]
 [11]
-Overfull \hbox (18.86897pt too wide) in paragraph at lines 658--658
+Overfull \hbox (18.86897pt too wide) in paragraph at lines 666--666
 []      \T1/lmtt/m/n/10.95 nb $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 nb + d
 irection // faire un pas dans la bonne direction[] 
  []
 
 
-Overfull \hbox (53.90881pt too wide) in paragraph at lines 658--658
+Overfull \hbox (53.90881pt too wide) in paragraph at lines 666--666
 []      \T1/lmtt/m/n/10.95 si nbPasRestants = 0 alors // il est temps de change
 r de direction[] 
  []
 
-[12]
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 684--684
-[]      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
- dans liste_1[] 
- []
-
-
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 684--684
-[]      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
- dans liste_2[] 
- []
-
-
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 684--684
-[]      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
- dans liste_n[] 
- []
-
-[13]
-Overfull \hbox (134.39108pt too wide) in paragraph at lines 733--733
-[]\T1/lmtt/m/n/10.95 // Lit un nombre entre 1 et 7 et affiche en clair le jour 
-de la semaine correspondant.[] 
- []
-
-
-Overfull \hbox (2.17021pt too wide) in paragraph at lines 753--753
-[]      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
- val1[] 
- []
-
-
-Overfull \hbox (94.14995pt too wide) in paragraph at lines 753--753
-[]      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
- val2 ou val3 ou val4[] 
- []
-
-
-Overfull \hbox (2.17021pt too wide) in paragraph at lines 753--753
-[]      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
- valN[] 
- []
-
-[14] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[12] [13] [14] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [15]
-Overfull \hbox (180.38095pt too wide) in paragraph at lines 858--858
-[]\T1/lmtt/m/n/10.95 // Lit un nombre et affiche si ce nombre est strictement p
-ositif , strictement négatif ou nul.[] 
- []
+)
+[15]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 834.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 834.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 889.
 
-[16] [17] [18] [19] [20]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 1072
-.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1159.
+) [16] [17] [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1031.
+ [19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1031.
 
-[22]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1159.
- (./TDBoucle.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1159.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1159.
+(./TDBoucle.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1031.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1031.
 
 
 
@@ -1116,35 +1073,37 @@ Package rerunfilecheck Warning: File `TDBoucle.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `TDBoucle.out':
-(rerunfilecheck)             Before: 7D8630CD30A6C4900CC878171211BF84;240
-(rerunfilecheck)             After:  C1F4F888C449B89E045948096A4C5687;992.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1159.
+(rerunfilecheck)             Before: 63CA5B1A68C8458652D5AA517184E092;759
+(rerunfilecheck)             After:  4B0A9305ABC33AE89F767ACDF1FBE829;822.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1031.
  ) 
 Here is how much of TeX's memory you used:
- 13720 strings out of 493304
- 197256 string characters out of 6139871
- 325819 words of memory out of 5000000
- 16724 multiletter control sequences out of 15000+600000
- 73370 words of font info for 50 fonts, out of 8000000 for 9000
+ 13646 strings out of 493304
+ 196135 string characters out of 6139871
+ 317435 words of memory out of 5000000
+ 16719 multiletter control sequences out of 15000+600000
+ 80562 words of font info for 56 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,12n,43p,336b,2017s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,43p,336b,2015s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
-vips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on TDBoucle.pdf (22 pages, 458327 bytes).
+vips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/shar
+e/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/latxfont/lcirclew.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcs
+c10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on TDBoucle.pdf (19 pages, 451932 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 355 compressed objects within 4 object streams
- 197 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 350 PDF objects out of 1000 (max. 8388607)
+ 301 compressed objects within 4 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 119 words of extra memory for PDF output out of 10000 (max. 10000000)
 

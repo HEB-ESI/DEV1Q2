@@ -5,11 +5,11 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <meta http-equiv="Content-Style-Type" content="text/css" />
-      <meta name="description" content="TD Boucles: 3 pas en avant, 2 pas en arrière. " />
+      <meta name="description" content="TD Boucles: suite de nombres. " />
       <meta name="copyright" content="" />
       <meta name="author" content="" />
       <meta name="keywords" content="TD Boucles, eLML" />
-      <title>1.1.6. 3 pas en avant, 2 pas en arrière</title>
+      <title>1.1.6. suite de nombres</title>
       <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
          <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
@@ -21,69 +21,74 @@
                      <li class="navigationLink"><a href="Boucles_learningObject2.html">1.1.2. faire - jusqu’à ce que</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject3.html">1.1.3. pour</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject4.html">1.1.4. Quel type de boucle choisir ?</a></li>
-                     <li class="navigationLink"><a href="Boucles_learningObject5.html">1.1.5. suite de nombres</a></li>
-                     <li class="navigationActual"><strong>1.1.6. 3 pas en avant, 2 pas en arrière</strong></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject5.html">1.1.5. Sentinelle</a></li>
+                     <li class="navigationActual"><strong>1.1.6. suite de nombres</strong></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject7.html">1.1.7. 3 pas en avant, 2 pas en arrière</a></li>
                   </ul>
                </li>
-               <li class="navigationLink"><a href="unit_SelonQue.html">1.2. selon que</a></li>
-               <li class="navigationLink"><a href="unit_Exercices.html">1.3. Exercices</a></li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.2. Exercices</a></li>
             </ul>
          </li>
       </ul>
-      <div class="navigation_arrows"><a href="Boucles_learningObject5.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_SelonQue.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Boucles_learningObject6.html">1.1.6. 3 pas en avant, 2 pas en arrière</h1>
-      <div id="d8e358.html" class="clarify">
-         <p class="paragraph" id="d8e359">
-            		    Dans certains cas, il n’est pas possible de déduire directement le nombre suivant
-            en connaissant juste le nombre précédent. 
-            		    Prenons un exemple un peu plus compliqué pour l’illustrer.
-            		    « <i>Écrire l’algorithme qui affiche les n premiers termes de la suite : 1, 2, 3, 4, 3,
-               2, 3, 4, 5, 4, 3. . </i>. »
+      <div class="navigation_arrows"><a href="Boucles_learningObject5.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject7.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Boucles_learningObject6.html">1.1.6. suite de nombres</h1>
+      <div id="d8e336.html" class="clarify">
+         <p class="paragraph" id="d8e337">
+            		    Un exemple simple pourrait être celui-ci : 
+            		    « <i>Écrire l’algorithme qui affiche les n premiers
+               termes de la suite : 2, 4, 6. . . </i>»
             
          </p>
-         <p class="paragraph" id="d8e364">
-            Si on vient d’écrire, disons un 3, impossible sans information supplémentaire, de
-            connaitre
-            le nombre suivant. Il faudrait savoir si on est en phase d’avancement ou de recul
-            et combien
-            de pas il reste à faire dans cette direction.
+         <p class="paragraph" id="d8e342">
+            Puisqu’on doit écrire plusieurs nombres et qu’on sait exactement combien, 
+            on se tournera tout naturellement vers une boucle <code>pour</code>.
             
          </p>
-         <p class="paragraph" id="d8e366">
-            Ajoutons des variables pour retenir l’<code>état</code> où on est.
+         <p class="paragraph" id="d8e347">
+            Le cas le plus simple est lorsque le nombre à afficher à l’étape <code>i</code> 
+            peut être calculé en fonction de <code>i</code> seulement. L’algorithme est alors
             
          </p><pre>
-module suite3Avant2Arrière(n↓ : entier)
-    nb, nbPasRestants, direction, i : entiers
-    nb ← 1
-    nbPasRestants ← 3 // 3 pas
-    direction ← 1 // en avant
+pour i de 1 à n faire
+    afficher f (i)
+fin pour
+      </pre><p class="paragraph" id="d8e357">Par exemple, pour afficher la suite des n premiers nombres pairs</p><pre>
+module nombrePair (n↓ : entier)
+    i : entier
     pour i de 1 à n faire
-      afficher nb
-      nb ← nb + direction // faire un pas dans la bonne direction
-      nbPasRestants ← nbPasRestants - 1
-      si nbPasRestants = 0 alors // il est temps de changer de direction
-        direction ← -direction
-        si direction = 1 alors
-          nbPasRestants ← 3
-        sinon
-          nbPasRestants ← 2
-        fin si
-      fin si
+      afficher 2 * i
     fin pour
 fin module
-      </pre><p class="paragraph" id="d8e373">
-            On obtient un algorithme plus long mais qui respecte toujours le schéma vu.
+      </pre><p class="paragraph" id="d8e361">
+            Parfois, il est difficile (voire impossible) de trouver f (i). On suivra alors une
+            autre approche
+            qui revient à calculer un nombre à afficher à partir du nombre précédemment affiché
+            (ou, plus
+            exactement, de calculer le suivant à partir du nombre qu’on vient d’afficher). La
+            structure
+            générale est alors
             
-         </p>
-         <p class="paragraph" id="d8e375">
-            Un conseil : essayez de respecter ce schéma et vous obtiendrez plus facilement un
-            algorithme
-            correct et lisible, également dans les cas particuliers.
+         </p><pre>
+nb ← {1re valeur à afficher}
+pour i de 1 à n faire
+    afficher nb
+    nb ← {calculer ici le nb suivant}
+fin pour
+      </pre><p class="paragraph" id="d8e365">
+            Dans l’exemple de la suite paire, le 1er nombre à afficher est 
+            2 et le nombre suivant se calcule en ajoutant 2 au nombre courant.
             
-         </p>
-      </div>
+         </p><pre>
+module suite1 (n↓ : entier)
+    nb, i : entiers
+    nb ← 2
+    pour i de 1 à n faire
+      afficher nb
+      nb ← nb + 2
+    fin pour
+fin module
+      </pre></div>
       <hr />
-      <div class="navigation_arrows"><a href="Boucles_learningObject5.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_SelonQue.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <div class="navigation_arrows"><a href="Boucles_learningObject5.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject7.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
       <p class="footer"> Update: 21.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>
