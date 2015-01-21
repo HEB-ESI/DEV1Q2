@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  20 JAN 2015 01:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  21 JAN 2015 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -898,13 +898,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../../../_templates/java/icons/logo-esi.jpg> <../../../_templates/java/icons/
 cc-gris.jpg>]
-Overfull \hbox (31.70534pt too wide) in paragraph at lines 201--202
+Overfull \hbox (31.70534pt too wide) in paragraph at lines 197--198
 []\T1/lmr/m/n/10.95 une cote sur le bul-le-tin (pas de demi-point au-to-risé)? 
 []$[]$[] 
  []
 
 
-Overfull \hbox (31.70534pt too wide) in paragraph at lines 216--217
+Overfull \hbox (31.70534pt too wide) in paragraph at lines 212--213
 []\T1/lmr/m/n/10.95 une cote sur le bul-le-tin (pas de demi-point au-to-risé)? 
 []$[]$[] 
  []
@@ -914,42 +914,42 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) [2
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 275.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 271.
 
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 296.
+(Font)              <9> on input line 292.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 296.
+(Font)              <5> on input line 292.
 
-Overfull \hbox (17.53273pt too wide) in paragraph at lines 312--314
+Overfull \hbox (17.53273pt too wide) in paragraph at lines 308--310
 \T1/lmr/m/n/10.95 ([][]$\T1/lmtt/m/n/9 www . heb . be / esi / InitSeq / fr / . 
 . / . . / TDSeq / fr / html / VariablesEtTypes _ learningObject3 .
  []
 
 
-Overfull \hbox (17.53273pt too wide) in paragraph at lines 331--333
+Overfull \hbox (17.53273pt too wide) in paragraph at lines 327--329
 \T1/lmr/m/n/10.95 ([][]$\T1/lmtt/m/n/9 www . heb . be / esi / InitSeq / fr / . 
 . / . . / TDSeq / fr / html / VariablesEtTypes _ learningObject3 .
  []
 
 [3]
-Overfull \hbox (17.53273pt too wide) in paragraph at lines 347--349
+Overfull \hbox (17.53273pt too wide) in paragraph at lines 343--345
 \T1/lmr/m/n/10.95 ([][]$\T1/lmtt/m/n/9 www . heb . be / esi / InitSeq / fr / . 
 . / . . / TDSeq / fr / html / VariablesEtTypes _ learningObject3 .
  []
 
 
-Overfull \hbox (17.53273pt too wide) in paragraph at lines 362--364
+Overfull \hbox (17.53273pt too wide) in paragraph at lines 358--360
 \T1/lmr/m/n/10.95 ([][]$\T1/lmtt/m/n/9 www . heb . be / esi / InitSeq / fr / . 
 . / . . / TDSeq / fr / html / VariablesEtTypes _ learningObject3 .
  []
 
 [4]
-Overfull \hbox (47.187pt too wide) in paragraph at lines 420--423
+Overfull \hbox (47.187pt too wide) in paragraph at lines 416--419
 \T1/lmr/m/n/10.95 tion, ré-vi-sez ici ([][]$\T1/lmtt/m/n/9 www . heb . be / esi
  / InitSeq / fr / . . / . . / TDSeq / fr / html / OpérateursEtExpressions _
  []
@@ -960,42 +960,42 @@ File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-Overfull \hbox (17.0662pt too wide) in paragraph at lines 491--493
+Overfull \hbox (17.0662pt too wide) in paragraph at lines 487--489
 \T1/lmr/m/n/10.95 ([][]$\T1/lmtt/m/n/9 www . heb . be / esi / InitSeq / fr / . 
 . / . . / TDSeq / fr / html / Affectation _ learningObject1 . html$[][]\T1/lmr/
 m/n/10.95 ) 
  []
 
 [6]
-Overfull \hbox (17.0662pt too wide) in paragraph at lines 564--566
+Overfull \hbox (17.0662pt too wide) in paragraph at lines 560--562
 \T1/lmr/m/n/10.95 ([][]$\T1/lmtt/m/n/9 www . heb . be / esi / InitSeq / fr / . 
 . / . . / TDSeq / fr / html / Affectation _ learningObject2 . html$[][]\T1/lmr/
 m/n/10.95 ) 
  []
 
 [7]
-Overfull \hbox (17.0662pt too wide) in paragraph at lines 595--597
+Overfull \hbox (17.0662pt too wide) in paragraph at lines 591--593
 \T1/lmr/m/n/10.95 ([][]$\T1/lmtt/m/n/9 www . heb . be / esi / InitSeq / fr / . 
 . / . . / TDSeq / fr / html / Affectation _ learningObject3 . html$[][]\T1/lmr/
 m/n/10.95 ) 
  []
 
 [8]
-Overfull \hbox (17.0662pt too wide) in paragraph at lines 671--673
+Overfull \hbox (17.0662pt too wide) in paragraph at lines 667--669
 \T1/lmr/m/n/10.95 ([][]$\T1/lmtt/m/n/9 www . heb . be / esi / InitSeq / fr / . 
 . / . . / TDSeq / fr / html / Affectation _ learningObject4 . html$[][]\T1/lmr/
 m/n/10.95 ) 
  []
 
 [9]
-Overfull \hbox (17.0662pt too wide) in paragraph at lines 725--727
+Overfull \hbox (17.0662pt too wide) in paragraph at lines 721--723
 \T1/lmr/m/n/10.95 ([][]$\T1/lmtt/m/n/9 www . heb . be / esi / InitSeq / fr / . 
 . / . . / TDSeq / fr / html / Affectation _ learningObject5 . html$[][]\T1/lmr/
 m/n/10.95 ) 
  []
 
 [10]
-Overfull \hbox (17.0662pt too wide) in paragraph at lines 813--815
+Overfull \hbox (17.0662pt too wide) in paragraph at lines 809--811
 \T1/lmr/m/n/10.95 ([][]$\T1/lmtt/m/n/9 www . heb . be / esi / InitSeq / fr / . 
 . / . . / TDSeq / fr / html / Affectation _ learningObject6 . html$[][]\T1/lmr/
 m/n/10.95 ) 
@@ -1005,22 +1005,22 @@ m/n/10.95 )
 File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
 ) [12]
 [13]
-Overfull \hbox (8.49533pt too wide) in paragraph at lines 937--938
+Overfull \hbox (8.49533pt too wide) in paragraph at lines 933--934
 []\T1/lmr/m/n/10.95 Quelle com-mande per-met de com-pi-ler le fi-chier nommé []
 \T1/lmtt/m/n/10.95 SommeChiffres.java\T1/lmr/m/n/10.95 ? 
  []
 
 [14] [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1075.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1071.
  [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1075.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1071.
  (./InitSeq.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1075.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1075.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1071.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1071.
 
 Package rerunfilecheck Info: File `InitSeq.out' has not changed.
 (rerunfilecheck)             Checksum: 23355547FF903AAC463527DE6A904F03;1364.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1075.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1071.
  ) 
 Here is how much of TeX's memory you used:
  13839 strings out of 493304
@@ -1045,7 +1045,7 @@ share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/zapfding/uzdr.pfb>
-Output written on InitSeq.pdf (16 pages, 389522 bytes).
+Output written on InitSeq.pdf (16 pages, 389521 bytes).
 PDF statistics:
  600 PDF objects out of 1000 (max. 8388607)
  556 compressed objects within 6 object streams

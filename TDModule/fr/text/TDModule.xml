@@ -173,7 +173,7 @@ fin module
 		<clarify>
 		  <paragraph>Son en-tête est du type suivant :</paragraph>
 		   <paragraph cssClass="code">
-module exemple (var1↓ : type1, var2↓ : type2, . . ., varN↓ : typeN) -> typeRes
+module exemple (var1↓ : type1, var2↓ : type2, . . ., varN↓ : typeN) → typeRes
       </paragraph>
       <paragraph>
         Il se distingue du module précédemment étudié par la flèche de renvoi à droite,
@@ -209,7 +209,7 @@ module exemple (var1↓ : type1, var2↓ : type2, . . ., varN↓ : typeN) -> typ
       <look>
          <paragraph>Par exemple, ceci donnerait pour le module max2 : </paragraph>
       <paragraph cssClass="code">
-module max2 (a↓, b↓ : réels)-> réel
+module max2 (a↓, b↓ : réels)→ réel
     si a > b alors
       max ← a
     sinon
@@ -505,7 +505,7 @@ import java.util.Scanner;
 		    <list listStyle="unordered">
           <item>la documentation accompagne le code</item>
           <item>un outil extrait cette documentation pour en faire un document facile à lire</item>
-          <item>toute la documentation suit la même structure, le même style -> plus facile à lire</item>
+          <item>toute la documentation suit la même structure, le même style → plus facile à lire</item>
         </list>
 		  </paragraph>
 		  
@@ -628,7 +628,7 @@ public static int absolu ( int nb ) {
       </paragraph>
       
       <paragraph title="Une bonne documentation">
-        Une bonne javadoc décrit le quoi mais jamais le comment -> ne jamais parler de ce qui est privé.
+        Une bonne javadoc décrit le quoi mais jamais le comment → ne jamais parler de ce qui est privé.
       </paragraph>
       <paragraph>
         Mauvais exemples :
@@ -1012,35 +1012,4 @@ fin module
       </act>
     </learningObject>
   </unit>
-	
-	<!--metadata>
-		<organisation level="1ère année" module="Laboratoires Java">
-			<creationPosition><posNumber>1</posNumber></creationPosition>
-		</organisation>
-		<prerequisites><preReqItem label="none"/></prerequisites>
-		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
-		<technical>
-			<technicalRequirement>
-				<type>Browser</type>
-				<name>any</name>
-				<minimumVersion>unknown</minimumVersion>
-			</technicalRequirement>
-		</technical>
-		<lessonInfo>
-			<language language="fr" derived="no"/>
-			<lifecycle>
-				<version>2013 - 2014</version>
-				<contribute>
-<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
-				</contribute>
-			</lifecycle>
-			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
-		</lessonInfo>
-		<rights>
-			<cost>no</cost>
-			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
-			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
-		</rights>
-	</metadata-->
-
 </lesson>

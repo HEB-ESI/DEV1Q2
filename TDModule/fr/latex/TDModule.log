@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  21 JAN 2015 01:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  21 JAN 2015 22:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -891,10 +891,11 @@ File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 ) [3
 
 ] [4] [5]
-Overfull \hbox (87.58003pt too wide) in paragraph at lines 333--333
+Overfull \hbox (87.0326pt too wide) in paragraph at lines 333--333
 []\T1/lmtt/m/n/10.95 module exemple (var1$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n/1
 0.95 : type1, var2$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n/10.95 : type2, . . ., va
-rN$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n/10.95 : typeN) -> typeRes[] 
+rN$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n/10.95 : typeN) $\OMS/lmsy/m/n/10.95 !$ \
+T1/lmtt/m/n/10.95 typeRes[] 
  []
 
 [6]
@@ -931,6 +932,59 @@ e une erreur.[]
  []
 
 [9] [10]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.632 ...me structure, le m\^eme style \rightarrow
+                                                   plus facile \`a lire
+? 
+
+LaTeX Warning: Command \` invalid in math mode on input line 632.
+
+
+! LaTeX Error: Command \end{itemize} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.633 					\end{itemize}
+                        
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.633 					\end{itemize}
+                        
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.633 					\end{itemize}
+                        
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.633 					\end{itemize}
+                        
+? 
+
+Overfull \hbox (14.37184pt too wide) in paragraph at lines 632--634
+[]\T1/lmr/m/n/10.95 toute la do-cu-men-ta-tion suit la même struc-ture, le même
+ style $\OMS/lmsy/m/n/10.95 ! \OML/lmm/m/it/10.95 plusfacile\OT1/lmr/m/n/10.95 
+à\OML/lmm/m/it/10.95 lire$ 
+ []
+
+
 </home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/Mathabs.png, id=245, 843.15
 pt x 316.18124pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/Mathabs.png Graphic fi
@@ -947,8 +1001,8 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 700.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [12]
-</home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/javadocBissextile.png, id=2
-96, 390.45876pt x 266.9975pt>
+</home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/javadocBissextile.png, id=3
+02, 390.45876pt x 266.9975pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/javadocBissextile.png 
 Graphic file (type png)
 
@@ -959,8 +1013,32 @@ adocBissextile.png used on input line 768.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-34.def
 File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
-) [13 </home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/javadocBissextile.png
->]
+)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.799 ...e quoi mais jamais le comment \rightarrow
+                                                   ne jamais parler de ce qu...
+
+? 
+
+LaTeX Warning: Command \' invalid in math mode on input line 799.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.800 
+      
+? 
+
+Overfull \hbox (77.66115pt too wide) in paragraph at lines 799--800
+[]\T1/lmr/m/n/10.95 Une bonne ja-va-doc dé-crit le quoi mais ja-mais le com-men
+t $\OMS/lmsy/m/n/10.95 ! \OML/lmm/m/it/10.95 nejamaisparlerdecequiestpriv\OT1/l
+mr/m/n/10.95 é\OML/lmm/m/it/10.95 :$ 
+ []
+
+[13 </home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/javadocBissextile.png>]
+
 Overfull \hbox (13.09023pt too wide) in paragraph at lines 828--830
 []\T1/lmr/m/n/10.95 Pour en sa-voir plus : http ://www.oracle.com/technetwork/a
 rticles/java/index-
@@ -974,7 +1052,7 @@ Overfull \hbox (4.57492pt too wide) in paragraph at lines 839--840
 [14] [15] [16] [17] [18
 
 ]
-</home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/sin.png, id=466, 311.1625pt
+</home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/sin.png, id=468, 311.1625pt
  x 225.84375pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/sin.png Graphic file (
 type png)
@@ -998,30 +1076,32 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1171.
 Here is how much of TeX's memory you used:
  13859 strings out of 493304
  199428 string characters out of 6139871
- 318352 words of memory out of 5000000
+ 323352 words of memory out of 5000000
  16754 multiletter control sequences out of 15000+600000
  80930 words of font info for 57 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,43p,336b,1963s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/l
-mtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on TDModule.pdf (20 pages, 493171 bytes).
+ips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/te
+xmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ma
+thsy.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lc
+ircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/
+lcirclew.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmb
+x9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
+y9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on TDModule.pdf (20 pages, 499877 bytes).
 PDF statistics:
- 614 PDF objects out of 1000 (max. 8388607)
- 559 compressed objects within 6 object streams
+ 622 PDF objects out of 1000 (max. 8388607)
+ 566 compressed objects within 6 object streams
  300 named destinations out of 1000 (max. 500000)
  199 words of extra memory for PDF output out of 10000 (max. 10000000)
 
