@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  18 JAN 2015 23:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  21 JAN 2015 01:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -798,7 +798,7 @@ LaTeX Info: Redefining \nameref on input line 143.
 \openout5 = `TDModule.out'.
 
 
-<../../../_templates/java/icons/logo-esi.jpg, id=72, 45.16875pt x 85.31876pt>
+<../../../_templates/java/icons/logo-esi.jpg, id=88, 45.16875pt x 85.31876pt>
 File: ../../../_templates/java/icons/logo-esi.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/logo-esi.jpg>
@@ -842,7 +842,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 152.
 
-<../../../_templates/java/icons/cc-gris.jpg, id=73, 88.33pt x 31.11626pt>
+<../../../_templates/java/icons/cc-gris.jpg, id=89, 88.33pt x 31.11626pt>
 File: ../../../_templates/java/icons/cc-gris.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/cc-gris.jpg>
@@ -885,106 +885,122 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <../../../_templates/java/icons/logo-esi.jpg> <../../../_templates/java/icons/
-cc-gris.jpg>]
+cc-gris.jpg>] [2]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
-) [2
+) [3
 
-] [3]
-Overfull \hbox (87.58003pt too wide) in paragraph at lines 321--321
+] [4] [5]
+Overfull \hbox (87.58003pt too wide) in paragraph at lines 333--333
 []\T1/lmtt/m/n/10.95 module exemple (var1$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n/1
 0.95 : type1, var2$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n/10.95 : type2, . . ., va
 rN$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n/10.95 : typeN) -> typeRes[] 
  []
 
-[4] [5]
-Overfull \hbox (36.66261pt too wide) in paragraph at lines 388--388
+[6]
+Overfull \hbox (36.66261pt too wide) in paragraph at lines 400--400
 []\T1/lmtt/m/n/10.95 public static <typeRetour> nomMéthode ([paramètre, paramèt
 re, ...]) {[] 
  []
 
 
-</home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/methode.jpg, id=125, 415.55
+</home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/methode.jpg, id=149, 415.55
 25pt x 89.33376pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/methode.jpg Graphic fi
 le (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/methode.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/met
-hode.jpg used on input line 405.
+hode.jpg used on input line 417.
 (pdftex.def)             Requested size: 288.01237pt x 61.9157pt.
- [6 </home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/methode.jpg>]
+ [7]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 455.
+(Font)              <9> on input line 467.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 455.
- [7] [8]
-</home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/Mathabs.png, id=201, 843.15
+(Font)              <5> on input line 467.
+ [8 </home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/methode.jpg>]
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+Overfull \hbox (48.16008pt too wide) in paragraph at lines 549--549
+[]\T1/lmtt/m/n/10.95 // Lit un nombre, l'affiche s'il est positif et sinon lanc
+e une erreur.[] 
+ []
+
+[9] [10]
+</home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/Mathabs.png, id=245, 843.15
 pt x 316.18124pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/Mathabs.png Graphic fi
 le (type png)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/Mathabs.png>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/Mat
-habs.png used on input line 583.
+habs.png used on input line 643.
 (pdftex.def)             Requested size: 288.0052pt x 108.00194pt.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 640.
+ [11 </home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/Mathabs.png>]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 700.
 
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [9 </home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/Mathabs.png>]
+) [12]
 </home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/javadocBissextile.png, id=2
-16, 390.45876pt x 266.9975pt>
+96, 390.45876pt x 266.9975pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/javadocBissextile.png 
 Graphic file (type png)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/javadocBissextile.png>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/jav
-adocBissextile.png used on input line 708.
+adocBissextile.png used on input line 768.
 (pdftex.def)             Requested size: 288.01147pt x 196.94356pt.
 
-[10] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-34.def
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-34.def
 File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
-)
-Overfull \hbox (13.09023pt too wide) in paragraph at lines 768--770
+) [13 </home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/javadocBissextile.png
+>]
+Overfull \hbox (13.09023pt too wide) in paragraph at lines 828--830
 []\T1/lmr/m/n/10.95 Pour en sa-voir plus : http ://www.oracle.com/technetwork/a
 rticles/java/index-
  []
 
-[11 </home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/javadocBissextile.png>]
 
-Overfull \hbox (4.57492pt too wide) in paragraph at lines 779--780
+Overfull \hbox (4.57492pt too wide) in paragraph at lines 839--840
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[12] [13] [14]
-Overfull \hbox (155.10411pt too wide) in paragraph at lines 916--918
-[]\T1/lmr/m/n/10.95 ***********************************A FAIRE*****************
-**********************************
- []
+[14] [15] [16] [17] [18
 
-[15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1022.
- [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1022.
+]
+</home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/sin.png, id=466, 311.1625pt
+ x 225.84375pt>
+File: /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/sin.png Graphic file (
+type png)
+
+<use /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/sin.png>
+Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/sin
+.png used on input line 1158.
+(pdftex.def)             Requested size: 288.00598pt x 209.03658pt.
+ [19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1171.
+ [20 </home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/sin.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1171.
  (./TDModule.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1022.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1022.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1171.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1171.
 
 Package rerunfilecheck Info: File `TDModule.out' has not changed.
-(rerunfilecheck)             Checksum: 852959E6756199F8114117BF70CF3731;1157.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1022.
+(rerunfilecheck)             Checksum: A115A30338E8E3BDC21FD5FA66C8788E;1406.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1171.
  ) 
 Here is how much of TeX's memory you used:
- 13563 strings out of 493304
- 195760 string characters out of 6139871
- 327174 words of memory out of 5000000
- 16498 multiletter control sequences out of 15000+600000
- 76667 words of font info for 56 fonts, out of 8000000 for 9000
+ 13859 strings out of 493304
+ 199428 string characters out of 6139871
+ 318352 words of memory out of 5000000
+ 16754 multiletter control sequences out of 15000+600000
+ 80930 words of font info for 57 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,43p,336b,1963s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
@@ -996,15 +1012,16 @@ ic/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/t
-exmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on TDModule.pdf (16 pages, 466165 bytes).
+</usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on TDModule.pdf (20 pages, 493171 bytes).
 PDF statistics:
- 531 PDF objects out of 1000 (max. 8388607)
- 485 compressed objects within 5 object streams
- 264 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 614 PDF objects out of 1000 (max. 8388607)
+ 559 compressed objects within 6 object streams
+ 300 named destinations out of 1000 (max. 500000)
+ 199 words of extra memory for PDF output out of 10000 (max. 10000000)
 

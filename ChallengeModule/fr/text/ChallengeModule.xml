@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="ChallengeModule" title="Challenge : les modules">
+	
+	<entry>
+		<paragraph>
+			Avez-vous compris la découpe en modules ? Voyons ça en relevant le défi suivant :
+		</paragraph>
+    <paragraph title="Afficher le titre">
+      Écrivez un module qui reçoit un nomen paramètre et qui affiche le texte :
+    </paragraph>
+    <paragraph cssClass="code">
+      DEV1 - Entête -  Pas du Zébu - <formatted style="italic">votre nom</formatted>
+    </paragraph>
+    <paragraph title="Longueur du pas du Zébu">
+      La longueur du pas du Zébu est liée à son poids et au nombre PI par la formule (complètement farfelue) suivante :
+      <formatted style="code">pas = √ (poids / |1 − PI|)</formatted>
+      Écrivez un module qui reçoit le poids du Zébu en paramètre et retourne la
+      longueur du pas du Zébu correspondante.
+    </paragraph>
+    <paragraph>Si le poids reçu en paramètre est négatif, vous lancerez une erreur qui arrêtera le programme.</paragraph>
+    
+    <paragraph title="La longueur du pas du Zébu au fil du temps">
+      L’approximation du nombre PI a évolué au fil des ans.
+      <list listStyle="unordered">
+        <item>À l’époque de Babylone, il était approché par la valeur 3.125</item>
+        <item>alors qu’en Égypte, il valait 3.160.</item>
+        <item>Archimède, quant à lui, lui donnait la valeur 3.14185</item>
+        <item>et Fibonacci 3.1418.</item>
+      </list>
+      Écrivez un module qui permette à  l’utilisateur de choisir laquelle de 4 approximations de PI utiliser.
+      Votre module affichera les différentes valeurs de PI et l’utilisateur choisira celle qui lui convient.
+      L’utilisateur fera ce choix en entrant le numéro d’ordre dans la liste affichée des différentes valeurs de PI.
+    </paragraph>
+    <paragraph>
+      Modifiez votre module qui calcule le pas du zébu en lui passant un paramètre supplémentaire : 
+      l'approximation de la valeur de PI à utiliser.
+    </paragraph>
+		<paragraph>
+          Écrivez le code java correspondant avec la documentation javadoc pour chaque méthode. 
+          N'oubliez pas d'écrire la méthode <formatted style="code">main</formatted> qui fera appel à votre méthode.
+        </paragraph>
+		<paragraph>
+        Aide en Java : la constante PI est définie dans la classe Math et vaut Math.PI
+    </paragraph>
+	</entry>
+
+	<!--metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>1</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2013 - 2014</version>
+				<contribute>
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata-->
+
+</lesson>

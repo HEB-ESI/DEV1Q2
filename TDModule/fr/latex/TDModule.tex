@@ -216,12 +216,25 @@
       
             \par
         
-        Les variables accompagn\'ees d'une fl\`eche vers le bas (↓) sont des \textbf{param\`etres d'entr\'ee} qui
-        re\c coivent des \textbf{donn\'ees} au d\'ebut de l'ex\'ecution du module (donn\'ees qui ne doivent donc plus
-        \^etre lues) tandis que celles accompagn\'ees d'une fl\`eche vers le haut (↑) sont des \textbf{param\`etres
-        de sortie} qui permettent de renvoyer des r\'esultats \`a l'\textbf{issue} de l'ex\'ecution du module
-        (r\'esultats qui ne doivent donc plus \^etre affich\'es).
-      
+					\begin{itemize}
+				
+			\item 
+            Les variables accompagn\'ees d'une fl\`eche vers le bas (↓) sont des \textbf{param\`etres d'entr\'ee} qui
+            re\c coivent des \textbf{donn\'ees} au d\'ebut de l'ex\'ecution du module (donn\'ees qui ne doivent donc plus
+            \^etre lues) 
+          
+			\item 
+            tandis que celles accompagn\'ees d'une fl\`eche vers le haut (↑) sont des \textbf{param\`etres
+            de sortie} qui permettent de renvoyer des r\'esultats \`a l'\textbf{issue} de l'ex\'ecution du module
+            (r\'esultats qui ne doivent donc plus \^etre affich\'es). 
+          
+			\item 
+            Les variables accompagn\'ees d'une double fl\`eche (↓ ↑) sont en\textbf{ entr\'ee-sortie} c-\`a-d qu'elles ont une valeur
+            en arrivant dans le module, que cette valeur sera modifi\'ee dans le module et que la valeur modifi\'ee est en sortie. 
+            La variable de d\'epart aura donc chang\'e de valeur dans le module et ce changement se r\'epercute en dehors.
+          
+					\end{itemize}
+				
             \par
         Par exemple, ceci donnerait pour le module max2 : 
             \par
@@ -293,7 +306,6 @@ fin module
         
 					\begin{itemize}
 				
-			\item un param\`etre peut \^etre \`a la fois param\`etre d'entr\'ee et de sortie ; on le fait suivre alors de la double fl\`eche ↓↑ ;
 			\item si tous les param\`etres sont en entr\'ee, on peut omettre les fl\`eches ;
 			\item 
               la pr\'esence de ces param\`etres n'est pas obligatoire, on peut envisager un module sans
@@ -393,7 +405,7 @@ public static <typeRetour> nomMéthode ([paramètre, paramètre, ...]) {
         
         En Java, le passage de param\`etre se fait uniquement par valeur ; 
         c-\`a-d que la valeur est copi\'ee dans le param\`etre.
-        Pour les typesprimitifs, c'est l\'equivalent d'un param\`etre en entr\'ee.
+        Pour les types primitifs, c'est l'\'equivalent d'un param\`etre en entr\'ee.
       
             \par
         \subsection{Appel de m\'ethode}
@@ -509,7 +521,55 @@ public class Test{
 		}
 		return max;
   }
-}				\end{Java}\subsection{Commenter une m\'ethode}
+}				\end{Java}\section{Erreur ou Exception}
+          Il est parfois utile de pouvoir signaler un probl\`eme dans le code. 
+        
+            \par
+        \subsection{Erreur}
+          Signaler un probl\`eme dans le code : c'est \`a \c ca que sert la primitive \,\verb|erreur|\, en algo.
+          Elle signale que le programme rencontre une erreur \`a cet endroit et, en algo, 
+          \textbf{le programme s'arr\^ete}.
+      
+            \par
+        
+          Par exemple : 
+        
+            \par
+        \begin{verbatim}
+// Lit un nombre, l'affiche s’il est positif et sinon lance une erreur.
+module lirePositif ()
+    nb : réel
+    lire nb
+    si nb < 0 alors
+      erreur "Le nombre n’est pas positif !"
+    fin si
+    
+    afficher nb
+fin module
+        \end{verbatim}\subsection{Lancer une exception}En Java, pour lancer une erreur, on parlera d'une exception, on utilise l'instruction : 
+            \par
+        \begin{Java}
+throw new NomDeLException("message de l'exception");
+        \end{Java}qui \textbf{arr\^ete le programme SI cette exception n'est pas g\'er\'ee ailleurs}.
+            \par
+        
+          Par exemple : 
+        
+            \par
+        \begin{Java}
+import java.util.Scanner;
+    // Lit un nombre, l affiche si il est positif et sinon lance une erreur.
+    public static void main(String [] args){
+      Scanner clavier = new Scanner(System.in);
+      double nb;
+      if (nb< 0) {
+        throw new IllegalArgumentException("Le nombre n est pas positif !");
+      }
+      
+      System.out.println(nb);
+    }
+}
+        \end{Java}\section{Commenter une m\'ethode}\subsection{Commenter une m\'ethode}
 					\begin{itemize}
 				
 			\item 
@@ -789,14 +849,29 @@ public class MaxEntiers {
     }
     
     /**
-    * Lit un nombre entier .
+    * Lit un nombre entier.
     * Le nombre est lu sur l entree standard ( le clavier ).
     * @return le nombre entier lu .
     */
     public static int lireEntier () {
-    Scanner clavier = new Scanner(System.in);
-    System.out. println ("Entrez un nombre entier!");
+      Scanner clavier = new Scanner(System.in);
+      System.out. println ("Entrez un nombre entier!");
       return clavier . nextInt ();
+    }
+    
+    /**
+    * Lit un nombre entier positif.
+    * Le nombre est lu sur l entree standard ( le clavier ).
+    * @return le nombre entier lu .
+    * @throws IllegalArgumentException si le nombre lu est strictement negatif.
+    */
+    public static int lireEntierPositif () {
+      int nbLu = lireEntier();
+      
+      if(nbLu < 0)
+        throw new IllegalArgumentException("Nombre lu negatif");
+      
+      return nbLu;
     }
     
     /**
@@ -807,7 +882,7 @@ public class MaxEntiers {
       int max; // Le max des nombres lus
       int nb1, nb2; // Chacun des nombres lus
       nb1 = lireEntier ();
-      nb2 = lireEntier ();
+      nb2 = lireEntierPositif ();
       max = max(nb1,nb2);
       System.out. println ("max = " + max);
     }
@@ -906,91 +981,138 @@ fin module
 				
             \par
         \subsection{Compr\'ehension de codes Java}
-          Pour ces exercices, nous vous demandons de comprendre des codes Java donn\'es. 
-          
 			
-		\subparagraph{Compr\'ehension} 
+		\subparagraph{Activit\'e "remplir les blancs"} 
+		
+                \textcolor{white}{.} \par
+            \begin{Java}
+public class Outils {
+
+	public static int abs(int nombre) { 
+
+		int absolu = nombre;
+
+		if (nombre < 0) {		
+			absolu = -nombre;
+		} 
+		
+		return absolu;
+		
+	}
+	
+	public static void main (String[] args) {  
+	
+		int valAbsolue;  
+		
+		...  
+		System.out.println (valAbsolue);  
+		
+	}
+
+}				\end{Java}
+                Ajoutez l'instruction qui assigne \`a \textit{valAbsolue} 
+                le r\'esultat de l'appel \`a la m\'ethode \textit{abs} avec comme param\`etre la valeur 
+                \textit{-4}?
+              
+            \par
+         \textcolor{gray}{\underline{\hspace*{10em}}}  \textcolor{gray}{\underline{\hspace*{1em}}}  \textcolor{gray}{\underline{\hspace*{5em}}}  ;
+            \clearpage
+			
+		\subparagraph{Soit le code suivant :  } 
+		
+					\textcolor{white}{.} \par
+				\begin{Java}
+public class Operation {
+
+	public static void entete() {
+		System.out.println("Operations");
+	}
+  
+	public static double lireEntier() {  
+	
+		Scanner clavier = new Scanner(System.in);
+		int nb;
+		
+		System.out.print("Entrez un nombre entier: ");
+		nb = clavier.nextInt();
+		
+		return nb;  
+	}  
+	
+	public static int max2 ( int nb1, int nb2 ) { 
+	 
+		int max;
+		
+		if (nb1 > nb2) {
+			max = nb1;
+		} else {
+			max = nb2;
+		}
+		
+		return max;  
+	}   
+	 
+}				\end{Java}
+            \par
+        
+			
+		\subparagraph{Appels de m\'ethodes de classe dans la m\^eme classe} 
 		
                 \textcolor{white}{.} \par
             
-							  ***********************************A FAIRE***************************************************
-							  Que vont-ils afficher si \`a chaque fois les deux nombres lus au d\'epart sont successivement 2, 3 et 4 ?
-							
-					\begin{itemize}
-				
-			\item \begin{Java}
-import java.util.Scanner;
-public class Exercice1 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb1 = clavier.nextInt();
-        int nb2 = clavier.nextInt();
-        int nb3 = clavier.nextInt();
-        if (nb1 < nb2){
-          System.out.println(nb1);
-        } else {
-          System.out.println(nb2);
-        } 
-    }
-}
-        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
-			\item \begin{Java}
-import java.util.Scanner;
-public class Exercice2 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb1 = clavier.nextInt();
-        int nb2 = clavier.nextInt();
-        int nb3 = clavier.nextInt();
-        if (nb1 > nb2 && nb1 > nb3){
-          System.out.println(nb1);
-        } else {
-            if (nb2 > nb3){
-              System.out.println(nb2);
-            } else {
-              System.out.println(nb3);
-            }
-        } 
-    }
-}
-        \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
-			\item \begin{Java}
-import java.util.Scanner;
-public class Exercice3 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb1 = clavier.nextInt();
-        int nb2 = clavier.nextInt();
-        int nb3 = clavier.nextInt();
-        switch (nb1){
-          case 1 : System.out.println("premier"); break;
-          case 2 : System.out.println("deuxieme"); break;
-          case 3 : System.out.println("troisieme"); break;
-          default : System.out.println("pas dans le trio");
-        } 
-    }
-}
-        \end{Java} \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item \begin{Java}
-import java.util.Scanner;
-public class Exercice3 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb1 = clavier.nextInt();
-        int nb2 = clavier.nextInt();
-        int nb3 = clavier.nextInt();
-        switch (nb1){
-          case 1 : System.out.println("premier");
-          case 2 : System.out.println("deuxieme");
-          case 3 : System.out.println("troisieme");
-          default : System.out.println("pas dans le trio");
-        } 
-    }
-}
-        \end{Java} \textcolor{gray}{\underline{\hspace*{20em}}} 
-					\end{itemize}
-				
-            \par
+              Parmi les appels de m\'ethodes suivants dans la m\'ethode main \textbf{de la m\^eme classe}, lesquels sont corrects?  
+            
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] \verb|entete("Operations");|
+        
+            \item[ \ding{"6F} ] \verb|entete(10);|
+        
+            \item[ \ding{"6F} ] \verb|entete();|
+        
+            \item[ \ding{"6F} ] \verb|String chaine = entete(); System.out.println(chaine);|
+        
+            \item[ \ding{"6F} ] \verb|double nombre = lireEntier();|
+        
+            \item[ \ding{"6F} ] \verb|double nombre = lireEntier(5);|
+        
+            \item[ \ding{"6F} ] \verb|int max2 = max2(3.2,2.3);|
+        
+            \item[ \ding{"6F} ] \verb|int max2 = max2(3,2);|
+        
+            \item[ \ding{"6F} ] \verb|int max2 = max2(3,2,5);|
+        
+            \item[ \ding{"6F} ] \verb|int max2 = max2(3.5);|
+        
+            \end{itemize} 
+        
+			
+		\subparagraph{Appels de m\'ethodes de classe dans une autre classe} 
+		
+                \textcolor{white}{.} \par
+            
+              Parmi les appels de m\'ethodes suivants dans la m\'ethode main \textbf{d'une autre classe}, 
+              lesquels sont corrects (en supposant qu'aucune classe n'ait \'et\'e import\'ee)?  
+            
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] \verb|entete("Operations");|
+        
+            \item[ \ding{"6F} ] \verb|Operation.entete("Operations");|
+        
+            \item[ \ding{"6F} ] \verb|entete();|
+        
+            \item[ \ding{"6F} ] \verb|Operation.entete();|
+        
+            \item[ \ding{"6F} ] \verb|double nombre = Operation.lireEntier();|
+        
+            \item[ \ding{"6F} ] \verb|double nombre = lireEntier();|
+        
+            \item[ \ding{"6F} ] \verb|int max2 = Operation.max2(1,2);|
+        
+            \item[ \ding{"6F} ] \verb|int max2 = max2(1,2);|
+        
+            \end{itemize} 
         \subsection{\`A vous de jouer...}
           Il est temps de se lancer et d'\'ecrire vos premiers modules et programmes Java correspondant. 
           Voici quelques conseils pour vous guider dans la r\'esolution de tels probl\`emes :
@@ -1017,6 +1139,33 @@ public class Exercice3 {
 			\item valide une date donn\'ee par trois entiers : l'ann\'ee, le mois et le jour.
 					\end{enumerate}
 				
+            \par
+        
+			
+		\subparagraph{sinus} 
+		
+					\textcolor{white}{.} \par
+				
+          Dans un triangle rectangle,
+          
+					\begin{enumerate}
+				
+			\item le carr\'e de l'hypot\'enuse (h) est calcul\'e par la somme des carr\'es des 2 autres c\^ot\'es.
+			\item le sinus \^A est donn\'e par le c\^ot\'e oppos\'e (o) divis\'e par l'hypot\'enuse (h).
+					\end{enumerate}
+				\begin{figure}[hbt]
+				    \begin{center}
+					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/clr/Documents/Cours/DEV1Q2/TDModule/fr/image/sin.png}
+						\end{center}
+                
+                    \caption[sin.png]{sin.png}
+                \end{figure}
+                    
+            \par
+        
+          \'Ecrivez un module qui re\c coit les valeurs (dans l'ordre) du c\^ot\'e oppos\'e (o) et
+          adjacent (a) d'un triangle rectangle et qui retourne le sinus de l'angle \^A de ce triangle rectangle.
+        
             \par
         
 				\end{document}

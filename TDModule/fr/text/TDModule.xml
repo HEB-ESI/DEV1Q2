@@ -55,11 +55,23 @@
         de variables qu’on appellera ici <formatted style="bold">paramètres</formatted> du module.
       </paragraph>
       <paragraph>
-        Les variables accompagnées d’une flèche vers le bas (↓) sont des <formatted style="bold">paramètres d’entrée</formatted> qui
-        reçoivent des <formatted style="bold">données</formatted> au début de l’exécution du module (données qui ne doivent donc plus
-        être lues) tandis que celles accompagnées d’une flèche vers le haut (↑) sont des <formatted style="bold">paramètres
-        de sortie</formatted> qui permettent de renvoyer des résultats à l’<formatted style="bold">issue</formatted> de l’exécution du module
-        (résultats qui ne doivent donc plus être affichés).
+        <list listStyle="unordered">
+          <item>
+            Les variables accompagnées d’une flèche vers le bas (↓) sont des <formatted style="bold">paramètres d’entrée</formatted> qui
+            reçoivent des <formatted style="bold">données</formatted> au début de l’exécution du module (données qui ne doivent donc plus
+            être lues) 
+          </item>
+          <item>
+            tandis que celles accompagnées d’une flèche vers le haut (↑) sont des <formatted style="bold">paramètres
+            de sortie</formatted> qui permettent de renvoyer des résultats à l’<formatted style="bold">issue</formatted> de l’exécution du module
+            (résultats qui ne doivent donc plus être affichés). 
+          </item>
+          <item>
+            Les variables accompagnées d'une double flèche (↓ ↑) sont en<formatted style="bold"> entrée-sortie</formatted> c-à-d qu'elles ont une valeur
+            en arrivant dans le module, que cette valeur sera modifiée dans le module et que la valeur modifiée est en sortie. 
+            La variable de départ aura donc changé de valeur dans le module et ce changement se répercute en dehors.
+          </item>
+        </list>
       </paragraph>
       <paragraph>Par exemple, ceci donnerait pour le module max2 : </paragraph>
       <paragraph cssClass="code">
@@ -126,7 +138,6 @@ fin module
       <paragraph>
         Remarques : 
         <list listStyle="unordered">
-            <item>un paramètre peut être à la fois paramètre d’entrée et de sortie ; on le fait suivre alors de la double flèche ↓↑ ;</item>
             <item>si tous les paramètres sont en entrée, on peut omettre les flèches ;</item>
             <item>
               la présence de ces paramètres n’est pas obligatoire, on peut envisager un module sans
@@ -248,7 +259,7 @@ public static <typeRetour> nomMéthode ([paramètre, paramètre, ...]) {
       <paragraph>
         En Java, le passage de paramètre se fait uniquement par valeur ; 
         c-à-d que la valeur est copiée dans le paramètre.
-        Pour les typesprimitifs, c'est léquivalent d'un paramètre en entrée.
+        Pour les types primitifs, c'est l'équivalent d'un paramètre en entrée.
       </paragraph>
 		</clarify>
 		</learningObject>
@@ -374,7 +385,80 @@ public class Test{
 }]]>				</paragraph>
 		</look>
     </learningObject>
+  </unit>
+  
+  <!-- =================================================================== -->
+	<unit label="Erreur" title="Erreur ou Exception">
+	<!-- =================================================================== -->
+    <entry>
+      <paragraph>
+          Il est parfois utile de pouvoir signaler un problème dans le code. 
+        </paragraph>
+	  </entry>
+	  
+	  <learningObject title="Erreur">
+      <clarify>
+        <paragraph>
+          Signaler un problème dans le code : c'est à ça que sert la primitive <formatted style="input">erreur</formatted> en algo.
+          Elle signale que le programme rencontre une erreur à cet endroit et, en algo, 
+          <formatted style="bold">le programme s'arrête</formatted>.
+      </paragraph>
+      </clarify>
+      
+      <look>
+        <paragraph>
+          Par exemple : 
+        </paragraph>
+        <paragraph cssClass="code">
+// Lit un nombre, l'affiche s’il est positif et sinon lance une erreur.
+module lirePositif ()
+    nb : réel
+    lire nb
+    si nb <![CDATA[<]]> 0 alors
+      erreur "Le nombre n’est pas positif !"
+    fin si
     
+    afficher nb
+fin module
+        </paragraph>
+      </look>
+    </learningObject>
+    
+    <learningObject title="Lancer une exception">
+      <clarify>
+        <paragraph>En Java, pour lancer une erreur, on parlera d'une exception, on utilise l'instruction : </paragraph>
+        <paragraph cssClass="java">
+throw new NomDeLException("message de l'exception");
+        </paragraph>
+        <paragraph>qui <formatted style="bold">arrête le programme SI cette exception n'est pas gérée ailleurs</formatted>.</paragraph>
+      </clarify>
+      
+      <look>
+        <paragraph>
+          Par exemple : 
+        </paragraph>
+        <paragraph cssClass="java">
+import java.util.Scanner;
+    // Lit un nombre, l affiche si il est positif et sinon lance une erreur.
+    public static void main(String [] args){
+      Scanner clavier = new Scanner(System.in);
+      double nb;
+      if (nb<![CDATA[<]]> 0) {
+        throw new IllegalArgumentException("Le nombre n est pas positif !");
+      }
+      
+      System.out.println(nb);
+    }
+}
+        </paragraph>
+      </look>
+    </learningObject>
+	</unit>
+    
+  <!-- =================================================================== -->
+	<unit label="Commenter" title="Commenter une méthode">
+	<!-- =================================================================== -->
+
     <learningObject title="Commenter une méthode">
 		<!-- ================================================ -->
 		<clarify>
@@ -570,7 +654,7 @@ public static int absolu ( int nb ) {
       </paragraph>
 		</clarify>
 		</learningObject>
-		
+  
 		<learningObject title="Un exemple complet">
 		<!-- ================================================ -->
 		<look>
@@ -595,14 +679,29 @@ public class MaxEntiers {
     }
     
     /**
-    * Lit un nombre entier .
+    * Lit un nombre entier.
     * Le nombre est lu sur l entree standard ( le clavier ).
     * @return le nombre entier lu .
     */
     public static int lireEntier () {
-    Scanner clavier = new Scanner(System.in);
-    System.out. println ("Entrez un nombre entier!");
+      Scanner clavier = new Scanner(System.in);
+      System.out. println ("Entrez un nombre entier!");
       return clavier . nextInt ();
+    }
+    
+    /**
+    * Lit un nombre entier positif.
+    * Le nombre est lu sur l entree standard ( le clavier ).
+    * @return le nombre entier lu .
+    * @throws IllegalArgumentException si le nombre lu est strictement negatif.
+    */
+    public static int lireEntierPositif () {
+      int nbLu = lireEntier();
+      
+      if(nbLu < 0)
+        throw new IllegalArgumentException("Nombre lu negatif");
+      
+      return nbLu;
     }
     
     /**
@@ -613,7 +712,7 @@ public class MaxEntiers {
       int max; // Le max des nombres lus
       int nb1, nb2; // Chacun des nombres lus
       nb1 = lireEntier ();
-      nb2 = lireEntier ();
+      nb2 = lireEntierPositif ();
       max = max(nb1,nb2);
       System.out. println ("max = " + max);
     }
@@ -622,7 +721,8 @@ public class MaxEntiers {
 		</learningObject>
 		
   </unit>
-	
+  
+  
 	<!-- =================================================================== -->
 	<unit label="Exercices" title="Exercices">
 	<!-- =================================================================== -->
@@ -747,104 +847,127 @@ fin module
     <learningObject title="Compréhension de codes Java">
     <!-- ============================================================ -->
       <act>
-        <paragraph>
-          Pour ces exercices, nous vous demandons de comprendre des codes Java donnés. 
-          <selfCheck title="Compréhension" shuffle="no">
-						<fillInBlanks>
-							<question>
-							  ***********************************A FAIRE***************************************************
-							  Que vont-ils afficher si à chaque fois les deux nombres lus au départ sont successivement 2, 3 et 4 ?
-							</question>
-							<gapText> 
-								<list listStyle="unordered">
-									<item>
-										<paragraph cssClass="java">
-import java.util.Scanner;
-public class Exercice1 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb1 = clavier.nextInt();
-        int nb2 = clavier.nextInt();
-        int nb3 = clavier.nextInt();
-        if (nb1 <![CDATA[<]]> nb2){
-          System.out.println(nb1);
-        } else {
-          System.out.println(nb2);
-        } 
-    }
-}
-        </paragraph>
-				            <gap answers="2">2</gap> 
-									</item>  
-									<item>
-										<paragraph cssClass="java">
-import java.util.Scanner;
-public class Exercice2 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb1 = clavier.nextInt();
-        int nb2 = clavier.nextInt();
-        int nb3 = clavier.nextInt();
-        if (nb1 <![CDATA[>]]> nb2 <![CDATA[&&]]> nb1 <![CDATA[>]]> nb3){
-          System.out.println(nb1);
-        } else {
-            if (nb2 <![CDATA[>]]> nb3){
-              System.out.println(nb2);
-            } else {
-              System.out.println(nb3);
-            }
-        } 
-    }
-}
-        </paragraph>
-				            <gap answers="4">4</gap> 
-									</item>  
-									<item>
-										<paragraph cssClass="java">
-import java.util.Scanner;
-public class Exercice3 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb1 = clavier.nextInt();
-        int nb2 = clavier.nextInt();
-        int nb3 = clavier.nextInt();
-        switch (nb1){
-          case 1 : System.out.println("premier"); break;
-          case 2 : System.out.println("deuxieme"); break;
-          case 3 : System.out.println("troisieme"); break;
-          default : System.out.println("pas dans le trio");
-        } 
-    }
-}
-        </paragraph>
-				            <gap answers="deuxième">deuxième</gap> 
-									</item>  
-									<item>
-										<paragraph cssClass="java">
-import java.util.Scanner;
-public class Exercice3 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb1 = clavier.nextInt();
-        int nb2 = clavier.nextInt();
-        int nb3 = clavier.nextInt();
-        switch (nb1){
-          case 1 : System.out.println("premier");
-          case 2 : System.out.println("deuxieme");
-          case 3 : System.out.println("troisieme");
-          default : System.out.println("pas dans le trio");
-        } 
-    }
-}
-        </paragraph>
-				            <gap answers="premierdeuxiemetroisiemepas dans le trio">premierdeuxiemetroisiemepas dans le trio</gap> 
-									</item>  
-								</list>
-							</gapText>
-							<solution/>
-						</fillInBlanks>
-					</selfCheck>
-        </paragraph>
+        
+        <selfCheck title="Activité &quot;remplir les blancs&quot;" shuffle="yes">
+          <fillInBlanks>
+            <question>  
+              <paragraph cssClass="java">
+<![CDATA[public class Outils {
+
+	public static int abs(int nombre) { 
+
+		int absolu = nombre;
+
+		if (nombre < 0) {		
+			absolu = -nombre;
+		} 
+		
+		return absolu;
+		
+	}
+	
+	public static void main (String[] args) {  
+	
+		int valAbsolue;  
+		
+		...  
+		System.out.println (valAbsolue);  
+		
+	}
+
+}]]>				</paragraph>
+              <paragraph>
+                Ajoutez l'instruction qui assigne à <formatted style="italic">valAbsolue</formatted> 
+                le résultat de l'appel à la méthode <formatted style="italic">abs</formatted> avec comme paramètre la valeur 
+                <formatted style="italic">-4</formatted>?
+              </paragraph>
+            </question>
+            <gapText> 
+              <gap answers="">valAbsolue</gap> 
+              <gap answers="">=</gap> 
+              <gap answers="abs(-4), abs (-4), abs ( -4 ), abs( -4)">abs(-4)</gap> ;
+            </gapText>
+            
+            <solution/>
+            
+          </fillInBlanks>
+          
+        </selfCheck>
+    <paragraph cssClass="pagebreak"/>        
+      
+        <paragraph title="Soit le code suivant :  ">
+        <paragraph cssClass="java">
+<![CDATA[public class Operation {
+
+	public static void entete() {
+		System.out.println("Operations");
+	}
+  
+	public static double lireEntier() {  
+	
+		Scanner clavier = new Scanner(System.in);
+		int nb;
+		
+		System.out.print("Entrez un nombre entier: ");
+		nb = clavier.nextInt();
+		
+		return nb;  
+	}  
+	
+	public static int max2 ( int nb1, int nb2 ) { 
+	 
+		int max;
+		
+		if (nb1 > nb2) {
+			max = nb1;
+		} else {
+			max = nb2;
+		}
+		
+		return max;  
+	}   
+	 
+}]]>				</paragraph>
+</paragraph>
+      
+        <selfCheck title="Appels de méthodes de classe dans la même classe" shuffle="yes">
+          <multipleChoice>
+            <question>
+              Parmi les appels de méthodes suivants dans la méthode main <formatted style="bold">de la même classe</formatted>, lesquels sont corrects?  
+            </question>
+            <answer feedback="" correct="no"><formatted style="java">entete("Operations");</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">entete(10);</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">entete();</formatted></answer>
+            <answer feedback="" correct="no">
+              <formatted style="java">String chaine = entete(); System.out.println(chaine);</formatted>
+            </answer>
+            <answer feedback="" correct="yes"><formatted style="java">double nombre = lireEntier();</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">double nombre = lireEntier(5);</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">int max2 = max2(3.2,2.3);</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">int max2 = max2(3,2);</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">int max2 = max2(3,2,5);</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">int max2 = max2(3.5);</formatted></answer>
+          </multipleChoice>
+        </selfCheck>
+        
+        <selfCheck title="Appels de méthodes de classe dans une autre classe" shuffle="yes">
+          <multipleChoice>
+            <question>
+              Parmi les appels de méthodes suivants dans la méthode main <formatted style="bold">d'une autre classe</formatted>, 
+              lesquels sont corrects (en supposant qu'aucune classe n'ait été importée)?  
+            </question>
+            <answer feedback="" correct="no"><formatted style="java">entete("Operations");</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">Operation.entete("Operations");</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">entete();</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">Operation.entete();</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">double nombre = Operation.lireEntier();</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">double nombre = lireEntier();</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">int max2 = Operation.max2(1,2);</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">int max2 = max2(1,2);</formatted></answer>
+          </multipleChoice>
+          
+        </selfCheck>
+        
       </act>
     </learningObject>
     
@@ -872,6 +995,19 @@ public class Exercice3 {
               les modules <formatted style="code">max2</formatted> et/ou <formatted style="code">max3</formatted> déjà développés dans ce chapitre.</item>
             <item>valide une date donnée par trois entiers : l’année, le mois et le jour.</item>
           </list>
+        </paragraph>
+        
+        <paragraph title="sinus">
+          Dans un triangle rectangle,
+          <list listStyle="ordered">
+            <item>le carré de l’hypoténuse (h) est calculé par la somme des carrés des 2 autres côtés.</item>
+            <item>le sinus Â est donné par le côté opposé (o) divisé par l’hypoténuse (h).</item>
+          </list>
+          <paragraph>
+            <multimedia src="../image/sin.png" type="png"/>
+		      </paragraph>
+          Écrivez un module qui reçoit les valeurs (dans l’ordre) du côté opposé (o) et
+          adjacent (a) d'un triangle rectangle et qui retourne le sinus de l'angle Â de ce triangle rectangle.
         </paragraph>
       </act>
     </learningObject>

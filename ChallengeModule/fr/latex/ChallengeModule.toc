@@ -1,0 +1,4 @@
+\select@language {french}
+\contentsline {subparagraph}{Afficher le titre}{1}{section*.1}
+\contentsline {subparagraph}{Longueur du pas du Z\'ebu}{1}{section*.2}
+\contentsline {subparagraph}{La longueur du pas du Z\'ebu au fil du temps}{1}{section*.3}

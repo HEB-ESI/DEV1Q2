@@ -24,19 +24,21 @@
                </li>
                <li class="navigationLink"><a href="unit_RetournerValeur.html">1.3. Module renvoyant une valeur</a></li>
                <li class="navigationLink"><a href="unit_Methodes.html">1.4. Méthodes et appel de méthodes</a></li>
-               <li class="navigationLink"><a href="unit_Exercices.html">1.5. Exercices</a></li>
+               <li class="navigationLink"><a href="unit_Erreur.html">1.5. Erreur ou Exception</a></li>
+               <li class="navigationLink"><a href="unit_Commenter.html">1.6. Commenter une méthode</a></li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.7. Exercices</a></li>
             </ul>
          </li>
       </ul>
       <div class="navigation_arrows"><a href="PassageParametres_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_RetournerValeur.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="PassageParametres_learningObject2.html">1.2.2. Appel de module</h1>
-      <div id="d8e89.html" class="clarify">
-         <p class="paragraph" id="d8e90">
+      <div id="d8e98.html" class="clarify">
+         <p class="paragraph" id="d8e99">
             Pour faire appel aux services de ce module, il suffit à présent d’écrire son nom suivi
             d’un
             nombre de variables (ou, en entrée, d’expressions) en accord avec son en-tête. 
             
          </p>
-         <p class="paragraph" id="d8e92">Montrons par un exemple comment le module max3 peut faire appel au module max2 : </p><pre>
+         <p class="paragraph" id="d8e101">Montrons par un exemple comment le module max3 peut faire appel au module max2 : </p><pre>
 module max3 ()
     a, b, c, temp, max : réels
     lire a, b, c
@@ -44,10 +46,10 @@ module max3 ()
     max2( temp, c, max )
     afficher max
 fin module
-      </pre><p class="paragraph" id="d8e96">
+      </pre><p class="paragraph" id="d8e105">
             L’instruction max2(a, b, temp) se déroule comme suit :
             
-            <ul class="list" id="d8e98">
+            <ul class="list" id="d8e107">
                <li class="itemAlt">le contenu des variables a et b est affecté aux paramètres d’entrée a et b du module
                   max2, puis ce module peut entrer en action ;
                </li>
@@ -56,10 +58,10 @@ fin module
                </li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e103">
+         <p class="paragraph" id="d8e112">
             L’instruction max2(temp, c, max) se déroule comme suit :
             
-            <ul class="list" id="d8e105">
+            <ul class="list" id="d8e114">
                <li class="itemAlt">le contenu des variables temp et c est affecté aux paramètres d’entrée a et b du module
                   max2, puis ce module peut entrer en action ;
                </li>
@@ -68,7 +70,7 @@ fin module
                </li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e110">
+         <p class="paragraph" id="d8e119">
             Implicitement, on a introduit ici un nouveau type de primitive, l’appel à un module
             qui
             consiste en la simple écriture de son nom dans le code. Cette instruction est reconnue
@@ -87,15 +89,12 @@ fin module
             il avait été interrompu.
             
          </p>
-         <p class="paragraph" id="d8e112">
+         <p class="paragraph" id="d8e121">
             Remarques : 
             
-            <ul class="list" id="d8e114">
-               <li class="itemAlt">un paramètre peut être à la fois paramètre d’entrée et de sortie ; on le fait suivre
-                  alors de la double flèche ↓↑ ;
-               </li>
-               <li class="item">si tous les paramètres sont en entrée, on peut omettre les flèches ;</li>
-               <li class="itemAlt">
+            <ul class="list" id="d8e123">
+               <li class="itemAlt">si tous les paramètres sont en entrée, on peut omettre les flèches ;</li>
+               <li class="item">
                   la présence de ces paramètres n’est pas obligatoire, on peut envisager un module sans
                   paramètre de sortie (par ex. un module qui reçoit en entrée un nombre et dont la seule
                   fonction est de l’afficher à l’écran), ou inversement sans paramètre d’entrée (un
@@ -104,23 +103,23 @@ fin module
                   6) ;
                   
                </li>
-               <li class="item">
+               <li class="itemAlt">
                   pour appeler correctement un module, il faut fournir des noms de variables, des expressions
                   ou des constantes 
                   en <b>même nombre</b> et en <b>même ordre</b> 
                   que les paramètres du module ;
                   
                </li>
-               <li class="itemAlt">en outre, les types des variables doivent correspondre entre l’appel et l’en-tête
+               <li class="item">en outre, les types des variables doivent correspondre entre l’appel et l’en-tête
                   du module ;
                </li>
-               <li class="item">ne peut être affectée à un paramètre d’entrée du module qu’une constante, une expression
+               <li class="itemAlt">ne peut être affectée à un paramètre d’entrée du module qu’une constante, une expression
                   ou une variable préalablement affectée ;
                </li>
-               <li class="itemAlt">à un paramètre de sortie d’un module doit toujours correspondre une autre variable,
+               <li class="item">à un paramètre de sortie d’un module doit toujours correspondre une autre variable,
                   jamais une constante ou une expression ;
                </li>
-               <li class="item">il faut s’assurer qu’à l’issue du module, tous les paramètres de sortie aient été
+               <li class="itemAlt">il faut s’assurer qu’à l’issue du module, tous les paramètres de sortie aient été
                   affectés lors de l’exécution de ce module.
                </li>
             </ul>
@@ -128,6 +127,6 @@ fin module
       </div>
       <hr />
       <div class="navigation_arrows"><a href="PassageParametres_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_RetournerValeur.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 18.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDModule.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 21.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDModule.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

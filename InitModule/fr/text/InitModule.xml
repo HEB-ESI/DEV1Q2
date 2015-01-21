@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="InitModule" title="TD Modules">
+	
+	<entry>
+		<paragraph>
+			Ces exercices ont pour but de vérifier que vous avez fixé comment découper un algorithme en modules
+      (morceaux d’algorithmes) et en méthodes (morceaux de code).
+		</paragraph>
+	</entry>
+	
+	<!-- =========================================================== -->
+	<unit label="Modules" title="Découpe du code">
+	<!-- =========================================================== -->
+  
+    <learningObject title="À vous de jouer...">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph title="What time is it?">
+          Le système horaire anglais est basé sur un cycle de 12 heures (« 12-hour clock ») au lieu du système continental utilisant un cycle de 24 heures. 
+          Pour distinguer les moments de l’avant-midi et de l’après-midi, on utilise les abréviations AM (ante-meridiem) pour tout moment entre minuit et midi 
+          et PM (post-meridiem) pour tout moment entre midi et minuit. 
+          Les heures sont représentées par les nombres de 1 à 12 (et jamais par 0, qui n’est pas utilisé pour les heures). 
+          Il y a 2 cas spéciaux : comme midi ne peut être avant ou après lui-même, son écriture correcte dans le système anglais est « 12 noon », de même que minuit s’écrit « 12 midnight ». 
+          Il est donc incorrect d’écrire 12 AM ou 12 PM. 
+        </paragraph>
+        <paragraph>
+          Mettez en évidence les variables <formatted style="bold">« données »</formatted>, 
+          les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;
+        </paragraph>
+        <paragraph>
+          Écrivez un algorithme qui reçoit en paramètre des heures et des minutes et affiche l’heure correspondante au format anglais. (Dans cet exercice, on ne tient donc pas compte des secondes.)
+        </paragraph>
+        <paragraph>
+          Exemples : 	
+          <list listStyle="unordered">
+            <item>0h18 devient 12 :18 AM</item>
+            <item>8h15 devient 8 : 15 AM</item>
+            <item>12h00 devient 12 noon</item>
+            <item>12h30 devient 12 : 30 PM</item>
+            <item>13h25 devient 1 : 25 PM</item>
+            <item>23h42 devient 11 :42 PM</item>
+            <item>0h00 devient 12 midnight</item>
+          </list>
+        </paragraph>
+        <paragraph>
+          Si les nombres entrés ne sont pas dans les bornes acceptées pour les heures et les minutes, vous lancerez une erreur qui arrêtera le programme.
+        </paragraph>
+        <paragraph>
+          Écrivez le code java correspondant avec la documentation javadoc pour chaque méthode. 
+          N'oubliez pas d'écrire la méthode <formatted style="code">main</formatted> qui fera appel à votre méthode.
+        </paragraph>
+        
+        <paragraph title="La plus grande somme">
+          Écrire un algorithme qui reçoit deux nombres entiers positifs de 5 chiffres et retourne celui dont la somme des chiffres est la plus grande.
+          Mettez en œuvre tout ce qu'il faut pour ne pas devoir répéter plusieurs fois le même code !
+        </paragraph>
+        <paragraph>
+          Si les nombres entrés ne sont pas positifs, vous lancerez une erreur qui arrêtera le programme.
+        </paragraph>
+        <paragraph>
+          Par exemple, si les nombres entrés sont 11789 et 50211, l’algorithme retourne 11789.
+        </paragraph>
+        <paragraph>
+          Mettez en évidence les variables <formatted style="bold">« données »</formatted>, 
+          les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;
+        </paragraph>
+        <paragraph>
+          Écrivez le code java correspondant avec la documentation javadoc pour chaque méthode. 
+          N'oubliez pas d'écrire la méthode <formatted style="code">main</formatted> qui fera appel à votre méthode.
+        </paragraph>
+        
+        <paragraph title="La boule de cristal">
+          Cet algorithme est destiné à prédire l’avenir, et il doit être infaillible ! 
+          Il recevra un moment de la journée en paramètre (sous forme  de trois entiers : heure, minute et seconde) et affichera le moment qu’il sera une minute plus tard ! 
+        </paragraph>
+        <paragraph>
+          Par exemple, si le moment entré est 21h 32’ 45’’, l’algorithme affichera 21h 33’ 45’’.
+        </paragraph>
+        <paragraph>
+          Si les nombres entrés ne sont pas dans les bornes acceptées pour les heures, les minutes et les secondes, vous lancerez une erreur qui arrêtera le programme. 
+        </paragraph>
+        <paragraph>
+          Si vous avez déjà fait ce test pour les heures et les minutes, avez-vous pensé à modulariser ? Si pas, c'est le moment de le faire :)
+        </paragraph>
+        <paragraph>
+          Mettez en évidence les variables <formatted style="bold">« données »</formatted>, 
+          les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;
+        </paragraph>
+        <paragraph>
+          Écrivez le code java correspondant avec la documentation javadoc pour chaque méthode. 
+          N'oubliez pas d'écrire la méthode <formatted style="code">main</formatted> qui fera appel à votre méthode.
+        </paragraph>
+        
+        <paragraph>Pour plus d'exercices, 
+        <link uri="../../../TDModule/fr/html/Exercices_learningObject3.html">révisez ici</link></paragraph>
+      </act>
+    </learningObject>
+  </unit>
+	
+	<!--metadata>
+		<organisation level="1ère année" module="Laboratoires Java">
+			<creationPosition><posNumber>1</posNumber></creationPosition>
+		</organisation>
+		<prerequisites><preReqItem label="none"/></prerequisites>
+		<keywords><keywordItem>Java</keywordItem><keywordItem>Linux</keywordItem></keywords>
+		<technical>
+			<technicalRequirement>
+				<type>Browser</type>
+				<name>any</name>
+				<minimumVersion>unknown</minimumVersion>
+			</technicalRequirement>
+		</technical>
+		<lessonInfo>
+			<language language="fr" derived="no"/>
+			<lifecycle>
+				<version>2013 - 2014</version>
+				<contribute>
+<person name="BEJ" />  <person name="CLG" />  <person name="CLR" />  <person name="DNA" />  <person name="MCD" />  <person name="NPX" />  <person name="PBT" />  <person name="SRV" /> 
+				</contribute>
+			</lifecycle>
+			<educational><typicalLearningTime><time/></typicalLearningTime></educational>
+		</lessonInfo>
+		<rights>
+			<cost>no</cost>
+			<copyright>Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique</copyright>
+			<copyrightURL>http://creativecommons.org/licenses/by-sa/2.0/be/</copyrightURL>
+		</rights>
+	</metadata-->
+
+</lesson>

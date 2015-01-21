@@ -1,0 +1,299 @@
+\documentclass[11pt,a4paper]{article}
+			\usepackage[french]{babel}
+					
+				\usepackage{pifont}  
+				\usepackage[utf8x]{inputenc}
+				\usepackage[T1]{fontenc} 
+				\usepackage{lmodern}			
+				\usepackage{fancyhdr}
+				\usepackage{textcomp}
+				\usepackage{makeidx}
+				\usepackage{tabularx}
+				\usepackage{multicol}
+				\usepackage{multirow}
+				\usepackage{longtable}
+				\usepackage{color}
+				\usepackage{soul}
+				\usepackage{boxedminipage}
+				\usepackage{shadow}
+				\usepackage{framed}			
+				\usepackage{array}
+				\usepackage{url}
+				\usepackage{ragged2e}
+				\usepackage{fancybox}
+				\newcommand{\cadretitre}[2]{
+				  \vspace*{0.8\baselineskip}
+				  \begin{center}%
+				  \boxput*(0,1){%
+					%\colorbox{white}{\Large\textbf{\ #1\ }}%
+				  }%
+				  {%
+					\setlength{\fboxsep}{10pt}%
+				    \Ovalbox{\begin{minipage}{.8\linewidth}\begin{center}\Large\sffamily{#2}\end{center}\end{minipage}}}%
+				  \end{center}
+				  \vspace*{2\baselineskip}
+				  }
+			
+			\makeatletter
+			\def\@seccntformat#1{\protect\makebox[0pt][r]{\csname the#1\endcsname\quad}}
+			\makeatother
+
+				% Permet d'afficher qqchose à une positin absolue
+				\usepackage[absolute]{textpos}
+				\setlength{\TPHorizModule}{1cm}
+				\setlength{\TPVertModule}{\TPHorizModule}
+	
+				\usepackage[titles]{tocloft}
+				\setlength{\cftbeforesecskip}{0.5ex}
+				\setlength{\cftbeforesubsecskip}{0.2ex}
+				\addto\captionsfrench{\renewcommand\contentsname{}}
+				
+				\usepackage[font=scriptsize]{caption}
+				
+				\usepackage{listings}
+\lstdefinestyle{lstverb}
+  {
+    basicstyle=\footnotesize,
+    frameround=tttt, frame=trbl, framerule=0pt, rulecolor=\color{gray},
+    lineskip=-1pt,   % pour rapprocher les lignes
+    flexiblecolumns, escapechar=\\,
+    tabsize=4, extendedchars=true
+  }
+\lstnewenvironment{Java}[1][]{\lstset{style=lstverb,language=java,#1}}{}
+				\ifx\pdfoutput\undefined
+					\usepackage{graphicx}
+				\else
+					\usepackage[pdftex]{graphicx}
+				\fi
+				\usepackage[a4paper, hyperfigures=true, colorlinks, linkcolor=black, citecolor=blue,urlcolor=blue, pagebackref=true, bookmarks=true, bookmarksopen=true,bookmarksnumbered=true,
+                pdfauthor={}, pdftitle={TD Modules}, pdfkeywords={TD Modules, },pdfpagemode=UseOutlines,pdfpagetransition=Dissolve,nesting=true,
+				backref, pdffitwindow=true, bookmarksnumbered=true]{hyperref}
+				\usepackage{supertabular}
+				\usepackage[table]{xcolor}
+				\usepackage{url}
+				\usepackage{caption} 
+				\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+				\setlength{\parindent}{0pt}
+				
+				\makeatletter
+				\def\url@leostyle{ \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\footnotesize\ttfamily}}}
+				\makeatother
+				\urlstyle{leo}
+				
+				\definecolor{examplecolor}{rgb}{0.156,0.333,0.443}
+				\definecolor{definitioncolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{exercisecolor}{rgb}{0.49,0.639,0}
+				\definecolor{hintcolor}{rgb}{0.941,0.674,0.196}
+				\definecolor{tableHeadercolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{tablerowAltcolor}{rgb}{.866,.905,.737}
+				\definecolor{tablerowAlt2color}{rgb}{.968,.976,.933}
+				\definecolor{verylightgray}{rgb}{0.98,0.98,0.98}
+				
+				\newenvironment{fshaded}{
+				\def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}
+				\MakeFramed {\FrameRestore}}
+				{\endMakeFramed}
+				
+				\newenvironment{fexample}[1][]{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.156,.333,.443}
+				\begin{fshaded}}{\end{fshaded}} 
+				
+				\newenvironment{fdefinition}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.709,.784,.454}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fexercise}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.49,.639,0}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fhint}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.941,.674,.196}
+				\begin{fshaded}}{\end{fshaded}}	
+				
+				\newcommand{\PreserveBackslash}[1]{
+				\let\temp=\\#1\let\\=\temp
+				}
+				\let\PBS=\PreserveBackslash
+				\newcolumntype{A}{>{\PBS\raggedright\small\hspace{0pt}}X}
+				\newcolumntype{L}[1]{>{\PBS\raggedright\small\hspace{0pt}}p{#1}}
+				\newcolumntype{R}[1]{>{\PBS\raggedleft\small\hspace{0pt}}p{#1}}
+				\newcolumntype{C}[1]{>{\PBS\centering\small\hspace{0pt}}p{#1}}
+				
+				\makeindex
+				
+				\title{TD Modules}	
+			\date{}
+			\author{\scriptsize{}}
+			\definecolor{light-gray}{gray}{0.8}
+			\renewcommand{\headrulewidth}{0pt}
+			\fancyhead[L]{
+				\footnotesize\textsc{Haute \'Ecole de Bruxelles}\\
+	    			\footnotesize\textsc{\'Ecole Sup\'erieure d'Informatique}
+			}
+			\fancyhead[R]{
+				\footnotesize{Bachelor en Informatique}\\
+				\footnotesize{Laboratoires Java} - 
+			\footnotesize{1\`ere ann\'ee}}
+				\fancyfoot[L]{ }
+				\fancyfoot[C]{}
+				\fancyfoot[R]{\scriptsize{\textcolor{gray}{version 2014-2015 (\today)}}}
+				\pagestyle{plain}
+				\reversemarginpar
+				\usepackage{rotating}						
+				\begin{document}
+					\begin{textblock}{9}(2,3.2)
+						\includegraphics[width=2cm]{../../../_templates/java/icons/logo-esi}
+					\end{textblock}
+				
+				
+				
+				
+				%\maketitle
+				\cadretitre{TD1}{TD Modules}
+				\thispagestyle{fancy}
+        \marginpar{\begin{sideways}
+            \begin{minipage}[t]{1cm}
+            \begin{tiny}
+            \includegraphics[width=1\linewidth,height=1\textheight,keepaspectratio=true]{../../../_templates/java/icons/cc-gris.jpg}
+			\end{tiny}
+			\end{minipage}
+            \begin{minipage}[b]{19cm}
+            \begin{tiny}
+            \textcolor{gray}{Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique 
+            (\texttt{http://creativecommons.org/licenses/by-sa/2.0/be/})
+			\vspace{-1em}
+			\\Les autorisations au-delà du champ de cette licence peuvent être obtenues à 
+			\texttt{http://www.heb.be/esi}
+			- \texttt{mcodutti@heb.be}
+			}\end{tiny}
+			\end{minipage}
+        \end{sideways}}
+            \begin{abstract}
+			Ces exercices ont pour but de v\'erifier que vous avez fix\'e comment d\'ecouper un algorithme en modules
+      (morceaux d'algorithmes) et en m\'ethodes (morceaux de code).
+		
+            \par
+        \end{abstract}
+				\vspace{-2em}\tableofcontents
+				\pagestyle{plain}
+            \clearpage
+            \fancyhead[L,C,R]{}
+            \fancyfoot[L,C]{}
+            \fancyfoot[R]{ \scriptsize{\textcolor{gray}{
+				InitModule - page \thepage}}}
+				\thispagestyle{fancy}
+				\pagestyle{fancy}
+	   
+            \section{D\'ecoupe du code}\subsection{\`A vous de jouer...}
+			
+		\subparagraph{What time is it?} 
+		
+					\textcolor{white}{.} \par
+				
+          Le syst\`eme horaire anglais est bas\'e sur un cycle de 12 heures (\guillemotleft  12-hour clock \guillemotright ) au lieu du syst\`eme continental utilisant un cycle de 24 heures. 
+          Pour distinguer les moments de l'avant-midi et de l'apr\`es-midi, on utilise les abr\'eviations AM (ante-meridiem) pour tout moment entre minuit et midi 
+          et PM (post-meridiem) pour tout moment entre midi et minuit. 
+          Les heures sont repr\'esent\'ees par les nombres de 1 \`a 12 (et jamais par 0, qui n'est pas utilis\'e pour les heures). 
+          Il y a 2 cas sp\'eciaux : comme midi ne peut \^etre avant ou apr\`es lui-m\^eme, son \'ecriture correcte dans le syst\`eme anglais est \guillemotleft  12 noon \guillemotright , de m\^eme que minuit s'\'ecrit \guillemotleft  12 midnight \guillemotright . 
+          Il est donc incorrect d'\'ecrire 12 AM ou 12 PM. 
+        
+            \par
+        
+          Mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, 
+          les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
+        
+            \par
+        
+          \'Ecrivez un algorithme qui re\c coit en param\`etre des heures et des minutes et affiche l'heure correspondante au format anglais. (Dans cet exercice, on ne tient donc pas compte des secondes.)
+        
+            \par
+        
+          Exemples : 	
+          
+					\begin{itemize}
+				
+			\item 0h18 devient 12 :18 AM
+			\item 8h15 devient 8 : 15 AM
+			\item 12h00 devient 12 noon
+			\item 12h30 devient 12 : 30 PM
+			\item 13h25 devient 1 : 25 PM
+			\item 23h42 devient 11 :42 PM
+			\item 0h00 devient 12 midnight
+					\end{itemize}
+				
+            \par
+        
+          Si les nombres entr\'es ne sont pas dans les bornes accept\'ees pour les heures et les minutes, vous lancerez une erreur qui arr\^etera le programme.
+        
+            \par
+        
+          \'Ecrivez le code java correspondant avec la documentation javadoc pour chaque m\'ethode. 
+          N'oubliez pas d'\'ecrire la m\'ethode \verb@main@ qui fera appel \`a votre m\'ethode.
+        
+            \par
+        
+			
+		\subparagraph{La plus grande somme} 
+		
+					\textcolor{white}{.} \par
+				
+          \'Ecrire un algorithme qui re\c coit deux nombres entiers positifs de 5 chiffres et retourne celui dont la somme des chiffres est la plus grande.
+          Mettez en œuvre tout ce qu'il faut pour ne pas devoir r\'ep\'eter plusieurs fois le m\^eme code !
+        
+            \par
+        
+          Si les nombres entr\'es ne sont pas positifs, vous lancerez une erreur qui arr\^etera le programme.
+        
+            \par
+        
+          Par exemple, si les nombres entr\'es sont 11789 et 50211, l'algorithme retourne 11789.
+        
+            \par
+        
+          Mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, 
+          les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
+        
+            \par
+        
+          \'Ecrivez le code java correspondant avec la documentation javadoc pour chaque m\'ethode. 
+          N'oubliez pas d'\'ecrire la m\'ethode \verb@main@ qui fera appel \`a votre m\'ethode.
+        
+            \par
+        
+			
+		\subparagraph{La boule de cristal} 
+		
+					\textcolor{white}{.} \par
+				
+          Cet algorithme est destin\'e \`a pr\'edire l'avenir, et il doit \^etre infaillible ! 
+          Il recevra un moment de la journ\'ee en param\`etre (sous forme  de trois entiers : heure, minute et seconde) et affichera le moment qu'il sera une minute plus tard ! 
+        
+            \par
+        
+          Par exemple, si le moment entr\'e est 21h 32' 45'', l'algorithme affichera 21h 33' 45''.
+        
+            \par
+        
+          Si les nombres entr\'es ne sont pas dans les bornes accept\'ees pour les heures, les minutes et les secondes, vous lancerez une erreur qui arr\^etera le programme. 
+        
+            \par
+        
+          Si vous avez d\'ej\`a fait ce test pour les heures et les minutes, avez-vous pens\'e \`a modulariser ? Si pas, c'est le moment de le faire :)
+        
+            \par
+        
+          Mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, 
+          les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
+        
+            \par
+        
+          \'Ecrivez le code java correspondant avec la documentation javadoc pour chaque m\'ethode. 
+          N'oubliez pas d'\'ecrire la m\'ethode \verb@main@ qui fera appel \`a votre m\'ethode.
+        
+            \par
+        Pour plus d'exercices, 
+        r\'evisez ici (\url{www.heb.be/esi/InitModule/fr/../../TDModule/fr/html/Exercices\_learningObject3.html})
+            \par
+        
+				\end{document}
+			
