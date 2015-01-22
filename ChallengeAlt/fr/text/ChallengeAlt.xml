@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
 	label="ChallengeAlt" title="Challenge : les alternatives">
 	
-	<entry>
+	<entry title="L'athlétisme">
 		<paragraph>
 			Avez-vous compris les alternatives ? Voyons ça en relevant le défi de l'athlétisme :
 		</paragraph>

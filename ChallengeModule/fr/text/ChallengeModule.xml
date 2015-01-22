@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
 	label="ChallengeModule" title="Challenge : les modules">
 	
-	<entry>
+	<entry title="Le pas du zébu">
 		<paragraph>
-			Avez-vous compris la découpe en modules ? Voyons ça en relevant le défi du" pasdu zébu" :
+			Avez-vous compris la découpe en modules ? Voyons ça en relevant le défi du "pas du zébu" :
 		</paragraph>
     <paragraph title="Afficher le titre">
       Écrivez un module qui reçoit un nomen paramètre et qui affiche le texte :

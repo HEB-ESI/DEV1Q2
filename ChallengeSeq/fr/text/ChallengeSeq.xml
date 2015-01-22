@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
 	label="ChallengeSeq" title="Challenge : algorithme séquentiel">
 	
-	<entry>
+	<entry title="Le boulier compteur">
 		<paragraph>
 			Avez-vous compris les algorithmes séquentiels ? Voyons ça en relevant le défi du boulier :
 		</paragraph>
