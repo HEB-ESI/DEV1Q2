@@ -444,58 +444,33 @@ MODULE Test
 FIN MODULE
 			     \end{verbatim}\subsection{\`A vous de jouer...}
 			
-		\subparagraph{\`A la pompe} 
+		\subparagraph{Un nombre est-il divisible par 9 ?} 
 		
 					\textcolor{white}{.} \par
 				
-          \`A la pompe \`a essence, le prix du carburant d\'epend du type de carburant. Reprenons ci-dessous le prix au litre pratiqu\'e par ESI-Pompe. 
-          
-					\begin{itemize}
+          En base dix, on peut facilement v\'erifier si un nombre est divisible par 9 :
+          on calcule la somme de ses chiffres et l'on regarde si cette somme est encore divisible par 9
+          c'est-\`a-dire, si l'on it\`ere le processus, si la derni\`ere somme donne 9. \par
 				
-			\item Super 95 : 1,429 €/L
-			\item Super 98 : 1,604 €/L
-			\item Diesel : 1,249 €/L
-			\item LPG : 0,558 €/L
-					\end{itemize}
-				
-            \par
-        
-        Mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, 
-        les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
-      
-            \par
-        
-          \'Ecrivez un module qui lit le type de carburant et la quantit\'e d\'esir\'ee (consid\'er\'ee positive) et qui affiche le prix \`a payer.\par
-				
-          Exemple : pour du Super 95 et pour une quantit\'e de 30,46 litres le module retourne le prix de 43,52 €.
+          \'Ecrivez un algorithme permettant de dire si un nombre donn\'e est divisible par 9, en appliquant la m\'ethode d\'ecrite ci-dessus.
         
             \par
-        \'Ecrivez le code java correspondant.
+        \'Ecrivez le code java correspondant ainsi que la javadoc.
             \par
         
 			
-		\subparagraph{M\'etro} 
+		\subparagraph{Suite de positifs} 
 		
 					\textcolor{white}{.} \par
 				
-          L'horaire du m\'etro bruxellois varie selon le jour et l'heure. La fr\'equence des passages est de 5
-          minutes en semaine de 6h \`a 10h et de 15h \`a 19h. De 7 minutes en semaine de 10h \`a 15h et le
-          samedi de 12h \`a 19h. De 10 min apr\`es 19h en semaine et le samedi et toute la journ\'ee de
-          dimanche. 
-        
-            \par
-        
-          Mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, 
-          les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
-        
-            \par
-        
-          \'Ecrivez un module qui re\c coit un nom de jour et une heure et qui retourne la fr\'equence pour ce moment. \par
+          \'Ecrivez un algorithme qui lit une suite de nombres positifs entr\'es au clavier et affiche
+          le maximum, le minimum, leur somme et la moyenne.\par
 				
-          Exemple : jour = \guillemotleft  lundi \guillemotright  ; heure = 16 fr\'equence = 5
+          La fin de la suite de nombre sera signifi\'ee par une valeur sentinelle que vous choisirez
+          judicieusement.
         
             \par
-        \'Ecrivez le code java correspondant.
+        \'Ecrivez le code java correspondant ainsi que la javadoc.
             \par
         
 			
@@ -521,18 +496,19 @@ FIN MODULE
         
             \par
         
+          \'Ecrivez un second module, \verb@principal@, qui lit un nombre et v\'erifie que tous les
+          nombres pairs inf\'erieurs \`a ce nombre sont la somme de 2 nombres premiers. Ce module affiche vrai ou faux selon le cas.
+        
+            \par
+        
           Mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, 
           les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
         
             \par
-        
-          \'Ecrivez un module qui v\'erifie si trois entiers donn\'es constituent un triple Pythagoricien.
-        
-            \par
-        \'Ecrivez le code java correspondant.
+        \'Ecrivez le code java correspondant ainsi que la javadoc.
             \par
         Pour plus d'exercices, 
-        r\'evisez ici (\url{www.heb.be/esi/InitBoucle/fr/../../TDAlt/fr/html/unit\_Exercices.html})
+        r\'evisez ici (\url{www.heb.be/esi/InitBoucle/fr/../../TDBoucle/fr/html/Exercices\_learningObject3.html})
             \par
         
 				\end{document}

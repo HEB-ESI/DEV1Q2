@@ -1,0 +1,96 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Boucles: suite de nombres. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Boucles, eLML" />
+      <title>1.1.9. suite de nombres</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Boucles</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Boucles.html">1.1. Les boucles</a><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="Boucles_learningObject1.html">1.1.1. tant que</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject2.html">1.1.2. while</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject3.html">1.1.3. faire - jusqu’à ce que</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject4.html">1.1.4. do...while</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject5.html">1.1.5. pour</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject6.html">1.1.6. for</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject7.html">1.1.7. Quel type de boucle choisir ?</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject8.html">1.1.8. Sentinelle</a></li>
+                     <li class="navigationActual"><strong>1.1.9. suite de nombres</strong></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject10.html">1.1.10. 3 pas en avant, 2 pas en arrière</a></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.2. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="Boucles_learningObject8.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject10.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Boucles_learningObject9.html">1.1.9. suite de nombres</h1>
+      <div id="d8e431.html" class="clarify">
+         <p class="paragraph" id="d8e432">
+            		    Un exemple simple pourrait être celui-ci : 
+            		    « <i>Écrire l’algorithme qui affiche les n premiers
+               termes de la suite : 2, 4, 6. . . </i>»
+            
+         </p>
+         <p class="paragraph" id="d8e437">
+            Puisqu’on doit écrire plusieurs nombres et qu’on sait exactement combien, 
+            on se tournera tout naturellement vers une boucle <code>pour</code>.
+            
+         </p>
+         <p class="paragraph" id="d8e442">
+            Le cas le plus simple est lorsque le nombre à afficher à l’étape <code>i</code> 
+            peut être calculé en fonction de <code>i</code> seulement. L’algorithme est alors
+            
+         </p><pre>
+pour i de 1 à n faire
+    afficher f(i)
+fin pour
+      </pre><p class="paragraph" id="d8e452">Par exemple, pour afficher la suite des n premiers nombres pairs</p><pre>
+module nombrePair (n↓ : entier)
+    i : entier
+    pour i de 1 à n faire
+      afficher 2 * i
+    fin pour
+fin module
+      </pre><p class="paragraph" id="d8e456">
+            Parfois, il est difficile (voire impossible) de trouver <code>f(i)</code>.<br />
+            On suivra alors une autre approche
+            qui revient à calculer un nombre à afficher à partir du nombre précédemment affiché
+            (ou, plus
+            exactement, de calculer le suivant à partir du nombre qu’on vient d’afficher). <br />
+            La structure générale est alors
+            
+         </p><pre>
+nb ← {1re valeur à afficher}
+pour i de 1 à n faire
+    afficher nb
+    nb ← {calculer ici le nb suivant}
+fin pour
+      </pre><p class="paragraph" id="d8e467">
+            Dans l’exemple de la suite paire, le 1er nombre à afficher est 
+            2 et le nombre suivant se calcule en ajoutant 2 au nombre courant.
+            
+         </p><pre>
+module suite1 (n↓ : entier)
+    nb, i : entiers
+    nb ← 2
+    pour i de 1 à n faire
+      afficher nb
+      nb ← nb + 2
+    fin pour
+fin module
+      </pre></div>
+      <hr />
+      <div class="navigation_arrows"><a href="Boucles_learningObject8.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject10.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 23.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

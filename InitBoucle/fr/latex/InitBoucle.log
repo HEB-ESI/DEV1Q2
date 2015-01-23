@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  21 JAN 2015 23:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  23 JAN 2015 00:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -911,29 +911,27 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 397.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 538.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 538.
+Overfull \hbox (3.75528pt too wide) in paragraph at lines 510--512
+[]\T1/lmr/m/n/10.95 Pour plus d'exer-cices, ré-vi-sez ici ([][]$\T1/lmtt/m/n/9 
+www . heb . be / esi / InitBoucle / fr / . . / . . / TDBoucle /
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 514.
+[7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 514.
  (./InitBoucle.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 538.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 538.
-
-
-Package rerunfilecheck Warning: File `InitBoucle.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `InitBoucle.out':
-(rerunfilecheck)             Before: DE93D5B88EEA2AD5CE1263229732E1AD;284
-(rerunfilecheck)             After:  7FDE8C6B3F43A10DFDFE14FD20BB6872;283.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 538.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 514.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 514.
+Package rerunfilecheck Info: File `InitBoucle.out' has not changed.
+(rerunfilecheck)             Checksum: 7FDE8C6B3F43A10DFDFE14FD20BB6872;283.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 514.
  ) 
 Here is how much of TeX's memory you used:
- 13565 strings out of 493304
- 194286 string characters out of 6139871
+ 13562 strings out of 493304
+ 194249 string characters out of 6139871
  321040 words of memory out of 5000000
- 16691 multiletter control sequences out of 15000+600000
- 71393 words of font info for 55 fonts, out of 8000000 for 9000
+ 16689 multiletter control sequences out of 15000+600000
+ 71028 words of font info for 54 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,43p,338b,1367s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
@@ -951,10 +949,10 @@ e/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on InitBoucle.pdf (7 pages, 349912 bytes).
+Output written on InitBoucle.pdf (7 pages, 350045 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
+ 222 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
  73 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -46,7 +46,7 @@ fin tant que
         et <formatted style="code">fin tant que</formatted> au moins <formatted style="bold">une instruction qui 
         modifie</formatted> une des composantes de <formatted style="bold">la condition</formatted>
         de telle manière qu’elle puisse <formatted style="bold">devenir fausse</formatted> à un moment donné. Dans le cas contraire,
-        la condition reste <formatted style="bold">indéfiniment vrai</formatted>e et la boucle va tourner sans fin, c’est ce qu’on appelle
+        la condition reste <formatted style="bold">indéfiniment vraie</formatted> et la boucle va tourner sans fin, c’est ce qu’on appelle
         une <formatted style="bold">boucle infinie</formatted>.
       </paragraph>
       <paragraph>
@@ -89,10 +89,141 @@ fin module
     </look>
 		</learningObject>
 
+    <learningObject title="while">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+		    L'équivalent Java de la boucle 
+		  </paragraph>
+		  <paragraph cssClass="code">
+tant que condition faire
+    séquence d’instructions à exécuter
+fin tant que
+      </paragraph>
+      <paragraph>est </paragraph>
+		  <paragraph  cssClass="code">
+while ( condition ) {
+    séquence d’instructions à exécuter
+}
+		  </paragraph>
+    </clarify>
+    
+    <look>
+      <paragraph title="Les puissances de 2" ></paragraph>
+      <paragraph  cssClass="java">
+<![CDATA[public class Util {
+
+public static void puissance2() {
+    int puissance = 1;
+    while ( puissance < 100 ) {
+      System.out. print(puissance + " ");
+      puissance = 2 * puissance ;
+    }
+}]]></paragraph>
+      <paragraph>affichera <formatted style="code">1 2 4 8 16 32 64 </formatted></paragraph>
+      
+      <paragraph title="Somme d'entiers positifs"></paragraph>
+      <paragraph cssClass="java">
+<![CDATA[import java. util .Scanner;
+public class Exemple {
+    /**
+     * Affiche la somme d entiers positifs entres au clavier .
+     * S arrete des qu une valeur nulle ou negative est donnee.
+     * @param args non utilise
+    */
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      int nb;
+      int somme = 0;
+      nb = clavier . nextInt ();
+      while ( nb > 0 ) {
+        somme = somme + nb;
+        nb = clavier . nextInt ();
+      }
+      System.out. println (somme);
+    }
+}]]></paragraph>
+    <paragraph>Affichera 0 si le premier nb lu vaut -5.</paragraph>
+    
+    <paragraph title="Somme d'entiers positifs"></paragraph>
+      <paragraph cssClass="java">
+<![CDATA[import java. util .Scanner;
+public class Exemple {
+    /**
+     * Affiche la somme d entiers positifs entres au clavier .
+     * S arrete des qu une valeur nulle ou negative est donnee.
+     * @param args non utilise
+    */
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      int nb;
+      int somme = 0;
+      nb = clavier . nextInt ();
+      while ( nb > 0 ) {
+        somme = somme + nb;
+        nb = clavier . nextInt ();
+      }
+      System.out. println (somme);
+    }
+}]]></paragraph>
+    <paragraph>Affichera 0 si le premier nb lu vaut -5.</paragraph>
+    
+    <paragraph title="Un exemple complet"></paragraph>
+      <paragraph cssClass="java">
+<![CDATA[import java. util .Scanner;
+public class Lecture {
+    /**
+    * Lit un entier au clavier .
+    * Les valeurs non entieres sont passees .
+    * @return l entier lu .
+    */
+    public static int lireEntier () {
+      Scanner clavier = new Scanner(System.in);
+      int nb;
+      // Tant que ce n  est pas un entier au clavier
+      while ( ! clavier .hasNextInt() ) {
+        clavier .next (); // le lire , le passer
+      }
+      nb = clavier . nextInt ();
+      return nb;
+    }
+
+    /**
+    * Lit un entier au clavier .
+    * Les valeurs non entieres , nulles ou negatives sont passees .
+    * @return l entier lu .
+    */
+    public static int lirePositif () {
+      int nb;
+      nb = lireEntier ();
+      while (nb<=0) {
+        nb = lireEntier ();
+      }
+      return nb;
+    }
+
+    /**
+    * Un exemple de main.
+    */
+    public static void main(String [] args){
+      int nombreLu;
+      
+      System.out. print ("Entrez un entier  positif : ");
+      nombreLu = lirePositif ();
+    }
+}]]></paragraph>
+    </look>
+    
+  </learningObject>
 
 		<learningObject title="faire - jusqu’à ce que">
 		<!-- ================================================ -->
 		<clarify>
+		  <paragraph cssClass="code">
+faire
+    séquence d’instructions à exécuter
+jusqu'à ce que conditionPourSORTIRDeLaBoucle
+      </paragraph>
 		  <paragraph>
         Cette structure est très proche du « <formatted style="code">tant que</formatted> » à deux différences près :
         <list listStyle="ordered">
@@ -149,6 +280,78 @@ fin module
       
     </look>
 		</learningObject>
+		
+		
+    <learningObject title="do...while">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+		    L'équivalent Java de la boucle 
+		  </paragraph>
+		  <paragraph cssClass="code">
+faire
+    séquence d’instructions à exécuter
+jusqu'à ce que conditionPourSORTIRDeLaBoucle
+      </paragraph>
+      <paragraph>est </paragraph>
+		  <paragraph  cssClass="code">
+do ( condition ) {
+    séquence d’instructions à exécuter
+}while( ! conditionPourSORTIRDeLaBoucle );
+		  </paragraph>
+		  <paragraph>il s'agirait plutôt en Java d'un </paragraph>
+		  <paragraph cssClass="code">
+faire
+    séquence d’instructions à exécuter
+tant que conditionPourRESTERDansLaBoucle
+      </paragraph>
+      <paragraph>c-à-d </paragraph>
+		  <paragraph  cssClass="code">
+do ( condition ) {
+    séquence d’instructions à exécuter
+}while( conditionPourRESTERDansLaBoucle );
+		  </paragraph>
+		  car la condition est inversée.
+    </clarify>
+    
+    <look>
+      <paragraph title="Les puissances de 2" ></paragraph>
+      <paragraph  cssClass="java">
+<![CDATA[public class Util {
+
+public static void puissance2() {
+    int puissance = 1;
+    while ( puissance < 100 ) {
+      System.out. print(puissance + " ");
+      puissance = 2 * puissance ;
+    }
+}]]></paragraph>
+      <paragraph>affichera <formatted style="code">1 2 4 8 16 32 64 </formatted></paragraph>
+      
+      <paragraph title="Somme d'entiers positifs"></paragraph>
+      <paragraph cssClass="java">
+<![CDATA[import java. util .Scanner;
+public class Exemple {
+    /**
+     * Affiche la somme d entiers positifs entres au clavier .
+     * S arrete des qu une valeur nulle ou negative est donnee.
+     * @param args non utilise
+    */
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      int nb;
+      int somme = 0;
+      do{
+        nb = clavier . nextInt ();
+        somme = somme + nb;
+      }while ( ( nb > 0 );
+      System.out. println (somme);
+    }
+}]]></paragraph>
+    <paragraph>Affichera -5 si le premier nb lu vaut -5.</paragraph>
+    </look>
+    
+  </learningObject>
 
 
 		<learningObject title="pour">
@@ -312,6 +515,81 @@ fin module
     </look>
 		</learningObject>
 		
+    <learningObject title="for">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+		    L'équivalent Java de la boucle 
+		  </paragraph>
+		  <paragraph cssClass="code">
+pour variable de début à fin [par pas] faire
+    séquence d’instructions à exécuter
+fin pour
+      </paragraph>
+      <paragraph>est </paragraph>
+		  <paragraph  cssClass="code">
+<![CDATA[for ( int i =début; i<=fin; i=i+pas ) {
+    séquence d’instructions à exécuter
+}
+  ]]></paragraph>
+    </clarify>
+    
+    <look>
+      <paragraph title="Les nombres pairs entre 2 et 100" ></paragraph>
+      <paragraph  cssClass="java">
+<![CDATA[public class Exemple {
+    /**
+    * Affiche la somme des nombres pairs entre 2 et 100 inclus.
+    * @param args non utilise
+    */
+    public static void main(String [] args) {
+      int somme;
+      somme = 0;
+      for ( int i =2; i<=100; i=i+2 ) {
+        somme = somme + i;
+      }
+      System.out. println (somme);
+    }
+}]]></paragraph>
+
+      <paragraph title="Compte à rebours"></paragraph>
+            <paragraph cssClass="code">
+<![CDATA[public class Exemple {
+    /**
+    * Affiche un compte a rebours a partir de 10.
+    * @param args non utilise
+    */
+    public static void main(String [] args) {
+      for ( int i=10; i>=1; i=i−1 ) {
+        System.out. println ( i );
+      }
+      System.out. println ("Partez !");
+    }
+}]]></paragraph>
+    </look>
+    
+    <clarify>
+      <paragraph><formatted style="code">i++;</formatted> est un raccourci pour <formatted style="code">i =i+1;</formatted></paragraph>
+    </clarify>
+    
+    <look>
+      <paragraph  cssClass="java">
+<![CDATA[public class Exemple {
+    /**
+    * Affiche les nombres de 1 a 10 inclus.
+    * @param args non utilise
+    */
+    public static void main(String [] args) {
+      for ( int i =1; i<=10; i++ ) {
+        System.out. println ( i );
+      }
+    }
+}]]></paragraph>
+    </look>
+    
+  </learningObject>
+
+
 		<learningObject title="Quel type de boucle choisir ?">
 		<!-- ================================================ -->
 		<clarify>
@@ -369,7 +647,7 @@ fin module
       </paragraph>
       <paragraph cssClass="code">
 pour i de 1 à n faire
-    afficher f (i)
+    afficher f(i)
 fin pour
       </paragraph>
       <paragraph>Par exemple, pour afficher la suite des n premiers nombres pairs</paragraph>
@@ -382,10 +660,11 @@ module nombrePair (n↓ : entier)
 fin module
       </paragraph>
       <paragraph>
-        Parfois, il est difficile (voire impossible) de trouver f (i). On suivra alors une autre approche
+        Parfois, il est difficile (voire impossible) de trouver <formatted style="code">f(i)</formatted>.<newLine/>
+        On suivra alors une autre approche
         qui revient à calculer un nombre à afficher à partir du nombre précédemment affiché (ou, plus
-        exactement, de calculer le suivant à partir du nombre qu’on vient d’afficher). La structure
-        générale est alors
+        exactement, de calculer le suivant à partir du nombre qu’on vient d’afficher). <newLine/>
+        La structure générale est alors
       </paragraph>
       <paragraph cssClass="code">
 nb ← {1re valeur à afficher}
@@ -852,6 +1131,12 @@ public class Test {
               palindrome est un nombre qui lu dans un sens (de gauche à droite) est identique au nombre
               lu dans l’autre sens (de droite à gauche). Par exemple, 1047401 est un nombre palindrome.
             </item>
+            <item>
+                affiche les <formatted style="code">n</formatted> premiers termes de la suite suivante : 
+                <formatted style="code">1, –1, 2, –3, 5, –8, 13, –21, 34, –55, …</formatted>
+                où <formatted style="code">n</formatted> est un entier strictement positif reçu en paramètre.<newLine/>
+                Si le <formatted style="code">n</formatted> reçu n'est pas strictement positif, votre programme s'arrêtera en générant une erreur/une exception.
+            </item>
           </list>
         </paragraph>
         <paragraph>En java, n'oubliez pas d'écrire la javadoc et la méthode main pour tester vos méthodes.</paragraph>
@@ -859,11 +1144,18 @@ public class Test {
         <paragraph title="Jeu de la fourchette">
           Écrivez un algorithme qui simule le jeu de la fourchette. Ce jeu consiste à essayer de découvrir
           un nombre quelconque compris entre 0 et 100 inclus, tiré au sort par l’ordinateur (la primitive
-          <formatted style="code">hasard(n : entier)</formatted> retourne un entier entre 0 inclus et n exclus). 
-          L’utilisateur a droit à huit essais maximum.
-          À chaque essai, l’algorithme devra afficher un message indicatif « nombre donné trop petit »
-          ou « nombre donné trop grand ». En conclusion, soit « bravo, vous avez trouvé en [nombre]
-          essai(s) » soit « désolé, le nombre était [valeur] ».
+          <formatted style="code">hasard(n : entier)</formatted> retourne un entier entre 0 inclus et n exclus). <newLine/>
+          L’utilisateur a droit à huit essais maximum.<newLine/>
+          À chaque essai, l’algorithme devra afficher un message indicatif
+          <list listStyle="unordered">
+            <item>« nombre donné trop petit »</item>
+            <item>ou « nombre donné trop grand ». </item>
+          </list>
+          En conclusion, 
+          <list listStyle="unordered">
+            <item>soit « bravo, vous avez trouvé en [nombre] essai(s) »</item>
+            <item>soit « désolé, le nombre était [valeur] ».</item>
+          </list>
         </paragraph>
         <paragraph>Écrivez le code java correspondant.</paragraph>
         <paragraph>

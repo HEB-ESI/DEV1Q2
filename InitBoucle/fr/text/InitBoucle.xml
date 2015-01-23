@@ -337,6 +337,22 @@ public class Test {
     <learningObject title="À vous de jouer...">
     <!-- ============================================================ -->
       <act>
+      
+        <paragraph title="Un nombre est-il divisible par 9 ?">
+          En base dix, on peut facilement vérifier si un nombre est divisible par 9 :
+          on calcule la somme de ses chiffres et l'on regarde si cette somme est encore divisible par 9
+          c'est-à-dire, si l'on itère le processus, si la dernière somme donne 9. <newLine/>
+          Écrivez un algorithme permettant de dire si un nombre donné est divisible par 9, en appliquant la méthode décrite ci-dessus.
+        </paragraph>
+        <paragraph>Écrivez le code java correspondant ainsi que la javadoc.</paragraph>
+        
+        <paragraph title="Suite de positifs">
+          Écrivez un algorithme qui lit une suite de nombres positifs entrés au clavier et affiche
+          le maximum, le minimum, leur somme et la moyenne.<newLine/>
+          La fin de la suite de nombre sera signifiée par une valeur sentinelle que vous choisirez
+          judicieusement.
+        </paragraph>
+        <paragraph>Écrivez le code java correspondant ainsi que la javadoc.</paragraph>
         
         <paragraph title="La conjecture de Goldbach">
           La conjecture de Goldbach est une assertion mathématique non démontrée qui s’énonce comme suit :
@@ -356,19 +372,15 @@ public class Test {
         </paragraph>
         <paragraph>
           Écrivez un second module, <formatted style="code">principal</formatted>, qui lit un nombre et vérifie que tous les
-          nombres pairs inférieurs à ce nombre sont la somme de 2 nombres premiers. Ce
-          module affiche vrai ou faux selon le cas.
+          nombres pairs inférieurs à ce nombre sont la somme de 2 nombres premiers. Ce module affiche vrai ou faux selon le cas.
         </paragraph>
         <paragraph>
           Mettez en évidence les variables <formatted style="bold">« données »</formatted>, 
           les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;
         </paragraph>
-        <paragraph>
-          Écrivez un module qui vérifie si trois entiers donnés constituent un triple Pythagoricien.
-        </paragraph>
-        <paragraph>Écrivez le code java correspondant.</paragraph>
+        <paragraph>Écrivez le code java correspondant ainsi que la javadoc.</paragraph>
         <paragraph>Pour plus d'exercices, 
-        <link uri="../../../TDAlt/fr/html/unit_Exercices.html">révisez ici</link></paragraph>
+        <link uri="../../../TDBoucle/fr/html/Exercices_learningObject3.html">révisez ici</link></paragraph>
       </act>
     </learningObject>
   </unit>

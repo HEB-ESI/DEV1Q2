@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  21 JAN 2015 23:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  23 JAN 2015 00:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -798,7 +798,7 @@ LaTeX Info: Redefining \nameref on input line 143.
 \openout5 = `TDBoucle.out'.
 
 
-<../../../_templates/java/icons/logo-esi.jpg, id=48, 45.16875pt x 85.31876pt>
+<../../../_templates/java/icons/logo-esi.jpg, id=64, 45.16875pt x 85.31876pt>
 File: ../../../_templates/java/icons/logo-esi.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/logo-esi.jpg>
@@ -842,7 +842,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 152.
 
-<../../../_templates/java/icons/cc-gris.jpg, id=49, 88.33pt x 31.11626pt>
+<../../../_templates/java/icons/cc-gris.jpg, id=65, 88.33pt x 31.11626pt>
 File: ../../../_templates/java/icons/cc-gris.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/cc-gris.jpg>
@@ -889,7 +889,7 @@ cc-gris.jpg>]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleTq.jpg, id=76, 298.11
+</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleTq.jpg, id=96, 298.11
 375pt x 331.2375pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleTq.jpg Graphic f
 ile (type jpg)
@@ -919,175 +919,177 @@ rs lues.[]
  []
 
 [3 </home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleTq.jpg>]
-Overfull \hbox (7.19002pt too wide) in paragraph at lines 299--303
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+)
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 302.
+
+
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [4] [5]
+Overfull \hbox (7.19002pt too wide) in paragraph at lines 440--444
 []\T1/lmr/m/n/10.95 Il faut que la sé-quence d'ins-truc-tions com-prise entre [
 ]\T1/lmtt/m/n/10.95 faire \T1/lmr/m/n/10.95 et []\T1/lmtt/m/n/10.95 jusqu'à ce 
 que
  []
 
-
-</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleFaire.jpg, id=93, 251
-.94125pt x 331.2375pt>
+[6]
+</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleFaire.jpg, id=230, 25
+1.94125pt x 331.2375pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleFaire.jpg Graphi
 c file (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleFaire.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/bou
-cleFaire.jpg used on input line 311.
+cleFaire.jpg used on input line 452.
 (pdftex.def)             Requested size: 288.00409pt x 378.65079pt.
 
-Overfull \hbox (19.41641pt too wide) in paragraph at lines 341--341
+[7 </home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleFaire.jpg>]
+Overfull \hbox (19.41641pt too wide) in paragraph at lines 482--482
 []\T1/lmtt/m/n/10.95 // Lit des valeurs entières et retourne la somme des valeu
 rs lues.[] 
  []
 
 
-Overfull \hbox (76.90375pt too wide) in paragraph at lines 341--341
+Overfull \hbox (76.90375pt too wide) in paragraph at lines 482--482
 []    \T1/lmtt/m/n/10.95 encore : booléen // est-ce qu'il reste encore une vale
 ur à additionner ?[] 
  []
 
-[4] [5 </home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleFaire.jpg>]
-Overfull \hbox (104.55254pt too wide) in paragraph at lines 363--363
+[8] [9]
+Overfull \hbox (104.55254pt too wide) in paragraph at lines 577--577
 []    \T1/lmtt/m/n/10.95 variable $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 va
 riable + pas // ou variable $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 variable
  + 1 si le pas est omis.[] 
  []
 
 
-Overfull \hbox (14.50697pt too wide) in paragraph at lines 417--423
+Overfull \hbox (14.50697pt too wide) in paragraph at lines 631--637
 []\T1/lmr/m/n/10.95 Il est aussi for-te-ment \T1/lmr/bx/n/10.95 dé-con-seillé d
 e mo-di-fier ^^Sma-nuel-le-ment \T1/lmr/m/n/10.95 ^^Tla []\T1/lmtt/m/n/10.95 va
 riable
  []
 
 
-Overfull \hbox (4.87743pt too wide) in paragraph at lines 417--423
+Overfull \hbox (4.87743pt too wide) in paragraph at lines 631--637
 \T1/lmr/m/n/10.95 pas s'oc-cu-per de sa mo-di-fi-ca-tion, l'ins-truc-tion []\T1
 /lmtt/m/n/10.95 variable $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 variable + 
 pas
  []
 
-[6]
-</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/bouclePour.jpg, id=114, 398
+
+</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/bouclePour.jpg, id=278, 398
 .48875pt x 598.235pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/bouclePour.jpg Graphic
  file (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/bouclePour.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/bou
-clePour.jpg used on input line 432.
+clePour.jpg used on input line 646.
 (pdftex.def)             Requested size: 288.01224pt x 432.38109pt.
 
-[7 </home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/bouclePour.jpg>]
-Overfull \hbox (25.16515pt too wide) in paragraph at lines 481--481
+[10]
+Overfull \hbox (25.16515pt too wide) in paragraph at lines 695--695
 []\T1/lmtt/m/n/10.95 // Reçoit un nombre et affiche les nombres pairs jusqu'à c
 e nombre.[] 
  []
 
 
-Overfull \hbox (65.40628pt too wide) in paragraph at lines 481--481
+Overfull \hbox (65.40628pt too wide) in paragraph at lines 695--695
 []\T1/lmtt/m/n/10.95 Exemple : si n vaut 10, les nombres pairs de 1 à 10 sont :
  2, 4, 6, 8, 10.[] 
  []
 
 
-Overfull \hbox (25.16515pt too wide) in paragraph at lines 498--498
+Overfull \hbox (25.16515pt too wide) in paragraph at lines 712--712
 []\T1/lmtt/m/n/10.95 // Reçoit un nombre et affiche les nombres pairs jusqu'à c
 e nombre.[] 
  []
 
-
-Overfull \hbox (82.65248pt too wide) in paragraph at lines 498--498
+[11]
+Overfull \hbox (82.65248pt too wide) in paragraph at lines 712--712
 []\T1/lmtt/m/n/10.95 // Exemple : si n vaut 10, les nombres pairs de 1 à 10 son
 t : 2, 4, 6, 8, 10.[] 
  []
 
-[8]
-Overfull \hbox (209.12462pt too wide) in paragraph at lines 515--515
+
+Overfull \hbox (209.12462pt too wide) in paragraph at lines 729--729
 []\T1/lmtt/m/n/10.95 // Exemple : si n vaut 10, les 10 premiers nombres pairs s
 ont : 2, 4, 6, 8, 10, 12, 14, 16, 18, 20.[] 
  []
 
 
-Overfull \hbox (19.41641pt too wide) in paragraph at lines 537--537
+Overfull \hbox (19.41641pt too wide) in paragraph at lines 751--751
 []\T1/lmtt/m/n/10.95 // Lit des valeurs entières et retourne la somme des valeu
 rs lues.[] 
  []
 
 
-Overfull \hbox (76.35631pt too wide) in paragraph at lines 537--537
+Overfull \hbox (76.35631pt too wide) in paragraph at lines 751--751
 []    \T1/lmtt/m/n/10.95 somme $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 0 // 
 la somme se construit petit à petit. Elle vaut 0 au départ[] 
  []
 
-[9]
-</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleChoixType.jpg, id=134
+[12] [13]
+</home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleChoixType.jpg, id=322
 , 582.175pt x 452.69125pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleChoixType.jpg Gr
 aphic file (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleChoixType.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/bou
-cleChoixType.jpg used on input line 559.
+cleChoixType.jpg used on input line 840.
 (pdftex.def)             Requested size: 288.00429pt x 223.94817pt.
 
-[10 </home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleChoixType.jpg>]
-[11]
-Overfull \hbox (18.86897pt too wide) in paragraph at lines 666--666
+[14] [15]
+Overfull \hbox (18.86897pt too wide) in paragraph at lines 950--950
 []      \T1/lmtt/m/n/10.95 nb $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 nb + d
 irection // faire un pas dans la bonne direction[] 
  []
 
 
-Overfull \hbox (53.90881pt too wide) in paragraph at lines 666--666
+Overfull \hbox (53.90881pt too wide) in paragraph at lines 950--950
 []      \T1/lmtt/m/n/10.95 si nbPasRestants = 0 alors // il est temps de change
 r de direction[] 
  []
 
-[12] [13] [14] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
-)
-[15]
+[16] [17] [18] [19]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 834.
+(Font)              <9> on input line 1118.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 834.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 889.
+(Font)              <5> on input line 1118.
+ [20] [21]
+Overfull \hbox (143.39471pt too wide) in paragraph at lines 1288--1290
+[]\T1/lmr/m/n/10.95 affiche les []\T1/lmtt/m/n/10.95 n \T1/lmr/m/n/10.95 pre-mi
+ers termes de la suite sui-vante : []\T1/lmtt/m/n/10.95 1, ^^U1, 2, ^^U3, 5, ^^
+U8, 13, ^^U21, 34, ^^U55, ...
+ []
 
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [16] [17] [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1031.
- [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1031.
+[22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1336.
+ [23] [24 </home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/bouclePour.jpg>] 
+[25 </home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleChoixType.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1336.
+ (./TDBoucle.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1336.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1336.
 
-(./TDBoucle.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1031.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1031.
-
-
-
-Package rerunfilecheck Warning: File `TDBoucle.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `TDBoucle.out':
-(rerunfilecheck)             Before: 63CA5B1A68C8458652D5AA517184E092;759
-(rerunfilecheck)             After:  4B0A9305ABC33AE89F767ACDF1FBE829;822.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1031.
+Package rerunfilecheck Info: File `TDBoucle.out' has not changed.
+(rerunfilecheck)             Checksum: 715571B8907AE31E41616AA66B864028;1001.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1336.
  ) 
 Here is how much of TeX's memory you used:
- 13646 strings out of 493304
- 196135 string characters out of 6139871
- 317435 words of memory out of 5000000
- 16719 multiletter control sequences out of 15000+600000
- 80562 words of font info for 56 fonts, out of 8000000 for 9000
+ 13838 strings out of 493304
+ 198816 string characters out of 6139871
+ 330994 words of memory out of 5000000
+ 16743 multiletter control sequences out of 15000+600000
+ 80981 words of font info for 57 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,43p,336b,2015s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
-vips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/shar
-e/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive/texmf-dist/fonts/type1
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/latxfont/lcirclew.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/tex
@@ -1100,10 +1102,10 @@ e/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt
 8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on TDBoucle.pdf (19 pages, 451932 bytes).
+Output written on TDBoucle.pdf (25 pages, 477836 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 301 compressed objects within 4 object streams
- 122 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 534 compressed objects within 6 object streams
+ 289 named destinations out of 1000 (max. 500000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 

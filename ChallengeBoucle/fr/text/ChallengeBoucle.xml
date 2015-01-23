@@ -3,40 +3,104 @@
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
 	label="ChallengeBoucle" title="Challenge : les boucles">
 	
-	<entry>
+	<entry title="Le calendrier">
+	
 		<paragraph>
-			Avez-vous compris les alternatives ? Voyons ça en relevant le défi du calendrier :
+			Avez-vous compris les boucles ? Voyons ça en relevant le défi du calendrier : <newLine/>
+			réalisez un programme permettant d'afficher sur le terminal 
+      le calendrier d'un mois et d'une année données. <newLine/>
+      Voici un exemple d'affichage pour
+      le mois de mars 2015 : 
+    </paragraph>
+        <paragraph cssClass="code">
+Mars 2015
+
+Lun Mar Mer Jeu Ven Sam Dim
+                        01
+02  03  04  05  06  07  08
+09  10  11  12  13  14  15
+16  17  18  19  20  21  22
+23  24  25  26  27  28  29
+30  31
 		</paragraph>
-    <paragraph title="Afficher le titre">
-      Écrivez un module qui affiche le texte :
+    <paragraph>
+      Votre programme devra demander à l’utilisateur d’entrer au clavier un mois et une année au format MM AAAA
+      (par exemple 03 2015) et afficher le calendrier de ce mois.
     </paragraph>
-    <paragraph cssClass="code">
-      DEV1 - Entête - Athlétisme - <formatted style="italic">votre nom</formatted>
+    <paragraph >
+      Pour déterminer le jour de la semaine où commence le mois, vous utiliserez <link uri="http://en.wikipedia.org/wiki/Zeller%27s_congruence">la congruence de Zeller</link>. <newLine/>
+      Pour le calendrier grégorien, actuellement utilisé dans la majeure partie du monde, la congruence de Zeller est la suivante :
     </paragraph>
-    <paragraph title="Calcul des points pour un 100m">
-      Chaque performance à l’athlétisme peut être transformée en points via une formule qui
-      dépend de l’épreuve. C’est utilisé notamment pour établir des classements lors d’épreuves
-      multiples comme le décathlon. <newLine/>
-      Pour le 100m, la formule est : <formatted style="code">points = 25.4347 ∗ (18 − temps)^(1.81)</formatted> (arrondi à l’entier inférieur)
-      Par exemple, le record d’Usain Bolt à 9.58 s vaut 1202 points.<newLine/>
-      Modifiez votre module pour qu’il lise le temps mis pour parcourir 100m (un réel représentant le nombre de secondes)
-      et affiche les points obtenus (un entier)
+    <paragraph>
+      <multimedia src="../image/zeller.png" type="png" />
+    </paragraph>
+    <paragraph>
+      où
+      <list listStyle="unordered">
+				<item><formatted style="code">h</formatted> est un entier représentant le jour de la semaine (0 = samedi, 1 = dimanche, 2 = lundi, . . .),</item>
+				<item><formatted style="code">q</formatted> est un entier représentant le jour du mois (de 1 à 31),</item>
+				<item><formatted style="code">m</formatted> est un entier représentant le numéro du mois 
+				(3 = mars, 4 = avril, . . . Janvier et février étant considérés comme les mois 13 et 14 de l’année précédente. Donc janvier 2015 sera considéré comme 13 2014),</item>
+				<item><formatted style="code">J</formatted> est un entier représentant year/100 (par exemple 20 pour l’année 2008),</item>
+				<item><formatted style="code">K</formatted> est un entier représentant l’année dans le siècle, c’est à dire year mod 100 (par exemple 15 pour l’année 2015)</item>
+				<item><formatted style="code">x/y</formatted> représente le résultat de <formatted style="bold">division entière</formatted> de x par y.</item>
+      </list>
+      Ainsi, pour le 3 mars 2015, <formatted style="code">q</formatted> = 3, <formatted style="code">m</formatted> = 3, 
+      <formatted style="code">J</formatted> = 20 et <formatted style="code">K</formatted> = 15. <newLine/>
+      Le résultat <formatted style="code">h</formatted> de la congruence de Zeller est ((3+10+15+3+5+100) mod 7) = (136 mod 7) = 3 et donc <formatted style="bold">mardi</formatted>.
+    </paragraph>
+    <paragraph>
+      Une autre règle est nécessaire : celle des années bissextiles. <newLine/>
+      En effet, le mois de février de ces années contient 29 jours au lieu de 28.
+      Depuis l’instauration du calendrier grégorien, sont bissextiles les années divisibles par 4 mais non divisibles par 100 ou les années divisibles par 400. 
+      Ainsi, 2016 est une année bissextile mais 2015 pas.
     </paragraph>
     
     <paragraph title="Calcul de la catégorie">
-      Comme dans beaucoup de disciplines, les athlètes sont répartis en catégories en fonction de
-      leur âge. Pour l’athlétisme les catégories sont :
+      Écrivez les modules suivants, dont voici les prototypes :
       <list listStyle="unordered">
-        <item>Junior si ils sont nés en 1996 ou 1997</item>
-        <item>Senior si ils sont nés entre 1980 et 1995</item>
-        <item>Master si ils sont nés avant 1980</item>
-      </list>
-      Modifiez votre module pour qu’il lise l’année de naissance de l’athlète et affiche sa
-      catégorie. On peut supposer que l’année entrée est correcte.
+        <item>
+          <paragraph>
+            <formatted style="code">module dayOfWeek(day, month, year : entiers) → entier</formatted>
+          </paragraph>
+          qui retourne un entier correspondant au jour de la semaine (0 = lundi, 1 = mardi, . . .) pour une date donnée en paramètre. <newLine/>
+          Le paramètre year est au format AAAA, par exemple 2015.
+        </item>
+        <item>
+          <paragraph>
+            <formatted style="code">module daysInMonth(month, year : entiers) → entier</formatted>
+          </paragraph>
+          qui retourne le nombre de jours du mois donné en paramètre.
+        </item>
+        <item>
+          <paragraph>
+            <formatted style="code">module isLeapYear(year : entier) → booléen</formatted>
+          </paragraph>
+          qui reçoit une année au format AAAA et qui renvoie vrai si cette année est bissextile et faux si elle ne l’est pas.
+        </item>
+        <item>
+          <paragraph>
+            <formatted style="code">module printDay(day : entier)</formatted>
+          </paragraph>
+          qui affiche à l’écran au format JJ le numéro du jour donné en paramètre.<newLine/>
+          Par exemple, si on donne 1 en paramètre à cette fonction, celle-ci affichera 01.
+        </item>
+        <item>
+          <paragraph>
+            <formatted style="code">module printCalendar(month, year : entiers)</formatted>
+          </paragraph>
+          qui affiche à l’écran le calendrier du mois de l'année passés en paramètre, les semaines commençant par le lundi.
+        </item>
+        <item>
+          <paragraph>
+            <formatted style="code">module principal</formatted>
+          </paragraph>
+          qui demande à l'utilisateur d'entrer un mois et une année au clavier.<newLine/>
+          Si le mois entré n'est pas valide, le programme redemandera la lecture jusqu'à obtenir une valeur correcte pour le mois.<newLine/>
+          Ensuite, le programme affichera à l'écran le calendrier du mois et de l'année lus.
+        </item>
+        </list>
     </paragraph>
-		<paragraph>Programmez maintenant votre module en Java.</paragraph>
-		<paragraph>
-        Aide en Java : pour prendre la partie entière d’un réel en Java, on peut écrire : entier = (int) réel;
-    </paragraph>
+		<paragraph>Écrivez le code java correspondant ainsi que la javadoc.</paragraph>
 	</entry>
 </lesson>

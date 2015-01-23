@@ -5,7 +5,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <meta http-equiv="Content-Style-Type" content="text/css" />
-      <meta name="description" content="TD Boucles: À vous de jouer.... À la pompe. Métro. La conjecture de Goldbach. " />
+      <meta name="description" content="TD Boucles: À vous de jouer.... Un nombre est-il divisible par 9 ? Suite de positifs. La conjecture de Goldbach. " />
       <meta name="copyright" content="" />
       <meta name="author" content="" />
       <meta name="keywords" content="TD Boucles, eLML" />
@@ -27,89 +27,63 @@
       </ul>
       <div class="navigation_arrows"><a href="Boucles_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><img src="../../../_templates/java/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0" /></div><a name="top"></a><h1 id="Boucles_learningObject3.html">1.1.3. À vous de jouer...</h1>
       <div id="d8e150.html" class="act">
-         <h4>À la pompe</h4>
-         <p class="paragraph" title="À la pompe" id="d8e151">
-            À la pompe à essence, le prix du carburant dépend du type de carburant. Reprenons
-            ci-dessous le prix au litre pratiqué par ESI-Pompe. 
-            
-            <ul class="list" id="d8e153">
-               <li class="itemAlt">Super 95 : 1,429 €/L</li>
-               <li class="item">Super 98 : 1,604 €/L</li>
-               <li class="itemAlt">Diesel : 1,249 €/L</li>
-               <li class="item">LPG : 0,558 €/L</li>
-            </ul>
-         </p>
-         <p class="paragraph" id="d8e162">
-            Mettez en évidence les variables <b>« données »</b>, 
-            les variables <b>« résultats »</b> et les variables de travail ;
+         <h4>Un nombre est-il divisible par 9 ?</h4>
+         <p class="paragraph" title="Un nombre est-il divisible par 9 ?" id="d8e151">
+            En base dix, on peut facilement vérifier si un nombre est divisible par 9 :
+            on calcule la somme de ses chiffres et l'on regarde si cette somme est encore divisible
+            par 9
+            c'est-à-dire, si l'on itère le processus, si la dernière somme donne 9. <br />
+            Écrivez un algorithme permettant de dire si un nombre donné est divisible par 9, en
+            appliquant la méthode décrite ci-dessus.
             
          </p>
-         <p class="paragraph" id="d8e170">
-            Écrivez un module qui lit le type de carburant et la quantité désirée (considérée
-            positive) et qui affiche le prix à payer.<br />
-            Exemple : pour du Super 95 et pour une quantité de 30,46 litres le module retourne
-            le prix de 43,52 €.
+         <p class="paragraph" id="d8e155">Écrivez le code java correspondant ainsi que la javadoc.</p>
+         <h4>Suite de positifs</h4>
+         <p class="paragraph" title="Suite de positifs" id="d8e157">
+            Écrivez un algorithme qui lit une suite de nombres positifs entrés au clavier et affiche
+            le maximum, le minimum, leur somme et la moyenne.<br />
+            La fin de la suite de nombre sera signifiée par une valeur sentinelle que vous choisirez
+            judicieusement.
             
          </p>
-         <p class="paragraph" id="d8e174">Écrivez le code java correspondant.</p>
-         <h4>Métro</h4>
-         <p class="paragraph" title="Métro" id="d8e176">
-            L'horaire du métro bruxellois varie selon le jour et l'heure. La fréquence des passages
-            est de 5
-            minutes en semaine de 6h à 10h et de 15h à 19h. De 7 minutes en semaine de 10h à 15h
-            et le
-            samedi de 12h à 19h. De 10 min après 19h en semaine et le samedi et toute la journée
-            de
-            dimanche. 
-            
-         </p>
-         <p class="paragraph" id="d8e178">
-            Mettez en évidence les variables <b>« données »</b>, 
-            les variables <b>« résultats »</b> et les variables de travail ;
-            
-         </p>
-         <p class="paragraph" id="d8e186">
-            Écrivez un module qui reçoit un nom de jour et une heure et qui retourne la fréquence
-            pour ce moment. <br />
-            Exemple : jour = « lundi » ; heure = 16 fréquence = 5
-            
-         </p>
-         <p class="paragraph" id="d8e190">Écrivez le code java correspondant.</p>
+         <p class="paragraph" id="d8e161">Écrivez le code java correspondant ainsi que la javadoc.</p>
          <h4>La conjecture de Goldbach</h4>
-         <p class="paragraph" title="La conjecture de Goldbach" id="d8e192">
+         <p class="paragraph" title="La conjecture de Goldbach" id="d8e163">
             La conjecture de Goldbach est une assertion mathématique non démontrée qui s’énonce
             comme suit :
             
          </p>
-         <p class="paragraph" id="d8e194"><b>Tout nombre entier pair supérieur à 3 peut s’écrire comme la somme de deux nombres
+         <p class="paragraph" id="d8e165"><b>Tout nombre entier pair supérieur à 3 peut s’écrire comme la somme de deux nombres
                premiers.</b></p>
-         <p class="paragraph" id="d8e197">
+         <p class="paragraph" id="d8e168">
             Écrivez un module <code>isPremier</code> qui reçoit un nombre entier <code>n</code> 
             et qui retourne vrai si ce nombre est premier et faux sinon.
             
          </p>
-         <p class="paragraph" id="d8e206">
+         <p class="paragraph" id="d8e176">
             Écrivez un module <code>goldbach</code> qui reçoit en paramètre 
             un nombre entier pair <code>p</code> supérieur à 3 
             et qui retourne vrai s’il est la somme de 2 nombres premiers et faux sinon.
             Si le <code>p</code> reçu n'est supérieur à 3, votre programme générera une erreur.
             
          </p>
-         <p class="paragraph" id="d8e217">
+         <p class="paragraph" id="d8e187">
+            Écrivez un second module, <code>principal</code>, qui lit un nombre et vérifie que tous les
+            nombres pairs inférieurs à ce nombre sont la somme de 2 nombres premiers. Ce module
+            affiche vrai ou faux selon le cas.
+            
+         </p>
+         <p class="paragraph" id="d8e192">
             Mettez en évidence les variables <b>« données »</b>, 
             les variables <b>« résultats »</b> et les variables de travail ;
             
          </p>
-         <p class="paragraph" id="d8e225">
-            Écrivez un module qui vérifie si trois entiers donnés constituent un triple Pythagoricien.
-            
-         </p>
-         <p class="paragraph" id="d8e227">Écrivez le code java correspondant.</p>
-         <p class="paragraph" id="d8e229">Pour plus d'exercices, 
-            <a class="link" href="../../../TDAlt/fr/html/unit_Exercices.html" rel="external" title="révisez ici">révisez ici</a></p>
+         <p class="paragraph" id="d8e200">Écrivez le code java correspondant ainsi que la javadoc.</p>
+         <p class="paragraph" id="d8e203">Pour plus d'exercices, 
+            <a class="link" href="../../../TDBoucle/fr/html/Exercices_learningObject3.html" rel="external" title="révisez ici">révisez ici</a></p>
       </div>
       <hr />
       <div class="navigation_arrows"><a href="Boucles_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><img src="../../../_templates/java/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0" /></div>
-      <p class="footer"> Update: 21.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/InitBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 23.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/InitBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

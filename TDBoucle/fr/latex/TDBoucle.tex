@@ -215,7 +215,7 @@ fin tant que
         et \verb@fin tant que@ au moins \textbf{une instruction qui 
         modifie} une des composantes de \textbf{la condition}
         de telle mani\`ere qu'elle puisse \textbf{devenir fausse} \`a un moment donn\'e. Dans le cas contraire,
-        la condition reste \textbf{ind\'efiniment vrai}e et la boucle va tourner sans fin, c'est ce qu'on appelle
+        la condition reste \textbf{ind\'efiniment vraie} et la boucle va tourner sans fin, c'est ce qu'on appelle
         une \textbf{boucle infinie}.
       
             \par
@@ -271,7 +271,148 @@ module sommeNombres() → entier
     fin tant que
 retourner somme
 fin module
-      \end{verbatim}\subsection{faire - jusqu'\`a ce que}
+      \end{verbatim}\subsection{while}
+		    L'\'equivalent Java de la boucle 
+		  
+            \par
+        \begin{verbatim}
+tant que condition faire
+    séquence d’instructions à exécuter
+fin tant que
+      \end{verbatim}est 
+            \par
+        \begin{verbatim}
+while ( condition ) {
+    séquence d’instructions à exécuter
+}
+		  \end{verbatim}
+			
+		\subparagraph{Les puissances de 2} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        \begin{Java}
+public class Util {
+
+public static void puissance2() {
+    int puissance = 1;
+    while ( puissance < 100 ) {
+      System.out. print(puissance + " ");
+      puissance = 2 * puissance ;
+    }
+}\end{Java}affichera \verb@1 2 4 8 16 32 64 @
+            \par
+        
+			
+		\subparagraph{Somme d'entiers positifs} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        \begin{Java}
+import java. util .Scanner;
+public class Exemple {
+    /**
+     * Affiche la somme d entiers positifs entres au clavier .
+     * S arrete des qu une valeur nulle ou negative est donnee.
+     * @param args non utilise
+    */
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      int nb;
+      int somme = 0;
+      nb = clavier . nextInt ();
+      while ( nb > 0 ) {
+        somme = somme + nb;
+        nb = clavier . nextInt ();
+      }
+      System.out. println (somme);
+    }
+}\end{Java}Affichera 0 si le premier nb lu vaut -5.
+            \par
+        
+			
+		\subparagraph{Somme d'entiers positifs} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        \begin{Java}
+import java. util .Scanner;
+public class Exemple {
+    /**
+     * Affiche la somme d entiers positifs entres au clavier .
+     * S arrete des qu une valeur nulle ou negative est donnee.
+     * @param args non utilise
+    */
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      int nb;
+      int somme = 0;
+      nb = clavier . nextInt ();
+      while ( nb > 0 ) {
+        somme = somme + nb;
+        nb = clavier . nextInt ();
+      }
+      System.out. println (somme);
+    }
+}\end{Java}Affichera 0 si le premier nb lu vaut -5.
+            \par
+        
+			
+		\subparagraph{Un exemple complet} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        \begin{Java}
+import java. util .Scanner;
+public class Lecture {
+    /**
+    * Lit un entier au clavier .
+    * Les valeurs non entieres sont passees .
+    * @return l entier lu .
+    */
+    public static int lireEntier () {
+      Scanner clavier = new Scanner(System.in);
+      int nb;
+      // Tant que ce n  est pas un entier au clavier
+      while ( ! clavier .hasNextInt() ) {
+        clavier .next (); // le lire , le passer
+      }
+      nb = clavier . nextInt ();
+      return nb;
+    }
+
+    /**
+    * Lit un entier au clavier .
+    * Les valeurs non entieres , nulles ou negatives sont passees .
+    * @return l entier lu .
+    */
+    public static int lirePositif () {
+      int nb;
+      nb = lireEntier ();
+      while (nb<=0) {
+        nb = lireEntier ();
+      }
+      return nb;
+    }
+
+    /**
+    * Un exemple de main.
+    */
+    public static void main(String [] args){
+      int nombreLu;
+      
+      System.out. print ("Entrez un entier  positif : ");
+      nombreLu = lirePositif ();
+    }
+}\end{Java}\subsection{faire - jusqu'\`a ce que}\begin{verbatim}
+faire
+    séquence d’instructions à exécuter
+jusqu'à ce que conditionPourSORTIRDeLaBoucle
+      \end{verbatim}
         Cette structure est tr\`es proche du \guillemotleft  \verb@tant que@ \guillemotright  \`a deux diff\'erences pr\`es :
         
 					\begin{enumerate}
@@ -339,6 +480,79 @@ module sommeNombres() → entier
     retourner somme
 fin module
       \end{verbatim}Avec cette solution, on additionne au moins une valeur.
+            \par
+        \subsection{do...while}
+		    L'\'equivalent Java de la boucle 
+		  
+            \par
+        \begin{verbatim}
+faire
+    séquence d’instructions à exécuter
+jusqu'à ce que conditionPourSORTIRDeLaBoucle
+      \end{verbatim}est 
+            \par
+        \begin{verbatim}
+do ( condition ) {
+    séquence d’instructions à exécuter
+}while( ! conditionPourSORTIRDeLaBoucle );
+		  \end{verbatim}il s'agirait plut\^ot en Java d'un 
+            \par
+        \begin{verbatim}
+faire
+    séquence d’instructions à exécuter
+tant que conditionPourRESTERDansLaBoucle
+      \end{verbatim}c-\`a-d 
+            \par
+        \begin{verbatim}
+do ( condition ) {
+    séquence d’instructions à exécuter
+}while( conditionPourRESTERDansLaBoucle );
+		  \end{verbatim}
+		  car la condition est invers\'ee.
+    
+			
+		\subparagraph{Les puissances de 2} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        \begin{Java}
+public class Util {
+
+public static void puissance2() {
+    int puissance = 1;
+    while ( puissance < 100 ) {
+      System.out. print(puissance + " ");
+      puissance = 2 * puissance ;
+    }
+}\end{Java}affichera \verb@1 2 4 8 16 32 64 @
+            \par
+        
+			
+		\subparagraph{Somme d'entiers positifs} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        \begin{Java}
+import java. util .Scanner;
+public class Exemple {
+    /**
+     * Affiche la somme d entiers positifs entres au clavier .
+     * S arrete des qu une valeur nulle ou negative est donnee.
+     * @param args non utilise
+    */
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      int nb;
+      int somme = 0;
+      do{
+        nb = clavier . nextInt ();
+        somme = somme + nb;
+      }while ( ( nb > 0 );
+      System.out. println (somme);
+    }
+}\end{Java}Affichera -5 si le premier nb lu vaut -5.
             \par
         \subsection{pour}
         On va indiquer combien de fois la t\^ache doit \^etre r\'ep\'et\'ee. Cela se fait au travers
@@ -534,7 +748,74 @@ module sommeNombres() → entier
     fin pour
     retourner somme
 fin module
-    \end{verbatim}\subsection{Quel type de boucle choisir ?}
+    \end{verbatim}\subsection{for}
+		    L'\'equivalent Java de la boucle 
+		  
+            \par
+        \begin{verbatim}
+pour variable de début à fin [par pas] faire
+    séquence d’instructions à exécuter
+fin pour
+      \end{verbatim}est 
+            \par
+        \begin{verbatim}
+for ( int i =début; i<=fin; i=i+pas ) {
+    séquence d’instructions à exécuter
+}
+  \end{verbatim}
+			
+		\subparagraph{Les nombres pairs entre 2 et 100} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        \begin{Java}
+public class Exemple {
+    /**
+    * Affiche la somme des nombres pairs entre 2 et 100 inclus.
+    * @param args non utilise
+    */
+    public static void main(String [] args) {
+      int somme;
+      somme = 0;
+      for ( int i =2; i<=100; i=i+2 ) {
+        somme = somme + i;
+      }
+      System.out. println (somme);
+    }
+}\end{Java}
+			
+		\subparagraph{Compte \`a rebours} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        \begin{verbatim}
+public class Exemple {
+    /**
+    * Affiche un compte a rebours a partir de 10.
+    * @param args non utilise
+    */
+    public static void main(String [] args) {
+      for ( int i=10; i>=1; i=i−1 ) {
+        System.out. println ( i );
+      }
+      System.out. println ("Partez !");
+    }
+}\end{verbatim}\verb@i++;@ est un raccourci pour \verb@i =i+1;@
+            \par
+        \begin{Java}
+public class Exemple {
+    /**
+    * Affiche les nombres de 1 a 10 inclus.
+    * @param args non utilise
+    */
+    public static void main(String [] args) {
+      for ( int i =1; i<=10; i++ ) {
+        System.out. println ( i );
+      }
+    }
+}\end{Java}\subsection{Quel type de boucle choisir ?}
 		    En pratique, il est possible d'utiliser syst\'ematiquement la boucle tant que qui peut s'adapter
         \`a toutes les situations. Cependant, 
         
@@ -589,7 +870,7 @@ fin module
             \par
         \begin{verbatim}
 pour i de 1 à n faire
-    afficher f (i)
+    afficher f(i)
 fin pour
       \end{verbatim}Par exemple, pour afficher la suite des n premiers nombres pairs
             \par
@@ -601,10 +882,13 @@ module nombrePair (n↓ : entier)
     fin pour
 fin module
       \end{verbatim}
-        Parfois, il est difficile (voire impossible) de trouver f (i). On suivra alors une autre approche
+        Parfois, il est difficile (voire impossible) de trouver \verb@f(i)@.\par
+				
+        On suivra alors une autre approche
         qui revient \`a calculer un nombre \`a afficher \`a partir du nombre pr\'ec\'edemment affich\'e (ou, plus
-        exactement, de calculer le suivant \`a partir du nombre qu'on vient d'afficher). La structure
-        g\'en\'erale est alors
+        exactement, de calculer le suivant \`a partir du nombre qu'on vient d'afficher). \par
+				
+        La structure g\'en\'erale est alors
       
             \par
         \begin{verbatim}
@@ -1000,6 +1284,13 @@ FIN MODULE
               palindrome est un nombre qui lu dans un sens (de gauche \`a droite) est identique au nombre
               lu dans l'autre sens (de droite \`a gauche). Par exemple, 1047401 est un nombre palindrome.
             
+			\item 
+                affiche les \verb@n@ premiers termes de la suite suivante : 
+                \verb@1, –1, 2, –3, 5, –8, 13, –21, 34, –55, …@
+                o\`u \verb@n@ est un entier strictement positif re\c cu en param\`etre.\par
+				
+                Si le \verb@n@ re\c cu n'est pas strictement positif, votre programme s'arr\^etera en g\'en\'erant une erreur/une exception.
+            
 					\end{enumerate}
 				
             \par
@@ -1013,12 +1304,26 @@ FIN MODULE
 				
           \'Ecrivez un algorithme qui simule le jeu de la fourchette. Ce jeu consiste \`a essayer de d\'ecouvrir
           un nombre quelconque compris entre 0 et 100 inclus, tir\'e au sort par l'ordinateur (la primitive
-          \verb@hasard(n : entier)@ retourne un entier entre 0 inclus et n exclus). 
-          L'utilisateur a droit \`a huit essais maximum.
-          \`A chaque essai, l'algorithme devra afficher un message indicatif \guillemotleft  nombre donn\'e trop petit \guillemotright 
-          ou \guillemotleft  nombre donn\'e trop grand \guillemotright . En conclusion, soit \guillemotleft  bravo, vous avez trouv\'e en [nombre]
-          essai(s) \guillemotright  soit \guillemotleft  d\'esol\'e, le nombre \'etait [valeur] \guillemotright .
-        
+          \verb@hasard(n : entier)@ retourne un entier entre 0 inclus et n exclus). \par
+				
+          L'utilisateur a droit \`a huit essais maximum.\par
+				
+          \`A chaque essai, l'algorithme devra afficher un message indicatif
+          
+					\begin{itemize}
+				
+			\item \guillemotleft  nombre donn\'e trop petit \guillemotright 
+			\item ou \guillemotleft  nombre donn\'e trop grand \guillemotright . 
+					\end{itemize}
+				
+          En conclusion, 
+          
+					\begin{itemize}
+				
+			\item soit \guillemotleft  bravo, vous avez trouv\'e en [nombre] essai(s) \guillemotright 
+			\item soit \guillemotleft  d\'esol\'e, le nombre \'etait [valeur] \guillemotright .
+					\end{itemize}
+				
             \par
         \'Ecrivez le code java correspondant.
             \par
