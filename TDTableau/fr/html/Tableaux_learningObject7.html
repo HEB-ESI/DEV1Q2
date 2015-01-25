@@ -1,0 +1,159 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Tableaux: Parcours d’un tableau à une dimension.. Parcours complet. Parcours avec sortie prématurée. Parcours avec sortie prématurée sans variable booléenne. Parcours avec sortie prématurée avec variable booléenne. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Tableaux, eLML" />
+      <title>1.1.7. Parcours d’un tableau à une dimension.</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Tableaux</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Tableaux.html">1.1. Les tableaux</a><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="Tableaux_learningObject1.html">1.1.1. Notation en algo</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject2.html">1.1.2. Déclaration et création en Java</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject3.html">1.1.3. Taille logique et physique</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject4.html">1.1.4. Taille d'un tableau en Java</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject5.html">1.1.5. Tableau et paramètres de module</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject6.html">1.1.6. Tableau et paramètres de méthodes</a></li>
+                     <li class="navigationActual"><strong>1.1.7. Parcours d’un tableau à une dimension.</strong></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject8.html">1.1.8. Erreurs fréquentes et exceptions lancées en Java</a></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.2. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="Tableaux_learningObject6.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject8.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Tableaux_learningObject7.html">1.1.7. Parcours d’un tableau à une dimension.</h1>
+      <div id="d8e293.html" class="clarify">
+         <p class="paragraph" id="d8e294">
+            		    Soit le tableau <code>tab</code> déclaré ainsi
+            		  
+         </p><pre>
+tab : tableau [1 à n] de T  // où T est un type quelconque
+      </pre><p class="paragraph" id="d8e301">Envisageons d’abord le parcours complet et voyons ensuite les parcours avec arrêt
+            prématuré.
+         </p>
+         <h4>Parcours complet.</h4>
+         <p class="paragraph" title="Parcours complet." id="d8e303">
+            		    Pour parcourir complètement un tableau, on peut utiliser la boucle 
+            		    <code>pour</code> comme dans
+            l’algorithme suivant où « traiter » va dépendre du problème concret posé : afficher,
+            modifier,
+            sommer, . . .
+            
+         </p><pre>
+// Parcours complet d’un tableau via une boucle pour
+// Les déclarations sont omises pour ne pas alourdir les algorithmes.
+pour i de 1 à n faire
+    traiter tab[i]
+fin pour
+      </pre><h4>Parcours avec sortie prématurée.</h4>
+         <p class="paragraph" title="Parcours avec sortie prématurée." id="d8e310">
+            Parfois, on ne doit pas forcément parcourir le tableau jusqu’au bout mais on pourra
+            s’arrêter
+            prématurément si une certaine condition est remplie. Par exemple :
+            
+            <ol class="list" id="d8e312">
+               <li class="itemAlt">on cherche la présence d’un élément et on vient de le trouver ;</li>
+               <li class="item">on vérifie qu’il n’y a pas de 0 et on vient d’en trouver un.</li>
+            </ol>
+            La première étape est de transformer le <code>pour</code> 
+            en <code>tant que</code> ce qui donne l’algorithme
+            
+         </p><pre>
+// Parcours complet d’un tableau via une boucle tant-que
+i ← 1
+tant que i ≤ n faire
+    traiter tab[i]
+    i ← i+1
+fin tant que
+		  </pre><p class="paragraph" id="d8e326">
+            		    On peut à présent introduire le test d’arrêt. Une contrainte est qu’on voudra,
+            à la fin de la
+            boucle, savoir si oui ou non on s’est arrêté prématurément et, si c’est le cas, à
+            quel indice.
+            
+         </p>
+         <p class="paragraph" id="d8e328">
+            Il existe essentiellement deux solutions, avec ou sans variable booléenne. En général,
+            la
+            solution [A] sera plus claire si le test est court.
+            		  
+         </p>
+         <h4>Parcours avec sortie prématurée sans variable booléenne</h4>
+         <p class="paragraph" title="Parcours avec sortie prématurée sans variable booléenne" id="d8e330"></p><pre>
+// Parcours partiel d’un tableau sans variable booléenne
+i ← 1
+tant que i ≤ n ET test sur tab[i] dit que on continue faire
+    i ← i+1
+fin tant que
+
+si i &gt; n alors
+    // on est arrivé au bout
+sinon
+    // arrêt prématuré à l’indice i.
+fin si
+      </pre><p class="paragraph" id="d8e334">
+            Il faut être attentif à <b>ne pas inverser les deux parties du test</b>. 
+            Il faut absolument vérifier  que l’indice est bon avant de tester la valeur à cet
+            indice.
+            
+         </p>
+         <p class="paragraph" id="d8e339">
+            On pourrait inverser les deux branches du si-sinon en inversant le test mais attention
+            à ne
+            pas tester <code>tab[i]</code> car <code>i</code> n’est peut-être pas valide.
+            
+         </p>
+         <p class="paragraph" id="d8e347">
+            Dans certains cas, le si-sinon peut se simplifier en un simple return d’une condition.
+            
+         </p>
+         <p class="paragraph" id="d8e349">Par exemple : </p><pre>
+// Indique si un zéro est présent dans le tableau
+module contientZéro(tab : tableau [1 à n] d’entiers) → booléen
+    i : entier
+    i ← 1
+    tant que i ≤ n ET tab[i] ≠ 0 faire
+      i ← i+1
+    fin tant que
+    retourner i ≤ n // Si le test est vrai c’est qu’on a trouvé un 0
+fin module
+      </pre><h4>Parcours avec sortie prématurée avec variable booléenne</h4>
+         <p class="paragraph" title="Parcours avec sortie prématurée avec variable booléenne" id="d8e353"></p><pre>
+// Parcours partiel d’un tableau avec variable booléenne
+i ← 1
+trouvé ← faux
+tant que i ≤ n ET NON trouvé faire
+    si test sur tab[i] dit que on a trouvé alors
+      trouvé ← vrai
+    sinon
+      i ← i+1
+    fin si
+fin tant que
+// tester le booléen pour savoir si arrêt prématuré.
+      </pre><p class="paragraph" id="d8e356">
+            Attention à bien choisir un nom de booléen adapté au problème et à l’initialiser à
+            la bonne
+            valeur. Par exemple, si la variable s’appelle « continue »
+            
+            <ol class="list" id="d8e358">
+               <li class="itemAlt">initialiser la variable à vrai ;</li>
+               <li class="item">le test de la boucle est « . . .ET continue » ;</li>
+               <li class="itemAlt">mettre la variable à faux pour sortir de la boucle.</li>
+            </ol>
+         </p>
+      </div>
+      <hr />
+      <div class="navigation_arrows"><a href="Tableaux_learningObject6.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject8.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 25.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

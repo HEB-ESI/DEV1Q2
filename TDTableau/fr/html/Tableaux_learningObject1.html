@@ -1,0 +1,117 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Tableaux: Notation en algo. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Tableaux, eLML" />
+      <title>1.1.1. Notation en algo</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Tableaux</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Tableaux.html">1.1. Les tableaux</a><ul class="navigation nav_lo">
+                     <li class="navigationActual"><strong>1.1.1. Notation en algo</strong></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject2.html">1.1.2. Déclaration et création en Java</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject3.html">1.1.3. Taille logique et physique</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject4.html">1.1.4. Taille d'un tableau en Java</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject5.html">1.1.5. Tableau et paramètres de module</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject6.html">1.1.6. Tableau et paramètres de méthodes</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject7.html">1.1.7. Parcours d’un tableau à une dimension.</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject8.html">1.1.8. Erreurs fréquentes et exceptions lancées en Java</a></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.2. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="unit_Tableaux.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Tableaux_learningObject1.html">1.1.1. Notation en algo</h1>
+      <div id="d8e42.html" class="clarify">
+         <p class="paragraph" id="d8e43">
+            Pour <b>déclarer un tableau</b>, on écrit :
+            
+         </p><pre>
+nomTableau : tableau [borneMin à borneMax] de TypeÉlément
+      </pre><p class="paragraph" id="d8e50">
+            où <code>TypeÉlément</code> est le type des éléments 
+            que l’on trouvera dans le tableau. Les éléments sont
+            d’un des types élémentaires vus précédemment 
+            (<code>entier</code>, <code>réel</code>, 
+            <code>booléen</code>, <code>chaine</code>, 
+            <code>caractère</code>) ou encore des variables structurées. 
+            
+         </p>
+         <p class="paragraph" id="d8e71">
+            À ce propos, remarquons aussi qu’un tableau peut être un
+            champ d’une structure. D’autres possibilités apparaitront lors de l’étude de l’orienté
+            objet.
+            
+         </p>
+         <p class="paragraph" id="d8e73">
+            Les <b>bornes</b> apparaissant dans la déclaration 
+            sont des constantes ou des paramètres ayant une
+            valeur connue lors de la déclaration. Une fois un tableau déclaré, <b>seuls les éléments d’indice
+               compris entre borneMin et borneMax peuvent être utilisés</b>. 
+            
+         </p>
+         <p class="paragraph" id="d8e81">
+            Par exemple, si on déclare :
+            
+         </p><pre>
+        tabEntiers : tableau [1 à 100] d’entiers
+      </pre><p class="paragraph" id="d8e85">
+            Il est interdit d’utiliser tabEntiers[0] ou tabEntiers[101]. De plus, chaque élément
+            tabEntiers[i]
+            (avec 1 ≤ i ≤ 100) doit être manié avec la même précaution qu’une variable simple,
+            c’est-à-
+            dire qu’on ne peut utiliser un élément du tableau qui n’aurait pas été préalablement
+            affecté
+            ou initialisé.
+            
+         </p>
+         <p class="paragraph" id="d8e87">
+            N.B. : Il n’est pas interdit de prendre 0 pour la borne inférieure ou même d’utiliser
+            des
+            bornes négatives (par exemple : tabTempératures : tableau [-20 à 50] de réels).
+            En Java, un tableau est défini par sa taille n et les bornes sont automatiquement
+            0 et n − 1.
+            Ce n’est pas le cas en algorithmique où on a plus de liberté dans le choix des bornes
+            
+         </p>
+      </div>
+      <div id="d8e89.html" class="look"><pre>
+// Calcule et affiche la quantité vendue de 10 produits.
+module statistiquesVentesAvecTableau()
+    cpt : tableau [1 à 10] d’entiers
+    i, numéroProduit, quantité : entiers
+    
+    pour i de 1 à 10 faire
+      cpt[i] ← 0
+    fin pour
+    
+    afficher "Introduisez le numéro du produit :"
+    lire numéroProduit
+    tant que numéroProduit &gt; 0 faire
+      afficher "Introduisez la quantité vendue :"
+      lire quantité
+      cpt[numéroProduit] ← cpt[numéroProduit] + quantité
+      afficher "Introduisez le numéro du produit :"
+      lire numéroProduit
+    fin tant que
+    
+    pour i de 1 à 10 faire
+      afficher "quantité vendue de produit ", i, " : ", cpt[i]
+    fin pour
+fin module
+      </pre></div>
+      <hr />
+      <div class="navigation_arrows"><a href="unit_Tableaux.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 25.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

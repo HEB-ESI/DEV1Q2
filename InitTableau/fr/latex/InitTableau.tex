@@ -1,0 +1,515 @@
+\documentclass[11pt,a4paper]{article}
+			\usepackage[french]{babel}
+					
+				\usepackage{pifont}  
+				\usepackage[utf8x]{inputenc}
+				\usepackage[T1]{fontenc} 
+				\usepackage{lmodern}			
+				\usepackage{fancyhdr}
+				\usepackage{textcomp}
+				\usepackage{makeidx}
+				\usepackage{tabularx}
+				\usepackage{multicol}
+				\usepackage{multirow}
+				\usepackage{longtable}
+				\usepackage{color}
+				\usepackage{soul}
+				\usepackage{boxedminipage}
+				\usepackage{shadow}
+				\usepackage{framed}			
+				\usepackage{array}
+				\usepackage{url}
+				\usepackage{ragged2e}
+				\usepackage{fancybox}
+				\newcommand{\cadretitre}[2]{
+				  \vspace*{0.8\baselineskip}
+				  \begin{center}%
+				  \boxput*(0,1){%
+					%\colorbox{white}{\Large\textbf{\ #1\ }}%
+				  }%
+				  {%
+					\setlength{\fboxsep}{10pt}%
+				    \Ovalbox{\begin{minipage}{.8\linewidth}\begin{center}\Large\sffamily{#2}\end{center}\end{minipage}}}%
+				  \end{center}
+				  \vspace*{2\baselineskip}
+				  }
+			
+			\makeatletter
+			\def\@seccntformat#1{\protect\makebox[0pt][r]{\csname the#1\endcsname\quad}}
+			\makeatother
+
+				% Permet d'afficher qqchose à une positin absolue
+				\usepackage[absolute]{textpos}
+				\setlength{\TPHorizModule}{1cm}
+				\setlength{\TPVertModule}{\TPHorizModule}
+	
+				\usepackage[titles]{tocloft}
+				\setlength{\cftbeforesecskip}{0.5ex}
+				\setlength{\cftbeforesubsecskip}{0.2ex}
+				\addto\captionsfrench{\renewcommand\contentsname{}}
+				
+				\usepackage[font=scriptsize]{caption}
+				
+				\usepackage{listings}
+\lstdefinestyle{lstverb}
+  {
+    basicstyle=\footnotesize,
+    frameround=tttt, frame=trbl, framerule=0pt, rulecolor=\color{gray},
+    lineskip=-1pt,   % pour rapprocher les lignes
+    flexiblecolumns, escapechar=\\,
+    tabsize=4, extendedchars=true
+  }
+\lstnewenvironment{Java}[1][]{\lstset{style=lstverb,language=java,#1}}{}
+				\ifx\pdfoutput\undefined
+					\usepackage{graphicx}
+				\else
+					\usepackage[pdftex]{graphicx}
+				\fi
+				\usepackage[a4paper, hyperfigures=true, colorlinks, linkcolor=black, citecolor=blue,urlcolor=blue, pagebackref=true, bookmarks=true, bookmarksopen=true,bookmarksnumbered=true,
+                pdfauthor={}, pdftitle={TD Tableaux}, pdfkeywords={TD Tableaux, },pdfpagemode=UseOutlines,pdfpagetransition=Dissolve,nesting=true,
+				backref, pdffitwindow=true, bookmarksnumbered=true]{hyperref}
+				\usepackage{supertabular}
+				\usepackage[table]{xcolor}
+				\usepackage{url}
+				\usepackage{caption} 
+				\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+				\setlength{\parindent}{0pt}
+				
+				\makeatletter
+				\def\url@leostyle{ \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\footnotesize\ttfamily}}}
+				\makeatother
+				\urlstyle{leo}
+				
+				\definecolor{examplecolor}{rgb}{0.156,0.333,0.443}
+				\definecolor{definitioncolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{exercisecolor}{rgb}{0.49,0.639,0}
+				\definecolor{hintcolor}{rgb}{0.941,0.674,0.196}
+				\definecolor{tableHeadercolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{tablerowAltcolor}{rgb}{.866,.905,.737}
+				\definecolor{tablerowAlt2color}{rgb}{.968,.976,.933}
+				\definecolor{verylightgray}{rgb}{0.98,0.98,0.98}
+				
+				\newenvironment{fshaded}{
+				\def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}
+				\MakeFramed {\FrameRestore}}
+				{\endMakeFramed}
+				
+				\newenvironment{fexample}[1][]{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.156,.333,.443}
+				\begin{fshaded}}{\end{fshaded}} 
+				
+				\newenvironment{fdefinition}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.709,.784,.454}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fexercise}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.49,.639,0}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fhint}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.941,.674,.196}
+				\begin{fshaded}}{\end{fshaded}}	
+				
+				\newcommand{\PreserveBackslash}[1]{
+				\let\temp=\\#1\let\\=\temp
+				}
+				\let\PBS=\PreserveBackslash
+				\newcolumntype{A}{>{\PBS\raggedright\small\hspace{0pt}}X}
+				\newcolumntype{L}[1]{>{\PBS\raggedright\small\hspace{0pt}}p{#1}}
+				\newcolumntype{R}[1]{>{\PBS\raggedleft\small\hspace{0pt}}p{#1}}
+				\newcolumntype{C}[1]{>{\PBS\centering\small\hspace{0pt}}p{#1}}
+				
+				\makeindex
+				
+				\title{TD Tableaux}	
+			\date{}
+			\author{\scriptsize{}}
+			\definecolor{light-gray}{gray}{0.8}
+			\renewcommand{\headrulewidth}{0pt}
+			\fancyhead[L]{
+				\footnotesize\textsc{Haute \'Ecole de Bruxelles}\\
+	    			\footnotesize\textsc{\'Ecole Sup\'erieure d'Informatique}
+			}
+			\fancyhead[R]{
+				\footnotesize{Bachelor en Informatique}\\
+				\footnotesize{Laboratoires Java} - 
+			\footnotesize{1\`ere ann\'ee}}
+				\fancyfoot[L]{ }
+				\fancyfoot[C]{}
+				\fancyfoot[R]{\scriptsize{\textcolor{gray}{version 2014-2015 (\today)}}}
+				\pagestyle{plain}
+				\reversemarginpar
+				\usepackage{rotating}						
+				\begin{document}
+					\begin{textblock}{9}(2,3.2)
+						\includegraphics[width=2cm]{../../../_templates/java/icons/logo-esi}
+					\end{textblock}
+				
+				
+				
+				
+				%\maketitle
+				\cadretitre{TD1}{TD Tableaux}
+				\thispagestyle{fancy}
+        \marginpar{\begin{sideways}
+            \begin{minipage}[t]{1cm}
+            \begin{tiny}
+            \includegraphics[width=1\linewidth,height=1\textheight,keepaspectratio=true]{../../../_templates/java/icons/cc-gris.jpg}
+			\end{tiny}
+			\end{minipage}
+            \begin{minipage}[b]{19cm}
+            \begin{tiny}
+            \textcolor{gray}{Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique 
+            (\texttt{http://creativecommons.org/licenses/by-sa/2.0/be/})
+			\vspace{-1em}
+			\\Les autorisations au-delà du champ de cette licence peuvent être obtenues à 
+			\texttt{http://www.heb.be/esi}
+			- \texttt{mcodutti@heb.be}
+			}\end{tiny}
+			\end{minipage}
+        \end{sideways}}
+            \begin{abstract}
+			Ces exercices ont pour but de v\'erifier que vous avez fix\'e les structures alternatives qui permettent de conditionner
+      des parties d'algorithmes, de code.
+		
+            \par
+        \end{abstract}
+				\vspace{-2em}\tableofcontents
+				\pagestyle{plain}
+            \clearpage
+            \fancyhead[L,C,R]{}
+            \fancyfoot[L,C]{}
+            \fancyfoot[R]{ \scriptsize{\textcolor{gray}{
+				InitTableau - page \thepage}}}
+				\thispagestyle{fancy}
+				\pagestyle{fancy}
+	   
+            \section{Les boucles}\subsection{Compr\'ehension d'algorithme}
+          Pour ces exercices, nous vous demandons de comprendre des algorithmes donn\'es. 
+          
+			
+		\subparagraph{Compr\'ehension} 
+		
+                \textcolor{white}{.} \par
+            
+							  Que vont-ils afficher ?
+              
+					\begin{itemize}
+				
+			\item \begin{verbatim}
+module boucle1 ()
+    x : entier
+    x ← 0
+    tant que x < 12 faire
+      x ← x+2
+    fin tant que
+    afficher x
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{verbatim}
+module boucle2 ()
+    ok : booléen
+    x : entier
+    ok ← vrai
+    x ← 5
+    tant que ok faire
+      x ← x+7
+      ok ← x MOD 11 ≠ 0
+    fin tant que
+    afficher x
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{verbatim}
+module boucle3 ()
+    ok : booléen
+    cpt, x : entiers
+    x ← 10
+    cpt ← 0
+    ok ← vrai
+    tant que ok ET cpt < 3 faire
+      si x MOD 2 = 0 alors
+        x ← x+1
+        ok ← x < 20
+      sinon
+        x ← x+3
+        cpt ← cpt + 1
+      fin si
+    fin tant que
+    afficher x
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{verbatim}
+module boucle4 ()
+    pair, grand : booléens
+    p, x : entiers
+    x ← 1
+    p ← 1
+    faire
+      p ← 2*p
+      x ← x+p
+      pair ← x MOD 2 = 0
+      grand ← x > 15
+    jusqu’à ce que pair OU grand
+    afficher x
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{verbatim}
+module boucle5 ()
+    i, x : entiers
+    ok : booléen
+    x ← 3
+    ok ← vrai
+    pour i de 1 à 5 faire
+      x ← x+i
+      ok ← ok ET (x MOD 2 = 0)
+    fin pour
+    si ok alors
+      afficher x
+    sinon
+      afficher 2 * x
+    fin si
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item \begin{verbatim}
+module boucle6 ()
+    i, j, fin : entiers
+    pour i de 1 à 3 faire
+      fin ← 6 * i - 11
+      pour j de 1 à fin par 3 faire
+        afficher 10 * i + j
+      fin pour
+    fin pour
+fin module
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{10em}}} 
+					\end{itemize}
+				
+            \par
+        \subsection{Compr\'ehension de codes Java}
+			
+		\subparagraph{Instructions r\'ep\'etitives} 
+		
+                \textcolor{white}{.} \par
+            
+							Quelles instructions r\'ep\'etitives sont correctes parmi les suivantes? 
+							Expliquez pourquoi les autres ne le sont pas.
+						
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] proposition 1
+							\begin{Java}
+While ( condition ) {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 2
+							\begin{Java}
+do while ( condition ) {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 3
+							\begin{Java}
+while ( true ) {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 4
+							\begin{Java}
+while ( true ) do {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 5
+							\begin{Java}
+FOR ( int i=0; i<=10; i=i+2 ) DO {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 6
+							\begin{Java}
+for ( int i=0; i<=10; i=i+2 ) {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 7
+							\begin{Java}
+for ( int i=0; i<=10; i=i+2 ) do {
+	// instructions
+}							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 8
+							\begin{Java}
+for ( int i=9; i>=0; i=i-2 ) {
+	// instructions
+}							\end{Java}
+        
+            \end{itemize} 
+        
+			
+		\subparagraph{Activit\'e 'remplir les blancs'} 
+		
+                \textcolor{white}{.} \par
+            
+								Quel op\'erateur de comparaison Java repr\'esente la relation suivante? 
+							
+            \par
+        
+					\begin{enumerate}
+				
+			\item "est \'egal \`a" ?                      \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item "est diff\'erent de" ?                \textcolor{gray}{\underline{\hspace*{2em}}} 
+					\end{enumerate}
+				
+								Quel op\'erateur bool\'een Java repr\'esente l'op\'erateur logique suivant? 
+							
+            \par
+        
+					\begin{enumerate}
+				
+			\item le ET :   \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item le OU :   \textcolor{gray}{\underline{\hspace*{2em}}} 
+			\item le NON :  \textcolor{gray}{\underline{\hspace*{1em}}} 
+					\end{enumerate}
+				
+			
+		\subparagraph{Exp\'erience} 
+		
+					\textcolor{white}{.} \par
+				
+					Indiquez l'affichage obtenu par ce code.
+				
+            \par
+        
+			
+		\subparagraph{Compr\'ehension} 
+		
+                \textcolor{white}{.} \par
+            
+							  Que vont-ils afficher ?
+              \begin{Java}
+public class Boucles {
+
+	public static void main ( String[] args ) {
+		int facteur;
+		final int VALEUR = 3;
+	
+		for (facteur = 1 ; facteur <= 10 ; facteur++){		
+			System.out.print(facteur*VALEUR+" ");
+		}
+		System.out.println();
+	}
+}			\end{Java} \textcolor{gray}{\underline{\hspace*{16em}}} 
+			
+		\subparagraph{Exercice Tant que} 
+		
+					\textcolor{white}{.} \par
+				
+					\'Ecrivez en Java l'algorithme suivant.
+				
+            \par
+        \begin{verbatim}
+MODULE Test
+
+    nb, produit : Entier
+    produit ← 1 
+
+    LIRE nb
+    TANT QUE nb ≠ 0 FAIRE
+        produit ← produit * nb
+        LIRE nb 
+    FIN TANT QUE
+    AFFICHER produit
+    
+FIN MODULE
+			    \end{verbatim}
+			
+		\subparagraph{Exercice Pour} 
+		
+					\textcolor{white}{.} \par
+				
+					\'Ecrivez en Java l'algorithme suivant.
+				
+            \par
+        \begin{verbatim}
+MODULE Test
+
+    nb: Entier
+    i : Entier
+
+    LIRE nb
+    POUR i DE 1 A nb FAIRE
+        AFFICHER i
+    FIN POUR
+
+FIN MODULE
+			     \end{verbatim}\subsection{\`A vous de jouer...}
+			
+		\subparagraph{Un nombre est-il divisible par 9 ?} 
+		
+					\textcolor{white}{.} \par
+				
+          En base dix, on peut facilement v\'erifier si un nombre est divisible par 9 :
+          on calcule la somme de ses chiffres et l'on regarde si cette somme est encore divisible par 9
+          c'est-\`a-dire, si l'on it\`ere le processus, si la derni\`ere somme donne 9. \par
+				
+          \'Ecrivez un algorithme permettant de dire si un nombre donn\'e est divisible par 9, en appliquant la m\'ethode d\'ecrite ci-dessus.
+        
+            \par
+        \'Ecrivez le code java correspondant ainsi que la javadoc.
+            \par
+        
+			
+		\subparagraph{Suite de positifs} 
+		
+					\textcolor{white}{.} \par
+				
+          \'Ecrivez un algorithme qui lit une suite de nombres positifs entr\'es au clavier et affiche
+          le maximum, le minimum, leur somme et la moyenne.\par
+				
+          La fin de la suite de nombre sera signifi\'ee par une valeur sentinelle que vous choisirez
+          judicieusement.
+        
+            \par
+        \'Ecrivez le code java correspondant ainsi que la javadoc.
+            \par
+        
+			
+		\subparagraph{La conjecture de Goldbach} 
+		
+					\textcolor{white}{.} \par
+				
+          La conjecture de Goldbach est une assertion math\'ematique non d\'emontr\'ee qui s'\'enonce comme suit :
+        
+            \par
+        \textbf{Tout nombre entier pair sup\'erieur \`a 3 peut s'\'ecrire comme la somme de deux nombres premiers.}
+            \par
+        
+          \'Ecrivez un module \verb@isPremier@ qui re\c coit un nombre entier \verb@n@ 
+          et qui retourne vrai si ce nombre est premier et faux sinon.
+        
+            \par
+        
+          \'Ecrivez un module \verb@goldbach@ qui re\c coit en param\`etre 
+          un nombre entier pair \verb@p@ sup\'erieur \`a 3 
+          et qui retourne vrai s'il est la somme de 2 nombres premiers et faux sinon.
+          Si le \verb@p@ re\c cu n'est sup\'erieur \`a 3, votre programme g\'en\'erera une erreur.
+        
+            \par
+        
+          \'Ecrivez un second module, \verb@principal@, qui lit un nombre et v\'erifie que tous les
+          nombres pairs inf\'erieurs \`a ce nombre sont la somme de 2 nombres premiers. Ce module affiche vrai ou faux selon le cas.
+        
+            \par
+        
+          Mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, 
+          les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
+        
+            \par
+        \'Ecrivez le code java correspondant ainsi que la javadoc.
+            \par
+        Pour plus d'exercices, 
+        r\'evisez ici (\url{www.heb.be/esi/InitTableau/fr/../../TDBoucle/fr/html/Exercices\_learningObject3.html})
+            \par
+        
+				\end{document}
+			

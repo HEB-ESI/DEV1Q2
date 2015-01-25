@@ -1,0 +1,154 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Tableaux: Déclaration et création en Java. Déclaration et création : 2 étapes. Déclaration. Création. Initialisation. Cas particulier : déclaration, création et initialisation. Accès aux éléments. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Tableaux, eLML" />
+      <title>1.1.2. Déclaration et création en Java</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Tableaux</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Tableaux.html">1.1. Les tableaux</a><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="Tableaux_learningObject1.html">1.1.1. Notation en algo</a></li>
+                     <li class="navigationActual"><strong>1.1.2. Déclaration et création en Java</strong></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject3.html">1.1.3. Taille logique et physique</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject4.html">1.1.4. Taille d'un tableau en Java</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject5.html">1.1.5. Tableau et paramètres de module</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject6.html">1.1.6. Tableau et paramètres de méthodes</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject7.html">1.1.7. Parcours d’un tableau à une dimension.</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject8.html">1.1.8. Erreurs fréquentes et exceptions lancées en Java</a></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.2. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="Tableaux_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject3.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Tableaux_learningObject2.html">1.1.2. Déclaration et création en Java</h1>
+      <div id="d8e94.html" class="clarify">
+         <p class="paragraph" id="d8e95">
+            		    Nous présentons ici une vue simplifiée  des tableaux en Java afin de coller
+            au cours d’algorithmique.
+            
+         </p>
+         <p class="paragraph" id="d8e97">
+            Nous aurons l’occasion d’être plus précis en DEV2.
+            
+         </p>
+         <p class="paragraph" id="d8e99">
+            Pour rappel, il est nécessaire de manipuler plusieurs variables similaires
+            auxquelles on accède par un indice :
+            
+         </p>
+         <p class="paragraph" id="d8e101"><span class="multimedia_inline"><img class="multimedia" id="d8e102" src="../image/tabPres.png" alt="" /></span></p>
+         <p class="paragraph" id="d8e103">
+            Contrairement à algo où on a le choix des valeurs desbornes pour les indices, 
+            en Java, les indices varient de <code>0</code> à <code>taille du tableau - 1</code>.
+            
+         </p>
+         <p class="paragraph" id="d8e111">0 est l’indice de départ.</p>
+         <h4>Déclaration et création : 2 étapes</h4>
+         <p class="paragraph" title="Déclaration et création : 2 étapes" id="d8e113">
+            En Java, l'étape de création est séparée de l'étape de déclaration. <br />
+            En effet, l'étape de déclaration réserve un emplacement mémoire sur la pile qui contiendra
+            une adresse 
+            où trouver la valeur des éléments du tableau. 
+            La création connaitra lataille du tableau, le créera sur le tas et remplira l'adresse
+            sur la pile.
+            
+         </p>
+         <p class="paragraph" id="d8e117"><span class="multimedia_inline"><img class="multimedia" id="d8e118" src="../image/reference.png" alt="" /></span></p>
+         <h4>Déclaration</h4>
+         <p class="paragraph" title="Déclaration" id="d8e119">
+            Pour déclarer un tableau : 
+            
+         </p><pre>
+Type[] identifier
+      </pre><p class="paragraph" id="d8e123">
+            Par exemple :<br /><code>int []</code> est le type tableau d’entiers<br /><code>String []</code> est le type tableau de chaines de caractères
+            
+         </p><pre>
+int [] cotes ;
+String [] noms;
+      </pre><h4>Création</h4>
+         <p class="paragraph" title="Création" id="d8e136">
+            Pour créer un tableau : 
+            
+         </p><pre>
+identifier = new Type[taille]
+      </pre><p class="paragraph" id="d8e140">
+            Par exemple :<br /><code>new int[3]</code><br /><code>new String[taille]</code> où <code>taille</code> est défini
+            
+         </p><pre>
+int [] entiers ; // déclaration
+entiers = new int[3]; // création
+      </pre><p class="paragraph" id="d8e154">
+            La déclaration et la création peuvent être combinées
+            
+         </p><pre>
+int [] entiers = new int[3];
+      </pre><h4>Initialisation</h4>
+         <p class="paragraph" title="Initialisation" id="d8e158">
+            Par défaut, les éléments sont initialisés à 0 (numériques) ou false (booléens).
+            Ce ne sont pas forcément les valeurs initiales que nous désirons. Pour changer ça
+            :
+            
+         </p><pre>
+identifier = new Type[] {x, x}
+      </pre><p class="paragraph" id="d8e162">
+            Par exemple :<br /><code>new int[] {42, 17, -5}</code><br /><code>new String[] {"foo", "bar"}</code></p><pre>
+int [] entiers = new int[] {0x2A, 021, −5};
+String [] noms = new String[] {" Victoria ", "Melanie", "Melanie", "Emma", "Geri"};
+double[] réels ;
+réels = new double[] {4.2, −1};
+      </pre><h4>Cas particulier : déclaration, création et initialisation</h4>
+         <p class="paragraph" title="Cas particulier : déclaration, création et initialisation" id="d8e173">
+            On peut déclarer le tableau, le créer et l'initialiser en une seule étape, en donnant
+            ses valeurs :
+            
+         </p><pre>
+int [] entiers = {0x2A, 021, −5};
+double[] pseudoRéels = {4.5, 1E−4, −4.12, Math.PI};
+
+// Mais si sur 2 lignes :
+double[] réels ;
+réels = {4.2, −1}; // FAUX
+      </pre><h4>Accès aux éléments</h4>
+         <p class="paragraph" title="Accès aux éléments" id="d8e177">
+            <ol class="list" id="d8e178">
+               <li class="itemAlt">0 est l’indice de départ</li>
+               <li class="item">les indices varient de 0 à taille du tableau - 1</li>
+               <li class="itemAlt">la taille du tableau est son nombre d’éléments</li>
+            </ol>
+         </p><pre>
+int [] entiers = {3, 14, 15};
+int entier = entiers [2]; // entier vaut 15
+entiers [1] = 85;
+entier = 0;
+entier = entiers [ entier +1]; // entier vaut 85
+      </pre></div>
+      <div id="d8e187.html" class="look">
+         <p class="paragraph" id="d8e188">Par exemple :</p><pre>
+
+package be.heb.esi. lg1 . tutorials . tableaux ;
+
+public class InitialisationTableau {
+    public static void main(String [] args) {
+      int [] entiers = new int[10];
+      for(int i = 0; i &lt; 10; i++) {
+        entiers [ i ] = i;
+      }
+    }
+}</pre></div>
+      <hr />
+      <div class="navigation_arrows"><a href="Tableaux_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject3.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 25.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

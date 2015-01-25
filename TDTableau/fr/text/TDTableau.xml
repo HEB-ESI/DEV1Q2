@@ -1,0 +1,1024 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="TDTableau" title="TD Tableaux">
+	
+	<entry>
+		<paragraph>
+			Voyons ici les tableaux, une structure qui peut contenir plusieurs exemplaires de données similaires.
+    </paragraph>
+	</entry>
+	
+	<!-- =========================================================== -->
+	<unit label="Tableaux" title="Les tableaux">
+	<!-- =========================================================== -->
+
+    <entry>
+      <paragraph>
+        Un <formatted style="bold">tableau</formatted> est une suite d’éléments de même type 
+        portant tous le même nom mais se distinguant les uns des autres par un indice.
+      </paragraph>
+      <paragraph>
+        L’<formatted style="bold">indice</formatted> est un entier donnant la position d’un élément dans la suite. 
+        Cet indice varie entre la position du premier élément et la position du dernier élément, 
+        ces positions correspondant aux <formatted style="bold">bornes de l’indice</formatted>. <newLine/>
+        Notons qu’il n’y a pas de « trou » : tous les éléments existent entre le premier et le dernier indice.
+      </paragraph>
+      <paragraph>
+        La <formatted style="bold">taille d’un tableau</formatted> est le nombre (strictement positif) de ses éléments. <newLine/>
+        Attention ! la taille d’un tableau ne peut pas être modifiée pendant son utilisation.
+      </paragraph>
+      <paragraph>
+        Souvent on utilise un tableau plus grand que le nombre utile de ses éléments. 
+        Seule une partie du tableau est utilisée. 
+        On parle alors de <formatted style="bold">taille physique (la taille maximale du tableau)</formatted> et
+        de <formatted style="bold">taille logique (le nombre d’éléments effectivement utilisés)</formatted>.
+		</paragraph>
+    </entry>
+    
+		<learningObject title="Notation en algo">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+        Pour <formatted style="bold">déclarer un tableau</formatted>, on écrit :
+      </paragraph>
+		  <paragraph cssClass="code">
+nomTableau : tableau [borneMin à borneMax] de TypeÉlément
+      </paragraph>
+      <paragraph>
+        où <formatted style="code">TypeÉlément</formatted> est le type des éléments 
+        que l’on trouvera dans le tableau. Les éléments sont
+        d’un des types élémentaires vus précédemment 
+        (<formatted style="code">entier</formatted>, <formatted style="code">réel</formatted>, 
+        <formatted style="code">booléen</formatted>, <formatted style="code">chaine</formatted>, 
+        <formatted style="code">caractère</formatted>) ou encore des variables structurées. 
+      </paragraph>
+      <paragraph>
+        À ce propos, remarquons aussi qu’un tableau peut être un
+        champ d’une structure. D’autres possibilités apparaitront lors de l’étude de l’orienté objet.
+      </paragraph>
+      <paragraph>
+        Les <formatted style="bold">bornes</formatted> apparaissant dans la déclaration 
+        sont des constantes ou des paramètres ayant une
+        valeur connue lors de la déclaration. Une fois un tableau déclaré, <formatted style="bold">seuls les éléments d’indice
+        compris entre borneMin et borneMax peuvent être utilisés</formatted>. 
+      </paragraph>
+      <paragraph>
+        Par exemple, si on déclare :
+      </paragraph>
+      <paragraph cssClass="code">
+        tabEntiers : tableau [1 à 100] d’entiers
+      </paragraph>
+      <paragraph>
+        Il est interdit d’utiliser tabEntiers[0] ou tabEntiers[101]. De plus, chaque élément tabEntiers[i]
+        (avec 1 ≤ i ≤ 100) doit être manié avec la même précaution qu’une variable simple, c’est-à-
+        dire qu’on ne peut utiliser un élément du tableau qui n’aurait pas été préalablement affecté
+        ou initialisé.
+      </paragraph>
+      <paragraph>
+        N.B. : Il n’est pas interdit de prendre 0 pour la borne inférieure ou même d’utiliser des
+        bornes négatives (par exemple : tabTempératures : tableau [-20 à 50] de réels).
+        En Java, un tableau est défini par sa taille n et les bornes sont automatiquement 0 et n − 1.
+        Ce n’est pas le cas en algorithmique où on a plus de liberté dans le choix des bornes
+      </paragraph>
+    </clarify>
+    
+    <look>
+      <paragraph cssClass="code">
+// Calcule et affiche la quantité vendue de 10 produits.
+module statistiquesVentesAvecTableau()
+    cpt : tableau [1 à 10] d’entiers
+    i, numéroProduit, quantité : entiers
+    
+    pour i de 1 à 10 faire
+      cpt[i] ← 0
+    fin pour
+    
+    afficher "Introduisez le numéro du produit :"
+    lire numéroProduit
+    tant que numéroProduit > 0 faire
+      afficher "Introduisez la quantité vendue :"
+      lire quantité
+      cpt[numéroProduit] ← cpt[numéroProduit] + quantité
+      afficher "Introduisez le numéro du produit :"
+      lire numéroProduit
+    fin tant que
+    
+    pour i de 1 à 10 faire
+      afficher "quantité vendue de produit ", i, " : ", cpt[i]
+    fin pour
+fin module
+      </paragraph>
+    </look>
+		</learningObject>
+		
+		<learningObject title="Déclaration et création en Java">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+		    Nous présentons ici une vue simplifiée  des tableaux en Java afin de coller
+        au cours d’algorithmique.
+      </paragraph>
+      <paragraph>
+        Nous aurons l’occasion d’être plus précis en DEV2.
+      </paragraph>
+      <paragraph>
+        Pour rappel, il est nécessaire de manipuler plusieurs variables similaires
+        auxquelles on accède par un indice :
+      </paragraph>
+      <paragraph>
+        <multimedia src="../image/tabPres.png" type="png" />
+      </paragraph>
+      <paragraph>
+        Contrairement à algo où on a le choix des valeurs desbornes pour les indices, 
+        en Java, les indices varient de <formatted style="code">0</formatted> à <formatted style="code">taille du tableau - 1</formatted>.
+      </paragraph>
+      <paragraph>0 est l’indice de départ.</paragraph>
+      <paragraph title="Déclaration et création : 2 étapes">
+        En Java, l'étape de création est séparée de l'étape de déclaration. <newLine/>
+        En effet, l'étape de déclaration réserve un emplacement mémoire sur la pile qui contiendra une adresse 
+        où trouver la valeur des éléments du tableau. 
+        La création connaitra lataille du tableau, le créera sur le tas et remplira l'adresse sur la pile.
+      </paragraph>
+      <paragraph>
+        <multimedia src="../image/reference.png" type="png" />
+      </paragraph>
+      <paragraph title="Déclaration">
+        Pour déclarer un tableau : 
+      </paragraph>
+      <paragraph cssClass="code">
+Type[] identifier
+      </paragraph>
+      <paragraph>
+        Par exemple :<newLine/>
+        <formatted style="code">int []</formatted> est le type tableau d’entiers<newLine/>
+        <formatted style="code">String []</formatted> est le type tableau de chaines de caractères
+      </paragraph>
+      <paragraph cssClass="code">
+int [] cotes ;
+String [] noms;
+      </paragraph>
+      <paragraph title="Création">
+        Pour créer un tableau : 
+      </paragraph>
+      <paragraph cssClass="code">
+identifier = new Type[taille]
+      </paragraph>
+      <paragraph>
+        Par exemple :<newLine/>
+        <formatted style="code">new int[3]</formatted><newLine/>
+        <formatted style="code">new String[taille]</formatted> où <formatted style="code">taille</formatted> est défini
+      </paragraph>
+      <paragraph cssClass="code">
+int [] entiers ; // déclaration
+entiers = new int[3]; // création
+      </paragraph>
+      <paragraph>
+        La déclaration et la création peuvent être combinées
+      </paragraph>
+      <paragraph cssClass="code">
+int [] entiers = new int[3];
+      </paragraph>
+      <paragraph title="Initialisation">
+        Par défaut, les éléments sont initialisés à 0 (numériques) ou false (booléens).
+        Ce ne sont pas forcément les valeurs initiales que nous désirons. Pour changer ça :
+      </paragraph>
+      <paragraph cssClass="code">
+identifier = new Type[] {x, x}
+      </paragraph>
+      <paragraph>
+        Par exemple :<newLine/>
+        <formatted style="code">new int[] {42, 17, -5}</formatted><newLine/>
+        <formatted style="code">new String[] {"foo", "bar"}</formatted>
+      </paragraph>
+      <paragraph cssClass="code">
+int [] entiers = new int[] {0x2A, 021, −5};
+String [] noms = new String[] {" Victoria ", "Melanie", "Melanie", "Emma", "Geri"};
+double[] réels ;
+réels = new double[] {4.2, −1};
+      </paragraph>
+      <paragraph title="Cas particulier : déclaration, création et initialisation">
+        On peut déclarer le tableau, le créer et l'initialiser en une seule étape, en donnant ses valeurs :
+      </paragraph>
+      <paragraph cssClass="code">
+int [] entiers = {0x2A, 021, −5};
+double[] pseudoRéels = {4.5, 1E−4, −4.12, Math.PI};
+
+// Mais si sur 2 lignes :
+double[] réels ;
+réels = {4.2, −1}; // FAUX
+      </paragraph>
+      <paragraph title="Accès aux éléments">
+      <list listStyle="ordered">
+          <item>0 est l’indice de départ</item>
+          <item>les indices varient de 0 à taille du tableau - 1</item>
+          <item>la taille du tableau est son nombre d’éléments</item>
+        </list>
+      </paragraph>
+      <paragraph cssClass="code">
+int [] entiers = {3, 14, 15};
+int entier = entiers [2]; // entier vaut 15
+entiers [1] = 85;
+entier = 0;
+entier = entiers [ entier +1]; // entier vaut 85
+      </paragraph>
+    </clarify>
+    <look>
+      <paragraph>Par exemple :</paragraph>
+      <paragraph cssClass="code">
+<![CDATA[
+package be.heb.esi. lg1 . tutorials . tableaux ;
+
+public class InitialisationTableau {
+    public static void main(String [] args) {
+      int [] entiers = new int[10];
+      for(int i = 0; i < 10; i++) {
+        entiers [ i ] = i;
+      }
+    }
+}]]></paragraph>
+    </look>
+    </learningObject>
+
+    <learningObject title="Taille logique et physique">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+		    Parfois, on connait la taille d’un tableau lorsqu’on écrit l’algorithme (par exemple s’il s’agit
+        de retenir les ventes pour les douze mois de l’année) mais ce n’est pas toujours le cas (par
+        exemple, connait-on le nombre de produits vendus par le magasin ?).
+		  </paragraph>
+		  <paragraph>
+		    Si cette taille n’est pas connue, une possibilité est
+        d’attribuer au tableau une taille maximale (sa taille physique) et de retenir dans une
+        variable le nombre réel de cases utilisées (sa taille logique).
+		  </paragraph>
+    </clarify>
+    
+    <look>
+      <paragraph cssClass="code">
+<![CDATA[// Calcule et affiche la quantité vendue de x produits.
+module statistiquesVentes()
+    cpt : tableau [1 à 1000] d’entiers
+    i, numéroProduit, quantité : entiers
+    nbArticles : entier
+    
+    lire nbArticles
+    pour i de 1 à nbArticles faire
+      cpt[i] ← 0
+    fin pour
+    
+    afficher "Introduisez le numéro du produit :"
+    lire numéroProduit
+    tant que numéroProduit > 0 ET numéroProduit <= nbArticles faire
+      afficher "Introduisez la quantité vendue :"
+      lire quantité
+      cpt[numéroProduit] ← cpt[numéroProduit] + quantité
+      afficher "Introduisez le numéro du produit :"
+      lire numéroProduit
+    fin tant que
+    
+    pour i de 1 à nbArticles faire
+      afficher "quantité vendue de produit ", i, " : ", cpt[i]
+    fin pour
+fin module
+]]></paragraph>
+    </look>
+    
+  </learningObject>
+  
+  <learningObject title="Taille d'un tableau en Java">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+		    En Java, un tableau connait sa taille
+      </paragraph>
+      <paragraph cssClass="code">
+identifier.length
+      </paragraph>
+      <paragraph cssClass="code">
+int [] entiers = {4, 5, 6};
+int taille = entiers . length ;
+System.out. println ( taille ); // écrit 3
+      </paragraph>
+    </clarify>
+    <look>
+      <paragraph>Par exemple : </paragraph>
+      <paragraph cssClass="code">
+<![CDATA[package be.heb.esi. lg1 . tutorials . tableaux ;
+
+public class SimpleParcoursAscendant {
+    public static void main(String [] args){
+      int [] entiers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      for(int i = 0; i < entiers . length ; i = i + 1) {
+        System.out. println ( entiers [ i ]);
+      }
+    }
+}]]>
+      </paragraph>
+      <paragraph>ou encore</paragraph>
+      <paragraph cssClass="code">
+<![CDATA[package be.heb.esi. lg1 . tutorials . tableaux ;
+
+public class SimpleParcoursDescendant {
+    public static void main(String [] args){
+      int [] entiers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+      for(int i = entiers . length − 1; i >= 0; i = i−1) {
+        System.out. println ( entiers [ i ]);
+      }
+    }
+}]]>
+      </paragraph>
+    </look>
+    </learningObject>
+
+		<learningObject title="Tableau et paramètres de module">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+		    Un tableau peut être passé en paramètre à un module mais qu’en est-il de sa taille ? Il
+        serait utile de pouvoir appeler le même module avec des tableaux de tailles différentes. Pour
+        permettre cela, la taille du tableau reçu en paramètre est déclarée avec une variable (qui
+        peut être considéré comme un paramètre entrant).
+		  </paragraph>
+		  <paragraph>
+		    Par exemple :
+		  </paragraph>
+		  <paragraph cssClass="code">
+module afficherTaille(tabEntier↓ : tableau [1 à n] d’entiers)
+    afficher "J’ai reçu un tableau de ", n, " éléments".
+fin module
+      </paragraph>
+		  <paragraph>
+        Ce <formatted style="code">n</formatted> va prendre la taille précise du tableau utilisé à chaque appel
+        et peut être utilisé dans le corps du module. Bien sûr il s’agit là de la 
+        <formatted style="bold">taille physique</formatted> du tableau. 
+      </paragraph>
+      <paragraph>
+        Si une partie seulement du tableau doit être traitée, il convient de <formatted style="bold">passer également
+        la taille logique en paramètre</formatted>.
+      </paragraph>
+		  <paragraph>Par exemple :</paragraph>
+      <paragraph cssClass="code">
+module afficherTailles(tabEntiers↓ : tableau [1 à n] d’entiers, tailleLogique : entier)
+    afficher "J’ai reçu un tableau rempli de ", tailleLogique, " éléments "
+    afficher "sur ", n, " éléments au total."
+fin module
+      </paragraph>
+      <paragraph>
+        Un module peut retourner un tableau.
+      </paragraph>
+      <paragraph cssClass="code">
+// Crée un tableau statique d’entiers de taille 10, l’initialise à 0 et le retourne.
+module créerTableau() → tableau [1 à 10] d’entiers
+    tab : tableau [1 à 10] d’entiers
+    i : entier
+    pour i de 1 à 10 faire
+      tab[i] ← 0
+    fin pour
+    retourner tab
+fin module
+
+module principalAppelTableau()
+    entiers : tableau [1 à 10] d’entiers
+    i : entier
+    entiers ← créerTableau()
+    pour i de 1 à 10 faire
+      afficher entiers[i]
+    fin pour
+fin module
+      </paragraph>
+      <paragraph>
+        Attention, il n'est pas possible de lire ou d'afficher un tableau en une seule instruction ; il faut des
+        instructions de lecture ou d’affichage individuelles pour chacun de ses éléments.
+      </paragraph>
+    </clarify>
+    </learningObject>
+    
+    <learningObject title="Tableau et paramètres de méthodes">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>Un tableau peut être un paramètre d’une méthode.</paragraph>
+		  <paragraph>Par exemple :</paragraph>
+		  <paragraph cssClass="code">
+<![CDATA[public static void afficher ( int [] entiers ) {
+    for(int i = 0; i <entiers . length ; i ++) {
+      System.out. println ( entiers [ i ]);
+    }
+}]]></paragraph>
+      <paragraph>L’appel pourrait être</paragraph>
+      <paragraph cssClass="code">
+int [] cotes = {12, 8, 10, 14, 9};
+afficher ( cotes );
+      </paragraph>
+      <paragraph title="Passage de paramètre par valeur">
+        En Java, passage de paramètre par valeur.
+        Pour un tableau, cela signifie que l’on ne peut pas
+        modifier le tableau dans son ensemble mais que
+        l’on pourra modifier ses éléments.
+      </paragraph>
+      <paragraph>Par exemple :</paragraph>
+		  <paragraph cssClass="code">
+<![CDATA[public static void remplir ( int [] entiers , int val ) {
+    for(int i = 0; i <entiers . length ; i ++) {
+      entiers [ i ] = val;
+    }
+}]]></paragraph>
+      <paragraph>L’appel pourrait être</paragraph>
+      <paragraph cssClass="code">
+int [] cotes = new int[16]; // Ne pas oublier de le créer !
+remplir ( cotes , 20 );
+      </paragraph>
+      <paragraph>MAIS :</paragraph>
+		  <paragraph cssClass="code">
+<![CDATA[public static void méthodeFausse( double[] réels ) {
+    double[] réelsDePassage = {4.2, −7, Math.PI};
+    réels = réelsDePassage; // INUTILE
+}]]></paragraph>
+      <paragraph>
+        Quel que soit l’appel, le tableau que l’on passe en
+        paramètre ne sera pas modifié.
+      </paragraph>
+      
+      <paragraph title="Un tableau peut être une valeur de retour">
+      </paragraph>
+      <paragraph>Par exemple :</paragraph>
+		  <paragraph cssClass="code">
+<![CDATA[ppublic static int [] créer ( int taille , int val ) {
+    int [] entiers = new int[ taille ];
+    for(int i = 0; i < taille ; i ++) {
+      entiers [ i ] = val;
+    }
+    return entiers ;
+}]]></paragraph>
+      <paragraph>L’appel pourrait être</paragraph>
+      <paragraph cssClass="code">
+int [] cotes = créer(16, 20);
+      </paragraph>
+    </clarify>
+    </learningObject>
+		
+    <learningObject title="Parcours d’un tableau à une dimension.">
+		<!-- ================================================== -->
+		<clarify>
+		  <paragraph>
+		    Soit le tableau <formatted style="code">tab</formatted> déclaré ainsi
+		  </paragraph>
+		  <paragraph cssClass="code">
+tab : tableau [1 à n] de T  // où T est un type quelconque
+      </paragraph>
+      <paragraph>Envisageons d’abord le parcours complet et voyons ensuite les parcours avec arrêt prématuré.</paragraph>
+		  <paragraph title="Parcours complet.">
+		    Pour parcourir complètement un tableau, on peut utiliser la boucle 
+		    <formatted style="code">pour</formatted> comme dans
+        l’algorithme suivant où « traiter » va dépendre du problème concret posé : afficher, modifier,
+        sommer, . . .
+      </paragraph>
+		  <paragraph cssClass="code">
+// Parcours complet d’un tableau via une boucle pour
+// Les déclarations sont omises pour ne pas alourdir les algorithmes.
+pour i de 1 à n faire
+    traiter tab[i]
+fin pour
+      </paragraph>
+      <paragraph title="Parcours avec sortie prématurée.">
+        Parfois, on ne doit pas forcément parcourir le tableau jusqu’au bout mais on pourra s’arrêter
+        prématurément si une certaine condition est remplie. Par exemple :
+        <list listStyle="ordered">
+          <item>on cherche la présence d’un élément et on vient de le trouver ;</item>
+          <item>on vérifie qu’il n’y a pas de 0 et on vient d’en trouver un.</item>
+        </list>
+        La première étape est de transformer le <formatted style="code">pour</formatted> 
+        en <formatted style="code">tant que</formatted> ce qui donne l’algorithme
+      </paragraph>
+		  <paragraph  cssClass="code">
+// Parcours complet d’un tableau via une boucle tant-que
+i ← 1
+tant que i ≤ n faire
+    traiter tab[i]
+    i ← i+1
+fin tant que
+		  </paragraph>
+		  <paragraph>
+		    On peut à présent introduire le test d’arrêt. Une contrainte est qu’on voudra, à la fin de la
+        boucle, savoir si oui ou non on s’est arrêté prématurément et, si c’est le cas, à quel indice.
+      </paragraph>
+      <paragraph>
+        Il existe essentiellement deux solutions, avec ou sans variable booléenne. En général, la
+        solution [A] sera plus claire si le test est court.
+		  </paragraph>
+		  
+		  <paragraph title="Parcours avec sortie prématurée sans variable booléenne">
+		  </paragraph>
+		  <paragraph  cssClass="code">
+// Parcours partiel d’un tableau sans variable booléenne
+i ← 1
+tant que i ≤ n ET test sur tab[i] dit que on continue faire
+    i ← i+1
+fin tant que
+
+si i > n alors
+    // on est arrivé au bout
+sinon
+    // arrêt prématuré à l’indice i.
+fin si
+      </paragraph>
+      <paragraph>
+        Il faut être attentif à <formatted style="bold">ne pas inverser les deux parties du test</formatted>. 
+        Il faut absolument vérifier  que l’indice est bon avant de tester la valeur à cet indice.
+      </paragraph>
+      <paragraph>
+        On pourrait inverser les deux branches du si-sinon en inversant le test mais attention à ne
+        pas tester <formatted style="code">tab[i]</formatted> car <formatted style="code">i</formatted> n’est peut-être pas valide.
+      </paragraph>
+      <paragraph>
+        Dans certains cas, le si-sinon peut se simplifier en un simple return d’une condition.
+      </paragraph>
+      <paragraph>Par exemple : </paragraph>
+      <paragraph  cssClass="code">
+// Indique si un zéro est présent dans le tableau
+module contientZéro(tab : tableau [1 à n] d’entiers) → booléen
+    i : entier
+    i ← 1
+    tant que i ≤ n ET tab[i] ≠ 0 faire
+      i ← i+1
+    fin tant que
+    retourner i ≤ n // Si le test est vrai c’est qu’on a trouvé un 0
+fin module
+      </paragraph>
+      
+      <paragraph title="Parcours avec sortie prématurée avec variable booléenne">
+		  </paragraph>
+		  <paragraph  cssClass="code">
+// Parcours partiel d’un tableau avec variable booléenne
+i ← 1
+trouvé ← faux
+tant que i ≤ n ET NON trouvé faire
+    si test sur tab[i] dit que on a trouvé alors
+      trouvé ← vrai
+    sinon
+      i ← i+1
+    fin si
+fin tant que
+// tester le booléen pour savoir si arrêt prématuré.
+      </paragraph>
+      <paragraph>
+        Attention à bien choisir un nom de booléen adapté au problème et à l’initialiser à la bonne
+        valeur. Par exemple, si la variable s’appelle « continue »
+        <list listStyle="ordered">
+          <item>initialiser la variable à vrai ;</item>
+          <item>le test de la boucle est « . . .ET continue » ;</item>
+          <item>mettre la variable à faux pour sortir de la boucle.</item>
+        </list>
+      </paragraph>
+    </clarify>
+    
+  </learningObject>
+
+
+		<learningObject title="Erreurs fréquentes et exceptions lancées en Java">
+		<!-- =========================================================== -->
+		<clarify>
+		  <paragraph>
+		  <list listStyle="ordered">
+          <item><formatted style="code">NullPointerException</formatted> : 
+            si vous essayez d’accéder à un élément d’un tableau qui n’a pas été créé
+            (le tableau vaut null dans ce cas) ;
+          </item>
+          <item><formatted style="code">ArrayIndexOutOfBoundsException</formatted> : 
+            si vous donnez un indice qui n’existe pas (ex : tab [10] quand il n’y a que 10 éléments dans le tableau).
+          </item>
+        </list>
+      </paragraph>
+    </clarify>
+    </learningObject>
+    
+	</unit>
+		
+  
+	
+	<!-- =================================================================== -->
+	<unit label="Exercices" title="Exercices">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Maintenant, mettons tout ça en pratique.
+      </paragraph>
+    </entry>
+    
+    <learningObject title="Compréhension d’algorithme">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph>
+          Pour ces exercices, nous vous demandons de comprendre des algorithmes donnés. 
+          <selfCheck title="Compréhension" shuffle="no">
+						<fillInBlanks>
+							<question>
+							  Que vont-ils afficher ?
+              </question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										<paragraph cssClass="code">
+module boucle1 ()
+    x : entier
+    x ← 0
+    tant que x <![CDATA[<]]> 12 faire
+      x ← x+2
+    fin tant que
+    afficher x
+fin module
+				</paragraph>
+				            <gap answers="12">12</gap> 
+                  </item>
+									<item>
+										<paragraph cssClass="code">
+module boucle2 ()
+    ok : booléen
+    x : entier
+    ok ← vrai
+    x ← 5
+    tant que ok faire
+      x ← x+7
+      ok ← x MOD 11 ≠ 0
+    fin tant que
+    afficher x
+fin module
+				</paragraph>
+				            <gap answers="33">33</gap> 
+                  </item>
+									<item>
+										<paragraph cssClass="code">
+module boucle3 ()
+    ok : booléen
+    cpt, x : entiers
+    x ← 10
+    cpt ← 0
+    ok ← vrai
+    tant que ok ET cpt <![CDATA[<]]> 3 faire
+      si x MOD 2 = 0 alors
+        x ← x+1
+        ok ← x <![CDATA[<]]> 20
+      sinon
+        x ← x+3
+        cpt ← cpt + 1
+      fin si
+    fin tant que
+    afficher x
+fin module
+				</paragraph>
+				            <gap answers="22">22</gap> 
+                  </item>
+                  <item>
+										<paragraph cssClass="code">
+module boucle4 ()
+    pair, grand : booléens
+    p, x : entiers
+    x ← 1
+    p ← 1
+    faire
+      p ← 2*p
+      x ← x+p
+      pair ← x MOD 2 = 0
+      grand ← x > 15
+    jusqu’à ce que pair OU grand
+    afficher x
+fin module
+				</paragraph>
+				            <gap answers="31">31</gap> 
+                  </item>
+                  <item>
+										<paragraph cssClass="code">
+module boucle5 ()
+    i, x : entiers
+    ok : booléen
+    x ← 3
+    ok ← vrai
+    pour i de 1 à 5 faire
+      x ← x+i
+      ok ← ok ET (x MOD 2 = 0)
+    fin pour
+    si ok alors
+      afficher x
+    sinon
+      afficher 2 * x
+    fin si
+fin module
+				</paragraph>
+				            <gap answers="36">36</gap> 
+                  </item>
+                  <item>
+										<paragraph cssClass="code">
+module boucle6 ()
+    i, j, fin : entiers
+    pour i de 1 à 3 faire
+      fin ← 6 * i - 11
+      pour j de 1 à fin par 3 faire
+        afficher 10 * i + j
+      fin pour
+    fin pour
+fin module
+				</paragraph>
+				            <gap answers="21 31 34 37">21 31 34 37</gap> 
+                  </item>
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+        </paragraph>
+      </act>
+    </learningObject>
+      
+    <learningObject title="Compréhension de codes Java">
+    <!-- ============================================================ -->
+      <act>
+				<selfCheck title="Instructions répétitives" shuffle="no">
+					<multipleChoice>
+						<question>
+							Quelles instructions répétitives sont correctes parmi les suivantes? <newLine/>
+							Expliquez pourquoi les autres ne le sont pas.
+						</question>
+						<answer feedback="" correct="no">proposition 1
+							<paragraph cssClass="java">
+While ( condition ) {
+	// instructions
+}							</paragraph>
+
+						</answer>
+						<answer feedback="" correct="no">proposition 2
+							<paragraph cssClass="java">
+do while ( condition ) {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="yes">proposition 3
+							<paragraph cssClass="java">
+while ( true ) {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="no">proposition 4
+							<paragraph cssClass="java">
+while ( true ) do {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="no">proposition 5
+							<paragraph cssClass="java">
+FOR ( int i=0; i&lt;=10; i=i+2 ) DO {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="yes">proposition 6
+							<paragraph cssClass="java">
+for ( int i=0; i&lt;=10; i=i+2 ) {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="no">proposition 7
+							<paragraph cssClass="java">
+for ( int i=0; i&lt;=10; i=i+2 ) do {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="yes">proposition 8
+							<paragraph cssClass="java">
+for ( int i=9; i&gt;=0; i=i-2 ) {
+	// instructions
+}							</paragraph>
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<selfCheck title="Activité 'remplir les blancs'" shuffle="yes">
+					<fillInBlanks>
+						<question></question>
+						<gapText>
+							<paragraph>
+								Quel opérateur de comparaison Java représente la relation suivante? 
+							</paragraph>
+							<list listStyle="ordered">
+								<item>"est égal à" ?                     <gap answers="">==</gap></item>
+								<item>"est différent de" ?               <gap answers="">!=</gap></item>
+							</list>
+							<paragraph>
+								Quel opérateur booléen Java représente l'opérateur logique suivant? 
+							</paragraph>
+							<list listStyle="ordered">
+								<item>le ET :  <gap answers="">&amp;&amp;</gap></item>
+								<item>le OU :  <gap answers="">||</gap></item>
+								<item>le NON : <gap answers="">!</gap></item>
+							</list>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+
+				<paragraph title="Expérience" icon="icon_experiment">
+					Indiquez l'affichage obtenu par ce code.
+				</paragraph>
+				<selfCheck title="Compréhension" shuffle="no">
+						<fillInBlanks>
+							<question>
+							  Que vont-ils afficher ?
+              </question>
+							<gapText> 
+                <paragraph cssClass="java">
+<![CDATA[public class Boucles {
+
+	public static void main ( String[] args ) {
+		int facteur;
+		final int VALEUR = 3;
+	
+		for (facteur = 1 ; facteur <= 10 ; facteur++){		
+			System.out.print(facteur*VALEUR+" ");
+		}
+		System.out.println();
+	}
+}]]>			</paragraph>
+				            <gap answers="">3 6 9 12 15 18 21 24 27 30 </gap> 
+                </gapText>
+              </fillInBlanks>
+            </selfCheck>
+				
+
+				<paragraph title="Exercice Tant que" icon="act">
+					Écrivez en Java l'algorithme suivant.
+				</paragraph>
+				<paragraph cssClass="code">
+<![CDATA[MODULE Test
+
+    nb, produit : Entier
+    produit ← 1 
+
+    LIRE nb
+    TANT QUE nb ≠ 0 FAIRE
+        produit ← produit * nb
+        LIRE nb 
+    FIN TANT QUE
+    AFFICHER produit
+    
+FIN MODULE
+]]>			    </paragraph>
+				<popup title="la solution" visible="online"> 
+					<paragraph cssClass="java">
+<![CDATA[import java.util.Scanner;
+public class Test {
+
+	public static void main(String [] args) {
+	
+		Scanner clavier = new Scanner(System.in); 
+		int nb; 
+		int produit;
+		produit = 1; 
+		System.out.println("Entrez la valeur du nombre"); 
+		nb = clavier.nextInt();
+		while (nb != 0) {
+			produit = produit * nb;
+			System.out.println("Entrez la valeur du nombre"); 
+			nb = clavier.nextInt();			
+		} 		
+		System.out.println("Le produit vaut " + produit);	
+	}
+}]]>				</paragraph>
+				</popup>
+
+				<paragraph title="Exercice Pour" icon="act">
+					Écrivez en Java l'algorithme suivant.
+				</paragraph>
+				<paragraph cssClass="code">
+<![CDATA[MODULE Test
+
+    nb: Entier
+    i : Entier
+
+    LIRE nb
+    POUR i DE 1 A nb FAIRE
+        AFFICHER i
+    FIN POUR
+
+FIN MODULE
+]]>			     </paragraph>
+
+				<popup title="la solution" visible="online"> 
+					<paragraph cssClass="java">
+<![CDATA[import java.util.Scanner;
+public class Test {
+
+    public static void main(String [] args){
+	
+        Scanner clavier = new Scanner(System.in); 
+        int nombre1; 
+	
+        nombre1 = clavier.nextInt();
+        
+        for (int i=1; i <= nombre1; i++) { 
+            System.out.println(i); 
+        } 
+    }
+    
+}]]>				</paragraph>
+				</popup>
+
+      </act>
+
+    </learningObject>
+    
+    <learningObject title="À vous de jouer...">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph>
+          Il est temps de se lancer et d’écrire vos premiers modules et programmes Java correspondant. 
+          Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
+          <list listStyle="unordered">
+            <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites ;</item>
+            <item><formatted style="bold">mettez en évidence les variables « données », les variables « résultats » et les variables de travail ;</formatted></item>
+            <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé.</item>
+            <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+          </list>
+        </paragraph>
+        
+        <paragraph>
+        Écrivez les algorithmes et codez les programmes Java correspondant qui 
+          <list listStyle="ordered">
+            <item>reçoit un naturel <formatted style="code">n</formatted> et affiche
+              <list listStyle="ordered">
+                <item>les <formatted style="code">n</formatted> premiers entiers strictement positifs ;</item>
+                <item>les <formatted style="code">n</formatted> premiers entiers strictement positifs en ordre décroissant ;</item>
+                <item>les <formatted style="code">n</formatted> premiers carrés parfaits ;</item>
+                <item>les <formatted style="code">n</formatted> premiers naturels impairs ;</item>
+                <item>les naturels impairs qui sont inférieurs ou égaux à <formatted style="code">n</formatted>.</item>
+              </list>
+              Si le <formatted style="code">n</formatted> reçu n'est pas strictement positif, votre programme s'arrêtera en générant une erreur/une exception.
+            </item>
+            <item>
+              demande à l'utilisateur d'introduire un entier positif (non strictement). 
+              Ce module permet à l'utilisateur de se tromper à plusieurs reprises mais l'utilisateur devra donner
+              une bonne valeur pour arrêter le programme.
+              (On suppose tout de même que l'utilisateur ne donne que des valeurs entières !) 
+            </item>
+            <item>
+              <paragraph>
+              lit une série de nombres entiers positifs, jusqu’à ce que l’utilisateur
+              encode la valeur 0. Les nombres multiples de 3 seront affichés au fur et à mesure et le nombre
+              de ces multiples sera affiché en fin de traitement.
+              </paragraph>
+              <paragraph>
+              Pensez à utiliser le module écrit ci-dessus qui permet de lire un entier positif.
+              </paragraph>
+              </item>
+            <item>
+              retourne la somme des chiffres qui forment un nombre naturel <formatted style="code">n</formatted>
+              Attention, on donne au départ le nombre et pas ses chiffres. Exemple : 133045 doit donner
+              comme résultat 16, car 1 + 3 + 3 + 0 + 4 + 5 = 16.
+            </item>
+            <item>
+              lit une suite de nombres positifs entrés au clavier et affiche
+              le maximum, le minimum, leur somme et la moyenne. <newLine/>
+              La fin de la suite de nombre sera signifiée par une valeur sentinelle que vous choisirez
+              judicieusement.
+            </item>
+            <item>
+              vérifie si un entier donné forme un palindrome ou non. Un nombre
+              palindrome est un nombre qui lu dans un sens (de gauche à droite) est identique au nombre
+              lu dans l’autre sens (de droite à gauche). Par exemple, 1047401 est un nombre palindrome.
+            </item>
+            <item>
+                affiche les <formatted style="code">n</formatted> premiers termes de la suite suivante : 
+                <formatted style="code">1, –1, 2, –3, 5, –8, 13, –21, 34, –55, …</formatted>
+                où <formatted style="code">n</formatted> est un entier strictement positif reçu en paramètre.<newLine/>
+                Si le <formatted style="code">n</formatted> reçu n'est pas strictement positif, votre programme s'arrêtera en générant une erreur/une exception.
+            </item>
+          </list>
+        </paragraph>
+        <paragraph>En java, n'oubliez pas d'écrire la javadoc et la méthode main pour tester vos méthodes.</paragraph>
+        
+        <paragraph title="Jeu de la fourchette">
+          Écrivez un algorithme qui simule le jeu de la fourchette. Ce jeu consiste à essayer de découvrir
+          un nombre quelconque compris entre 0 et 100 inclus, tiré au sort par l’ordinateur (la primitive
+          <formatted style="code">hasard(n : entier)</formatted> retourne un entier entre 0 inclus et n exclus). <newLine/>
+          L’utilisateur a droit à huit essais maximum.<newLine/>
+          À chaque essai, l’algorithme devra afficher un message indicatif
+          <list listStyle="unordered">
+            <item>« nombre donné trop petit »</item>
+            <item>ou « nombre donné trop grand ». </item>
+          </list>
+          En conclusion, 
+          <list listStyle="unordered">
+            <item>soit « bravo, vous avez trouvé en [nombre] essai(s) »</item>
+            <item>soit « désolé, le nombre était [valeur] ».</item>
+          </list>
+        </paragraph>
+        <paragraph>Écrivez le code java correspondant.</paragraph>
+        <paragraph>
+        Aide en Java : un petit tour dans l'API de la classe Random devrait vous aider à trouver l'équivalent du
+        <formatted style="code">hasard(n : entier)</formatted> en Java
+    </paragraph>
+        
+      </act>
+    </learningObject>
+  </unit>
+</lesson>

@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="InitTableau" title="TD Tableaux">
+	
+	<entry>
+		<paragraph>
+			Ces exercices ont pour but de vérifier que vous avez fixé les structures alternatives qui permettent de conditionner
+      des parties d’algorithmes, de code.
+		</paragraph>
+	</entry>
+	
+	<!-- =========================================================== -->
+	<unit label="Boucles" title="Les boucles">
+	<!-- =========================================================== -->
+  
+  
+    <learningObject title="Compréhension d’algorithme">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph>
+          Pour ces exercices, nous vous demandons de comprendre des algorithmes donnés. 
+          <selfCheck title="Compréhension" shuffle="no">
+						<fillInBlanks>
+							<question>
+							  Que vont-ils afficher ?
+              </question>
+							<gapText> 
+								<list listStyle="unordered">
+									<item>
+										<paragraph cssClass="code">
+module boucle1 ()
+    x : entier
+    x ← 0
+    tant que x <![CDATA[<]]> 12 faire
+      x ← x+2
+    fin tant que
+    afficher x
+fin module
+				</paragraph>
+				            <gap answers="12">12</gap> 
+                  </item>
+									<item>
+										<paragraph cssClass="code">
+module boucle2 ()
+    ok : booléen
+    x : entier
+    ok ← vrai
+    x ← 5
+    tant que ok faire
+      x ← x+7
+      ok ← x MOD 11 ≠ 0
+    fin tant que
+    afficher x
+fin module
+				</paragraph>
+				            <gap answers="33">33</gap> 
+                  </item>
+									<item>
+										<paragraph cssClass="code">
+module boucle3 ()
+    ok : booléen
+    cpt, x : entiers
+    x ← 10
+    cpt ← 0
+    ok ← vrai
+    tant que ok ET cpt <![CDATA[<]]> 3 faire
+      si x MOD 2 = 0 alors
+        x ← x+1
+        ok ← x <![CDATA[<]]> 20
+      sinon
+        x ← x+3
+        cpt ← cpt + 1
+      fin si
+    fin tant que
+    afficher x
+fin module
+				</paragraph>
+				            <gap answers="22">22</gap> 
+                  </item>
+                  <item>
+										<paragraph cssClass="code">
+module boucle4 ()
+    pair, grand : booléens
+    p, x : entiers
+    x ← 1
+    p ← 1
+    faire
+      p ← 2*p
+      x ← x+p
+      pair ← x MOD 2 = 0
+      grand ← x > 15
+    jusqu’à ce que pair OU grand
+    afficher x
+fin module
+				</paragraph>
+				            <gap answers="31">31</gap> 
+                  </item>
+                  <item>
+										<paragraph cssClass="code">
+module boucle5 ()
+    i, x : entiers
+    ok : booléen
+    x ← 3
+    ok ← vrai
+    pour i de 1 à 5 faire
+      x ← x+i
+      ok ← ok ET (x MOD 2 = 0)
+    fin pour
+    si ok alors
+      afficher x
+    sinon
+      afficher 2 * x
+    fin si
+fin module
+				</paragraph>
+				            <gap answers="36">36</gap> 
+                  </item>
+                  <item>
+										<paragraph cssClass="code">
+module boucle6 ()
+    i, j, fin : entiers
+    pour i de 1 à 3 faire
+      fin ← 6 * i - 11
+      pour j de 1 à fin par 3 faire
+        afficher 10 * i + j
+      fin pour
+    fin pour
+fin module
+				</paragraph>
+				            <gap answers="21 31 34 37">21 31 34 37</gap> 
+                  </item>
+								</list>
+							</gapText>
+							<solution/>
+						</fillInBlanks>
+					</selfCheck>
+        </paragraph>
+      </act>
+    </learningObject>
+      
+    <learningObject title="Compréhension de codes Java">
+    <!-- ============================================================ -->
+      <act>
+				<selfCheck title="Instructions répétitives" shuffle="no">
+					<multipleChoice>
+						<question>
+							Quelles instructions répétitives sont correctes parmi les suivantes? <newLine/>
+							Expliquez pourquoi les autres ne le sont pas.
+						</question>
+						<answer feedback="" correct="no">proposition 1
+							<paragraph cssClass="java">
+While ( condition ) {
+	// instructions
+}							</paragraph>
+
+						</answer>
+						<answer feedback="" correct="no">proposition 2
+							<paragraph cssClass="java">
+do while ( condition ) {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="yes">proposition 3
+							<paragraph cssClass="java">
+while ( true ) {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="no">proposition 4
+							<paragraph cssClass="java">
+while ( true ) do {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="no">proposition 5
+							<paragraph cssClass="java">
+FOR ( int i=0; i&lt;=10; i=i+2 ) DO {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="yes">proposition 6
+							<paragraph cssClass="java">
+for ( int i=0; i&lt;=10; i=i+2 ) {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="no">proposition 7
+							<paragraph cssClass="java">
+for ( int i=0; i&lt;=10; i=i+2 ) do {
+	// instructions
+}							</paragraph>
+						</answer>
+						<answer feedback="" correct="yes">proposition 8
+							<paragraph cssClass="java">
+for ( int i=9; i&gt;=0; i=i-2 ) {
+	// instructions
+}							</paragraph>
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+				<selfCheck title="Activité 'remplir les blancs'" shuffle="yes">
+					<fillInBlanks>
+						<question></question>
+						<gapText>
+							<paragraph>
+								Quel opérateur de comparaison Java représente la relation suivante? 
+							</paragraph>
+							<list listStyle="ordered">
+								<item>"est égal à" ?                     <gap answers="">==</gap></item>
+								<item>"est différent de" ?               <gap answers="">!=</gap></item>
+							</list>
+							<paragraph>
+								Quel opérateur booléen Java représente l'opérateur logique suivant? 
+							</paragraph>
+							<list listStyle="ordered">
+								<item>le ET :  <gap answers="">&amp;&amp;</gap></item>
+								<item>le OU :  <gap answers="">||</gap></item>
+								<item>le NON : <gap answers="">!</gap></item>
+							</list>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+
+				<paragraph title="Expérience" icon="icon_experiment">
+					Indiquez l'affichage obtenu par ce code.
+				</paragraph>
+				<selfCheck title="Compréhension" shuffle="no">
+						<fillInBlanks>
+							<question>
+							  Que vont-ils afficher ?
+              </question>
+							<gapText> 
+                <paragraph cssClass="java">
+<![CDATA[public class Boucles {
+
+	public static void main ( String[] args ) {
+		int facteur;
+		final int VALEUR = 3;
+	
+		for (facteur = 1 ; facteur <= 10 ; facteur++){		
+			System.out.print(facteur*VALEUR+" ");
+		}
+		System.out.println();
+	}
+}]]>			</paragraph>
+				            <gap answers="">3 6 9 12 15 18 21 24 27 30 </gap> 
+                </gapText>
+              </fillInBlanks>
+            </selfCheck>
+				
+
+				<paragraph title="Exercice Tant que" icon="act">
+					Écrivez en Java l'algorithme suivant.
+				</paragraph>
+				<paragraph cssClass="code">
+<![CDATA[MODULE Test
+
+    nb, produit : Entier
+    produit ← 1 
+
+    LIRE nb
+    TANT QUE nb ≠ 0 FAIRE
+        produit ← produit * nb
+        LIRE nb 
+    FIN TANT QUE
+    AFFICHER produit
+    
+FIN MODULE
+]]>			    </paragraph>
+				<popup title="la solution" visible="online"> 
+					<paragraph cssClass="java">
+<![CDATA[import java.util.Scanner;
+public class Test {
+
+	public static void main(String [] args) {
+	
+		Scanner clavier = new Scanner(System.in); 
+		int nb; 
+		int produit;
+		produit = 1; 
+		System.out.println("Entrez la valeur du nombre"); 
+		nb = clavier.nextInt();
+		while (nb != 0) {
+			produit = produit * nb;
+			System.out.println("Entrez la valeur du nombre"); 
+			nb = clavier.nextInt();			
+		} 		
+		System.out.println("Le produit vaut " + produit);	
+	}
+}]]>				</paragraph>
+				</popup>
+
+				<paragraph title="Exercice Pour" icon="act">
+					Écrivez en Java l'algorithme suivant.
+				</paragraph>
+				<paragraph cssClass="code">
+<![CDATA[MODULE Test
+
+    nb: Entier
+    i : Entier
+
+    LIRE nb
+    POUR i DE 1 A nb FAIRE
+        AFFICHER i
+    FIN POUR
+
+FIN MODULE
+]]>			     </paragraph>
+
+				<popup title="la solution" visible="online"> 
+					<paragraph cssClass="java">
+<![CDATA[import java.util.Scanner;
+public class Test {
+
+    public static void main(String [] args){
+	
+        Scanner clavier = new Scanner(System.in); 
+        int nombre1; 
+	
+        nombre1 = clavier.nextInt();
+        
+        for (int i=1; i <= nombre1; i++) { 
+            System.out.println(i); 
+        } 
+    }
+    
+}]]>				</paragraph>
+				</popup>
+
+      </act>
+
+    </learningObject>
+     
+    <learningObject title="À vous de jouer...">
+    <!-- ============================================================ -->
+      <act>
+      
+        <paragraph title="Un nombre est-il divisible par 9 ?">
+          En base dix, on peut facilement vérifier si un nombre est divisible par 9 :
+          on calcule la somme de ses chiffres et l'on regarde si cette somme est encore divisible par 9
+          c'est-à-dire, si l'on itère le processus, si la dernière somme donne 9. <newLine/>
+          Écrivez un algorithme permettant de dire si un nombre donné est divisible par 9, en appliquant la méthode décrite ci-dessus.
+        </paragraph>
+        <paragraph>Écrivez le code java correspondant ainsi que la javadoc.</paragraph>
+        
+        <paragraph title="Suite de positifs">
+          Écrivez un algorithme qui lit une suite de nombres positifs entrés au clavier et affiche
+          le maximum, le minimum, leur somme et la moyenne.<newLine/>
+          La fin de la suite de nombre sera signifiée par une valeur sentinelle que vous choisirez
+          judicieusement.
+        </paragraph>
+        <paragraph>Écrivez le code java correspondant ainsi que la javadoc.</paragraph>
+        
+        <paragraph title="La conjecture de Goldbach">
+          La conjecture de Goldbach est une assertion mathématique non démontrée qui s’énonce comme suit :
+        </paragraph>
+        <paragraph>
+          <formatted style="bold">Tout nombre entier pair supérieur à 3 peut s’écrire comme la somme de deux nombres premiers.</formatted>
+        </paragraph>
+        <paragraph>
+          Écrivez un module <formatted style="code">isPremier</formatted> qui reçoit un nombre entier <formatted style="code">n</formatted> 
+          et qui retourne vrai si ce nombre est premier et faux sinon.
+        </paragraph>
+        <paragraph>
+          Écrivez un module <formatted style="code">goldbach</formatted> qui reçoit en paramètre 
+          un nombre entier pair <formatted style="code">p</formatted> supérieur à 3 
+          et qui retourne vrai s’il est la somme de 2 nombres premiers et faux sinon.
+          Si le <formatted style="code">p</formatted> reçu n'est supérieur à 3, votre programme générera une erreur.
+        </paragraph>
+        <paragraph>
+          Écrivez un second module, <formatted style="code">principal</formatted>, qui lit un nombre et vérifie que tous les
+          nombres pairs inférieurs à ce nombre sont la somme de 2 nombres premiers. Ce module affiche vrai ou faux selon le cas.
+        </paragraph>
+        <paragraph>
+          Mettez en évidence les variables <formatted style="bold">« données »</formatted>, 
+          les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;
+        </paragraph>
+        <paragraph>Écrivez le code java correspondant ainsi que la javadoc.</paragraph>
+        <paragraph>Pour plus d'exercices, 
+        <link uri="../../../TDBoucle/fr/html/Exercices_learningObject3.html">révisez ici</link></paragraph>
+      </act>
+    </learningObject>
+  </unit>
+</lesson>

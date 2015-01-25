@@ -1,0 +1,2 @@
+\select@language {french}
+\contentsline {subparagraph}{Calcul de la cat\'egorie}{2}{section*.2}
