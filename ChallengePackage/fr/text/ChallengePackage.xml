@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="ChallengePackage" title="Challenge : les packages">
+	
+	<entry title="Les packages">
+	
+		<paragraph>
+			Essayons maintenant de résoudre l'énoncé de l'interro 3
+    </paragraph>
+    <paragraph>
+      Vous trouverez cet énoncé <link uri="../../../ChallengePackage/fr/énoncé/DEV1-LAJ1-I3-20141114-5-clr.pdf">ici</link>.
+    </paragraph>
+	</entry>
+</lesson>

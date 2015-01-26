@@ -20,15 +20,24 @@
 \contentsline {subparagraph}{Parcours avec sortie pr\'ematur\'ee sans variable bool\'eenne}{12}{section*.14}
 \contentsline {subparagraph}{Parcours avec sortie pr\'ematur\'ee avec variable bool\'eenne}{13}{section*.15}
 \contentsline {subsection}{\numberline {1.8}Erreurs fr\'equentes et exceptions lanc\'ees en Java}{14}{subsection.1.8}
-\contentsline {section}{\numberline {2}Exercices}{14}{section.2}
-\contentsline {subsection}{\numberline {2.1}Compr\'ehension d'algorithme}{14}{subsection.2.1}
-\contentsline {subparagraph}{Compr\'ehension}{14}{section*.16}
-\contentsline {subsection}{\numberline {2.2}Compr\'ehension de codes Java}{16}{subsection.2.2}
-\contentsline {subparagraph}{Instructions r\'ep\'etitives}{16}{section*.17}
-\contentsline {subparagraph}{Activit\'e 'remplir les blancs'}{17}{section*.18}
-\contentsline {subparagraph}{Exp\'erience}{17}{section*.19}
-\contentsline {subparagraph}{Compr\'ehension}{17}{section*.20}
-\contentsline {subparagraph}{Exercice Tant que}{18}{section*.21}
-\contentsline {subparagraph}{Exercice Pour}{18}{section*.22}
-\contentsline {subsection}{\numberline {2.3}\`A vous de jouer...}{18}{subsection.2.3}
-\contentsline {subparagraph}{Jeu de la fourchette}{20}{section*.23}
+\contentsline {section}{\numberline {2}Les tests}{14}{section.2}
+\contentsline {subsection}{\numberline {2.1}Tests unitaires}{14}{subsection.2.1}
+\contentsline {subparagraph}{Les tests unitaires}{14}{section*.16}
+\contentsline {subparagraph}{Le plan de tests}{15}{section*.17}
+\contentsline {subparagraph}{JUnit}{16}{section*.18}
+\contentsline {subparagraph}{Lancer les tests}{17}{section*.20}
+\contentsline {section}{\numberline {3}Exercices}{17}{section.3}
+\contentsline {subsection}{\numberline {3.1}En Java...}{17}{subsection.3.1}
+\contentsline {subparagraph}{Bornes d'un tableau}{17}{section*.21}
+\contentsline {subparagraph}{D\'eclaration, cr\'eation et initialisation d'un tableau }{18}{section*.22}
+\contentsline {subparagraph}{Cr\'eation}{18}{section*.23}
+\contentsline {subparagraph}{Initialisation}{18}{section*.24}
+\contentsline {subparagraph}{R\'eflexion}{18}{section*.25}
+\contentsline {subparagraph}{V\'erification}{18}{section*.26}
+\contentsline {subparagraph}{Cochez les affirmations qui sont vraies}{19}{section*.27}
+\contentsline {subparagraph}{S\'election multiple}{19}{section*.28}
+\contentsline {subparagraph}{Quiz}{20}{section*.30}
+\contentsline {subsection}{\numberline {3.2}Les tests unitaires}{20}{subsection.3.2}
+\contentsline {subparagraph}{Les tests}{20}{section*.31}
+\contentsline {subsection}{\numberline {3.3}\`A vous de jouer...}{21}{subsection.3.3}
+\contentsline {subparagraph}{Mastermind}{22}{section*.32}

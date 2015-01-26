@@ -1,0 +1,798 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="TDPackage" title="TD Packages">
+	
+	<entry>
+		<paragraph>
+			Ce TD a pour but d'aborder comment associer un package à vos méthodes.
+		</paragraph>
+	</entry>
+	
+	<!-- =================================================================== -->
+	<unit label="Package" title="Les package">
+	<!-- =================================================================== -->
+    
+	<!-- ========================================== -->
+	<learningObject title="Introduction aux packages">
+	<!-- ========================================== -->
+
+		<entry>
+			<paragraph>
+				Vous êtes capables d'utiliser une classe
+				qui a été placée dans un package standard 
+				(comme <formatted style="code">java.util.Scanner</formatted>).
+				Nous allons à présent vous montrer
+				comment placer vos propres classes dans des packages
+				et les utiliser.
+			</paragraph>
+		</entry>
+	
+		<clarify>
+	
+			<paragraph title="Le nom d'un package" icon="icon_reading"/>
+			<paragraph>
+				Un nom de package doit être choisi de telle sorte
+				à représenter l'organisation à laquelle elle
+				appartient et le projet associé ou
+				le type de classe.
+				Il ne faut pas se baser sur l'endroit où sont placés 
+				les fichiers sources.
+			</paragraph>
+			<paragraph>
+				Pour <formatted style="bold">votre</formatted> code, 
+				nous vous recommandons de rassembler vos classes
+				par package reprenant votre login et le TD.
+				Exemple : <formatted style="java">g32010.td6</formatted>. 
+			</paragraph>
+			
+			<paragraph title="Associer une classe à un package" icon="icon_reading"/>
+			<paragraph>
+				L’appartenance d’une classe à un package déterminé est nécessaire à la compilation. 
+				Dès lors vous devrez ajouter comme <formatted style="bold">première instruction du source</formatted> 
+				(c-à-d avant même l'instruction <formatted style="java">public class NomClasse</formatted>) :
+			</paragraph>
+			<paragraph cssClass="java">
+	package g32010.td6;
+			</paragraph>
+					
+			<paragraph title="Nom complet d'une classe" icon="icon_reading"/>
+			<paragraph>
+				Le nom 
+				<formatted style="bold">qualifié</formatted> 
+				d'une classe 
+				(on dit aussi <formatted style="bold">nom complet</formatted>)
+				est obtenu en accolant
+				le nom de la classe au nom du package ;
+				on obtient ainsi un nom unique pour cette classe.
+				C'est ce nom qu'il faudra utiliser pour 
+				<formatted style="bold">exécuter</formatted> la classe.
+			</paragraph>
+			<paragraph>
+				Par exemple, le nom complet de la classe <formatted style="code">Color</formatted> 
+				dont le package est <formatted style="java">esi.util</formatted>
+				est <formatted style="java">esi.util.Color</formatted>. 
+			</paragraph>
+	
+		</clarify>
+	
+		<act>
+			<selfCheck shuffle="no">
+				<fillInBlanks>
+					<question>
+						Donnez le nom complet de la classe <formatted style="code">SurfaceTriangle</formatted>
+						dont le package est <formatted style="code">g32010.td6</formatted> :
+					</question>
+					<gapText>
+						<gap answers="g32010.td6.SurfaceTriangle">g32010.td6.SurfaceTriangle </gap>
+					</gapText>
+					<solution/>
+				</fillInBlanks>
+			</selfCheck>
+					
+			<paragraph title="Package et dossiers" icon="icon_reading"/>
+			<paragraph>
+				Alors qu'on peut placer ses fichiers sources (les .java)
+				où on veut, ce n'est pas le cas pour les fichiers
+				compilés (les .class) dès lors qu'on joue avec des packages.
+				Ils devront être placés à un endroit bien précis
+				pour que le compilateur et la machine virtuelle
+				puissent les retrouver.
+			</paragraph>
+			<paragraph>			
+				La notion de package est liée à celle de répertoire
+				(et même d'arborescence de répertoires).
+				Ainsi le package
+				<formatted style="java">td.td6</formatted> sera associé 
+				aux dossiers <formatted style="code">td/td6</formatted>
+				(un dossier <formatted style="java">td6</formatted> 
+				dans un dossier <formatted style="java">td</formatted>).
+				Tout comme une classe appartient à un package,
+				la version compilée de la classe
+				devra se trouver dans les dossiers correspondant au package.
+			</paragraph>
+			<paragraph title="Exemple"/>
+			<paragraph>
+				Si <formatted style="java">Color</formatted> 
+				a pour package <formatted style="java">esi.util</formatted>,
+				le fichier <formatted style="code">Color.class</formatted>
+				devra se trouver dans le répertoire associé 
+				<formatted style="code">esi/util</formatted>.
+			</paragraph>
+			<paragraph title="Exercice" icon="act"/>
+			<paragraph>
+				Examinez le contenu du dossier 
+				<formatted style="code">esi/util</formatted>
+				qui se trouve dans 
+				<formatted style="code">/eCours/Java</formatted>.
+			</paragraph>
+	
+			<selfCheck title="Exercice" shuffle="no">
+				<fillInBlanks>
+					<question>
+						Donnez la suite de répertoires dans lesquels 
+						<formatted style="bold">doit</formatted> certainement
+						se trouver la classe <formatted style="java">SurfaceTriangle</formatted>
+						dont le package est <formatted style="java">g32010.tds.td6</formatted>
+					</question>
+					<gapText>
+						<gap answers="">g32010/tds/td6</gap>
+					</gapText>
+					<solution/>
+				</fillInBlanks>
+			</selfCheck>
+	
+		</act>
+	
+	</learningObject>
+
+	<!-- ================================================= -->
+	<learningObject title="Utiliser le package d'un autre">
+	<!-- ================================================= -->
+
+	<look>
+		<paragraph>
+			Lors du précédent TD,
+			vous avez pris une copie de la classe
+			<formatted style="code">Color</formatted>
+			et vous l'avez compilée.
+			Nous avons aussi fait ce travail
+			en plaçant la classe dans le package
+			<formatted style="code">esi.util</formatted>.
+			Voyons voir comment l'utiliser.			
+		</paragraph>
+		<paragraph title="Expérience" icon="icon_experiment"/>
+		<list listStyle="ordered">
+			<item>
+				La classe possède une méthode principale.
+				Tentez de l'exécuter via la commande
+				<formatted style="code">java Color</formatted>.
+				<newLine/>
+				Ca ne fonctionne pas. Pourquoi ?
+			</item>
+			<item>
+				Mais bien sûr ; on a dit qu'il fallait utiliser
+				le nom complet de la classe.
+				Tentez la commande
+				<formatted style="code">java esi.util.Color</formatted>.
+				<newLine/>
+				Zut ! Ca ne fonctionne toujours pas. Pourquoi ?
+			</item>
+			<item>
+				<paragraph>
+					Parce que Java ne sait pas où trouver la classe
+					et il est hors de question de chercher dans
+					tout le système de fichier.
+				</paragraph>
+				<paragraph>
+					Où est-elle d'ailleurs, cette classe ?
+				</paragraph>
+				<paragraph>
+					Lançez la commande
+					<formatted style="code">find /eCours/java -name Color.class</formatted>
+					pour le savoir.
+					Vous devriez voir que la classe se trouve exactement ici :
+					<formatted style="code">/eCours/java/esi/util/Color.class</formatted>
+				</paragraph>
+			</item>
+			<item>
+				On va indiquer à Java où chercher.
+				Entrez la commande
+				<newLine/>
+				<formatted style="code">java -cp /eCours/java esi.util.Color</formatted>.
+				<newLine/>
+				Cette fois-ci ça fonctionne !
+			</item>
+		</list>
+
+		<paragraph>
+			L'option <formatted style="code">cp</formatted>
+			(une abréviation pour <formatted style="code">classpath</formatted>)
+			indique le (ou les) endroit(s) où chercher les classes.
+		</paragraph>
+
+		<paragraph>
+			<formatted style="bold">Important ! </formatted>
+			on ne donne pas le dossier où se trouve le
+			<formatted style="italic">.class</formatted>
+			mais le dossier où il va pouvoir trouver
+			la hiérarchie de dossiers liée au package.
+			Finalement, le fichier se trouve à un endroit
+			qui est la <formatted style="italic">concaténation</formatted>
+			de l'option <formatted style="italic">cp</formatted>
+			et du package.
+		</paragraph>
+
+	</look>
+	</learningObject>
+
+	<!-- ================================================= -->
+	<learningObject title="Utiliser ses propres packages">
+	<!-- ================================================= -->
+	
+	<look>
+		<paragraph>
+			À présent, 
+			nous allons voir comment vous pouvez placer
+			vos propres classes dans un package.
+		</paragraph>
+		
+		<paragraph title="Expérience" icon="icon_experiment"/>
+		<list listStyle="ordered">
+			<item>
+				Prenez une copie de la classe 
+				<formatted style="code">Color</formatted>.	
+			</item>
+			<item>
+				Ajoutez comme première ligne :
+				<paragraph cssClass="java">
+	package g12345.util;
+				</paragraph>
+			</item>
+			<item>
+				Compilez-la : <formatted style="code">javac Color.java</formatted>.
+			</item>
+			<item>
+				Exécutez-la : <formatted style="code">java -cp . g12345.util.Color</formatted>.
+				<newLine/>
+				Ça ne fonctionne pas ! Pourquoi ?
+			</item>
+			<item>
+				Qu'on est bête !
+				Java cherche le fichier dans une hiérarchie
+				de dossiers correspondant au package.
+				Ici, il cherche le fichier
+				<formatted style="code">g12345/util/Color.class</formatted>
+			</item>
+			<item>
+				Déplaçons le fichier au bon endroit.
+				<newLine/>
+				<formatted style="code">mkdir -p g12345/util</formatted>
+				<newLine/>
+				<formatted style="code">mv Color.class g12345/util</formatted>
+			</item>			
+			<item>
+				Re-tentons : <formatted style="code">java -cp . g12345.util.Color</formatted>.
+				<newLine/>
+				Ça fonctionne !
+			</item>
+		</list>
+
+		<paragraph title="J'ai oublié l'option '-cp' et ça fonctionne quand même !?" icon="icon_faq"/>
+		<paragraph>
+			En effet, sur linux1, et nous verrons pourquoi,
+			si on ne lui  dit pas où chercher, 
+			il cherche dans le dossier courant.
+		</paragraph>
+	
+		<paragraph title="L'option -d"/>
+		
+		<paragraph>
+			Ce serait pénible de devoir déplacer,
+			après chaque compilation,
+			la classe au bon endroit.
+			Heureusement, le compilateur propose une option
+			qui place directement le fichier généré au bon endroit.
+		</paragraph>
+		
+		<paragraph>
+			La commande
+		</paragraph>
+		<paragraph cssClass="java">
+	java -d chemin Fichier.java
+		</paragraph>
+		<paragraph>
+			Compile le fichier donné et place
+			le résultat dans une hiérarchie de dossiers
+			qui correspond au package à partir du chemin donné.
+		</paragraph>
+
+		<paragraph title="Exemple">
+			Pour la classe couleur, 
+			on aurait pu compiler simplement avec la commande :
+			<formatted style="code">javac -d . Color.java</formatted>
+			pour indiquer de créer le résultat dans le dossier
+			<formatted style="code">./g12345/util/</formatted>.
+		</paragraph>
+
+	</look>
+	
+	</learningObject>
+	
+	<!-- ========================================== -->
+	<learningObject title="La variable CLASSPATH">
+	<!-- ========================================== -->
+		
+		<clarify>
+			<paragraph>
+				Spécifier à chaque fois,
+				l'option <formatted style="code">cp</formatted>
+				est pénible.
+				Ce serait bien de pouvoir lui dire une fois pour toutes
+				où chercher.
+				C'est exactement le rôle de la variable d'environnement
+				<formatted style="code">CLASSPATH</formatted>.
+			</paragraph>
+			
+			<box>
+				La variable
+				<formatted style="code">CLASSPATH</formatted>
+				contient une liste de dossiers où chercher les
+				classes. Chaque dossier est séparé par 
+				"<formatted style="code">:</formatted>".
+			</box>
+
+			<paragraph>
+				Pour la manipuler,
+				la procédure est la même que pour les
+				autres variables d'environnement
+				(comme 
+				<formatted style="code">PS1</formatted>
+				que vous avez déjà vu).
+			</paragraph>
+
+			<list listStyle="unordered">
+				<item>
+					Pour voir son contenu : 
+					<formatted style="code">echo $CLASSPATH</formatted>
+				</item>
+				<item>
+					Pour changer son contenu : 
+					<formatted style="code">CLASSPATH=valeur</formatted>
+				</item>
+				<item>
+					Pour ajouter un dossier à son contenu : 
+					<formatted style="code">CLASSPATH=$CLASSPATH:valeur</formatted>
+				</item>
+				<item>
+					Si elle est définie pour la première fois : 
+					<formatted style="code">export CLASSPATH</formatted>
+				</item>
+				<item>
+					Si la modification doit être permanente,
+					vous pouvez placer la commande dans le fichier
+					<formatted style="code">.bashrc</formatted>
+				</item>
+			</list>
+		</clarify>
+
+		<act>
+			<paragraph title="Exercice" icon="act">
+				Affichez le contenu actuel 
+				de la variable 
+				<formatted style="code">CLASSPATH</formatted>.
+				Que signifie le "." ?
+			</paragraph>
+
+			<selfCheck title="Exercice" shuffle="yes">
+				<fillInBlanks>
+					<question>
+						Sachant que la classe <formatted style="java">SurfaceTriangle</formatted> se trouve dans 
+						<formatted style="code">/home/g32010/tds/td6</formatted> 
+						et qu'on retrouve <formatted style="code">/home</formatted> dans la variable <formatted style="code">CLASSPATH</formatted>, 
+						donnez l'instruction <formatted style="java">package</formatted> correspondant à la situation :
+					</question>
+					<gapText>
+						<paragraph cssClass="javawithblanks">
+package <gap answers="">g32010.tds.td6</gap>;
+						</paragraph>
+					</gapText>
+					<solution/>
+				</fillInBlanks>
+			</selfCheck>
+				
+			<selfCheck title="Exercice" shuffle="yes">
+				<fillInBlanks>
+					<question>
+						Supposons que la classe <formatted style="java">Exercice1</formatted>
+						a pour package <formatted style="java">esi.lg1.exemples</formatted>
+						et qu'elle a comme chemin 
+						<formatted style="code">/eCours/java/be/heb/esi/lg1/exemples/Exercice1.class</formatted>, 
+						donnez la hiérarchie de répertoires à ajouter au <formatted style="code">CLASSPATH</formatted>.
+					</question>
+					<gapText>
+						CLASSPATH=$CLASSPATH:<gap answers="">/eCours/java/be/heb</gap>
+					</gapText>
+					<solution/>
+				</fillInBlanks>
+			</selfCheck>
+			
+			<paragraph title="Exercice" icon="act">
+				Faites ce qu'il faut pour pouvoir
+				exécuter <formatted style="bold">notre</formatted>
+				classe <formatted style="code">Color</formatted>
+				(package <formatted style="code">esi.util</formatted>)
+				sans utiliser l'option <formatted style="code">-cp</formatted>.
+			</paragraph>
+
+		</act>
+	</learningObject>
+	
+	<!-- ========================================== -->
+	<learningObject title="Organiser ses fichiers">
+	<!-- ========================================== -->
+
+		<clarify>
+			<paragraph>
+				Résumons ce que  nous avons déjà vu.
+			</paragraph>
+			<list listStyle="unordered">
+				<item>
+					un package est un regroupement de classes ;
+				</item>
+				<item>
+					pour créer un tel package,
+					il suffit de commencer les 
+					<formatted style="bold">fichiers sources</formatted> 
+					contenant les classes à regrouper
+					par l'instruction 
+					<formatted style="code">package</formatted> 
+					suivi du nom 
+					que l'on désire donner au package ;
+				</item>
+				<item>
+					les <formatted style="bold">fichiers classes</formatted> 
+					doivent se trouver dans l'arborescence de répertoires 
+					donnée par le package.
+				</item>
+				<item>
+					Cette arborescence doit commencer dans un dossier
+					repris dans le CLASSPATH.
+				</item>
+			</list>
+
+			<paragraph>
+				Mais, concrétement,
+				quel dossier choisir pour placer les classes ?
+				Il existe plusieurs façons de s'organiser ;
+				on va vous en présenter deux. 
+			</paragraph>
+			
+			<paragraph title="Sans package.">
+				D'abord, résumons ce que vous faisiez jusqu'à présent
+				sans package.
+				Avec cette approche, le source et la classe
+				se trouvent dans un même dossier, quelconque.
+			</paragraph>
+
+			<list listStyle="ordered">
+				<item>
+					On se place où on veut.
+				</item>
+				<item>
+					On édite le source : <formatted style="code">nano Test.java</formatted>
+				</item>
+				<item>
+					On compile : <formatted style="code">javac Test.java</formatted>
+				</item>
+				<item>
+					On exécute : <formatted style="code">java Test</formatted>
+				</item>
+			</list>
+
+			<paragraph title="1re proposition : pour transporter vos sources et classes rapidement."/>
+			<paragraph>
+				Dans cette approche, les sources sont séparés des classes
+				mais sont dans un dossier commun.
+			</paragraph>
+			<multimedia src="../image/approche4.jpeg" type="jpeg" legend="Illustration de la 1ère approche" width="60" units="percent"/>
+
+			<list listStyle="ordered">
+				<item>
+					On vérifie que le CLASSPATH contient bien le 
+					dossier courant (sur linux1, c'est le cas).
+				</item>
+				<item>
+					On se place quelque part.
+				</item>
+				<item>
+					On crée un dossier pour les sources : <formatted style="code">mkdir src</formatted>
+				</item>
+				<item>
+					On édite le source dans le dossier dédié : 
+					<newLine/>
+					<formatted style="code">nano src/Test.java</formatted>
+					<newLine/>
+					en prenant soin de commencer le fichier par un package qui a du sens
+					(par exemple : <formatted style="code">g12345.td6</formatted>).
+				</item>
+				<item>
+					On compile en demandant à créer la classe à partir
+					du dossier courant : 
+					<newLine/>
+					<formatted style="code">javac -d . src/Test.java</formatted>
+				</item>
+				<item>
+					On exécute : <formatted style="code">java g12345.td6.Test</formatted>
+				</item>
+			</list>
+
+			<paragraph title="Exercice" icon="act"/>
+			<paragraph>
+				Dans un sous-dossier du td6
+				(par exemple : td6/cas1),
+				faites une copie de votre programme 
+				<formatted style="code">Hello.java</formatted>
+				développé au td3
+				et placez-le dans un package en suivant
+				l'approche ci-dessus.
+				Quelle est la commande à utiliser pour compiler ?
+				Et pour exécuter ?
+			</paragraph>
+			<paragraph cssClass="cadre" lines="2"/>
+									
+			<paragraph title="Remarques"/>
+			<list listStyle="ordered">
+				<item>
+					Il existe de nombreuses variantes.
+					Par exemple, les sources dans le dossier
+					"src" et les classes dans le dossier "classes"
+					ou encore les classes dans le dossier "classes"
+					mais les sources directement dans le dossier
+					courant. 
+				</item>
+				<item>
+					Cette approche permet de facilement
+					copier tous les sources et les classes associées
+				</item>
+				<item>
+					Par contre, les classes ne peuvent pas s'exécuter
+					de partout.
+			 	</item>
+			</list>				
+			
+			<paragraph title="2e proposition : toutes les classes sont regroupées dans le même dossier (~/classes)."/>
+			<paragraph>
+				Dans cette approche, toutes les classes
+				de tous vos projets sont placées dans un dossier commun
+				(par exemple : <formatted style="code">~/classes</formatted>)
+			</paragraph>
+			<multimedia src="../image/approche3.jpeg" type="jpeg" legend="Illustration de la 2ème approche" width="60" units="percent"/>
+               
+ 			<list listStyle="ordered">
+				<item>
+					Il faut s'assurer que le CLASSPATH contienne 
+					le dossier <formatted style="code">~/classes</formatted>.
+					Si ce n'est pas le cas,
+					il faut le définir (une fois pour toutes
+					dans le fichier de configuration du bash) :
+					<formatted style="code">CLASSPATH=$CLASSPATH:~/classes</formatted>.					
+				</item>
+				<item>
+					On se place quelque part.
+				</item>
+				<item>
+					On édite le source directement dans le dossier courant : 
+					<formatted style="code">nano Test.java</formatted>
+					en prenant soin de commencer le fichier par un package qui a du sens
+					(par exemple : <formatted style="code">g12345.td6</formatted>).
+				</item>
+				<item>
+					On compile en demandant à créer la classe dans
+					le dossier global dédié :
+					<formatted style="code">javac -d ~/classes Test.java</formatted>
+				</item>
+				<item>
+					On exécute : <formatted style="code">java g12345.td6.Test</formatted>
+				</item>
+			</list>
+			
+			</clarify>
+
+			<act>
+				
+			<paragraph title="Exercice" icon="act"/>
+			<paragraph>
+				Il s'agit du même exercice que pour la première approche.
+				Dans un autre sous-dossier du td6
+				(par exemple : td6/cas2),
+				faites une copie de votre programme 
+				<formatted style="code">Hello.java</formatted>
+				développé au td3
+				et placez-le dans un package en suivant
+				l'approche ci-dessus.
+				Quelle est la commande à utiliser pour compiler ?
+				Et pour exécuter ?
+			</paragraph>
+			<paragraph cssClass="cadre" lines="2"/>
+											
+		</act>
+
+	</learningObject>		
+	
+
+  </unit>
+
+  
+	<!-- =================================================================== -->
+	<unit label="Exercices" title="Exercices">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Maintenant, mettons tout ça en pratique.
+      </paragraph>
+    </entry>
+    
+		<learningObject title="La notion de package">
+			
+			<act>
+				<selfCheck title="API" shuffle="yes">
+					<fillInBlanks>
+						<question></question>
+						<gapText>
+							<paragraph>
+								Ouvrez la documentation de l'API Java 
+								et recherchez la classe qui se nomme
+								<formatted style="code">IllegalFormatException</formatted>.
+							</paragraph>
+							<list listStyle="unordered">
+								<item>
+									Quel est le package de cette classe ?   
+									<gap answers="">java.util</gap>
+								</item>
+								<item>
+									Quel est le nom qualifié de cette classe ?<newLine/>   
+									<gap answers="">java.util.IllegalFormatException</gap>
+								</item>
+							</list>
+							<paragraph>
+								Écrivez la déclaration correcte d'une variable nommée
+								<formatted style="code">clavier</formatted> de type 
+								<formatted style="code">Scanner</formatted> sans import de la classe.
+							</paragraph>
+							<paragraph>
+								<gap answers="">java.util.Scanner</gap> <gap answers="">clavier</gap>
+							</paragraph>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+
+				<selfCheck title="Choix Multiple " shuffle="yes">
+					<multipleChoice>
+						<question>
+							<paragraph>Soit le code :</paragraph>
+							<paragraph cssClass="java">
+package td.td6; 
+public class ErrCompilation {
+    import java.util.Scanner;
+    public static void main (String [] args) { 
+        System.out.println("TD6Prepa");
+    }
+}							</paragraph>
+							<paragraph>
+								la commande <formatted style="code">javac ErrCompilation.java</formatted> 
+								provoque les erreurs suivantes :
+							</paragraph>
+							<paragraph cssClass="output">
+ErrCompilation.java:2: illegal start of type
+import java.util.Scanner;
+^
+ErrCompilation.java:2: ';' expected
+import java.util.Scanner;
+^
+ErrCompilation.java:2: illegal start of type
+import java.util.Scanner;
+^
+ErrCompilation.java:2: ';' expected
+import java.util.Scanner;
+^
+ErrCompilation.java:2: &lt;identifier&gt; expected
+import java.util.Scanner;
+^
+5 errors
+							</paragraph>
+							<paragraph>
+							Il s'agit d'erreurs générées par le compilateur car :
+							</paragraph>
+						</question>
+						<answer feedback="" correct="no"><formatted style="java">import</formatted> s'écrit avec une majuscule</answer>
+						<answer feedback="" correct="no">le package utilisé est incorrect</answer>
+						<answer feedback="" correct="yes">le <formatted style="java">import</formatted> est mal placé dans le code</answer>
+						<answer feedback="" correct="no"><formatted style="java">Scanner</formatted> s'écrit avec une minuscule</answer>
+						<answer feedback="" correct="no">on n'utilise pas <formatted style="java">Scanner</formatted> dans le code</answer>
+					</multipleChoice>
+				</selfCheck>
+
+				<selfCheck title="Choix Multiple " shuffle="yes">
+					<multipleChoice>
+						<question>
+							<paragraph>Soit le code :</paragraph>
+							<paragraph cssClass="java">
+import java.util.Scanner;
+package survol;
+public class ErrCompilation{
+	public static void main (String [] args){
+		System.out.println("TD6Prepa");
+	
+}							</paragraph>
+							<paragraph>
+								la commande <formatted style="code">javac ErrCompilation.java</formatted> provoque l'erreur suivante :
+							</paragraph>
+							<paragraph cssClass="output">
+ErrCompilation.java:3: class, interface, or enum expected
+package survol;
+^
+1 error
+							</paragraph>
+							<paragraph>
+								Il s'agit d'une erreur générée par le compilateur <formatted style="code">javac</formatted> car :
+							</paragraph>
+						</question>
+						<answer feedback="" correct="no"><formatted style="java">package</formatted> s'écrit avec une majuscule</answer>
+						<answer feedback="" correct="yes">l'instruction <formatted style="java">package</formatted> est mal placée dans le code</answer>
+						<answer feedback="" correct="no">le <formatted style="java">package</formatted> utilisé est incorrect</answer>
+					</multipleChoice>
+				</selfCheck>
+
+				<selfCheck title="Choix Multiple " shuffle="yes">
+					<multipleChoice>
+						<question>
+						  <paragraph>
+							  Après correction du code précédent situé dans le répertoire survol,
+							  la suite de commandes :
+              </paragraph>
+							<paragraph><formatted style="code">javac ErrCompilation.java</formatted></paragraph>
+							<paragraph><formatted style="code">java ErrCompilation</formatted></paragraph>
+							provoque l'erreur suivante :
+							<paragraph cssClass="output">
+Exception
+in thread "main" java.lang.NoClassDefFoundError:
+ErrCompilation (wrong name: survol/ErrCompilation)
+at java.lang.ClassLoader.defineClass1(Native Method)
+at java.lang.ClassLoader.defineClass(ClassLoader.java:632)
+at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:319)
+at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:264)
+at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:332)
+Could not find the main class: ErrCompilation. Program will exit.
+							</paragraph>
+							<paragraph>
+								Il s'agit d'une erreur générée par la machine virtuelle Java car :
+							</paragraph>
+						</question>
+						<answer feedback="" correct="yes">pour exécuter on doit donner le nom qualifié de la classe</answer>
+						<answer feedback="" correct="no">la déclarative de package ne correspond pas à l'emplacement du fichier .class</answer>
+						<answer feedback="" correct="no">la machine virtuelle n'est pas configurée pour reconnaitre l'utilisation de packages</answer>
+						<answer feedback="" correct="no">le fichier .class devrait se trouver ailleurs que le source Java</answer>
+					</multipleChoice>
+				</selfCheck>
+			</act>
+		</learningObject>
+		
+		<learningObject title="À vous de jouer...">
+    <!-- ============================================================ -->
+      <act>
+        Vous trouverez cet énoncé <link uri="../../../TDPackage/fr/énoncé/DEV1-LAJ-interro-3B-20141114-1.pdf">ici</link>.
+      </act>
+    </learningObject>
+
+  </unit>
+</lesson>

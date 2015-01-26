@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="InitPackage" title="Les packages">
+	
+	<entry>
+		<paragraph>
+			Ces exercices ont pour but de vérifier que vous avez fixé comment associer un package à vos méthodes.
+		</paragraph>
+      <paragraph>
+        Vous trouverez cet énoncé <link uri="../../../InitPackage/fr/énoncé/DEV1-LAJ-interro-3-JLC.pdf">ici</link>.
+    </paragraph>
+</entry>
+
+</lesson>

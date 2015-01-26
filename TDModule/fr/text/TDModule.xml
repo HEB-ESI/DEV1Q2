@@ -505,7 +505,7 @@ import java.util.Scanner;
 		    <list listStyle="unordered">
           <item>la documentation accompagne le code</item>
           <item>un outil extrait cette documentation pour en faire un document facile à lire</item>
-          <item>toute la documentation suit la même structure, le même style → plus facile à lire</item>
+          <item>toute la documentation suit la même structure, le même style, donc, c'est plus facile à lire</item>
         </list>
 		  </paragraph>
 		  
@@ -628,7 +628,7 @@ public static int absolu ( int nb ) {
       </paragraph>
       
       <paragraph title="Une bonne documentation">
-        Une bonne javadoc décrit le quoi mais jamais le comment → ne jamais parler de ce qui est privé.
+        Une bonne javadoc décrit le quoi mais jamais le comment DONC, ne jamais parler de ce qui est privé.
       </paragraph>
       <paragraph>
         Mauvais exemples :
@@ -933,7 +933,7 @@ fin module
         <selfCheck title="Appels de méthodes de classe dans la même classe" shuffle="yes">
           <multipleChoice>
             <question>
-              Parmi les appels de méthodes suivants dans la méthode main <formatted style="bold">de la même classe</formatted>, lesquels sont corrects?  
+              Parmi les appels de méthodes suivants dans la méthode main <formatted style="bold">de la même classe</formatted>,  lesquels sont corrects?  
             </question>
             <answer feedback="" correct="no"><formatted style="java">entete("Operations");</formatted></answer>
             <answer feedback="" correct="no"><formatted style="java">entete(10);</formatted></answer>

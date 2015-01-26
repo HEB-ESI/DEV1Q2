@@ -5,7 +5,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <meta http-equiv="Content-Style-Type" content="text/css" />
-      <meta name="description" content="Challenge : les tableaux. Le calendrier. Calcul de la catégorie. " />
+      <meta name="description" content="Challenge : les tableaux. Les algorithmes en maternelle. " />
       <meta name="copyright" content="" />
       <meta name="author" content="" />
       <meta name="keywords" content="Challenge : les tableaux, eLML" />
@@ -20,121 +20,18 @@
       </ul>
       <div class="navigation_arrows"><img src="../../../_templates/java/navigation/back_off.gif" height="24" width="24" alt="No previous page available" border="0" /><a href="unit_.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="index.html">1. Challenge : les tableaux</h1>
       <div>
-         <h2 id="ChallengeTableau_entry.html">Le calendrier</h2>
+         <h2 id="ChallengeTableau_entry.html">Les algorithmes en maternelle</h2>
          <p class="paragraph" id="d8e4">
-            			Avez-vous compris les boucles ? Voyons ça en relevant le défi du calendrier : <br />
-            			réalisez un programme permettant d'afficher sur le terminal 
-            le calendrier d'un mois et d'une année données. <br />
-            Voici un exemple d'affichage pour
-            le mois de mars 2015 : 
-            
-         </p><pre>
-Mars 2015
-
-Lun Mar Mer Jeu Ven Sam Dim
-                        01
-02  03  04  05  06  07  08
-09  10  11  12  13  14  15
-16  17  18  19  20  21  22
-23  24  25  26  27  28  29
-30  31
-		</pre><p class="paragraph" id="d8e12">
-            Votre programme devra demander à l’utilisateur d’entrer au clavier un mois et une
-            année au format MM AAAA
-            (par exemple 03 2015) et afficher le calendrier de ce mois.
+            			Vous avez maintenant les connaissances nécessaires pour réaliser un examen.
             
          </p>
-         <p class="paragraph" id="d8e14">
-            Pour déterminer le jour de la semaine où commence le mois, vous utiliserez <a class="link" href="http://en.wikipedia.org/wiki/Zeller%27s_congruence" target="_blank" rel="external" title="la congruence de Zeller">la congruence de Zeller</a>. <br />
-            Pour le calendrier grégorien, actuellement utilisé dans la majeure partie du monde,
-            la congruence de Zeller est la suivante :
+         <p class="paragraph" id="d8e6">
+            Vous trouverez par exemple Les algorithmes en maternelle <a class="link" href="../../../ChallengeTableau/fr/examen/DEV1-150107-MCD.pdf" target="_blank" rel="external" title="ici">ici</a>.
             
          </p>
-         <p class="paragraph" id="d8e21"><span class="multimedia_inline"><img class="multimedia" id="d8e22" src="../image/zeller.png" alt="" /></span></p>
-         <p class="paragraph" id="d8e23">
-            où
-            
-            <ul class="list" id="d8e25">
-               <li class="itemAlt"><code>h</code> est un entier représentant le jour de la semaine (0 = samedi, 1 = dimanche, 2 = lundi,
-                  . . .),
-               </li>
-               <li class="item"><code>q</code> est un entier représentant le jour du mois (de 1 à 31),
-               </li>
-               <li class="itemAlt"><code>m</code> est un entier représentant le numéro du mois 
-                  				(3 = mars, 4 = avril, . . . Janvier et février étant considérés comme les mois
-                  13 et 14 de l’année précédente. Donc janvier 2015 sera considéré comme 13 2014),
-               </li>
-               <li class="item"><code>J</code> est un entier représentant year/100 (par exemple 20 pour l’année 2008),
-               </li>
-               <li class="itemAlt"><code>K</code> est un entier représentant l’année dans le siècle, c’est à dire year mod 100 (par
-                  exemple 15 pour l’année 2015)
-               </li>
-               <li class="item"><code>x/y</code> représente le résultat de <b>division entière</b> de x par y.
-               </li>
-            </ul>
-            Ainsi, pour le 3 mars 2015, <code>q</code> = 3, <code>m</code> = 3, 
-            <code>J</code> = 20 et <code>K</code> = 15. <br />
-            Le résultat <code>h</code> de la congruence de Zeller est ((3+10+15+3+5+100) mod 7) = (136 mod 7) = 3 et donc
-            <b>mardi</b>.
-            
-         </p>
-         <p class="paragraph" id="d8e75">
-            Une autre règle est nécessaire : celle des années bissextiles. <br />
-            En effet, le mois de février de ces années contient 29 jours au lieu de 28.
-            Depuis l’instauration du calendrier grégorien, sont bissextiles les années divisibles
-            par 4 mais non divisibles par 100 ou les années divisibles par 400. 
-            Ainsi, 2016 est une année bissextile mais 2015 pas.
-            
-         </p>
-         <h4>Calcul de la catégorie</h4>
-         <p class="paragraph" title="Calcul de la catégorie" id="d8e79">
-            Écrivez les modules suivants, dont voici les prototypes :
-            
-            <ul class="list" id="d8e81">
-               <li class="itemAlt">
-                  <p class="paragraph" id="d8e83"><code>module dayOfWeek(day, month, year : entiers) → entier</code></p>
-                  qui retourne un entier correspondant au jour de la semaine (0 = lundi, 1 = mardi,
-                  . . .) pour une date donnée en paramètre. <br />
-                  Le paramètre year est au format AAAA, par exemple 2015.
-                  
-               </li>
-               <li class="item">
-                  <p class="paragraph" id="d8e90"><code>module daysInMonth(month, year : entiers) → entier</code></p>
-                  qui retourne le nombre de jours du mois donné en paramètre.
-                  
-               </li>
-               <li class="itemAlt">
-                  <p class="paragraph" id="d8e95"><code>module isLeapYear(year : entier) → booléen</code></p>
-                  qui reçoit une année au format AAAA et qui renvoie vrai si cette année est bissextile
-                  et faux si elle ne l’est pas.
-                  
-               </li>
-               <li class="item">
-                  <p class="paragraph" id="d8e100"><code>module printDay(day : entier)</code></p>
-                  qui affiche à l’écran au format JJ le numéro du jour donné en paramètre.<br />
-                  Par exemple, si on donne 1 en paramètre à cette fonction, celle-ci affichera 01.
-                  
-               </li>
-               <li class="itemAlt">
-                  <p class="paragraph" id="d8e107"><code>module printCalendar(month, year : entiers)</code></p>
-                  qui affiche à l’écran le calendrier du mois de l'année passés en paramètre, les semaines
-                  commençant par le lundi.
-                  
-               </li>
-               <li class="item">
-                  <p class="paragraph" id="d8e112"><code>module principal</code></p>
-                  qui demande à l'utilisateur d'entrer un mois et une année au clavier.<br />
-                  Si le mois entré n'est pas valide, le programme redemandera la lecture jusqu'à obtenir
-                  une valeur correcte pour le mois.<br />
-                  Ensuite, le programme affichera à l'écran le calendrier du mois et de l'année lus.
-                  
-               </li>
-            </ul>
-         </p>
-         <p class="paragraph" id="d8e120">Écrivez le code java correspondant ainsi que la javadoc.</p>
       </div>
       <hr />
       <div class="navigation_arrows"><img src="../../../_templates/java/navigation/back_off.gif" height="24" width="24" alt="No previous page available" border="0" /><a href="unit_.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 23.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/ChallengeTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 26.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/ChallengeTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

@@ -8,7 +8,7 @@
 			Avez-vous compris la découpe en modules ? Voyons ça en relevant le défi du "pas du zébu" :
 		</paragraph>
     <paragraph title="Afficher le titre">
-      Écrivez un module qui reçoit un nomen paramètre et qui affiche le texte :
+      Écrivez un module qui reçoit un nom en paramètre et qui affiche le texte :
     </paragraph>
     <paragraph cssClass="code">
       DEV1 - Entête -  Pas du Zébu - <formatted style="italic">votre nom</formatted>

@@ -1,0 +1,226 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Modules: Organiser ses fichiers. Sans package. 1re proposition : pour transporter vos sources et classes rapidement. Exercice. Remarques. 2e proposition : toutes les classes sont regroupées dans le même dossier (~/classes). Exercice. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Modules, eLML" />
+      <title>1.7.5. Organiser ses fichiers</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Modules</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_D%C3%A9couper.html">1.1. Découper du code</a></li>
+               <li class="navigationLink"><a href="unit_PassageParametres.html">1.2. Passage de paramètres</a></li>
+               <li class="navigationLink"><a href="unit_RetournerValeur.html">1.3. Module renvoyant une valeur</a></li>
+               <li class="navigationLink"><a href="unit_Methodes.html">1.4. Méthodes et appel de méthodes</a></li>
+               <li class="navigationLink"><a href="unit_Erreur.html">1.5. Erreur ou Exception</a></li>
+               <li class="navigationLink"><a href="unit_Commenter.html">1.6. Commenter une méthode</a></li>
+               <li class="navigationLink"><a href="unit_Package.html">1.7. Les package</a><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="Package_learningObject1.html">1.7.1. Introduction aux packages</a></li>
+                     <li class="navigationLink"><a href="Package_learningObject2.html">1.7.2. Utiliser le package d'un autre</a></li>
+                     <li class="navigationLink"><a href="Package_learningObject3.html">1.7.3. Utiliser ses propres packages</a></li>
+                     <li class="navigationLink"><a href="Package_learningObject4.html">1.7.4. La variable CLASSPATH</a></li>
+                     <li class="navigationActual"><strong>1.7.5. Organiser ses fichiers</strong></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.8. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="Package_learningObject4.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Package_learningObject5.html">1.7.5. Organiser ses fichiers</h1>
+      <div id="d8e873.html" class="clarify">
+         <p class="paragraph" id="d8e874">
+            				Résumons ce que  nous avons déjà vu.
+            			
+         </p>
+         <ul class="list" id="d8e876">
+            <li class="itemAlt">
+               					un package est un regroupement de classes ;
+               				
+            </li>
+            <li class="item">
+               					pour créer un tel package,
+               					il suffit de commencer les 
+               					<b>fichiers sources</b> 
+               					contenant les classes à regrouper
+               					par l'instruction 
+               					<code>package</code> 
+               					suivi du nom 
+               					que l'on désire donner au package ;
+               				
+            </li>
+            <li class="itemAlt">
+               					les <b>fichiers classes</b> 
+               					doivent se trouver dans l'arborescence de répertoires 
+               					donnée par le package.
+               				
+            </li>
+            <li class="item">
+               					Cette arborescence doit commencer dans un dossier
+               					repris dans le CLASSPATH.
+               				
+            </li>
+         </ul>
+         <p class="paragraph" id="d8e894">
+            				Mais, concrétement,
+            				quel dossier choisir pour placer les classes ?
+            				Il existe plusieurs façons de s'organiser ;
+            				on va vous en présenter deux. 
+            			
+         </p>
+         <h4>Sans package.</h4>
+         <p class="paragraph" title="Sans package." id="d8e896">
+            				D'abord, résumons ce que vous faisiez jusqu'à présent
+            				sans package.
+            				Avec cette approche, le source et la classe
+            				se trouvent dans un même dossier, quelconque.
+            			
+         </p>
+         <ol class="list" id="d8e898">
+            <li class="itemAlt">
+               					On se place où on veut.
+               				
+            </li>
+            <li class="item">
+               					On édite le source : <code>nano Test.java</code></li>
+            <li class="itemAlt">
+               					On compile : <code>javac Test.java</code></li>
+            <li class="item">
+               					On exécute : <code>java Test</code></li>
+         </ol>
+         <h4>1re proposition : pour transporter vos sources et classes rapidement.</h4>
+         <p class="paragraph" title="1re proposition : pour transporter vos sources et classes rapidement." id="d8e913"></p>
+         <p class="paragraph" id="d8e914">
+            				Dans cette approche, les sources sont séparés des classes
+            				mais sont dans un dossier commun.
+            			
+         </p><span class="multimedia_paragraph_left"><img class="multimedia" id="d8e916" src="../image/approche4.jpeg" width="60%" title="Illustration de la 1ère approche" alt="Illustration de la 1ère approche" /><span class="legend" style="display:block">Illustration de la 1ère approche</span></span><ol class="list" id="d8e917">
+            <li class="itemAlt">
+               					On vérifie que le CLASSPATH contient bien le 
+               					dossier courant (sur linux1, c'est le cas).
+               				
+            </li>
+            <li class="item">
+               					On se place quelque part.
+               				
+            </li>
+            <li class="itemAlt">
+               					On crée un dossier pour les sources : <code>mkdir src</code></li>
+            <li class="item">
+               					On édite le source dans le dossier dédié : 
+               					<br /><code>nano src/Test.java</code><br />
+               					en prenant soin de commencer le fichier par un package qui a du sens
+               					(par exemple : <code>g12345.td6</code>).
+               				
+            </li>
+            <li class="itemAlt">
+               					On compile en demandant à créer la classe à partir
+               					du dossier courant : 
+               					<br /><code>javac -d . src/Test.java</code></li>
+            <li class="item">
+               					On exécute : <code>java g12345.td6.Test</code></li>
+         </ol>
+         <h4>Exercice<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
+         <p class="paragraph" title="Exercice" id="d8e945"></p>
+         <p class="paragraph" id="d8e946">
+            				Dans un sous-dossier du td6
+            				(par exemple : td6/cas1),
+            				faites une copie de votre programme 
+            				<code>Hello.java</code>
+            				développé au td3
+            				et placez-le dans un package en suivant
+            				l'approche ci-dessus.
+            				Quelle est la commande à utiliser pour compiler ?
+            				Et pour exécuter ?
+            			
+         </p>
+         <p class="cadre" id="d8e952"></p>
+         <h4>Remarques</h4>
+         <p class="paragraph" title="Remarques" id="d8e953"></p>
+         <ol class="list" id="d8e954">
+            <li class="itemAlt">
+               					Il existe de nombreuses variantes.
+               					Par exemple, les sources dans le dossier
+               					"src" et les classes dans le dossier "classes"
+               					ou encore les classes dans le dossier "classes"
+               					mais les sources directement dans le dossier
+               					courant. 
+               				
+            </li>
+            <li class="item">
+               					Cette approche permet de facilement
+               					copier tous les sources et les classes associées
+               				
+            </li>
+            <li class="itemAlt">
+               					Par contre, les classes ne peuvent pas s'exécuter
+               					de partout.
+               			 	
+            </li>
+         </ol>
+         <h4>2e proposition : toutes les classes sont regroupées dans le même dossier (~/classes).</h4>
+         <p class="paragraph" title="2e proposition : toutes les classes sont regroupées dans le même dossier (~/classes)." id="d8e961"></p>
+         <p class="paragraph" id="d8e962">
+            				Dans cette approche, toutes les classes
+            				de tous vos projets sont placées dans un dossier commun
+            				(par exemple : <code>~/classes</code>)
+            			
+         </p><span class="multimedia_paragraph_left"><img class="multimedia" id="d8e967" src="../image/approche3.jpeg" width="60%" title="Illustration de la 2ème approche" alt="Illustration de la 2ème approche" /><span class="legend" style="display:block">Illustration de la 2ème approche</span></span><ol class="list" id="d8e968">
+            <li class="itemAlt">
+               					Il faut s'assurer que le CLASSPATH contienne 
+               					le dossier <code>~/classes</code>.
+               					Si ce n'est pas le cas,
+               					il faut le définir (une fois pour toutes
+               					dans le fichier de configuration du bash) :
+               					<code>CLASSPATH=$CLASSPATH:~/classes</code>.					
+               				
+            </li>
+            <li class="item">
+               					On se place quelque part.
+               				
+            </li>
+            <li class="itemAlt">
+               					On édite le source directement dans le dossier courant : 
+               					<code>nano Test.java</code>
+               					en prenant soin de commencer le fichier par un package qui a du sens
+               					(par exemple : <code>g12345.td6</code>).
+               				
+            </li>
+            <li class="item">
+               					On compile en demandant à créer la classe dans
+               					le dossier global dédié :
+               					<code>javac -d ~/classes Test.java</code></li>
+            <li class="itemAlt">
+               					On exécute : <code>java g12345.td6.Test</code></li>
+         </ol>
+      </div>
+      <div id="d8e995.html" class="act">
+         <h4>Exercice<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
+         <p class="paragraph" title="Exercice" id="d8e996"></p>
+         <p class="paragraph" id="d8e997">
+            				Il s'agit du même exercice que pour la première approche.
+            				Dans un autre sous-dossier du td6
+            				(par exemple : td6/cas2),
+            				faites une copie de votre programme 
+            				<code>Hello.java</code>
+            				développé au td3
+            				et placez-le dans un package en suivant
+            				l'approche ci-dessus.
+            				Quelle est la commande à utiliser pour compiler ?
+            				Et pour exécuter ?
+            			
+         </p>
+         <p class="cadre" id="d8e1002"></p>
+      </div>
+      <hr />
+      <div class="navigation_arrows"><a href="Package_learningObject4.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 26.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDModule.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

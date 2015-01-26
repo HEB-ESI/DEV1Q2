@@ -1,0 +1,320 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Tableaux: En Java.... Bornes d'un tableau. Déclaration, création et initialisation d'un tableau . Création. Initialisation. Réflexion. la réponse. Vérification. la réponse. Cochez les affirmations qui sont vraies. Sélection multiple. Quiz. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Tableaux, eLML" />
+      <title>1.2.1. En Java...</title>
+      		
+      <link href="selfCheck.css" type="text/css" rel="stylesheet" media="screen" />
+      		<script src="selfCheck.js" type="text/javascript">
+         <!----></script><link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Tableaux</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Tableaux.html">1.1. Les tableaux</a></li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.2. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="unit_.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="TDTableau_learningObject.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="_learningObject1.html">1.2.1. En Java...</h1>
+      <h4>Bornes d'un tableau</h4>
+      <div id="selfCheck1.html" class="fillInBlanks">
+         <div class="itemQuestion"></div>
+         <div class="itemAnswer">
+            <div class="itemLabel">
+               <ul class="list" id="d8e390">
+                  <li class="itemAlt">
+                     									La variable permettant de se déplacer dans un tableau s'appelle un <input type="text" value="" class="itemText" id="_d8e393" style="width:50px" /> <span class="gapText">,indice</span></li>
+                  <li class="item">
+                     									En Java, la première valeur d'un tableau à <b>n</b> éléments se trouve à la position            
+                     									<input type="text" value="" class="itemText" id="_d8e400" style="width:12px" /> <span class="gapText">,0</span> 
+                     									et la dernière valeur se trouve à la position 
+                     									<input type="text" value="" class="itemText" id="_d8e403" style="width:25px" /> <span class="gapText">,n-1,n-1, n- 1, n - 1, n -1</span></li>
+               </ul>
+            </div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemSolution"></div>
+         <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck1.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck1.html_solution" onclick="solutionGaps('selfCheck1.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+      </div>
+      <h4>Déclaration, création et initialisation d'un tableau <img src="../../../_templates/java/icons/icon_reading.gif" title="icon_reading" alt="icon_reading" class="icon" /></h4>
+      <p class="paragraph" title="Déclaration, création et initialisation d'un tableau " id="d8e406"></p>
+      <p class="paragraph" id="d8e407">
+         					Un tableau possède un type et une taille.
+         					Le type de ses éléments est soit l'un des types simples (int, double, char,..)
+         ou une réference (String,...).
+         				
+      </p>
+      <p class="paragraph" id="d8e409">
+         					La taille du tableau est le nombre (strictement positif ) de ses éléments.
+         					Elle ne fait pas partie du type.  
+         				
+      </p>
+      <div id="selfCheck5.html" class="singleChoiceShuffle">
+         <div class="itemQuestion">La déclaration d'un tableau réserve un emplacement mémoire</div>
+         <div class="itemAnswer"><input type="radio" name="selfCheck5.html" value="0" class="itemRadio" id="selfCheck5.html_d8e415" /><div class="itemLabel"><label for="selfCheck5.html_d8e415">sur le tas. <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemAnswer"><input type="radio" name="selfCheck5.html" value="1" class="itemRadio" id="selfCheck5.html_d8e417" /><div class="itemLabel"><label for="selfCheck5.html_d8e417">sur la pile. <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+         <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck5.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck5.html_solution" onclick="solutionChoice('selfCheck5.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+      </div><script src="wz_tooltip.js" type="text/javascript">
+         <!----></script><h4>Création</h4>
+      <div id="selfCheck6.html" class="fillInBlanks">
+         <div class="itemQuestion"></div>
+         <div class="itemAnswer">
+            <div class="itemLabel">
+               <p class="paragraph" id="d8e423">
+                  								Pour créer un tableau, le mot clé utilisé est <input type="text" value="" class="itemText" id="_d8e425" style="width:25px" /> <span class="gapText">,new</span></p>
+               <p class="paragraph" id="d8e427">
+                  								Pour pouvoir créer un tableau nommé <b>entiers</b> 
+                  								de 10 entiers <b>précédemment déclaré</b>, il faut écrire l'instruction
+                  								<input type="text" value="" class="itemText" id="_d8e435" style="width:50px" /> <span class="gapText">,entiers</span><input type="text" value="" class="itemText" id="_d8e437" style="width:12px" /> <span class="gapText">,=</span><input type="text" value="" class="itemText" id="_d8e439" style="width:25px" /> <span class="gapText">,new</span><input type="text" value="" class="itemText" id="_d8e441" style="width:25px" /> <span class="gapText">,int</span><input type="text" value="" class="itemText" id="_d8e443" style="width:50px" /> <span class="gapText">,[10],[10], [ 10 ]</span>;
+                  							
+               </p>
+            </div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemSolution">
+            							La création permet de réserver l'espace mémoire sur le tas (heap). 
+            							Pour cela il faut spécifier la taille souhaitée.
+            						
+         </div>
+         <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck6.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck6.html_solution" onclick="solutionGaps('selfCheck6.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+      </div>
+      <div id="selfCheck7.html" class="singleChoiceShuffle">
+         <div class="itemQuestion">La création d'un tableau se fait</div>
+         <div class="itemAnswer"><input type="radio" name="selfCheck7.html" value="1" class="itemRadio" id="selfCheck7.html_d8e452" /><div class="itemLabel"><label for="selfCheck7.html_d8e452">sur le tas <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemAnswer"><input type="radio" name="selfCheck7.html" value="0" class="itemRadio" id="selfCheck7.html_d8e454" /><div class="itemLabel"><label for="selfCheck7.html_d8e454">sur la pile <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+         <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck7.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck7.html_solution" onclick="solutionChoice('selfCheck7.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+      </div><script src="wz_tooltip.js" type="text/javascript">
+         <!----></script><h4>Initialisation</h4>
+      <div id="selfCheck8.html" class="fillInBlanks">
+         <div class="itemQuestion">
+            <p class="paragraph" id="d8e459">
+               								Le mot clé <code>new</code> permet également d'initialiser
+               								tous les éléments du tableau fraichement créé à une valeur par défaut. 
+               							
+            </p>
+            <p class="paragraph" id="d8e464">Quelle est cette valeur par défaut ?</p>
+         </div>
+         <div class="itemAnswer">
+            <div class="itemLabel">
+               <ul class="list" id="d8e467">
+                  <li class="itemAlt">pour les numériques (int, double, char) : <input type="text" value="" class="itemText" id="_d8e470" style="width:12px" /> <span class="gapText">,0,zéro,0</span></li>
+                  <li class="item">pour les boolean : <input type="text" value="" class="itemText" id="_d8e474" style="width:50px" /> <span class="gapText">,false</span></li>
+                  <li class="itemAlt">pour les objets (type réference) : <input type="text" value="" class="itemText" id="_d8e478" style="width:50px" /> <span class="gapText">,null</span></li>
+               </ul>
+            </div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemSolution"></div>
+         <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck8.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck8.html_solution" onclick="solutionGaps('selfCheck8.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+      </div>
+      <h4>Réflexion<img src="../../../_templates/java/icons/question.gif" title="question" alt="question" class="icon" /></h4>
+      <p class="paragraph" title="Réflexion" id="d8e481"></p>
+      <p class="paragraph" id="d8e482">  
+         					Est-il possible de déclarer, de créer et d'initialiser un tableau de 10 éléments
+         en une seule opération ?  
+         				
+      </p>
+      <p id="d8e484" class="popupTitle" style="cursor: pointer;" onclick="onBlock('solutiond8e484')">Cliquez pour voir la réponse</p>
+      <div id="solutiond8e484text" style="display: none; cursor: pointer;" class="popup" title="la réponse" onclick="off('solutiond8e484')">
+         <p class="paragraph" id="d8e485">  
+            						Oui, on peut condenser l'écriture :
+            					
+         </p><pre>  
+int [] entiers = new int[10];  
+					</pre><p class="paragraph" id="d8e489">
+            						et pour une initialisation personnalisée:
+            					
+         </p><pre>  
+int [] entiers = {0,4,5,6,6,7,2,1,8,9};
+					</pre></div>
+      <h4>Vérification<img src="../../../_templates/java/icons/icon_activity.gif" title="icon_activity" alt="icon_activity" class="icon" /></h4>
+      <p class="paragraph" title="Vérification" id="d8e494"></p>
+      <p class="paragraph" id="d8e495">
+         					Écrivez sur papier la boucle permettant d'initialiser
+         					les éléments d'un tableau d'entiers de 10 éléments à la valeur de leur indice.
+         
+         				
+      </p>
+      <p id="d8e497" class="popupTitle" style="cursor: pointer;" onclick="onBlock('solutiond8e497')">Cliquez pour voir la réponse</p>
+      <div id="solutiond8e497text" style="display: none; cursor: pointer;" class="popup" title="la réponse" onclick="off('solutiond8e497')"><pre>
+    for(int i=0; i&lt;10; i++) {
+        entiers[i] = i ;
+    }  
+					</pre></div>
+      <h4>Cochez les affirmations qui sont vraies</h4>
+      <div id="selfCheck15.html" class="multipleChoiceShuffle">
+         <div class="itemQuestion">
+            							Considerons le tableau <code>entiers</code>
+            							contenant les élements <code>{3,4,5}</code>.
+            						
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck15.html" value="1" class="itemRadio" id="selfCheck15.html_d8e510" /><div class="itemLabel"><label for="selfCheck15.html_d8e510">
+                  							Le tableau connait sa taille.
+                  						 <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp" onmouseover="Tip('Un tableau connait sa taille via son attribut length')" onmouseout="UnTip()">?</div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck15.html" value="0" class="itemRadio" id="selfCheck15.html_d8e512" /><div class="itemLabel"><label for="selfCheck15.html_d8e512"><code>entiers[3]</code> vaut 5.
+                  						 <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp" onmouseover="Tip('Il n&#x92;est pas possible d&#x92;utiliser des indices se trouvant en dehors des bornes du tableau.')" onmouseout="UnTip()">?</div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck15.html" value="0" class="itemRadio" id="selfCheck15.html_d8e516" /><div class="itemLabel"><label for="selfCheck15.html_d8e516"><code>entiers[3]=4;</code> affecte la valeur 4 à la 3<sup>ème</sup> case.
+                  						 <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp" onmouseover="Tip('Il n&#x92;est pas possible d&#x92;utiliser des indices se trouvant en dehors des bornes du tableau.')" onmouseout="UnTip()">?</div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck15.html" value="0" class="itemRadio" id="selfCheck15.html_d8e523" /><div class="itemLabel"><label for="selfCheck15.html_d8e523"><code>entiers[1]=0;</code> supprime la case d'indice 1.
+                  						 <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp" onmouseover="Tip('Mettre une case à 0 ne la supprime pas')" onmouseout="UnTip()">?</div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck15.html" value="1" class="itemRadio" id="selfCheck15.html_d8e527" /><div class="itemLabel"><label for="selfCheck15.html_d8e527">
+                  							Si <code>entiers20</code> est un tableau de 20 entiers, on peut écrire l'instruction 
+                  							<code>entiers20 = entiers;</code>.  
+                  						 <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp" onmouseover="Tip('La taille n&#x92;a pas d&#x92;importance ici car on manipule la réference du tableau et non pas ses valeurs.')" onmouseout="UnTip()">?</div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck15.html" value="1" class="itemRadio" id="selfCheck15.html_d8e535" /><div class="itemLabel"><label for="selfCheck15.html_d8e535">
+                  							Un tableau peut être le seul paramètre d'une méthode.
+                  						 <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp" onmouseover="Tip('Étant donné qu&#x92;un tableau connait sa taille via son attribut length, on ne doit plus la fournir comme second paramètre à la méthode.')" onmouseout="UnTip()">?</div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck15.html" value="1" class="itemRadio" id="selfCheck15.html_d8e537" /><div class="itemLabel"><label for="selfCheck15.html_d8e537">
+                  							Un tableau peut être une valeur de retour d'une méthode.
+                  						 <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp" onmouseover="Tip('C&#x92;est plutôt un grand avantage de pouvoir retourner plusieurs valeurs non ? En fait on ne retourne qu&#x92;une  réference vers toutes ces valeurs.')" onmouseout="UnTip()">?</div>
+         </div>
+         <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+         <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck15.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck15.html_solution" onclick="solutionChoice('selfCheck15.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+      </div><script src="wz_tooltip.js" type="text/javascript">
+         <!----></script><h4>Sélection multiple</h4>
+      <div id="selfCheck16.html" class="multipleChoice">
+         <div class="itemQuestion">
+            <p class="paragraph" id="d8e542">
+               								Partons de la représentation de <code>entiers </code>en mémoire
+               								donnée par la figure ci-dessous.  
+               							<span class="multimedia_inline"><img class="multimedia" id="d8e547" src="../image/tab3.jpg" width="50%" title="représentation mémoire de entiers" alt="représentation mémoire de entiers" /><span class="legend" style="display:block">représentation mémoire de entiers</span></span></p>
+            <p class="paragraph" id="d8e548">
+               								Quelle(s) instruction(s) mène(nt) à ce résultat.   
+               							
+            </p>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck16.html" value="0" class="itemRadio" id="selfCheck16.html_d8e550" /><div class="itemLabel"><label for="selfCheck16.html_d8e550">
+                  <p class="paragraph" id="d8e551">proposition 1</p><pre>
+int [] entiers;
+entiers = new int [3];
+							</pre> <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck16.html" value="0" class="itemRadio" id="selfCheck16.html_d8e555" /><div class="itemLabel"><label for="selfCheck16.html_d8e555">
+                  <p class="paragraph" id="d8e556">proposition 2</p><pre>
+int [] entiers = new int [3]; 
+							</pre> <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck16.html" value="0" class="itemRadio" id="selfCheck16.html_d8e560" /><div class="itemLabel"><label for="selfCheck16.html_d8e560">
+                  <p class="paragraph" id="d8e561">proposition 3</p><pre>
+int [] entiers = new int [];
+							</pre> <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck16.html" value="1" class="itemRadio" id="selfCheck16.html_d8e565" /><div class="itemLabel"><label for="selfCheck16.html_d8e565">
+                  <p class="paragraph" id="d8e566">proposition 4</p><pre>
+int [] entiers = {3,3,3};
+							</pre> <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck16.html" value="1" class="itemRadio" id="selfCheck16.html_d8e570" /><div class="itemLabel"><label for="selfCheck16.html_d8e570">
+                  <p class="paragraph" id="d8e571">proposition 5</p><pre>
+int [] entiers = new int [3];
+for (int i=0; i&lt;entiers.length; i++) {
+	entiers[i] = 3;
+}
+							</pre> <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck16.html" value="0" class="itemRadio" id="selfCheck16.html_d8e575" /><div class="itemLabel"><label for="selfCheck16.html_d8e575">
+                  <p class="paragraph" id="d8e576">proposition 6</p><pre>
+int[] entiers;
+entiers = {3,3,3};
+							</pre> <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck16.html" value="0" class="itemRadio" id="selfCheck16.html_d8e580" /><div class="itemLabel"><label for="selfCheck16.html_d8e580">
+                  <p class="paragraph" id="d8e581">proposition 7</p><pre>
+int [3] entiers = {3,3,3};
+							</pre> <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemAnswer"><input type="checkbox" name="selfCheck16.html" value="0" class="itemRadio" id="selfCheck16.html_d8e585" /><div class="itemLabel"><label for="selfCheck16.html_d8e585">
+                  <p class="paragraph" id="d8e586">proposition 8</p><pre>
+int [] entiers;
+entiers= new {3,3,3};
+							</pre> <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+         <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck16.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck16.html_solution" onclick="solutionChoice('selfCheck16.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+      </div><script src="wz_tooltip.js" type="text/javascript">
+         <!----></script><h4>Quiz</h4>
+      <div id="selfCheck17.html" class="singleChoiceShuffle">
+         <div class="itemQuestion">Pour ce tableau de 3 éléments, l'instruction <code>System.out.println (entiers[6]);</code></div>
+         <div class="itemAnswer"><input type="radio" name="selfCheck17.html" value="0" class="itemRadio" id="selfCheck17.html_d8e596" /><div class="itemLabel"><label for="selfCheck17.html_d8e596">n'affiche rien. <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemAnswer"><input type="radio" name="selfCheck17.html" value="0" class="itemRadio" id="selfCheck17.html_d8e598" /><div class="itemLabel"><label for="selfCheck17.html_d8e598">affiche une valeur se trouvant en mémoire. <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemAnswer"><input type="radio" name="selfCheck17.html" value="0" class="itemRadio" id="selfCheck17.html_d8e600" /><div class="itemLabel"><label for="selfCheck17.html_d8e600">provoque une erreur à la compilation. <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="itemAnswer"><input type="radio" name="selfCheck17.html" value="1" class="itemRadio" id="selfCheck17.html_d8e602" /><div class="itemLabel"><label for="selfCheck17.html_d8e602">provoque une  erreur à l'exécution. <span class="itemFeedback">
+                     <!----></span></label></div>
+            <div class="itemHelp_disabled">    </div>
+         </div>
+         <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+         <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck17.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck17.html_solution" onclick="solutionChoice('selfCheck17.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+      </div><script src="wz_tooltip.js" type="text/javascript">
+         <!----></script><hr />
+      <div class="navigation_arrows"><a href="unit_.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="TDTableau_learningObject.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 25.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

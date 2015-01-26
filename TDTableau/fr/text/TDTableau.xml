@@ -596,6 +596,210 @@ fin tant que
 	</unit>
 		
   
+  
+	<!-- =========================================================== -->
+	<unit label="Junit" title="Les tests">
+	<!-- =========================================================== -->
+    <learningObject title="Tests unitaires">
+      <clarify>
+        <paragraph title="Les tests unitaires">
+          Tous les programmes réels contiennent des bugs (erreurs, défauts), parfois même beaucoup.
+          C'est inacceptable :
+          <list style="unordered"> 
+            <item>Inconfort pour l’utilisateur</item>
+            <item>Perte de temps, d’argent, de données, de matériel</item>
+            <item>Voire danger pour la vie humaine, par exemple : <link uri="http://fr.wikipedia.org/wiki/Vol_501_d%27Ariane_5">l'échec du vol d'Ariane 5</link>.</item>
+          </list>
+        </paragraph>
+        <paragraph>
+          On peut trouver différents types d’erreurs : 
+          <list style="unordered"> 
+            <item>à la compilation</item>
+            <item>à l’exécution, le programme s’arrête</item>
+            <item>à l’exécution, le programme fournit une mauvaise réponse</item>
+          </list>
+          On pourrait aussi parler d’autres défauts
+          <list style="unordered"> 
+            <item>Trop lent</item>
+            <item>Trop gourmand en mémoire</item>
+          </list>
+        </paragraph>
+        <paragraph>
+        Pour produire un logiciel sans bug il faut
+         <list style="unordered"> 
+            <item>
+              suivre une méthodologie éprouvée pour produire une première version avec peu de bugs
+              (cf. Analyse)
+            </item>
+            <item>
+              tester, tester et . . . tester encore ! Pour détecter ceux qui restent
+              <list style="unordered"> 
+                <item>Besoin d’outils pour nous aider de façon à tester de la manière la plus facile/rapide possible</item>
+                <item>Il existe plusieurs sortes de tests : unitaires, d’intégration, fonctionnels, non-régression, . . .</item>
+                <item>Nous nous intéressons aux <link uri="http://fr.wikipedia.org/wiki/Test_(informatique)">tests unitaires</link> : 
+                c'est une procédure permettant de tester le bon fonctionnement d’un module (une méthode), ce qui n'est pas forcément suffisant.</item>
+              </list>
+            </item>
+          </list>
+        </paragraph>
+        <paragraph title="Le plan de tests">
+          Il faut planifier les tests, c'est-à-dire se demander quoi tester en choisissant les cas intéressants / judicieux.
+          Pour ça, il faut se baser sur les erreurs fréquentes et cela viendra avec l'expérience.
+        </paragraph>
+        <paragraph>
+          Nous avons besoin d’un plan reprenant les tests à effectuer
+          <list style="unordered"> 
+            <item>Quelles valeurs de paramètres sont pertinentes ?</item>
+            <item>Quel est le résultat attendu ?</item>
+          </list>
+          Ce plan de tests doit être préparé pendant que l’on code 
+          (ou même avant et éventuellement par une autre personne).
+        </paragraph>
+        <paragraph>
+          Il permet de s’assurer que l’on teste tous les cas pertinents.
+        </paragraph>
+        <paragraph>
+          On ne peut pas tester toutes les valeurs possibles
+          <list style="unordered"> 
+            <item>Il faut choisir des valeurs représentatives
+              <list style="unordered"> 
+                <item>Cas général / particuliers</item>
+                <item>Valeurs limites</item>
+              </list>
+            </item>
+            <item>Il faut imaginer les cas qui pourraient mettre en évidence un défaut de la méthode : 
+            on s’inspire des erreurs les plus fréquentes en programmation :
+            <list style="unordered"> 
+              <item>On commence/arrête trop tôt/tard une boucle</item>
+              <item>On initialise mal une variable</item>
+              <item>Dans un test, on se trompe entre <![CDATA[< et ≤]]></item>
+              <item>Dans un test, on se trompe entre ET et OU</item>
+              <item>...</item>
+            </list>
+            C’est un savoir-faire ⇒ Importance de l’expérience
+            </item>
+          </list>
+        </paragraph>
+        <paragraph>
+          Par exemple : <formatted style="code">public static int max(int n1, int n2, int n3) ...</formatted>
+          qui calcule la valeur maximale de trois nombres.
+        </paragraph>
+        <paragraph>
+          Que tester en plus du cas général ?
+          <list style="unordered"> 
+            <item>Le maximum est la première/dernière valeur</item>
+            <item>Présence de nombres négatifs</item>
+          </list>
+        </paragraph>
+        <paragraph>
+          Par exemple : plan de tests de la méthode <formatted style="code">max</formatted> : 
+        </paragraph>
+		    <paragraph  cssClass="code">
+#   nombres     résultat     ce qui est testé
+1   1, 3, 0          3        cas général
+2   1, −3, −4        1        maximum au début
+3   1, 3, 11        11        maximum à la fin
+4   −1, −3, −4      −1        que des négatifs
+        </paragraph>
+        <paragraph>
+          <list style="unordered"> 
+            <item>Quand tester ? 
+              <list style="unordered"> 
+                <item>Le plus souvent possible</item>
+                <item>Erreur plus facile à identifier/corriger</item>
+                <item>Idéalement après chaque méthode écrite</item>
+              </list>
+            </item>
+            <item>Que tester ? 
+              <list style="unordered"> 
+                <item>Tout</item>
+                <item>Le nouveau code peut mettre en évidence un problème dans le code ancien (régression)</item>
+              </list>
+            </item>
+            <item>Comment tester ? 
+              <list style="unordered"> 
+                <item>Pas à la main : intenable</item>
+                <item>Besoin d’un outil automatisé : <formatted style="bold">JUnit</formatted></item>
+              </list>
+            </item>
+          </list>
+        </paragraph>
+        <paragraph title="JUnit">
+          JUnit : outil pour automatiser les tests unitaires :
+          <list style="unordered"> 
+            <item>Le programmeur fournit les tests,</item>
+            <item>JUnit exécute tous les tests et</item>
+            <item>établit un rapport détaillant les problèmes</item>
+          </list>
+        </paragraph>
+        <paragraph>
+          La classe de test contient une méthode de test par cas. Cette méthode
+          <list style="unordered"> 
+            <item>est autonome (ne reçoit rien ne retourne rien)</item>
+            <item>contient des affirmations</item>
+            <item>fait appel à la méthode à tester</item>
+            <item>compare le résultat attendu et le résultat obtenu</item>
+          </list>
+        </paragraph>
+        <paragraph>
+          <multimedia src="../image/junit.jpeg" type="jpeg" />
+        </paragraph>
+        <paragraph>Par exemple</paragraph>
+		    <paragraph  cssClass="code">
+@Test
+public void max_cas1() {
+    int n1 = 1, n2 = 3, n3 = 0;
+    assertEquals ( 3, MaClasse.max(n1, n2, n3) );
+}
+</paragraph>
+        <paragraph>
+          <list style="unordered"> 
+            <item>Reconnu comme un test unitaire grâce à l’annotation <formatted style="code">@Test</formatted></item>
+            <item>Pas de <formatted style="code">static</formatted></item>
+            <item><formatted style="code">assertEquals</formatted> vérifie que les 2 valeurs sont identiques</item>
+            <item><formatted style="code">assertTrue ( val )</formatted>, <formatted style="code">assertFalse ( val )</formatted>, . . .</item>
+          </list>
+        </paragraph>
+        <paragraph title="Lancer les tests"/>    
+				<paragraph>
+					Pour lancer le test, il suffit de compiler la classe de test puis de lancer la commande : 
+					<formatted style="code">java org.junit.runner.JUnitCore package.MaClasseTest</formatted>.
+				</paragraph>    
+				<paragraph>
+					Cette commande lance les tests 
+					et affiche un message récapitulatif du nombre de tests
+					et du décompte de ceux qui ont réussi ou échoué.
+				</paragraph>    
+				<paragraph>
+					Si cela ne fonctionne pas directement sur linux1 
+					c'est que la JVM ne trouve pas la classe
+					<formatted style="code">org.junit.runner.JUnitCore</formatted> 
+					qui se trouve dans le fichier 
+					<formatted style="italic">jar</formatted> 
+					<formatted style="code">/usr/share/java/junit4.jar</formatted>.
+					Il faudra donc ajouter ce chemin 
+					à votre <formatted style="code">CLASSPATH</formatted> 
+					et relancer un <formatted style="italic">shell</formatted> 
+					afin que la variable d'environnement soit relue.
+				</paragraph>    
+				<paragraph>
+					Certains d'entre vous ne voudront pas 
+					entrer cette longue commande lors de chaque 
+					lancement de tests.    
+					Rien ne les empêche de définir un 
+					<formatted style="italic">alias</formatted> avec la commande :
+				</paragraph>    
+				<paragraph cssClass="code">
+	alias javatest='java org.junit.runner.JUnitCore'
+				</paragraph>    
+				<paragraph>
+					et ils n'auront plus alors qu'à exécuter la commande
+					<formatted style="code">javatest package.MaClasseTest</formatted>
+					pour lancer la classe de tests.
+				</paragraph>
+      </clarify>
+    </learningObject>
+  </unit>
 	
 	<!-- =================================================================== -->
 	<unit label="Exercices" title="Exercices">
@@ -607,417 +811,420 @@ fin tant que
       </paragraph>
     </entry>
     
-    <learningObject title="Compréhension d’algorithme">
-    <!-- ============================================================ -->
-      <act>
-        <paragraph>
-          Pour ces exercices, nous vous demandons de comprendre des algorithmes donnés. 
-          <selfCheck title="Compréhension" shuffle="no">
-						<fillInBlanks>
-							<question>
-							  Que vont-ils afficher ?
-              </question>
-							<gapText> 
-								<list listStyle="unordered">
-									<item>
-										<paragraph cssClass="code">
-module boucle1 ()
-    x : entier
-    x ← 0
-    tant que x <![CDATA[<]]> 12 faire
-      x ← x+2
-    fin tant que
-    afficher x
-fin module
-				</paragraph>
-				            <gap answers="12">12</gap> 
-                  </item>
-									<item>
-										<paragraph cssClass="code">
-module boucle2 ()
-    ok : booléen
-    x : entier
-    ok ← vrai
-    x ← 5
-    tant que ok faire
-      x ← x+7
-      ok ← x MOD 11 ≠ 0
-    fin tant que
-    afficher x
-fin module
-				</paragraph>
-				            <gap answers="33">33</gap> 
-                  </item>
-									<item>
-										<paragraph cssClass="code">
-module boucle3 ()
-    ok : booléen
-    cpt, x : entiers
-    x ← 10
-    cpt ← 0
-    ok ← vrai
-    tant que ok ET cpt <![CDATA[<]]> 3 faire
-      si x MOD 2 = 0 alors
-        x ← x+1
-        ok ← x <![CDATA[<]]> 20
-      sinon
-        x ← x+3
-        cpt ← cpt + 1
-      fin si
-    fin tant que
-    afficher x
-fin module
-				</paragraph>
-				            <gap answers="22">22</gap> 
-                  </item>
-                  <item>
-										<paragraph cssClass="code">
-module boucle4 ()
-    pair, grand : booléens
-    p, x : entiers
-    x ← 1
-    p ← 1
-    faire
-      p ← 2*p
-      x ← x+p
-      pair ← x MOD 2 = 0
-      grand ← x > 15
-    jusqu’à ce que pair OU grand
-    afficher x
-fin module
-				</paragraph>
-				            <gap answers="31">31</gap> 
-                  </item>
-                  <item>
-										<paragraph cssClass="code">
-module boucle5 ()
-    i, x : entiers
-    ok : booléen
-    x ← 3
-    ok ← vrai
-    pour i de 1 à 5 faire
-      x ← x+i
-      ok ← ok ET (x MOD 2 = 0)
-    fin pour
-    si ok alors
-      afficher x
-    sinon
-      afficher 2 * x
-    fin si
-fin module
-				</paragraph>
-				            <gap answers="36">36</gap> 
-                  </item>
-                  <item>
-										<paragraph cssClass="code">
-module boucle6 ()
-    i, j, fin : entiers
-    pour i de 1 à 3 faire
-      fin ← 6 * i - 11
-      pour j de 1 à fin par 3 faire
-        afficher 10 * i + j
-      fin pour
-    fin pour
-fin module
-				</paragraph>
-				            <gap answers="21 31 34 37">21 31 34 37</gap> 
-                  </item>
-								</list>
-							</gapText>
-							<solution/>
-						</fillInBlanks>
-					</selfCheck>
-        </paragraph>
-      </act>
-    </learningObject>
-      
-    <learningObject title="Compréhension de codes Java">
-    <!-- ============================================================ -->
-      <act>
-				<selfCheck title="Instructions répétitives" shuffle="no">
-					<multipleChoice>
-						<question>
-							Quelles instructions répétitives sont correctes parmi les suivantes? <newLine/>
-							Expliquez pourquoi les autres ne le sont pas.
-						</question>
-						<answer feedback="" correct="no">proposition 1
-							<paragraph cssClass="java">
-While ( condition ) {
-	// instructions
-}							</paragraph>
 
-						</answer>
-						<answer feedback="" correct="no">proposition 2
-							<paragraph cssClass="java">
-do while ( condition ) {
-	// instructions
-}							</paragraph>
-						</answer>
-						<answer feedback="" correct="yes">proposition 3
-							<paragraph cssClass="java">
-while ( true ) {
-	// instructions
-}							</paragraph>
-						</answer>
-						<answer feedback="" correct="no">proposition 4
-							<paragraph cssClass="java">
-while ( true ) do {
-	// instructions
-}							</paragraph>
-						</answer>
-						<answer feedback="" correct="no">proposition 5
-							<paragraph cssClass="java">
-FOR ( int i=0; i&lt;=10; i=i+2 ) DO {
-	// instructions
-}							</paragraph>
-						</answer>
-						<answer feedback="" correct="yes">proposition 6
-							<paragraph cssClass="java">
-for ( int i=0; i&lt;=10; i=i+2 ) {
-	// instructions
-}							</paragraph>
-						</answer>
-						<answer feedback="" correct="no">proposition 7
-							<paragraph cssClass="java">
-for ( int i=0; i&lt;=10; i=i+2 ) do {
-	// instructions
-}							</paragraph>
-						</answer>
-						<answer feedback="" correct="yes">proposition 8
-							<paragraph cssClass="java">
-for ( int i=9; i&gt;=0; i=i-2 ) {
-	// instructions
-}							</paragraph>
-						</answer>
+    <learningObject title="En Java...">
+      <act>
+				<selfCheck title="Bornes d'un tableau" shuffle="no">
+					<fillInBlanks>
+						<question></question>
+				        <gapText>
+							<list style="unordered">
+								<item>
+									La variable permettant de se déplacer dans un tableau s'appelle un <gap answers="">indice</gap>
+								</item>
+								<item>
+									En Java, la première valeur d'un tableau à <formatted style="bold">n</formatted> éléments se trouve à la position            
+									<gap answers="">0</gap> 
+									et la dernière valeur se trouve à la position 
+									<gap answers="n-1, n- 1, n - 1, n -1">n-1</gap>
+								</item>
+							</list>
+						</gapText>
+						<solution></solution>
+					</fillInBlanks>
+				</selfCheck>
+        
+				<paragraph title="Déclaration, création et initialisation d'un tableau " icon="icon_reading"/>
+				<paragraph>
+					Un tableau possède un type et une taille.
+					Le type de ses éléments est soit l'un des types simples (int, double, char,..) ou une réference (String,...).
+				</paragraph>
+				<paragraph>
+					La taille du tableau est le nombre (strictement positif ) de ses éléments.
+					Elle ne fait pas partie du type.  
+				</paragraph>
+          
+				<selfCheck shuffle="yes">
+					<multipleChoice>
+						<question>La déclaration d'un tableau réserve un emplacement mémoire</question>
+						<answer feedback="" correct="no">sur le tas.</answer>
+						<answer feedback="" correct="yes">sur la pile.</answer>
 					</multipleChoice>
 				</selfCheck>
-				
-				<selfCheck title="Activité 'remplir les blancs'" shuffle="yes">
+            
+				<selfCheck title="Création" shuffle="no">
 					<fillInBlanks>
 						<question></question>
 						<gapText>
 							<paragraph>
-								Quel opérateur de comparaison Java représente la relation suivante? 
+								Pour créer un tableau, le mot clé utilisé est <gap answers="">new</gap> 
 							</paragraph>
-							<list listStyle="ordered">
-								<item>"est égal à" ?                     <gap answers="">==</gap></item>
-								<item>"est différent de" ?               <gap answers="">!=</gap></item>
-							</list>
 							<paragraph>
-								Quel opérateur booléen Java représente l'opérateur logique suivant? 
+								Pour pouvoir créer un tableau nommé <formatted style="bold">entiers</formatted> 
+								de 10 entiers <formatted style="bold">précédemment déclaré</formatted>, il faut écrire l'instruction
+								<gap answers="">entiers</gap> <gap answers="">=</gap> <gap answers="">new</gap> <gap answers="">int</gap> <gap answers="[10], [ 10 ]">[10]</gap>;
 							</paragraph>
-							<list listStyle="ordered">
-								<item>le ET :  <gap answers="">&amp;&amp;</gap></item>
-								<item>le OU :  <gap answers="">||</gap></item>
-								<item>le NON : <gap answers="">!</gap></item>
-							</list>
+						</gapText>
+						<solution>
+							La création permet de réserver l'espace mémoire sur le tas (heap). 
+							Pour cela il faut spécifier la taille souhaitée.
+						</solution>
+					</fillInBlanks>
+				</selfCheck>
+            
+				<selfCheck shuffle="yes">
+					<multipleChoice>
+						<question>La création d'un tableau se fait</question>
+						<answer feedback="" correct="yes">sur le tas</answer>
+						<answer feedback="" correct="no">sur la pile</answer>
+					</multipleChoice>
+				</selfCheck>
+            
+				<selfCheck title="Initialisation" shuffle="no">
+					
+					<fillInBlanks>
+						<question>
+							<paragraph>
+								Le mot clé <formatted style="java">new</formatted> permet également d'initialiser
+								tous les éléments du tableau fraichement créé à une valeur par défaut. 
+							</paragraph>
+							<paragraph>Quelle est cette valeur par défaut ?</paragraph>
+						</question>
+						<gapText> 
+							<list style="unordered">
+								<item>pour les numériques (int, double, char) : <gap answers="zéro,0">0</gap></item>
+								<item>pour les boolean : <gap answers="">false</gap></item>
+								<item>pour les objets (type réference) : <gap answers="">null</gap></item>
+							</list>						
 						</gapText>
 						<solution/>
 					</fillInBlanks>
 				</selfCheck>
-
-				<paragraph title="Expérience" icon="icon_experiment">
-					Indiquez l'affichage obtenu par ce code.
-				</paragraph>
-				<selfCheck title="Compréhension" shuffle="no">
-						<fillInBlanks>
-							<question>
-							  Que vont-ils afficher ?
-              </question>
-							<gapText> 
-                <paragraph cssClass="java">
-<![CDATA[public class Boucles {
-
-	public static void main ( String[] args ) {
-		int facteur;
-		final int VALEUR = 3;
-	
-		for (facteur = 1 ; facteur <= 10 ; facteur++){		
-			System.out.print(facteur*VALEUR+" ");
-		}
-		System.out.println();
-	}
-}]]>			</paragraph>
-				            <gap answers="">3 6 9 12 15 18 21 24 27 30 </gap> 
-                </gapText>
-              </fillInBlanks>
-            </selfCheck>
-				
-
-				<paragraph title="Exercice Tant que" icon="act">
-					Écrivez en Java l'algorithme suivant.
-				</paragraph>
-				<paragraph cssClass="code">
-<![CDATA[MODULE Test
-
-    nb, produit : Entier
-    produit ← 1 
-
-    LIRE nb
-    TANT QUE nb ≠ 0 FAIRE
-        produit ← produit * nb
-        LIRE nb 
-    FIN TANT QUE
-    AFFICHER produit
-    
-FIN MODULE
-]]>			    </paragraph>
-				<popup title="la solution" visible="online"> 
-					<paragraph cssClass="java">
-<![CDATA[import java.util.Scanner;
-public class Test {
-
-	public static void main(String [] args) {
-	
-		Scanner clavier = new Scanner(System.in); 
-		int nb; 
-		int produit;
-		produit = 1; 
-		System.out.println("Entrez la valeur du nombre"); 
-		nb = clavier.nextInt();
-		while (nb != 0) {
-			produit = produit * nb;
-			System.out.println("Entrez la valeur du nombre"); 
-			nb = clavier.nextInt();			
-		} 		
-		System.out.println("Le produit vaut " + produit);	
-	}
-}]]>				</paragraph>
+            
+				<paragraph title="Réflexion" icon="question"/>  
+				<paragraph>  
+					Est-il possible de déclarer, de créer et d'initialiser un tableau de 10 éléments en une seule opération ?  
+				</paragraph>  
+				<popup title="la réponse">  
+					<paragraph>  
+						Oui, on peut condenser l'écriture :
+					</paragraph>  
+					<paragraph cssClass="java">  
+int [] entiers = new int[10];  
+					</paragraph>  
+					<paragraph>
+						et pour une initialisation personnalisée:
+					</paragraph>
+					<paragraph cssClass="java">  
+int [] entiers = {0,4,5,6,6,7,2,1,8,9};
+					</paragraph>
 				</popup>
 
-				<paragraph title="Exercice Pour" icon="act">
-					Écrivez en Java l'algorithme suivant.
+				<paragraph title="Vérification" icon="icon_activity"/>
+				<paragraph>
+					Écrivez sur papier la boucle permettant d'initialiser
+					les éléments d'un tableau d'entiers de 10 éléments à la valeur de leur indice.   
 				</paragraph>
-				<paragraph cssClass="code">
-<![CDATA[MODULE Test
-
-    nb: Entier
-    i : Entier
-
-    LIRE nb
-    POUR i DE 1 A nb FAIRE
-        AFFICHER i
-    FIN POUR
-
-FIN MODULE
-]]>			     </paragraph>
-
-				<popup title="la solution" visible="online"> 
+				<popup title="la réponse">   
 					<paragraph cssClass="java">
-<![CDATA[import java.util.Scanner;
-public class Test {
+    for(int i=0; i&lt;10; i++) {
+        entiers[i] = i ;
+    }  
+					</paragraph>
+				</popup> 
 
-    public static void main(String [] args){
-	
-        Scanner clavier = new Scanner(System.in); 
-        int nombre1; 
-	
-        nombre1 = clavier.nextInt();
+				<selfCheck title="Cochez les affirmations qui sont vraies" shuffle="yes">
+					<multipleChoice>
+						<question>
+							Considerons le tableau <formatted style="java">entiers</formatted>
+							contenant les élements <formatted style="java">{3,4,5}</formatted>.
+						</question>
+						<answer feedback="Un tableau connait sa taille via son attribut length" correct="yes">
+							Le tableau connait sa taille.
+						</answer>
+						<answer feedback="Il n'est pas possible d'utiliser des indices se trouvant en dehors des bornes du tableau." correct="no">
+							<formatted style="java">entiers[3]</formatted> vaut 5.
+						</answer>
+						<answer feedback="Il n'est pas possible d'utiliser des indices se trouvant en dehors des bornes du tableau." correct="no">
+							<formatted style="java">entiers[3]=4;</formatted> affecte la valeur 4 à la 3<formatted style="superscript">ème</formatted> case.
+						</answer>
+						<answer feedback="Mettre une case à 0 ne la supprime pas" correct="no">
+							<formatted style="java">entiers[1]=0;</formatted> supprime la case d'indice 1.
+						</answer>
+						<answer feedback="La taille n'a pas d'importance ici car on manipule la réference du tableau et non pas ses valeurs." correct="yes">
+							Si <formatted style="java">entiers20</formatted> est un tableau de 20 entiers, on peut écrire l'instruction 
+							<formatted style="java">entiers20 = entiers;</formatted>.  
+						</answer>
+						<answer feedback="Étant donné qu'un tableau connait sa taille via son attribut length, on ne doit plus la fournir comme second paramètre à la méthode." correct="yes">
+							Un tableau peut être le seul paramètre d'une méthode.
+						</answer>
+						<answer feedback="C'est plutôt un grand avantage de pouvoir retourner plusieurs valeurs non ? En fait on ne retourne qu'une  réference vers toutes ces valeurs." correct="yes">
+							Un tableau peut être une valeur de retour d'une méthode.
+						</answer>
+					</multipleChoice>
+				</selfCheck>
+          
+				<selfCheck title="Sélection multiple" shuffle="no">
+					<multipleChoice>
+						<question> 
+							<paragraph>
+								Partons de la représentation de <formatted style="java">entiers </formatted>en mémoire
+								donnée par la figure ci-dessous.  
+							<multimedia src="../image/tab3.jpg" type="jpeg" legend="représentation mémoire de entiers"
+							width="50" units="percent"/>
+							</paragraph>
+							<paragraph>
+								Quelle(s) instruction(s) mène(nt) à ce résultat.   
+							</paragraph>
+						</question>
+						<answer feedback="" correct="no">
+							<paragraph>proposition 1</paragraph>
+							<paragraph cssClass="java">
+int [] entiers;
+entiers = new int [3];
+							</paragraph>
+						</answer>
+						
+						<answer feedback="" correct="no">
+							<paragraph>proposition 2</paragraph>
+							<paragraph cssClass="java">
+int [] entiers = new int [3]; 
+							</paragraph>
+						</answer>
+						
+						<answer feedback="" correct="no">
+							<paragraph>proposition 3</paragraph>
+							<paragraph cssClass="java">
+int [] entiers = new int [];
+							</paragraph>
+						</answer>
+						
+						<answer feedback="" correct="yes">
+							<paragraph>proposition 4</paragraph>
+							<paragraph cssClass="java">
+int [] entiers = {3,3,3};
+							</paragraph>
+						</answer>
+						
+						<answer feedback="" correct="yes">
+							<paragraph>proposition 5</paragraph>
+							<paragraph cssClass="java">
+int [] entiers = new int [3];
+for (int i=0; i&lt;entiers.length; i++) {
+	entiers[i] = 3;
+}
+							</paragraph>
+						</answer>
+						
+						<answer feedback="" correct="no">
+							<paragraph>proposition 6</paragraph>
+							<paragraph cssClass="java">
+int[] entiers;
+entiers = {3,3,3};
+							</paragraph>
+						</answer>
+						
+						<answer feedback="" correct="no">
+							<paragraph>proposition 7</paragraph>
+							<paragraph cssClass="java">
+int [3] entiers = {3,3,3};
+							</paragraph>
+						</answer>
+						
+						<answer feedback="" correct="no">
+							<paragraph>proposition 8</paragraph>
+							<paragraph cssClass="java">
+int [] entiers;
+entiers= new {3,3,3};
+							</paragraph>
+						</answer>
+					</multipleChoice>
+				</selfCheck>
         
-        for (int i=1; i <= nombre1; i++) { 
-            System.out.println(i); 
-        } 
-    }
-    
-}]]>				</paragraph>
-				</popup>
-
-      </act>
-
-    </learningObject>
+				<selfCheck title="Quiz" shuffle="yes">
+					<multipleChoice>
+						<question>Pour ce tableau de 3 éléments, l'instruction <formatted style="java">System.out.println (entiers[6]);</formatted></question>
+						<answer feedback="" correct="no">n'affiche rien.</answer>
+						<answer feedback="" correct="no">affiche une valeur se trouvant en mémoire.</answer>
+						<answer feedback="" correct="no">provoque une erreur à la compilation.</answer>
+						<answer feedback="" correct="yes">provoque une  erreur à l'exécution.</answer>
+					</multipleChoice>
+				</selfCheck>
+				
+    </act>
+		</learningObject>
+		
+    <learningObject title="Les tests unitaires">
+      <act>
+				<selfCheck title="Les tests" shuffle="no">
+					<fillInBlanks>
+						<question></question>
+						<gapText>  
+							<paragraph>    
+								Le type de tests qui  teste séparément chaque méthode est appelé tests <gap answers="">unitaires</gap>.
+							</paragraph>    
+							<paragraph>    
+								Avant de commencer à tester, il faut écrire un <gap answers="">plan</gap> de tests afin de s'assurer qu'on teste tous les cas.
+							</paragraph>    
+							<paragraph>    
+								Bien sûr, il n'est pas pensable de tester toutes les valeurs possibles, il faut donc choisir des valeurs représentatives 
+								(c-à-d cas général, cas particuliers et valeurs limites).    
+							</paragraph>    
+							<paragraph><gap answers="">JUnit</gap> est un outil pour automatiser les tests unitaires.
+							</paragraph>
+							<paragraph>    
+								Cette méthode est autonome (ne reçoit rien ne retourne rien) 
+								et elle ne contient que des affirmations 
+								(appel de la méthode à tester, comparaison entre le résultat attendu et le résultat obtenu).
+							</paragraph>    
+							<paragraph>    
+								Une classe de test contient une méthode de test par cas.
+								Chaque méthode de test est reconnue comme étant un test unitaire grâce au tag <formatted style="javawithblanks"><gap answers="">@Test</gap></formatted>.
+								Elle contient des affirmations :
+							</paragraph>    
+							<list style="unordered"> 
+								<item>
+								<formatted style="javawithblanks"><gap answers="">assertEquals</gap>(intAttendu, intObtenu)</formatted> 
+								<paragraph>
+								  vérifie que les 2 valeurs entières <formatted style="java">intAttendu</formatted> et <formatted style="java">intObtenus</formatted> sont identiques;
+								</paragraph>
+								</item>								
+								<item>
+								<formatted style="javawithblanks"><gap answers="">assertTrue</gap>(val)</formatted> 
+								<paragraph>
+								  vérifie que la valeur du booléen <formatted style="java">val</formatted> est à vrai,     
+                </paragraph>
+								</item>								
+								<item>
+								<formatted style="javawithblanks"><gap answers="">assertFalse</gap>(val)</formatted> 
+								<paragraph>
+								  vérifie que la valeur de <formatted style="java">val</formatted> est à faux.    
+                </paragraph>
+								</item>								
+							</list>    
+							<paragraph>    
+								Le tag <formatted style="javawithblanks"><gap answers="">@Test</gap> (<gap answers="">expected=IllegalArgumentException.class</gap>)</formatted> 
+                permet de vérifier que la méthode lance bien une exception de type <formatted style="java">IllegalArgumentException</formatted>.    
+							</paragraph>
+							<paragraph>
+                Dans la classe de tests, 2 instructions <formatted style="java">import</formatted> sont nécessaires :    
+							<list style="unordered"> 
+							<item>
+								<formatted style="javawithblanks">import <gap answers="">org</gap>.<gap answers="">junit</gap>.<gap answers="">Test</gap>;</formatted>
+                // Pour que @Test soit connu
+                </item>
+                <item>
+                <formatted style="javawithblanks">import <gap answers="">static</gap> 
+                <gap answers="">org</gap>.<gap answers="">junit</gap>.<gap answers="">Assert</gap>.<gap answers="">*</gap>;</formatted>
+                // Pour que les méthodes de vérification ci-dessus soient reconnues.
+                </item>
+                </list>
+							</paragraph>
+							<paragraph>    
+								La commande
+								<newLine/>
+								<formatted style="javawithblanks">
+								<gap answers="">java</gap> 
+								<gap answers="">org.junit.runner.JUnitCore</gap>
+								<gap answers="">g32000.tds.td7BisPrepa.ExerciceTest</gap></formatted><newLine/>
+								permet de lancer les tests de la classe <formatted style="java">ExerciceTest</formatted>, 
+								dont le package est <formatted style="java">g32000.tds.td7BisPrepa</formatted>, précédemment compilée.    
+							</paragraph>    
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+			</act>
+			</learningObject>
     
     <learningObject title="À vous de jouer...">
     <!-- ============================================================ -->
       <act>
         <paragraph>
-          Il est temps de se lancer et d’écrire vos premiers modules et programmes Java correspondant. 
-          Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
           <list listStyle="unordered">
-            <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
+            <item>Il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
             <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites ;</item>
             <item><formatted style="bold">mettez en évidence les variables « données », les variables « résultats » et les variables de travail ;</formatted></item>
             <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+            <item>Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir prématurément (si on a trouvé ce qu'on cherche par exemple).</item>
+            <item><formatted style="bold">Écrivez le plan de tests en écrivant l'algorithme. Codez les tests après avoir écrit le code Java.</formatted></item>
           </list>
         </paragraph>
         
         <paragraph>
         Écrivez les algorithmes et codez les programmes Java correspondant qui 
           <list listStyle="ordered">
-            <item>reçoit un naturel <formatted style="code">n</formatted> et affiche
-              <list listStyle="ordered">
-                <item>les <formatted style="code">n</formatted> premiers entiers strictement positifs ;</item>
-                <item>les <formatted style="code">n</formatted> premiers entiers strictement positifs en ordre décroissant ;</item>
-                <item>les <formatted style="code">n</formatted> premiers carrés parfaits ;</item>
-                <item>les <formatted style="code">n</formatted> premiers naturels impairs ;</item>
-                <item>les naturels impairs qui sont inférieurs ou égaux à <formatted style="code">n</formatted>.</item>
-              </list>
-              Si le <formatted style="code">n</formatted> reçu n'est pas strictement positif, votre programme s'arrêtera en générant une erreur/une exception.
+            <item> reçoit en paramètre le tableau <formatted style="code">températures</formatted> de 
+              <formatted style="code">n</formatted>  réels et qui retourne
+              le plus grand écart absolu entre deux températures consécutives de ce tableau. Et si on veut
+              le plus petit écart ?
             </item>
             <item>
-              demande à l'utilisateur d'introduire un entier positif (non strictement). 
-              Ce module permet à l'utilisateur de se tromper à plusieurs reprises mais l'utilisateur devra donner
-              une bonne valeur pour arrêter le programme.
-              (On suppose tout de même que l'utilisateur ne donne que des valeurs entières !) 
+              reçoit en paramètre le tableau valeurs de <formatted style="code">n</formatted> entiers et qui vérifie si ce
+              tableau est ordonné (strictement) croissant sur les valeurs. Le module retournera vrai si le
+              tableau est ordonné, faux sinon.
             </item>
             <item>
-              <paragraph>
-              lit une série de nombres entiers positifs, jusqu’à ce que l’utilisateur
-              encode la valeur 0. Les nombres multiples de 3 seront affichés au fur et à mesure et le nombre
-              de ces multiples sera affiché en fin de traitement.
-              </paragraph>
-              <paragraph>
-              Pensez à utiliser le module écrit ci-dessus qui permet de lire un entier positif.
-              </paragraph>
+              reçoit en paramètre le tableau <formatted style="code">tabCar</formatted> 
+              de <formatted style="code">n</formatted> caractères, et qui « renverse »
+              ce tableau, c’est-à-dire qui permute le premier élément avec le dernier, le deuxième élément
+              avec l’avant-dernier et ainsi de suite.
               </item>
             <item>
-              retourne la somme des chiffres qui forment un nombre naturel <formatted style="code">n</formatted>
-              Attention, on donne au départ le nombre et pas ses chiffres. Exemple : 133045 doit donner
-              comme résultat 16, car 1 + 3 + 3 + 0 + 4 + 5 = 16.
+              reçoit en paramètre le tableau <formatted style="code">tabChaines</formatted> 
+              de <formatted style="code">n</formatted> chaines et qui vérifie
+              si ce tableau est symétrique, c’est-à-dire si le premier élément est identique au dernier, le
+              deuxième à l’avant-dernier et ainsi de suite.
             </item>
             <item>
-              lit une suite de nombres positifs entrés au clavier et affiche
-              le maximum, le minimum, leur somme et la moyenne. <newLine/>
-              La fin de la suite de nombre sera signifiée par une valeur sentinelle que vous choisirez
-              judicieusement.
+              reçoit un nombre entier positif ou nul en paramètre et qui affiche pour
+              chacun de ses chiffres le nombre de fois qu’il apparait dans ce nombre. Ainsi, pour le nombre
+              10502851125, l’affichage mentionnera que le chiffre 0 apparait 2 fois, 1 apparait 3 fois, 2
+              apparait 2 fois, 5 apparait 3 fois et 8 apparait une fois (l’affichage ne mentionnera donc pas
+              les chiffres qui n’apparaissent pas).
             </item>
             <item>
-              vérifie si un entier donné forme un palindrome ou non. Un nombre
+              vérifie si un tableau d' entiers donné forme un palindrome ou non. Un nombre
               palindrome est un nombre qui lu dans un sens (de gauche à droite) est identique au nombre
               lu dans l’autre sens (de droite à gauche). Par exemple, 1047401 est un nombre palindrome.
             </item>
-            <item>
-                affiche les <formatted style="code">n</formatted> premiers termes de la suite suivante : 
-                <formatted style="code">1, –1, 2, –3, 5, –8, 13, –21, 34, –55, …</formatted>
-                où <formatted style="code">n</formatted> est un entier strictement positif reçu en paramètre.<newLine/>
-                Si le <formatted style="code">n</formatted> reçu n'est pas strictement positif, votre programme s'arrêtera en générant une erreur/une exception.
-            </item>
           </list>
         </paragraph>
-        <paragraph>En java, n'oubliez pas d'écrire la javadoc et la méthode main pour tester vos méthodes.</paragraph>
+        <paragraph>En java, n'oubliez pas d'écrire la javadoc et les tests de vos méthodes.</paragraph>
         
-        <paragraph title="Jeu de la fourchette">
-          Écrivez un algorithme qui simule le jeu de la fourchette. Ce jeu consiste à essayer de découvrir
-          un nombre quelconque compris entre 0 et 100 inclus, tiré au sort par l’ordinateur (la primitive
-          <formatted style="code">hasard(n : entier)</formatted> retourne un entier entre 0 inclus et n exclus). <newLine/>
-          L’utilisateur a droit à huit essais maximum.<newLine/>
-          À chaque essai, l’algorithme devra afficher un message indicatif
-          <list listStyle="unordered">
-            <item>« nombre donné trop petit »</item>
-            <item>ou « nombre donné trop grand ». </item>
-          </list>
-          En conclusion, 
-          <list listStyle="unordered">
-            <item>soit « bravo, vous avez trouvé en [nombre] essai(s) »</item>
-            <item>soit « désolé, le nombre était [valeur] ».</item>
-          </list>
+        <paragraph title="Mastermind">
+          Dans le jeu du Mastermind, un joueur A doit trouver une combinaison de 
+          <formatted style="code">k</formatted> pions de couleur,
+          choisie et tenue secrète par un autre joueur B. Cette combinaison peut contenir éventuellement 
+          des pions de même couleur. À chaque proposition du joueur A, le joueur B indique
+          le nombre de pions de la proposition qui sont corrects et bien placés et le nombre de pions
+          corrects mais mal placés.
         </paragraph>
-        <paragraph>Écrivez le code java correspondant.</paragraph>
         <paragraph>
-        Aide en Java : un petit tour dans l'API de la classe Random devrait vous aider à trouver l'équivalent du
-        <formatted style="code">hasard(n : entier)</formatted> en Java
-    </paragraph>
-        
+          Pour implémenter une simulation de ce jeu, on utilise le type Chaine, dont les valeurs
+          possibles sont les couleurs des pions utilisés. (Attention, le nombre exact de couleurs n’est
+          pas précisé.) Les seules manipulations permises ont la comparaison (tester si
+          deux couleurs sont identiques ou non) et l’affectation (affecter le contenu d’une variable de
+          type Couleur à une autre variable de ce type). Les propositions du joueur A, ainsi que la
+          combinaison secrète du joueur B sont contenues dans des tableaux de k composantes de type
+          Chaine.
+        </paragraph>
+        <paragraph>
+          Écrire le module suivant qui renvoie dans les variables <formatted style="code">bienPlacés</formatted> 
+          et <formatted style="code">malPlacés</formatted> respectivement
+          le nombre de pions bien placés et mal placés dans la « proposition » du joueur A en la
+          comparant à la « solution » cachée du joueur B.
+        </paragraph>
+        <paragraph  cssClass="code">
+module testerProposition( proposition↓, solution↓ : tableau [1 à k ] de Chaines, bienPlacés↑, malPlacés↑ : entiers)
+        </paragraph>
+        <popup title="une solution">
+          <paragraph>
+            En cas de besoin, vous trouverez une solution <link uri="../../../TDTableau/fr/solution/CorrectionMastermind.pdf">ici</link>.
+          </paragraph>
+        </popup>
+        <paragraph>En java, n'oubliez pas d'écrire la javadoc et les tests de vos méthodes.</paragraph>
       </act>
     </learningObject>
   </unit>

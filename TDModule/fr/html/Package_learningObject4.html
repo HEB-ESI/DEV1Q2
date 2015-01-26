@@ -1,0 +1,147 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Modules: La variable CLASSPATH. Exercice. Exercice. Exercice. Exercice. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Modules, eLML" />
+      <title>1.7.4. La variable CLASSPATH</title>
+      		
+      <link href="selfCheck.css" type="text/css" rel="stylesheet" media="screen" />
+      		<script src="selfCheck.js" type="text/javascript">
+         <!----></script><link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Modules</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_D%C3%A9couper.html">1.1. Découper du code</a></li>
+               <li class="navigationLink"><a href="unit_PassageParametres.html">1.2. Passage de paramètres</a></li>
+               <li class="navigationLink"><a href="unit_RetournerValeur.html">1.3. Module renvoyant une valeur</a></li>
+               <li class="navigationLink"><a href="unit_Methodes.html">1.4. Méthodes et appel de méthodes</a></li>
+               <li class="navigationLink"><a href="unit_Erreur.html">1.5. Erreur ou Exception</a></li>
+               <li class="navigationLink"><a href="unit_Commenter.html">1.6. Commenter une méthode</a></li>
+               <li class="navigationLink"><a href="unit_Package.html">1.7. Les package</a><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="Package_learningObject1.html">1.7.1. Introduction aux packages</a></li>
+                     <li class="navigationLink"><a href="Package_learningObject2.html">1.7.2. Utiliser le package d'un autre</a></li>
+                     <li class="navigationLink"><a href="Package_learningObject3.html">1.7.3. Utiliser ses propres packages</a></li>
+                     <li class="navigationActual"><strong>1.7.4. La variable CLASSPATH</strong></li>
+                     <li class="navigationLink"><a href="Package_learningObject5.html">1.7.5. Organiser ses fichiers</a></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.8. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="Package_learningObject3.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Package_learningObject5.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Package_learningObject4.html">1.7.4. La variable CLASSPATH</h1>
+      <div id="d8e760.html" class="clarify">
+         <p class="paragraph" id="d8e761">
+            				Spécifier à chaque fois,
+            				l'option <code>cp</code>
+            				est pénible.
+            				Ce serait bien de pouvoir lui dire une fois pour toutes
+            				où chercher.
+            				C'est exactement le rôle de la variable d'environnement
+            				<code>CLASSPATH</code>.
+            			
+         </p>
+         <div class="box" id="d8e769">
+            				La variable
+            				<code>CLASSPATH</code>
+            				contient une liste de dossiers où chercher les
+            				classes. Chaque dossier est séparé par 
+            				"<code>:</code>".
+            			
+         </div>
+         <p class="paragraph" id="d8e777">
+            				Pour la manipuler,
+            				la procédure est la même que pour les
+            				autres variables d'environnement
+            				(comme 
+            				<code>PS1</code>
+            				que vous avez déjà vu).
+            			
+         </p>
+         <ul class="list" id="d8e782">
+            <li class="itemAlt">
+               					Pour voir son contenu : 
+               					<code>echo $CLASSPATH</code></li>
+            <li class="item">
+               					Pour changer son contenu : 
+               					<code>CLASSPATH=valeur</code></li>
+            <li class="itemAlt">
+               					Pour ajouter un dossier à son contenu : 
+               					<code>CLASSPATH=$CLASSPATH:valeur</code></li>
+            <li class="item">
+               					Si elle est définie pour la première fois : 
+               					<code>export CLASSPATH</code></li>
+            <li class="itemAlt">
+               					Si la modification doit être permanente,
+               					vous pouvez placer la commande dans le fichier
+               					<code>.bashrc</code></li>
+         </ul>
+      </div>
+      <div id="d8e803.html" class="act">
+         <h4>Exercice<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
+         <p class="paragraph" title="Exercice" id="d8e804">
+            				Affichez le contenu actuel 
+            				de la variable 
+            				<code>CLASSPATH</code>.
+            				Que signifie le "." ?
+            			
+         </p>
+         <h4>Exercice</h4>
+         <div id="selfCheck2.html" class="fillInBlanksShuffle">
+            <div class="itemQuestion">
+               						Sachant que la classe <code>SurfaceTriangle</code> se trouve dans 
+               						<code>/home/g32010/tds/td6</code> 
+               						et qu'on retrouve <code>/home</code> dans la variable <code>CLASSPATH</code>, 
+               						donnez l'instruction <code>package</code> correspondant à la situation :
+               					
+            </div>
+            <div class="itemAnswer">
+               <div class="itemLabel"><pre>
+package <input type="text" value="" class="itemText" id="_d8e831" style="width:100px" /> <span class="gapText">,g32010.tds.td6</span>;
+						</pre></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemSolution"></div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck2.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck2.html_solution" onclick="solutionGaps('selfCheck2.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div>
+         <h4>Exercice</h4>
+         <div id="selfCheck3.html" class="fillInBlanksShuffle">
+            <div class="itemQuestion">
+               						Supposons que la classe <code>Exercice1</code>
+               						a pour package <code>esi.lg1.exemples</code>
+               						et qu'elle a comme chemin 
+               						<code>/eCours/java/be/heb/esi/lg1/exemples/Exercice1.class</code>, 
+               						donnez la hiérarchie de répertoires à ajouter au <code>CLASSPATH</code>.
+               					
+            </div>
+            <div class="itemAnswer">
+               <div class="itemLabel">
+                  						CLASSPATH=$CLASSPATH:<input type="text" value="" class="itemText" id="selfCheck3.html_d8e853" style="width:160px" /> <span class="gapText">,/eCours/java/be/heb</span></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemSolution"></div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck3.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck3.html_solution" onclick="solutionGaps('selfCheck3.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div>
+         <h4>Exercice<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
+         <p class="paragraph" title="Exercice" id="d8e856">
+            				Faites ce qu'il faut pour pouvoir
+            				exécuter <b>notre</b>
+            				classe <code>Color</code>
+            				(package <code>esi.util</code>)
+            				sans utiliser l'option <code>-cp</code>.
+            			
+         </p>
+      </div>
+      <hr />
+      <div class="navigation_arrows"><a href="Package_learningObject3.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Package_learningObject5.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 26.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDModule.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

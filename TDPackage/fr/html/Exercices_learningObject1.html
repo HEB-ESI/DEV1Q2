@@ -1,0 +1,218 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Packages: La notion de package. API. Choix Multiple . Choix Multiple . Choix Multiple . " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Packages, eLML" />
+      <title>1.2.1. La notion de package</title>
+      		
+      <link href="selfCheck.css" type="text/css" rel="stylesheet" media="screen" />
+      		<script src="selfCheck.js" type="text/javascript">
+         <!----></script><link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Packages</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Package.html">1.1. Les package</a></li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.2. Exercices</a><ul class="navigation nav_lo">
+                     <li class="navigationActual"><strong>1.2.1. La notion de package</strong></li>
+                     <li class="navigationLink"><a href="Exercices_learningObject2.html">1.2.2. À vous de jouer...</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Exercices_learningObject1.html">1.2.1. La notion de package</h1>
+      <div id="d8e526.html" class="act">
+         <h4>API</h4>
+         <div id="selfCheck1.html" class="fillInBlanksShuffle">
+            <div class="itemQuestion"></div>
+            <div class="itemAnswer">
+               <div class="itemLabel">
+                  <p class="paragraph" id="d8e531">
+                     								Ouvrez la documentation de l'API Java 
+                     								et recherchez la classe qui se nomme
+                     								<code>IllegalFormatException</code>.
+                     							
+                  </p>
+                  <ul class="list" id="d8e536">
+                     <li class="itemAlt">
+                        									Quel est le package de cette classe ?   
+                        									<input type="text" value="" class="itemText" id="_d8e539" style="width:100px" /> <span class="gapText">,java.util</span></li>
+                     <li class="item">
+                        									Quel est le nom qualifié de cette classe ?<br /><input type="text" value="" class="itemText" id="_d8e544" style="width:300px" /> <span class="gapText">,java.util.IllegalFormatException</span></li>
+                  </ul>
+                  <p class="paragraph" id="d8e546">
+                     								Écrivez la déclaration correcte d'une variable nommée
+                     								<code>clavier</code> de type 
+                     								<code>Scanner</code> sans import de la classe.
+                     							
+                  </p>
+                  <p class="paragraph" id="d8e554"><input type="text" value="" class="itemText" id="_d8e555" style="width:160px" /> <span class="gapText">,java.util.Scanner</span><input type="text" value="" class="itemText" id="_d8e557" style="width:50px" /> <span class="gapText">,clavier</span></p>
+               </div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemSolution"></div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkGaps('selfCheck1.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck1.html_solution" onclick="solutionGaps('selfCheck1.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div>
+         <h4>Choix Multiple </h4>
+         <div id="selfCheck2.html" class="singleChoiceShuffle">
+            <div class="itemQuestion">
+               <p class="paragraph" id="d8e563">Soit le code :</p><pre>
+package td.td6; 
+public class ErrCompilation {
+    import java.util.Scanner;
+    public static void main (String [] args) { 
+        System.out.println("TD6Prepa");
+    }
+}							</pre><p class="paragraph" id="d8e567">
+                  								la commande <code>javac ErrCompilation.java</code> 
+                  								provoque les erreurs suivantes :
+                  							
+               </p><pre>
+ErrCompilation.java:2: illegal start of type
+import java.util.Scanner;
+^
+ErrCompilation.java:2: ';' expected
+import java.util.Scanner;
+^
+ErrCompilation.java:2: illegal start of type
+import java.util.Scanner;
+^
+ErrCompilation.java:2: ';' expected
+import java.util.Scanner;
+^
+ErrCompilation.java:2: &lt;identifier&gt; expected
+import java.util.Scanner;
+^
+5 errors
+							</pre><p class="paragraph" id="d8e574">
+                  							Il s'agit d'erreurs générées par le compilateur car :
+                  							
+               </p>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="0" class="itemRadio" id="selfCheck2.html_d8e576" /><div class="itemLabel"><label for="selfCheck2.html_d8e576"><code>import</code> s'écrit avec une majuscule <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="0" class="itemRadio" id="selfCheck2.html_d8e580" /><div class="itemLabel"><label for="selfCheck2.html_d8e580">le package utilisé est incorrect <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="1" class="itemRadio" id="selfCheck2.html_d8e582" /><div class="itemLabel"><label for="selfCheck2.html_d8e582">le <code>import</code> est mal placé dans le code <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="0" class="itemRadio" id="selfCheck2.html_d8e587" /><div class="itemLabel"><label for="selfCheck2.html_d8e587"><code>Scanner</code> s'écrit avec une minuscule <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="0" class="itemRadio" id="selfCheck2.html_d8e591" /><div class="itemLabel"><label for="selfCheck2.html_d8e591">on n'utilise pas <code>Scanner</code> dans le code <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck2.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck2.html_solution" onclick="solutionChoice('selfCheck2.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div><script src="wz_tooltip.js" type="text/javascript">
+            <!----></script><h4>Choix Multiple </h4>
+         <div id="selfCheck3.html" class="singleChoiceShuffle">
+            <div class="itemQuestion">
+               <p class="paragraph" id="d8e599">Soit le code :</p><pre>
+import java.util.Scanner;
+package survol;
+public class ErrCompilation{
+	public static void main (String [] args){
+		System.out.println("TD6Prepa");
+	
+}							</pre><p class="paragraph" id="d8e603">
+                  								la commande <code>javac ErrCompilation.java</code> provoque l'erreur suivante :
+                  							
+               </p><pre>
+ErrCompilation.java:3: class, interface, or enum expected
+package survol;
+^
+1 error
+							</pre><p class="paragraph" id="d8e610">
+                  								Il s'agit d'une erreur générée par le compilateur <code>javac</code> car :
+                  							
+               </p>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck3.html" value="0" class="itemRadio" id="selfCheck3.html_d8e615" /><div class="itemLabel"><label for="selfCheck3.html_d8e615"><code>package</code> s'écrit avec une majuscule <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck3.html" value="1" class="itemRadio" id="selfCheck3.html_d8e619" /><div class="itemLabel"><label for="selfCheck3.html_d8e619">l'instruction <code>package</code> est mal placée dans le code <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck3.html" value="0" class="itemRadio" id="selfCheck3.html_d8e624" /><div class="itemLabel"><label for="selfCheck3.html_d8e624">le <code>package</code> utilisé est incorrect <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck3.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck3.html_solution" onclick="solutionChoice('selfCheck3.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div><script src="wz_tooltip.js" type="text/javascript">
+            <!----></script><h4>Choix Multiple </h4>
+         <div id="selfCheck4.html" class="singleChoiceShuffle">
+            <div class="itemQuestion">
+               <p class="paragraph" id="d8e632">
+                  							  Après correction du code précédent situé dans le répertoire survol,
+                  							  la suite de commandes :
+                  
+               </p>
+               <p class="paragraph" id="d8e634"><code>javac ErrCompilation.java</code></p>
+               <p class="paragraph" id="d8e637"><code>java ErrCompilation</code></p>
+               							provoque l'erreur suivante :
+               							<pre>
+Exception
+in thread "main" java.lang.NoClassDefFoundError:
+ErrCompilation (wrong name: survol/ErrCompilation)
+at java.lang.ClassLoader.defineClass1(Native Method)
+at java.lang.ClassLoader.defineClass(ClassLoader.java:632)
+at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:319)
+at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+at java.lang.ClassLoader.loadClass(ClassLoader.java:264)
+at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:332)
+Could not find the main class: ErrCompilation. Program will exit.
+							</pre><p class="paragraph" id="d8e643">
+                  								Il s'agit d'une erreur générée par la machine virtuelle Java car :
+                  							
+               </p>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck4.html" value="1" class="itemRadio" id="selfCheck4.html_d8e645" /><div class="itemLabel"><label for="selfCheck4.html_d8e645">pour exécuter on doit donner le nom qualifié de la classe <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck4.html" value="0" class="itemRadio" id="selfCheck4.html_d8e647" /><div class="itemLabel"><label for="selfCheck4.html_d8e647">la déclarative de package ne correspond pas à l'emplacement du fichier .class <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck4.html" value="0" class="itemRadio" id="selfCheck4.html_d8e649" /><div class="itemLabel"><label for="selfCheck4.html_d8e649">la machine virtuelle n'est pas configurée pour reconnaitre l'utilisation de packages <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck4.html" value="0" class="itemRadio" id="selfCheck4.html_d8e651" /><div class="itemLabel"><label for="selfCheck4.html_d8e651">le fichier .class devrait se trouver ailleurs que le source Java <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp_disabled">    </div>
+            </div>
+            <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck4.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck4.html_solution" onclick="solutionChoice('selfCheck4.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div><script src="wz_tooltip.js" type="text/javascript">
+            <!----></script></div>
+      <hr />
+      <div class="navigation_arrows"><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 26.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDPackage.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

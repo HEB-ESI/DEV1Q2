@@ -1,15 +1,13 @@
 \select@language {french}
 \contentsline {section}{\numberline {1}Les boucles}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}Compr\'ehension d'algorithme}{2}{subsection.1.1}
-\contentsline {subparagraph}{Compr\'ehension}{2}{section*.2}
-\contentsline {subsection}{\numberline {1.2}Compr\'ehension de codes Java}{4}{subsection.1.2}
-\contentsline {subparagraph}{Instructions r\'ep\'etitives}{4}{section*.3}
-\contentsline {subparagraph}{Activit\'e 'remplir les blancs'}{5}{section*.4}
-\contentsline {subparagraph}{Exp\'erience}{5}{section*.5}
-\contentsline {subparagraph}{Compr\'ehension}{5}{section*.6}
-\contentsline {subparagraph}{Exercice Tant que}{5}{section*.7}
-\contentsline {subparagraph}{Exercice Pour}{6}{section*.8}
-\contentsline {subsection}{\numberline {1.3}\`A vous de jouer...}{6}{subsection.1.3}
-\contentsline {subparagraph}{Un nombre est-il divisible par 9 ?}{6}{section*.9}
-\contentsline {subparagraph}{Suite de positifs}{6}{section*.10}
-\contentsline {subparagraph}{La conjecture de Goldbach}{7}{section*.11}
+\contentsline {subsection}{\numberline {1.1}UtilTabInt}{2}{subsection.1.1}
+\contentsline {subparagraph}{initialiser}{2}{section*.2}
+\contentsline {subparagraph}{afficher}{2}{section*.3}
+\contentsline {subparagraph}{sommer}{3}{section*.4}
+\contentsline {subparagraph}{maximum}{3}{section*.5}
+\contentsline {subparagraph}{indiceMax}{3}{section*.6}
+\contentsline {subparagraph}{cr\'eer}{3}{section*.7}
+\contentsline {subparagraph}{estTri\'e}{3}{section*.8}
+\contentsline {subparagraph}{cr\'eer}{3}{section*.9}
+\contentsline {subparagraph}{inverser}{4}{section*.10}
+\contentsline {subparagraph}{positionsMin}{4}{section*.11}

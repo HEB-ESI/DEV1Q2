@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  25 JAN 2015 23:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  26 JAN 2015 22:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -798,7 +798,7 @@ LaTeX Info: Redefining \nameref on input line 143.
 \openout5 = `TDTableau.out'.
 
 
-<../../../_templates/java/icons/logo-esi.jpg, id=68, 45.16875pt x 85.31876pt>
+<../../../_templates/java/icons/logo-esi.jpg, id=60, 45.16875pt x 85.31876pt>
 File: ../../../_templates/java/icons/logo-esi.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/logo-esi.jpg>
@@ -842,7 +842,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 152.
 
-<../../../_templates/java/icons/cc-gris.jpg, id=69, 88.33pt x 31.11626pt>
+<../../../_templates/java/icons/cc-gris.jpg, id=61, 88.33pt x 31.11626pt>
 File: ../../../_templates/java/icons/cc-gris.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/cc-gris.jpg>
@@ -897,8 +897,8 @@ File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 )
-</home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tabPres.png, id=107, 527.9
-725pt x 138.5175pt>
+</home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tabPres.png, id=97, 527.97
+25pt x 138.5175pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tabPres.png Graphic f
 ile (type png)
 
@@ -907,7 +907,7 @@ Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/ta
 bPres.png used on input line 299.
 (pdftex.def)             Requested size: 288.00113pt x 75.55922pt.
  [3]
-</home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/reference.png, id=114, 347
+</home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/reference.png, id=104, 347
 .2975pt x 91.34125pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/reference.png Graphic
  file (type png)
@@ -966,32 +966,90 @@ Overfull \hbox (33.68184pt too wide) in paragraph at lines 763--763
 95 n // Si le test est vrai c'est qu'on a trouvé un 0[] 
  []
 
-[13] [14] [15] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
-)
-[16]
+[13]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 966.
+(Font)              <9> on input line 820.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 966.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 1021
-.
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [17] [18]
-Overfull \hbox (143.39471pt too wide) in paragraph at lines 1136--1138
-[]\T1/lmr/m/n/10.95 affiche les []\T1/lmtt/m/n/10.95 n \T1/lmr/m/n/10.95 pre-mi
-ers termes de la suite sui-vante : []\T1/lmtt/m/n/10.95 1, ^^U1, 2, ^^U3, 5, ^^
-U8, 13, ^^U21, 34, ^^U55, ...
+(Font)              <5> on input line 820.
+
+Overfull \hbox (3.32616pt too wide) in paragraph at lines 820--821
+[]\T1/lmr/m/n/10.95 Voire dan-ger pour la vie hu-maine, par exemple : l'échec d
+u vol d'Ariane
  []
 
-[19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1184.
- [20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1184.
+[14]
+Overfull \hbox (4.90788pt too wide) in paragraph at lines 924--926
+[]\T1/lmr/m/n/10.95 Par exemple : []\T1/lmtt/m/n/10.95 public static int max(in
+t n1, int n2, int n3) ... \T1/lmr/m/n/10.95 qui
+ []
+
+[15]
+</home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/junit.jpeg, id=189, 566.11
+5pt x 269.005pt>
+File: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/junit.jpeg Graphic fi
+le (type jpg)
+
+<use /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/junit.jpeg>
+Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/ju
+nit.jpeg used on input line 1009.
+(pdftex.def)             Requested size: 288.0065pt x 136.85414pt.
+ [16 </home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/junit.jpeg>]
+Overfull \hbox (50.62416pt too wide) in paragraph at lines 1075--1078
+\T1/lmr/m/n/10.95 et ils n'au-ront plus alors qu'à exé-cu-ter la com-mande []\T
+1/lmtt/m/n/10.95 javatest package.MaClasseTest
+ []
+
+[17] [18]
+</home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tab3.jpg, id=214, 514.9237
+5pt x 149.55875pt>
+File: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tab3.jpg Graphic file
+ (type jpg)
+
+<use /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tab3.jpg>
+Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/ta
+b3.jpg used on input line 1237.
+(pdftex.def)             Requested size: 179.99815pt x 52.28015pt.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+) [19 </home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tab3.jpg>]
+Overfull \hbox (27.4771pt too wide) in paragraph at lines 1311--1312
+[]\T1/lmr/m/n/10.95 Pour ce ta-bleau de 3 élé-ments, l'ins-truc-tion []\T1/lmtt
+/m/n/10.95 System.out.println (entiers[6]); 
+ []
+
+
+Overfull \hbox (43.2643pt too wide) in paragraph at lines 1376--1378
+\T1/lmr/m/n/10.95 vé-ri-fier que la mé-thode lance bien une ex-cep-tion de type
+ []\T1/lmtt/m/n/10.95 IllegalArgumentException\T1/lmr/m/n/10.95 . 
+ []
+
+[20]
+Overfull \hbox (71.91655pt too wide) in paragraph at lines 1397--1397
+[][]$[]$[] []$[]$[] []$[]$[] 
+ []
+
+[21]
+Overfull \hbox (15.58508pt too wide) in paragraph at lines 1485--1489
+[]\T1/lmr/m/n/10.95 Écrire le mo-dule sui-vant qui ren-voie dans les va-riables
+ []\T1/lmtt/m/n/10.95 bienPlacés \T1/lmr/m/n/10.95 et []\T1/lmtt/m/n/10.95 malP
+lacés
+ []
+
+
+Overfull \hbox (300.00945pt too wide) in paragraph at lines 1493--1493
+[]\T1/lmtt/m/n/10.95 module testerProposition( proposition$\OMS/lmsy/m/n/10.95 
+#$\T1/lmtt/m/n/10.95 , solution$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n/10.95 : tab
+leau [1 à k ] de Chaines, bienPlacés$\OMS/lmsy/m/n/10.95 "$\T1/lmtt/m/n/10.95 ,
+ malPlacés$\OMS/lmsy/m/n/10.95 "$ \T1/lmtt/m/n/10.95 : entiers)[] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1496.
+[22]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1496.
  (./TDTableau.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1184.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1184.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1496.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1496.
 
 
 
@@ -1000,46 +1058,37 @@ Package rerunfilecheck Warning: File `TDTableau.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `TDTableau.out':
-(rerunfilecheck)             Before: 2E32570974712AF85B0B9AC7E9C5445D;1153
-(rerunfilecheck)             After:  80FB1B37E47B2F6067FAA73381303A8C;1023.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1184.
+(rerunfilecheck)             Before: B0E08B38CC44CA504E5DF7929582F947;1035
+(rerunfilecheck)             After:  3F5DFBB17D9D7F774C39DDCA49581D31;1107.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1496.
  ) 
 Here is how much of TeX's memory you used:
- 13650 strings out of 493304
- 195702 string characters out of 6139871
- 317322 words of memory out of 5000000
- 16716 multiletter control sequences out of 15000+600000
- 76299 words of font info for 55 fonts, out of 8000000 for 9000
+ 13595 strings out of 493304
+ 195019 string characters out of 6139871
+ 313856 words of memory out of 5000000
+ 16684 multiletter control sequences out of 15000+600000
+ 80511 words of font info for 56 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,12n,43p,337b,2015s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.1.11} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.10} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.9} has been referenced but does not ex
-ist, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvi
-ps/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/
-texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/latxfont/lcirclew.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-zapfding/uzdr.pfb>
-Output written on TDTableau.pdf (20 pages, 369501 bytes).
+ 41i,12n,43p,337b,1280s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/zapfding/uzdr.pfb>
+Output written on TDTableau.pdf (22 pages, 441861 bytes).
 PDF statistics:
- 381 PDF objects out of 1000 (max. 8388607)
- 332 compressed objects within 4 object streams
- 132 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 356 PDF objects out of 1000 (max. 8388607)
+ 302 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 143 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -804,279 +804,612 @@ fin tant que
 					\end{enumerate}
 				
             \par
+        \section{Les tests}\subsection{Tests unitaires}
+			
+		\subparagraph{Les tests unitaires} 
+		
+					\textcolor{white}{.} \par
+				
+          Tous les programmes r\'eels contiennent des bugs (erreurs, d\'efauts), parfois m\^eme beaucoup.
+          C'est inacceptable :
+          
+					\begin{itemize}
+				
+			\item Inconfort pour l'utilisateur
+			\item Perte de temps, d'argent, de donn\'ees, de mat\'eriel
+			\item Voire danger pour la vie humaine, par exemple : l'\'echec du vol d'Ariane 5 (\url{fr.wikipedia.org/wiki/Vol\_501\_d\%27Ariane\_5}).
+					\end{itemize}
+				
+            \par
+        
+          On peut trouver diff\'erents types d'erreurs : 
+          
+					\begin{itemize}
+				
+			\item \`a la compilation
+			\item \`a l'ex\'ecution, le programme s'arr\^ete
+			\item \`a l'ex\'ecution, le programme fournit une mauvaise r\'eponse
+					\end{itemize}
+				
+          On pourrait aussi parler d'autres d\'efauts
+          
+					\begin{itemize}
+				
+			\item Trop lent
+			\item Trop gourmand en m\'emoire
+					\end{itemize}
+				
+            \par
+        
+        Pour produire un logiciel sans bug il faut
+         
+					\begin{itemize}
+				
+			\item 
+              suivre une m\'ethodologie \'eprouv\'ee pour produire une premi\`ere version avec peu de bugs
+              (cf. Analyse)
+            
+			\item 
+              tester, tester et . . . tester encore ! Pour d\'etecter ceux qui restent
+              
+					\begin{itemize}
+				
+			\item Besoin d'outils pour nous aider de fa\c con \`a tester de la mani\`ere la plus facile/rapide possible
+			\item Il existe plusieurs sortes de tests : unitaires, d'int\'egration, fonctionnels, non-r\'egression, . . .
+			\item Nous nous int\'eressons aux tests unitaires (\url{fr.wikipedia.org/wiki/Test\_(informatique)}) : 
+                c'est une proc\'edure permettant de tester le bon fonctionnement d'un module (une m\'ethode), ce qui n'est pas forc\'ement suffisant.
+					\end{itemize}
+				
+					\end{itemize}
+				
+            \par
+        
+			
+		\subparagraph{Le plan de tests} 
+		
+					\textcolor{white}{.} \par
+				
+          Il faut planifier les tests, c'est-\`a-dire se demander quoi tester en choisissant les cas int\'eressants / judicieux.
+          Pour \c ca, il faut se baser sur les erreurs fr\'equentes et cela viendra avec l'exp\'erience.
+        
+            \par
+        
+          Nous avons besoin d'un plan reprenant les tests \`a effectuer
+          
+					\begin{itemize}
+				
+			\item Quelles valeurs de param\`etres sont pertinentes ?
+			\item Quel est le r\'esultat attendu ?
+					\end{itemize}
+				
+          Ce plan de tests doit \^etre pr\'epar\'e pendant que l'on code 
+          (ou m\^eme avant et \'eventuellement par une autre personne).
+        
+            \par
+        
+          Il permet de s'assurer que l'on teste tous les cas pertinents.
+        
+            \par
+        
+          On ne peut pas tester toutes les valeurs possibles
+          
+					\begin{itemize}
+				
+			\item Il faut choisir des valeurs repr\'esentatives
+              
+					\begin{itemize}
+				
+			\item Cas g\'en\'eral / particuliers
+			\item Valeurs limites
+					\end{itemize}
+				
+			\item Il faut imaginer les cas qui pourraient mettre en \'evidence un d\'efaut de la m\'ethode : 
+            on s'inspire des erreurs les plus fr\'equentes en programmation :
+            
+					\begin{itemize}
+				
+			\item On commence/arr\^ete trop t\^ot/tard une boucle
+			\item On initialise mal une variable
+			\item Dans un test, on se trompe entre < et ≤
+			\item Dans un test, on se trompe entre ET et OU
+			\item ...
+					\end{itemize}
+				
+            C'est un savoir-faire ⇒ Importance de l'exp\'erience
+            
+					\end{itemize}
+				
+            \par
+        
+          Par exemple : \verb@public static int max(int n1, int n2, int n3) ...@
+          qui calcule la valeur maximale de trois nombres.
+        
+            \par
+        
+          Que tester en plus du cas g\'en\'eral ?
+          
+					\begin{itemize}
+				
+			\item Le maximum est la premi\`ere/derni\`ere valeur
+			\item Pr\'esence de nombres n\'egatifs
+					\end{itemize}
+				
+            \par
+        
+          Par exemple : plan de tests de la m\'ethode \verb@max@ : 
+        
+            \par
+        \begin{verbatim}
+#   nombres     résultat     ce qui est testé
+1   1, 3, 0          3        cas général
+2   1, −3, −4        1        maximum au début
+3   1, 3, 11        11        maximum à la fin
+4   −1, −3, −4      −1        que des négatifs
+        \end{verbatim}
+					\begin{itemize}
+				
+			\item Quand tester ? 
+              
+					\begin{itemize}
+				
+			\item Le plus souvent possible
+			\item Erreur plus facile \`a identifier/corriger
+			\item Id\'ealement apr\`es chaque m\'ethode \'ecrite
+					\end{itemize}
+				
+			\item Que tester ? 
+              
+					\begin{itemize}
+				
+			\item Tout
+			\item Le nouveau code peut mettre en \'evidence un probl\`eme dans le code ancien (r\'egression)
+					\end{itemize}
+				
+			\item Comment tester ? 
+              
+					\begin{itemize}
+				
+			\item Pas \`a la main : intenable
+			\item Besoin d'un outil automatis\'e : \textbf{JUnit}
+					\end{itemize}
+				
+					\end{itemize}
+				
+            \par
+        
+			
+		\subparagraph{JUnit} 
+		
+					\textcolor{white}{.} \par
+				
+          JUnit : outil pour automatiser les tests unitaires :
+          
+					\begin{itemize}
+				
+			\item Le programmeur fournit les tests,
+			\item JUnit ex\'ecute tous les tests et
+			\item \'etablit un rapport d\'etaillant les probl\`emes
+					\end{itemize}
+				
+            \par
+        
+          La classe de test contient une m\'ethode de test par cas. Cette m\'ethode
+          
+					\begin{itemize}
+				
+			\item est autonome (ne re\c coit rien ne retourne rien)
+			\item contient des affirmations
+			\item fait appel \`a la m\'ethode \`a tester
+			\item compare le r\'esultat attendu et le r\'esultat obtenu
+					\end{itemize}
+				
+            \par
+        \begin{figure}[hbt]
+				    \begin{center}
+					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/junit.jpeg}
+						\end{center}
+                
+                    \caption[junit.jpeg]{junit.jpeg}
+                \end{figure}
+                    
+            \par
+        Par exemple
+            \par
+        \begin{verbatim}
+@Test
+public void max_cas1() {
+    int n1 = 1, n2 = 3, n3 = 0;
+    assertEquals ( 3, MaClasse.max(n1, n2, n3) );
+}
+\end{verbatim}
+					\begin{itemize}
+				
+			\item Reconnu comme un test unitaire gr\^ace \`a l'annotation \verb@@Test@
+			\item Pas de \verb@static@
+			\item \verb@assertEquals@ v\'erifie que les 2 valeurs sont identiques
+			\item \verb@assertTrue ( val )@, \verb@assertFalse ( val )@, . . .
+					\end{itemize}
+				
+            \par
+        
+			
+		\subparagraph{Lancer les tests} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        
+					Pour lancer le test, il suffit de compiler la classe de test puis de lancer la commande : 
+					\verb@java org.junit.runner.JUnitCore package.MaClasseTest@.
+				
+            \par
+        
+					Cette commande lance les tests 
+					et affiche un message r\'ecapitulatif du nombre de tests
+					et du d\'ecompte de ceux qui ont r\'eussi ou \'echou\'e.
+				
+            \par
+        
+					Si cela ne fonctionne pas directement sur linux1 
+					c'est que la JVM ne trouve pas la classe
+					\verb@org.junit.runner.JUnitCore@ 
+					qui se trouve dans le fichier 
+					\textit{jar}\verb@/usr/share/java/junit4.jar@.
+					Il faudra donc ajouter ce chemin 
+					\`a votre \verb@CLASSPATH@ 
+					et relancer un \textit{shell} 
+					afin que la variable d'environnement soit relue.
+				
+            \par
+        
+					Certains d'entre vous ne voudront pas 
+					entrer cette longue commande lors de chaque 
+					lancement de tests.    
+					Rien ne les emp\^eche de d\'efinir un 
+					\textit{alias} avec la commande :
+				
+            \par
+        \begin{verbatim}
+	alias javatest='java org.junit.runner.JUnitCore'
+				\end{verbatim}
+					et ils n'auront plus alors qu'\`a ex\'ecuter la commande
+					\verb@javatest package.MaClasseTest@
+					pour lancer la classe de tests.
+				
+            \par
         \section{Exercices}
 				Maintenant, mettons tout \c ca en pratique.
       
             \par
-        \subsection{Compr\'ehension d'algorithme}
-          Pour ces exercices, nous vous demandons de comprendre des algorithmes donn\'es. 
-          
+        \subsection{En Java...}
 			
-		\subparagraph{Compr\'ehension} 
+		\subparagraph{Bornes d'un tableau} 
 		
                 \textcolor{white}{.} \par
             
-							  Que vont-ils afficher ?
-              
 					\begin{itemize}
 				
-			\item \begin{verbatim}
-module boucle1 ()
-    x : entier
-    x ← 0
-    tant que x < 12 faire
-      x ← x+2
-    fin tant que
-    afficher x
-fin module
-				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
-			\item \begin{verbatim}
-module boucle2 ()
-    ok : booléen
-    x : entier
-    ok ← vrai
-    x ← 5
-    tant que ok faire
-      x ← x+7
-      ok ← x MOD 11 ≠ 0
-    fin tant que
-    afficher x
-fin module
-				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
-			\item \begin{verbatim}
-module boucle3 ()
-    ok : booléen
-    cpt, x : entiers
-    x ← 10
-    cpt ← 0
-    ok ← vrai
-    tant que ok ET cpt < 3 faire
-      si x MOD 2 = 0 alors
-        x ← x+1
-        ok ← x < 20
-      sinon
-        x ← x+3
-        cpt ← cpt + 1
-      fin si
-    fin tant que
-    afficher x
-fin module
-				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
-			\item \begin{verbatim}
-module boucle4 ()
-    pair, grand : booléens
-    p, x : entiers
-    x ← 1
-    p ← 1
-    faire
-      p ← 2*p
-      x ← x+p
-      pair ← x MOD 2 = 0
-      grand ← x > 15
-    jusqu’à ce que pair OU grand
-    afficher x
-fin module
-				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
-			\item \begin{verbatim}
-module boucle5 ()
-    i, x : entiers
-    ok : booléen
-    x ← 3
-    ok ← vrai
-    pour i de 1 à 5 faire
-      x ← x+i
-      ok ← ok ET (x MOD 2 = 0)
-    fin pour
-    si ok alors
-      afficher x
-    sinon
-      afficher 2 * x
-    fin si
-fin module
-				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
-			\item \begin{verbatim}
-module boucle6 ()
-    i, j, fin : entiers
-    pour i de 1 à 3 faire
-      fin ← 6 * i - 11
-      pour j de 1 à fin par 3 faire
-        afficher 10 * i + j
-      fin pour
-    fin pour
-fin module
-				\end{verbatim} \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item 
+									La variable permettant de se d\'eplacer dans un tableau s'appelle un  \textcolor{gray}{\underline{\hspace*{5em}}} 
+			\item 
+									En Java, la premi\`ere valeur d'un tableau \`a \textbf{n} \'el\'ements se trouve \`a la position            
+									 \textcolor{gray}{\underline{\hspace*{1em}}}  
+									et la derni\`ere valeur se trouve \`a la position 
+									 \textcolor{gray}{\underline{\hspace*{2em}}} 
 					\end{itemize}
 				
-            \par
-        \subsection{Compr\'ehension de codes Java}
 			
-		\subparagraph{Instructions r\'ep\'etitives} 
+		\subparagraph{D\'eclaration, cr\'eation et initialisation d'un tableau } 
 		
-                \textcolor{white}{.} \par
-            
-							Quelles instructions r\'ep\'etitives sont correctes parmi les suivantes? 
-							Expliquez pourquoi les autres ne le sont pas.
-						
+					\textcolor{white}{.} \par
+				
+            \par
+        
+					Un tableau poss\`ede un type et une taille.
+					Le type de ses \'el\'ements est soit l'un des types simples (int, double, char,..) ou une r\'eference (String,...).
+				
+            \par
+        
+					La taille du tableau est le nombre (strictement positif ) de ses \'el\'ements.
+					Elle ne fait pas partie du type.  
+				
+            \par
+        La d\'eclaration d'un tableau r\'eserve un emplacement m\'emoire
             \begin{itemize} 
         
-            \item[ \ding{"6F} ] proposition 1
-							\begin{Java}
-While ( condition ) {
-	// instructions
-}							\end{Java}
+            \item[ \ding{"6D} ] sur le tas.
         
-            \item[ \ding{"6F} ] proposition 2
-							\begin{Java}
-do while ( condition ) {
-	// instructions
-}							\end{Java}
-        
-            \item[ \ding{"6F} ] proposition 3
-							\begin{Java}
-while ( true ) {
-	// instructions
-}							\end{Java}
-        
-            \item[ \ding{"6F} ] proposition 4
-							\begin{Java}
-while ( true ) do {
-	// instructions
-}							\end{Java}
-        
-            \item[ \ding{"6F} ] proposition 5
-							\begin{Java}
-FOR ( int i=0; i<=10; i=i+2 ) DO {
-	// instructions
-}							\end{Java}
-        
-            \item[ \ding{"6F} ] proposition 6
-							\begin{Java}
-for ( int i=0; i<=10; i=i+2 ) {
-	// instructions
-}							\end{Java}
-        
-            \item[ \ding{"6F} ] proposition 7
-							\begin{Java}
-for ( int i=0; i<=10; i=i+2 ) do {
-	// instructions
-}							\end{Java}
-        
-            \item[ \ding{"6F} ] proposition 8
-							\begin{Java}
-for ( int i=9; i>=0; i=i-2 ) {
-	// instructions
-}							\end{Java}
+            \item[ \ding{"6D} ] sur la pile.
         
             \end{itemize} 
         
 			
-		\subparagraph{Activit\'e 'remplir les blancs'} 
+		\subparagraph{Cr\'eation} 
 		
                 \textcolor{white}{.} \par
             
-								Quel op\'erateur de comparaison Java repr\'esente la relation suivante? 
+								Pour cr\'eer un tableau, le mot cl\'e utilis\'e est  \textcolor{gray}{\underline{\hspace*{2em}}} 
+            \par
+        
+								Pour pouvoir cr\'eer un tableau nomm\'e \textbf{entiers} 
+								de 10 entiers \textbf{pr\'ec\'edemment d\'eclar\'e}, il faut \'ecrire l'instruction
+								 \textcolor{gray}{\underline{\hspace*{5em}}}  \textcolor{gray}{\underline{\hspace*{1em}}}  \textcolor{gray}{\underline{\hspace*{2em}}}  \textcolor{gray}{\underline{\hspace*{2em}}}  \textcolor{gray}{\underline{\hspace*{3em}}} ;
 							
             \par
+        La cr\'eation d'un tableau se fait
+            \begin{itemize} 
         
-					\begin{enumerate}
-				
-			\item "est \'egal \`a" ?                      \textcolor{gray}{\underline{\hspace*{2em}}} 
-			\item "est diff\'erent de" ?                \textcolor{gray}{\underline{\hspace*{2em}}} 
-					\end{enumerate}
-				
-								Quel op\'erateur bool\'een Java repr\'esente l'op\'erateur logique suivant? 
-							
-            \par
+            \item[ \ding{"6D} ] sur le tas
         
-					\begin{enumerate}
-				
-			\item le ET :   \textcolor{gray}{\underline{\hspace*{2em}}} 
-			\item le OU :   \textcolor{gray}{\underline{\hspace*{2em}}} 
-			\item le NON :  \textcolor{gray}{\underline{\hspace*{1em}}} 
-					\end{enumerate}
-				
-			
-		\subparagraph{Exp\'erience} 
-		
-					\textcolor{white}{.} \par
-				
-					Indiquez l'affichage obtenu par ce code.
-				
-            \par
+            \item[ \ding{"6D} ] sur la pile
+        
+            \end{itemize} 
         
 			
-		\subparagraph{Compr\'ehension} 
+		\subparagraph{Initialisation} 
 		
                 \textcolor{white}{.} \par
             
-							  Que vont-ils afficher ?
-              \begin{Java}
-public class Boucles {
-
-	public static void main ( String[] args ) {
-		int facteur;
-		final int VALEUR = 3;
-	
-		for (facteur = 1 ; facteur <= 10 ; facteur++){		
-			System.out.print(facteur*VALEUR+" ");
-		}
-		System.out.println();
-	}
-}			\end{Java} \textcolor{gray}{\underline{\hspace*{16em}}} 
-			
-		\subparagraph{Exercice Tant que} 
-		
-					\textcolor{white}{.} \par
-				
-					\'Ecrivez en Java l'algorithme suivant.
-				
+								Le mot cl\'e \verb|new| permet \'egalement d'initialiser
+								tous les \'el\'ements du tableau fraichement cr\'e\'e \`a une valeur par d\'efaut. 
+							
             \par
-        \begin{verbatim}
-MODULE Test
-
-    nb, produit : Entier
-    produit ← 1 
-
-    LIRE nb
-    TANT QUE nb ≠ 0 FAIRE
-        produit ← produit * nb
-        LIRE nb 
-    FIN TANT QUE
-    AFFICHER produit
-    
-FIN MODULE
-			    \end{verbatim}
-			
-		\subparagraph{Exercice Pour} 
-		
-					\textcolor{white}{.} \par
-				
-					\'Ecrivez en Java l'algorithme suivant.
-				
+        Quelle est cette valeur par d\'efaut ?
             \par
-        \begin{verbatim}
-MODULE Test
-
-    nb: Entier
-    i : Entier
-
-    LIRE nb
-    POUR i DE 1 A nb FAIRE
-        AFFICHER i
-    FIN POUR
-
-FIN MODULE
-			     \end{verbatim}\subsection{\`A vous de jouer...}
-          Il est temps de se lancer et d'\'ecrire vos premiers modules et programmes Java correspondant. 
-          Voici quelques conseils pour vous guider dans la r\'esolution de tels probl\`emes :
-          
+        
 					\begin{itemize}
 				
-			\item il convient d'abord de bien comprendre le probl\`eme pos\'e ; assurez-vous qu'il est parfaitement sp\'ecifi\'e ;
+			\item pour les num\'eriques (int, double, char) :  \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item pour les boolean :  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item pour les objets (type r\'eference) :  \textcolor{gray}{\underline{\hspace*{3em}}} 
+					\end{itemize}
+				
+			
+		\subparagraph{R\'eflexion} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+          
+					Est-il possible de d\'eclarer, de cr\'eer et d'initialiser un tableau de 10 \'el\'ements en une seule op\'eration ?  
+				
+            \par
+         {\footnotesize\emph{(la r\'eponse est disponible dans la version en ligne)}\par} 
+			
+		\subparagraph{V\'erification} 
+		
+					\textcolor{white}{.} \par
+				
+            \par
+        
+					\'Ecrivez sur papier la boucle permettant d'initialiser
+					les \'el\'ements d'un tableau d'entiers de 10 \'el\'ements \`a la valeur de leur indice.   
+				
+            \par
+         {\footnotesize\emph{(la r\'eponse est disponible dans la version en ligne)}\par} 
+			
+		\subparagraph{Cochez les affirmations qui sont vraies} 
+		
+                \textcolor{white}{.} \par
+            
+							Considerons le tableau \verb|entiers|
+							contenant les \'elements \verb|{3,4,5}|.
+						
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] 
+							Le tableau connait sa taille.
+						
+        
+            \item[ \ding{"6F} ] \verb|entiers[3]| vaut 5.
+						
+        
+            \item[ \ding{"6F} ] \verb|entiers[3]=4;| affecte la valeur 4 \`a la 3\textsuperscript{\`eme} case.
+						
+        
+            \item[ \ding{"6F} ] \verb|entiers[1]=0;| supprime la case d'indice 1.
+						
+        
+            \item[ \ding{"6F} ] 
+							Si \verb|entiers20| est un tableau de 20 entiers, on peut \'ecrire l'instruction 
+							\verb|entiers20 = entiers;|.  
+						
+        
+            \item[ \ding{"6F} ] 
+							Un tableau peut \^etre le seul param\`etre d'une m\'ethode.
+						
+        
+            \item[ \ding{"6F} ] 
+							Un tableau peut \^etre une valeur de retour d'une m\'ethode.
+						
+        
+            \end{itemize} 
+        
+			
+		\subparagraph{S\'election multiple} 
+		
+                \textcolor{white}{.} \par
+            
+								Partons de la repr\'esentation de \verb|entiers |en m\'emoire
+								donn\'ee par la figure ci-dessous.  
+							\begin{figure}[hbt]
+				    \begin{center}
+					\includegraphics[width=0.5\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tab3.jpg}
+						\end{center}
+                
+                    \caption[repr\'esentation m\'emoire de entiers]{repr\'esentation m\'emoire de entiers}
+                \end{figure}
+                    
+            \par
+        
+								Quelle(s) instruction(s) m\`ene(nt) \`a ce r\'esultat.   
+							
+            \par
+        
+            \begin{itemize} 
+        
+            \item[ \ding{"6F} ] proposition 1
+            \par
+        \begin{Java}
+int [] entiers;
+entiers = new int [3];
+							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 2
+            \par
+        \begin{Java}
+int [] entiers = new int [3]; 
+							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 3
+            \par
+        \begin{Java}
+int [] entiers = new int [];
+							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 4
+            \par
+        \begin{Java}
+int [] entiers = {3,3,3};
+							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 5
+            \par
+        \begin{Java}
+int [] entiers = new int [3];
+for (int i=0; i<entiers.length; i++) {
+	entiers[i] = 3;
+}
+							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 6
+            \par
+        \begin{Java}
+int[] entiers;
+entiers = {3,3,3};
+							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 7
+            \par
+        \begin{Java}
+int [3] entiers = {3,3,3};
+							\end{Java}
+        
+            \item[ \ding{"6F} ] proposition 8
+            \par
+        \begin{Java}
+int [] entiers;
+entiers= new {3,3,3};
+							\end{Java}
+        
+            \end{itemize} 
+        
+			
+		\subparagraph{Quiz} 
+		
+                \textcolor{white}{.} \par
+            Pour ce tableau de 3 \'el\'ements, l'instruction \verb|System.out.println (entiers[6]);|
+            \begin{itemize} 
+        
+            \item[ \ding{"6D} ] n'affiche rien.
+        
+            \item[ \ding{"6D} ] affiche une valeur se trouvant en m\'emoire.
+        
+            \item[ \ding{"6D} ] provoque une erreur \`a la compilation.
+        
+            \item[ \ding{"6D} ] provoque une  erreur \`a l'ex\'ecution.
+        
+            \end{itemize} 
+        \subsection{Les tests unitaires}
+			
+		\subparagraph{Les tests} 
+		
+                \textcolor{white}{.} \par
+                
+								Le type de tests qui  teste s\'epar\'ement chaque m\'ethode est appel\'e tests  \textcolor{gray}{\underline{\hspace*{10em}}} .
+							
+            \par
+            
+								Avant de commencer \`a tester, il faut \'ecrire un  \textcolor{gray}{\underline{\hspace*{3em}}}  de tests afin de s'assurer qu'on teste tous les cas.
+							
+            \par
+            
+								Bien s\^ur, il n'est pas pensable de tester toutes les valeurs possibles, il faut donc choisir des valeurs repr\'esentatives 
+								(c-\`a-d cas g\'en\'eral, cas particuliers et valeurs limites).    
+							
+            \par
+         \textcolor{gray}{\underline{\hspace*{3em}}}  est un outil pour automatiser les tests unitaires.
+							
+            \par
+            
+								Cette m\'ethode est autonome (ne re\c coit rien ne retourne rien) 
+								et elle ne contient que des affirmations 
+								(appel de la m\'ethode \`a tester, comparaison entre le r\'esultat attendu et le r\'esultat obtenu).
+							
+            \par
+            
+								Une classe de test contient une m\'ethode de test par cas.
+								Chaque m\'ethode de test est reconnue comme \'etant un test unitaire gr\^ace au tag  \textcolor{gray}{\underline{\hspace*{3em}}}  .
+								Elle contient des affirmations :
+							
+            \par
+        
+					\begin{itemize}
+				
+			\item  \textcolor{gray}{\underline{\hspace*{10em}}} (intAttendu, intObtenu) 
+								  v\'erifie que les 2 valeurs enti\`eres \verb|intAttendu| et \verb|intObtenus| sont identiques;
+								
+            \par
+        
+			\item  \textcolor{gray}{\underline{\hspace*{10em}}} (val) 
+								  v\'erifie que la valeur du bool\'een \verb|val| est \`a vrai,     
+                
+            \par
+        
+			\item  \textcolor{gray}{\underline{\hspace*{10em}}} (val) 
+								  v\'erifie que la valeur de \verb|val| est \`a faux.    
+                
+            \par
+        
+					\end{itemize}
+				    
+								Le tag  \textcolor{gray}{\underline{\hspace*{3em}}}  ( \textcolor{gray}{\underline{\hspace*{20em}}} )  
+                permet de v\'erifier que la m\'ethode lance bien une exception de type \verb|IllegalArgumentException|.    
+							
+            \par
+        
+                Dans la classe de tests, 2 instructions \verb|import| sont n\'ecessaires :    
+							
+					\begin{itemize}
+				
+			\item import  \textcolor{gray}{\underline{\hspace*{2em}}} . \textcolor{gray}{\underline{\hspace*{3em}}} . \textcolor{gray}{\underline{\hspace*{3em}}} ; 
+                // Pour que @Test soit connu
+                
+			\item import  \textcolor{gray}{\underline{\hspace*{5em}}}  \textcolor{gray}{\underline{\hspace*{2em}}} . \textcolor{gray}{\underline{\hspace*{3em}}} . \textcolor{gray}{\underline{\hspace*{5em}}} . \textcolor{gray}{\underline{\hspace*{1em}}} ; 
+                // Pour que les m\'ethodes de v\'erification ci-dessus soient reconnues.
+                
+					\end{itemize}
+				
+            \par
+            
+								La commande
+								\par
+				 \textcolor{gray}{\underline{\hspace*{3em}}}  \textcolor{gray}{\underline{\hspace*{16em}}}  \textcolor{gray}{\underline{\hspace*{20em}}}  \par
+				
+								permet de lancer les tests de la classe \verb|ExerciceTest|, 
+								dont le package est \verb|g32000.tds.td7BisPrepa|, pr\'ec\'edemment compil\'ee.    
+							
+            \par
+        \subsection{\`A vous de jouer...}
+					\begin{itemize}
+				
+			\item Il convient d'abord de bien comprendre le probl\`eme pos\'e ; assurez-vous qu'il est parfaitement sp\'ecifi\'e ;
 			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans l'algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites ;
 			\item \textbf{mettez en \'evidence les variables \guillemotleft  donn\'ees \guillemotright , les variables \guillemotleft  r\'esultats \guillemotright  et les variables de travail ;}
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
+			\item Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir pr\'ematur\'ement (si on a trouv\'e ce qu'on cherche par exemple).
+			\item \textbf{\'Ecrivez le plan de tests en \'ecrivant l'algorithme. Codez les tests apr\`es avoir \'ecrit le code Java.}
 					\end{itemize}
 				
             \par
@@ -1085,100 +1418,79 @@ FIN MODULE
           
 					\begin{enumerate}
 				
-			\item re\c coit un naturel \verb@n@ et affiche
+			\item  re\c coit en param\`etre le tableau \verb@températures@ de 
+              \verb@n@  r\'eels et qui retourne
+              le plus grand \'ecart absolu entre deux temp\'eratures cons\'ecutives de ce tableau. Et si on veut
+              le plus petit \'ecart ?
+            
+			\item 
+              re\c coit en param\`etre le tableau valeurs de \verb@n@ entiers et qui v\'erifie si ce
+              tableau est ordonn\'e (strictement) croissant sur les valeurs. Le module retournera vrai si le
+              tableau est ordonn\'e, faux sinon.
+            
+			\item 
+              re\c coit en param\`etre le tableau \verb@tabCar@ 
+              de \verb@n@ caract\`eres, et qui \guillemotleft  renverse \guillemotright 
+              ce tableau, c'est-\`a-dire qui permute le premier \'el\'ement avec le dernier, le deuxi\`eme \'el\'ement
+              avec l'avant-dernier et ainsi de suite.
               
-					\begin{enumerate}
-				
-			\item les \verb@n@ premiers entiers strictement positifs ;
-			\item les \verb@n@ premiers entiers strictement positifs en ordre d\'ecroissant ;
-			\item les \verb@n@ premiers carr\'es parfaits ;
-			\item les \verb@n@ premiers naturels impairs ;
-			\item les naturels impairs qui sont inf\'erieurs ou \'egaux \`a \verb@n@.
-					\end{enumerate}
-				
-              Si le \verb@n@ re\c cu n'est pas strictement positif, votre programme s'arr\^etera en g\'en\'erant une erreur/une exception.
+			\item 
+              re\c coit en param\`etre le tableau \verb@tabChaines@ 
+              de \verb@n@ chaines et qui v\'erifie
+              si ce tableau est sym\'etrique, c'est-\`a-dire si le premier \'el\'ement est identique au dernier, le
+              deuxi\`eme \`a l'avant-dernier et ainsi de suite.
             
 			\item 
-              demande \`a l'utilisateur d'introduire un entier positif (non strictement). 
-              Ce module permet \`a l'utilisateur de se tromper \`a plusieurs reprises mais l'utilisateur devra donner
-              une bonne valeur pour arr\^eter le programme.
-              (On suppose tout de m\^eme que l'utilisateur ne donne que des valeurs enti\`eres !) 
+              re\c coit un nombre entier positif ou nul en param\`etre et qui affiche pour
+              chacun de ses chiffres le nombre de fois qu'il apparait dans ce nombre. Ainsi, pour le nombre
+              10502851125, l'affichage mentionnera que le chiffre 0 apparait 2 fois, 1 apparait 3 fois, 2
+              apparait 2 fois, 5 apparait 3 fois et 8 apparait une fois (l'affichage ne mentionnera donc pas
+              les chiffres qui n'apparaissent pas).
             
 			\item 
-              lit une s\'erie de nombres entiers positifs, jusqu'\`a ce que l'utilisateur
-              encode la valeur 0. Les nombres multiples de 3 seront affich\'es au fur et \`a mesure et le nombre
-              de ces multiples sera affich\'e en fin de traitement.
-              
-            \par
-        
-              Pensez \`a utiliser le module \'ecrit ci-dessus qui permet de lire un entier positif.
-              
-            \par
-        
-			\item 
-              retourne la somme des chiffres qui forment un nombre naturel \verb@n@
-              Attention, on donne au d\'epart le nombre et pas ses chiffres. Exemple : 133045 doit donner
-              comme r\'esultat 16, car 1 + 3 + 3 + 0 + 4 + 5 = 16.
-            
-			\item 
-              lit une suite de nombres positifs entr\'es au clavier et affiche
-              le maximum, le minimum, leur somme et la moyenne. \par
-				
-              La fin de la suite de nombre sera signifi\'ee par une valeur sentinelle que vous choisirez
-              judicieusement.
-            
-			\item 
-              v\'erifie si un entier donn\'e forme un palindrome ou non. Un nombre
+              v\'erifie si un tableau d' entiers donn\'e forme un palindrome ou non. Un nombre
               palindrome est un nombre qui lu dans un sens (de gauche \`a droite) est identique au nombre
               lu dans l'autre sens (de droite \`a gauche). Par exemple, 1047401 est un nombre palindrome.
             
-			\item 
-                affiche les \verb@n@ premiers termes de la suite suivante : 
-                \verb@1, –1, 2, –3, 5, –8, 13, –21, 34, –55, …@
-                o\`u \verb@n@ est un entier strictement positif re\c cu en param\`etre.\par
-				
-                Si le \verb@n@ re\c cu n'est pas strictement positif, votre programme s'arr\^etera en g\'en\'erant une erreur/une exception.
-            
 					\end{enumerate}
 				
             \par
-        En java, n'oubliez pas d'\'ecrire la javadoc et la m\'ethode main pour tester vos m\'ethodes.
+        En java, n'oubliez pas d'\'ecrire la javadoc et les tests de vos m\'ethodes.
             \par
         
 			
-		\subparagraph{Jeu de la fourchette} 
+		\subparagraph{Mastermind} 
 		
 					\textcolor{white}{.} \par
 				
-          \'Ecrivez un algorithme qui simule le jeu de la fourchette. Ce jeu consiste \`a essayer de d\'ecouvrir
-          un nombre quelconque compris entre 0 et 100 inclus, tir\'e au sort par l'ordinateur (la primitive
-          \verb@hasard(n : entier)@ retourne un entier entre 0 inclus et n exclus). \par
-				
-          L'utilisateur a droit \`a huit essais maximum.\par
-				
-          \`A chaque essai, l'algorithme devra afficher un message indicatif
-          
-					\begin{itemize}
-				
-			\item \guillemotleft  nombre donn\'e trop petit \guillemotright 
-			\item ou \guillemotleft  nombre donn\'e trop grand \guillemotright . 
-					\end{itemize}
-				
-          En conclusion, 
-          
-					\begin{itemize}
-				
-			\item soit \guillemotleft  bravo, vous avez trouv\'e en [nombre] essai(s) \guillemotright 
-			\item soit \guillemotleft  d\'esol\'e, le nombre \'etait [valeur] \guillemotright .
-					\end{itemize}
-				
-            \par
-        \'Ecrivez le code java correspondant.
+          Dans le jeu du Mastermind, un joueur A doit trouver une combinaison de 
+          \verb@k@ pions de couleur,
+          choisie et tenue secr\`ete par un autre joueur B. Cette combinaison peut contenir \'eventuellement 
+          des pions de m\^eme couleur. \`A chaque proposition du joueur A, le joueur B indique
+          le nombre de pions de la proposition qui sont corrects et bien plac\'es et le nombre de pions
+          corrects mais mal plac\'es.
+        
             \par
         
-        Aide en Java : un petit tour dans l'API de la classe Random devrait vous aider \`a trouver l'\'equivalent du
-        \verb@hasard(n : entier)@ en Java
-    
+          Pour impl\'ementer une simulation de ce jeu, on utilise le type Chaine, dont les valeurs
+          possibles sont les couleurs des pions utilis\'es. (Attention, le nombre exact de couleurs n'est
+          pas pr\'ecis\'e.) Les seules manipulations permises ont la comparaison (tester si
+          deux couleurs sont identiques ou non) et l'affectation (affecter le contenu d'une variable de
+          type Couleur \`a une autre variable de ce type). Les propositions du joueur A, ainsi que la
+          combinaison secr\`ete du joueur B sont contenues dans des tableaux de k composantes de type
+          Chaine.
+        
+            \par
+        
+          \'Ecrire le module suivant qui renvoie dans les variables \verb@bienPlacés@ 
+          et \verb@malPlacés@ respectivement
+          le nombre de pions bien plac\'es et mal plac\'es dans la \guillemotleft  proposition \guillemotright  du joueur A en la
+          comparant \`a la \guillemotleft  solution \guillemotright  cach\'ee du joueur B.
+        
+            \par
+        \begin{verbatim}
+module testerProposition( proposition↓, solution↓ : tableau [1 à k ] de Chaines, bienPlacés↑, malPlacés↑ : entiers)
+        \end{verbatim} {\footnotesize\emph{(une solution est disponible dans la version en ligne)}\par} En java, n'oubliez pas d'\'ecrire la javadoc et les tests de vos m\'ethodes.
             \par
         
 				\end{document}

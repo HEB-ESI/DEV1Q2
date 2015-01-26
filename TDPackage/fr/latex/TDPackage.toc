@@ -1,0 +1,36 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Les package}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Introduction aux packages}{2}{subsection.1.1}
+\contentsline {subparagraph}{Le nom d'un package}{2}{section*.2}
+\contentsline {subparagraph}{Associer une classe \`a un package}{2}{section*.3}
+\contentsline {subparagraph}{Nom complet d'une classe}{2}{section*.4}
+\contentsline {subparagraph}{Package et dossiers}{2}{section*.5}
+\contentsline {subparagraph}{Exemple}{3}{section*.6}
+\contentsline {subparagraph}{Exercice}{3}{section*.7}
+\contentsline {subparagraph}{Exercice}{3}{section*.8}
+\contentsline {subsection}{\numberline {1.2}Utiliser le package d'un autre}{3}{subsection.1.2}
+\contentsline {subparagraph}{Exp\'erience}{3}{section*.9}
+\contentsline {subsection}{\numberline {1.3}Utiliser ses propres packages}{4}{subsection.1.3}
+\contentsline {subparagraph}{Exp\'erience}{4}{section*.10}
+\contentsline {subparagraph}{J'ai oubli\'e l'option '-cp' et \c ca fonctionne quand m\^eme !?}{4}{section*.11}
+\contentsline {subparagraph}{L'option -d}{5}{section*.12}
+\contentsline {subparagraph}{Exemple}{5}{section*.13}
+\contentsline {subsection}{\numberline {1.4}La variable CLASSPATH}{5}{subsection.1.4}
+\contentsline {subparagraph}{Exercice}{5}{section*.14}
+\contentsline {subparagraph}{Exercice}{5}{section*.15}
+\contentsline {subparagraph}{Exercice}{6}{section*.16}
+\contentsline {subparagraph}{Exercice}{6}{section*.17}
+\contentsline {subsection}{\numberline {1.5}Organiser ses fichiers}{6}{subsection.1.5}
+\contentsline {subparagraph}{Sans package.}{6}{section*.18}
+\contentsline {subparagraph}{1re proposition : pour transporter vos sources et classes rapidement.}{7}{section*.19}
+\contentsline {subparagraph}{Exercice}{7}{section*.21}
+\contentsline {subparagraph}{Remarques}{8}{section*.22}
+\contentsline {subparagraph}{2e proposition : toutes les classes sont regroup\'ees dans le m\^eme dossier (\char `\~/classes).}{8}{section*.23}
+\contentsline {subparagraph}{Exercice}{8}{section*.25}
+\contentsline {section}{\numberline {2}Exercices}{9}{section.2}
+\contentsline {subsection}{\numberline {2.1}La notion de package}{9}{subsection.2.1}
+\contentsline {subparagraph}{API}{9}{section*.26}
+\contentsline {subparagraph}{Choix Multiple }{9}{section*.27}
+\contentsline {subparagraph}{Choix Multiple }{10}{section*.28}
+\contentsline {subparagraph}{Choix Multiple }{10}{section*.29}
+\contentsline {subsection}{\numberline {2.2}\`A vous de jouer...}{11}{subsection.2.2}
