@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="ChallengeChaine" title="Challenge : les chaines">
+	
+	<entry title="Le Scrabble">
+	
+		<paragraph>
+			Résolvons cette fois encore un examen
+    </paragraph>
+    <paragraph>
+      Vous trouverez par exemple Le Scrabble <link uri="../../../ChallengeChaine/fr/examen/DEV1-e-janvier-150123-SRV.pdf">ici</link>.
+    </paragraph>
+	</entry>
+</lesson>

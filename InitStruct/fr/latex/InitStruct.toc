@@ -1,0 +1,2 @@
+\select@language {french}
+\contentsline {subparagraph}{Rectangle}{1}{section*.1}

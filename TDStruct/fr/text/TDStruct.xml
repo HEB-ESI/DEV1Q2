@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="TDStruct" title="TD Variables structurées">
+	
+	<entry>
+		<paragraph>
+			Ce TD a pour but de rappeler les variables structurées.
+		</paragraph>
+	</entry>
+	
+	<!-- =========================================================== -->
+	<unit label="Séquentiel" title="Algorithmes séquentiels">
+	<!-- =========================================================== -->
+
+    <entry>
+      <paragraph>
+        Dans les chapitres précédents, nous avons utilisé des variables de types dits « simples »
+        (entier, réel, booléen, caractère, chaine) ne pouvant contenir qu’une seule valeur à la fois.
+        Cependant, certains types d’information consistent en un regroupement de plusieurs données
+        élémentaires. Quelques exemples :
+        <list listStyle="unordered">
+			    <item>Une date est composée de trois éléments (le jour, le mois, l’année). Le mois peut
+            s’exprimer par un entier (15/10/2014) ou par une chaine (15 octobre 2014).
+          </item>
+          <item>
+            Un moment de la journée est un triple d’entiers (heures, minutes, secondes).
+          </item>
+          <item>
+            La localisation d’un point dans un plan nécessite la connaissance de deux coordonnées
+            cartésiennes (l’abscisse x et l’ordonnée y) ou polaires (le rayon et l’angle).
+          </item>
+          <item>
+            Une adresse est composée de plusieurs données : un nom de rue, un numéro de maison,
+            parfois un numéro de boite postale, un code postal, le nom de la localité, un nom ou
+            code de pays pour une adresse à l’étranger. . .
+          </item>
+        </list>
+      </paragraph>
+      <paragraph>
+        Pour stocker et manipuler de tels ensembles de données, nous utiliserons des 
+        <formatted style="bold">types structurés</formatted> ou <formatted style="bold">structures</formatted>. 
+        Une structure est donc un <formatted style="bold">ensemble fini d’éléments pouvant être de types distincts</formatted>. 
+        Chaque élément de cet ensemble, appelé <formatted style="bold">champ</formatted> de la structure, possède un nom unique.
+      </paragraph>
+      <paragraph>
+        Notez qu’un champ d’une structure peut lui-même être une structure. Par exemple, une
+        carte d’identité inclut parmi ses informations une date de naissance, l’adresse de son
+        propriétaire (cachée dans la puce électronique !). . .
+      </paragraph>
+    </entry>
+    
+		<learningObject title="Définition d’une structure">
+		<!-- ================================================ -->
+		  <clarify>
+		  <paragraph>
+		    La définition d’un type structuré adoptera le modèle suivant :
+      </paragraph>
+      <paragraph cssClass="code">
+structure NomDeLaStructure
+    nomChamp1 : type1
+    nomChamp2 : type2
+    ...
+    nomChampN : typeN
+fin structure
+      </paragraph>
+      <paragraph>
+        <formatted style="code">nomChamp1</formatted>, . . ., <formatted style="code">nomChampN</formatted> 
+        sont les noms des différents champs de la structure, et<formatted style="code"> type1</formatted>,
+        . . ., <formatted style="code">typeN</formatted> les types de ces champs. 
+        Ces types sont soit les types « simples » étudiés précédemment 
+        (entier, réel, booléen, caractère, chaine) soit d’autres types structurés dont la
+        structure aura été préalablement définie.
+      </paragraph>
+      <paragraph>
+        Pour exemple, nous définissons ci-dessous trois types structurés que nous utiliserons souvent par la suite :
+      </paragraph>
+      <paragraph cssClass="code">
+structure Date
+    jour : entier
+    mois : entier
+    année : entier
+fin structure
+      </paragraph>
+      <paragraph cssClass="code">
+structure Moment
+    heure : entier
+    minute : entier
+    seconde : entier
+fin structure
+      </paragraph>
+      <paragraph cssClass="code">
+structure Point
+    x : réel
+    y : réel
+fin structure
+      </paragraph>
+      </clarify>
+		</learningObject>
+		
+		<learningObject title="Déclaration d’une variable de type structuré">
+		<clarify>
+		  <paragraph>
+		    Une fois un type structuré défini, la déclaration de variables de ce type est identique à celle des variables simples. Par exemple :
+      </paragraph>
+      <paragraph cssClass="code">
+anniversaire, jourJ : Date
+départ, arrivée, unMoment : Moment
+a, b, centreGravité : Point
+      </paragraph>
+    </clarify>
+		</learningObject>
+
+<learningObject title="Utilisation des variables de type structuré">
+		<clarify>
+		  <paragraph>
+		    En général, pour manipuler une variable structurée ou en modifier le contenu, il faut agir
+        au niveau de ses champs en utilisant les opérations permises selon leur type. Pour accéder à
+        l’un des champs d’une variable structurée, il faut mentionner le nom de ce champ ainsi que
+        celui de la variable dont il fait partie. Nous utiliserons la notation « pointée » :
+      </paragraph>
+      <paragraph cssClass="code">
+nomVariable.nomChamp
+      </paragraph>
+      <paragraph>
+		    Exemple d’instructions utilisant les variables déclarées au paragraphe précédent :
+      </paragraph>
+      <paragraph cssClass="code">
+anniversaire.jour ← 15
+anniversaire.mois ← 10
+anniversaire.année ← 2014
+arrivée.heure ← départ.heure + 2
+centreGravité.x ← (a.x + b.x) / 2
+      </paragraph>
+      <paragraph>
+		    On peut cependant, dans certains cas, utiliser une variable structurée de manière globale
+        (c’est-à-dire d’une façon qui agit simultanément sur chacun de ses champs). Le cas le plus
+        courant est l’affectation interne entre deux variables structurées de même type, par exemple :
+      </paragraph>
+      <paragraph cssClass="code">
+arrivée ← départ
+      </paragraph>
+      <paragraph>
+		    qui résume les trois instructions suivantes :
+      </paragraph>
+      <paragraph cssClass="code">
+arrivée.heure ← départ.heure
+arrivée.minute ← départ.minute
+arrivée.seconde ← départ.seconde
+      </paragraph>
+      <paragraph>
+		    Une variable structurée peut aussi être le paramètre d’un module, et un module peut également 
+		    renvoyer une « valeur » de type structuré. Par exemple, l’entête d’un module renvoyant
+		    le nombre de secondes écoulées entre une heure de départ et d’arrivée serait :
+      </paragraph>
+      <paragraph cssClass="code">
+module nbSecondesEcoulées( départ↓, arrivée↓ : Moment) → entier
+      </paragraph>
+      <paragraph>
+		    On pourra aussi lire ou afficher une variable structurée :
+      </paragraph>
+      <paragraph cssClass="code">
+lire unMoment
+afficher unMoment
+      </paragraph>
+      <paragraph>
+		    Par contre, il n’est pas autorisé d’utiliser les opérateurs de comparaison (<![CDATA[<, >]]>) pour comparer 
+		    des variables structurées (même de même type), car une relation d’ordre n’accompagne
+        pas toujours les structures utilisées. En effet, s’il est naturel de vouloir comparer des dates
+        ou des moments, comment définir une relation d’ordre avec les points du plan ou avec des
+        cartes d’identités ?
+      </paragraph>
+      <paragraph>
+        Si le besoin de comparer des variables structurées se fait sentir, il faudra dans ce cas écrire
+        des modules de comparaison adaptés aux structures utilisées.
+      </paragraph>
+      <paragraph>
+        Par facilité d’écriture, on peut assigner tous les champs en une fois via des « {} ». Exemple :
+      </paragraph>
+      <paragraph cssClass="code">
+anniversaire ← {1, 9, 1989}
+      </paragraph>
+    </clarify>
+		</learningObject>
+		
+		<learningObject title="Exemple d’algorithme">
+		<clarify>
+		  <paragraph>
+		    Le module ci-dessous reçoit en paramètre deux dates ; la valeur renvoyée est –1 si la première
+        date est antérieure à la deuxième, 0 si les deux dates sont identiques ou 1 si la première date
+        est postérieure à la deuxième.
+      </paragraph>
+      <paragraph cssClass="code">
+// Reçoit 2 dates en paramètres et retourne la valeur
+// –1 si la première date est antérieure à la deuxième
+// 0 si les deux dates sont identiques
+// 1 si la première date est postérieure à la deuxième.
+module comparerDates(date1↓, date2↓ : Date) → entier
+    résultat : entier
+    résultat ← -1 // valeur choisie par défaut
+    si date1.année ≥ date2.année alors
+      si date1.année > date2.année alors
+        résultat ← 1
+      sinon // les années sont identiques
+        si date1.mois ≥ date2.mois alors
+          si date1.mois > date2.mois alors
+            résultat ← 1
+          sinon // les années et les mois sont identiques
+            si date1.jour ≥ date2.jour alors
+              si date1.jour > date2.jour alors
+                résultat ← 1
+              sinon // les années, les mois et les jours sont identiques
+                résultat ← 0
+              fin si
+            fin si
+          fin si
+        fin si
+      fin si
+    fin si
+    retourner résultat
+fin module
+      </paragraph>
+    </clarify>
+		</learningObject>
+
+  </unit>
+  
+  
+	<!-- =================================================================== -->
+	<unit label="Exercices" title="Exercices">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Maintenant, mettons tout ça en pratique.
+      </paragraph>
+    </entry>
+    
+    <learningObject title="À vous de jouer...">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph>
+        Écrivez un algorithme qui 
+          <list listStyle="ordered">
+            <item>reçoit en paramètre un moment d’une journée et qui retourne le nombre de secondes écoulées depuis minuit jusqu’à ce moment.</item>
+            <item>
+              reçoit en paramètre un nombre de secondes écoulées dans une journée 
+              à partir de minuit et qui retourne le moment correspondant de la journée.</item>
+            <item>reçoit en paramètres deux moments d’une journée et qui retourne le
+              nombre de secondes séparant ces deux moments.</item>
+            <item>recevant les coordonnées de deux points distincts du plan et qui retourne
+              les coordonnées du point situé au milieu des deux.</item>
+            <item>recevant les coordonnées de deux points distincts du plan et qui retourne
+              la distance entre ces deux points.</item>
+          </list>
+        </paragraph>
+        
+        <paragraph title="Cercle">
+          Définir un type Cercle pouvant décrire de façon commode un cercle quelconque dans un
+          espace à deux dimensions. Écrire ensuite
+          <list listStyle="unordered">
+            <item>un module calculant la surface du cercle reçu en paramètre ;</item>
+            <item>un module recevant 2 points en paramètre et retournant le cercle dont le diamètre est le segment reliant ces 2 points ;</item>
+            <item>un module qui détermine si un point donné est dans un cercle ;</item>
+            <item>un module qui indique si 2 cercles ont une intersection.</item>
+          </list>
+        </paragraph>
+      </act>
+    </learningObject>
+  </unit>
+	
+</lesson>

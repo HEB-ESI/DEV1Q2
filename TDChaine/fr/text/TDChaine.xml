@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
+<lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
+	label="TDChaine" title="TD Chaines">
+	
+	<entry>
+		<paragraph>
+			Voyons ici les caractères et les chaines de caractères.
+    </paragraph>
+	</entry>
+	
+	<!-- =========================================================== -->
+	<unit label="Chaines" title="Les chaines">
+	<!-- =========================================================== -->
+
+    <entry>
+      <paragraph>
+        Nous avons défini deux types de variables qui permettent de stocker du texte :
+        <list listStyle="unordered">
+          <item>
+            le caractère (pour les différentes lettres et symboles qui apparaissent sur le clavier de votre
+            ordinateur, par exemple ’a’, ’B’, ’ ?’, ’3’, ’@’, etc.) 
+          </item>
+          <item>et la chaine (qui est un assemblage de plusieurs caractères)</item>
+        </list>
+      </paragraph>
+      <paragraph>
+        Observez la petite nuance d’écriture : 
+        un caractère sera entouré d'apostrophes (ou simples guillemets) (<formatted style="code">’ ’</formatted>) 
+        et une chaine de doubles guillemets (<formatted style="code">" "</formatted>).
+      </paragraph>
+      <paragraph>
+        La <formatted style="bold">taille (ou longueur) d’une chaine</formatted> est le nombre de caractères qu’elle contient. 
+        Remarquez qu’une chaine peut être vide, mais pas un caractère ! Ne confondez pas la chaine vide ("", de
+        taille nulle) avec le caractère blanc (’ ’) qui contient l’espace séparant 2 mots d’un texte et
+        que vous obtenez en enfonçant la touche d’espacement au bas du clavier.
+		</paragraph>
+    </entry>
+    
+		<learningObject title="Manipuler les caractères">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+        Introduisons quelques fonctions (ou primitives) agissant sur les caractères. Leur écriture
+        s’apparente à celle de modules que vous pourrez utiliser tels quels dans les exercices. 
+      </paragraph>
+      <paragraph cssClass="code">
+        estLettre(car : caractère) → booléen
+      </paragraph>
+      <paragraph>
+        Cette fonction indique si un caractère est une lettre. Par exemple elle retourne vrai pour ’a’,
+        ’e’, ’G’, ’K’, mais faux pour ’4’, ’$’, ’@’. . .
+      </paragraph>
+      <paragraph>
+        Si on veut savoir si une lettre est une minuscule ou majuscule, on utilisera les fonctions
+        analogues
+      </paragraph>
+      <paragraph cssClass="code">
+        estMinuscule(car : caractère) → booléen
+      </paragraph>
+      <paragraph>
+        et
+      </paragraph>
+      <paragraph cssClass="code">
+        estMajuscule(car : caractère) → booléen
+      </paragraph>
+      <paragraph>
+        Il va de soi que si <formatted style="code">car</formatted> n’est pas une lettre, ces deux fonctions retournent faux.
+      </paragraph>
+      <paragraph cssClass="code">
+        estChiffre(car : caractère) → booléen
+      </paragraph>
+      <paragraph>
+        Cette fonction permet de savoir si un caractère est un chiffre. Elle retourne vrai uniquement
+        pour les dix caractères ’0’, ’1’, ’2’, ’3’, ’4’, ’5’, ’6’, ’7’, ’8’ et ’9’ et faux dans tous les autres
+        cas.
+      </paragraph>
+      <paragraph>
+        On peut aussi convertir une majuscule en minuscule, grâce à la fonction :
+      </paragraph>
+      <paragraph cssClass="code">
+        majuscule(car : caractère) → caractère
+      </paragraph>
+      <paragraph>
+        Par exemple, si <formatted style="code">car</formatted> vaut <formatted style="code">’h’</formatted>, 
+        cette fonction retourne <formatted style="code">’H’</formatted>. L’opération inverse se fait avec :
+      </paragraph>
+      <paragraph cssClass="code">
+        minuscule(car : caractère) → caractère
+      </paragraph>
+      <paragraph>
+        Il peut aussi être pratique de connaitre la position d’une lettre dans l’alphabet. Ceci se fera
+        à l’aide de la fonction :
+      </paragraph>
+      <paragraph cssClass="code">
+        numLettre(car : caractère) → entier
+      </paragraph>
+      <paragraph>
+        qui retourne toujours un entier entre 1 et 26. Par exemple numLettre(’E’) donnera 5, ainsi
+        que numLettre(’e’), cette fonction traite donc de la même manière les majuscules et les
+        minuscules. En vertu de ce qui a été écrit plus haut, numLettre retournera aussi 5 pour les
+        caractères ’é’, ’è’, ’ê’, ’ë’. . .). N.B. : attention, il est interdit d’utiliser cette fonction si le
+        caractère n’est pas une lettre !
+      </paragraph>
+      <paragraph>
+        Il peut être utile d’avoir un outil qui fait l’opération inverse, à savoir associer la lettre de
+        l’alphabet correspondant à une position donnée. Pour cela, nous aurons :
+      </paragraph>
+      <paragraph cssClass="code">
+        lettreMaj(n : entier) → caractère
+      </paragraph>
+      <paragraph>
+        et
+      </paragraph>
+      <paragraph cssClass="code">
+        lettreMin(n : entier) → caractère
+      </paragraph>
+      <paragraph>
+        qui retournent respectivement la forme majuscule ou minuscule de la n-ème lettre de l’alpha-
+        bet (où n sera obligatoirement compris entre 1 et 26). Par exemple, 
+        <formatted style="code">lettreMaj(13)</formatted> retourne
+        <formatted style="code">’M’</formatted> tandis que <formatted style="code">lettreMin(26)</formatted> 
+        retourne <formatted style="code">’z’</formatted>.
+      </paragraph>
+</clarify>
+		</learningObject>
+		
+		<learningObject title="En Java">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph title="java.lang.Character">
+		    Allez voir la classe <formatted style="code">java.lang.Character</formatted> dans l'API
+		    et trouvez-y les méthodes Java correspondant aux modules d'algo définis ci-dessus.
+		  </paragraph>
+    </clarify>
+    </learningObject>
+
+    <learningObject title="Convertir en chaine">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+		    Un caractère peut être vu comme une chaine de taille 1, mais techniquement, il est important
+        de faire la distinction entre ces deux types. Si on veut transformer un caractère en chaine,
+        on utilisera la fonction :
+      </paragraph>
+      <paragraph cssClass="code">
+        chaine(car : caractère) → chaine
+      </paragraph>
+      <paragraph>
+        Par exemple, si <formatted style="code">car</formatted> vaut <formatted style="code">'a’</formatted>, 
+        cette fonction retournera <formatted style="code">"a"</formatted>. Il est cependant admissible d’utiliser 
+        le simple signe d’affectation qui réalise la conversion de façon automatique :
+      </paragraph>
+      <paragraph cssClass="code">
+        varChaine ← varCaractère
+      </paragraph>
+      <paragraph>
+        De façon similaire, on pourra transformer une variable numérique en chaine avec :
+      </paragraph>
+      <paragraph cssClass="code">
+        chaine(n : entier) → chaine
+      </paragraph>
+      <paragraph>
+        ou
+      </paragraph>
+      <paragraph cssClass="code">
+        chaine(x : réel) → chaine
+      </paragraph>
+      <paragraph>
+        Ainsi, <formatted style="code">chaine(23)</formatted> donnera <formatted style="code">"23"</formatted> 
+        et <formatted style="code">chaine (3,14)</formatted> donnera <formatted style="code">"3,14"</formatted>. Notez qu’on utilise le même
+        nom de fonction dans ces derniers cas (concept de « surcharge » qui sera développé dans
+        le chapitre orienté objet du cours « Algorithmique II »). La différence entre ces différentes
+        fonctions se fait par le type de la variable en entrée.
+      </paragraph>
+      <paragraph>
+        On peut aussi transformer une chaine contenant des caractères numériques en nombre par
+        la fonction inverse :
+      </paragraph>
+      <paragraph cssClass="code">
+        nombre(ch : chaine) → réel
+      </paragraph>
+      <paragraph>
+        Ainsi, <formatted style="code">nombre("3,14")</formatted> retournera <formatted style="code">3,14</formatted>. 
+        Notez que si <formatted style="code">n</formatted> est un entier, l’instruction <formatted style="code">n ← nombre("3,14")</formatted>
+        affectera <formatted style="code">n</formatted> à 3.
+        On supposera encore que si la chaine <formatted style="code">ch</formatted> ne représente pas un nombre de façon correcte, la
+        fonction retournera 0.
+		  </paragraph>
+    </clarify>
+  </learningObject>
+  
+  <learningObject title="Conversion de chaine en Java">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph>
+		    Pour convertir un type primitif en <formatted style="code">String</formatted>, 
+		    il suffit d'utiliser l'opérateur <formatted style="code">+</formatted> 
+		    avec un opérande de type <formatted style="code">String</formatted>.
+      </paragraph>
+      <paragraph>Par exemple :</paragraph>
+      <paragraph cssClass="code">
+System.out. println ("1+1␣=␣"+2);
+String s = "Pi␣=␣" + 3.1415;
+System.out. println ("1"+2+3); // 123
+System.out. println (1+2+"3"); //33
+      </paragraph>
+      <paragraph>
+		    Pour convertir un <formatted style="code">String</formatted> en <formatted style="code">char</formatted> , 
+		    il faut penser à la méthode <formatted style="code">charAt()</formatted> :
+      </paragraph>
+      <paragraph cssClass="code">
+String nom = "Toto";
+char initiale = nom.charAt(0);
+      </paragraph>
+      <paragraph>
+		    Pour convertir un <formatted style="code">String</formatted> en <formatted style="code">int</formatted> , 
+		    il faut aller voir l'API de la classe <formatted style="code">Integer</formatted> :
+      </paragraph>
+      <paragraph cssClass="code">
+int nb = Integer . parseInt ("12");
+      </paragraph>
+    </clarify>
+    </learningObject>
+
+		<learningObject title="Manipuler les chaines">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph title="Longueur d'une chaine">
+        La longueur d’une chaine (ou encore sa taille) est le nombre de caractères qu’elle contient.
+        Nous pourrons l’évaluer avec la fonction
+      </paragraph>
+      <paragraph cssClass="code">
+        longueur(ch : chaine) → entier
+      </paragraph>
+      <paragraph>
+        Par exemple : <formatted style="code">longueur("algorithmique")</formatted> 
+        retourne <formatted style="code">13</formatted> et 
+        <formatted style="code">longueur("")</formatted> retourne <formatted style="code">0</formatted>.
+      </paragraph>
+      <paragraph title="Accès aux différents caractères d’une chaine">
+        La fonction
+       </paragraph>
+      <paragraph cssClass="code">
+        car(ch : chaine, n : entier) → caractère
+      </paragraph>
+      <paragraph>
+        permet de connaitre le n-ème caractère contenu dans une chaine. Pour une utilisation correcte
+        de cette fonction, il faut que la valeur de n soit au moins égale à 1 et qu’elle ne dépasse
+        pas la longueur de la chaine. 
+      </paragraph>
+      <paragraph>
+        Par exemple <formatted style="code">car("Spirou", 4)</formatted> retourne <formatted style="code">’r’</formatted>, 
+        mais <formatted style="code">car("Spirou", 8)</formatted>
+        générera un message d’erreur.
+      </paragraph>
+      <paragraph title="Extraction de sous-chaine">
+        Cette fonction importante permet d’extraire une portion d’une certaine longueur d’une
+        chaine donnée, et ceci à partir d’une position donnée. L’en-tête de cette fonction (qui reçoit
+        donc 3 paramètres entrants) est la suivante :
+       </paragraph>
+      <paragraph cssClass="code">
+        sousChaine(ch : chaine, pos : entier, long : entier) → chaine
+      </paragraph>
+      <paragraph>
+        Il faudra aussi être très vigilant pour une utilisation correcte : pos doit être compris entre 1
+        et la taille de la chaine, et la valeur de long doit être telle qu’on ne déborde pas de la chaine !
+      </paragraph>
+      <paragraph>
+        Par exemple, <formatted style="code">sousChaine("algorithmique", 5, 3)</formatted> donne <formatted style="code">"rit"</formatted>.
+      </paragraph>
+      <paragraph>
+        Cette fonction est très utile pour sélectionner des portions d’une chaine contenant des in-
+        formations codées sous un certain format. Prenons par exemple une date stockée dans une
+        chaine ch de format "JJ/MM/AAAA" (de longueur 10). Pour extraire le jour de cette date,
+        on écrira <formatted style="code">sousChaine(ch, 1, 2)</formatted> ; 
+        le mois s’obtiendra avec <formatted style="code">sousChaine(ch, 4, 2)</formatted> et l’année avec
+        <formatted style="code">sousChaine(ch, 7, 4)</formatted>. 
+        Attention, les 3 résultats obtenus sont des chaines de chiffres et non
+        des nombres !
+      </paragraph>
+      <paragraph title="Recherche de sous-chaine">
+        Cette fonction permet de savoir si une sous-chaine donnée (ou un caractère) est présent dans
+        une chaine donnée. Elle permet d’éviter d’écrire le code correspondant à une recherche :
+      </paragraph>
+      <paragraph cssClass="code">
+        estDansChaine(ch : chaine, sous-chaine : chaine [ou caractère]) → entier
+      </paragraph>
+      <paragraph>
+        La valeur de l’entier renvoyé est la position où commence la sous-chaine recherchée. 
+      </paragraph>
+      <paragraph>
+        Par exemple, <formatted style="code">estDansChaine("algorithmique", "mi")</formatted> 
+        retournera <formatted style="code">9</formatted>. Si la sous-chaine ne s’y trouve
+        pas, la fonction retourne <formatted style="code">0</formatted>. 
+        On peut admettre ici d’écrire un caractère à la place de la sous-chaine. 
+      </paragraph>
+      <paragraph>
+        Par exemple, <formatted style="code">estDansChaine("algorithmique", ’m’)</formatted> 
+        retournera également <formatted style="code">9</formatted>.
+      </paragraph>
+      <paragraph title="Concaténation de chaines">
+        Il est fréquent de devoir rassembler plusieurs chaines pour former une seule chaine plus
+        grande, il s’agit de l’opération de concaténation. La syntaxe est la suivante :
+       </paragraph>
+      <paragraph cssClass="code">
+        concat(ch1, ch2, . . ., chN : chaine) → chaine
+      </paragraph>
+      <paragraph>
+        On remarquera ici le cas exceptionnel d’une fonction admettant un nombre indéfini de paramètres.
+      </paragraph>
+      <paragraph>
+        Par exemple, <formatted style="code">concat("al", "go", "rithmique")</formatted> donnera 
+        <formatted style="code">"algorithmique"</formatted>. On admettra
+        aussi comme notation alternative l’utilisation du signe « <formatted style="code">+</formatted> » 
+        qui est ici sans équivoque entre des variables non numériques :
+       </paragraph>
+      <paragraph cssClass="code">
+        ch ← ch1 + ch2 + . . .+ chN
+      </paragraph>
+    </clarify>
+    </learningObject>
+    
+    <learningObject title="En Java">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph title="java.lang.String">
+		    Allez voir la classe <formatted style="code">java.lang.String</formatted> dans l'API
+		    et trouvez-y les méthodes Java correspondant aux modules d'algo définis ci-dessus.
+		  </paragraph>
+		  <paragraph>
+		    
+		  </paragraph>
+    </clarify>
+    </learningObject>
+    
+    <learningObject title="Égalités de types références">
+		<!-- ================================================ -->
+		<clarify>
+		  <paragraph title="Pour les types primitifs">
+		    Les valeurs sont comparées :
+		  </paragraph>
+		  <paragraph>
+				  <multimedia src="../image/java-logi-egal1.jpg" type="jpeg" />
+      </paragraph>
+      <paragraph>
+        On a : a==c mais a!=b et b!=c
+      </paragraph>
+      <paragraph title="Pour les types références">
+		    Les références sont comparées :
+		  </paragraph>
+		  <paragraph>
+				  <multimedia src="../image/java-logi-egal2.jpg" type="jpeg" />
+      </paragraph>
+      <paragraph>
+        On a : a!=b, a!=c mais a==d
+      </paragraph>
+      <paragraph title="Cas particulier du type String">
+        Le compilateur réutilise l’espace pour les littéraux de type String
+      </paragraph>
+      <paragraph cssClass="java">
+String s1 = "Hello";
+String s2 = "Hello";
+String s3 = "Hel";
+s3 = s3 + "lo";
+System.out.println(s1==s2); // Vrai
+System.out.println(s1==s3); // Faux
+s2 = "Bye";
+System.out.println(s1==s2); // Faux
+      </paragraph>
+      <paragraph title="Egalité de valeur : equals()">
+      </paragraph>
+      <paragraph cssClass="java">
+String s1 = "Hello";
+String s2 = "Hello";
+String s3 = "Hel";
+s3 = s3 + "lo";
+System.out. println (s1. equals(s2 )); // Vrai
+System.out. println (s1. equals(s3 )); // Vrai
+      </paragraph>
+      <paragraph>
+      Ne teste pas que les références sont identiques mais bien que les valeurs référencées sont égales.
+      </paragraph>
+    </clarify>
+    </learningObject>
+  </unit>
+	
+	<!-- =================================================================== -->
+	<unit label="Exercices" title="Exercices">
+	<!-- =================================================================== -->
+		
+		<entry>
+			<paragraph>
+				Maintenant, mettons tout ça en pratique.
+      </paragraph>
+    </entry>
+    
+    <learningObject title="À vous de jouer...">
+    <!-- ============================================================ -->
+      <act>
+        <paragraph>
+          <list listStyle="unordered">
+            <item>Il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites ;</item>
+            <item><formatted style="bold">mettez en évidence les variables « données », les variables « résultats » et les variables de travail ;</formatted></item>
+            <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé.</item>
+            <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+            <item>Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir prématurément (si on a trouvé ce qu'on cherche par exemple).</item>
+            <item><formatted style="bold">Écrivez le plan de tests en écrivant l'algorithme. Codez les tests après avoir écrit le code Java.</formatted></item>
+          </list>
+        </paragraph>
+        
+        <paragraph>
+        Écrivez les algorithmes et codez les programmes Java correspondant qui 
+          <list listStyle="ordered">
+            <item> reçoit une fraction sous forme de chaine, et retourne la valeur
+              numérique de celle-ci. Par exemple, si la fraction donnée est "5/8", l’algorithme renverra
+              0,625. On peut considérer que la fraction donnée est correcte, elle est composée de 2 entiers
+              séparés par le caractère de division ’/’.
+            </item>
+            <item>
+              reçoit le nom complet d’une personne dans une chaine sous la forme
+              "nom, prénom" et la renvoie au format "prénom nom" (sans virgule séparatrice). Exemple :
+              "De Groote, Jan" deviendra "Jan De Groote".
+            </item>
+            <item>
+              met un mot en « ou » au pluriel. Pour rappel, un mot en « ou »
+              prend un « s » à l’exception des 7 mots bijou, caillou, chou, genou, hibou, joujou et pou qui
+              prennent un « x » au pluriel. Exemple : un clou, des clous, un hibou, des hiboux. Si le mot
+              soumis à l’algorithme n’est pas un mot en « ou », un message adéquat sera affiché.
+              </item>
+            <item>
+              vérifie si un mot donné sous forme de chaine constitue un
+              palindrome (comme par exemple "kayak", "radar" ou "saippuakivikauppias" (marchand
+              de savon en finnois)
+            </item>
+            <item>
+              vérifie si une phrase donnée sous forme de chaine constitue
+              un palindrome (comme par exemple "Esope reste ici et se repose" ou "Tu l’as trop
+              écrasé, César, ce Port-Salut !"). Dans cette seconde version, on fait abstraction des
+              majuscules/minuscules et on néglige les espaces et tout signe de ponctuation.
+            </item>
+            <item>
+              reçoit en paramètre le tableau avion de n chaines et qui retourne un
+              booléen indiquant s’il contient au moins un élément de valeur «pilote».
+            </item>
+          </list>
+        </paragraph>
+        <paragraph>En java, n'oubliez pas d'écrire la javadoc et les tests de vos méthodes.</paragraph>
+      </act>
+    </learningObject>
+  </unit>
+</lesson>

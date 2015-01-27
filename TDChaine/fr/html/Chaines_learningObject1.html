@@ -1,0 +1,129 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Chaines: Manipuler les caractères. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Chaines, eLML" />
+      <title>1.1.1. Manipuler les caractères</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Chaines</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Chaines.html">1.1. Les chaines</a><ul class="navigation nav_lo">
+                     <li class="navigationActual"><strong>1.1.1. Manipuler les caractères</strong></li>
+                     <li class="navigationLink"><a href="Chaines_learningObject2.html">1.1.2. En Java</a></li>
+                     <li class="navigationLink"><a href="Chaines_learningObject3.html">1.1.3. Convertir en chaine</a></li>
+                     <li class="navigationLink"><a href="Chaines_learningObject4.html">1.1.4. Conversion de chaine en Java</a></li>
+                     <li class="navigationLink"><a href="Chaines_learningObject5.html">1.1.5. Manipuler les chaines</a></li>
+                     <li class="navigationLink"><a href="Chaines_learningObject6.html">1.1.6. En Java</a></li>
+                     <li class="navigationLink"><a href="Chaines_learningObject7.html">1.1.7. Égalités de types références</a></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.2. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="unit_Chaines.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Chaines_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Chaines_learningObject1.html">1.1.1. Manipuler les caractères</h1>
+      <div id="d8e32.html" class="clarify">
+         <p class="paragraph" id="d8e33">
+            Introduisons quelques fonctions (ou primitives) agissant sur les caractères. Leur
+            écriture
+            s’apparente à celle de modules que vous pourrez utiliser tels quels dans les exercices.
+            
+            
+         </p><pre>
+        estLettre(car : caractère) → booléen
+      </pre><p class="paragraph" id="d8e37">
+            Cette fonction indique si un caractère est une lettre. Par exemple elle retourne vrai
+            pour ’a’,
+            ’e’, ’G’, ’K’, mais faux pour ’4’, ’$’, ’@’. . .
+            
+         </p>
+         <p class="paragraph" id="d8e39">
+            Si on veut savoir si une lettre est une minuscule ou majuscule, on utilisera les fonctions
+            analogues
+            
+         </p><pre>
+        estMinuscule(car : caractère) → booléen
+      </pre><p class="paragraph" id="d8e43">
+            et
+            
+         </p><pre>
+        estMajuscule(car : caractère) → booléen
+      </pre><p class="paragraph" id="d8e47">
+            Il va de soi que si <code>car</code> n’est pas une lettre, ces deux fonctions retournent faux.
+            
+         </p><pre>
+        estChiffre(car : caractère) → booléen
+      </pre><p class="paragraph" id="d8e54">
+            Cette fonction permet de savoir si un caractère est un chiffre. Elle retourne vrai
+            uniquement
+            pour les dix caractères ’0’, ’1’, ’2’, ’3’, ’4’, ’5’, ’6’, ’7’, ’8’ et ’9’ et faux
+            dans tous les autres
+            cas.
+            
+         </p>
+         <p class="paragraph" id="d8e56">
+            On peut aussi convertir une majuscule en minuscule, grâce à la fonction :
+            
+         </p><pre>
+        majuscule(car : caractère) → caractère
+      </pre><p class="paragraph" id="d8e61">
+            Par exemple, si <code>car</code> vaut <code>’h’</code>, 
+            cette fonction retourne <code>’H’</code>. L’opération inverse se fait avec :
+            
+         </p><pre>
+        minuscule(car : caractère) → caractère
+      </pre><p class="paragraph" id="d8e74">
+            Il peut aussi être pratique de connaitre la position d’une lettre dans l’alphabet.
+            Ceci se fera
+            à l’aide de la fonction :
+            
+         </p><pre>
+        numLettre(car : caractère) → entier
+      </pre><p class="paragraph" id="d8e78">
+            qui retourne toujours un entier entre 1 et 26. Par exemple numLettre(’E’) donnera
+            5, ainsi
+            que numLettre(’e’), cette fonction traite donc de la même manière les majuscules et
+            les
+            minuscules. En vertu de ce qui a été écrit plus haut, numLettre retournera aussi 5
+            pour les
+            caractères ’é’, ’è’, ’ê’, ’ë’. . .). N.B. : attention, il est interdit d’utiliser
+            cette fonction si le
+            caractère n’est pas une lettre !
+            
+         </p>
+         <p class="paragraph" id="d8e80">
+            Il peut être utile d’avoir un outil qui fait l’opération inverse, à savoir associer
+            la lettre de
+            l’alphabet correspondant à une position donnée. Pour cela, nous aurons :
+            
+         </p><pre>
+        lettreMaj(n : entier) → caractère
+      </pre><p class="paragraph" id="d8e84">
+            et
+            
+         </p><pre>
+        lettreMin(n : entier) → caractère
+      </pre><p class="paragraph" id="d8e88">
+            qui retournent respectivement la forme majuscule ou minuscule de la n-ème lettre de
+            l’alpha-
+            bet (où n sera obligatoirement compris entre 1 et 26). Par exemple, 
+            <code>lettreMaj(13)</code> retourne
+            <code>’M’</code> tandis que <code>lettreMin(26)</code> 
+            retourne <code>’z’</code>.
+            
+         </p>
+      </div>
+      <hr />
+      <div class="navigation_arrows"><a href="unit_Chaines.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Chaines_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 27.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDChaine.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

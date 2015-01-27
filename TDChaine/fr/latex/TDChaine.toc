@@ -1,0 +1,22 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Les chaines}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Manipuler les caract\`eres}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}En Java}{4}{subsection.1.2}
+\contentsline {subparagraph}{java.lang.Character}{4}{section*.2}
+\contentsline {subsection}{\numberline {1.3}Convertir en chaine}{4}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Conversion de chaine en Java}{5}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Manipuler les chaines}{5}{subsection.1.5}
+\contentsline {subparagraph}{Longueur d'une chaine}{5}{section*.3}
+\contentsline {subparagraph}{Acc\`es aux diff\'erents caract\`eres d'une chaine}{6}{section*.4}
+\contentsline {subparagraph}{Extraction de sous-chaine}{6}{section*.5}
+\contentsline {subparagraph}{Recherche de sous-chaine}{6}{section*.6}
+\contentsline {subparagraph}{Concat\'enation de chaines}{7}{section*.7}
+\contentsline {subsection}{\numberline {1.6}En Java}{7}{subsection.1.6}
+\contentsline {subparagraph}{java.lang.String}{7}{section*.8}
+\contentsline {subsection}{\numberline {1.7}\'Egalit\'es de types r\'ef\'erences}{7}{subsection.1.7}
+\contentsline {subparagraph}{Pour les types primitifs}{7}{section*.9}
+\contentsline {subparagraph}{Pour les types r\'ef\'erences}{8}{section*.11}
+\contentsline {subparagraph}{Cas particulier du type String}{8}{section*.13}
+\contentsline {subparagraph}{Egalit\'e de valeur : equals()}{8}{section*.14}
+\contentsline {section}{\numberline {2}Exercices}{9}{section.2}
+\contentsline {subsection}{\numberline {2.1}\`A vous de jouer...}{9}{subsection.2.1}

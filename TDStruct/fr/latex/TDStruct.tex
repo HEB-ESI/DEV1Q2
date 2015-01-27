@@ -1,0 +1,419 @@
+\documentclass[11pt,a4paper]{article}
+			\usepackage[french]{babel}
+					
+				\usepackage{pifont}  
+				\usepackage[utf8x]{inputenc}
+				\usepackage[T1]{fontenc} 
+				\usepackage{lmodern}			
+				\usepackage{fancyhdr}
+				\usepackage{textcomp}
+				\usepackage{makeidx}
+				\usepackage{tabularx}
+				\usepackage{multicol}
+				\usepackage{multirow}
+				\usepackage{longtable}
+				\usepackage{color}
+				\usepackage{soul}
+				\usepackage{boxedminipage}
+				\usepackage{shadow}
+				\usepackage{framed}			
+				\usepackage{array}
+				\usepackage{url}
+				\usepackage{ragged2e}
+				\usepackage{fancybox}
+				\newcommand{\cadretitre}[2]{
+				  \vspace*{0.8\baselineskip}
+				  \begin{center}%
+				  \boxput*(0,1){%
+					%\colorbox{white}{\Large\textbf{\ #1\ }}%
+				  }%
+				  {%
+					\setlength{\fboxsep}{10pt}%
+				    \Ovalbox{\begin{minipage}{.8\linewidth}\begin{center}\Large\sffamily{#2}\end{center}\end{minipage}}}%
+				  \end{center}
+				  \vspace*{2\baselineskip}
+				  }
+			
+			\makeatletter
+			\def\@seccntformat#1{\protect\makebox[0pt][r]{\csname the#1\endcsname\quad}}
+			\makeatother
+
+				% Permet d'afficher qqchose à une positin absolue
+				\usepackage[absolute]{textpos}
+				\setlength{\TPHorizModule}{1cm}
+				\setlength{\TPVertModule}{\TPHorizModule}
+	
+				\usepackage[titles]{tocloft}
+				\setlength{\cftbeforesecskip}{0.5ex}
+				\setlength{\cftbeforesubsecskip}{0.2ex}
+				\addto\captionsfrench{\renewcommand\contentsname{}}
+				
+				\usepackage[font=scriptsize]{caption}
+				
+				\usepackage{listings}
+\lstdefinestyle{lstverb}
+  {
+    basicstyle=\footnotesize,
+    frameround=tttt, frame=trbl, framerule=0pt, rulecolor=\color{gray},
+    lineskip=-1pt,   % pour rapprocher les lignes
+    flexiblecolumns, escapechar=\\,
+    tabsize=4, extendedchars=true
+  }
+\lstnewenvironment{Java}[1][]{\lstset{style=lstverb,language=java,#1}}{}
+				\ifx\pdfoutput\undefined
+					\usepackage{graphicx}
+				\else
+					\usepackage[pdftex]{graphicx}
+				\fi
+				\usepackage[a4paper, hyperfigures=true, colorlinks, linkcolor=black, citecolor=blue,urlcolor=blue, pagebackref=true, bookmarks=true, bookmarksopen=true,bookmarksnumbered=true,
+                pdfauthor={}, pdftitle={TD Variables structurées}, pdfkeywords={TD Variables structur\'ees, },pdfpagemode=UseOutlines,pdfpagetransition=Dissolve,nesting=true,
+				backref, pdffitwindow=true, bookmarksnumbered=true]{hyperref}
+				\usepackage{supertabular}
+				\usepackage[table]{xcolor}
+				\usepackage{url}
+				\usepackage{caption} 
+				\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+				\setlength{\parindent}{0pt}
+				
+				\makeatletter
+				\def\url@leostyle{ \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\footnotesize\ttfamily}}}
+				\makeatother
+				\urlstyle{leo}
+				
+				\definecolor{examplecolor}{rgb}{0.156,0.333,0.443}
+				\definecolor{definitioncolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{exercisecolor}{rgb}{0.49,0.639,0}
+				\definecolor{hintcolor}{rgb}{0.941,0.674,0.196}
+				\definecolor{tableHeadercolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{tablerowAltcolor}{rgb}{.866,.905,.737}
+				\definecolor{tablerowAlt2color}{rgb}{.968,.976,.933}
+				\definecolor{verylightgray}{rgb}{0.98,0.98,0.98}
+				
+				\newenvironment{fshaded}{
+				\def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}
+				\MakeFramed {\FrameRestore}}
+				{\endMakeFramed}
+				
+				\newenvironment{fexample}[1][]{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.156,.333,.443}
+				\begin{fshaded}}{\end{fshaded}} 
+				
+				\newenvironment{fdefinition}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.709,.784,.454}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fexercise}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.49,.639,0}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fhint}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.941,.674,.196}
+				\begin{fshaded}}{\end{fshaded}}	
+				
+				\newcommand{\PreserveBackslash}[1]{
+				\let\temp=\\#1\let\\=\temp
+				}
+				\let\PBS=\PreserveBackslash
+				\newcolumntype{A}{>{\PBS\raggedright\small\hspace{0pt}}X}
+				\newcolumntype{L}[1]{>{\PBS\raggedright\small\hspace{0pt}}p{#1}}
+				\newcolumntype{R}[1]{>{\PBS\raggedleft\small\hspace{0pt}}p{#1}}
+				\newcolumntype{C}[1]{>{\PBS\centering\small\hspace{0pt}}p{#1}}
+				
+				\makeindex
+				
+				\title{TD Variables structur\'ees}	
+			\date{}
+			\author{\scriptsize{}}
+			\definecolor{light-gray}{gray}{0.8}
+			\renewcommand{\headrulewidth}{0pt}
+			\fancyhead[L]{
+				\footnotesize\textsc{Haute \'Ecole de Bruxelles}\\
+	    			\footnotesize\textsc{\'Ecole Sup\'erieure d'Informatique}
+			}
+			\fancyhead[R]{
+				\footnotesize{Bachelor en Informatique}\\
+				\footnotesize{Laboratoires Java} - 
+			\footnotesize{1\`ere ann\'ee}}
+				\fancyfoot[L]{ }
+				\fancyfoot[C]{}
+				\fancyfoot[R]{\scriptsize{\textcolor{gray}{version 2014-2015 (\today)}}}
+				\pagestyle{plain}
+				\reversemarginpar
+				\usepackage{rotating}						
+				\begin{document}
+					\begin{textblock}{9}(2,3.2)
+						\includegraphics[width=2cm]{../../../_templates/java/icons/logo-esi}
+					\end{textblock}
+				
+				
+				
+				
+				%\maketitle
+				\cadretitre{TD1}{TD Variables structur\'ees}
+				\thispagestyle{fancy}
+        \marginpar{\begin{sideways}
+            \begin{minipage}[t]{1cm}
+            \begin{tiny}
+            \includegraphics[width=1\linewidth,height=1\textheight,keepaspectratio=true]{../../../_templates/java/icons/cc-gris.jpg}
+			\end{tiny}
+			\end{minipage}
+            \begin{minipage}[b]{19cm}
+            \begin{tiny}
+            \textcolor{gray}{Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique 
+            (\texttt{http://creativecommons.org/licenses/by-sa/2.0/be/})
+			\vspace{-1em}
+			\\Les autorisations au-delà du champ de cette licence peuvent être obtenues à 
+			\texttt{http://www.heb.be/esi}
+			- \texttt{mcodutti@heb.be}
+			}\end{tiny}
+			\end{minipage}
+        \end{sideways}}
+            \begin{abstract}
+			Ce TD a pour but de rappeler les variables structur\'ees.
+		
+            \par
+        \end{abstract}
+				\vspace{-2em}\tableofcontents
+				\pagestyle{plain}
+            \clearpage
+            \fancyhead[L,C,R]{}
+            \fancyfoot[L,C]{}
+            \fancyfoot[R]{ \scriptsize{\textcolor{gray}{
+				TDStruct - page \thepage}}}
+				\thispagestyle{fancy}
+				\pagestyle{fancy}
+	   
+            \section{Algorithmes s\'equentiels}
+        Dans les chapitres pr\'ec\'edents, nous avons utilis\'e des variables de types dits \guillemotleft  simples \guillemotright 
+        (entier, r\'eel, bool\'een, caract\`ere, chaine) ne pouvant contenir qu'une seule valeur \`a la fois.
+        Cependant, certains types d'information consistent en un regroupement de plusieurs donn\'ees
+        \'el\'ementaires. Quelques exemples :
+        
+					\begin{itemize}
+				
+			\item Une date est compos\'ee de trois \'el\'ements (le jour, le mois, l'ann\'ee). Le mois peut
+            s'exprimer par un entier (15/10/2014) ou par une chaine (15 octobre 2014).
+          
+			\item 
+            Un moment de la journ\'ee est un triple d'entiers (heures, minutes, secondes).
+          
+			\item 
+            La localisation d'un point dans un plan n\'ecessite la connaissance de deux coordonn\'ees
+            cart\'esiennes (l'abscisse x et l'ordonn\'ee y) ou polaires (le rayon et l'angle).
+          
+			\item 
+            Une adresse est compos\'ee de plusieurs donn\'ees : un nom de rue, un num\'ero de maison,
+            parfois un num\'ero de boite postale, un code postal, le nom de la localit\'e, un nom ou
+            code de pays pour une adresse \`a l'\'etranger. . .
+          
+					\end{itemize}
+				
+            \par
+        
+        Pour stocker et manipuler de tels ensembles de donn\'ees, nous utiliserons des 
+        \textbf{types structur\'es} ou \textbf{structures}. 
+        Une structure est donc un \textbf{ensemble fini d'\'el\'ements pouvant \^etre de types distincts}. 
+        Chaque \'el\'ement de cet ensemble, appel\'e \textbf{champ} de la structure, poss\`ede un nom unique.
+      
+            \par
+        
+        Notez qu'un champ d'une structure peut lui-m\^eme \^etre une structure. Par exemple, une
+        carte d'identit\'e inclut parmi ses informations une date de naissance, l'adresse de son
+        propri\'etaire (cach\'ee dans la puce \'electronique !). . .
+      
+            \par
+        \subsection{D\'efinition d'une structure}
+		    La d\'efinition d'un type structur\'e adoptera le mod\`ele suivant :
+      
+            \par
+        \begin{verbatim}
+structure NomDeLaStructure
+    nomChamp1 : type1
+    nomChamp2 : type2
+    ...
+    nomChampN : typeN
+fin structure
+      \end{verbatim}\verb@nomChamp1@, . . ., \verb@nomChampN@ 
+        sont les noms des diff\'erents champs de la structure, et\verb@ type1@,
+        . . ., \verb@typeN@ les types de ces champs. 
+        Ces types sont soit les types \guillemotleft  simples \guillemotright  \'etudi\'es pr\'ec\'edemment 
+        (entier, r\'eel, bool\'een, caract\`ere, chaine) soit d'autres types structur\'es dont la
+        structure aura \'et\'e pr\'ealablement d\'efinie.
+      
+            \par
+        
+        Pour exemple, nous d\'efinissons ci-dessous trois types structur\'es que nous utiliserons souvent par la suite :
+      
+            \par
+        \begin{verbatim}
+structure Date
+    jour : entier
+    mois : entier
+    année : entier
+fin structure
+      \end{verbatim}\begin{verbatim}
+structure Moment
+    heure : entier
+    minute : entier
+    seconde : entier
+fin structure
+      \end{verbatim}\begin{verbatim}
+structure Point
+    x : réel
+    y : réel
+fin structure
+      \end{verbatim}\subsection{D\'eclaration d'une variable de type structur\'e}
+		    Une fois un type structur\'e d\'efini, la d\'eclaration de variables de ce type est identique \`a celle des variables simples. Par exemple :
+      
+            \par
+        \begin{verbatim}
+anniversaire, jourJ : Date
+départ, arrivée, unMoment : Moment
+a, b, centreGravité : Point
+      \end{verbatim}\subsection{Utilisation des variables de type structur\'e}
+		    En g\'en\'eral, pour manipuler une variable structur\'ee ou en modifier le contenu, il faut agir
+        au niveau de ses champs en utilisant les op\'erations permises selon leur type. Pour acc\'eder \`a
+        l'un des champs d'une variable structur\'ee, il faut mentionner le nom de ce champ ainsi que
+        celui de la variable dont il fait partie. Nous utiliserons la notation \guillemotleft  point\'ee \guillemotright  :
+      
+            \par
+        \begin{verbatim}
+nomVariable.nomChamp
+      \end{verbatim}
+		    Exemple d'instructions utilisant les variables d\'eclar\'ees au paragraphe pr\'ec\'edent :
+      
+            \par
+        \begin{verbatim}
+anniversaire.jour ← 15
+anniversaire.mois ← 10
+anniversaire.année ← 2014
+arrivée.heure ← départ.heure + 2
+centreGravité.x ← (a.x + b.x) / 2
+      \end{verbatim}
+		    On peut cependant, dans certains cas, utiliser une variable structur\'ee de mani\`ere globale
+        (c'est-\`a-dire d'une fa\c con qui agit simultan\'ement sur chacun de ses champs). Le cas le plus
+        courant est l'affectation interne entre deux variables structur\'ees de m\^eme type, par exemple :
+      
+            \par
+        \begin{verbatim}
+arrivée ← départ
+      \end{verbatim}
+		    qui r\'esume les trois instructions suivantes :
+      
+            \par
+        \begin{verbatim}
+arrivée.heure ← départ.heure
+arrivée.minute ← départ.minute
+arrivée.seconde ← départ.seconde
+      \end{verbatim}
+		    Une variable structur\'ee peut aussi \^etre le param\`etre d'un module, et un module peut \'egalement 
+		    renvoyer une \guillemotleft  valeur \guillemotright  de type structur\'e. Par exemple, l'ent\^ete d'un module renvoyant
+		    le nombre de secondes \'ecoul\'ees entre une heure de d\'epart et d'arriv\'ee serait :
+      
+            \par
+        \begin{verbatim}
+module nbSecondesEcoulées( départ↓, arrivée↓ : Moment) → entier
+      \end{verbatim}
+		    On pourra aussi lire ou afficher une variable structur\'ee :
+      
+            \par
+        \begin{verbatim}
+lire unMoment
+afficher unMoment
+      \end{verbatim}
+		    Par contre, il n'est pas autoris\'e d'utiliser les op\'erateurs de comparaison (<, >) pour comparer 
+		    des variables structur\'ees (m\^eme de m\^eme type), car une relation d'ordre n'accompagne
+        pas toujours les structures utilis\'ees. En effet, s'il est naturel de vouloir comparer des dates
+        ou des moments, comment d\'efinir une relation d'ordre avec les points du plan ou avec des
+        cartes d'identit\'es ?
+      
+            \par
+        
+        Si le besoin de comparer des variables structur\'ees se fait sentir, il faudra dans ce cas \'ecrire
+        des modules de comparaison adapt\'es aux structures utilis\'ees.
+      
+            \par
+        
+        Par facilit\'e d'\'ecriture, on peut assigner tous les champs en une fois via des \guillemotleft  {} \guillemotright . Exemple :
+      
+            \par
+        \begin{verbatim}
+anniversaire ← {1, 9, 1989}
+      \end{verbatim}\subsection{Exemple d'algorithme}
+		    Le module ci-dessous re\c coit en param\`etre deux dates ; la valeur renvoy\'ee est -1 si la premi\`ere
+        date est ant\'erieure \`a la deuxi\`eme, 0 si les deux dates sont identiques ou 1 si la premi\`ere date
+        est post\'erieure \`a la deuxi\`eme.
+      
+            \par
+        \begin{verbatim}
+// Reçoit 2 dates en paramètres et retourne la valeur
+// –1 si la première date est antérieure à la deuxième
+// 0 si les deux dates sont identiques
+// 1 si la première date est postérieure à la deuxième.
+module comparerDates(date1↓, date2↓ : Date) → entier
+    résultat : entier
+    résultat ← -1 // valeur choisie par défaut
+    si date1.année ≥ date2.année alors
+      si date1.année > date2.année alors
+        résultat ← 1
+      sinon // les années sont identiques
+        si date1.mois ≥ date2.mois alors
+          si date1.mois > date2.mois alors
+            résultat ← 1
+          sinon // les années et les mois sont identiques
+            si date1.jour ≥ date2.jour alors
+              si date1.jour > date2.jour alors
+                résultat ← 1
+              sinon // les années, les mois et les jours sont identiques
+                résultat ← 0
+              fin si
+            fin si
+          fin si
+        fin si
+      fin si
+    fin si
+    retourner résultat
+fin module
+      \end{verbatim}\section{Exercices}
+				Maintenant, mettons tout \c ca en pratique.
+      
+            \par
+        \subsection{\`A vous de jouer...}
+        \'Ecrivez un algorithme qui 
+          
+					\begin{enumerate}
+				
+			\item re\c coit en param\`etre un moment d'une journ\'ee et qui retourne le nombre de secondes \'ecoul\'ees depuis minuit jusqu'\`a ce moment.
+			\item 
+              re\c coit en param\`etre un nombre de secondes \'ecoul\'ees dans une journ\'ee 
+              \`a partir de minuit et qui retourne le moment correspondant de la journ\'ee.
+			\item re\c coit en param\`etres deux moments d'une journ\'ee et qui retourne le
+              nombre de secondes s\'eparant ces deux moments.
+			\item recevant les coordonn\'ees de deux points distincts du plan et qui retourne
+              les coordonn\'ees du point situ\'e au milieu des deux.
+			\item recevant les coordonn\'ees de deux points distincts du plan et qui retourne
+              la distance entre ces deux points.
+					\end{enumerate}
+				
+            \par
+        
+			
+		\subparagraph{Cercle} 
+		
+					\textcolor{white}{.} \par
+				
+          D\'efinir un type Cercle pouvant d\'ecrire de fa\c con commode un cercle quelconque dans un
+          espace \`a deux dimensions. \'Ecrire ensuite
+          
+					\begin{itemize}
+				
+			\item un module calculant la surface du cercle re\c cu en param\`etre ;
+			\item un module recevant 2 points en param\`etre et retournant le cercle dont le diam\`etre est le segment reliant ces 2 points ;
+			\item un module qui d\'etermine si un point donn\'e est dans un cercle ;
+			\item un module qui indique si 2 cercles ont une intersection.
+					\end{itemize}
+				
+            \par
+        
+				\end{document}
+			

@@ -691,6 +691,12 @@ Y = 3; // Idem
             <item><formatted style="code"><![CDATA[!=]]></formatted> différent </item>
           </list>
         </paragraph>
+        <paragraph>
+          Attention toutefois, si vous voulez <formatted style="bold">comparer le contenu de 2 chaines</formatted> en Java,
+          il vous faudra faire <formatted style="code">chaine1.equals(chaine2)</formatted>
+          pour vérifier si elles sont égales et <formatted style="code">! chaine1.equals(chaine2)</formatted>
+          pour vérifier si elles sont différentes.
+        </paragraph>
         </clarify>
       </learningObject>
       

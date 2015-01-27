@@ -5,13 +5,12 @@
 	
 	<entry>
 		<paragraph>
-			Ces exercices ont pour but de vérifier que vous avez fixé les structures alternatives qui permettent de conditionner
-      des parties d’algorithmes, de code.
+			Ces exercices ont pour but de vérifier que vous avez fixé les tableaux, une structure qui peut contenir plusieurs exemplaires de données similaires.
 		</paragraph>
 	</entry>
 	
 	<!-- =========================================================== -->
-	<unit label="Boucles" title="Les boucles">
+	<unit label="Tableaux" title="Les tableaux">
 	<!-- =========================================================== -->
   
   

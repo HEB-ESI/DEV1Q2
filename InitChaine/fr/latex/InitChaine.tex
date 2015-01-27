@@ -1,0 +1,267 @@
+\documentclass[11pt,a4paper]{article}
+			\usepackage[french]{babel}
+					
+				\usepackage{pifont}  
+				\usepackage[utf8x]{inputenc}
+				\usepackage[T1]{fontenc} 
+				\usepackage{lmodern}			
+				\usepackage{fancyhdr}
+				\usepackage{textcomp}
+				\usepackage{makeidx}
+				\usepackage{tabularx}
+				\usepackage{multicol}
+				\usepackage{multirow}
+				\usepackage{longtable}
+				\usepackage{color}
+				\usepackage{soul}
+				\usepackage{boxedminipage}
+				\usepackage{shadow}
+				\usepackage{framed}			
+				\usepackage{array}
+				\usepackage{url}
+				\usepackage{ragged2e}
+				\usepackage{fancybox}
+				\newcommand{\cadretitre}[2]{
+				  \vspace*{0.8\baselineskip}
+				  \begin{center}%
+				  \boxput*(0,1){%
+					%\colorbox{white}{\Large\textbf{\ #1\ }}%
+				  }%
+				  {%
+					\setlength{\fboxsep}{10pt}%
+				    \Ovalbox{\begin{minipage}{.8\linewidth}\begin{center}\Large\sffamily{#2}\end{center}\end{minipage}}}%
+				  \end{center}
+				  \vspace*{2\baselineskip}
+				  }
+			
+			\makeatletter
+			\def\@seccntformat#1{\protect\makebox[0pt][r]{\csname the#1\endcsname\quad}}
+			\makeatother
+
+				% Permet d'afficher qqchose à une positin absolue
+				\usepackage[absolute]{textpos}
+				\setlength{\TPHorizModule}{1cm}
+				\setlength{\TPVertModule}{\TPHorizModule}
+	
+				\usepackage[titles]{tocloft}
+				\setlength{\cftbeforesecskip}{0.5ex}
+				\setlength{\cftbeforesubsecskip}{0.2ex}
+				\addto\captionsfrench{\renewcommand\contentsname{}}
+				
+				\usepackage[font=scriptsize]{caption}
+				
+				\usepackage{listings}
+\lstdefinestyle{lstverb}
+  {
+    basicstyle=\footnotesize,
+    frameround=tttt, frame=trbl, framerule=0pt, rulecolor=\color{gray},
+    lineskip=-1pt,   % pour rapprocher les lignes
+    flexiblecolumns, escapechar=\\,
+    tabsize=4, extendedchars=true
+  }
+\lstnewenvironment{Java}[1][]{\lstset{style=lstverb,language=java,#1}}{}
+				\ifx\pdfoutput\undefined
+					\usepackage{graphicx}
+				\else
+					\usepackage[pdftex]{graphicx}
+				\fi
+				\usepackage[a4paper, hyperfigures=true, colorlinks, linkcolor=black, citecolor=blue,urlcolor=blue, pagebackref=true, bookmarks=true, bookmarksopen=true,bookmarksnumbered=true,
+                pdfauthor={}, pdftitle={TD Chaines}, pdfkeywords={TD Chaines, },pdfpagemode=UseOutlines,pdfpagetransition=Dissolve,nesting=true,
+				backref, pdffitwindow=true, bookmarksnumbered=true]{hyperref}
+				\usepackage{supertabular}
+				\usepackage[table]{xcolor}
+				\usepackage{url}
+				\usepackage{caption} 
+				\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+				\setlength{\parindent}{0pt}
+				
+				\makeatletter
+				\def\url@leostyle{ \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\footnotesize\ttfamily}}}
+				\makeatother
+				\urlstyle{leo}
+				
+				\definecolor{examplecolor}{rgb}{0.156,0.333,0.443}
+				\definecolor{definitioncolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{exercisecolor}{rgb}{0.49,0.639,0}
+				\definecolor{hintcolor}{rgb}{0.941,0.674,0.196}
+				\definecolor{tableHeadercolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{tablerowAltcolor}{rgb}{.866,.905,.737}
+				\definecolor{tablerowAlt2color}{rgb}{.968,.976,.933}
+				\definecolor{verylightgray}{rgb}{0.98,0.98,0.98}
+				
+				\newenvironment{fshaded}{
+				\def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}
+				\MakeFramed {\FrameRestore}}
+				{\endMakeFramed}
+				
+				\newenvironment{fexample}[1][]{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.156,.333,.443}
+				\begin{fshaded}}{\end{fshaded}} 
+				
+				\newenvironment{fdefinition}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.709,.784,.454}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fexercise}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.49,.639,0}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fhint}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.941,.674,.196}
+				\begin{fshaded}}{\end{fshaded}}	
+				
+				\newcommand{\PreserveBackslash}[1]{
+				\let\temp=\\#1\let\\=\temp
+				}
+				\let\PBS=\PreserveBackslash
+				\newcolumntype{A}{>{\PBS\raggedright\small\hspace{0pt}}X}
+				\newcolumntype{L}[1]{>{\PBS\raggedright\small\hspace{0pt}}p{#1}}
+				\newcolumntype{R}[1]{>{\PBS\raggedleft\small\hspace{0pt}}p{#1}}
+				\newcolumntype{C}[1]{>{\PBS\centering\small\hspace{0pt}}p{#1}}
+				
+				\makeindex
+				
+				\title{TD Chaines}	
+			\date{}
+			\author{\scriptsize{}}
+			\definecolor{light-gray}{gray}{0.8}
+			\renewcommand{\headrulewidth}{0pt}
+			\fancyhead[L]{
+				\footnotesize\textsc{Haute \'Ecole de Bruxelles}\\
+	    			\footnotesize\textsc{\'Ecole Sup\'erieure d'Informatique}
+			}
+			\fancyhead[R]{
+				\footnotesize{Bachelor en Informatique}\\
+				\footnotesize{Laboratoires Java} - 
+			\footnotesize{1\`ere ann\'ee}}
+				\fancyfoot[L]{ }
+				\fancyfoot[C]{}
+				\fancyfoot[R]{\scriptsize{\textcolor{gray}{version 2014-2015 (\today)}}}
+				\pagestyle{plain}
+				\reversemarginpar
+				\usepackage{rotating}						
+				\begin{document}
+					\begin{textblock}{9}(2,3.2)
+						\includegraphics[width=2cm]{../../../_templates/java/icons/logo-esi}
+					\end{textblock}
+				
+				
+				
+				
+				%\maketitle
+				\cadretitre{TD1}{TD Chaines}
+				\thispagestyle{fancy}
+        \marginpar{\begin{sideways}
+            \begin{minipage}[t]{1cm}
+            \begin{tiny}
+            \includegraphics[width=1\linewidth,height=1\textheight,keepaspectratio=true]{../../../_templates/java/icons/cc-gris.jpg}
+			\end{tiny}
+			\end{minipage}
+            \begin{minipage}[b]{19cm}
+            \begin{tiny}
+            \textcolor{gray}{Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique 
+            (\texttt{http://creativecommons.org/licenses/by-sa/2.0/be/})
+			\vspace{-1em}
+			\\Les autorisations au-delà du champ de cette licence peuvent être obtenues à 
+			\texttt{http://www.heb.be/esi}
+			- \texttt{mcodutti@heb.be}
+			}\end{tiny}
+			\end{minipage}
+        \end{sideways}}
+            \begin{abstract}
+			Ces exercices ont pour but de v\'erifier que vous avez fix\'e les chaines
+		
+            \par
+        
+			
+		\subparagraph{Le chiffre de C\'esar} 
+		
+					\textcolor{white}{.} \par
+				
+          Depuis l'antiquit\'e, les hommes politiques, les militaires, les hommes d'affaires cherchent \`a
+          garder secret les messages importants qu'ils doivent envoyer. L'empereur C\'esar utilisait une
+          technique (on dit un chiffrement) qui porte \`a pr\'esent son nom : remplacer chaque lettre du
+          message par la lettre qui se situe k position plus loin dans l'alphabet (cycliquement).
+          Exemple : si k vaut 2, alors le texte clair "CESAR" devient "EGUCT" lorsqu'il est chiffr\'e et
+          le texte "ZUT" devient "BWV".
+          Bien s\^ur, il faut que l'exp\'editeur du message et le r\'ecepteur se soient mis d'accord sur la
+          valeur de k.
+          On vous demande d'\'ecrire un module qui re\c coit une chaine ne contenant que des lettres
+          majuscules ainsi que la valeur de k et qui retourne la version chiffr\'ee du message.
+          On vous demande \'egalement d'\'ecrire le module de d\'echiffrement. Ce module re\c coit un mes-
+          sage chiffr\'e et la valeur de k qui a \'et\'e utilis\'ee pour le chiffrer et retourne le message en clair.
+          Attention ! Ce second module est tr\`es simple.
+        
+            \par
+        \'Ecrivez le code java correspondant ainsi que la javadoc et les tests.
+            \par
+        
+			
+		\subparagraph{Casser le chiffre de C\'esar} 
+		
+					\textcolor{white}{.} \par
+				
+          Ce chiffre est en fait assez facile \`a casser gr\^ace \`a l'analyse statistique. En effet, dans un texte
+          g\'en\'eral, les lettres de l'alphabet ne sont pas pr\'esentes avec la m\^eme fr\'equence. Par exemple,
+          en fran\c cais, la lettre 'E' est la plus pr\'esente 1 . Ainsi, si on trouve un message chiffr\'e (et si
+          on sait que c'est du fran\c cais et que c'est chiffr\'e par le chiffre de C\'esar) on peut tenter de le
+          comprendre via une analyse statistique. On analyse la fr\'equence de chaque lettre du message
+          et la plus fr\'equente remplace probablement le 'E'. Par exemple, si la lettre la plus fr\'equente
+          est le 'B', il est probable que le message soit chiffr\'e avec un d\'ecalage de 3.
+          \'Ecrivez un module qui re\c coit une chaine - le message chiffr\'e par le chiffre de C\'esar - et
+          retourne une valeur probable pour le d\'eplacement utilis\'e pour le chiffrer.
+        
+            \par
+        \'Ecrivez le code java correspondant ainsi que la javadoc et les tests.
+            \par
+        
+			
+		\subparagraph{Le caract\`ere le plus pr\'esent} 
+		
+					\textcolor{white}{.} \par
+				
+          \'Ecrire un algorithme qui, \`a partir d'un texte donn\'e sous forme de chaine, retourne le caract\`ere
+          qui s'y trouve le plus de fois. N.B. : on peut simplifier le probl\`eme ici en supposant que le
+          texte ne contient que des caract\`eres minuscules non accentu\'es, ainsi que l'absence d'ex-ae\'equo.
+          Exemple : pour "roberto roule en moto \`a oslo", l'algorithme renverra 'o'.
+        
+            \par
+        \'Ecrivez le code java correspondant ainsi que la javadoc et les tests.
+            \par
+        
+			
+		\subparagraph{Palindrome} 
+		
+					\textcolor{white}{.} \par
+				
+          Soit le tableau phrase : tableau[1 \`a n] de caract\`eres (caract\`ere alphab\'etique, le caract\`ere
+          d'espacement ou un caract\`ere de ponctuation). Dans ce tableau, des lettres qui se suivent
+          constituent un mot. Ces mots sont s\'epar\'es les uns des autres par un ou plusieurs caract\`eres
+          d'espacement ou de ponctuation. \'Ecrire un module qui re\c coit en param\`etre ce tableau et
+          qui v\'erifie si la phrase form\'ee par les mots de ce tableau est un palindrome. Le r\'esultat sera
+          communiqu\'e par le renvoi d'une valeur bool\'eenne. Pour rappel, une phrase palindrome est
+          une phrase qui peut se lire dans les deux sens sans tenir compte des espacements et de la
+          ponctuation.
+          Exemple du contenu du tableau phrase :
+          A L'E T A P E, E P A T E-L A !
+        
+            \par
+        \'Ecrivez le code java correspondant ainsi que la javadoc et les tests.
+            \par
+        Pour plus d'exercices, 
+        r\'evisez ici (\url{www.heb.be/esi/InitChaine/fr/../../TDChaine/fr/html/Exercices\_learningObject1.html})
+            \par
+        \end{abstract}
+				\vspace{-2em}\tableofcontents
+				\pagestyle{plain}
+            \clearpage
+            \fancyhead[L,C,R]{}
+            \fancyfoot[L,C]{}
+            \fancyfoot[R]{ \scriptsize{\textcolor{gray}{
+				InitChaine - page \thepage}}}
+				\thispagestyle{fancy}
+				\pagestyle{fancy}
+	   
+            
+				\end{document}
+			
