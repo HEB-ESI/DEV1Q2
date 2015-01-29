@@ -1,0 +1,130 @@
+﻿<html dir="ltr">
+    <head>
+        <link rel="stylesheet" href="./esi.css" type="text/css" />
+        <title></title>
+    </head>
+    <body>
+        <table width="100%" border="0" align="left" cellspacing="1" cellpadding="1">
+            <tbody>
+                <tr>
+                    <td width="100" style="text-align: center;"><img width="48" height="51" src="./icon_1539.svg" alt="" /></td>
+                    <td>
+                    <p><span style="font-size: medium;">DEV1 - Q2</span><br />
+                    <strong><span style="font-size: xx-large;">Algo, Java, Labo Java</span></strong></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&nbsp;</p>
+        <h2>Travaux Dirig&eacute;s</h2>
+        <table border="0" cellspacing="1" cellspacing="1" cellpadding="1">
+            <tbody>
+                <tr>
+                    <td width="52" style="text-align: center;">&nbsp;</td>
+                    <td width="244">&nbsp;</td>
+                    <td width="150" style="text-align: center;">Challenge</td>
+                    <td width="150" style="text-align: center;">Se situer</td>
+                    <td width="150" style="text-align: center;">Théorie et exercices</td>
+                </tr>
+                <tr class="rowa">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">①</span></td>
+                    <td width="244">Séquentiel</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./ChallengeSeq/fr/index.html" target="_blank">Challenge séquentiel</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./InitSeq/fr/index.html" target="_blank">Se situer</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./TDSeq/fr/index.html" target="_blank">Théorie et exercices</a></td>
+                </tr>
+                <tr class="rowb">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">②</span></td>
+                    <td width="244">Les alternatives</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./ChallengeAlt/fr/index.html" target="_blank">Challenge alternatives</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./InitAlt/fr/index.html" target="_blank">Se situer</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./TDAlt/fr/index.html" target="_blank">Théorie et exercices</a></td>
+                </tr>
+                <tr class="rowa">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">③</span></td>
+                    <td width="244">Les modules</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./ChallengeModule/fr/index.html" target="_blank">Challenge modules</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./InitModule/fr/index.html" target="_blank">Se situer</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./TDModule/fr/index.html" target="_blank">Théorie et exercices</a></td>
+                </tr>
+                <tr class="rowa">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">④</span></td>
+                    <td width="244">Les packages</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./ChallengePackage/fr/index.html" target="_blank">Challenge packages</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./InitPackage/fr/index.html" target="_blank">Se situer</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./TDPackage/fr/index.html" target="_blank">Théorie et exercices</a></td>
+                </tr>
+                <tr class="rowb">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">⑤</span></td>
+                    <td width="244">Les boucles</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./ChallengeBoucle/fr/index.html" target="_blank">Challenge boucles</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./InitBoucle/fr/index.html" target="_blank">Se situer</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./TDBoucle/fr/index.html" target="_blank">Théorie et exercices</a></td>
+                </tr>
+                <tr class="rowb">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">⑥</span></td>
+                    <td width="244">Les tableaux</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./ChallengeTableau/fr/index.html" target="_blank">Challenge tableaux</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./InitTableau/fr/index.html" target="_blank">Se situer</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./TDTableau/fr/index.html" target="_blank">Théorie et exercices</a></td>
+                </tr>
+                <tr class="rowa">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">⑦</span></td>
+                    <td width="244">Les tris</td>
+                    <td width="150" style="text-align: center;">&nbsp;</td>
+                    <td width="150" style="text-align: center;">&nbsp;</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./TDTri/fr/index.html" target="_blank">Théorie et exercices</a></td>
+                </tr>
+                <tr class="rowb">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">⑧</span></td>
+                    <td width="244">Les chaines</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./ChallengeChaine/fr/index.html" target="_blank">Challenge chaines</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./InitChaine/fr/index.html" target="_blank">Se situer</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./TDChaine/fr/index.html" target="_blank">Théorie et exercices</a></td>
+                </tr>
+                <tr class="rowa">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">⑨</span></td>
+                    <td width="244">Les variables structurées</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./ChallengeStruct/fr/index.html" target="_blank">Challenge variables structurées</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./InitStruct/fr/index.html" target="_blank">Se situer</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./TDStruct/fr/index.html" target="_blank">Théorie et exercices</a></td>
+                </tr>
+                <tr class="rowb">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">⑩</span></td>
+                    <td width="244">Mise à jour Linux</td>
+                    <td width="150" style="text-align: center;">&nbsp;</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./InitLinux/fr/index.html" target="_blank">Se situer</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./TDLinux/fr/index.html" target="_blank">Théorie et exercices</a></td>
+                </tr>
+                <tr class="rowa">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">⑩</span></td>
+                    <td width="244">Énoncé d'examen avec solution : Le Loto</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./examens/DEV1-150119-NPX.pdf" target="_blank">Challenge</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;</td>
+                    <td width="150" style="text-align: center;">&nbsp;</td>
+                </tr>
+                <tr class="rowb">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">⑪</span></td>
+                    <td width="244">Énoncé d'examen : Serpents et échelles</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./examens/DEV1-150115-PBT-ELV.pdf" target="_blank">Challenge</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;</td>
+                    <td width="150" style="text-align: center;">&nbsp;</td>
+                </tr>
+                <tr class="rowa">
+                    <td width="52" style="text-align: center;"><span style="font-size: x-large;">⑫</span></td>
+                    <td width="244">Énoncé d'examen : Panneau de progression des métros</td>
+                    <td width="150" style="text-align: center;">&nbsp;<a href="./examens/DEV1-150116-CUV-CLG.pdf" target="_blank">Challenge</a></td>
+                    <td width="150" style="text-align: center;">&nbsp;</td>
+                    <td width="150" style="text-align: center;">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Aide</h2>
+        <ul>
+            <li><a href="Support/LAJ1-Guide-Visuel.pdf" target="_blank">Guide visuel GNU/Linux</a></li>
+            <li><a href="Support/aidememoire.pdf" target="_blank">Aide-m&eacute;moire des laboratoires Java</a></li>
+            <li><a href="Support/unix_qr.pdf" target="_blank">Unix quick Reference</a></li>
+            <li>Solutions des interros: <a href="/courses/DEV1/document/dev1-laj/Archives/Interros/interro2">i2</a>, <a href="/courses/DEV1/document/dev1-laj/Archives/Interros/i3/">i3</a></li>
+        </ul>
+    </body>
+</html>

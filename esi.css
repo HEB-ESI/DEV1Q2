@@ -1,0 +1,51 @@
+/* =============================================
+   CSS pour mes cours à l'ESI.
+   Doit fonctionner sur Dokeos.
+   
+   Marco Codutti. Janvier 2014.
+   ============================================= */
+
+h2 { 	
+	color: rgb(255, 255, 255);
+	font-size: large; 
+	border-radius: 12px; 
+	padding-left: 15px; 
+	padding-right: 15px; 
+	padding-top: 5px;
+	padding-bottom: 5px; 
+	background: #3C678B;
+	display: inline-block;
+	margin-top: 24px;
+	margin-bottom: 12px;
+}
+
+h3 {	font-family: verdana, sans-serif;
+font-size:110%; color:black;
+}
+
+ul { list-style-type:square }
+a  { text-decoration: none; padding-left: 2pt; padding-right: 2px}
+a:link,
+a:visited {color: #4170B4; text-decoration: underline}
+a:hover,
+a:active,
+a:focus   {color: white; background: #4170B4; text-decoration: none}
+
+/* ===== Liste (liste mise en évidence dans le contenu ====== */
+.liste    { margin-left:20px }
+.liste h1 { 
+	margin:-10px 400px 2px auto; padding:0px; color:#333333;
+	text-align:left; font-size:small; background-image:none;
+	border-bottom:2px solid gray
+}
+.liste ul { 
+	font-size:small; margin:0px auto 0px 20px; padding:0px; 
+	list-style: none outside none; list-style-image:url('img/bullet2.gif')
+}
+
+
+/* ===== Tableau ===== */
+.tableau {font-size:85%;}
+.tableau td {padding-left:10pt;padding-right:10pt;padding-top:3pt;padding-bottom:3pt;}
+.rowa {background:#EEEEEE;}
+.rowb {background:#DDDDDD;}

@@ -69,5 +69,6 @@
 \contentsline {subparagraph}{Comprendre les erreurs}{27}{section*.32}
 \contentsline {subsection}{\numberline {8.3}\`A vous de jouer...}{28}{subsection.8.3}
 \contentsline {subparagraph}{Consignes}{28}{section*.33}
-\contentsline {subparagraph}{Exercice r\'esolu}{28}{section*.34}
-\contentsline {subparagraph}{\`A vous}{29}{section*.35}
+\contentsline {subparagraph}{Parenth\`eses}{28}{section*.34}
+\contentsline {subparagraph}{Exercice r\'esolu}{29}{section*.35}
+\contentsline {subparagraph}{\`A vous}{30}{section*.36}

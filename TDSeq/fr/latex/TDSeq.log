@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 JAN 2015 18:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 JAN 2015 19:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1049,27 +1049,39 @@ Overfull \hbox (42.41135pt too wide) in paragraph at lines 1820--1820
 m will exit.[] 
  []
 
-[28]
-Overfull \hbox (3.63113pt too wide) in paragraph at lines 1909--1910
+
+Overfull \hbox (8.04198pt too wide) in paragraph at lines 1863--1864
+[]\T1/lmr/m/n/10.95 Toutes les pa-ren-thèses sont-elles obli-ga-toires? Si non,
+ les-quelles pouvez-
+ []
+
+
+Overfull \hbox (8.04198pt too wide) in paragraph at lines 1865--1866
+[]\T1/lmr/m/n/10.95 Toutes les pa-ren-thèses sont-elles obli-ga-toires? Si non,
+ les-quelles pouvez-
+ []
+
+[28] [29]
+Overfull \hbox (3.63113pt too wide) in paragraph at lines 1934--1935
 \T1/lmr/m/n/10.95 Il nous reste à com-pi-ler []\T1/lmtt/m/n/10.95 javac Triangl
 e.java \T1/lmr/m/n/10.95 et à exé-cu-ter []\T1/lmtt/m/n/10.95 java Triangle
  []
 
-[29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1937.
- [30]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1937.
+[30]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1962.
+ [31]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1962.
  (./TDSeq.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1937.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1937.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1962.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1962.
 
 Package rerunfilecheck Info: File `TDSeq.out' has not changed.
 (rerunfilecheck)             Checksum: 08BFA43B8A2B9F55DAAC42C81EFF9EAE;3291.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1937.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1962.
  ) 
 Here is how much of TeX's memory you used:
- 14143 strings out of 493304
- 201468 string characters out of 6139871
+ 14149 strings out of 493304
+ 201514 string characters out of 6139871
  324511 words of memory out of 5000000
  17060 multiletter control sequences out of 15000+600000
  81665 words of font info for 59 fonts, out of 8000000 for 9000
@@ -1091,10 +1103,10 @@ m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt
 8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on TDSeq.pdf (30 pages, 449510 bytes).
+Output written on TDSeq.pdf (31 pages, 450916 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 633 compressed objects within 7 object streams
- 274 named destinations out of 1000 (max. 500000)
+ 708 PDF objects out of 1000 (max. 8388607)
+ 643 compressed objects within 7 object streams
+ 280 named destinations out of 1000 (max. 500000)
  341 words of extra memory for PDF output out of 10000 (max. 10000000)
 

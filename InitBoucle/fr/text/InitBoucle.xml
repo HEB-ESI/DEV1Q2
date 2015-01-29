@@ -350,6 +350,12 @@ public class Test {
           </list>
         </paragraph>
         
+        <paragraph title="Vous me copierez 100 fois...">
+          Il est classique de demander comme punition de copier 100 fois la phrase "Je ne bavarderai pas avec mon voisin". 
+          Phrase précédée à chaque fois du numéro de la phrase.
+        </paragraph>
+        <paragraph>Écrivez le code java correspondant ainsi que la javadoc.</paragraph>
+        
         <paragraph title="Un nombre est-il divisible par 9 ?">
           En base dix, on peut facilement vérifier si un nombre est divisible par 9 :
           on calcule la somme de ses chiffres et l'on regarde si cette somme est encore divisible par 9
