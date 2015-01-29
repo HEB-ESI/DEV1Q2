@@ -613,13 +613,13 @@ public class Exercice3 {
     <!-- ============================================================ -->
       <act>
         <paragraph>
-          Il est temps de se lancer et d’écrire vos premiers modules et programmes Java correspondant. 
           Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
           <list listStyle="unordered">
             <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
-            <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites ;</item>
-            <item><formatted style="bold">mettez en évidence les variables « données », les variables « résultats » et les variables de travail ;</formatted></item>
-            <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé.</item>
+            <item>résolvez le problème via quelques exemples précis ;</item>
+            <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
+            <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
           </list>
         </paragraph>

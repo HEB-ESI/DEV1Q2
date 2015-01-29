@@ -169,6 +169,21 @@
 			\end{minipage}
         \end{sideways}}
             \begin{abstract}
+      Voici quelques conseils pour vous guider dans la r\'esolution de tels probl\`emes :
+      
+					\begin{itemize}
+				
+			\item il convient d'abord de bien comprendre le probl\`eme pos\'e ; assurez-vous qu'il est parfaitement sp\'ecifi\'e ;
+			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
+			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
+			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
+			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
+			\item Pour la partie Java, dessinez l'arborescence des fichier. 
+					\end{itemize}
+				
+            \par
+        
 			Avez-vous compris les boucles ? Voyons \c ca en relevant le d\'efi du calendrier : \par
 				
 			r\'ealisez un programme permettant d'afficher sur le terminal 
@@ -246,22 +261,30 @@ Lun Mar Mer Jeu Ven Sam Dim
       
 					\begin{itemize}
 				
-			\item \verb@module dayOfWeek(day, month, year : entiers) → entier@
+			\item \verb@module isLeapYear(year : entier) → booléen@
             \par
         
-          qui retourne un entier correspondant au jour de la semaine (0 = lundi, 1 = mardi, . . .) pour une date donn\'ee en param\`etre. \par
-				
-          Le param\`etre year est au format AAAA, par exemple 2015.
+          qui re\c coit une ann\'ee au format AAAA et qui renvoie vrai si cette ann\'ee est bissextile et faux si elle ne l'est pas.
         
 			\item \verb@module daysInMonth(month, year : entiers) → entier@
             \par
         
           qui retourne le nombre de jours du mois donn\'e en param\`etre.
         
-			\item \verb@module isLeapYear(year : entier) → booléen@
+			\item \verb@module isAvailableDate(day, month, year : entiers) → booléen@
             \par
         
-          qui re\c coit une ann\'ee au format AAAA et qui renvoie vrai si cette ann\'ee est bissextile et faux si elle ne l'est pas.
+          qui re\c coit le jour, le mois et l'ann\'ee d'une date et qui renvoie vrai si cette date est valide et faux si elle ne l'est pas.
+          Une date est consid\'er\'ee comme valide si le mois est compris entre 1 et 12 et le jour entre 1 et (le nombre de jours du mois).
+        
+			\item \verb@module dayOfWeek(day, month, year : entiers) → entier@
+            \par
+        
+          qui retourne un entier correspondant au jour de la semaine (0 = lundi, 1 = mardi, . . .) pour une date donn\'ee en param\`etre. \par
+				
+          Le param\`etre year est au format AAAA, par exemple 2015.
+          Si la date fournie est invalide, le module lancera une erreur.
+            \par
         
 			\item \verb@module printDay(day : entier)@
             \par
@@ -289,7 +312,16 @@ Lun Mar Mer Jeu Ven Sam Dim
             \par
         \'Ecrivez le code java correspondant ainsi que la javadoc.
             \par
-        \end{abstract}
+        
+		  Toutes les m\'ethodes sauf la m\'ethode \verb@main@ 
+		  seront \'ecrites dans une classe \verb@g12345.boucles.UtilCalendrier@.
+    
+            \par
+        
+      La m\'ethode \verb@main@ 
+		  sera \'ecrite dans une classe \verb@g12345.boucles.Calendrier@. 
+		  Elle attrapera les \'eventuelles exceptions lanc\'ees et affichera alors un message d'erreur explicite.
+	\end{abstract}
 				\vspace{-2em}\tableofcontents
 				\pagestyle{plain}
             \clearpage

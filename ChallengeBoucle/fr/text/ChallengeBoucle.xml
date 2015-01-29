@@ -4,7 +4,18 @@
 	label="ChallengeBoucle" title="Challenge : les boucles">
 	
 	<entry title="Le calendrier">
-	
+	  <paragraph>
+      Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
+      <list listStyle="unordered">
+        <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
+        <item>résolvez le problème via quelques exemples précis ;</item>
+        <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
+        <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
+        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+        <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+        <item>Pour la partie Java, dessinez l'arborescence des fichier. </item>
+      </list>
+    </paragraph>
 		<paragraph>
 			Avez-vous compris les boucles ? Voyons ça en relevant le défi du calendrier : <newLine/>
 			réalisez un programme permettant d'afficher sur le terminal 
@@ -61,10 +72,9 @@ Lun Mar Mer Jeu Ven Sam Dim
       <list listStyle="unordered">
         <item>
           <paragraph>
-            <formatted style="code">module dayOfWeek(day, month, year : entiers) → entier</formatted>
+            <formatted style="code">module isLeapYear(year : entier) → booléen</formatted>
           </paragraph>
-          qui retourne un entier correspondant au jour de la semaine (0 = lundi, 1 = mardi, . . .) pour une date donnée en paramètre. <newLine/>
-          Le paramètre year est au format AAAA, par exemple 2015.
+          qui reçoit une année au format AAAA et qui renvoie vrai si cette année est bissextile et faux si elle ne l’est pas.
         </item>
         <item>
           <paragraph>
@@ -74,9 +84,18 @@ Lun Mar Mer Jeu Ven Sam Dim
         </item>
         <item>
           <paragraph>
-            <formatted style="code">module isLeapYear(year : entier) → booléen</formatted>
+            <formatted style="code">module isAvailableDate(day, month, year : entiers) → booléen</formatted>
           </paragraph>
-          qui reçoit une année au format AAAA et qui renvoie vrai si cette année est bissextile et faux si elle ne l’est pas.
+          qui reçoit le jour, le mois et l'année d'une date et qui renvoie vrai si cette date est valide et faux si elle ne l’est pas.
+          Une date est considérée comme valide si le mois est compris entre 1 et 12 et le jour entre 1 et (le nombre de jours du mois).
+        </item>
+        <item>
+          <paragraph>
+            <formatted style="code">module dayOfWeek(day, month, year : entiers) → entier</formatted>
+          </paragraph>
+          qui retourne un entier correspondant au jour de la semaine (0 = lundi, 1 = mardi, . . .) pour une date donnée en paramètre. <newLine/>
+          Le paramètre year est au format AAAA, par exemple 2015.
+          <paragraph>Si la date fournie est invalide, le module lancera une erreur.</paragraph>
         </item>
         <item>
           <paragraph>
@@ -102,5 +121,12 @@ Lun Mar Mer Jeu Ven Sam Dim
         </list>
     </paragraph>
 		<paragraph>Écrivez le code java correspondant ainsi que la javadoc.</paragraph>
+		<paragraph>
+		  Toutes les méthodes sauf la méthode <formatted style="code">main</formatted> 
+		  seront écrites dans une classe <formatted style="code">g12345.boucles.UtilCalendrier</formatted>.
+    </paragraph>
+      La méthode <formatted style="code">main</formatted> 
+		  sera écrite dans une classe <formatted style="code">g12345.boucles.Calendrier</formatted>. 
+		  Elle attrapera les éventuelles exceptions lancées et affichera alors un message d'erreur explicite.
 	</entry>
 </lesson>

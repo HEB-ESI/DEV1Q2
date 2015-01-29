@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  26 JAN 2015 23:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 JAN 2015 18:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -873,11 +873,11 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Warning: Marginpar on page 1 moved.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 176.
+(Font)              <9> on input line 191.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 176.
+(Font)              <5> on input line 191.
 
-Overfull \hbox (20.49127pt too wide) in paragraph at lines 176--177
+Overfull \hbox (20.49127pt too wide) in paragraph at lines 191--192
 \T1/lmtt/m/n/9 fr / . . / . . / ChallengePackage / fr / énoncé / DEV1-[]LAJ1-[]
 I3-[]20141114-[]5-[]clr . pdf$[][]\T1/lmr/m/n/10 ). 
  []
@@ -897,21 +897,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../../../_templates/java/icons/logo-esi.jpg> <../../../_templates/java/icons/
 cc-gris.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
 
 (./ChallengePackage.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 191.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 206.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
 Package rerunfilecheck Info: File `ChallengePackage.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 206.
  ) 
 Here is how much of TeX's memory you used:
- 11960 strings out of 493304
- 176908 string characters out of 6139871
- 280783 words of memory out of 5000000
- 15177 multiletter control sequences out of 15000+600000
+ 11962 strings out of 493304
+ 176931 string characters out of 6139871
+ 282783 words of memory out of 5000000
+ 15179 multiletter control sequences out of 15000+600000
  54088 words of font info for 47 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,43p,344b,687s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -923,7 +923,7 @@ lic/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
 12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/font
 s/type1/public/lm/lmtt9.pfb>
-Output written on ChallengePackage.pdf (1 page, 216183 bytes).
+Output written on ChallengePackage.pdf (1 page, 225416 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream

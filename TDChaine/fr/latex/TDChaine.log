@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  27 JAN 2015 01:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 JAN 2015 19:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -953,16 +953,16 @@ a-logi-egal2.jpg used on input line 559.
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) [8 </home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/java-logi-egal1.jpg> <
 /home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/java-logi-egal2.jpg>] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 665.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 669.
  [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 665.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 669.
 
 (./TDChaine.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 665.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 665.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 669.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 669.
 Package rerunfilecheck Info: File `TDChaine.out' has not changed.
 (rerunfilecheck)             Checksum: AD67E5CD52056137C3E4CF4AFD93E62B;679.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 665.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 669.
  ) 
 Here is how much of TeX's memory you used:
  12877 strings out of 493304
@@ -983,7 +983,7 @@ m/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/t
 ype1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on TDChaine.pdf (10 pages, 319825 bytes).
+Output written on TDChaine.pdf (10 pages, 319664 bytes).
 PDF statistics:
  213 PDF objects out of 1000 (max. 8388607)
  181 compressed objects within 2 object streams

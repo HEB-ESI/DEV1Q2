@@ -7,6 +7,18 @@
 		<paragraph>
 			Ces exercices ont pour but de vérifier que vous avez fixé les variables structurées.
 		</paragraph>
+		<paragraph>
+      N'oubliez pas nos quelques conseils pour vous guider dans la résolution de tels problèmes :
+      <list listStyle="unordered">
+        <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
+        <item>résolvez le problème via quelques exemples précis ;</item>
+        <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
+        <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
+        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+        <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+        <item>Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir prématurément (si on a trouvé ce qu'on cherche par exemple).</item>
+      </list>
+    </paragraph>
       
     <paragraph title="Rectangle">
       Définir un type Rectangle pouvant décrire de façon commode un rectangle dans un espace

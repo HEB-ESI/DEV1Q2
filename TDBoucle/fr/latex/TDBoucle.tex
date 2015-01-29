@@ -956,7 +956,44 @@ fin module
         correct et lisible, \'egalement dans les cas particuliers.
       
             \par
-        \section{Exercices}
+        \section{La gestion des erreurs : try - catch}\subsection{L'instruction try catch}
+					\begin{itemize}
+				
+			\item \verb@try@ : contient les instructions qui peuvent mal se passer
+			\item \verb@catch@ : contient le code qui est en charge de g\'erer le probl\`eme
+					\end{itemize}
+				
+        Quand un probl\`eme se pr\'esente dans le try
+        
+					\begin{itemize}
+				
+			\item Le code du \verb@try@ est interrompu
+			\item Le code du \verb@catch@ est ex\'ecut\'e
+			\item Ensuite, on continue apr\`es le \verb@try−catch@
+					\end{itemize}
+				
+		  Exemple :
+\begin{verbatim}
+package be.heb.esi . lgj1 ;
+import java. util .Scanner;
+public class Affiche {
+    /**
+    * Affiche l ’ entier lu au clavier ou un message si ce n’ est pas un entier .
+    * @param args inutilisé .
+    */
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      int nb;
+      try {
+        nb = clavier . nextInt ();
+        System.out. println (nb);
+      }
+      catch(Exception e) {
+        System.out. println ("Ce␣n’est␣pas␣un␣entier!");
+      }
+    }
+}
+\end{verbatim}\section{Exercices}
 				Maintenant, mettons tout \c ca en pratique.
       
             \par
@@ -1218,17 +1255,38 @@ MODULE Test
     FIN POUR
 
 FIN MODULE
-			     \end{verbatim}\subsection{\`A vous de jouer...}
-          Il est temps de se lancer et d'\'ecrire vos premiers modules et programmes Java correspondant. 
+			     \end{verbatim}
+			
+		\subparagraph{Mots cl\'es} 
+		
+                \textcolor{white}{.} \par
+            
+							Compl\'etez le morceau de code suivant afin de pouvoir attraper l'exception de type \verb@IllegalArgumentException@ 
+							susceptible d'\^etre lanc\'ee par la m\'ethode \verb@maxPositif@ de la m\^eme classe.
+						\clearpage\begin{Java}
+public static void appelMaxPositif() {
+
+    Scanner clavier = new Scanner(System.in);
+    
+     \\_\\_\\_\\_  {
+        int max = maxPositif(clavier.nextInt(), clavier.nextInt());
+    }  \\_\\_\\_\\_\\_\\_\\_\\_  (IllegalArgumentException ex) {
+        // gestion de l'exception
+    }
+    
+}
+							\end{Java}\subsection{\`A vous de jouer...}
           Voici quelques conseils pour vous guider dans la r\'esolution de tels probl\`emes :
           
 					\begin{itemize}
 				
 			\item il convient d'abord de bien comprendre le probl\`eme pos\'e ; assurez-vous qu'il est parfaitement sp\'ecifi\'e ;
-			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans l'algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites ;
-			\item \textbf{mettez en \'evidence les variables \guillemotleft  donn\'ees \guillemotright , les variables \guillemotleft  r\'esultats \guillemotright  et les variables de travail ;}
-			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e.
+			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
+			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
+			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
+			\item Pour la partie Java, dessinez l'arborescence des fichie, vous travaillerez dans un package  \verb@g12345.Boucles@. 
 					\end{itemize}
 				
             \par
@@ -1248,7 +1306,8 @@ FIN MODULE
 			\item les naturels impairs qui sont inf\'erieurs ou \'egaux \`a \verb@n@.
 					\end{enumerate}
 				
-              Si le \verb@n@ re\c cu n'est pas strictement positif, votre programme s'arr\^etera en g\'en\'erant une erreur/une exception.
+              Si le \verb@n@ re\c cu n'est pas strictement positif, votre programme g\'en\'erera une erreur/une exception 
+              qui sera g\'er\'ee par un affichage explicite dans la m\'ethode \verb@main@.
             
 			\item 
               demande \`a l'utilisateur d'introduire un entier positif (non strictement). 
@@ -1289,7 +1348,8 @@ FIN MODULE
                 \verb@1, –1, 2, –3, 5, –8, 13, –21, 34, –55, …@
                 o\`u \verb@n@ est un entier strictement positif re\c cu en param\`etre.\par
 				
-                Si le \verb@n@ re\c cu n'est pas strictement positif, votre programme s'arr\^etera en g\'en\'erant une erreur/une exception.
+                Si le \verb@n@ re\c cu n'est pas strictement positif, votre programme g\'en\'erera une erreur/une exception 
+                qui sera g\'er\'ee par un affichage explicite dans la m\'ethode \verb@main@.
             
 					\end{enumerate}
 				

@@ -9,6 +9,18 @@
 			Essayons maintenant de résoudre l'énoncé de l'interro 3
     </paragraph>
     <paragraph>
+		  Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
+      <list listStyle="unordered">
+        <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
+        <item>résolvez le problème via quelques exemples précis ;</item>
+        <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
+        <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
+        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+        <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+        <item>Pour la partie Java, dessinez l'arborescence des fichier. </item>
+      </list>
+    </paragraph>
+    <paragraph>
       Vous trouverez cet énoncé <link uri="../../../ChallengePackage/fr/énoncé/DEV1-LAJ1-I3-20141114-5-clr.pdf">ici</link>.
     </paragraph>
 	</entry>

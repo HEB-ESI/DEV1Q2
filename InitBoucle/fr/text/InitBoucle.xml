@@ -337,7 +337,19 @@ public class Test {
     <learningObject title="À vous de jouer...">
     <!-- ============================================================ -->
       <act>
-      
+        <paragraph>
+          Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
+          <list listStyle="unordered">
+            <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
+            <item>résolvez le problème via quelques exemples précis ;</item>
+            <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
+            <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+            <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+            <item>Pour la partie Java, dessinez l'arborescence des fichie, vous travaillerez dans un package  <formatted style="code">g12345.Boucles</formatted>. </item>
+          </list>
+        </paragraph>
+        
         <paragraph title="Un nombre est-il divisible par 9 ?">
           En base dix, on peut facilement vérifier si un nombre est divisible par 9 :
           on calcule la somme de ses chiffres et l'on regarde si cette somme est encore divisible par 9
@@ -345,6 +357,7 @@ public class Test {
           Écrivez un algorithme permettant de dire si un nombre donné est divisible par 9, en appliquant la méthode décrite ci-dessus.
         </paragraph>
         <paragraph>Écrivez le code java correspondant ainsi que la javadoc.</paragraph>
+        <paragraph>Si le nombre entré est négatif, vous lancerez une exception qui sera gérée dans votre méthode <formatted style="code">main</formatted>.</paragraph>
         
         <paragraph title="Suite de positifs">
           Écrivez un algorithme qui lit une suite de nombres positifs entrés au clavier et affiche
@@ -364,14 +377,16 @@ public class Test {
           Écrivez un module <formatted style="code">isPremier</formatted> qui reçoit un nombre entier <formatted style="code">n</formatted> 
           et qui retourne vrai si ce nombre est premier et faux sinon.
         </paragraph>
+        <paragraph>Si le nombre entré est négatif, vous lancerez une exception qui sera gérée dans votre méthode 
+        <formatted style="code">main</formatted> en Java.</paragraph>
         <paragraph>
           Écrivez un module <formatted style="code">goldbach</formatted> qui reçoit en paramètre 
           un nombre entier pair <formatted style="code">p</formatted> supérieur à 3 
           et qui retourne vrai s’il est la somme de 2 nombres premiers et faux sinon.
-          Si le <formatted style="code">p</formatted> reçu n'est supérieur à 3, votre programme générera une erreur.
-        </paragraph>
+          Si le <formatted style="code">p</formatted> reçu n'est supérieur à 3, votre programme générera une erreur qui sera gérée dans votre méthode 
+        <formatted style="code">main</formatted> en Java.</paragraph>
         <paragraph>
-          Écrivez un second module, <formatted style="code">principal</formatted>, qui lit un nombre et vérifie que tous les
+          Écrivez un module, <formatted style="code">principal</formatted>, qui lit un nombre et vérifie que tous les
           nombres pairs inférieurs à ce nombre sont la somme de 2 nombres premiers. Ce module affiche vrai ou faux selon le cas.
         </paragraph>
         <paragraph>

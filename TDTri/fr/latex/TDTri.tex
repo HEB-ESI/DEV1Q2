@@ -1,0 +1,502 @@
+\documentclass[11pt,a4paper]{article}
+			\usepackage[french]{babel}
+					
+				\usepackage{pifont}  
+				\usepackage[utf8x]{inputenc}
+				\usepackage[T1]{fontenc} 
+				\usepackage{lmodern}			
+				\usepackage{fancyhdr}
+				\usepackage{textcomp}
+				\usepackage{makeidx}
+				\usepackage{tabularx}
+				\usepackage{multicol}
+				\usepackage{multirow}
+				\usepackage{longtable}
+				\usepackage{color}
+				\usepackage{soul}
+				\usepackage{boxedminipage}
+				\usepackage{shadow}
+				\usepackage{framed}			
+				\usepackage{array}
+				\usepackage{url}
+				\usepackage{ragged2e}
+				\usepackage{fancybox}
+				\newcommand{\cadretitre}[2]{
+				  \vspace*{0.8\baselineskip}
+				  \begin{center}%
+				  \boxput*(0,1){%
+					%\colorbox{white}{\Large\textbf{\ #1\ }}%
+				  }%
+				  {%
+					\setlength{\fboxsep}{10pt}%
+				    \Ovalbox{\begin{minipage}{.8\linewidth}\begin{center}\Large\sffamily{#2}\end{center}\end{minipage}}}%
+				  \end{center}
+				  \vspace*{2\baselineskip}
+				  }
+			
+			\makeatletter
+			\def\@seccntformat#1{\protect\makebox[0pt][r]{\csname the#1\endcsname\quad}}
+			\makeatother
+
+				% Permet d'afficher qqchose à une positin absolue
+				\usepackage[absolute]{textpos}
+				\setlength{\TPHorizModule}{1cm}
+				\setlength{\TPVertModule}{\TPHorizModule}
+	
+				\usepackage[titles]{tocloft}
+				\setlength{\cftbeforesecskip}{0.5ex}
+				\setlength{\cftbeforesubsecskip}{0.2ex}
+				\addto\captionsfrench{\renewcommand\contentsname{}}
+				
+				\usepackage[font=scriptsize]{caption}
+				
+				\usepackage{listings}
+\lstdefinestyle{lstverb}
+  {
+    basicstyle=\footnotesize,
+    frameround=tttt, frame=trbl, framerule=0pt, rulecolor=\color{gray},
+    lineskip=-1pt,   % pour rapprocher les lignes
+    flexiblecolumns, escapechar=\\,
+    tabsize=4, extendedchars=true
+  }
+\lstnewenvironment{Java}[1][]{\lstset{style=lstverb,language=java,#1}}{}
+				\ifx\pdfoutput\undefined
+					\usepackage{graphicx}
+				\else
+					\usepackage[pdftex]{graphicx}
+				\fi
+				\usepackage[a4paper, hyperfigures=true, colorlinks, linkcolor=black, citecolor=blue,urlcolor=blue, pagebackref=true, bookmarks=true, bookmarksopen=true,bookmarksnumbered=true,
+                pdfauthor={}, pdftitle={TD Tri}, pdfkeywords={TD Tri, },pdfpagemode=UseOutlines,pdfpagetransition=Dissolve,nesting=true,
+				backref, pdffitwindow=true, bookmarksnumbered=true]{hyperref}
+				\usepackage{supertabular}
+				\usepackage[table]{xcolor}
+				\usepackage{url}
+				\usepackage{caption} 
+				\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+				\setlength{\parindent}{0pt}
+				
+				\makeatletter
+				\def\url@leostyle{ \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\footnotesize\ttfamily}}}
+				\makeatother
+				\urlstyle{leo}
+				
+				\definecolor{examplecolor}{rgb}{0.156,0.333,0.443}
+				\definecolor{definitioncolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{exercisecolor}{rgb}{0.49,0.639,0}
+				\definecolor{hintcolor}{rgb}{0.941,0.674,0.196}
+				\definecolor{tableHeadercolor}{rgb}{0.709,0.784,0.454}
+				\definecolor{tablerowAltcolor}{rgb}{.866,.905,.737}
+				\definecolor{tablerowAlt2color}{rgb}{.968,.976,.933}
+				\definecolor{verylightgray}{rgb}{0.98,0.98,0.98}
+				
+				\newenvironment{fshaded}{
+				\def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}
+				\MakeFramed {\FrameRestore}}
+				{\endMakeFramed}
+				
+				\newenvironment{fexample}[1][]{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.156,.333,.443}
+				\begin{fshaded}}{\end{fshaded}} 
+				
+				\newenvironment{fdefinition}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.709,.784,.454}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fexercise}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.49,.639,0}
+				\begin{fshaded}}{\end{fshaded}}
+				
+				\newenvironment{fhint}{\definecolor{shadecolor}{rgb}{.913,.913,.913}
+				\definecolor{framecolor}{rgb}{.941,.674,.196}
+				\begin{fshaded}}{\end{fshaded}}	
+				
+				\newcommand{\PreserveBackslash}[1]{
+				\let\temp=\\#1\let\\=\temp
+				}
+				\let\PBS=\PreserveBackslash
+				\newcolumntype{A}{>{\PBS\raggedright\small\hspace{0pt}}X}
+				\newcolumntype{L}[1]{>{\PBS\raggedright\small\hspace{0pt}}p{#1}}
+				\newcolumntype{R}[1]{>{\PBS\raggedleft\small\hspace{0pt}}p{#1}}
+				\newcolumntype{C}[1]{>{\PBS\centering\small\hspace{0pt}}p{#1}}
+				
+				\makeindex
+				
+				\title{TD Tri}	
+			\date{}
+			\author{\scriptsize{}}
+			\definecolor{light-gray}{gray}{0.8}
+			\renewcommand{\headrulewidth}{0pt}
+			\fancyhead[L]{
+				\footnotesize\textsc{Haute \'Ecole de Bruxelles}\\
+	    			\footnotesize\textsc{\'Ecole Sup\'erieure d'Informatique}
+			}
+			\fancyhead[R]{
+				\footnotesize{Bachelor en Informatique}\\
+				\footnotesize{Laboratoires Java} - 
+			\footnotesize{1\`ere ann\'ee}}
+				\fancyfoot[L]{ }
+				\fancyfoot[C]{}
+				\fancyfoot[R]{\scriptsize{\textcolor{gray}{version 2014-2015 (\today)}}}
+				\pagestyle{plain}
+				\reversemarginpar
+				\usepackage{rotating}						
+				\begin{document}
+					\begin{textblock}{9}(2,3.2)
+						\includegraphics[width=2cm]{../../../_templates/java/icons/logo-esi}
+					\end{textblock}
+				
+				
+				
+				
+				%\maketitle
+				\cadretitre{TD1}{TD Tri}
+				\thispagestyle{fancy}
+        \marginpar{\begin{sideways}
+            \begin{minipage}[t]{1cm}
+            \begin{tiny}
+            \includegraphics[width=1\linewidth,height=1\textheight,keepaspectratio=true]{../../../_templates/java/icons/cc-gris.jpg}
+			\end{tiny}
+			\end{minipage}
+            \begin{minipage}[b]{19cm}
+            \begin{tiny}
+            \textcolor{gray}{Distribué sous licence Creative Commons Paternité - Partage à l'Identique 2.0 Belgique 
+            (\texttt{http://creativecommons.org/licenses/by-sa/2.0/be/})
+			\vspace{-1em}
+			\\Les autorisations au-delà du champ de cette licence peuvent être obtenues à 
+			\texttt{http://www.heb.be/esi}
+			- \texttt{mcodutti@heb.be}
+			}\end{tiny}
+			\end{minipage}
+        \end{sideways}}
+            \begin{abstract}
+			Dans ce chapitre nous voyons quelques algorithmes simples pour trier un ensemble d'informations : 
+			recherche des maxima, tri par insertion et tri bulle dans un tableau. Des algorithmes
+			plus efficaces seront vus en deuxi\`eme ann\'ee.
+    
+            \par
+        \end{abstract}
+				\vspace{-2em}\tableofcontents
+				\pagestyle{plain}
+            \clearpage
+            \fancyhead[L,C,R]{}
+            \fancyfoot[L,C]{}
+            \fancyfoot[R]{ \scriptsize{\textcolor{gray}{
+				TDTri - page \thepage}}}
+				\thispagestyle{fancy}
+				\pagestyle{fancy}
+	   
+            \section{Motivation}
+        La recherche efficace d'information implique un tri pr\'ealable de celle-ci. En effet, si les
+        donn\'ees ne sont pas class\'ees ou tri\'ees, le seul algorithme possible reviendrait \`a parcourir
+        enti\`erement l'ensemble des informations. Pour exemple, il suffit d'imaginer un dictionnaire
+        dans lequel les mots seraient m\'elang\'es de fa\c con al\'eatoire au lieu d'\^etre class\'es par ordre
+        alphab\'etique. Pour trouver le moindre mot dans ce dictionnaire, il faudrait \`a chaque fois le
+        parcourir enti\`erement ! Il est clair que le classement pr\'ealable (ordre alphab\'etique) acc\'el\`ere
+        grandement la recherche.
+		
+            \par
+        
+		  Ainsi, recherche et tri sont \'etroitement li\'es, et la fa\c con dont les informations sont tri\'ees
+      conditionne bien entendu la fa\c con de rechercher l'information (cf. algorithme de recherche
+      dichotomique). Pour exemple, prenons cette fois-ci un dictionnaire des mots crois\'es dans
+      lequel les mots sont d'abord regroup\'es selon leur longueur et ensuite par ordre alphab\'etique.
+      La fa\c con de rechercher un mot dans ce dictionnaire est bien s\^ur diff\'erente de la recherche
+      dans un dictionnaire usuel.
+		
+            \par
+        
+		  Le probl\`eme central est donc le tri des informations. Celui-ci a pour but d'organiser un
+      ensemble d'informations qui ne l'est pas \`a priori. On peut distinguer trois grands cas de
+      figure :
+		
+            \par
+        
+			
+		\subparagraph{donn\'ees \guillemotleft  brutes \guillemotright } 
+		
+					\textcolor{white}{.} \par
+				
+        D'abord les situations impliquant le classement total d'un ensemble de donn\'ees \guillemotleft  brutes \guillemotright , 
+        c'est-\`a-dire compl\`etement d\'esordonn\'ees. Prenons pour exemple les feuilles r\'ecolt\'ees 
+        en vrac \`a l'issue d'un examen ; il y a peu de chances que celles-ci soient remises \`a 
+        l'examinateur de mani\`ere ordonn\'ee ; celui-ci devra donc proc\'eder au tri de l'ensemble 
+        des copies, par exemple par ordre alphab\'etique des noms des \'etudiants, ou par num\'ero
+        de groupe etc.
+      
+            \par
+        
+			
+		\subparagraph{ajout dans un ensemble tri\'e} 
+		
+					\textcolor{white}{.} \par
+				
+		    Ensuite les situations o\`u on s'arrange pour ne jamais devoir trier la totalit\'e des \'el\'ements
+        d'un ensemble, qui resterait cependant \`a tout moment ordonn\'e. Imaginons le cas d'une
+        biblioth\`eque dont les livres sont rang\'es par ordre alphab\'etique des auteurs : \`a l'achat
+        d'un nouveau livre, ou au retour de pr\^et d'un livre, celui-ci est imm\'ediatement rang\'e
+        \`a la bonne place. Ainsi, l'ordre global de la biblioth\`eque est maintenu par la r\'ep\'etition
+        d'une seule op\'eration \'el\'ementaire consistant \`a ins\'erer \`a la bonne place un livre parmi
+        la collection. C'est la situation que nous consid\'ererions dans le cas d'une structure o\`u
+        les \'el\'ements sont ordonn\'es.
+      
+            \par
+        
+			
+		\subparagraph{re-trier} 
+		
+					\textcolor{white}{.} \par
+				
+        Enfin, les situations qui consistent \`a devoir re-trier des donn\'ees pr\'ealablement ordonn\'ees 
+        sur un autre crit\`ere. Prenons l'exemple d'un paquet de copies d'examen d\'ej\`a tri\'ees
+        sur l'ordre alphab\'etique des noms des \'etudiants, et qu'on veut re-trier cette fois-ci sur
+        les num\'eros de groupe. Il est clair qu'une m\'ethode efficace veillera \`a conserver l'ordre
+        alphab\'etique d\'ej\`a pr\'esent dans la premi\`ere situation afin que les copies apparaissent
+        dans cet ordre dans chacun des groupes.
+      
+            \par
+        
+        Le dernier cas illustre un classement sur une cl\'e complexe (ou compos\'ee) impliquant la
+        comparaison de plusieurs champs d'une m\^eme structure : le premier classement se fait sur le
+        num\'ero de groupe, et \`a num\'ero de groupe \'egal, l'ordre se d\'epartage sur le nom de l'\'etudiant.
+        On dira de cet ensemble qu'il est class\'e en \textbf{majeur}
+        sur le num\'ero de groupe et en \textbf{mineur} sur le nom d'\'etudiant.
+      
+            \par
+        
+        Notons que certains tris sont dits \textbf{stables} 
+        parce qu'en cas de tri sur une nouvelle cl\'e, l'ordre
+        de la cl\'e pr\'ec\'edente est pr\'eserv\'e pour des valeurs identiques de la nouvelle cl\'e, ce qui \'evite
+        de faire des comparaisons sur les deux champs \`a la fois. Les m\'ethodes nomm\'ees tri par
+        insertion, tri bulle et tri par recherche de minima successifs (que nous allons aborder)
+        sont stables.
+      
+            \par
+        \subsection{Tri par insertion}
+		    Cette m\'ethode de tri repose sur le principe d'insertion de valeurs dans un tableau ordonn\'e.
+      
+            \par
+        
+        Le tableau \`a trier sera \`a chaque \'etape subdivis\'e en deux sous-tableaux : le premier cadr\'e \`a
+        gauche contiendra des \'el\'ements d\'ej\`a ordonn\'es, et le second, cadr\'e \`a droite, ceux qu'il reste
+        \`a ins\'erer dans le sous-tableau tri\'e. Celui-ci verra sa taille s'accroitre au fur et \`a mesure des
+        insertions, tandis que celle du sous-tableau des \'el\'ements non tri\'es diminuera progressivement.
+        Au d\'epart de l'algorithme, le sous-tableau tri\'e est le premier \'el\'ement du tableau. Comme il
+        ne poss\`ede qu'un seul \'el\'ement, ce sous-tableau est donc bien ordonn\'e ! Chaque \'etape consiste
+        ensuite \`a prendre le premier \'el\'ement du sous-tableau non tri\'e et \`a l'ins\'erer \`a la bonne place
+        dans le sous-tableau tri\'e.
+		  
+            \par
+        \begin{verbatim}
+/// Trie le tableau reçu en paramètre (via un tri par insertion).
+module triInsertion(tab↓↑ : tableau[1 à n] d’entiers)
+    i, j, valAInsérer : entiers
+    pour i de 2 à n faire
+      valAInsérer ← tab[i]
+      // recherche de l’endroit où insérer valAInsérer dans le
+      // sous-tableau trié et décalage simultané des éléments
+      j ← i-1
+      tant que j ≥ 1 ET valAInsérer < tab[j] faire
+        tab[j+1] ← tab[j]
+        j ← j–1
+      fin tant que
+      tab[j+1] ← valAInsérer
+    fin pour
+fin module
+\end{verbatim}\subsection{Tri par s\'election des minima successifs}
+		    Dans ce tri, on recherche \`a chaque \'etape la plus petite valeur de l'ensemble non encore tri\'e
+        et on peut la placer imm\'ediatement \`a sa position d\'efinitive.
+      
+            \par
+        \begin{verbatim}
+// Trie le tableau reçu en paramètre (via un tri par sélection des minima successifs).
+module triSélectionMinimaSuccessifs(tab↓↑ : tableau[1 à n] d’entiers)
+    i, indiceMin : entier
+    pour i de 1 à n – 1 faire // i correspond à l’étape de l’algorithme
+      indiceMin ← positionMin( tab, i, n )
+      swap( tab[i], tab[indiceMin] )
+    fin pour
+fin module
+
+
+// Échange le contenu de 2 variables.
+module swap(a↓↑, b↓↑ : entiers)
+    aux : entiers
+    aux ← a
+    a ← b
+    b ← aux
+fin module
+
+
+// Retourne l’indice du minimum entre les indices début et fin du tableau reçu.
+module positionMin(tab↓ : tableau[1 à n] d’entiers, début, fin : entiers) → entier
+    indiceMin, i : entiers
+    indiceMin ← début
+    pour i de début+1 à fin faire
+      si tab[i] < tab[indiceMin] alors
+        indiceMin ← i
+      fin si
+    fin pour
+    retourner indiceMin
+fin module
+
+      \end{verbatim}\subsection{Tri bulle}
+		    Il s'agit d'un tri par permutations ayant pour but d'amener \`a chaque \'etape \`a la \guillemotleft  surface \guillemotright 
+        du sous-tableau non tri\'e (on entend par l\`a l'\'el\'ement d'indice minimum) la valeur la plus
+        petite, appel\'ee la bulle. La caract\'eristique de cette m\'ethode est que les comparaisons ne se
+        font qu'entre \'el\'ements cons\'ecutifs du tableau.
+		  
+            \par
+        \begin{verbatim}
+// Trie le tableau reçu en paramètre (via un tri bulle).
+module triBulle(tab↓↑ : tableau[1 à n] d’entiers)
+    indiceBulle, i : entiers
+    pour indiceBulle de 1 à n faire
+      pour i de n – 1 à indiceBulle par – 1 faire
+        si tab[i] > tab[i + 1] alors
+          swap( tab[i], tab[i + 1] )
+        fin si
+      fin pour
+    fin pour
+fin module
+
+
+// Échange le contenu de 2 variables.
+module swap(a↓↑, b↓↑ : entiers)
+    aux : entiers
+    aux ← a
+    a ← b
+    b ← aux
+fin module
+\end{verbatim}\subsection{Recherche dichotomique}
+		    La recherche dichotomique a pour essence de r\'eduire \`a chaque \'etape la taille de l'ensemble
+        de recherche de moiti\'e, jusqu'\`a ce qu'il ne reste qu'un seul \'el\'ement dont la valeur devrait
+        \^etre celle recherch\'ee, sauf bien entendu en cas d'inexistence de cette valeur dans l'ensemble
+        de d\'epart.
+		  
+            \par
+        
+		    Soit val la valeur recherch\'ee dans une zone d\'elimit\'ee par les indices indiceGauche et indiceDroit. 
+		    On commence par d\'eterminer l'\'el\'ement m\'edian, c'est-\`a-dire celui qui se trouve \guillemotleft  au
+        milieu \guillemotright  de la zone de recherche ; son indice sera d\'etermin\'e par la formule
+        \,\verb|indiceMédian ← (indiceGauche + indiceDroit) DIV 2|\,
+            \par
+        
+        N.B. : cet \'el\'ement m\'edian n'est pas tout \`a fait au milieu dans le cas d'une zone contenant un
+        nombre pair d'\'el\'ements. On compare alors val avec la valeur de cet \'el\'ement m\'edian ; il est
+        possible qu'on ait trouv\'e la valeur cherch\'ee ; sinon, on partage la zone de recherche en deux
+        parties : une qui ne contient certainement pas la valeur cherch\'ee et une qui pourrait la
+        contenir. C'est cette deuxi\`eme partie qui devient la nouvelle zone de recherche. On r\'eit\`ere
+        le processus jusqu'\`a ce que la valeur cherch\'ee soit trouv\'ee ou que la zone de recherche soit
+        r\'eduite \`a sa plus simple expression, c'est-\`a-dire un seul \'el\'ement.
+		  
+            \par
+        \begin{verbatim}
+
+module rechercheDichotomique(tab↓↑ : tableau[1 à n] de T, valeur↓ : T, pos↑ : entier) → booléen
+    indiceDroit, indiceGauche, indiceMédian : entiers
+    candidat : T
+    trouvé : booléen
+    indiceGauche ← 1
+    indiceDroit ← n
+    trouvé ← faux
+    tant que NON trouvé ET indiceGauche ≤ indiceDroit faire
+      indiceMédian ← (indiceGauche + indiceDroit) DIV 2
+      candidat ← tab[indiceMédian]
+      selon que
+        candidat = valeur: trouvé ← vrai
+        candidat < valeur: indiceGauche ← indiceMédian + 1 // on garde la partie droite
+        candidat > valeur: indiceDroit ← indiceMédian – 1 // on garde la partie gauche
+      fin selon que
+    fin tant que
+    
+    si trouvé alors
+      pos ← indiceMédian
+    sinon
+      pos ← indiceGauche
+      // dans le cas où la valeur n’est pas trouvée,
+      // on vérifiera que indiceGauche donne la valeur où elle pourrait être insérée.
+    fin si
+    retourner trouvé
+fin module
+\end{verbatim}\section{Exercices}
+				Maintenant, mettons tout \c ca en pratique.
+      
+            \par
+        \subsection{En Java...}
+        N'oubliez pas nos quelques conseils pour vous guider dans la r\'esolution de tels probl\`emes :
+        
+					\begin{itemize}
+				
+			\item il convient d'abord de bien comprendre le probl\`eme pos\'e ; assurez-vous qu'il est parfaitement sp\'ecifi\'e ;
+			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
+			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
+			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
+			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
+			\item Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir pr\'ematur\'ement (si on a trouv\'e ce qu'on cherche par exemple).
+			\item Pour la partie Java, dessinez l'arborescence des fichier. 
+			\item \textbf{\'Ecrivez le plan de tests en \'ecrivant l'algorithme. Codez les tests apr\`es avoir \'ecrit le code Java.}
+					\end{itemize}
+				
+            \par
+        
+        \'Ecrivez en Java les algorithmes de tri vus ici en affichant le tableau \`a chaque \'etape.
+      
+            \par
+        
+			
+		\subparagraph{S\'election des maxima} 
+		
+					\textcolor{white}{.} \par
+				
+        D\'eveloppez un algorithme similaire consistant \`a trier un tableau par ordre croissant par
+        s\'election des maxima successifs. Le sous-tableau tri\'e apparaitra donc \`a droite du tableau,
+        et les maxima s\'electionn\'es seront \`a chaque \'etape positionn\'es \`a droite du sous-tableau non tri\'e.
+      
+            \par
+        
+			
+		\subparagraph{Maxima et minima} 
+		
+					\textcolor{white}{.} \par
+				
+        D\'eveloppez un algorithme combinant les deux recherches. \`A chaque \'etape, on s\'electionne
+        donc le minimum et le maximum du sous-tableau restant \`a trier et on les positionnera \`a
+        l'endroit ad hoc. Cette m\'ethode apporte-t-elle une am\'elioration en temps ou en simplicit\'e
+        aux deux algorithmes de base ?
+      
+            \par
+        
+			
+		\subparagraph{Am\'elioration du tri bulle} 
+		
+					\textcolor{white}{.} \par
+				
+        \'Ecrivez une am\'elioration du tri bulle consistant \`a m\'emoriser \`a chaque \'etape l'indice de la
+        derni\`ere permutation, celui-ci d\'elimitant en fait la v\'eritable taille du sous-tableau tri\'e \`a
+        l'issue d'une \'etape. En lieu et place de la boucle pour n'incr\'ementant l'indice bulle que de 1
+        \`a la fois, vous \'ecrirez une boucle \verb@tant que@ 
+        \`a l'issue de laquelle \verb@indiceBulle@ prendra la valeur de
+        l'\textit{indice de derni\`ere permutation + 1}.
+      
+            \par
+        
+			
+		\subparagraph{Tri shaker} 
+		
+					\textcolor{white}{.} \par
+				
+        L'am\'elioration pr\'ec\'edente est issue de l'observation du sous-tableau d\'ej\`a tri\'e en d\'ebut du
+        tableau initial. On peut de m\^eme \'etudier la possibilit\'e d'avoir un sous-tableau, tri\'e \'egale-
+        ment, mais cadr\'e \`a droite dans le tableau \`a trier. Cette sym\'etrie sugg\`ere une am\'elioration
+        suppl\'ementaire qui consiste \`a changer de sens \`a la fin d'un parcours pour entamer le parcours
+        suivant. Lorsqu'on change de sens, on am\`enera l'\'el\'ement le plus grand (qu'on peut nommer
+        le \guillemotleft  plomb \guillemotright ) au fond du tableau non tri\'e. L'association des deux m\'ethodes donne ce qu'on
+        appelle le tri shaker, dont le but est de restreindre le sous-tableau non tri\'e en augmentant
+        sa borne inf\'erieure et en diminuant sa borne sup\'erieure. \'Ecrivez l'algorithme qui r\'ealise cette
+        m\'ethode de tri.
+      
+            \par
+        
+				\end{document}
+			

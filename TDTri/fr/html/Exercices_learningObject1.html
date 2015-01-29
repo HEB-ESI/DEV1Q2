@@ -1,0 +1,117 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Tri: En Java.... Sélection des maxima. Maxima et minima. Amélioration du tri bulle. Tri shaker. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Tri, eLML" />
+      <title>1.2.1. En Java...</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Tri</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Motivation.html">1.1. Motivation</a></li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.2. Exercices</a><ul class="navigation nav_lo">
+                     <li class="navigationActual"><strong>1.2.1. En Java...</strong></li>
+                  </ul>
+               </li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><img src="../../../_templates/java/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0" /></div><a name="top"></a><h1 id="Exercices_learningObject1.html">1.2.1. En Java...</h1>
+      <div id="d8e79.html" class="act">
+         <p class="paragraph" id="d8e80">
+            N'oubliez pas nos quelques conseils pour vous guider dans la résolution de tels problèmes
+            :
+            
+            <ul class="list" id="d8e82">
+               <li class="itemAlt">il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement
+                  spécifié ;
+               </li>
+               <li class="item">résolvez le problème via quelques exemples précis ;</li>
+               <li class="itemAlt">mettez en évidence les variables <b>« données »</b>, les variables <b>« résultats »</b> et les variables de travail ;
+               </li>
+               <li class="item">n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme
+                  définitif pseudo-codé ;
+               </li>
+               <li class="itemAlt">déclarez ensuite les variables (et leur type) qui interviennent dans chaque module
+                  ; les noms des variables risquant de ne pas être suffisamment explicites.
+               </li>
+               <li class="item">Écrivez la partie algorithmique <b>AVANT</b> de vous lancer dans la programmation en Java.
+               </li>
+               <li class="itemAlt">Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir prématurément
+                  (si on a trouvé ce qu'on cherche par exemple).
+               </li>
+               <li class="item">Pour la partie Java, dessinez l'arborescence des fichier. </li>
+               <li class="itemAlt"><b>Écrivez le plan de tests en écrivant l'algorithme. Codez les tests après avoir écrit
+                     le code Java.</b></li>
+            </ul>
+         </p>
+         <p class="paragraph" id="d8e111">
+            Écrivez en Java les algorithmes de tri vus ici en affichant le tableau à chaque étape.
+            
+         </p>
+         <h4>Sélection des maxima</h4>
+         <p class="paragraph" title="Sélection des maxima" id="d8e113">
+            Développez un algorithme similaire consistant à trier un tableau par ordre croissant
+            par
+            sélection des maxima successifs. Le sous-tableau trié apparaitra donc à droite du
+            tableau,
+            et les maxima sélectionnés seront à chaque étape positionnés à droite du sous-tableau
+            non trié.
+            
+         </p>
+         <h4>Maxima et minima</h4>
+         <p class="paragraph" title="Maxima et minima" id="d8e115">
+            Développez un algorithme combinant les deux recherches. À chaque étape, on sélectionne
+            donc le minimum et le maximum du sous-tableau restant à trier et on les positionnera
+            à
+            l’endroit ad hoc. Cette méthode apporte-t-elle une amélioration en temps ou en simplicité
+            aux deux algorithmes de base ?
+            
+         </p>
+         <h4>Amélioration du tri bulle</h4>
+         <p class="paragraph" title="Amélioration du tri bulle" id="d8e117">
+            Écrivez une amélioration du tri bulle consistant à mémoriser à chaque étape l’indice
+            de la
+            dernière permutation, celui-ci délimitant en fait la véritable taille du sous-tableau
+            trié à
+            l’issue d’une étape. En lieu et place de la boucle pour n’incrémentant l’indice bulle
+            que de 1
+            à la fois, vous écrirez une boucle <code>tant que</code> 
+            à l’issue de laquelle <code>indiceBulle</code> prendra la valeur de
+            l’<i>indice de dernière permutation + 1</i>.
+            
+         </p>
+         <h4>Tri shaker</h4>
+         <p class="paragraph" title="Tri shaker" id="d8e128">
+            L’amélioration précédente est issue de l’observation du sous-tableau déjà trié en
+            début du
+            tableau initial. On peut de même étudier la possibilité d’avoir un sous-tableau, trié
+            égale-
+            ment, mais cadré à droite dans le tableau à trier. Cette symétrie suggère une amélioration
+            supplémentaire qui consiste à changer de sens à la fin d’un parcours pour entamer
+            le parcours
+            suivant. Lorsqu’on change de sens, on amènera l’élément le plus grand (qu’on peut
+            nommer
+            le « plomb ») au fond du tableau non trié. L’association des deux méthodes donne ce
+            qu’on
+            appelle le tri shaker, dont le but est de restreindre le sous-tableau non trié en
+            augmentant
+            sa borne inférieure et en diminuant sa borne supérieure. Écrivez l’algorithme qui
+            réalise cette
+            méthode de tri.
+            
+         </p>
+      </div>
+      <hr />
+      <div class="navigation_arrows"><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><img src="../../../_templates/java/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0" /></div>
+      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTri.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

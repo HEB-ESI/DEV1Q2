@@ -1,5 +1,5 @@
 \select@language {french}
 \contentsline {subparagraph}{Le chiffre de C\'esar}{1}{section*.1}
-\contentsline {subparagraph}{Casser le chiffre de C\'esar}{1}{section*.2}
+\contentsline {subparagraph}{Casser le chiffre de C\'esar}{2}{section*.2}
 \contentsline {subparagraph}{Le caract\`ere le plus pr\'esent}{2}{section*.3}
 \contentsline {subparagraph}{Palindrome}{2}{section*.4}

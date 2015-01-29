@@ -1,0 +1,134 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Tri: Motivation. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Tri, eLML" />
+      <title>1.1. Motivation</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Tri</a><ul class="navigation nav_unit">
+               <li class="navigationActual"><strong>1.1. Motivation</strong><ul class="navigation nav_lo">
+                     <li class="navigationLink"><a href="Motivation_learningObject1.html">1.1.1. Tri par insertion</a></li>
+                     <li class="navigationLink"><a href="Motivation_learningObject2.html">1.1.2. Tri par sélection des minima successifs</a></li>
+                     <li class="navigationLink"><a href="Motivation_learningObject3.html">1.1.3. Tri bulle</a></li>
+                     <li class="navigationLink"><a href="Motivation_learningObject4.html">1.1.4. Recherche dichotomique</a></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.2. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="index.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Motivation_learningObject1.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="unit_Motivation.html">1.1. Motivation</h1>
+      <div id="Motivation_entry.html">
+         <p class="paragraph" id="d8e10">
+            La recherche efficace d’information implique un tri préalable de celle-ci. En effet,
+            si les
+            données ne sont pas classées ou triées, le seul algorithme possible reviendrait à
+            parcourir
+            entièrement l’ensemble des informations. Pour exemple, il suffit d’imaginer un dictionnaire
+            dans lequel les mots seraient mélangés de façon aléatoire au lieu d’être classés par
+            ordre
+            alphabétique. Pour trouver le moindre mot dans ce dictionnaire, il faudrait à chaque
+            fois le
+            parcourir entièrement ! Il est clair que le classement préalable (ordre alphabétique)
+            accélère
+            grandement la recherche.
+            		
+         </p>
+         <p class="paragraph" id="d8e12">
+            		  Ainsi, recherche et tri sont étroitement liés, et la façon dont les informations
+            sont triées
+            conditionne bien entendu la façon de rechercher l’information (cf. algorithme de recherche
+            dichotomique). Pour exemple, prenons cette fois-ci un dictionnaire des mots croisés
+            dans
+            lequel les mots sont d’abord regroupés selon leur longueur et ensuite par ordre alphabétique.
+            La façon de rechercher un mot dans ce dictionnaire est bien sûr différente de la recherche
+            dans un dictionnaire usuel.
+            		
+         </p>
+         <p class="paragraph" id="d8e14">
+            		  Le problème central est donc le tri des informations. Celui-ci a pour but d’organiser
+            un
+            ensemble d’informations qui ne l’est pas à priori. On peut distinguer trois grands
+            cas de
+            figure :
+            		
+         </p>
+      </div>
+      <div id="d8e16.html" class="clarify">
+         <h4>données « brutes »</h4>
+         <p class="paragraph" title="données « brutes »" id="d8e17">
+            D’abord les situations impliquant le classement total d’un ensemble de données « brutes
+            », 
+            c’est-à-dire complètement désordonnées. Prenons pour exemple les feuilles récoltées
+            
+            en vrac à l’issue d’un examen ; il y a peu de chances que celles-ci soient remises
+            à 
+            l’examinateur de manière ordonnée ; celui-ci devra donc procéder au tri de l’ensemble
+            
+            des copies, par exemple par ordre alphabétique des noms des étudiants, ou par numéro
+            de groupe etc.
+            
+         </p>
+         <h4>ajout dans un ensemble trié</h4>
+         <p class="paragraph" title="ajout dans un ensemble trié" id="d8e19">
+            		    Ensuite les situations où on s’arrange pour ne jamais devoir trier la totalité
+            des éléments
+            d’un ensemble, qui resterait cependant à tout moment ordonné. Imaginons le cas d’une
+            bibliothèque dont les livres sont rangés par ordre alphabétique des auteurs : à l’achat
+            d’un nouveau livre, ou au retour de prêt d’un livre, celui-ci est immédiatement rangé
+            à la bonne place. Ainsi, l’ordre global de la bibliothèque est maintenu par la répétition
+            d’une seule opération élémentaire consistant à insérer à la bonne place un livre parmi
+            la collection. C’est la situation que nous considérerions dans le cas d’une structure
+            où
+            les éléments sont ordonnés.
+            
+         </p>
+         <h4>re-trier</h4>
+         <p class="paragraph" title="re-trier" id="d8e21">
+            Enfin, les situations qui consistent à devoir re-trier des données préalablement ordonnées
+            
+            sur un autre critère. Prenons l’exemple d’un paquet de copies d’examen déjà triées
+            sur l’ordre alphabétique des noms des étudiants, et qu’on veut re-trier cette fois-ci
+            sur
+            les numéros de groupe. Il est clair qu’une méthode efficace veillera à conserver l’ordre
+            alphabétique déjà présent dans la première situation afin que les copies apparaissent
+            dans cet ordre dans chacun des groupes.
+            
+         </p>
+         <p class="paragraph" id="d8e23">
+            Le dernier cas illustre un classement sur une clé complexe (ou composée) impliquant
+            la
+            comparaison de plusieurs champs d’une même structure : le premier classement se fait
+            sur le
+            numéro de groupe, et à numéro de groupe égal, l’ordre se départage sur le nom de l’étudiant.
+            On dira de cet ensemble qu’il est classé en <b>majeur</b>
+            sur le numéro de groupe et en <b>mineur</b> sur le nom d’étudiant.
+            
+         </p>
+         <p class="paragraph" id="d8e31">
+            Notons que certains tris sont dits <b>stables</b> 
+            parce qu’en cas de tri sur une nouvelle clé, l’ordre
+            de la clé précédente est préservé pour des valeurs identiques de la nouvelle clé,
+            ce qui évite
+            de faire des comparaisons sur les deux champs à la fois. Les méthodes nommées tri
+            par
+            insertion, tri bulle et tri par recherche de minima successifs (que nous allons aborder)
+            sont stables.
+            
+         </p>
+      </div>
+      <hr />
+      <div class="navigation_arrows"><a href="index.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Motivation_learningObject1.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTri.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

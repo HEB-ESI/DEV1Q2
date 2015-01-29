@@ -443,6 +443,21 @@ MODULE Test
 
 FIN MODULE
 			     \end{verbatim}\subsection{\`A vous de jouer...}
+          Voici quelques conseils pour vous guider dans la r\'esolution de tels probl\`emes :
+          
+					\begin{itemize}
+				
+			\item il convient d'abord de bien comprendre le probl\`eme pos\'e ; assurez-vous qu'il est parfaitement sp\'ecifi\'e ;
+			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
+			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
+			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
+			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
+			\item Pour la partie Java, dessinez l'arborescence des fichie, vous travaillerez dans un package  \verb@g12345.Boucles@. 
+					\end{itemize}
+				
+            \par
+        
 			
 		\subparagraph{Un nombre est-il divisible par 9 ?} 
 		
@@ -456,6 +471,8 @@ FIN MODULE
         
             \par
         \'Ecrivez le code java correspondant ainsi que la javadoc.
+            \par
+        Si le nombre entr\'e est n\'egatif, vous lancerez une exception qui sera g\'er\'ee dans votre m\'ethode \verb@main@.
             \par
         
 			
@@ -488,15 +505,18 @@ FIN MODULE
           et qui retourne vrai si ce nombre est premier et faux sinon.
         
             \par
+        Si le nombre entr\'e est n\'egatif, vous lancerez une exception qui sera g\'er\'ee dans votre m\'ethode 
+        \verb@main@ en Java.
+            \par
         
           \'Ecrivez un module \verb@goldbach@ qui re\c coit en param\`etre 
           un nombre entier pair \verb@p@ sup\'erieur \`a 3 
           et qui retourne vrai s'il est la somme de 2 nombres premiers et faux sinon.
-          Si le \verb@p@ re\c cu n'est sup\'erieur \`a 3, votre programme g\'en\'erera une erreur.
-        
+          Si le \verb@p@ re\c cu n'est sup\'erieur \`a 3, votre programme g\'en\'erera une erreur qui sera g\'er\'ee dans votre m\'ethode 
+        \verb@main@ en Java.
             \par
         
-          \'Ecrivez un second module, \verb@principal@, qui lit un nombre et v\'erifie que tous les
+          \'Ecrivez un module, \verb@principal@, qui lit un nombre et v\'erifie que tous les
           nombres pairs inf\'erieurs \`a ce nombre sont la somme de 2 nombres premiers. Ce module affiche vrai ou faux selon le cas.
         
             \par

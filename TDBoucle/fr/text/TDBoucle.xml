@@ -741,6 +741,52 @@ fin module
 	</unit>
 		
   
+  
+	<!-- =================================================================== -->
+	<unit label="TryCatch" title="La gestion des erreurs : try - catch">
+	<!-- =================================================================== -->
+		
+		<learningObject title="L’instruction try catch">
+		  <clarify>
+		    <list listStyle="unordered">
+          <item><formatted style="code">try</formatted> : contient les instructions qui peuvent mal se passer</item>
+          <item><formatted style="code">catch</formatted> : contient le code qui est en charge de gérer le problème</item>
+        </list>
+        Quand un problème se présente dans le try
+        <list listStyle="unordered">
+          <item>Le code du <formatted style="code">try</formatted> est interrompu</item>
+          <item>Le code du <formatted style="code">catch</formatted> est exécuté</item>
+          <item>Ensuite, on continue après le <formatted style="code">try−catch</formatted></item>
+        </list>
+		  </clarify>
+		  
+		  <look>
+		  Exemple :
+<paragraph cssClass="code">
+package be.heb.esi . lgj1 ;
+import java. util .Scanner;
+public class Affiche {
+    /**
+    * Affiche l ’ entier lu au clavier ou un message si ce n’ est pas un entier .
+    * @param args inutilisé .
+    */
+    public static void main(String [] args) {
+      Scanner clavier = new Scanner(System.in);
+      int nb;
+      try {
+        nb = clavier . nextInt ();
+        System.out. println (nb);
+      }
+      catch(Exception e) {
+        System.out. println ("Ce␣n’est␣pas␣un␣entier!");
+      }
+    }
+}
+</paragraph>
+		  </look>
+
+		</learningObject>
+  </unit>
 	
 	<!-- =================================================================== -->
 	<unit label="Exercices" title="Exercices">
@@ -1067,22 +1113,50 @@ public class Test {
 }]]>				</paragraph>
 				</popup>
 
-      </act>
+				<selfCheck title="Mots clés" shuffle="yes">
+					<fillInBlanks>
+						<question>
+							Complétez le morceau de code suivant afin de pouvoir attraper l'exception de type <formatted style="code">IllegalArgumentException</formatted> 
+							susceptible d'être lancée par la méthode <formatted style="code">maxPositif</formatted> de la même classe.
+						</question>
+						<paragraph cssClass="pagebreak"/>
+						<gapText>
+							<paragraph cssClass="javawithblanks">
+public static void appelMaxPositif() {
 
-    </learningObject>
+    Scanner clavier = new Scanner(System.in);
+    
+    <gap answers="">try</gap> {
+        int max = maxPositif(clavier.nextInt(), clavier.nextInt());
+    } <gap answers="">catch</gap> (IllegalArgumentException ex) {
+        // gestion de l'exception
+    }
+    
+}
+							</paragraph>
+						</gapText>
+						<solution/>
+					</fillInBlanks>
+				</selfCheck>
+
+			</act>
+		
+		</learningObject>
+
     
     <learningObject title="À vous de jouer...">
     <!-- ============================================================ -->
       <act>
         <paragraph>
-          Il est temps de se lancer et d’écrire vos premiers modules et programmes Java correspondant. 
           Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
           <list listStyle="unordered">
             <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
-            <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites ;</item>
-            <item><formatted style="bold">mettez en évidence les variables « données », les variables « résultats » et les variables de travail ;</formatted></item>
-            <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé.</item>
+            <item>résolvez le problème via quelques exemples précis ;</item>
+            <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
+            <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+            <item>Pour la partie Java, dessinez l'arborescence des fichie, vous travaillerez dans un package  <formatted style="code">g12345.Boucles</formatted>. </item>
           </list>
         </paragraph>
         
@@ -1097,7 +1171,8 @@ public class Test {
                 <item>les <formatted style="code">n</formatted> premiers naturels impairs ;</item>
                 <item>les naturels impairs qui sont inférieurs ou égaux à <formatted style="code">n</formatted>.</item>
               </list>
-              Si le <formatted style="code">n</formatted> reçu n'est pas strictement positif, votre programme s'arrêtera en générant une erreur/une exception.
+              Si le <formatted style="code">n</formatted> reçu n'est pas strictement positif, votre programme générera une erreur/une exception 
+              qui sera gérée par un affichage explicite dans la méthode <formatted style="code">main</formatted>.
             </item>
             <item>
               demande à l'utilisateur d'introduire un entier positif (non strictement). 
@@ -1135,7 +1210,8 @@ public class Test {
                 affiche les <formatted style="code">n</formatted> premiers termes de la suite suivante : 
                 <formatted style="code">1, –1, 2, –3, 5, –8, 13, –21, 34, –55, …</formatted>
                 où <formatted style="code">n</formatted> est un entier strictement positif reçu en paramètre.<newLine/>
-                Si le <formatted style="code">n</formatted> reçu n'est pas strictement positif, votre programme s'arrêtera en générant une erreur/une exception.
+                Si le <formatted style="code">n</formatted> reçu n'est pas strictement positif, votre programme générera une erreur/une exception 
+                qui sera gérée par un affichage explicite dans la méthode <formatted style="code">main</formatted>.
             </item>
           </list>
         </paragraph>

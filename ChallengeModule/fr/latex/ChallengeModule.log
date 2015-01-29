@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  26 JAN 2015 23:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 JAN 2015 18:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -874,21 +874,16 @@ LaTeX Warning: Marginpar on page 1 moved.
 File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 192.
+(Font)              <10> on input line 206.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 192.
+(Font)              <7> on input line 206.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 192.
+(Font)              <5> on input line 206.
 
-Overfull \hbox (30.02715pt too wide) in paragraph at lines 191--195
+Overfull \hbox (30.02715pt too wide) in paragraph at lines 205--209
 \T1/lmr/m/n/10 la for-mule (com-plè-te-ment far-fe-lue) sui-vante : []\T1/lmtt/
 m/n/10 pas = $[]$ (poids / |1 $\OMS/lmsy/m/n/10 ^^@$ \T1/lmtt/m/n/10 PI|)
  []
-
-(./ChallengeModule.toc)
-\tf@toc=\write6
-\openout6 = `ChallengeModule.toc'.
-
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -900,21 +895,25 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../../../_templates/java/icons/logo-esi.jpg> <../../../_templates/java/icons/
 cc-gris.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 246.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 246.
+(./ChallengeModule.toc)
+\tf@toc=\write6
+\openout6 = `ChallengeModule.toc'.
 
-(./ChallengeModule.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 246.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 246.
+ [2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 260.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 260.
+ (./ChallengeModule.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 260.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 260.
 Package rerunfilecheck Info: File `ChallengeModule.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 246.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 260.
  ) 
 Here is how much of TeX's memory you used:
- 12617 strings out of 493304
- 183957 string characters out of 6139871
- 283778 words of memory out of 5000000
- 15828 multiletter control sequences out of 15000+600000
+ 12620 strings out of 493304
+ 183986 string characters out of 6139871
+ 284778 words of memory out of 5000000
+ 15830 multiletter control sequences out of 15000+600000
  60682 words of font info for 51 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,43p,343b,717s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -927,10 +926,10 @@ texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 r9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on ChallengeModule.pdf (1 page, 233513 bytes).
+Output written on ChallengeModule.pdf (2 pages, 235894 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
+ 71 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

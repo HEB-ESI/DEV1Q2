@@ -1,13 +1,13 @@
 \select@language {french}
 \contentsline {section}{\numberline {1}Les tableaux}{2}{section.1}
 \contentsline {subsection}{\numberline {1.1}UtilTabInt}{2}{subsection.1.1}
-\contentsline {subparagraph}{initialiser}{2}{section*.2}
-\contentsline {subparagraph}{afficher}{2}{section*.3}
+\contentsline {subparagraph}{initialiser}{3}{section*.2}
+\contentsline {subparagraph}{afficher}{3}{section*.3}
 \contentsline {subparagraph}{sommer}{3}{section*.4}
 \contentsline {subparagraph}{maximum}{3}{section*.5}
-\contentsline {subparagraph}{indiceMax}{3}{section*.6}
-\contentsline {subparagraph}{cr\'eer}{3}{section*.7}
-\contentsline {subparagraph}{estTri\'e}{3}{section*.8}
-\contentsline {subparagraph}{cr\'eer}{3}{section*.9}
+\contentsline {subparagraph}{indiceMax}{4}{section*.6}
+\contentsline {subparagraph}{cr\'eer}{4}{section*.7}
+\contentsline {subparagraph}{estTri\'e}{4}{section*.8}
+\contentsline {subparagraph}{cr\'eer}{4}{section*.9}
 \contentsline {subparagraph}{inverser}{4}{section*.10}
 \contentsline {subparagraph}{positionsMin}{4}{section*.11}
