@@ -1,0 +1,83 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="Content-Script-Type" content="text/javascript" />
+      <meta http-equiv="Content-Style-Type" content="text/css" />
+      <meta name="description" content="TD Séquentiel - Rappels de base: Les opérateurs arithmétiques élémentaires en algo. " />
+      <meta name="copyright" content="" />
+      <meta name="author" content="" />
+      <meta name="keywords" content="TD Séquentiel - Rappels de base, eLML" />
+      <title>1.3.1. Les opérateurs arithmétiques élémentaires en algo</title>
+      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
+         <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
+         <!----></script></head>
+   <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
+         <li class="navigationLink"><a href="index.html">1. TD Séquentiel - Rappels de base</a><ul class="navigation nav_unit">
+               <li class="navigationLink"><a href="unit_Sequentiel.html">1.1. Algorithmes séquentiels</a></li>
+               <li class="navigationLink"><a href="unit_VariablesEtTypes.html">1.2. Variables et types</a></li>
+               <li class="navigationLink"><a href="unit_OperateursEtExpressions.html">1.3. Opérateurs et expressions</a><ul class="navigation nav_lo">
+                     <li class="navigationActual"><strong>1.3.1. Les opérateurs arithmétiques élémentaires en algo</strong></li>
+                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject2.html">1.3.2. Les opérateurs arithmétiques élémentaires en Java</a></li>
+                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject3.html">1.3.3. Les opérateurs DIV et MOD en algo</a></li>
+                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject4.html">1.3.4. Les opérateurs DIV et MOD en Java</a></li>
+                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject5.html">1.3.5. Les opérateurs de comparaison en algo</a></li>
+                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject6.html">1.3.6. Les opérateurs de comparaison en Java</a></li>
+                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject7.html">1.3.7. Les opérateurs booléens en algo</a></li>
+                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject8.html">1.3.8. Les opérateurs booléens en Java</a></li>
+                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject9.html">1.3.9. Les fonctions mathématiques complexes en algo</a></li>
+                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject10.html">1.3.10. Les fonctions mathématiques complexes en Java</a></li>
+                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject11.html">1.3.11. Exercices</a></li>
+                  </ul>
+               </li>
+               <li class="navigationLink"><a href="unit_Affectation.html">1.4. L’affectation d’une valeur à une variable</a></li>
+               <li class="navigationLink"><a href="unit_Commentaires.html">1.5. Documenter son code</a></li>
+               <li class="navigationLink"><a href="unit_Structure.html">1.6. Structure générale</a></li>
+               <li class="navigationLink"><a href="unit_CompilerExecuter.html">1.7. Compiler et exécuter un programme Java</a></li>
+               <li class="navigationLink"><a href="unit_Exercices.html">1.8. Exercices</a></li>
+            </ul>
+         </li>
+      </ul>
+      <div class="navigation_arrows"><a href="unit_OperateursEtExpressions.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="OperateursEtExpressions_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="OperateursEtExpressions_learningObject1.html">1.3.1. Les opérateurs arithmétiques élémentaires en algo</h1>
+      <div id="d8e799.html" class="clarify">
+         <p class="paragraph" id="d8e800">
+            Ce sont les opérateurs binaires bien connus :
+            
+            <ul class="list" id="d8e802">
+               <li class="itemAlt"><code>+</code> addition
+               </li>
+               <li class="item"><code>-</code> soustraction
+               </li>
+               <li class="itemAlt"><code>*</code> multiplication
+               </li>
+               <li class="item"><code>/</code> division réelle
+               </li>
+            </ul>
+            Ils agissent sur des variables ou expressions à valeurs entières ou réelles. 
+            
+         </p>
+         <p class="paragraph" id="d8e820">
+            Plusieurs opérateurs peuvent être utilisés pour former des expressions plus ou moins
+            complexes, 
+            en tenant compte des règles de calcul habituelles, notamment la priorité de la multiplication
+            et de la division
+            sur l’addition et la soustraction. 
+            
+         </p>
+         <p class="paragraph" id="d8e822">
+            Il est aussi permis d’utiliser des parenthèses, par exemple <span class="input">a – (b + c * d)/x</span>. 
+            
+         </p>
+         <p class="paragraph" id="d8e827">
+            Tout emploi de la division devra être accompagné d’une réflexion sur la
+            valeur du dénominateur, une division par 0 entrainant toujours l’arrêt d’un algorithme.
+            
+         </p>
+      </div>
+      <hr />
+      <div class="navigation_arrows"><a href="unit_OperateursEtExpressions.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="OperateursEtExpressions_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 9.2.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+   </body>
+</html>

@@ -204,10 +204,10 @@
     
   </unit>
 	<!-- =================================================================== -->
-	<unit label="OpérateursEtExpressions" title="Opérateurs et expressions">
+	<unit label="OperateursEtExpressions" title="Operateurs et expressions">
 	<!-- =================================================================== -->
     
-			<learningObject title="Opérateurs et expressions">
+			<learningObject title="Operateurs et expressions">
 			<!-- ============================================================ -->
 			  <act>
           <selfCheck title="Opérateurs Java" shuffle="yes">

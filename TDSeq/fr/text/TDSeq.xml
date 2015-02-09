@@ -10,7 +10,7 @@
 	</entry>
 	
 	<!-- =========================================================== -->
-	<unit label="Séquentiel" title="Algorithmes séquentiels">
+	<unit label="Sequentiel" title="Algorithmes séquentiels">
 	<!-- =========================================================== -->
 
     <entry>Revoyons ici les bases du pseudo-code et leur traduction en Java.</entry>
@@ -556,7 +556,7 @@ Y = 3; // Idem
 	
 	
 	<!-- =================================================================== -->
-	<unit label="OpérateursEtExpressions" title="Opérateurs et expressions">
+	<unit label="OperateursEtExpressions" title="Opérateurs et expressions">
 	<!-- =================================================================== -->
 		
 		<entry>
@@ -1319,7 +1319,7 @@ public class NomClasse {
   </unit>
   
   <!-- =================================================================== -->
-	<unit label="CompilerExécuter" title="Compiler et exécuter un programme Java">
+	<unit label="CompilerExecuter" title="Compiler et exécuter un programme Java">
 	<!-- =================================================================== -->
 		
 		<entry>

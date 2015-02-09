@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 JAN 2015 18:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  9 FEB 2015 21:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1018,8 +1018,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 1072.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1072.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1072.
 
-Package rerunfilecheck Info: File `InitSeq.out' has not changed.
-(rerunfilecheck)             Checksum: 23355547FF903AAC463527DE6A904F03;1364.
+
+
+Package rerunfilecheck Warning: File `InitSeq.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `InitSeq.out':
+(rerunfilecheck)             Before: 7F7702C0DE45CFFBF788B25DE3544AAF;1361
+(rerunfilecheck)             After:  2AE1FB24ADBA207307AA5275429AE673;1358.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1072.
  ) 
 Here is how much of TeX's memory you used:
@@ -1045,7 +1052,7 @@ share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/zapfding/uzdr.pfb>
-Output written on InitSeq.pdf (16 pages, 389551 bytes).
+Output written on InitSeq.pdf (16 pages, 389903 bytes).
 PDF statistics:
  600 PDF objects out of 1000 (max. 8388607)
  556 compressed objects within 6 object streams

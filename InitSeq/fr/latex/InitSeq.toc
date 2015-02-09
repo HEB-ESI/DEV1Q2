@@ -11,8 +11,8 @@
 \contentsline {subparagraph}{Les types primitifs num\'eriques entiers}{3}{section*.8}
 \contentsline {subparagraph}{Les types primitifs num\'eriques flottants}{4}{section*.9}
 \contentsline {subparagraph}{Le type primitif non num\'erique}{4}{section*.10}
-\contentsline {section}{\numberline {2}Op\'erateurs et expressions}{4}{section.2}
-\contentsline {subsection}{\numberline {2.1}Op\'erateurs et expressions}{4}{subsection.2.1}
+\contentsline {section}{\numberline {2}Operateurs et expressions}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Operateurs et expressions}{4}{subsection.2.1}
 \contentsline {subparagraph}{Op\'erateurs Java}{4}{section*.11}
 \contentsline {subparagraph}{Que vaut ?}{4}{section*.12}
 \contentsline {subparagraph}{Que vaut ?}{5}{section*.13}
