@@ -11,7 +11,7 @@
 	</entry>
 	
 	<!-- =========================================================== -->
-	<unit label="Découper" title="Découper du code">
+	<unit label="Decouper" title="Découper du code">
 	<!-- =========================================================== -->
     <learningObject title="Découper du code : modules ou méthodes">
     <entry>

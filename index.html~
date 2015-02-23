@@ -7,7 +7,7 @@
         <table width="100%" border="0" align="left" cellspacing="1" cellpadding="1">
             <tbody>
                 <tr>
-                    <td width="100" style="text-align: center;"><img width="48" height="51" src="./icon_1539.svg" alt="" /></td>
+                    <td width="100" style="text-align: center;"><img width="48" height="51" src="./noun_69379_cc.svg" alt="" /></td>
                     <td>
                     <p><span style="font-size: medium;">DEV1 - Q2</span><br />
                     <strong><span style="font-size: xx-large;">Algo, Java, Labo Java</span></strong></p>
@@ -121,10 +121,9 @@
         </table>
         <h2>Aide</h2>
         <ul>
-            <li><a href="Support/LAJ1-Guide-Visuel.pdf" target="_blank">Guide visuel GNU/Linux</a></li>
-            <li><a href="Support/aidememoire.pdf" target="_blank">Aide-m&eacute;moire des laboratoires Java</a></li>
-            <li><a href="Support/unix_qr.pdf" target="_blank">Unix quick Reference</a></li>
-            <li>Solutions des interros: <a href="/courses/DEV1/document/dev1-laj/Archives/Interros/interro2">i2</a>, <a href="/courses/DEV1/document/dev1-laj/Archives/Interros/i3/">i3</a></li>
+            <li>Syllabus d'algorithmique</li>
+            <li>Slides Java</li>
+            <li>Tds labo Java</li>
         </ul>
     </body>
 </html>

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 JAN 2015 18:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  22 FEB 2015 19:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -878,7 +878,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 191.
 
 Overfull \hbox (20.49127pt too wide) in paragraph at lines 191--192
-\T1/lmtt/m/n/9 fr / . . / . . / ChallengePackage / fr / énoncé / DEV1-[]LAJ1-[]
+\T1/lmtt/m/n/9 fr / . . / . . / ChallengePackage / fr / enonce / DEV1-[]LAJ1-[]
 I3-[]20141114-[]5-[]clr . pdf$[][]\T1/lmr/m/n/10 ). 
  []
 
@@ -923,7 +923,7 @@ lic/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
 12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/font
 s/type1/public/lm/lmtt9.pfb>
-Output written on ChallengePackage.pdf (1 page, 225416 bytes).
+Output written on ChallengePackage.pdf (1 page, 225141 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream
