@@ -43,17 +43,17 @@
                   <div class="itemLabel">
                      <ul class="list" id="d8e19">
                         <li class="itemAlt"><pre>
-module boucle1 ()
+algorithme boucle1 ()
     x : entier
     x ← 0
     tant que x &lt; 12 faire
       x ← x+2
     fin tant que
     afficher x
-fin module
+fin algorithme
 				</pre><input type="text" value="" class="itemText" id="_d8e23" style="width:25px" /> <span class="gapText">,12,12</span></li>
                         <li class="item"><pre>
-module boucle2 ()
+algorithme boucle2 ()
     ok : booléen
     x : entier
     ok ← vrai
@@ -63,10 +63,10 @@ module boucle2 ()
       ok ← x MOD 11 ≠ 0
     fin tant que
     afficher x
-fin module
+fin algorithme
 				</pre><input type="text" value="" class="itemText" id="_d8e28" style="width:25px" /> <span class="gapText">,33,33</span></li>
                         <li class="itemAlt"><pre>
-module boucle3 ()
+algorithme boucle3 ()
     ok : booléen
     cpt, x : entiers
     x ← 10
@@ -82,10 +82,10 @@ module boucle3 ()
       fin si
     fin tant que
     afficher x
-fin module
+fin algorithme
 				</pre><input type="text" value="" class="itemText" id="_d8e33" style="width:25px" /> <span class="gapText">,22,22</span></li>
                         <li class="item"><pre>
-module boucle4 ()
+algorithme boucle4 ()
     pair, grand : booléens
     p, x : entiers
     x ← 1
@@ -95,12 +95,12 @@ module boucle4 ()
       x ← x+p
       pair ← x MOD 2 = 0
       grand ← x &gt; 15
-    jusqu’à ce que pair OU grand
+    tant que NON pair ET NON grand
     afficher x
-fin module
+fin algorithme
 				</pre><input type="text" value="" class="itemText" id="_d8e38" style="width:25px" /> <span class="gapText">,31,31</span></li>
                         <li class="itemAlt"><pre>
-module boucle5 ()
+algorithme boucle5 ()
     i, x : entiers
     ok : booléen
     x ← 3
@@ -114,10 +114,10 @@ module boucle5 ()
     sinon
       afficher 2 * x
     fin si
-fin module
+fin algorithme
 				</pre><input type="text" value="" class="itemText" id="_d8e43" style="width:25px" /> <span class="gapText">,36,36</span></li>
                         <li class="item"><pre>
-module boucle6 ()
+algorithme boucle6 ()
     i, j, fin : entiers
     pour i de 1 à 3 faire
       fin ← 6 * i - 11
@@ -125,7 +125,7 @@ module boucle6 ()
         afficher 10 * i + j
       fin pour
     fin pour
-fin module
+fin algorithme
 				</pre><input type="text" value="" class="itemText" id="_d8e48" style="width:100px" /> <span class="gapText">,21 31 34 37,21 31 34 37</span></li>
                      </ul>
                   </div>
@@ -138,6 +138,6 @@ fin module
       </div>
       <hr />
       <div class="navigation_arrows"><a href="unit_Boucles.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/InitBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 9.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/InitBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

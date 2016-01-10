@@ -212,13 +212,11 @@ fin si
       
             \par
         \begin{verbatim}
-module Test
-    nombre1 : entier
-    lire nombre1 
+algorithme Test (nombre1 : entier)
     si (nombre1 < 0) alors
       afficher nombre1, " est négatif"
     fin si
-fin module
+fin algorithme
     \end{verbatim}En Java :
             \par
         \begin{Java}
@@ -243,15 +241,9 @@ if (condition) {
       
             \par
         \begin{Java}
-import java. util .Scanner;
-public class Test {
-    public static void main(String [] args) {
-      Scanner clavier = new Scanner(System.in);
-      int nombre1;
-      nombre1 = clavier. nextInt ();
-      if (nombre1 < 0) {
+public static void negatif (int nombre1) {
+    if (nombre1 < 0) {
         System.out.println (nombre1 + " est negatif");
-      }
     }
 }
     \end{Java}\subsection{si-alors-sinon-fin si}En pseudo-code :
@@ -268,15 +260,13 @@ fin si
             \par
         \begin{verbatim}
 // Lit un nombre et affiche si ce nombre est positif (zéro inclus) ou strictement négatif
-module signeNombre()
-    nb : entier
-    lire nb
+algorithme signeNombre (nb : entier)
     si nb < 0 alors
       afficher "le nombre", nb, " est négatif"
     sinon
       afficher "le nombre", nb, " est positif ou nul"
     fin si
-fin module
+fin algorithme
     \end{verbatim}En Java :
             \par
         \begin{Java}
@@ -288,10 +278,13 @@ if (condition) {
       \end{Java}\begin{Java}
 import java. util .Scanner;
 public class Test {
-    public static void main(String [] args) {
+    public static void main(String[] args){
       Scanner clavier = new Scanner(System.in);
       int nombre1;
       nombre1 = clavier. nextInt ();
+      signe(nombre1);
+    }
+    public static void signe(int nombre1) {
       System.out. println (nombre1 + " est un nombre ");
       if (nombre1 < 0) {
         System.out. println (" negatif ");
@@ -353,9 +346,7 @@ fin si
             \par
         \begin{verbatim}
 // Lit un nombre entre 1 et 7 et affiche en clair le jour de la semaine correspondant.
-module jourSemaine()
-    jour : entier
-    lire jour
+algorithme jourSemaine (jour : entier)
     selon que jour vaut
       1 : afficher "lundi"
       2 : afficher "mardi"
@@ -365,7 +356,7 @@ module jourSemaine()
       6 : afficher "samedi"
       7 : afficher "dimanche"
     fin selon que
-fin module
+fin algorithme
     \end{verbatim}En Java :
             \par
         \begin{verbatim}
@@ -436,96 +427,7 @@ public class Test{
       System.out.println(prixDistributeur);
     }
 }
-      \end{Java}\subsection{selon que (version avec conditions)}En pseudo-code :
-            \par
-        \begin{verbatim}
-selon que
-    condition_1 :
-      // instructions lorsque la condition_1 est vraie
-    condition_2 :
-      // instructions lorsque la condition_2 est vraie
-    ...
-    condition_n :
-      // instructions lorsque la condition_n est vraie
-    autres :
-      // instructions à exécuter quand aucune
-      // des conditions précédentes n’est vérifiée
-fin selon que
-      \end{verbatim}
-        Comme pr\'ec\'edemment, une et une seule des s\'equences d'instructions est ex\'ecut\'ee. On
-        veillera \`a ce que les conditions ne se \guillemotleft  recouvrent \guillemotright  pas, c'est-\`a-dire que deux d'entre elles
-        ne soient jamais vraies simultan\'ement. 
-      
-            \par
-        C'est \'equivalent \`a : 
-            \par
-        \begin{verbatim}
-si condition_1 alors
-    // instructions lorsque la condition_1 est vraie
-sinon
-    si condition_2 alors
-      // instructions lorsque la condition_2 est vraie
-    sinon
-      ...
-      si condition_n alors
-        // instructions lorsque la condition_n est vraie
-      sinon
-        // instructions à exécuter quand aucune
-        // des conditions précédentes n’est vérifiée
-      fin si
-    fin si
-fin si
-      \end{verbatim}Par exemple : 
-            \par
-        \begin{verbatim}
-// Lit un nombre et affiche si ce nombre est strictement positif , strictement négatif ou nul.
-module signeNombre()
-    nb : entier
-    lire nb
-    selon que 
-      nb < 0 :
-        afficher "le nombre", nb, " est négatif"
-      nb > 0 :
-        afficher "le nombre", nb, " est positif"
-      autres : 
-        afficher "le nombre", nb, " est nul"
-    fin selon que
-fin module
-    \end{verbatim}En Java :
-            \par
-        Il n'existe pas de \verb@switch@ avec condition, 
-		  il faut l'\'ecrire comme une succession de \verb@if@.
-            \par
-        \begin{Java}
-if (condition_1){
-      // instructions lorsque la condition_1 est vraie
-} else if (condition_2){
-      // instructions lorsque la condition_2 est vraie
-} ... 
-} else if (condition_n){
-      // instructions lorsque la condition_n est vraie
-} else {
-      // instructions a executer quand aucune
-      // des conditions precedentes n est verifiee
-}
-      \end{Java}Par exemple : 
-            \par
-        \begin{Java}
-import java. util .Scanner;
-public class Test {
-    public static void main(String [] args) {
-      Scanner clavier = new Scanner(System.in);
-      int nb = clavier.nextInt();
-      if (nb>0) {
-        System.out. println (" positif ");
-      } else if (nb==0) {
-        System.out. println ("nul");
-      } else {
-        System.out. println (" negatif ");
-      }
-    }
-}
-    \end{Java}\section{Exercices}
+      \end{Java}\section{Exercices}
 				Maintenant, mettons tout \c ca en pratique.
       
             \par
@@ -537,45 +439,43 @@ public class Test {
 		
                 \textcolor{white}{.} \par
             
-							  Que vont-ils afficher ?
+							  Que vont-ils retourner/afficher ?
               
 					\begin{itemize}
 				
 			\item \begin{verbatim}
-module exerciceA()
-  a,b : entier
-  lire a,b
+algorithme exerciceA (a, b : entiers) → entier
   si a > b alors
     a ← a+2*b
   fin si
-  afficher a
-fin module
-				\end{verbatim}Si les nombres lus sont respectivement 2 et 3 ? 
+  retourner a
+fin algorithme
+				\end{verbatim}Si les nombres re\c cus sont respectivement 2 et 3 ? 
             \par
-         \textcolor{gray}{\underline{\hspace*{1em}}} Si les nombres lus sont respectivement 4 et 1 ? 
+         \textcolor{gray}{\underline{\hspace*{1em}}} Si les nombres re\c cus sont respectivement 4 et 1 ? 
             \par
          \textcolor{gray}{\underline{\hspace*{1em}}} 
 			\item \begin{verbatim}
-module exerciceB()
-    a,b,c : entier
-    lire b,a
+algorithme exerciceB()
+    a, b, c : entiers
+    demander b, a
     si a > b alors
       c ← a DIV b
     sinon
       c ← b MOD a
     fin si
     afficher c
-fin module
+fin algorithme
 				\end{verbatim}Si les nombres lus sont respectivement 2 et 3 ? 
             \par
          \textcolor{gray}{\underline{\hspace*{1em}}} Si les nombres lus sont respectivement 4 et 1 ? 
             \par
          \textcolor{gray}{\underline{\hspace*{1em}}} 
 			\item \begin{verbatim}
-module exerciceC ()
-    x1, x2 : entier
+algorithme exerciceC ()
+    x1, x2 : entiers
     ok : booléen
-    lire x1, x2
+    demander x1, x2
     ok ← x1 > x2
     si ok alors
       ok ← ok ET x1 = 4
@@ -586,7 +486,7 @@ module exerciceC ()
       x1 ← x1 * 1000
     fin si
     afficher x1 + x2
-fin module
+fin algorithme
 				\end{verbatim}Si les nombres lus sont respectivement 2 et 3 ? 
             \par
          \textcolor{gray}{\underline{\hspace*{3em}}} Si les nombres lus sont respectivement 4 et 1 ? 
@@ -615,11 +515,16 @@ public class Exercice1 {
         int nb1 = clavier.nextInt();
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
+        System.out.println(max(nb1, nb2));
+    }
+    public static int max(int nb1, int nb2) {
+        int max;
         if (nb1 < nb2){
-          System.out.print(nb1);
+          max= nb1;
         } else {
-          System.out.print(nb2);
+          max = nb2;
         } 
+        return max;
     }
 }
         \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
@@ -631,15 +536,20 @@ public class Exercice2 {
         int nb1 = clavier.nextInt();
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
+        System.out.println(max(nb1, nb2, nb3));
+    }
+    public static int max(int nb1, int nb2, int nb3) {
+        int max;
         if (nb1 > nb2 && nb1 > nb3){
-          System.out.print(nb1);
+          max = nb1;
         } else {
             if (nb2 > nb3){
-              System.out.print(nb2);
+              max = nb2;
             } else {
-              System.out.print(nb3);
+              max = nb3;
             }
         } 
+        return max;
     }
 }
         \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
@@ -651,6 +561,9 @@ public class Exercice3 {
         int nb1 = clavier.nextInt();
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
+        System.out.println(trio(nb1));
+    }
+    public static void trio(int nb1) {
         switch (nb1){
           case 1 : System.out.print("premier"); break;
           case 2 : System.out.print("deuxieme"); break;
@@ -668,6 +581,9 @@ public class Exercice3 {
         int nb1 = clavier.nextInt();
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
+        System.out.println(trio(nb1));
+    }
+    public static void trio(int nb1) {
         switch (nb1){
           case 1 : System.out.print("premier");
           case 2 : System.out.print("deuxieme");
@@ -704,16 +620,16 @@ public class Exercice3 {
               le plus grand mais bien quelle est cette plus grande valeur. Le probl\`eme est donc bien d\'efini
               m\^eme si les deux nombres sont identiques.
             
-			\item \'etant donn\'e trois nombres quelconques, recherche et affiche le plus grand des trois.
-			\item affiche un message indiquant si un entier est strictement n\'egatif, nul ou strictement positif.
-			\item \'etant donn\'e trois nombres, recherche et affiche si le premier des 
+			\item \'etant donn\'e trois nombres quelconques, recherche et retourne le plus grand des trois.
+			\item retourne un message indiquant si un entier est strictement n\'egatif, nul ou strictement positif.
+			\item \'etant donn\'e trois nombres, recherche et retourne si le premier des 
             trois appartient \`a l'intervalle donn\'e par le plus petit et le plus grand des deux autres (bornes exclues). 
             Qu'est-ce qui change si on inclut les bornes ?
 			\item \'etant donn\'e une \'equation du deuxi\`eme degr\'e, d\'etermin\'ee par le coefficient de x\texttwosuperior  , le coefficient de x et le terme ind\'ependant, 
             recherche et affiche la (ou les) racine(s) de l'\'equation (ou un message ad\'equat s'il n'existe pas de racine r\'eelle).
 			\item \`a partir d'un moment exprim\'e par 2 entiers, heure et minute, affiche le moment qu'il sera une minute plus tard.
 			\item v\'erifie si une ann\'ee est bissextile. Pour rappel, les ann\'ees bissextiles sont les ann\'ees multiples de 4.
-             Font exception, les multiples de 100 (sauf les multiples de 400 qui sont bien bissextiles). Ainsi 2012 et 2400 sont bissextile mais pas 2010 ni 2100.
+              Font exception, les multiples de 100 (sauf les multiples de 400 qui sont bien bissextiles). Ainsi 2012 et 2400 sont bissextile mais pas 2010 ni 2100.
 					\end{enumerate}
 				
             \par
@@ -726,7 +642,7 @@ public class Exercice3 {
           Dans une rue o\`u se pratique le stationnement alternatif, du 1 au 15 du mois, on se gare du c\^ot\'e des maisons ayant un num\'ero impair, 
           et le reste du mois, on se gare de l'autre c\^ot\'e.
           \'Ecrivez un algorithme et le code java correspondant qui, sur base de la date du jour et du num\'ero de maison devant laquelle
-          vous vous \^etes arr\^et\'e, indique si vous \^etes bien stationn\'e ou non.
+          vous vous \^etes arr\^et\'e, retourne si vous \^etes bien stationn\'e ou non.
         
             \par
         
@@ -744,7 +660,7 @@ public class Exercice3 {
         
             \par
         
-          \'Ecrivez un module fi\`evre qui lit une temp\'erature au clavier et qui affiche si le patient a de la
+          \'Ecrivez un algorithme \verb@fièvre@ qui re\c coit une temp\'erature et qui affiche si le patient a de la
           temp\'erature (sup\'erieure ou \'egale \`a 38,0\textdegree C) ET si cette cette fi\`evre est mod\'er\'ee (entre 38,0\textdegree C 
           et 40,0\textdegree C) ou \`a risque (strictement sup\'erieur \`a 40,0\textdegree C). 
           Rien ne doit \^etre affich\'e si le patient n'a pas de fi\`evre.
@@ -767,7 +683,7 @@ public class Exercice3 {
 			\item 175€ pour une famille de 4 personnes ou plus.
 					\end{itemize}
 				
-          \'Ecrivez un module qui lit le nombre de personnes composant la famille et qui affiche le prix de la taxe \`a payer.
+          \'Ecrivez un algorithme qui re\c coit le nombre de personnes composant la famille et qui retourne le prix de la taxe \`a payer.
         
             \par
         \'Ecrivez le code java correspondant.
@@ -783,12 +699,12 @@ public class Exercice3 {
           
 					\begin{itemize}
 				
-			\item \'Ecrivez un module qui lit le nombre de spectateurs et qui affiche le prix de la taxe \`a payer.
+			\item \'Ecrivez un algorithme qui re\c coit le nombre de spectateurs et qui retourne le prix de la taxe \`a payer.
 			\item \'Ecrivez le code java correspondant.
 			\item 
               Si le film projet\'e est un documentaire, aucune taxe n'est pr\'elev\'ee. 
-              \'Ecrivez un module qui lit le nombre de spectateurs et un bool\'een (\`a vrai
-              si le film est un documentaire et faux sinon) et qui affiche le prix de la taxe
+              \'Ecrivez un algorithme qui re\c coit le nombre de spectateurs et un bool\'een (\`a vrai
+              si le film est un documentaire et faux sinon) et qui retourne le prix de la taxe
               \`a payer.
             
 			\item \'Ecrivez le code java correspondant.

@@ -19,14 +19,13 @@
                <li class="navigationLink"><a href="unit_SiAlorsSinon.html">1.1. si – alors – sinon</a></li>
                <li class="navigationLink"><a href="unit_SelonQue.html">1.2. selon que</a><ul class="navigation nav_lo">
                      <li class="navigationActual"><strong>1.2.1. selon que (version avec listes de valeurs)</strong></li>
-                     <li class="navigationLink"><a href="SelonQue_learningObject2.html">1.2.2. selon que (version avec conditions)</a></li>
                   </ul>
                </li>
                <li class="navigationLink"><a href="unit_Exercices.html">1.3. Exercices</a></li>
             </ul>
          </li>
       </ul>
-      <div class="navigation_arrows"><a href="unit_SelonQue.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="SelonQue_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="SelonQue_learningObject1.html">1.2.1. selon que (version avec listes de valeurs)</h1>
+      <div class="navigation_arrows"><a href="unit_SelonQue.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="SelonQue_learningObject1.html">1.2.1. selon que (version avec listes de valeurs)</h1>
       <div id="d8e122.html" class="clarify">
          <p class="paragraph" id="d8e123">En pseudo-code :</p><pre>
 selon que variable vaut
@@ -79,9 +78,7 @@ fin si
             
          </p><pre>
 // Lit un nombre entre 1 et 7 et affiche en clair le jour de la semaine correspondant.
-module jourSemaine()
-    jour : entier
-    lire jour
+algorithme jourSemaine (jour : entier)
     selon que jour vaut
       1 : afficher "lundi"
       2 : afficher "mardi"
@@ -91,7 +88,7 @@ module jourSemaine()
       6 : afficher "samedi"
       7 : afficher "dimanche"
     fin selon que
-fin module
+fin algorithme
     </pre></div>
       <div id="d8e146.html" class="clarify">
          <p class="paragraph" id="d8e147">En Java :</p><pre>
@@ -163,7 +160,7 @@ public class Test{
 }
       </pre></div>
       <hr />
-      <div class="navigation_arrows"><a href="unit_SelonQue.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="SelonQue_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 20.2.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <div class="navigation_arrows"><a href="unit_SelonQue.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 6.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

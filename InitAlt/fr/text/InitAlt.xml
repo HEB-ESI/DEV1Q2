@@ -26,15 +26,15 @@
 						</question>
 						<gapText> 
 						  <paragraph cssClass="code">
-module multiple5()
-    n : entier
-    lire n
+algorithme multiple5(n : entier) → chaine
+    aRetourner : chaine
     si <gap answers="n MOD 5 = 0,n MOD 5=0">n MOD 5 = 0</gap> alors
-        afficher n, "est divisible par 5"
+        aRetourner ← n, "est divisible par 5"
     sinon
-        afficher n, "n'est pas divisible par 5"
+        aRetourner ← n, "n'est pas divisible par 5"
     fin si
-fin module
+    retourner aRetourner
+fin algorithme
 </paragraph>
 						</gapText>
 						<solution></solution>
@@ -45,11 +45,10 @@ fin module
 					<multipleChoice>
 					  <question>Le morceau d'algorithme suivant est-il correct ?
 					  <paragraph cssClass="code">
-lire n
-// n est un entier
+// n est un entier reçu en paramètre
 selon que n vaut
-1, 2, 3, 4 : n ← 3*n
-3, 5, 7, 9 : n ← 2*n
+    1, 2, 3, 4 : n ← 3*n
+    3, 5, 7, 9 : n ← 2*n
 fin selon</paragraph>
 						</question>
 						<answer feedback="La valeur 3 apparait dans deux cas différents." correct="no"> 
@@ -73,36 +72,32 @@ fin selon</paragraph>
 								<list listStyle="unordered">
 									<item>
 										<paragraph cssClass="code">
-module exerciceA()
-    x : entier
+algorithme exerciceA (x : entier)
     ok : booléen
-    lire x
     ok ← x > 2
     si ok alors
       afficher 2*x
     sinon
       afficher 3*x
     fin si
-fin module
+fin algorithme
 				</paragraph>
-				            <paragraph>Si le nombre lu est 2 ? </paragraph>
+				            <paragraph>Si le nombre reçu est 2 ? </paragraph>
 									  <gap answers="6">6</gap> 
                   </item>
 									<item>
 										<paragraph cssClass="code">
-module exerciceB()
-    x : entier
+algorithme exerciceB (x : entier)
     ok : booléen
-    lire x
     ok ← x MOD 2 = 0
     si ok alors
       afficher 2*x
     sinon
       afficher 3*x
     fin si
-fin module
+fin algorithme
 				</paragraph>
-				            <paragraph>Si le nombre lu est 3 ? </paragraph>
+				            <paragraph>Si le nombre reçu est 3 ? </paragraph>
 									  <gap answers="9">9</gap> 
                   </item>
 								</list>
@@ -131,17 +126,13 @@ fin module
 						</question>
 						<gapText> 
 						  <paragraph cssClass="java">
-import java.util.Scanner;
-public class Exercice1 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb = clavier.nextInt();
-        if (<gap answers="nb % 2 == 0,nb%2 == 0,nb%2==0">nb % 2 == 0</gap>){
-          System.out.print(nb + "est pair");
-        } else {
-          System.out.print(nb + "est impair");
-        } 
-    }
+
+public static void estPair(int nb) {
+    if (<gap answers="nb % 2 == 0,nb%2 == 0,nb%2==0">nb % 2 == 0</gap>){
+        System.out.print(nb + "est pair");
+    } else {
+        System.out.print(nb + "est impair");
+    } 
 }</paragraph>
 						</gapText>
 						<solution></solution>
@@ -153,7 +144,7 @@ public class Exercice1 {
 					  <question>Le morceau de code suivant est-il correct ?
 					  <paragraph cssClass="java">
 switch(produit) {
-        case "Coca", "Sprite", "Fanta" :
+      case "Coca", "Sprite", "Fanta" :
           prixDistributeur = 60;
           break;
       case "IceTea" :
@@ -162,7 +153,7 @@ switch(produit) {
       default :
           prixDistributeur = 0;
           break;
-      }</paragraph>
+}</paragraph>
 						</question>
 						<answer feedback="Ce n'est pas la façon correcte de regrouper plusieurs case." correct="no"> 
 							vrai
@@ -190,6 +181,10 @@ public class Test{
   public static void main(String[] args){
       Scanner clavier = new Scanner(System.in);
       int numeroJour = clavier.nextInt();
+      afficherJour(numeroJour);
+  }
+    
+  public static void afficherJour(int numeroJour){
       switch (numeroJour) {
         case 0: System.out.print("samedi");
         case 1: System.out.print("dimanche");
@@ -200,11 +195,11 @@ public class Test{
         case 6: System.out.print("vendredi");
       }
       System.out.println(numeroJour);
-    }
+  }
 }
 				</paragraph>
 				            <paragraph>Si le numeroJour lu est 5 ? </paragraph>
-									  <gap answers="jeudivendredi">jeudivendredi</gap> 
+									  <gap answers="jeudivendredi5">jeudivendredi5</gap> 
                   </item>
 									<item>
 										<paragraph cssClass="java">
@@ -213,6 +208,10 @@ public class Test{
   public static void main(String[] args){
       Scanner clavier = new Scanner(System.in);
       int numeroJour = clavier.nextInt();
+      afficherJour(numeroJour);
+  }
+    
+  public static void afficherJour(int numeroJour){
       switch (numeroJour) {
         case 0: System.out.println("samedi"); break;
         case 1: System.out.println("dimanche"); break;
@@ -223,11 +222,11 @@ public class Test{
         case 6: System.out.println("vendredi"); break;
       }
       System.out.println(numeroJour);
-    }
+  }
 }
 				</paragraph>
 				            <paragraph>Si le numeroJour lu est 5 ? </paragraph>
-									  <gap answers="jeudi">jeudi</gap> 
+									  <gap answers="jeudi">jeudi5</gap> 
                   </item>
                   
                   <item>
@@ -237,8 +236,12 @@ import java. util .Scanner;
 public class Test {
     public static void main(String [] args) {
       Scanner clavier = new Scanner(System.in);
-      double prixAmende = 0;
       double tauxAlcool = clavier.nextDouble();
+      System.out.println(prixAmende(tauxAlcool));
+    }
+    
+    public static double prixAmende(double tauxAlcool) {
+      double prixAmende = 0;
       if (tauxAlcool>1.6) {
         prixAmende = 10_000;
       } else if (tauxAlcool>1.5){
@@ -252,6 +255,7 @@ public class Test {
       } else {
         prixAmende = 0;
       }
+      return prixAmende;
     }
 }]]>
       </paragraph>
@@ -266,8 +270,12 @@ import java. util .Scanner;
 public class Test {
     public static void main(String [] args) {
       Scanner clavier = new Scanner(System.in);
-      double prixAmende = 0;
       double tauxAlcool = clavier.nextDouble();
+      System.out.println(prixAmende(tauxAlcool));
+    }
+    
+    public static double prixAmende(double tauxAlcool) {
+      double prixAmende = 0;
       if (tauxAlcool>0.5) {
         if (tauxAlcool>0.8){
           if (tauxAlcool>1.2){
@@ -287,6 +295,7 @@ public class Test {
           prixAmende = 137.5;
       }
     }
+    return prixAmende;
 }]]>
       </paragraph>
                     <paragraph>Si le tauxAlcool lu est 1.3 ? </paragraph>
@@ -385,8 +394,8 @@ return absolu;
         les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;
       </paragraph>
       <paragraph>
-          Écrivez un module qui lit le type de carburant et la quantité désirée (considérée positive) et qui affiche le prix à payer.<newLine/>
-          Exemple : pour du Super 95 et pour une quantité de 30,46 litres le module retourne le prix de 43,52 €.
+          Écrivez un algorithme qui lit le type de carburant et la quantité désirée (considérée positive) et qui affiche le prix à payer.<newLine/>
+          Exemple : pour du Super 95 et pour une quantité de 30,46 litres l'algorithme retourne le prix de 43,52 €.
         </paragraph>
         <paragraph>Écrivez le code java correspondant.</paragraph>
         
@@ -401,7 +410,7 @@ return absolu;
           les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;
         </paragraph>
         <paragraph>
-          Écrivez un module qui reçoit un nom de jour et une heure et qui retourne la fréquence pour ce moment. <newLine/>
+          Écrivez un algorithme qui reçoit un nom de jour et une heure et qui retourne la fréquence pour ce moment. <newLine/>
           Exemple : jour = « lundi » ; heure = 16 fréquence = 5
         </paragraph>
         <paragraph>Écrivez le code java correspondant.</paragraph>
@@ -415,7 +424,7 @@ return absolu;
           les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;
         </paragraph>
         <paragraph>
-          Écrivez un module qui vérifie si trois entiers donnés constituent un triple Pythagoricien.
+          Écrivez un algorithme qui vérifie si trois entiers donnés constituent un triple Pythagoricien.
         </paragraph>
         <paragraph>Écrivez le code java correspondant.</paragraph>
         <paragraph>Pour plus d'exercices, 

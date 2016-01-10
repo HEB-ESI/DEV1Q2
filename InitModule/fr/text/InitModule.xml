@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
 <lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
-	label="InitModule" title="TD Modules">
+	label="InitModule" title="TD Gestion d'erreur et Javadoc">
 	
 	<entry>
 		<paragraph>
-			Ces exercices ont pour but de vérifier que vous avez fixé comment découper un algorithme en modules
-      (morceaux d’algorithmes) et en méthodes (morceaux de code).
+			Ces exercices ont pour but de vérifier que vous avez fixé comment découper un algorithme,
+			comment lancer une exception et documenter votre code.
 		</paragraph>
 	</entry>
 	
 	<!-- =========================================================== -->
-	<unit label="Modules" title="Découpe du code">
+	<unit label="Découpe" title="Découpe du code">
 	<!-- =========================================================== -->
   
     <learningObject title="À vous de jouer...">
@@ -24,7 +24,7 @@
             <item>résolvez le problème via quelques exemples précis ;</item>
             <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
             <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-            <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
           </list>
         </paragraph>

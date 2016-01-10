@@ -197,17 +197,17 @@
 					\begin{itemize}
 				
 			\item \begin{verbatim}
-module boucle1 ()
+algorithme boucle1 ()
     x : entier
     x ← 0
     tant que x < 12 faire
       x ← x+2
     fin tant que
     afficher x
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module boucle2 ()
+algorithme boucle2 ()
     ok : booléen
     x : entier
     ok ← vrai
@@ -217,10 +217,10 @@ module boucle2 ()
       ok ← x MOD 11 ≠ 0
     fin tant que
     afficher x
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module boucle3 ()
+algorithme boucle3 ()
     ok : booléen
     cpt, x : entiers
     x ← 10
@@ -236,10 +236,10 @@ module boucle3 ()
       fin si
     fin tant que
     afficher x
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module boucle4 ()
+algorithme boucle4 ()
     pair, grand : booléens
     p, x : entiers
     x ← 1
@@ -249,12 +249,12 @@ module boucle4 ()
       x ← x+p
       pair ← x MOD 2 = 0
       grand ← x > 15
-    jusqu’à ce que pair OU grand
+    tant que NON pair ET NON grand
     afficher x
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module boucle5 ()
+algorithme boucle5 ()
     i, x : entiers
     ok : booléen
     x ← 3
@@ -268,10 +268,10 @@ module boucle5 ()
     sinon
       afficher 2 * x
     fin si
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module boucle6 ()
+algorithme boucle6 ()
     i, j, fin : entiers
     pour i de 1 à 3 faire
       fin ← 6 * i - 11
@@ -279,7 +279,7 @@ module boucle6 ()
         afficher 10 * i + j
       fin pour
     fin pour
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{10em}}} 
 					\end{itemize}
 				
@@ -376,8 +376,6 @@ for ( int i=9; i>=0; i=i-2 ) {
 		
 					\textcolor{white}{.} \par
 				
-					Indiquez l'affichage obtenu par ce code.
-				
             \par
         
 			
@@ -408,19 +406,19 @@ public class Boucles {
 				
             \par
         \begin{verbatim}
-MODULE Test
+Algorithme Test
 
     nb, produit : Entier
     produit ← 1 
 
-    LIRE nb
-    TANT QUE nb ≠ 0 FAIRE
+    demander nb
+    tant que nb ≠ 0 faire
         produit ← produit * nb
-        LIRE nb 
-    FIN TANT QUE
-    AFFICHER produit
+        demander nb 
+    fin tant que
+    afficher produit
     
-FIN MODULE
+fin algorithme
 			    \end{verbatim}
 			
 		\subparagraph{Exercice Pour} 
@@ -431,17 +429,17 @@ FIN MODULE
 				
             \par
         \begin{verbatim}
-MODULE Test
+module Test
 
     nb: Entier
     i : Entier
 
-    LIRE nb
-    POUR i DE 1 A nb FAIRE
-        AFFICHER i
-    FIN POUR
+    demander nb
+    pour i de 1 à nb faire
+        afficher i
+    fin pour
 
-FIN MODULE
+fin module
 			     \end{verbatim}\subsection{\`A vous de jouer...}
           Voici quelques conseils pour vous guider dans la r\'esolution de tels probl\`emes :
           
@@ -451,7 +449,7 @@ FIN MODULE
 			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
 			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
-			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
 			\item Pour la partie Java, dessinez l'arborescence des fichie, vous travaillerez dans un package  \verb@g12345.Boucles@. 
 					\end{itemize}
@@ -513,7 +511,7 @@ FIN MODULE
         \textbf{Tout nombre entier pair sup\'erieur \`a 3 peut s'\'ecrire comme la somme de deux nombres premiers.}
             \par
         
-          \'Ecrivez un module \verb@isPremier@ qui re\c coit un nombre entier \verb@n@ 
+          \'Ecrivez un algorithme \verb@isPremier@ qui re\c coit un nombre entier \verb@n@ 
           et qui retourne vrai si ce nombre est premier et faux sinon.
         
             \par
@@ -521,14 +519,14 @@ FIN MODULE
         \verb@main@ en Java.
             \par
         
-          \'Ecrivez un module \verb@goldbach@ qui re\c coit en param\`etre 
+          \'Ecrivez un algorithme \verb@goldbach@ qui re\c coit en param\`etre 
           un nombre entier pair \verb@p@ sup\'erieur \`a 3 
           et qui retourne vrai s'il est la somme de 2 nombres premiers et faux sinon.
           Si le \verb@p@ re\c cu n'est sup\'erieur \`a 3, votre programme g\'en\'erera une erreur qui sera g\'er\'ee dans votre m\'ethode 
         \verb@main@ en Java.
             \par
         
-          \'Ecrivez un module, \verb@principal@, qui lit un nombre et v\'erifie que tous les
+          \'Ecrivez un algorithme, \verb@principal@, qui lit un nombre et v\'erifie que tous les
           nombres pairs inf\'erieurs \`a ce nombre sont la somme de 2 nombres premiers. Ce module affiche vrai ou faux selon le cas.
         
             \par

@@ -74,10 +74,8 @@
           <list listStyle="unordered">
             <item><formatted style="code">entier</formatted> pour les nombres entiers ;</item>
             <item><formatted style="code">réel</formatted> pour les nombres réels ;</item>
-            <item><formatted style="code">caractère</formatted> pour les différentes lettres et caractères
-              (par exemple ceux qui apparaissent sur un clavier : ‘a’, ‘1’, ‘#’, etc.)</item>
             <item><formatted style="code">chaine</formatted> pour les variables contenant un ou plusieurs caractère(s) ou aucun (la chaine vide)
-              (par exemple : "Bonjour", "Bonjour le monde", "a", "", etc.)</item>
+              (par exemple : "Bonjour", "Bonjour le monde", "a", "", "1", etc.)</item>
             <item><formatted style="code">booléen</formatted> les variables de ce type 
             ne peuvent valoir que <formatted style="code">vrai</formatted> ou <formatted style="code">faux</formatted></item>
           </list>
@@ -94,7 +92,7 @@
 								<list listStyle="unordered">
 									<item>un prix hors tva ?<gap answers="1 réel,un réel, réel">réel</gap></item>  
 									<item>votre nom ? <gap answers="une chaine,1 chaine, chaine">chaine</gap></item>  
-									<item>vos initiales ?<gap answers="2 caractères,3 caractères">2 caractères</gap></item>  
+									<item>vos initiales ?<gap answers="2 chaines,3 chaines">2 chaines</gap></item>  
 									<item>la longueur d'un rectangle ? <gap answers="réel,1 réel">réel</gap></item>  
 									<item>une date du calendrier ? <gap answers="3 entiers,trois entiers,2 entiers 1 chaine,1 chaine 2 entiers">3 entiers</gap></item>  
 									<item>un moment dans la journée ? <gap answers="3 entiers, trois entiers">3 entiers</gap></item>  
@@ -409,7 +407,7 @@
             </item>
             <item>
             Les mots-clés du langage sont interdits (par exemple for, if, while pour Java et Cobol)
-            et on déconseille d’utiliser les mots-clés du pseudo-code (tels que Lire, Afficher, pour. . .)
+            et on déconseille d’utiliser les mots-clés du pseudo-code (tels que Demander, Afficher, pour. . .)
             </item>
             <item>
             Certains langages n’autorisent pas les caractères accentués (tels que à, ç, ê, ø, etc.)
@@ -451,6 +449,8 @@
         </paragraph>
         <paragraph>
           <formatted style="input">constante ESI = "École Supérieure d’Informatique"</formatted>
+        </paragraph>
+        <paragraph>
           Il est inutile de spécifier leur type, celui-ci étant défini implicitement par la valeur de la constante.
         </paragraph>
         <paragraph>
@@ -500,7 +500,7 @@
             <formatted style="code">x1</formatted> est correct mais pas <formatted style="code">1x</formatted>.
             </item>
             <item>
-            un nom de variable ne peut comporter que des lettres, des chiffres, les caractères <formatted style="code">_</formatted> et <formatted style="code">$</formatted>.
+            Un nom de variable ne peut comporter que des lettres, des chiffres, les caractères <formatted style="code">_</formatted> et <formatted style="code">$</formatted>.
             </item>
             <item>
             L’écriture de noms de variables composés
@@ -529,7 +529,7 @@
 								<list listStyle="unordered">
 									<item>le jour d'une date ?<gap answers="int jour;">int jour;</gap></item>  
 									<item>l'heure d'un moment ? <gap answers="int heure;">int heure;</gap></item>  
-									<item>le prix d’un produit en grande surface ?<gap answers="double prix;">double prix;</gap></item>  
+									<item>le prix d’un produit en grande surface ? <gap answers="double prix;">double prix;</gap></item>  
 									<item>votre nom ? <gap answers="String nom;">String nom;</gap></item>  
 								</list>  
 							</gapText>
@@ -728,13 +728,16 @@ Y = 3; // Idem
           dans un premier temps, seule la première condition est testée. 
           </paragraph>
           <paragraph>
-          Dans le cas du <formatted style="code">ET</formatted>, si cond1 s’avère faux, il est inutile d’évaluer cond2 puisque le résultat sera faux de toute façon ;
-          l’évaluation de cond2 et de l’ensemble de la conjonction ne se fera que si cond1 est vrai.
+          Dans le cas du <formatted style="code">ET</formatted>, si <formatted style="code">cond1</formatted> s’avère faux, 
+          il est inutile d’évaluer <formatted style="code">cond2</formatted> puisque le résultat sera faux de toute façon ;
+          l’évaluation de <formatted style="code">cond2</formatted> 
+          et de l’ensemble de la conjonction ne se fera que si <formatted style="code">cond1</formatted> est vrai.
           </paragraph>
           <paragraph>
-          De même, dans le cas du <formatted style="code">OU</formatted>, si cond1 s’avère vrai, il est inutile d’évaluer cond2 puisque le
-          résultat sera vrai de toute façon ; l’évaluation de cond2 et de l’ensemble de la disjonction
-          ne se fera que si cond1 est faux.
+          De même, dans le cas du <formatted style="code">OU</formatted>, si <formatted style="code">cond1</formatted> s’avère vrai, 
+          il est inutile d’évaluer <formatted style="code">cond2</formatted> puisque le
+          résultat sera vrai de toute façon ; l’évaluation de <formatted style="code">cond2</formatted> et de l’ensemble de la disjonction
+          ne se fera que si <formatted style="code">cond1</formatted> est faux.
           </paragraph>
           <paragraph>
           Dans le cadre de ce cours, nous opterons pour la deuxième interprétation. 
@@ -744,8 +747,8 @@ Y = 3; // Idem
           </paragraph>
           <paragraph>
           Considérons l’expression <formatted style="code">n ≠ 0 ET m/n > 10</formatted>. Si on teste sa valeur
-          de vérité avec une valeur de n non nulle, la première condition est vraie et le résultat de
-          la conjonction dépendra de la valeur de la deuxième condition. Supposons à présent que n
+          de vérité avec une valeur de <formatted style="code">n</formatted> non nulle, la première condition est vraie et le résultat de
+          la conjonction dépendra de la valeur de la deuxième condition. Supposons à présent que <formatted style="code">n</formatted>
           soit nul. L’évaluation court-circuitée donne le résultat faux immédiatement après test de la
           première condition sans évaluer la seconde, tandis que l’évaluation complète entrainerait un
           arrêt de l’algorithme pour cause de division par 0 !
@@ -815,13 +818,13 @@ Y = 3; // Idem
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
-								  <item>15 + 3 ?<gap answers="18">18</gap></item>  
-								  <item>17 - 2 ?<gap answers="15">15</gap></item>  
-								  <item>13/2 ?<gap answers="6.5">6.5</gap></item>  
-								  <item>4.5*3 ?<gap answers="13.5">13.5</gap></item>  
-									<item>15 DIV 4 ?<gap answers="3">3</gap></item>  
+								  <item>15 + 3 ? <gap answers="18">18</gap></item>  
+								  <item>17 - 2 ? <gap answers="15">15</gap></item>  
+								  <item>13/2 ? <gap answers="6.5">6.5</gap></item>  
+								  <item>4.5*3 ? <gap answers="13.5">13.5</gap></item>  
+									<item>15 DIV 4 ? <gap answers="3">3</gap></item>  
 									<item>17 MOD 3 ? <gap answers="2">2</gap></item>  
-									<item>'x'='y' ?<gap answers="faux">faux</gap></item>  
+									<item>'x'='y' ? <gap answers="faux">faux</gap></item>  
 									<item>7<![CDATA[<]]>8 ? <gap answers="vrai">vrai</gap></item>  
 									<item>0<![CDATA[≥]]>0 ? <gap answers="vrai">vrai</gap></item>  
 									<item>3<![CDATA[≥]]>4 ET 4<![CDATA[<]]>8 ? <gap answers="faux">faux</gap></item>  
@@ -839,13 +842,13 @@ Y = 3; // Idem
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
-								  <item>21 + 3 ?<gap answers="24">24</gap></item>  
-								  <item>1 - 2 ?<gap answers="-1">-1</gap></item>  
-								  <item>13/2 ?<gap answers="6">6</gap></item>  
-								  <item>4.5*3 ?<gap answers="13.5">13.5</gap></item>  
-									<item>13.0/2 ?<gap answers="6.5">6.5</gap></item>  
+								  <item>21 + 3 ? <gap answers="24">24</gap></item>  
+								  <item>1 - 2 ? <gap answers="-1">-1</gap></item>  
+								  <item>13/2 ? <gap answers="6">6</gap></item>  
+								  <item>4.5*3 ? <gap answers="13.5">13.5</gap></item>  
+									<item>13.0/2 ? <gap answers="6.5">6.5</gap></item>  
 									<item>15 % 3 ? <gap answers="0">0</gap></item>  
-									<item>'a'=='b' ?<gap answers="faux">faux</gap></item>  
+									<item>'a'=='b' ? <gap answers="faux">faux</gap></item>  
 									<item>7<![CDATA[<]]>8 ? <gap answers="vrai">vrai</gap></item>  
 									<item>0<![CDATA[<=]]>0 ? <gap answers="vrai">vrai</gap></item>  
 									<item>-1<![CDATA[<=]]>4 ET 4<![CDATA[>]]>8 ? <gap answers="faux">faux</gap></item>  
@@ -908,12 +911,10 @@ Y = 3; // Idem
               <list listStyle="unordered">
                 <item>
                   <formatted style="code">varEntière ← varRéelle</formatted> : dans ce cas le contenu de la variable sera la valeur tronquée de l’expression réelle. <newLine/>
-                  Par exemple si « nb » est une variable de type entier,
+                  Par exemple si <formatted style="code">nb</formatted> est une variable de type entier,
                   son contenu après l’instruction <formatted style="input">nb ← 15/4 »</formatted> sera 3.
                 </item>
                 <item><formatted style="code">varRéelle ← varEntière</formatted> : ici, il n’y a pas de perte de valeur.</item>
-                <item><formatted style="code">varChaine ← varCaractère</formatted> : équivalent à <formatted style="code">varChaine ← chaine(varCaractère)</formatted>.</item>
-                <item>Le contraire n’est évidemment pas accepté.</item>
               </list>
             </item>
             <item>
@@ -966,7 +967,8 @@ Y = 3; // Idem
 			  <clarify>
         <paragraph>
           On parle d’<formatted style="bold">affectation externe</formatted> lorsque la valeur à affecter à une variable
-           est donnée par l’utilisateur qui la communique à l’exécutant quand celui-ci le lui demande : cette valeur est
+           est donnée par l’utilisateur qui la communique à l’exécutant quand celui-ci le lui demande : 
+           cette valeur est
           donc externe à la procédure (l’ordinateur ne peut la deviner lui-même !)
         </paragraph>
         <paragraph>
@@ -976,19 +978,19 @@ Y = 3; // Idem
         </paragraph>
         <paragraph>
           Nous noterons :
-          <formatted style="input">lire liste_de_variables_à_lire</formatted>
+          <formatted style="input">demander liste_de_variables_à_lire</formatted>
         </paragraph>
         <paragraph>
-          Exemples <newLine/><newLine/>
-          <formatted style="input">lire nombre1, nombre2</formatted><newLine/><newLine/>
-          <formatted style="input">lire num1, den1, num2, den2</formatted>
+          Exemples :<newLine/><newLine/>
+          <formatted style="input">demander nombre1, nombre2</formatted><newLine/><newLine/>
+          <formatted style="input">demander num1, den1, num2, den2</formatted>
         </paragraph>
         <paragraph>
           L’exécution de cette instruction provoque une pause dans le déroulement de l’algorithme ;
           l’exécutant demande alors à l’utilisateur les valeurs des variables à lire. Ces valeurs viennent
           donc de l’extérieur ; une fois introduites dans le système, elles sont affectées aux variables
-          concernées et l’algorithme peut reprendre son cours. Les possibilités d’introduction de don-
-          nées sont nombreuses : citons par exemple l’encodage de données au clavier, un clic de souris,
+          concernées et l’algorithme peut reprendre son cours. Les possibilités d’introduction de données
+          sont nombreuses : citons par exemple l’encodage de données au clavier, un clic de souris,
           le toucher d’un écran tactile, des données provenant d’un fichier, etc.
         </paragraph>
         </clarify>
@@ -1012,7 +1014,7 @@ Y = 3; // Idem
           Nous noterons :
           </paragraph>
           <paragraph cssClass="java">
- import java. util .Scanner;
+import java. util .Scanner;
 // ...
 Scanner clavier = new Scanner(System.in);
 // ...
@@ -1055,7 +1057,7 @@ int nombre1 = clavier. nextInt ();
           Remarques :
           <list listStyle="unordered">
             <item>
-              Ce ne serait pas une erreur fondamentale de remplacer lire par recevoir ou afficher
+              Ce ne serait pas une erreur fondamentale de remplacer demander par recevoir ou afficher
               par écrire. Il n’y a évidemment pas de confusion possible à partir du moment où l’on
               sait qu’il s’agit de primitives d’échange entre l’extérieur et l’ordinateur exécutant la
               procédure, mais par principe, il est conseillé d’utiliser une syntaxe commune et limitée
@@ -1107,16 +1109,16 @@ int nombre1 = clavier. nextInt ();
 								  <item>Quel est le contenu de la variable entière n à l'issue de ces 3 lignes de code?<newLine/>
                     n ← 25<newLine/>
                     n ← n DIV 2<newLine/>
-                    n ← n MOD 7 ?<newLine/>
+                    n ← n MOD 7 ? <newLine/>
                     <gap answers="5">5</gap></item>  
-								  <item>Quelle est la ligne de code qui réalise l'affectation externe de la variable capital ?<gap answers="lire capital">lire capital</gap></item>  
+								  <item>Quelle est la ligne de code qui réalise l'affectation externe de la variable capital ?<gap answers="demander capital">demander capital</gap></item>  
 								  <item>Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire ?<gap answers="afficher salaire">afficher salaire</gap></item>  
 									<item>Dans un algorithme, on veut mettre dans la variable c le produit des contenus des
 									  variables a et b. Que doit-on écrire?<gap answers="c ← a*b">c ← a*b</gap></item>  
 									<item>Écrivez l'instruction qui a pour effet de mettre clr dans la variable acronyme (de type chaine) <gap answers="">acronyme ← "clr"</gap></item>  
 									<item>Que va afficher le programme suivant si l’utilisateur encode « Toto » ?<newLine/>
 									  monNom : chaine<newLine/>
-									  lire monNom<newLine/>
+									  demander monNom<newLine/>
                     afficher « monNom »<newLine/>
                     <gap answers="monNom">monNom</gap></item>  
 								</list>  
@@ -1139,12 +1141,12 @@ int nombre1 = clavier. nextInt ();
 								  <item>Quel est le contenu de la variable entière n à l'issue de ces 3 lignes de code?<newLine/>
                     int n = 13<newLine/>
                     n ← n / 2<newLine/>
-                    n ← n % 3 ?<newLine/>
+                    n ← n % 3 ? <newLine/>
                     <gap answers="0">0</gap></item>  
-								  <item>Quelle est la ligne de code qui réalise l'affectation externe de la variabl réelle capital ?<gap answers="">capital=clavier.nextDouble();</gap></item>  
-								  <item>Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire ?<gap answers="">System.out.println(salaire);</gap></item>  
+								  <item>Quelle est la ligne de code qui réalise l'affectation externe de la variabl réelle capital ? <gap answers="">capital=clavier.nextDouble();</gap></item>  
+								  <item>Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire ? <gap answers="">System.out.println(salaire);</gap></item>  
 									<item>Dans un code java, on veut mettre dans la variable c le produit des contenus des
-									  variables a et b. Que doit-on écrire?<gap answers="c = a*b;">c = a*b;</gap></item>  
+									  variables a et b. Que doit-on écrire ? <gap answers="c = a*b;">c = a*b;</gap></item>  
 									<item>Écrivez l'instruction qui a pour effet de mettre clr dans la variable acronyme (de type chaine) <gap answers="">acronyme = "clr";</gap></item>  
 								</list>  
 							</gapText>
@@ -1185,20 +1187,20 @@ int nombre1 = clavier. nextInt ();
         Par exemple, un choix judicieux de noms de variables peut s’avérer bien plus efficace que des commentaires superflus.
       </paragraph>
       <paragraph>
-        Nous prendrons l’habitude de commenter chaque module en précisant ce qu’il fait.
+        Nous prendrons l’habitude de commenter chaque algorithme en précisant ce qu’il fait.
       </paragraph>
     </clarify>
     </learningObject>
     
     <learningObject title="Documenter son code Java">
-    <!-- ============================================================ -->
+    <!-- ====================================== -->
     <clarify>
       <paragraph>Il existe plusieurs manières d’ajouter un commentaire</paragraph>
       <paragraph cssClass="java">
 // Commentaire sur une ligne
 </paragraph>
       <paragraph cssClass="java">
-  /* Commentaire sur
+/* Commentaire sur
   plusieurs lignes */
 </paragraph>
     </clarify>
@@ -1216,46 +1218,53 @@ int nombre1 = clavier. nextInt ();
     </entry>
     
     <learningObject title="Structure générale d’un algorithme">
-    <!-- ============================================================ -->
+    <!-- ============================================= -->
       <clarify>
         <paragraph>
-          La traduction d’un algorithme en pseudo-code constituera le contenu d’un module. 
-          Un module contient donc la solution algorithmique d’un problème donné (ou d’une de ses parties).
+          Un algorithme contient la solution algorithmique d’un problème donné (ou d’une de ses parties).
+        </paragraph>
+        <paragraph>
+			    <multimedia src="../image/methode.png" type="png" />
+        </paragraph>
+        <paragraph>
           Sa structure générale sera la suivante :
         </paragraph>
         <paragraph cssClass="code">
-module nomDuModule()
-    déclaration des variables et constantes utilisées dans le module
-    lecture des données
-    instructions utilisant les données lues
-    communication des résultats
-fin module
+algorithme nomDeAlgorithme(paramètres)
+    instructions
+fin algorithme
+				</paragraph>
+        <paragraph cssClass="code">
+algorithme nomDeAlgorithme(paramètres) → type
+    instructions
+    retourner expression
+fin algorithme
 				</paragraph>
         <paragraph>
           Remarques :
           <list listStyle="unordered">
             <item>Le code d’un algorithme sera toujours compris entre la première ligne, 
-            appelée « <formatted style="bold">entête</formatted> » qui commence par le mot « module » suivi du nom choisi pour l’algorithme,
-            et la ligne finale « fin module ».
+            appelée « <formatted style="bold">entête</formatted> » qui commence par le mot « algorithme » suivi du nom choisi pour l’algorithme,
+            et la ligne finale « fin algorithme ».
             </item> 
             <item>Le code compris entre l’entête et la ligne finale sera toujours légèrement décalé vers la droite, 
               c’est un premier exemple d’<formatted style="bold">indentation</formatted> indispensable pour la lisibilité d’un programme, 
               nous y reviendrons lors de l’étude des structures alternatives et répétitives.
             </item>
-            <item>Comme pour les variables, le <formatted style="bold">nomDuModule</formatted> 
+            <item>Comme pour les variables, le <formatted style="bold">nomDeAlgorithme</formatted> 
             devra être <formatted style="bold">approprié</formatted> au contenu ! 
-            Par exemple, sommerNombres(), additionnerFractions() plutôt que goPartez() ! 
+            Par exemple, sommerNombres(nb1, nb2 : réels), additionnerFractions(num1, num2, dén1, dén2 : entiers) plutôt que goPartez() ! 
             </item>
-            <item>Le rôle des <formatted style="bold">parenthèses</formatted> qui suivent le nom du module sera expliqué plus tard.</item>
             <item>Il va de soi que toutes les parties de cette structure générale ne seront pas toujours 
-            nécessaires : certains algorithmes ne nécessiteront pas de lecture de données, d’autres 
+            nécessaires : certains algorithmes ne nécessiteront pas de passage de paramètres, d’autres 
             ne devront pas communiquer des résultats...
             </item>
             <item>Pour la <formatted style="bold">lisibilité</formatted>, 
-            on veillera toujours à ce qu’un module tienne sur une vingtaine de 
-            lignes (donc, en pratique, sur un écran de 40 x 80 caractères ou une page). Ceci implique 
-            que si le module devait être plus long, il faudrait le découper, comme nous le verrons 
-            plus loin.
+            on veillera toujours à ce qu’un algorithme tienne sur une vingtaine de 
+            lignes (donc, en pratique, sur un écran de 40 x 80 caractères ou une page). 
+            </item>
+            <item>
+            Il devra résoudre un seul problème.
             </item>
           </list>
         </paragraph>
@@ -1289,7 +1298,7 @@ public class NomClasse {
       <clarify>
         <paragraph>
           Quand un programme Java s'exécute, il démarre à la méthode principale.
-          <formatted style="bold">Méthode</formatted> est le mot Java équivalent de module en algo.
+          <formatted style="bold">Méthode</formatted> est le mot Java équivalent d'"algorithme".
         </paragraph>
         <paragraph>
           La méthode principale s'appelle <formatted style="input">public static void main(String [] args) </formatted> et s'insère dans la classe de la façon suivante :
@@ -1378,88 +1387,77 @@ public class Hello {
           <selfCheck title="Compréhension" shuffle="no">
 						<fillInBlanks>
 							<question>
-							  Que vont-ils afficher si à chaque fois les deux nombres lus au départ sont successivement 2 et 3 ?
+							  Que vont-ils retourner si à chaque fois les deux nombres reçus au départ sont successivement 2 et 3 ?
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
 									<item>
 										<paragraph cssClass="code">
-module exerciceA()
-  lire a, b
+algorithme exerciceA (a, b : entiers) → entier
   b ← b+2*a
-  afficher b
-fin module
+  retourner b
+fin algorithme
 				</paragraph>
 				            <gap answers="7">7</gap> 
 									</item>  
 									<item>
 										<paragraph cssClass="code">
-module exerciceB()
-  a,b : entiers
-  lire a, b
+algorithme exerciceB (a, b : entiers) → entier
   a ← a+2*b
-  afficher a
-fin module
+  retourner a
+fin algorithme
 				</paragraph>
 				            <gap answers="8">8</gap> 
 									</item>  
 									<item>
 										<paragraph cssClass="code">
-module exerciceC()
-  a,b : entiers
-  lire b, a
+algorithme exerciceC (b, a : entiers) → entier
   b ← b+2*a
-  afficher b
-fin module
+  retourner b
+fin algorithme
 				</paragraph>
 				            <gap answers="8">8</gap> 
 									</item>
 									<item>
 										<paragraph cssClass="code">
-module exerciceD()
-  a,b : entiers
-  quotient : réel
-  lire b, a
-  quotient ← a / b
-  afficher quotient
-fin module
+algorithme exerciceD (a, b : entiers) → réel
+  retourner a / b
+fin algorithme
 				</paragraph>
 				            <gap answers="1.5">1.5</gap> 
 									</item>  
 									<item>
 										<paragraph cssClass="code">
-module exerciceE()
+algorithme exerciceE () → entier
   a, b, c, d : entiers
-  lire c, d
+  demander c, d
   a ← 2*c+5*d
   b ← 2+c*3+d
   c ← a MOD b
-  afficher a DIV c
-fin module
+  retourner a DIV c
+fin algorithme
 				</paragraph>
 				            <gap answers="2">2</gap> 
 									</item>  
 									<item>
 										<paragraph cssClass="code">
-module exerciceF()
-  x, y : réels
-  lire x, y
+algorithme exerciceF (x, y : réels) → réel
   x ← x*x 
   x ← x*x+y*y 
   x ← √x
-  afficher x
-fin module
+  retourner x
+fin algorithme
 				</paragraph>
-				            <gap answers="5">5</gap> 
+				            <gap answers="5">5.0</gap> 
 									</item>  
 									<item>
 										<paragraph cssClass="code">
-module exerciceG()
+algorithme exerciceG() → réel
   x, y : réels
-  lire x, x
+  demander x, x
   x ← x MOD x + (x + 1) DIV 2
-  afficher x + 3
-fin module
+  retourner x + 3
+fin algorithme
 				</paragraph>
 				            <gap answers="5">5</gap> 
 									</item>  
@@ -1498,6 +1496,7 @@ public class Exercice1 {
         </paragraph>
 				            <gap answers="2 3">2 3</gap> 
 									</item>  
+									
 									<item>
 										<paragraph cssClass="java">
 import java.util.Scanner;
@@ -1506,13 +1505,17 @@ public class Exercice2 {
         Scanner clavier = new Scanner(System.in);
         int nb1 = clavier.nextInt();
         int nb2 = clavier.nextInt();
-        int nb3 = 2*nb1 + nb2;
+        int nb3 = exercice(nb1, nb2);
         System.out.println(nb3);
+    }
+    public static int exercice(int nb1, int nb2) {
+        retourner 2*nb1 + nb2;
     }
 }
         </paragraph>
 				            <gap answers="7">7</gap> 
 									</item>  
+									
 									<item>
 										<paragraph cssClass="java">
 import java.util.Scanner;
@@ -1521,13 +1524,17 @@ public class Exercice3 {
         Scanner clavier = new Scanner(System.in);
         int nb2 = clavier.nextInt();
         int nb1 = clavier.nextInt();
-        int nb3 = 2*nb1 + nb2;
+        int nb3 = exercice(nb1, nb2);
         System.out.println(nb3);
+    }
+    public static int exercice(int nb1, int nb2) {
+        retourner 2*nb1 + nb2;
     }
 }
         </paragraph>
 				            <gap answers="8">8</gap> 
 									</item>  
+									
 									<item>
 										<paragraph cssClass="java">
 import java.util.Scanner;
@@ -1542,6 +1549,7 @@ public class Exercice4 {
         </paragraph>
 				            <gap answers="7">7</gap> 
 									</item>  
+									
 									<item>
 										<paragraph cssClass="java">
 import java.util.Scanner;
@@ -1570,6 +1578,7 @@ public class Exercice6 {
         </paragraph>
 				            <gap answers="2">2</gap> 
 									</item> 
+									
 									<item>
 										<paragraph cssClass="java">
 import java.util.Scanner;
@@ -1655,10 +1664,10 @@ public class Exercice7 {
 								il s'agit d'une erreur générée par la machine virtuelle java car :
 							</paragraph>
 						</question>
-						<answer feedback="" correct="no">la machine virtuelle est mal installée</answer>
-						<answer feedback="" correct="no">le source n'a pas été compilé</answer>
+						<answer feedback=" " correct="no">la machine virtuelle est mal installée</answer>
+						<answer feedback=" " correct="no">le source n'a pas été compilé</answer>
 						<answer feedback="il manque le mot clé static" correct="yes">l'entête de la méthode main est incorrect</answer>
-						<answer feedback="" correct="no">on exécute la mauvaise classe</answer>
+						<answer feedback=" " correct="no">on exécute la mauvaise classe</answer>
 						<solution>En effet, quel est-il d'ailleurs ?</solution>
 					</multipleChoice>
 				</selfCheck>
@@ -1693,8 +1702,8 @@ public class Exercice7 {
 								il s'agit d'une erreur générée par la machine virtuelle java car :
 							</paragraph>
 						</question>
-						<answer feedback="" correct="no">la machine virtuelle est mal installée</answer>
-						<answer feedback="" correct="no">l'entête de la méthode main est incorrect</answer>
+						<answer feedback=" " correct="no">la machine virtuelle est mal installée</answer>
+						<answer feedback=" " correct="no">l'entête de la méthode main est incorrect</answer>
 						<answer feedback="En effet... quelle classe tente-t-il d'exécuter ? (Relisez bien la commande d'exécution)" correct="yes">on exécute la mauvaise classe</answer>
 						<solution></solution>
 					</multipleChoice>
@@ -1707,7 +1716,7 @@ public class Exercice7 {
     <!-- ============================================================ -->
       <act>
         <paragraph title="Consignes">
-          Il est temps de se lancer et d’écrire vos premiers modules et programmes Java correspondant. 
+          Il est temps de se lancer et d’écrire vos premiers algorithmes et programmes Java correspondant. 
           Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
           <list listStyle="unordered">
             <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
@@ -1730,19 +1739,19 @@ public class Exercice7 {
         <paragraph title="Exercice résolu">
           La somme des angles d’un triangle est égale dans tous les cas à 180°. Écrivez un algorithme qui lit la valeur de deux angles d’un triangle, et affiche la valeur du 3e. 
         </paragraph>
-        <paragraph>Par exemple, si on lit 40 pour le premier angle et 60 pour lesecond, on doit trouver 80 pour le troisième (40 + 60 = 100,le troisième angle vaut donc 80).</paragraph>
-        <paragraph>Par exemple, si on lit 90 pour le premier angle et 10 pour lesecond, on doit trouver 80 pour le troisième (90 + 10 = 100,le troisième angle vaut donc 80).</paragraph>
-        <paragraph>Par exemple, si on lit 89 pour le premier angle et 30 pour lesecond, on doit trouver 61 pour le troisième (89 + 30 = 119,le troisième angle vaut donc 61).</paragraph>
-        <paragraph>Par exemple, si on lit 5 pour le premier angle et 5 pour lesecond, on doit trouver 170 pour le troisième (5 + 5 = 10,le troisième angle vaut donc 170).</paragraph>
-        <paragraph>Par exemple, si on lit 0 pour le premier angle et 180 pour lesecond, on doit trouver 0 pour le troisième (0 + 180 = 180,le troisième angle vaut donc 0).</paragraph>
+        <paragraph>Par exemple, si on lit 40 pour le premier angle et 60 pour le second, on doit trouver 80 pour le troisième (40 + 60 = 100, le troisième angle vaut donc 80).</paragraph>
+        <paragraph>Par exemple, si on lit 90 pour le premier angle et 10 pour le second, on doit trouver 80 pour le troisième (90 + 10 = 100, le troisième angle vaut donc 80).</paragraph>
+        <paragraph>Par exemple, si on lit 89 pour le premier angle et 30 pour le second, on doit trouver 61 pour le troisième (89 + 30 = 119, le troisième angle vaut donc 61).</paragraph>
+        <paragraph>Par exemple, si on lit 5 pour le premier angle et 5 pour le second, on doit trouver 170 pour le troisième (5 + 5 = 10, le troisième angle vaut donc 170).</paragraph>
+        <paragraph>Par exemple, si on lit 0 pour le premier angle et 180 pour le second, on doit trouver 0 pour le troisième (0 + 180 = 180, le troisième angle vaut donc 0).</paragraph>
         <paragraph>
           Quelles sont les données ? :
           <list listStyle="ordered">
-            <item>les 2 angles du triangle, ils sont lus au clavier.</item>
+            <item>les 2 angles du triangle, des réels.</item>
           </list>
           Que cherche-t-on ? :
           <list listStyle="ordered">
-            <item>la valeur du 3e angle du triangle, à afficher à l'écran.</item>
+            <item>la valeur du 3e angle du triangle, un réel.</item>
           </list>
           Comment faire ? :
           <list listStyle="ordered">
@@ -1752,12 +1761,9 @@ public class Exercice7 {
           </list>
           Écrivons l'algorithme :
           <paragraph cssClass="code">
-module troisièmeAngleTriangle()
-    angle1, angle2, angle3 : réels
-    lire angle1, angle2
-    angle3 ← 180 - (angle1 + angle2)
-    afficher angle3
-fin module
+algorithme troisièmeAngleTriangle(angle1, angle2 : réels)
+    retourner 180 - (angle1 + angle2)
+fin algorithme
           </paragraph>
           Traduisons cet algorithme en java :
           <paragraph cssClass="java">
@@ -1767,8 +1773,12 @@ public class Triangle{
         Scanner clavier = new Scanner(System.in);
         double angle1 = clavier.nextDouble();
         double angle2 = clavier.nextDouble();
-        double angle3 = 180 - (angle1 + angle2);
+        double angle3 = troisiemeAngleTriangle(angle1, angle2);
         System.out.println(angle3);
+    }    
+    
+    public static double troisiemeAngleTriangle(double angle1, double angle2) {
+        return 180 - (angle1 + angle2);
     }
 }
         </paragraph>
@@ -1778,16 +1788,14 @@ public class Triangle{
         <paragraph title="À vous">
         Écrivez les algorithmes et codez les programmes Java correspondant qui 
           <list listStyle="ordered">
-            <item>calcule et affiche la surface d’un carré en lisant la valeur de son côté au clavier.</item>
-            <item>calcule et affiche la surface d’un rectangle  en lisant les valeurs de sa longueur et sa largeur.</item>
-            <item>calcule et affiche la surface d’un cercle en lisant la valeur de son rayon au clavier.  (Pensez à aller voir la classe Math pour obtenir la valeur de PI ;))</item>
+            <item>calcule et retourne la surface d’un carré en recevant la valeur de son côté.</item>
+            <item>calcule et retourne la surface d’un rectangle en recevant les valeurs de sa longueur et sa largeur.</item>
+            <item>calcule et retourne la surface d’un cercle en recevant la valeur de son rayon.  (Pensez à aller voir la classe Math pour obtenir la valeur de PI ;))</item>
             <item>étant donné le prix unitaire d’un produit (hors TVA), le taux de TVA (en %) 
-            et la quantité de produit vendue à un client, calcule et affiche le prix total à payer par ce client.</item>
+            et la quantité de produit vendue à un client, calcule et retourne le prix total à payer par ce client.</item>
             <item>réalise la permutation du contenu de deux variables.</item>
             <item>calcule la somme des chiffres d’un nombre entier de 3 chiffres. Réflexion : l’algorithme est-il aussi valide pour les entiers inférieurs à 100 ?</item>
-            <item>étant donné un moment dans la journée donné par trois nombres lus, à savoir, heure, minute et seconde, calcule le nombre de secondes écoulées depuis minuit.</item>
-            <item>étant donné un temps écoulé dans la journée exprimé en secondes, calcule et affiche ce temps sous la forme de trois nombres (heure, minute et seconde). <newLine/>
-            Ex : 10000 secondes donnera 2h 46’40”</item>
+            <item>étant donné un moment dans la journée donné par trois nombres reçus, à savoir, heure, minute et seconde, calcule le nombre de secondes écoulées depuis minuit.</item>
           </list>
         </paragraph>
       </act>

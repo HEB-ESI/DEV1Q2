@@ -62,19 +62,19 @@ fin tant que
       <paragraph title="Afficher les nombres plus petits que 10">On affiche uniquement les nombres inférieurs (pas strictement) à 10 .</paragraph>
       <paragraph cssClass="code">
 // Affiche les nombres de 1 à 10.
-module compterJusque10 () // version avec tant que
+algorithme compterJusque10 () // version avec tant que
     nb : entier
     nb ← 1 // c’est le premier nombre à afficher
     tant que nb ≤ 10 faire // c’est le premier nombre à afficher
       afficher nb  // on affiche la valeur de la variable nb
       nb ← nb + 1 // on passe au nombre suivant
     fin tant que
-fin module
+fin algorithme
       </paragraph>
       <paragraph title="Somme de nombres"> Après chaque nombre, on demande à l’utilisateur s’il y a encore un nombre à additionner.</paragraph>
       <paragraph cssClass="code">
 // Lit des valeurs entières et retourne la somme des valeurs lues.
-module sommeNombres() → entier
+algorithme sommeNombres() → entier
     valeur : entier // un des termes de l’addition
     somme : entier // la somme
     somme ← 0
@@ -84,7 +84,7 @@ module sommeNombres() → entier
       lire valeur // remarquer l’endroit où on lit une valeur.
     fin tant que
 retourner somme
-fin module
+fin algorithme
       </paragraph>
     </look>
 		</learningObject>
@@ -143,30 +143,7 @@ public class Exemple {
       System.out. println (somme);
     }
 }]]></paragraph>
-    <paragraph>Affichera 0 si le premier nb lu vaut -5.</paragraph>
-    
-    <paragraph title="Somme d'entiers positifs"></paragraph>
-      <paragraph cssClass="java">
-<![CDATA[import java. util .Scanner;
-public class Exemple {
-    /**
-     * Affiche la somme d entiers positifs entres au clavier .
-     * S arrete des qu une valeur nulle ou negative est donnee.
-     * @param args non utilise
-    */
-    public static void main(String [] args) {
-      Scanner clavier = new Scanner(System.in);
-      int nb;
-      int somme = 0;
-      nb = clavier . nextInt ();
-      while ( nb > 0 ) {
-        somme = somme + nb;
-        nb = clavier . nextInt ();
-      }
-      System.out. println (somme);
-    }
-}]]></paragraph>
-    <paragraph>Affichera 0 si le premier nb lu vaut -5.</paragraph>
+    <paragraph>affichera 0 si le premier nb lu vaut -5.</paragraph>
     
     <paragraph title="Un exemple complet"></paragraph>
       <paragraph cssClass="java">
@@ -216,29 +193,28 @@ public class Lecture {
     
   </learningObject>
 
-		<learningObject title="faire - jusqu’à ce que">
+		<learningObject title="faire - tant que">
 		<!-- ================================================ -->
 		<clarify>
 		  <paragraph cssClass="code">
 faire
     séquence d’instructions à exécuter
-jusqu'à ce que conditionPourSORTIRDeLaBoucle
+tant que condition
       </paragraph>
 		  <paragraph>
-        Cette structure est très proche du « <formatted style="code">tant que</formatted> » à deux différences près :
-        <list listStyle="ordered">
+        Cette structure est très proche du « <formatted style="code">tant que</formatted> » à une différence près :
+        <list listStyle="unordered">
           <item>
             Le <formatted style="bold">test</formatted> est fait <formatted style="bold">à la fin</formatted> et pas au début. 
             La tâche est donc toujours <formatted style="bold">exécutée au moins une fois</formatted>.
           </item>
-          <item>On donne la <formatted style="bold">condition pour arrêter</formatted> et pas pour continuer.</item>
         </list>
       </paragraph>
 		  <paragraph>En pseudo-code :</paragraph>
       <paragraph cssClass="code">
 faire
     séquence d’instructions à exécuter
-jusqu’à ce que condition
+tant que condition
       </paragraph>
       <paragraph>
         La <formatted style="bold">condition</formatted> est une expression délivrant un résultat 
@@ -246,9 +222,9 @@ jusqu’à ce que condition
       </paragraph>
       <paragraph>
         Il faut que la séquence d’instructions comprise entre <formatted style="code">faire</formatted> 
-        et <formatted style="code">jusqu’à ce que</formatted> contienne au moins 
+        et <formatted style="code">tant que</formatted> contienne au moins 
         <formatted style="bold">une instruction qui modifie la condition</formatted> de telle manière 
-        qu’elle puisse <formatted style="bold">devenir vraie</formatted> à un moment donné pour arrêter l’itération.
+        qu’elle puisse <formatted style="bold">devenir fausse</formatted> à un moment donné pour arrêter l’itération.
       </paragraph>
       <paragraph>
         La tâche est toujours <formatted style="bold">exécutée au moins une fois</formatted>.
@@ -263,7 +239,7 @@ jusqu’à ce que condition
       <paragraph title="Somme de nombres"> Après chaque nombre, on demande à l’utilisateur s’il y a encore un nombre à additionner.</paragraph>
       <paragraph cssClass="code">
 // Lit des valeurs entières et retourne la somme des valeurs lues.
-module sommeNombres() → entier
+algorithme sommeNombres() → entier
     encore : booléen // est-ce qu’il reste encore une valeur à additionner ?
     valeur : entier // un des termes de l’addition
     somme : entier // la somme
@@ -272,9 +248,9 @@ module sommeNombres() → entier
       lire valeur
       somme ← somme + valeur
       lire encore
-    jusqu’à ce que NON encore
+    tant que encore
     retourner somme
-fin module
+fin algorithme
       </paragraph>
       <paragraph>Avec cette solution, on additionne au moins une valeur.</paragraph>
       
@@ -291,25 +267,13 @@ fin module
 		  <paragraph cssClass="code">
 faire
     séquence d’instructions à exécuter
-jusqu'à ce que conditionPourSORTIRDeLaBoucle
-      </paragraph>
-      <paragraph>est </paragraph>
-		  <paragraph  cssClass="code">
-do ( condition ) {
-    séquence d’instructions à exécuter
-}while( ! conditionPourSORTIRDeLaBoucle );
-		  </paragraph>
-		  <paragraph>il s'agirait plutôt en Java d'un </paragraph>
-		  <paragraph cssClass="code">
-faire
-    séquence d’instructions à exécuter
-tant que conditionPourRESTERDansLaBoucle
+tant que conditionPourResterDansLaBoucle
       </paragraph>
       <paragraph>c-à-d </paragraph>
 		  <paragraph  cssClass="code">
 do ( condition ) {
     séquence d’instructions à exécuter
-}while( conditionPourRESTERDansLaBoucle );
+} while( conditionPourResterDansLaBoucle );
 		  </paragraph>
 		  car la condition est inversée.
     </clarify>
@@ -321,10 +285,10 @@ do ( condition ) {
 
 public static void puissance2() {
     int puissance = 1;
-    while ( puissance < 100 ) {
+    do {
       System.out. print(puissance + " ");
       puissance = 2 * puissance ;
-    }
+    } while ( puissance < 100 );
 }]]></paragraph>
       <paragraph>affichera <formatted style="code">1 2 4 8 16 32 64 </formatted></paragraph>
       
@@ -344,7 +308,7 @@ public class Exemple {
       do{
         nb = clavier . nextInt ();
         somme = somme + nb;
-      }while ( ( nb > 0 );
+      } while ( nb > 0 );
       System.out. println (somme);
     }
 }]]></paragraph>
@@ -370,11 +334,14 @@ fin pour
       </paragraph>
       <paragraph> est équivalent à </paragraph>
       <paragraph cssClass="code">
+{
+variable : entier
 variable ← début
 tant que variable ≤ fin faire
     séquence d’instructions à exécuter
     variable ← variable + pas // ou variable ← variable + 1 si le pas est omis.
 fin tant que
+}
       </paragraph>
       <paragraph>
         Dans ce type de structure, <formatted style="code">début</formatted>, 
@@ -431,7 +398,7 @@ fin tant que
       </paragraph>
       <paragraph>
         Il est aussi déconseillé d’utiliser <formatted style="code">variable</formatted> à la sortie
-        de la structure pour sans lui affecter une nouvelle valeur.
+        de la structure <formatted style="code">pour</formatted> sans lui affecter une nouvelle valeur.
       </paragraph>
       <paragraph>
         <multimedia src="../image/bouclePour.jpg" type="jpeg" />
@@ -442,75 +409,69 @@ fin tant que
       <paragraph>Par exemple : </paragraph>
       <paragraph cssClass="code">
 // Affiche les nombres de 1 à 10.
-module compterJusque10 () // version avec pour
-    nb : entier
+algorithme compterJusque10 () // version avec pour
     pour nb de 1 à 10 faire // par défaut le pas est de 1
       afficher nb
     fin pour
-fin module
+fin algorithme
     </paragraph>
     <paragraph title="Afficher les nombres plus petits que n">On affiche uniquement les nombres inférieurs (pas strictement) à n.</paragraph>
     <paragraph cssClass="code">
 // Reçoit un nombre et affiche les nombres de 1 à ce nombre.
-module afficherN(n↓ : entier)
-    nb : entier
+algorithme afficherN (n↓ : entier)
     pour nb de 1 à n faire
       afficher nb
     fin pour
-fin module
+fin algorithme
     </paragraph>
     <paragraph title="Afficher les nombres pairs plus petits que 10">On affiche uniquement les nombres pairs jusqu’à 10.</paragraph>
     <paragraph cssClass="code">
 // Reçoit un nombre et affiche les nombres pairs jusqu’à ce nombre.
 // n : limite des nombres à afficher.
 Exemple : si n vaut 10, les nombres pairs de 1 à 10 sont : 2, 4, 6, 8, 10.
-module afficherPair (n↓ : entier)
-    nb : entier
+algorithme afficherPair (n↓ : entier)
     pour nb de 2 à n par 2 faire
       afficher nb
     fin pour
-fin module
+fin algorithme
     </paragraph>
     <paragraph title="Afficher les nombres pairs plus petits que n">On affiche uniquement les nombres pairs jusqu’à la limite n.</paragraph>
     <paragraph cssClass="code">
 // Reçoit un nombre et affiche les nombres pairs jusqu’à ce nombre.
 // n : limite des nombres à afficher.
 // Exemple : si n vaut 10, les nombres pairs de 1 à 10 sont : 2, 4, 6, 8, 10.
-module afficherPair (n↓ : entier)
-    i: entier
+algorithme afficherPair  (n↓ : entier)
     pour i de 1 à n DIV 2 faire
       afficher 2 * i
     fin pour
-fin module
+fin algorithme
     </paragraph>
     <paragraph title="Afficher n nombres pairs">On affiche les n premiers nombres pairs.</paragraph>
     <paragraph cssClass="code">
 // Reçoit un nombre et affiche ce nombre de nombres pairs.
 // n: le nombre de nombres à afficher.
 // Exemple : si n vaut 10, les 10 premiers nombres pairs sont : 2, 4, 6, 8, 10, 12, 14, 16, 18, 20.
-module afficherPair ()
-    i : entier
+algorithme afficherPair ()
     pour i de 1 à n faire
       afficher 2 * i
     fin pour
-fin module
+fin algorithme
     </paragraph>
     <paragraph title="Somme de nombres">L’utilisateur indique le nombre de termes au départ.</paragraph>
     <paragraph cssClass="code">
 // Lit des valeurs entières et retourne la somme des valeurs lues.
-module sommeNombres() → entier
+algorithme sommeNombres () → entier
     nbValeurs : entier // nb de valeurs à additionner
     valeur : entier // un des termes de l’addition
     somme : entier // la somme
-    i : entier // itérateur
     somme ← 0 // la somme se construit petit à petit. Elle vaut 0 au départ
-    lire nbValeurs
+    demander nbValeurs
     pour i de 1 à nbValeurs faire
       lire valeur
       somme ← somme + valeur
     fin pour
     retourner somme
-fin module
+fin algorithme
     </paragraph>
     </look>
 		</learningObject>
@@ -528,7 +489,7 @@ fin pour
       </paragraph>
       <paragraph>est </paragraph>
 		  <paragraph  cssClass="code">
-<![CDATA[for ( int i =début; i<=fin; i=i+pas ) {
+<![CDATA[for ( int i = début; i <= fin;  i = i+pas ) {
     séquence d’instructions à exécuter
 }
   ]]></paragraph>
@@ -545,7 +506,7 @@ fin pour
     public static void main(String [] args) {
       int somme;
       somme = 0;
-      for ( int i =2; i<=100; i=i+2 ) {
+      for ( int i = 2; i <= 100; i = i+2 ) {
         somme = somme + i;
       }
       System.out. println (somme);
@@ -560,7 +521,7 @@ fin pour
     * @param args non utilise
     */
     public static void main(String [] args) {
-      for ( int i=10; i>=1; i=i−1 ) {
+      for ( int i = 10; i >= 1; i = i−1 ) {
         System.out. println ( i );
       }
       System.out. println ("Partez !");
@@ -569,7 +530,7 @@ fin pour
     </look>
     
     <clarify>
-      <paragraph><formatted style="code">i++;</formatted> est un raccourci pour <formatted style="code">i =i+1;</formatted></paragraph>
+      <paragraph><formatted style="code">i++;</formatted> est un raccourci pour <formatted style="code">i = i+1;</formatted></paragraph>
     </clarify>
     
     <look>
@@ -580,7 +541,7 @@ fin pour
     * @param args non utilise
     */
     public static void main(String [] args) {
-      for ( int i =1; i<=10; i++ ) {
+      for ( int i = 1; i <= 10; i++ ) {
         System.out. println ( i );
       }
     }
@@ -594,7 +555,8 @@ fin pour
 		<!-- ================================================ -->
 		<clarify>
 		  <paragraph>
-		    En pratique, il est possible d’utiliser systématiquement la boucle tant que qui peut s’adapter
+		    En pratique, il est possible d’utiliser systématiquement la boucle 
+		    <formatted style="code">tant que</formatted> qui peut s’adapter
         à toutes les situations. Cependant, 
         <list listStyle="unordered">
             <item>
@@ -652,12 +614,11 @@ fin pour
       </paragraph>
       <paragraph>Par exemple, pour afficher la suite des n premiers nombres pairs</paragraph>
       <paragraph cssClass="code">
-module nombrePair (n↓ : entier)
-    i : entier
+algorithme nombrePair (n↓ : entier)
     pour i de 1 à n faire
       afficher 2 * i
     fin pour
-fin module
+fin algorithme
       </paragraph>
       <paragraph>
         Parfois, il est difficile (voire impossible) de trouver <formatted style="code">f(i)</formatted>.<newLine/>
@@ -678,14 +639,14 @@ fin pour
         2 et le nombre suivant se calcule en ajoutant 2 au nombre courant.
       </paragraph>
       <paragraph cssClass="code">
-module suite1 (n↓ : entier)
-    nb, i : entiers
+algorithme suite1 (n↓ : entier)
+    nb : entier
     nb ← 2
     pour i de 1 à n faire
       afficher nb
       nb ← nb + 2
     fin pour
-fin module
+fin algorithme
       </paragraph>
     </clarify>
     </learningObject>
@@ -708,8 +669,8 @@ fin module
         Ajoutons des variables pour retenir l’<formatted style="code">état</formatted> où on est.
       </paragraph>
       <paragraph cssClass="code">
-module suite3Avant2Arrière(n↓ : entier)
-    nb, nbPasRestants, direction, i : entiers
+algorithme suite3Avant2Arrière(n↓ : entier)
+    nb, nbPasRestants, direction : entiers
     nb ← 1
     nbPasRestants ← 3 // 3 pas
     direction ← 1 // en avant
@@ -726,7 +687,7 @@ module suite3Avant2Arrière(n↓ : entier)
         fin si
       fin si
     fin pour
-fin module
+fin algorithme
       </paragraph>
       <paragraph>
         On obtient un algorithme plus long mais qui respecte toujours le schéma vu.
@@ -763,8 +724,8 @@ fin module
 		  <look>
 		  Exemple :
 <paragraph cssClass="code">
-package be.heb.esi . lgj1 ;
-import java. util .Scanner;
+package be.heb.esi.lgj1 ;
+import java.util.Scanner;
 public class Affiche {
     /**
     * Affiche l ’ entier lu au clavier ou un message si ce n’ est pas un entier .
@@ -812,20 +773,20 @@ public class Affiche {
 								<list listStyle="unordered">
 									<item>
 										<paragraph cssClass="code">
-module boucle1 ()
+algorithme boucle1 ()
     x : entier
     x ← 0
     tant que x <![CDATA[<]]> 12 faire
       x ← x+2
     fin tant que
     afficher x
-fin module
+finalgorithme
 				</paragraph>
 				            <gap answers="12">12</gap> 
                   </item>
 									<item>
 										<paragraph cssClass="code">
-module boucle2 ()
+algorithme boucle2 ()
     ok : booléen
     x : entier
     ok ← vrai
@@ -835,13 +796,13 @@ module boucle2 ()
       ok ← x MOD 11 ≠ 0
     fin tant que
     afficher x
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="33">33</gap> 
                   </item>
 									<item>
 										<paragraph cssClass="code">
-module boucle3 ()
+algorithme boucle3 ()
     ok : booléen
     cpt, x : entiers
     x ← 10
@@ -857,13 +818,13 @@ module boucle3 ()
       fin si
     fin tant que
     afficher x
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="22">22</gap> 
                   </item>
                   <item>
 										<paragraph cssClass="code">
-module boucle4 ()
+algorithme boucle4 ()
     pair, grand : booléens
     p, x : entiers
     x ← 1
@@ -873,15 +834,15 @@ module boucle4 ()
       x ← x+p
       pair ← x MOD 2 = 0
       grand ← x > 15
-    jusqu’à ce que pair OU grand
+    tant que NON pair ET NON grand
     afficher x
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="31">31</gap> 
                   </item>
                   <item>
 										<paragraph cssClass="code">
-module boucle5 ()
+algorithme boucle5 ()
     i, x : entiers
     ok : booléen
     x ← 3
@@ -895,13 +856,13 @@ module boucle5 ()
     sinon
       afficher 2 * x
     fin si
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="36">36</gap> 
                   </item>
                   <item>
 										<paragraph cssClass="code">
-module boucle6 ()
+algorithme boucle6 ()
     i, j, fin : entiers
     pour i de 1 à 3 faire
       fin ← 6 * i - 11
@@ -909,7 +870,7 @@ module boucle6 ()
         afficher 10 * i + j
       fin pour
     fin pour
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="21 31 34 37">21 31 34 37</gap> 
                   </item>
@@ -1010,7 +971,7 @@ for ( int i=9; i&gt;=0; i=i-2 ) {
 				<paragraph title="Expérience" icon="icon_experiment">
 					Indiquez l'affichage obtenu par ce code.
 				</paragraph>
-				<selfCheck title="Compréhension" shuffle="no">
+				<selfCheck title="" shuffle="no">
 						<fillInBlanks>
 							<question>
 							  Que vont-ils afficher ?
@@ -1039,19 +1000,19 @@ for ( int i=9; i&gt;=0; i=i-2 ) {
 					Écrivez en Java l'algorithme suivant.
 				</paragraph>
 				<paragraph cssClass="code">
-<![CDATA[MODULE Test
+<![CDATA[algorithme Test
 
     nb, produit : Entier
     produit ← 1 
 
-    LIRE nb
-    TANT QUE nb ≠ 0 FAIRE
+    demander nb
+    tant que nb ≠ 0 faire
         produit ← produit * nb
-        LIRE nb 
-    FIN TANT QUE
-    AFFICHER produit
+        lire nb 
+    fin tant que
+    afficher produit
     
-FIN MODULE
+fin algorithme
 ]]>			    </paragraph>
 				<popup title="la solution" visible="online"> 
 					<paragraph cssClass="java">
@@ -1080,17 +1041,17 @@ public class Test {
 					Écrivez en Java l'algorithme suivant.
 				</paragraph>
 				<paragraph cssClass="code">
-<![CDATA[MODULE Test
+<![CDATA[algorithme Test
 
     nb: Entier
     i : Entier
 
-    LIRE nb
-    POUR i DE 1 A nb FAIRE
-        AFFICHER i
-    FIN POUR
+    demander nb
+    pour i de 1 à nb faire
+        afficher i
+    fin pour
 
-FIN MODULE
+fin algorithme
 ]]>			     </paragraph>
 
 				<popup title="la solution" visible="online"> 
@@ -1154,7 +1115,7 @@ public static void appelMaxPositif() {
             <item>résolvez le problème via quelques exemples précis ;</item>
             <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
             <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-            <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
             <item>Pour la partie Java, dessinez l'arborescence des fichie, vous travaillerez dans un package  <formatted style="code">g12345.Boucles</formatted>. </item>
           </list>
@@ -1176,7 +1137,7 @@ public static void appelMaxPositif() {
             </item>
             <item>
               demande à l'utilisateur d'introduire un entier positif (non strictement). 
-              Ce module permet à l'utilisateur de se tromper à plusieurs reprises mais l'utilisateur devra donner
+              Cet algorithme permet à l'utilisateur de se tromper à plusieurs reprises mais l'utilisateur devra donner
               une bonne valeur pour arrêter le programme.
               (On suppose tout de même que l'utilisateur ne donne que des valeurs entières !) 
             </item>
@@ -1187,7 +1148,7 @@ public static void appelMaxPositif() {
               de ces multiples sera affiché en fin de traitement.
               </paragraph>
               <paragraph>
-              Pensez à utiliser le module écrit ci-dessus qui permet de lire un entier positif.
+              Pensez à utiliser l'algorithme écrit ci-dessus qui permet de lire un entier positif.
               </paragraph>
               </item>
             <item>

@@ -19,7 +19,7 @@
                <li class="navigationLink"><a href="unit_Boucles.html">1.1. Les boucles</a><ul class="navigation nav_lo">
                      <li class="navigationLink"><a href="Boucles_learningObject1.html">1.1.1. tant que</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject2.html">1.1.2. while</a></li>
-                     <li class="navigationLink"><a href="Boucles_learningObject3.html">1.1.3. faire - jusqu’à ce que</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject3.html">1.1.3. faire - tant que</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject4.html">1.1.4. do...while</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject5.html">1.1.5. pour</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject6.html">1.1.6. for</a></li>
@@ -35,19 +35,19 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="Boucles_learningObject8.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject10.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Boucles_learningObject9.html">1.1.9. suite de nombres</h1>
-      <div id="d8e431.html" class="clarify">
-         <p class="paragraph" id="d8e432">
+      <div id="d8e419.html" class="clarify">
+         <p class="paragraph" id="d8e420">
             		    Un exemple simple pourrait être celui-ci : 
             		    « <i>Écrire l’algorithme qui affiche les n premiers
                termes de la suite : 2, 4, 6. . . </i>»
             
          </p>
-         <p class="paragraph" id="d8e437">
+         <p class="paragraph" id="d8e425">
             Puisqu’on doit écrire plusieurs nombres et qu’on sait exactement combien, 
             on se tournera tout naturellement vers une boucle <code>pour</code>.
             
          </p>
-         <p class="paragraph" id="d8e442">
+         <p class="paragraph" id="d8e430">
             Le cas le plus simple est lorsque le nombre à afficher à l’étape <code>i</code> 
             peut être calculé en fonction de <code>i</code> seulement. L’algorithme est alors
             
@@ -55,14 +55,13 @@
 pour i de 1 à n faire
     afficher f(i)
 fin pour
-      </pre><p class="paragraph" id="d8e452">Par exemple, pour afficher la suite des n premiers nombres pairs</p><pre>
-module nombrePair (n↓ : entier)
-    i : entier
+      </pre><p class="paragraph" id="d8e440">Par exemple, pour afficher la suite des n premiers nombres pairs</p><pre>
+algorithme nombrePair (n↓ : entier)
     pour i de 1 à n faire
       afficher 2 * i
     fin pour
-fin module
-      </pre><p class="paragraph" id="d8e456">
+fin algorithme
+      </pre><p class="paragraph" id="d8e444">
             Parfois, il est difficile (voire impossible) de trouver <code>f(i)</code>.<br />
             On suivra alors une autre approche
             qui revient à calculer un nombre à afficher à partir du nombre précédemment affiché
@@ -76,22 +75,22 @@ pour i de 1 à n faire
     afficher nb
     nb ← {calculer ici le nb suivant}
 fin pour
-      </pre><p class="paragraph" id="d8e467">
+      </pre><p class="paragraph" id="d8e455">
             Dans l’exemple de la suite paire, le 1er nombre à afficher est 
             2 et le nombre suivant se calcule en ajoutant 2 au nombre courant.
             
          </p><pre>
-module suite1 (n↓ : entier)
-    nb, i : entiers
+algorithme suite1 (n↓ : entier)
+    nb : entier
     nb ← 2
     pour i de 1 à n faire
       afficher nb
       nb ← nb + 2
     fin pour
-fin module
+fin algorithme
       </pre></div>
       <hr />
       <div class="navigation_arrows"><a href="Boucles_learningObject8.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject10.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 13.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

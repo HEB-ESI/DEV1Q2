@@ -29,20 +29,20 @@
 								<list listStyle="unordered">
 									<item>
 										<paragraph cssClass="code">
-module boucle1 ()
+algorithme boucle1 ()
     x : entier
     x ← 0
     tant que x <![CDATA[<]]> 12 faire
       x ← x+2
     fin tant que
     afficher x
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="12">12</gap> 
                   </item>
 									<item>
 										<paragraph cssClass="code">
-module boucle2 ()
+algorithme boucle2 ()
     ok : booléen
     x : entier
     ok ← vrai
@@ -52,13 +52,13 @@ module boucle2 ()
       ok ← x MOD 11 ≠ 0
     fin tant que
     afficher x
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="33">33</gap> 
                   </item>
 									<item>
 										<paragraph cssClass="code">
-module boucle3 ()
+algorithme boucle3 ()
     ok : booléen
     cpt, x : entiers
     x ← 10
@@ -74,13 +74,13 @@ module boucle3 ()
       fin si
     fin tant que
     afficher x
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="22">22</gap> 
                   </item>
                   <item>
 										<paragraph cssClass="code">
-module boucle4 ()
+algorithme boucle4 ()
     pair, grand : booléens
     p, x : entiers
     x ← 1
@@ -90,15 +90,15 @@ module boucle4 ()
       x ← x+p
       pair ← x MOD 2 = 0
       grand ← x > 15
-    jusqu’à ce que pair OU grand
+    tant que NON pair ET NON grand
     afficher x
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="31">31</gap> 
                   </item>
                   <item>
 										<paragraph cssClass="code">
-module boucle5 ()
+algorithme boucle5 ()
     i, x : entiers
     ok : booléen
     x ← 3
@@ -112,13 +112,13 @@ module boucle5 ()
     sinon
       afficher 2 * x
     fin si
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="36">36</gap> 
                   </item>
                   <item>
 										<paragraph cssClass="code">
-module boucle6 ()
+algorithme boucle6 ()
     i, j, fin : entiers
     pour i de 1 à 3 faire
       fin ← 6 * i - 11
@@ -126,7 +126,7 @@ module boucle6 ()
         afficher 10 * i + j
       fin pour
     fin pour
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="21 31 34 37">21 31 34 37</gap> 
                   </item>
@@ -225,7 +225,6 @@ for ( int i=9; i&gt;=0; i=i-2 ) {
 				</selfCheck>
 
 				<paragraph title="Expérience" icon="icon_experiment">
-					Indiquez l'affichage obtenu par ce code.
 				</paragraph>
 				<selfCheck title="Compréhension" shuffle="no">
 						<fillInBlanks>
@@ -256,19 +255,19 @@ for ( int i=9; i&gt;=0; i=i-2 ) {
 					Écrivez en Java l'algorithme suivant.
 				</paragraph>
 				<paragraph cssClass="code">
-<![CDATA[MODULE Test
+<![CDATA[Algorithme Test
 
     nb, produit : Entier
     produit ← 1 
 
-    LIRE nb
-    TANT QUE nb ≠ 0 FAIRE
+    demander nb
+    tant que nb ≠ 0 faire
         produit ← produit * nb
-        LIRE nb 
-    FIN TANT QUE
-    AFFICHER produit
+        demander nb 
+    fin tant que
+    afficher produit
     
-FIN MODULE
+fin algorithme
 ]]>			    </paragraph>
 				<popup title="la solution" visible="online"> 
 					<paragraph cssClass="java">
@@ -297,17 +296,17 @@ public class Test {
 					Écrivez en Java l'algorithme suivant.
 				</paragraph>
 				<paragraph cssClass="code">
-<![CDATA[MODULE Test
+<![CDATA[module Test
 
     nb: Entier
     i : Entier
 
-    LIRE nb
-    POUR i DE 1 A nb FAIRE
-        AFFICHER i
-    FIN POUR
+    demander nb
+    pour i de 1 à nb faire
+        afficher i
+    fin pour
 
-FIN MODULE
+fin module
 ]]>			     </paragraph>
 
 				<popup title="la solution" visible="online"> 
@@ -344,7 +343,7 @@ public class Test {
             <item>résolvez le problème via quelques exemples précis ;</item>
             <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
             <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-            <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
             <item>Pour la partie Java, dessinez l'arborescence des fichie, vous travaillerez dans un package  <formatted style="code">g12345.Boucles</formatted>. </item>
           </list>
@@ -380,19 +379,19 @@ public class Test {
           <formatted style="bold">Tout nombre entier pair supérieur à 3 peut s’écrire comme la somme de deux nombres premiers.</formatted>
         </paragraph>
         <paragraph>
-          Écrivez un module <formatted style="code">isPremier</formatted> qui reçoit un nombre entier <formatted style="code">n</formatted> 
+          Écrivez un algorithme <formatted style="code">isPremier</formatted> qui reçoit un nombre entier <formatted style="code">n</formatted> 
           et qui retourne vrai si ce nombre est premier et faux sinon.
         </paragraph>
         <paragraph>Si le nombre entré est négatif, vous lancerez une exception qui sera gérée dans votre méthode 
         <formatted style="code">main</formatted> en Java.</paragraph>
         <paragraph>
-          Écrivez un module <formatted style="code">goldbach</formatted> qui reçoit en paramètre 
+          Écrivez un algorithme <formatted style="code">goldbach</formatted> qui reçoit en paramètre 
           un nombre entier pair <formatted style="code">p</formatted> supérieur à 3 
           et qui retourne vrai s’il est la somme de 2 nombres premiers et faux sinon.
           Si le <formatted style="code">p</formatted> reçu n'est supérieur à 3, votre programme générera une erreur qui sera gérée dans votre méthode 
         <formatted style="code">main</formatted> en Java.</paragraph>
         <paragraph>
-          Écrivez un module, <formatted style="code">principal</formatted>, qui lit un nombre et vérifie que tous les
+          Écrivez un algorithme, <formatted style="code">principal</formatted>, qui lit un nombre et vérifie que tous les
           nombres pairs inférieurs à ce nombre sont la somme de 2 nombres premiers. Ce module affiche vrai ou faux selon le cas.
         </paragraph>
         <paragraph>

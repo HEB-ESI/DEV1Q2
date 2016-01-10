@@ -3,16 +3,16 @@
 \contentsline {subsection}{\numberline {1.1}Le pseudo-code}{3}{subsection.1.1}
 \contentsline {section}{\numberline {2}Variables et types}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Les types autoris\'es en algo}{3}{subsection.2.1}
-\contentsline {subparagraph}{Le type des donn\'ees}{4}{section*.2}
+\contentsline {subparagraph}{Le type des donn\'ees}{3}{section*.2}
 \contentsline {subsection}{\numberline {2.2}Les types \'equivalents en java}{4}{subsection.2.2}
 \contentsline {subparagraph}{Les commandes de base}{4}{section*.3}
 \contentsline {subsection}{\numberline {2.3}Java est un langage fortement typ\'e.}{4}{subsection.2.3}
 \contentsline {subparagraph}{Les types primitifs}{4}{section*.4}
-\contentsline {subparagraph}{Les types primitifs num\'eriques entiers}{5}{section*.6}
+\contentsline {subparagraph}{Les types primitifs num\'eriques entiers}{4}{section*.6}
 \contentsline {subparagraph}{Les litt\'eraux pour les types primitifs num\'eriques entiers}{5}{section*.7}
 \contentsline {subparagraph}{Le type num\'erique caract\`ere}{6}{section*.8}
 \contentsline {subparagraph}{Les types primitifs num\'eriques flottants}{6}{section*.9}
-\contentsline {subparagraph}{Les litt\'eraux pour les types primitifs num\'eriques flottants}{7}{section*.10}
+\contentsline {subparagraph}{Les litt\'eraux pour les types primitifs num\'eriques flottants}{6}{section*.10}
 \contentsline {subparagraph}{Le type primitif bool\'een}{7}{section*.11}
 \contentsline {subparagraph}{Les types r\'ef\'erences pr\'ed\'efinis : les chaines de caract\`eres}{7}{section*.12}
 \contentsline {subsection}{\numberline {2.4}D\'eclaration de variables en algo}{7}{subsection.2.4}
@@ -45,7 +45,7 @@
 \contentsline {subparagraph}{}{16}{section*.23}
 \contentsline {subsection}{\numberline {4.3}Affectation externe en algo}{16}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Affectation externe en Java}{17}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Communication des r\'esultats en algo}{18}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.5}Communication des r\'esultats en algo}{17}{subsection.4.5}
 \contentsline {subsection}{\numberline {4.6}Communication des r\'esultats en Java}{18}{subsection.4.6}
 \contentsline {subsection}{\numberline {4.7}Exercices}{18}{subsection.4.7}
 \contentsline {subparagraph}{Que vaut ?}{18}{section*.24}
@@ -54,21 +54,21 @@
 \contentsline {subsection}{\numberline {5.1}Documenter son algorithme}{20}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}Documenter son code Java}{20}{subsection.5.2}
 \contentsline {section}{\numberline {6}Structure g\'en\'erale}{20}{section.6}
-\contentsline {subsection}{\numberline {6.1}Structure g\'en\'erale d'un algorithme}{21}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.1}Structure g\'en\'erale d'un algorithme}{20}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Structure g\'en\'erale d'un programme Java}{21}{subsection.6.2}
-\contentsline {subparagraph}{Attention \`a la casse}{22}{section*.26}
+\contentsline {subparagraph}{Attention \`a la casse}{22}{section*.27}
 \contentsline {section}{\numberline {7}Compiler et ex\'ecuter un programme Java}{22}{section.7}
 \contentsline {subsection}{\numberline {7.1}Java est un langage compil\'e puis interpr\'et\'e}{22}{subsection.7.1}
 \contentsline {section}{\numberline {8}Exercices}{23}{section.8}
 \contentsline {subsection}{\numberline {8.1}Compr\'ehension d'algorithme}{23}{subsection.8.1}
-\contentsline {subparagraph}{Compr\'ehension}{23}{section*.28}
-\contentsline {subsection}{\numberline {8.2}Compr\'ehension de codes Java}{25}{subsection.8.2}
-\contentsline {subparagraph}{Compr\'ehension}{25}{section*.29}
-\contentsline {subparagraph}{Comprendre les erreurs}{26}{section*.30}
-\contentsline {subparagraph}{Comprendre les erreurs}{27}{section*.31}
+\contentsline {subparagraph}{Compr\'ehension}{23}{section*.29}
+\contentsline {subsection}{\numberline {8.2}Compr\'ehension de codes Java}{24}{subsection.8.2}
+\contentsline {subparagraph}{Compr\'ehension}{24}{section*.30}
+\contentsline {subparagraph}{Comprendre les erreurs}{26}{section*.31}
 \contentsline {subparagraph}{Comprendre les erreurs}{27}{section*.32}
+\contentsline {subparagraph}{Comprendre les erreurs}{27}{section*.33}
 \contentsline {subsection}{\numberline {8.3}\`A vous de jouer...}{28}{subsection.8.3}
-\contentsline {subparagraph}{Consignes}{28}{section*.33}
-\contentsline {subparagraph}{Parenth\`eses}{28}{section*.34}
-\contentsline {subparagraph}{Exercice r\'esolu}{29}{section*.35}
-\contentsline {subparagraph}{\`A vous}{30}{section*.36}
+\contentsline {subparagraph}{Consignes}{28}{section*.34}
+\contentsline {subparagraph}{Parenth\`eses}{28}{section*.35}
+\contentsline {subparagraph}{Exercice r\'esolu}{29}{section*.36}
+\contentsline {subparagraph}{\`A vous}{30}{section*.37}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  9 FEB 2015 21:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 SEP 2015 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -901,21 +901,21 @@ cc-gris.jpg>])
 [3
 
 ]
-</home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png, id=232, 414.548
+</home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png, id=233, 414.548
 75pt x 231.86626pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png Graphic fil
 e (type png)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primit
-ifs.png used on input line 322.
+ifs.png used on input line 320.
 (pdftex.def)             Requested size: 288.0125pt x 161.09172pt.
  [4]
 [5 </home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png>] [6]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-34.def
 File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
 )
-Overfull \hbox (16.9221pt too wide) in paragraph at lines 577--579
+Overfull \hbox (16.9221pt too wide) in paragraph at lines 575--577
 []\T1/lmr/m/n/10.95 L'ensemble des ins-truc-tions de la forme []\T1/lmtt/m/n/10
 .95 variable1, variable2,. . . : type
  []
@@ -955,7 +955,7 @@ emple []\T1/lmtt/m/n/10.95 a ^^U (b + c * d)/x\T1/lmr/m/n/10.95 .
  []
 
 [11] [12]
-Overfull \hbox (12.75688pt too wide) in paragraph at lines 984--988
+Overfull \hbox (12.75688pt too wide) in paragraph at lines 987--991
 []\T1/lmr/m/n/10.95 Notez que l'éva-lua-tion court-circuitée a pour consé-quenc
 e la non-commutativité
  []
@@ -963,18 +963,18 @@ e la non-commutativité
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-2.def
 File: uni-2.def 2013/05/13 UCS: Unicode data U+0200..U+02FF
 ) [13]
-Overfull \hbox (38.82286pt too wide) in paragraph at lines 1020--1022
+Overfull \hbox (38.82286pt too wide) in paragraph at lines 1023--1025
 []\T1/lmr/m/n/10.95 Si né-ces-saire, les autres fonc-tions ma-thé-ma-tiques []\
 T1/lmtt/m/n/10.95 Math.sin(x)\T1/lmr/m/n/10.95 , []\T1/lmtt/m/n/10.95 Math.tan(
 x)\T1/lmr/m/n/10.95 ,
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 1022.
+(Font)              <9> on input line 1025.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 1022.
+(Font)              <5> on input line 1025.
 
-Overfull \hbox (4.3861pt too wide) in paragraph at lines 1022--1023
+Overfull \hbox (4.3861pt too wide) in paragraph at lines 1025--1026
 []\T1/lmr/m/n/10.95 Toutes les in-for-ma-tions se trouvent dans l'API ([][]$\T1
 /lmtt/m/n/9 docs . oracle . com / javase /
  []
@@ -982,111 +982,107 @@ Overfull \hbox (4.3861pt too wide) in paragraph at lines 1022--1023
 [14] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 ) [15]
-Overfull \hbox (91.26125pt too wide) in paragraph at lines 1126--1127
-[][]\T1/lmtt/m/n/10.95 varChaine $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 var
-Caractère \T1/lmr/m/n/10.95 : équi-valent à []\T1/lmtt/m/n/10.95 varChaine $\OM
-S/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 chaine(varCaractère)\T1/lmr/m/n/10.95 . 
-
- []
-
 [16] [17]
-Overfull \hbox (102.27141pt too wide) in paragraph at lines 1251--1256
+Overfull \hbox (102.27141pt too wide) in paragraph at lines 1253--1258
 []\T1/lmr/m/n/10.95 Nous no-te-rons : []\T1/lmtt/m/n/10.95 afficher expression 
 ou liste de variables séparées par des virgules
  []
 
 
-Overfull \hbox (78.72879pt too wide) in paragraph at lines 1263--1264
+Overfull \hbox (78.72879pt too wide) in paragraph at lines 1265--1266
 [][]\T1/lmtt/m/n/10.95 afficher "Le premier nombre vaut ", nb1, " et le seconde
  nombre vaut ", nb2  
  []
 
 [18]
-Overfull \hbox (13.18239pt too wide) in paragraph at lines 1361--1363
+Overfull \hbox (13.18239pt too wide) in paragraph at lines 1363--1365
 \T1/lmr/m/n/10.95 conte-nus des va-riables a et b. Que doit-on écrire? []$[]$[]
  
  []
 
-[19] [20]
-Overfull \hbox (30.91388pt too wide) in paragraph at lines 1414--1414
-[]    \T1/lmtt/m/n/10.95 déclaration des variables et constantes utilisées dans
- le module[] 
- []
+[19]
+</home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/methode.png, id=360, 415.5525p
+t x 89.33376pt>
+File: /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/methode.png Graphic file 
+(type png)
 
-[21]
-Overfull \hbox (22.88377pt too wide) in paragraph at lines 1479--1480
+<use /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/methode.png>
+Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/method
+e.png used on input line 1409.
+(pdftex.def)             Requested size: 288.01237pt x 61.9157pt.
+ [20] [21 </home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/methode.png>]
+Overfull \hbox (22.88377pt too wide) in paragraph at lines 1494--1495
 []\T1/lmr/m/n/10.95 La mé-thode prin-ci-pale s'ap-pelle []\T1/lmtt/m/n/10.95 pu
 blic static void main(String [] args) 
  []
 
 
-</home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png, id=374, 397.
+</home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png, id=376, 397.
 485pt x 209.78375pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png Graphic 
 file (type png)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-j
-vm-jvm.png used on input line 1507.
+vm-jvm.png used on input line 1522.
 (pdftex.def)             Requested size: 288.00851pt x 152.00447pt.
  [22]
 [23 </home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png>]
-[24] [25] [26] [27]
-Overfull \hbox (88.40121pt too wide) in paragraph at lines 1820--1820
+[24] [25] [26]
+Overfull \hbox (88.40121pt too wide) in paragraph at lines 1830--1830
 []  \T1/lmtt/m/n/10.95 Exception in thread "main" java.lang.NoClassDefFoundErro
 r: ErrExecution/java[] 
  []
 
-
-Overfull \hbox (7.91895pt too wide) in paragraph at lines 1820--1820
+[27]
+Overfull \hbox (7.91895pt too wide) in paragraph at lines 1830--1830
 []  \T1/lmtt/m/n/10.95 caused by: java.lang.ClassNotFoundException: ErrExecutio
 n.java[] 
  []
 
 
-Overfull \hbox (42.41135pt too wide) in paragraph at lines 1820--1820
+Overfull \hbox (42.41135pt too wide) in paragraph at lines 1830--1830
 []  \T1/lmtt/m/n/10.95 Could not find the main class: ErrExecution.java. Progra
 m will exit.[] 
  []
 
 
-Overfull \hbox (8.04198pt too wide) in paragraph at lines 1863--1864
+Overfull \hbox (8.04198pt too wide) in paragraph at lines 1873--1874
 []\T1/lmr/m/n/10.95 Toutes les pa-ren-thèses sont-elles obli-ga-toires? Si non,
  les-quelles pouvez-
  []
 
 
-Overfull \hbox (8.04198pt too wide) in paragraph at lines 1865--1866
+Overfull \hbox (8.04198pt too wide) in paragraph at lines 1875--1876
 []\T1/lmr/m/n/10.95 Toutes les pa-ren-thèses sont-elles obli-ga-toires? Si non,
  les-quelles pouvez-
  []
 
 [28] [29]
-Overfull \hbox (3.63113pt too wide) in paragraph at lines 1934--1935
+Overfull \hbox (3.63113pt too wide) in paragraph at lines 1945--1946
 \T1/lmr/m/n/10.95 Il nous reste à com-pi-ler []\T1/lmtt/m/n/10.95 javac Triangl
 e.java \T1/lmr/m/n/10.95 et à exé-cu-ter []\T1/lmtt/m/n/10.95 java Triangle
  []
 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1970.
 [30]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1962.
- [31]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1962.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1970.
  (./TDSeq.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1962.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1962.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1970.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1970.
 
 Package rerunfilecheck Info: File `TDSeq.out' has not changed.
 (rerunfilecheck)             Checksum: 08BFA43B8A2B9F55DAAC42C81EFF9EAE;3291.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1962.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1970.
  ) 
 Here is how much of TeX's memory you used:
- 14149 strings out of 493304
- 201514 string characters out of 6139871
- 324511 words of memory out of 5000000
- 17060 multiletter control sequences out of 15000+600000
+ 14166 strings out of 493304
+ 201997 string characters out of 6139871
+ 331511 words of memory out of 5000000
+ 17067 multiletter control sequences out of 15000+600000
  81665 words of font info for 59 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,13n,43p,333b,1937s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,13n,43p,333b,2015s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/shar
 e/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texlive/texmf-dist/fonts/type1
@@ -1103,10 +1099,10 @@ m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt
 8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on TDSeq.pdf (31 pages, 451214 bytes).
+Output written on TDSeq.pdf (30 pages, 476964 bytes).
 PDF statistics:
- 708 PDF objects out of 1000 (max. 8388607)
- 643 compressed objects within 7 object streams
- 280 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 717 PDF objects out of 1000 (max. 8388607)
+ 652 compressed objects within 7 object streams
+ 289 named destinations out of 1000 (max. 500000)
+ 346 words of extra memory for PDF output out of 10000 (max. 10000000)
 

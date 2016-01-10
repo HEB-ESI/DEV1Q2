@@ -5,24 +5,24 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <meta http-equiv="Content-Style-Type" content="text/css" />
-      <meta name="description" content="TD Modules: Appel de module. " />
+      <meta name="description" content="TD Récapitulatif: Appel d'algorithme. " />
       <meta name="copyright" content="" />
       <meta name="author" content="" />
-      <meta name="keywords" content="TD Modules, eLML" />
-      <title>1.2.2. Appel de module</title>
+      <meta name="keywords" content="TD Récapitulatif, eLML" />
+      <title>1.2.2. Appel d'algorithme</title>
       <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
          <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
          <!----></script></head>
    <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
-         <li class="navigationLink"><a href="index.html">1. TD Modules</a><ul class="navigation nav_unit">
+         <li class="navigationLink"><a href="index.html">1. TD Récapitulatif</a><ul class="navigation nav_unit">
                <li class="navigationLink"><a href="unit_Decouper.html">1.1. Découper du code</a></li>
                <li class="navigationLink"><a href="unit_PassageParametres.html">1.2. Passage de paramètres</a><ul class="navigation nav_lo">
-                     <li class="navigationLink"><a href="PassageParametres_learningObject1.html">1.2.1. Module</a></li>
-                     <li class="navigationActual"><strong>1.2.2. Appel de module</strong></li>
+                     <li class="navigationLink"><a href="PassageParametres_learningObject1.html">1.2.1. Algorithme</a></li>
+                     <li class="navigationActual"><strong>1.2.2. Appel d'algorithme</strong></li>
                   </ul>
                </li>
-               <li class="navigationLink"><a href="unit_RetournerValeur.html">1.3. Module renvoyant une valeur</a></li>
+               <li class="navigationLink"><a href="unit_RetournerValeur.html">1.3. Algorithme renvoyant une valeur</a></li>
                <li class="navigationLink"><a href="unit_Methodes.html">1.4. Méthodes et appel de méthodes</a></li>
                <li class="navigationLink"><a href="unit_Erreur.html">1.5. Erreur ou Exception</a></li>
                <li class="navigationLink"><a href="unit_Commenter.html">1.6. Commenter une méthode</a></li>
@@ -30,31 +30,32 @@
             </ul>
          </li>
       </ul>
-      <div class="navigation_arrows"><a href="PassageParametres_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_RetournerValeur.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="PassageParametres_learningObject2.html">1.2.2. Appel de module</h1>
+      <div class="navigation_arrows"><a href="PassageParametres_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_RetournerValeur.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="PassageParametres_learningObject2.html">1.2.2. Appel d'algorithme</h1>
       <div id="d8e98.html" class="clarify">
          <p class="paragraph" id="d8e99">
-            Pour faire appel aux services de ce module, il suffit à présent d’écrire son nom suivi
-            d’un
+            Pour faire appel aux services de cet algorithme, il suffit à présent d’écrire son
+            nom suivi d’un
             nombre de variables (ou, en entrée, d’expressions) en accord avec son en-tête. 
             
          </p>
-         <p class="paragraph" id="d8e101">Montrons par un exemple comment le module max3 peut faire appel au module max2 : </p><pre>
-module max3 ()
-    a, b, c, temp, max : réels
-    lire a, b, c
+         <p class="paragraph" id="d8e101">Montrons par un exemple comment l'algorithme max3 peut faire appel à l'algorithme
+            max2 : 
+         </p><pre>
+algorithme max3 (a, b, c : réels) → réel
+    temp, max : réels
     max2( a, b, temp )
     max2( temp, c, max )
-    afficher max
-fin module
+    retourner max
+fin algorithme
       </pre><p class="paragraph" id="d8e105">
             L’instruction max2(a, b, temp) se déroule comme suit :
             
             <ul class="list" id="d8e107">
-               <li class="itemAlt">le contenu des variables a et b est affecté aux paramètres d’entrée a et b du module
-                  max2, puis ce module peut entrer en action ;
+               <li class="itemAlt">le contenu des variables a et b est affecté aux paramètres d’entrée a et b de l'algorithme
+                  max2, puis cet algorithme peut entrer en action ;
                </li>
-               <li class="item">à l’issue du module max2, la valeur du paramètre de sortie max est communiquée à la
-                  variable temp, qui contient à présent le maximum de a et b
+               <li class="item">à l’issue de l'algorithme max2, la valeur du paramètre de sortie max est communiquée
+                  à la variable temp, qui contient à présent le maximum de a et b
                </li>
             </ul>
          </p>
@@ -62,29 +63,30 @@ fin module
             L’instruction max2(temp, c, max) se déroule comme suit :
             
             <ul class="list" id="d8e114">
-               <li class="itemAlt">le contenu des variables temp et c est affecté aux paramètres d’entrée a et b du module
-                  max2, puis ce module peut entrer en action ;
+               <li class="itemAlt">le contenu des variables temp et c est affecté aux paramètres d’entrée a et b de l'algorithme
+                  max2, puis cet algorithme peut entrer en action ;
                </li>
-               <li class="item">à l’issue du module max2, la valeur du paramètre de sortie max est communiquée à la
-                  variable max qui contient à présent le maximum des 3 nombres de départ.
+               <li class="item">à l’issue de l'algorithme max2, la valeur du paramètre de sortie max est communiquée
+                  à la variable max qui contient à présent le maximum des 3 nombres de départ.
                </li>
             </ul>
          </p>
          <p class="paragraph" id="d8e119">
-            Implicitement, on a introduit ici un nouveau type de primitive, l’appel à un module
+            Implicitement, on a introduit ici un nouveau type de primitive, l’appel à un algorithme
             qui
             consiste en la simple écriture de son nom dans le code. Cette instruction est reconnue
             comme
             telle car elle ne s’apparente pas aux autres types d’instruction vus précédemment
             (primitives
-            lire, afficher, ← , structures de contrôle si, selon que, tant que, pour. . .). Lorsque
-            l’ordina-
-            teur rencontre cette instruction, il va rechercher si un module portant ce nom existe.
+            demander, afficher, ← , structures de contrôle si, selon que, tant que, pour. . .).
+            Lorsque l’ordinateur
+            rencontre cette instruction, il va rechercher si un algorithme portant ce nom existe.
             Une
-            fois ce module trouvé, les paramètres ad hoc lui sont communiqués et toutes les instructions
-            le composant sont exécutées séquentiellement. Arrivé à l’issue du module, les paramètres
-            de
-            sortie sont communiqués au module appelant et le déroulement de celui-ci se poursuit
+            fois cet algorithme trouvé, les paramètres ad hoc lui sont communiqués et toutes les
+            instructions
+            le composant sont exécutées séquentiellement. Arrivé à l’issue de l'algorithme, les
+            paramètres de
+            sortie sont communiqués à l'algorithme appelant et le déroulement de celui-ci se poursuit
             là où
             il avait été interrompu.
             
@@ -95,38 +97,40 @@ fin module
             <ul class="list" id="d8e123">
                <li class="itemAlt">si tous les paramètres sont en entrée, on peut omettre les flèches ;</li>
                <li class="item">
-                  la présence de ces paramètres n’est pas obligatoire, on peut envisager un module sans
-                  paramètre de sortie (par ex. un module qui reçoit en entrée un nombre et dont la seule
+                  la présence de ces paramètres n’est pas obligatoire, on peut envisager un algorithme
+                  sans
+                  paramètre de sortie (par ex. un algorithme qui reçoit en entrée un nombre et dont
+                  la seule
                   fonction est de l’afficher à l’écran), ou inversement sans paramètre d’entrée (un
-                  module
+                  algorithme 
                   qui simule un lancer de dé, et renvoie en paramètre une valeur aléatoire entre 1 et
                   6) ;
                   
                </li>
                <li class="itemAlt">
-                  pour appeler correctement un module, il faut fournir des noms de variables, des expressions
-                  ou des constantes 
+                  pour appeler correctement un algorithme, il faut fournir des noms de variables, des
+                  expressions ou des constantes 
                   en <b>même nombre</b> et en <b>même ordre</b> 
-                  que les paramètres du module ;
+                  que les paramètres de l'algorithme ;
                   
                </li>
                <li class="item">en outre, les types des variables doivent correspondre entre l’appel et l’en-tête
-                  du module ;
+                  de l'algorithme ;
                </li>
-               <li class="itemAlt">ne peut être affectée à un paramètre d’entrée du module qu’une constante, une expression
-                  ou une variable préalablement affectée ;
+               <li class="itemAlt">ne peut être affectée à un paramètre d’entrée de l'algorithme  qu’une constante, une
+                  expression ou une variable préalablement affectée ;
                </li>
-               <li class="item">à un paramètre de sortie d’un module doit toujours correspondre une autre variable,
+               <li class="item">à un paramètre de sortie d’un algorithme doit toujours correspondre une autre variable,
                   jamais une constante ou une expression ;
                </li>
-               <li class="itemAlt">il faut s’assurer qu’à l’issue du module, tous les paramètres de sortie aient été
-                  affectés lors de l’exécution de ce module.
+               <li class="itemAlt">il faut s’assurer qu’à l’issue de l'algorithme, tous les paramètres de sortie aient
+                  été affectés lors de l’exécution de cet algorithme.
                </li>
             </ul>
          </p>
       </div>
       <hr />
       <div class="navigation_arrows"><a href="PassageParametres_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_RetournerValeur.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 21.2.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDModule.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 6.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDModule.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

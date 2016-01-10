@@ -36,80 +36,69 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Exercices_learningObject1.html">1.8.1. Compréhension d’algorithme</h1>
-      <div id="d8e1682.html" class="act">
-         <p class="paragraph" id="d8e1683">
+      <div id="d8e1706.html" class="act">
+         <p class="paragraph" id="d8e1707">
             Pour ces exercices, nous vous demandons de comprendre des algorithmes donnés. 
             
             <h4>Compréhension</h4>
             <div id="selfCheck2.html" class="fillInBlanks">
                <div class="itemQuestion">
-                  							  Que vont-ils afficher si à chaque fois les deux nombres lus au départ sont
-                  successivement 2 et 3 ?
+                  							  Que vont-ils retourner si à chaque fois les deux nombres reçus au départ
+                  sont successivement 2 et 3 ?
                   							
                </div>
                <div class="itemAnswer">
                   <div class="itemLabel">
-                     <ul class="list" id="d8e1690">
+                     <ul class="list" id="d8e1714">
                         <li class="itemAlt"><pre>
-module exerciceA()
-  lire a, b
+algorithme exerciceA (a, b : entiers) → entier
   b ← b+2*a
-  afficher b
-fin module
-				</pre><input type="text" value="" class="itemText" id="_d8e1694" style="width:12px" /> <span class="gapText">,7,7</span></li>
+  retourner b
+fin algorithme
+				</pre><input type="text" value="" class="itemText" id="_d8e1718" style="width:12px" /> <span class="gapText">,7,7</span></li>
                         <li class="item"><pre>
-module exerciceB()
-  a,b : entiers
-  lire a, b
+algorithme exerciceB (a, b : entiers) → entier
   a ← a+2*b
-  afficher a
-fin module
-				</pre><input type="text" value="" class="itemText" id="_d8e1699" style="width:12px" /> <span class="gapText">,8,8</span></li>
+  retourner a
+fin algorithme
+				</pre><input type="text" value="" class="itemText" id="_d8e1723" style="width:12px" /> <span class="gapText">,8,8</span></li>
                         <li class="itemAlt"><pre>
-module exerciceC()
-  a,b : entiers
-  lire b, a
+algorithme exerciceC (b, a : entiers) → entier
   b ← b+2*a
-  afficher b
-fin module
-				</pre><input type="text" value="" class="itemText" id="_d8e1704" style="width:12px" /> <span class="gapText">,8,8</span></li>
+  retourner b
+fin algorithme
+				</pre><input type="text" value="" class="itemText" id="_d8e1728" style="width:12px" /> <span class="gapText">,8,8</span></li>
                         <li class="item"><pre>
-module exerciceD()
-  a,b : entiers
-  quotient : réel
-  lire b, a
-  quotient ← a / b
-  afficher quotient
-fin module
-				</pre><input type="text" value="" class="itemText" id="_d8e1709" style="width:25px" /> <span class="gapText">,1.5,1.5</span></li>
+algorithme exerciceD (a, b : entiers) → réel
+  retourner a / b
+fin algorithme
+				</pre><input type="text" value="" class="itemText" id="_d8e1733" style="width:25px" /> <span class="gapText">,1.5,1.5</span></li>
                         <li class="itemAlt"><pre>
-module exerciceE()
+algorithme exerciceE () → entier
   a, b, c, d : entiers
-  lire c, d
+  demander c, d
   a ← 2*c+5*d
   b ← 2+c*3+d
   c ← a MOD b
-  afficher a DIV c
-fin module
-				</pre><input type="text" value="" class="itemText" id="_d8e1714" style="width:12px" /> <span class="gapText">,2,2</span></li>
+  retourner a DIV c
+fin algorithme
+				</pre><input type="text" value="" class="itemText" id="_d8e1738" style="width:12px" /> <span class="gapText">,2,2</span></li>
                         <li class="item"><pre>
-module exerciceF()
-  x, y : réels
-  lire x, y
+algorithme exerciceF (x, y : réels) → réel
   x ← x*x 
   x ← x*x+y*y 
   x ← √x
-  afficher x
-fin module
-				</pre><input type="text" value="" class="itemText" id="_d8e1719" style="width:12px" /> <span class="gapText">,5,5</span></li>
+  retourner x
+fin algorithme
+				</pre><input type="text" value="" class="itemText" id="_d8e1743" style="width:25px" /> <span class="gapText">,5.0,5</span></li>
                         <li class="itemAlt"><pre>
-module exerciceG()
+algorithme exerciceG() → réel
   x, y : réels
-  lire x, x
+  demander x, x
   x ← x MOD x + (x + 1) DIV 2
-  afficher x + 3
-fin module
-				</pre><input type="text" value="" class="itemText" id="_d8e1724" style="width:12px" /> <span class="gapText">,5,5</span></li>
+  retourner x + 3
+fin algorithme
+				</pre><input type="text" value="" class="itemText" id="_d8e1748" style="width:12px" /> <span class="gapText">,5,5</span></li>
                      </ul>
                   </div>
                   <div class="itemHelp_disabled">    </div>
@@ -121,6 +110,6 @@ fin module
       </div>
       <hr />
       <div class="navigation_arrows"><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 9.2.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 29.9.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

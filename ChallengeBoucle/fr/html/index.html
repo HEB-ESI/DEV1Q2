@@ -34,7 +34,7 @@
                <li class="item">n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme
                   définitif pseudo-codé ;
                </li>
-               <li class="itemAlt">déclarez ensuite les variables (et leur type) qui interviennent dans chaque module
+               <li class="itemAlt">déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme
                   ; les noms des variables risquant de ne pas être suffisamment explicites.
                </li>
                <li class="item">Écrivez la partie algorithmique <b>AVANT</b> de vous lancer dans la programmation en Java.
@@ -109,22 +109,22 @@ Lun Mar Mer Jeu Ven Sam Dim
          </p>
          <h4>Calcul de la catégorie</h4>
          <p class="paragraph" title="Calcul de la catégorie" id="d8e105">
-            Écrivez les modules suivants, dont voici les prototypes :
+            Écrivez les algorithmes suivants, dont voici les prototypes :
             
             <ul class="list" id="d8e107">
                <li class="itemAlt">
-                  <p class="paragraph" id="d8e109"><code>module isLeapYear(year : entier) → booléen</code></p>
+                  <p class="paragraph" id="d8e109"><code>algorithme isLeapYear(year : entier) → booléen</code></p>
                   qui reçoit une année au format AAAA et qui renvoie vrai si cette année est bissextile
                   et faux si elle ne l’est pas.
                   
                </li>
                <li class="item">
-                  <p class="paragraph" id="d8e114"><code>module daysInMonth(month, year : entiers) → entier</code></p>
+                  <p class="paragraph" id="d8e114"><code>algorithme daysInMonth(month, year : entiers) → entier</code></p>
                   qui retourne le nombre de jours du mois donné en paramètre.
                   
                </li>
                <li class="itemAlt">
-                  <p class="paragraph" id="d8e119"><code>module isAvailableDate(day, month, year : entiers) → booléen</code></p>
+                  <p class="paragraph" id="d8e119"><code>algorithme isAvailableDate(day, month, year : entiers) → booléen</code></p>
                   qui reçoit le jour, le mois et l'année d'une date et qui renvoie vrai si cette date
                   est valide et faux si elle ne l’est pas.
                   Une date est considérée comme valide si le mois est compris entre 1 et 12 et le jour
@@ -132,27 +132,27 @@ Lun Mar Mer Jeu Ven Sam Dim
                   
                </li>
                <li class="item">
-                  <p class="paragraph" id="d8e124"><code>module dayOfWeek(day, month, year : entiers) → entier</code></p>
+                  <p class="paragraph" id="d8e124"><code>algorithme dayOfWeek(day, month, year : entiers) → entier</code></p>
                   qui retourne un entier correspondant au jour de la semaine (0 = lundi, 1 = mardi,
                   . . .) pour une date donnée en paramètre. <br />
                   Le paramètre year est au format AAAA, par exemple 2015.
                   
-                  <p class="paragraph" id="d8e130">Si la date fournie est invalide, le module lancera une erreur.</p>
+                  <p class="paragraph" id="d8e130">Si la date fournie est invalide, l'algorithme lancera une erreur.</p>
                </li>
                <li class="itemAlt">
-                  <p class="paragraph" id="d8e133"><code>module printDay(day : entier)</code></p>
+                  <p class="paragraph" id="d8e133"><code>algorithme printDay(day : entier)</code></p>
                   qui affiche à l’écran au format JJ le numéro du jour donné en paramètre.<br />
                   Par exemple, si on donne 1 en paramètre à cette fonction, celle-ci affichera 01.
                   
                </li>
                <li class="item">
-                  <p class="paragraph" id="d8e140"><code>module printCalendar(month, year : entiers)</code></p>
+                  <p class="paragraph" id="d8e140"><code>algorithme printCalendar(month, year : entiers)</code></p>
                   qui affiche à l’écran le calendrier du mois de l'année passés en paramètre, les semaines
                   commençant par le lundi.
                   
                </li>
                <li class="itemAlt">
-                  <p class="paragraph" id="d8e145"><code>module principal</code></p>
+                  <p class="paragraph" id="d8e145"><code>algorithme principal</code></p>
                   qui demande à l'utilisateur d'entrer un mois et une année au clavier.<br />
                   Si le mois entré n'est pas valide, le programme redemandera la lecture jusqu'à obtenir
                   une valeur correcte pour le mois.<br />
@@ -175,6 +175,6 @@ Lun Mar Mer Jeu Ven Sam Dim
       </div>
       <hr />
       <div class="navigation_arrows"><img src="../../../_templates/java/navigation/back_off.gif" height="24" width="24" alt="No previous page available" border="0" /><a href="unit_.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/ChallengeBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 6.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/ChallengeBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

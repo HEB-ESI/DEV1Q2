@@ -195,8 +195,8 @@
 				
 			\item un montant d'un ticket de caisse ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 			\item une cote sur le bulletin (pas de demi-point autoris\'e) ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item le titre d'un film ? \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item l'initiale de votre nom ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item le titre d'un film ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item l'initiale de votre nom ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 					\end{itemize}
 				
 			
@@ -210,8 +210,8 @@
 				
 			\item un montant d'un ticket de caisse ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 			\item une cote sur le bulletin (pas de demi-point autoris\'e) ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item le titre d'un film ? \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item l'initiale de votre nom ? \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item le titre d'un film ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item l'initiale de votre nom ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 					\end{itemize}
 				
 			
@@ -229,7 +229,7 @@
 				
                 chaine 		 \textcolor{gray}{\underline{\hspace*{5em}}} \par
 				
-                caract\`ere	 \textcolor{gray}{\underline{\hspace*{3em}}} \par
+                chaine d'un seul caract\`ere	 \textcolor{gray}{\underline{\hspace*{3em}}} \par
 				
                 bool\'een      \textcolor{gray}{\underline{\hspace*{5em}}} \par
 				
@@ -349,7 +349,7 @@
 		
                 \textcolor{white}{.} \par
              
-								Donnez le type primitif non num\'eriques :
+								Donnez le type primitif non num\'erique :
 							
 					\begin{itemize}
 				
@@ -479,7 +479,7 @@ somme + 1 ← 3\end{verbatim}
         
             \item[ \ding{"6F} ] \begin{verbatim}
 						
-somme, n : entier 
+somme, n : entiers 
 n ← 4 
 somme ← 3n\end{verbatim}
         
@@ -571,21 +571,21 @@ somme = 3n;\end{Java}
         
             \item[ \ding{"6F} ] nombre1, nombre2 : entiers \par
 				
-						lire nombre1, nombre2
+						demander nombre1, nombre2
         
             \item[ \ding{"6F} ] nombre1 : entier \par
 				
-						lire nombre1
+						demander nombre1
         
             \item[ \ding{"6F} ] maChaine : chaine \par
 				
-						lire maChaine
+						demander maChaine
         
             \item[ \ding{"6F} ] maChaine : chaine \par
 				
-						lire "Entrez une chaine", maChaine
+						demander "Entrez une chaine", maChaine
         
-            \item[ \ding{"6F} ] lire nombre1 + nombre2
+            \item[ \ding{"6F} ] demander nombre1 + nombre2
         
             \end{itemize} 
         Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
@@ -711,7 +711,7 @@ afficher "Bonjour"\end{verbatim}
         
             \item[ \ding{"6F} ] \begin{verbatim}
 						
-a, b : entier 
+a, b : entiers 
 test : booléen 
 a ← 4 
 b ← 3 
@@ -817,46 +817,42 @@ public class ReadingExercice {
 		
                 \textcolor{white}{.} \par
             
-							  Que vont-ils afficher si \`a chaque fois les deux nombres lus au d\'epart sont successivement 2 et 3 ?
+							  Que vont-ils retourner/afficher si \`a chaque fois les deux nombres re\c cus/lus au d\'epart sont successivement 2 et 3 ?
 							
 					\begin{itemize}
 				
 			\item \begin{verbatim}
-module exerciceA()
-  a,b : entiers
+algorithme exerciceA(b, a : entiers) → réel
   quotient : réel
-  lire b, a
   quotient ← a / b
   afficher quotient
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module exerciceB()
+algorithme exerciceB() → entier
   a, b, c, d : entiers
-  lire c, d
+  demander c, d
   a ← 2*c+5*d
   b ← 2+c*3+d
   c ← a MOD b
-  afficher a DIV c
-fin module
+  retourner a DIV c
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
 			\item \begin{verbatim}
-module exerciceC()
-  x, y : réels
-  lire x, y
+algorithme exerciceC(x, y : réels) → réel
   x ← x*x 
   x ← x*x+y*y 
   x ← √x
-  afficher x
-fin module
+  retourner x
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
 			\item \begin{verbatim}
-module exerciceD()
+algorithme exerciceD()
   x, y : réels
-  lire x, x
+  demander x, x
   x ← x MOD x + (x + 1) DIV 2
   afficher x + 3
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
 					\end{itemize}
 				

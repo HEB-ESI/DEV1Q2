@@ -41,15 +41,13 @@ fin si
       </div>
       <div id="d8e104.html" class="look"><pre>
 // Lit un nombre et affiche si ce nombre est positif (zéro inclus) ou strictement négatif
-module signeNombre()
-    nb : entier
-    lire nb
+algorithme signeNombre (nb : entier)
     si nb &lt; 0 alors
       afficher "le nombre", nb, " est négatif"
     sinon
       afficher "le nombre", nb, " est positif ou nul"
     fin si
-fin module
+fin algorithme
     </pre></div>
       <div id="d8e107.html" class="clarify">
          <p class="paragraph" id="d8e108">En Java :</p><pre>
@@ -62,10 +60,13 @@ if (condition) {
       <div id="d8e112.html" class="look"><pre>
 import java. util .Scanner;
 public class Test {
-    public static void main(String [] args) {
+    public static void main(String[] args){
       Scanner clavier = new Scanner(System.in);
       int nombre1;
       nombre1 = clavier. nextInt ();
+      signe(nombre1);
+    }
+    public static void signe(int nombre1) {
       System.out. println (nombre1 + " est un nombre ");
       if (nombre1 &lt; 0) {
         System.out. println (" negatif ");
@@ -77,6 +78,6 @@ public class Test {
     </pre></div>
       <hr />
       <div class="navigation_arrows"><a href="SiAlorsSinon_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_SelonQue.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 20.2.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 6.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

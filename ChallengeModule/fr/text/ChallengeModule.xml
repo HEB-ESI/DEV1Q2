@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
 <lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
-	label="ChallengeModule" title="Challenge : les modules">
+	label="ChallengeModule" title="Challenge : les algorithmes">
 	
 	<entry title="Le pas du zébu">
 		<paragraph>
-			Avez-vous compris la découpe en modules ? Voyons ça en relevant le défi du "pas du zébu" :
+			Avez-vous compris la découpe en algorithmes, les exceptions et la javadoc ? Voyons ça en relevant le défi du "pas du zébu" :
 		</paragraph>
 		<paragraph>
 		  Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
@@ -14,12 +14,12 @@
         <item>résolvez le problème via quelques exemples précis ;</item>
         <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
         <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
         <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
       </list>
     </paragraph>
     <paragraph title="Afficher le titre">
-      Écrivez un module qui reçoit un nom en paramètre et qui affiche le texte :
+      Écrivez un algorithme qui reçoit un nom en paramètre et qui affiche le texte :
     </paragraph>
     <paragraph cssClass="code">
       DEV1 - Entête -  Pas du Zébu - <formatted style="italic">votre nom</formatted>
@@ -27,7 +27,7 @@
     <paragraph title="Longueur du pas du Zébu">
       La longueur du pas du Zébu est liée à son poids et au nombre PI par la formule (complètement farfelue) suivante :
       <formatted style="code">pas = √ (poids / |1 − PI|)</formatted>
-      Écrivez un module qui reçoit le poids du Zébu en paramètre et retourne la
+      Écrivez un algorithme qui reçoit le poids du Zébu en paramètre et retourne la
       longueur du pas du Zébu correspondante.
     </paragraph>
     <paragraph>Si le poids reçu en paramètre est négatif, vous lancerez une erreur qui arrêtera le programme.</paragraph>
@@ -40,12 +40,12 @@
         <item>Archimède, quant à lui, lui donnait la valeur 3.14185</item>
         <item>et Fibonacci 3.1418.</item>
       </list>
-      Écrivez un module qui permette à  l’utilisateur de choisir laquelle de 4 approximations de PI utiliser.
-      Votre module affichera les différentes valeurs de PI et l’utilisateur choisira celle qui lui convient.
+      Écrivez un algorithme qui permette à  l’utilisateur de choisir laquelle de 4 approximations de PI utiliser.
+      Votre algorithme affichera les différentes valeurs de PI et l’utilisateur choisira celle qui lui convient.
       L’utilisateur fera ce choix en entrant le numéro d’ordre dans la liste affichée des différentes valeurs de PI.
     </paragraph>
     <paragraph>
-      Modifiez votre module qui calcule le pas du zébu en lui passant un paramètre supplémentaire : 
+      Modifiez votre algorithme qui calcule le pas du zébu en lui passant un paramètre supplémentaire : 
       l'approximation de la valeur de PI à utiliser.
     </paragraph>
 		<paragraph>

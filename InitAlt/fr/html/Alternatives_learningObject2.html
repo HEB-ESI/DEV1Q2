@@ -40,17 +40,13 @@
             </div>
             <div class="itemAnswer">
                <div class="itemLabel"><pre>
-import java.util.Scanner;
-public class Exercice1 {
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        int nb = clavier.nextInt();
-        if (<input type="text" value="" class="itemText" id="_d8e73" style="width:100px" /> <span class="gapText">,nb % 2 == 0,nb % 2 == 0,nb%2 == 0,nb%2==0</span>){
-          System.out.print(nb + "est pair");
-        } else {
-          System.out.print(nb + "est impair");
-        } 
-    }
+
+public static void estPair(int nb) {
+    if (<input type="text" value="" class="itemText" id="_d8e73" style="width:100px" /> <span class="gapText">,nb % 2 == 0,nb % 2 == 0,nb%2 == 0,nb%2==0</span>){
+        System.out.print(nb + "est pair");
+    } else {
+        System.out.print(nb + "est impair");
+    } 
 }</pre></div>
                <div class="itemHelp_disabled">    </div>
             </div>
@@ -62,7 +58,7 @@ public class Exercice1 {
             <div class="itemQuestion">Le morceau de code suivant est-il correct ?
                					  <pre>
 switch(produit) {
-        case "Coca", "Sprite", "Fanta" :
+      case "Coca", "Sprite", "Fanta" :
           prixDistributeur = 60;
           break;
       case "IceTea" :
@@ -71,7 +67,7 @@ switch(produit) {
       default :
           prixDistributeur = 0;
           break;
-      }</pre></div>
+}</pre></div>
             <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="0" class="itemRadio" id="selfCheck2.html_d8e83" /><div class="itemLabel"><label for="selfCheck2.html_d8e83"> 
                      							vrai
                       <span class="itemFeedback">
@@ -106,6 +102,10 @@ public class Test{
   public static void main(String[] args){
       Scanner clavier = new Scanner(System.in);
       int numeroJour = clavier.nextInt();
+      afficherJour(numeroJour);
+  }
+    
+  public static void afficherJour(int numeroJour){
       switch (numeroJour) {
         case 0: System.out.print("samedi");
         case 1: System.out.print("dimanche");
@@ -116,15 +116,19 @@ public class Test{
         case 6: System.out.print("vendredi");
       }
       System.out.println(numeroJour);
-    }
+  }
 }
-				</pre><p class="paragraph" id="d8e98">Si le numeroJour lu est 5 ? </p><input type="text" value="" class="itemText" id="_d8e100" style="width:100px" /> <span class="gapText">,jeudivendredi,jeudivendredi</span></li>
+				</pre><p class="paragraph" id="d8e98">Si le numeroJour lu est 5 ? </p><input type="text" value="" class="itemText" id="_d8e100" style="width:100px" /> <span class="gapText">,jeudivendredi5,jeudivendredi5</span></li>
                      <li class="item"><pre>
 import java.util.Scanner;
 public class Test{
   public static void main(String[] args){
       Scanner clavier = new Scanner(System.in);
       int numeroJour = clavier.nextInt();
+      afficherJour(numeroJour);
+  }
+    
+  public static void afficherJour(int numeroJour){
       switch (numeroJour) {
         case 0: System.out.println("samedi"); break;
         case 1: System.out.println("dimanche"); break;
@@ -135,17 +139,21 @@ public class Test{
         case 6: System.out.println("vendredi"); break;
       }
       System.out.println(numeroJour);
-    }
+  }
 }
-				</pre><p class="paragraph" id="d8e105">Si le numeroJour lu est 5 ? </p><input type="text" value="" class="itemText" id="_d8e107" style="width:50px" /> <span class="gapText">,jeudi,jeudi</span></li>
+				</pre><p class="paragraph" id="d8e105">Si le numeroJour lu est 5 ? </p><input type="text" value="" class="itemText" id="_d8e107" style="width:50px" /> <span class="gapText">,jeudi5,jeudi</span></li>
                      <li class="itemAlt"><pre>
 
 import java. util .Scanner;
 public class Test {
     public static void main(String [] args) {
       Scanner clavier = new Scanner(System.in);
-      double prixAmende = 0;
       double tauxAlcool = clavier.nextDouble();
+      System.out.println(prixAmende(tauxAlcool));
+    }
+    
+    public static double prixAmende(double tauxAlcool) {
+      double prixAmende = 0;
       if (tauxAlcool&gt;1.6) {
         prixAmende = 10_000;
       } else if (tauxAlcool&gt;1.5){
@@ -159,6 +167,7 @@ public class Test {
       } else {
         prixAmende = 0;
       }
+      return prixAmende;
     }
 }
       </pre><p class="paragraph" id="d8e112">Si le tauxAlcool lu est 0.9 ? </p><input type="text" value="" class="itemText" id="_d8e114" style="width:25px" /> <span class="gapText">,400,400</span></li>
@@ -168,8 +177,12 @@ import java. util .Scanner;
 public class Test {
     public static void main(String [] args) {
       Scanner clavier = new Scanner(System.in);
-      double prixAmende = 0;
       double tauxAlcool = clavier.nextDouble();
+      System.out.println(prixAmende(tauxAlcool));
+    }
+    
+    public static double prixAmende(double tauxAlcool) {
+      double prixAmende = 0;
       if (tauxAlcool&gt;0.5) {
         if (tauxAlcool&gt;0.8){
           if (tauxAlcool&gt;1.2){
@@ -189,6 +202,7 @@ public class Test {
           prixAmende = 137.5;
       }
     }
+    return prixAmende;
 }
       </pre><p class="paragraph" id="d8e119">Si le tauxAlcool lu est 1.3 ? </p><input type="text" value="" class="itemText" id="_d8e121" style="width:25px" /> <span class="gapText">,550,550</span></li>
                   </ul>
@@ -267,6 +281,6 @@ return absolu;
       </div>
       <hr />
       <div class="navigation_arrows"><a href="Alternatives_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Alternatives_learningObject3.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/InitAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 6.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/InitAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

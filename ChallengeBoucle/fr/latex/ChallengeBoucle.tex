@@ -177,7 +177,7 @@
 			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
 			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
-			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
 			\item Pour la partie Java, dessinez l'arborescence des fichier. 
 					\end{itemize}
@@ -257,48 +257,48 @@ Lun Mar Mer Jeu Ven Sam Dim
 		
 					\textcolor{white}{.} \par
 				
-      \'Ecrivez les modules suivants, dont voici les prototypes :
+      \'Ecrivez les algorithmes suivants, dont voici les prototypes :
       
 					\begin{itemize}
 				
-			\item \verb@module isLeapYear(year : entier) → booléen@
+			\item \verb@algorithme isLeapYear(year : entier) → booléen@
             \par
         
           qui re\c coit une ann\'ee au format AAAA et qui renvoie vrai si cette ann\'ee est bissextile et faux si elle ne l'est pas.
         
-			\item \verb@module daysInMonth(month, year : entiers) → entier@
+			\item \verb@algorithme daysInMonth(month, year : entiers) → entier@
             \par
         
           qui retourne le nombre de jours du mois donn\'e en param\`etre.
         
-			\item \verb@module isAvailableDate(day, month, year : entiers) → booléen@
+			\item \verb@algorithme isAvailableDate(day, month, year : entiers) → booléen@
             \par
         
           qui re\c coit le jour, le mois et l'ann\'ee d'une date et qui renvoie vrai si cette date est valide et faux si elle ne l'est pas.
           Une date est consid\'er\'ee comme valide si le mois est compris entre 1 et 12 et le jour entre 1 et (le nombre de jours du mois).
         
-			\item \verb@module dayOfWeek(day, month, year : entiers) → entier@
+			\item \verb@algorithme dayOfWeek(day, month, year : entiers) → entier@
             \par
         
           qui retourne un entier correspondant au jour de la semaine (0 = lundi, 1 = mardi, . . .) pour une date donn\'ee en param\`etre. \par
 				
           Le param\`etre year est au format AAAA, par exemple 2015.
-          Si la date fournie est invalide, le module lancera une erreur.
+          Si la date fournie est invalide, l'algorithme lancera une erreur.
             \par
         
-			\item \verb@module printDay(day : entier)@
+			\item \verb@algorithme printDay(day : entier)@
             \par
         
           qui affiche \`a l'\'ecran au format JJ le num\'ero du jour donn\'e en param\`etre.\par
 				
           Par exemple, si on donne 1 en param\`etre \`a cette fonction, celle-ci affichera 01.
         
-			\item \verb@module printCalendar(month, year : entiers)@
+			\item \verb@algorithme printCalendar(month, year : entiers)@
             \par
         
           qui affiche \`a l'\'ecran le calendrier du mois de l'ann\'ee pass\'es en param\`etre, les semaines commen\c cant par le lundi.
         
-			\item \verb@module principal@
+			\item \verb@algorithme principal@
             \par
         
           qui demande \`a l'utilisateur d'entrer un mois et une ann\'ee au clavier.\par

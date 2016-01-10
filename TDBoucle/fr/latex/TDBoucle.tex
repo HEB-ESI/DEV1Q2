@@ -243,14 +243,14 @@ fin tant que
             \par
         \begin{verbatim}
 // Affiche les nombres de 1 à 10.
-module compterJusque10 () // version avec tant que
+algorithme compterJusque10 () // version avec tant que
     nb : entier
     nb ← 1 // c’est le premier nombre à afficher
     tant que nb ≤ 10 faire // c’est le premier nombre à afficher
       afficher nb  // on affiche la valeur de la variable nb
       nb ← nb + 1 // on passe au nombre suivant
     fin tant que
-fin module
+fin algorithme
       \end{verbatim}
 			
 		\subparagraph{Somme de nombres} 
@@ -260,7 +260,7 @@ fin module
             \par
         \begin{verbatim}
 // Lit des valeurs entières et retourne la somme des valeurs lues.
-module sommeNombres() → entier
+algorithme sommeNombres() → entier
     valeur : entier // un des termes de l’addition
     somme : entier // la somme
     somme ← 0
@@ -270,7 +270,7 @@ module sommeNombres() → entier
       lire valeur // remarquer l’endroit où on lit une valeur.
     fin tant que
 retourner somme
-fin module
+fin algorithme
       \end{verbatim}\subsection{while}
 		    L'\'equivalent Java de la boucle 
 		  
@@ -329,35 +329,7 @@ public class Exemple {
       }
       System.out. println (somme);
     }
-}\end{Java}Affichera 0 si le premier nb lu vaut -5.
-            \par
-        
-			
-		\subparagraph{Somme d'entiers positifs} 
-		
-					\textcolor{white}{.} \par
-				
-            \par
-        \begin{Java}
-import java. util .Scanner;
-public class Exemple {
-    /**
-     * Affiche la somme d entiers positifs entres au clavier .
-     * S arrete des qu une valeur nulle ou negative est donnee.
-     * @param args non utilise
-    */
-    public static void main(String [] args) {
-      Scanner clavier = new Scanner(System.in);
-      int nb;
-      int somme = 0;
-      nb = clavier . nextInt ();
-      while ( nb > 0 ) {
-        somme = somme + nb;
-        nb = clavier . nextInt ();
-      }
-      System.out. println (somme);
-    }
-}\end{Java}Affichera 0 si le premier nb lu vaut -5.
+}\end{Java}affichera 0 si le premier nb lu vaut -5.
             \par
         
 			
@@ -408,21 +380,20 @@ public class Lecture {
       System.out. print ("Entrez un entier  positif : ");
       nombreLu = lirePositif ();
     }
-}\end{Java}\subsection{faire - jusqu'\`a ce que}\begin{verbatim}
+}\end{Java}\subsection{faire - tant que}\begin{verbatim}
 faire
     séquence d’instructions à exécuter
-jusqu'à ce que conditionPourSORTIRDeLaBoucle
+tant que condition
       \end{verbatim}
-        Cette structure est tr\`es proche du \guillemotleft  \verb@tant que@ \guillemotright  \`a deux diff\'erences pr\`es :
+        Cette structure est tr\`es proche du \guillemotleft  \verb@tant que@ \guillemotright  \`a une diff\'erence pr\`es :
         
-					\begin{enumerate}
+					\begin{itemize}
 				
 			\item 
             Le \textbf{test} est fait \textbf{\`a la fin} et pas au d\'ebut. 
             La t\^ache est donc toujours \textbf{ex\'ecut\'ee au moins une fois}.
           
-			\item On donne la \textbf{condition pour arr\^eter} et pas pour continuer.
-					\end{enumerate}
+					\end{itemize}
 				
             \par
         En pseudo-code :
@@ -430,7 +401,7 @@ jusqu'à ce que conditionPourSORTIRDeLaBoucle
         \begin{verbatim}
 faire
     séquence d’instructions à exécuter
-jusqu’à ce que condition
+tant que condition
       \end{verbatim}
         La \textbf{condition} est une expression d\'elivrant un r\'esultat 
         \textbf{bool\'een} (vrai ou faux).
@@ -438,9 +409,9 @@ jusqu’à ce que condition
             \par
         
         Il faut que la s\'equence d'instructions comprise entre \verb@faire@ 
-        et \verb@jusqu’à ce que@ contienne au moins 
+        et \verb@tant que@ contienne au moins 
         \textbf{une instruction qui modifie la condition} de telle mani\`ere 
-        qu'elle puisse \textbf{devenir vraie} \`a un moment donn\'e pour arr\^eter l'it\'eration.
+        qu'elle puisse \textbf{devenir fausse} \`a un moment donn\'e pour arr\^eter l'it\'eration.
       
             \par
         
@@ -467,7 +438,7 @@ jusqu’à ce que condition
             \par
         \begin{verbatim}
 // Lit des valeurs entières et retourne la somme des valeurs lues.
-module sommeNombres() → entier
+algorithme sommeNombres() → entier
     encore : booléen // est-ce qu’il reste encore une valeur à additionner ?
     valeur : entier // un des termes de l’addition
     somme : entier // la somme
@@ -476,9 +447,9 @@ module sommeNombres() → entier
       lire valeur
       somme ← somme + valeur
       lire encore
-    jusqu’à ce que NON encore
+    tant que encore
     retourner somme
-fin module
+fin algorithme
       \end{verbatim}Avec cette solution, on additionne au moins une valeur.
             \par
         \subsection{do...while}
@@ -488,25 +459,13 @@ fin module
         \begin{verbatim}
 faire
     séquence d’instructions à exécuter
-jusqu'à ce que conditionPourSORTIRDeLaBoucle
-      \end{verbatim}est 
-            \par
-        \begin{verbatim}
-do ( condition ) {
-    séquence d’instructions à exécuter
-}while( ! conditionPourSORTIRDeLaBoucle );
-		  \end{verbatim}il s'agirait plut\^ot en Java d'un 
-            \par
-        \begin{verbatim}
-faire
-    séquence d’instructions à exécuter
-tant que conditionPourRESTERDansLaBoucle
+tant que conditionPourResterDansLaBoucle
       \end{verbatim}c-\`a-d 
             \par
         \begin{verbatim}
 do ( condition ) {
     séquence d’instructions à exécuter
-}while( conditionPourRESTERDansLaBoucle );
+} while( conditionPourResterDansLaBoucle );
 		  \end{verbatim}
 		  car la condition est invers\'ee.
     
@@ -521,10 +480,10 @@ public class Util {
 
 public static void puissance2() {
     int puissance = 1;
-    while ( puissance < 100 ) {
+    do {
       System.out. print(puissance + " ");
       puissance = 2 * puissance ;
-    }
+    } while ( puissance < 100 );
 }\end{Java}affichera \verb@1 2 4 8 16 32 64 @
             \par
         
@@ -549,7 +508,7 @@ public class Exemple {
       do{
         nb = clavier . nextInt ();
         somme = somme + nb;
-      }while ( ( nb > 0 );
+      } while ( nb > 0 );
       System.out. println (somme);
     }
 }\end{Java}Affichera -5 si le premier nb lu vaut -5.
@@ -569,11 +528,14 @@ fin pour
       \end{verbatim} est \'equivalent \`a 
             \par
         \begin{verbatim}
+{
+variable : entier
 variable ← début
 tant que variable ≤ fin faire
     séquence d’instructions à exécuter
     variable ← variable + pas // ou variable ← variable + 1 si le pas est omis.
 fin tant que
+}
       \end{verbatim}
         Dans ce type de structure, \verb@début@, 
         \verb@fin@ et \verb@pas@ 
@@ -638,7 +600,7 @@ fin tant que
             \par
         
         Il est aussi d\'econseill\'e d'utiliser \verb@variable@ \`a la sortie
-        de la structure pour sans lui affecter une nouvelle valeur.
+        de la structure \verb@pour@ sans lui affecter une nouvelle valeur.
       
             \par
         \begin{figure}[hbt]
@@ -654,12 +616,11 @@ fin tant que
             \par
         \begin{verbatim}
 // Affiche les nombres de 1 à 10.
-module compterJusque10 () // version avec pour
-    nb : entier
+algorithme compterJusque10 () // version avec pour
     pour nb de 1 à 10 faire // par défaut le pas est de 1
       afficher nb
     fin pour
-fin module
+fin algorithme
     \end{verbatim}
 			
 		\subparagraph{Afficher les nombres plus petits que n} 
@@ -669,12 +630,11 @@ fin module
             \par
         \begin{verbatim}
 // Reçoit un nombre et affiche les nombres de 1 à ce nombre.
-module afficherN(n↓ : entier)
-    nb : entier
+algorithme afficherN (n↓ : entier)
     pour nb de 1 à n faire
       afficher nb
     fin pour
-fin module
+fin algorithme
     \end{verbatim}
 			
 		\subparagraph{Afficher les nombres pairs plus petits que 10} 
@@ -686,12 +646,11 @@ fin module
 // Reçoit un nombre et affiche les nombres pairs jusqu’à ce nombre.
 // n : limite des nombres à afficher.
 Exemple : si n vaut 10, les nombres pairs de 1 à 10 sont : 2, 4, 6, 8, 10.
-module afficherPair (n↓ : entier)
-    nb : entier
+algorithme afficherPair (n↓ : entier)
     pour nb de 2 à n par 2 faire
       afficher nb
     fin pour
-fin module
+fin algorithme
     \end{verbatim}
 			
 		\subparagraph{Afficher les nombres pairs plus petits que n} 
@@ -703,12 +662,11 @@ fin module
 // Reçoit un nombre et affiche les nombres pairs jusqu’à ce nombre.
 // n : limite des nombres à afficher.
 // Exemple : si n vaut 10, les nombres pairs de 1 à 10 sont : 2, 4, 6, 8, 10.
-module afficherPair (n↓ : entier)
-    i: entier
+algorithme afficherPair  (n↓ : entier)
     pour i de 1 à n DIV 2 faire
       afficher 2 * i
     fin pour
-fin module
+fin algorithme
     \end{verbatim}
 			
 		\subparagraph{Afficher n nombres pairs} 
@@ -720,12 +678,11 @@ fin module
 // Reçoit un nombre et affiche ce nombre de nombres pairs.
 // n: le nombre de nombres à afficher.
 // Exemple : si n vaut 10, les 10 premiers nombres pairs sont : 2, 4, 6, 8, 10, 12, 14, 16, 18, 20.
-module afficherPair ()
-    i : entier
+algorithme afficherPair ()
     pour i de 1 à n faire
       afficher 2 * i
     fin pour
-fin module
+fin algorithme
     \end{verbatim}
 			
 		\subparagraph{Somme de nombres} 
@@ -735,19 +692,18 @@ fin module
             \par
         \begin{verbatim}
 // Lit des valeurs entières et retourne la somme des valeurs lues.
-module sommeNombres() → entier
+algorithme sommeNombres () → entier
     nbValeurs : entier // nb de valeurs à additionner
     valeur : entier // un des termes de l’addition
     somme : entier // la somme
-    i : entier // itérateur
     somme ← 0 // la somme se construit petit à petit. Elle vaut 0 au départ
-    lire nbValeurs
+    demander nbValeurs
     pour i de 1 à nbValeurs faire
       lire valeur
       somme ← somme + valeur
     fin pour
     retourner somme
-fin module
+fin algorithme
     \end{verbatim}\subsection{for}
 		    L'\'equivalent Java de la boucle 
 		  
@@ -759,7 +715,7 @@ fin pour
       \end{verbatim}est 
             \par
         \begin{verbatim}
-for ( int i =début; i<=fin; i=i+pas ) {
+for ( int i = début; i <= fin;  i = i+pas ) {
     séquence d’instructions à exécuter
 }
   \end{verbatim}
@@ -778,7 +734,7 @@ public class Exemple {
     public static void main(String [] args) {
       int somme;
       somme = 0;
-      for ( int i =2; i<=100; i=i+2 ) {
+      for ( int i = 2; i <= 100; i = i+2 ) {
         somme = somme + i;
       }
       System.out. println (somme);
@@ -797,12 +753,12 @@ public class Exemple {
     * @param args non utilise
     */
     public static void main(String [] args) {
-      for ( int i=10; i>=1; i=i−1 ) {
+      for ( int i = 10; i >= 1; i = i−1 ) {
         System.out. println ( i );
       }
       System.out. println ("Partez !");
     }
-}\end{verbatim}\verb@i++;@ est un raccourci pour \verb@i =i+1;@
+}\end{verbatim}\verb@i++;@ est un raccourci pour \verb@i = i+1;@
             \par
         \begin{Java}
 public class Exemple {
@@ -811,12 +767,13 @@ public class Exemple {
     * @param args non utilise
     */
     public static void main(String [] args) {
-      for ( int i =1; i<=10; i++ ) {
+      for ( int i = 1; i <= 10; i++ ) {
         System.out. println ( i );
       }
     }
 }\end{Java}\subsection{Quel type de boucle choisir ?}
-		    En pratique, il est possible d'utiliser syst\'ematiquement la boucle tant que qui peut s'adapter
+		    En pratique, il est possible d'utiliser syst\'ematiquement la boucle 
+		    \verb@tant que@ qui peut s'adapter
         \`a toutes les situations. Cependant, 
         
 					\begin{itemize}
@@ -875,12 +832,11 @@ fin pour
       \end{verbatim}Par exemple, pour afficher la suite des n premiers nombres pairs
             \par
         \begin{verbatim}
-module nombrePair (n↓ : entier)
-    i : entier
+algorithme nombrePair (n↓ : entier)
     pour i de 1 à n faire
       afficher 2 * i
     fin pour
-fin module
+fin algorithme
       \end{verbatim}
         Parfois, il est difficile (voire impossible) de trouver \verb@f(i)@.\par
 				
@@ -903,14 +859,14 @@ fin pour
       
             \par
         \begin{verbatim}
-module suite1 (n↓ : entier)
-    nb, i : entiers
+algorithme suite1 (n↓ : entier)
+    nb : entier
     nb ← 2
     pour i de 1 à n faire
       afficher nb
       nb ← nb + 2
     fin pour
-fin module
+fin algorithme
       \end{verbatim}\subsection{3 pas en avant, 2 pas en arri\`ere}
 		    Dans certains cas, il n'est pas possible de d\'eduire directement le nombre suivant en connaissant juste le nombre pr\'ec\'edent. 
 		    Prenons un exemple un peu plus compliqu\'e pour l'illustrer.
@@ -928,8 +884,8 @@ fin module
       
             \par
         \begin{verbatim}
-module suite3Avant2Arrière(n↓ : entier)
-    nb, nbPasRestants, direction, i : entiers
+algorithme suite3Avant2Arrière(n↓ : entier)
+    nb, nbPasRestants, direction : entiers
     nb ← 1
     nbPasRestants ← 3 // 3 pas
     direction ← 1 // en avant
@@ -946,7 +902,7 @@ module suite3Avant2Arrière(n↓ : entier)
         fin si
       fin si
     fin pour
-fin module
+fin algorithme
       \end{verbatim}
         On obtient un algorithme plus long mais qui respecte toujours le sch\'ema vu.
       
@@ -974,8 +930,8 @@ fin module
 				
 		  Exemple :
 \begin{verbatim}
-package be.heb.esi . lgj1 ;
-import java. util .Scanner;
+package be.heb.esi.lgj1 ;
+import java.util.Scanner;
 public class Affiche {
     /**
     * Affiche l ’ entier lu au clavier ou un message si ce n’ est pas un entier .
@@ -1010,17 +966,17 @@ public class Affiche {
 					\begin{itemize}
 				
 			\item \begin{verbatim}
-module boucle1 ()
+algorithme boucle1 ()
     x : entier
     x ← 0
     tant que x < 12 faire
       x ← x+2
     fin tant que
     afficher x
-fin module
+finalgorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module boucle2 ()
+algorithme boucle2 ()
     ok : booléen
     x : entier
     ok ← vrai
@@ -1030,10 +986,10 @@ module boucle2 ()
       ok ← x MOD 11 ≠ 0
     fin tant que
     afficher x
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module boucle3 ()
+algorithme boucle3 ()
     ok : booléen
     cpt, x : entiers
     x ← 10
@@ -1049,10 +1005,10 @@ module boucle3 ()
       fin si
     fin tant que
     afficher x
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module boucle4 ()
+algorithme boucle4 ()
     pair, grand : booléens
     p, x : entiers
     x ← 1
@@ -1062,12 +1018,12 @@ module boucle4 ()
       x ← x+p
       pair ← x MOD 2 = 0
       grand ← x > 15
-    jusqu’à ce que pair OU grand
+    tant que NON pair ET NON grand
     afficher x
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module boucle5 ()
+algorithme boucle5 ()
     i, x : entiers
     ok : booléen
     x ← 3
@@ -1081,10 +1037,10 @@ module boucle5 ()
     sinon
       afficher 2 * x
     fin si
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module boucle6 ()
+algorithme boucle6 ()
     i, j, fin : entiers
     pour i de 1 à 3 faire
       fin ← 6 * i - 11
@@ -1092,7 +1048,7 @@ module boucle6 ()
         afficher 10 * i + j
       fin pour
     fin pour
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{10em}}} 
 					\end{itemize}
 				
@@ -1194,7 +1150,7 @@ for ( int i=9; i>=0; i=i-2 ) {
             \par
         
 			
-		\subparagraph{Compr\'ehension} 
+		\subparagraph{} 
 		
                 \textcolor{white}{.} \par
             
@@ -1221,19 +1177,19 @@ public class Boucles {
 				
             \par
         \begin{verbatim}
-MODULE Test
+algorithme Test
 
     nb, produit : Entier
     produit ← 1 
 
-    LIRE nb
-    TANT QUE nb ≠ 0 FAIRE
+    demander nb
+    tant que nb ≠ 0 faire
         produit ← produit * nb
-        LIRE nb 
-    FIN TANT QUE
-    AFFICHER produit
+        lire nb 
+    fin tant que
+    afficher produit
     
-FIN MODULE
+fin algorithme
 			    \end{verbatim}
 			
 		\subparagraph{Exercice Pour} 
@@ -1244,17 +1200,17 @@ FIN MODULE
 				
             \par
         \begin{verbatim}
-MODULE Test
+algorithme Test
 
     nb: Entier
     i : Entier
 
-    LIRE nb
-    POUR i DE 1 A nb FAIRE
-        AFFICHER i
-    FIN POUR
+    demander nb
+    pour i de 1 à nb faire
+        afficher i
+    fin pour
 
-FIN MODULE
+fin algorithme
 			     \end{verbatim}
 			
 		\subparagraph{Mots cl\'es} 
@@ -1284,7 +1240,7 @@ public static void appelMaxPositif() {
 			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
 			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
-			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
 			\item Pour la partie Java, dessinez l'arborescence des fichie, vous travaillerez dans un package  \verb@g12345.Boucles@. 
 					\end{itemize}
@@ -1311,7 +1267,7 @@ public static void appelMaxPositif() {
             
 			\item 
               demande \`a l'utilisateur d'introduire un entier positif (non strictement). 
-              Ce module permet \`a l'utilisateur de se tromper \`a plusieurs reprises mais l'utilisateur devra donner
+              Cet algorithme permet \`a l'utilisateur de se tromper \`a plusieurs reprises mais l'utilisateur devra donner
               une bonne valeur pour arr\^eter le programme.
               (On suppose tout de m\^eme que l'utilisateur ne donne que des valeurs enti\`eres !) 
             
@@ -1322,7 +1278,7 @@ public static void appelMaxPositif() {
               
             \par
         
-              Pensez \`a utiliser le module \'ecrit ci-dessus qui permet de lire un entier positif.
+              Pensez \`a utiliser l'algorithme \'ecrit ci-dessus qui permet de lire un entier positif.
               
             \par
         

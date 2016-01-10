@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="../../../_templates/java/latex.xsl"?>
 <lesson xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.elml.ch ../../../_config/validate.xsd" 
-	label="TDModule" title="TD Modules">
+	label="TDModule" title="TD Récapitulatif">
 	
 	<entry>
 		<paragraph>
-			Ce TD a pour but d'aborder pourquoi et comment découper un algorithme en modules
-      (morceaux d’algorithmes) et en méthodes (morceaux de code).
+			Ce TD a pour but d'aborder pourquoi et comment découper un algorithme,
+			comment lancer une exception et documenter votre code.
 		</paragraph>
 	</entry>
 	
 	<!-- =========================================================== -->
 	<unit label="Decouper" title="Découper du code">
 	<!-- =========================================================== -->
-    <learningObject title="Découper du code : modules ou méthodes">
+    <learningObject title="Découper du code : algorithmes ou méthodes">
     <entry>
       Pourquoi ?
       <list listStyle="unordered">
@@ -35,7 +35,7 @@
       </list>
     </entry>
     <entry>
-      En algo,nous parlerons de <formatted style="bold">module</formatted>.
+      En algo,nous parlerons d'<formatted style="bold">algorithme</formatted>.
       En Java nous parlerons de <formatted style="bold">méthode</formatted>.
     </entry>
     </learningObject>
@@ -46,45 +46,45 @@
 	<!-- =========================================================== -->
 
     
-		<learningObject title="Module">
+		<learningObject title="Algorithme">
 		<!-- ================================================ -->
 		<clarify>
 		  <paragraph>
-        Pour pouvoir faire communiquer les modules entre eux, il faut les équiper d’une « interface »
-        de transmission des variables appelée l’<formatted style="bold">en-tête</formatted> du module et qui contient une déclaration
-        de variables qu’on appellera ici <formatted style="bold">paramètres</formatted> du module.
+        Pour pouvoir faire communiquer les algorithmes entre eux, il faut les équiper d’une « interface »
+        de transmission des variables appelée l’<formatted style="bold">en-tête</formatted> d'algorithme et qui contient une déclaration
+        de variables qu’on appellera ici <formatted style="bold">paramètres</formatted> de l'algorithme.
       </paragraph>
       <paragraph>
         <list listStyle="unordered">
           <item>
             Les variables accompagnées d’une flèche vers le bas (↓) sont des <formatted style="bold">paramètres d’entrée</formatted> qui
-            reçoivent des <formatted style="bold">données</formatted> au début de l’exécution du module (données qui ne doivent donc plus
+            reçoivent des <formatted style="bold">données</formatted> au début de l’exécution de l'algorithme (données qui ne doivent donc plus
             être lues) 
           </item>
           <item>
             tandis que celles accompagnées d’une flèche vers le haut (↑) sont des <formatted style="bold">paramètres
-            de sortie</formatted> qui permettent de renvoyer des résultats à l’<formatted style="bold">issue</formatted> de l’exécution du module
+            de sortie</formatted> qui permettent de renvoyer des résultats à l’<formatted style="bold">issue</formatted> de l’exécution de l'algorithme
             (résultats qui ne doivent donc plus être affichés). 
           </item>
           <item>
             Les variables accompagnées d'une double flèche (↓ ↑) sont en<formatted style="bold"> entrée-sortie</formatted> c-à-d qu'elles ont une valeur
-            en arrivant dans le module, que cette valeur sera modifiée dans le module et que la valeur modifiée est en sortie. 
-            La variable de départ aura donc changé de valeur dans le module et ce changement se répercute en dehors.
+            en arrivant dans l'algorithme, que cette valeur sera modifiée dans l'algorithme et que la valeur modifiée est en sortie. 
+            La variable de départ aura donc changé de valeur dans l'algorithme et ce changement se répercute en dehors.
           </item>
         </list>
       </paragraph>
-      <paragraph>Par exemple, ceci donnerait pour le module max2 : </paragraph>
+      <paragraph>Par exemple, ceci donnerait pour l'algorithme max2 : </paragraph>
       <paragraph cssClass="code">
-module max2 (a↓, b↓ : réels, max↑ : réel)
+algorithme max2 (a↓, b↓ : réels, max↑ : réel)
     si a > b alors
       max ← a
     sinon
       max ← b
     fin si
-fin module
+fin algorithme
       </paragraph>
       <paragraph>
-        Sous cette forme, ce module est devenu « inactif », <formatted style="bold">il ne lit rien ni n’affiche rien</formatted>,
+        Cet algorithme <formatted style="bold">ne lit rien et n’affiche rien</formatted>,
         mais il est cependant prêt à être utilisé. Il suffit pour cela de lui fournir les valeurs de <formatted style="code">a</formatted> 
         et <formatted style="code">b</formatted> (paramètres d’entrée) pour qu’il entre en action. Une fois le maximum calculé, celui-ci est
         affecté à la variable max qui – en tant que paramètre de sortie – contiendra et renverra le
@@ -93,46 +93,45 @@ fin module
     </clarify>
     </learningObject>
     
-    <learningObject title="Appel de module">
+    <learningObject title="Appel d'algorithme">
 		<!-- ================================================ -->
 		<clarify>
       <paragraph>
-        Pour faire appel aux services de ce module, il suffit à présent d’écrire son nom suivi d’un
+        Pour faire appel aux services de cet algorithme, il suffit à présent d’écrire son nom suivi d’un
         nombre de variables (ou, en entrée, d’expressions) en accord avec son en-tête. 
       </paragraph>
-      <paragraph>Montrons par un exemple comment le module max3 peut faire appel au module max2 : </paragraph>
+      <paragraph>Montrons par un exemple comment l'algorithme max3 peut faire appel à l'algorithme max2 : </paragraph>
       <paragraph cssClass="code">
-module max3 ()
-    a, b, c, temp, max : réels
-    lire a, b, c
+algorithme max3 (a, b, c : réels) → réel
+    temp, max : réels
     max2( a, b, temp )
     max2( temp, c, max )
-    afficher max
-fin module
+    retourner max
+fin algorithme
       </paragraph>
       <paragraph>
         L’instruction max2(a, b, temp) se déroule comme suit :
         <list listStyle="unordered">
-            <item>le contenu des variables a et b est affecté aux paramètres d’entrée a et b du module max2, puis ce module peut entrer en action ;</item>
-            <item>à l’issue du module max2, la valeur du paramètre de sortie max est communiquée à la variable temp, qui contient à présent le maximum de a et b</item>
+            <item>le contenu des variables a et b est affecté aux paramètres d’entrée a et b de l'algorithme max2, puis cet algorithme peut entrer en action ;</item>
+            <item>à l’issue de l'algorithme max2, la valeur du paramètre de sortie max est communiquée à la variable temp, qui contient à présent le maximum de a et b</item>
           </list>
       </paragraph>
       <paragraph>
         L’instruction max2(temp, c, max) se déroule comme suit :
         <list listStyle="unordered">
-            <item>le contenu des variables temp et c est affecté aux paramètres d’entrée a et b du module max2, puis ce module peut entrer en action ;</item>
-            <item>à l’issue du module max2, la valeur du paramètre de sortie max est communiquée à la variable max qui contient à présent le maximum des 3 nombres de départ.</item>
+            <item>le contenu des variables temp et c est affecté aux paramètres d’entrée a et b de l'algorithme max2, puis cet algorithme peut entrer en action ;</item>
+            <item>à l’issue de l'algorithme max2, la valeur du paramètre de sortie max est communiquée à la variable max qui contient à présent le maximum des 3 nombres de départ.</item>
           </list>
       </paragraph>
       <paragraph>
-        Implicitement, on a introduit ici un nouveau type de primitive, l’appel à un module qui
+        Implicitement, on a introduit ici un nouveau type de primitive, l’appel à un algorithme qui
         consiste en la simple écriture de son nom dans le code. Cette instruction est reconnue comme
         telle car elle ne s’apparente pas aux autres types d’instruction vus précédemment (primitives
-        lire, afficher, ← , structures de contrôle si, selon que, tant que, pour. . .). Lorsque l’ordina-
-        teur rencontre cette instruction, il va rechercher si un module portant ce nom existe. Une
-        fois ce module trouvé, les paramètres ad hoc lui sont communiqués et toutes les instructions
-        le composant sont exécutées séquentiellement. Arrivé à l’issue du module, les paramètres de
-        sortie sont communiqués au module appelant et le déroulement de celui-ci se poursuit là où
+        demander, afficher, ← , structures de contrôle si, selon que, tant que, pour. . .). Lorsque l’ordinateur
+        rencontre cette instruction, il va rechercher si un algorithme portant ce nom existe. Une
+        fois cet algorithme trouvé, les paramètres ad hoc lui sont communiqués et toutes les instructions
+        le composant sont exécutées séquentiellement. Arrivé à l’issue de l'algorithme, les paramètres de
+        sortie sont communiqués à l'algorithme appelant et le déroulement de celui-ci se poursuit là où
         il avait été interrompu.
       </paragraph>
       <paragraph>
@@ -140,20 +139,20 @@ fin module
         <list listStyle="unordered">
             <item>si tous les paramètres sont en entrée, on peut omettre les flèches ;</item>
             <item>
-              la présence de ces paramètres n’est pas obligatoire, on peut envisager un module sans
-              paramètre de sortie (par ex. un module qui reçoit en entrée un nombre et dont la seule
-              fonction est de l’afficher à l’écran), ou inversement sans paramètre d’entrée (un module
+              la présence de ces paramètres n’est pas obligatoire, on peut envisager un algorithme sans
+              paramètre de sortie (par ex. un algorithme qui reçoit en entrée un nombre et dont la seule
+              fonction est de l’afficher à l’écran), ou inversement sans paramètre d’entrée (un algorithme 
               qui simule un lancer de dé, et renvoie en paramètre une valeur aléatoire entre 1 et 6) ;
             </item>
             <item>
-              pour appeler correctement un module, il faut fournir des noms de variables, des expressions ou des constantes 
+              pour appeler correctement un algorithme, il faut fournir des noms de variables, des expressions ou des constantes 
               en <formatted style="bold">même nombre</formatted> et en <formatted style="bold">même ordre</formatted> 
-              que les paramètres du module ;
+              que les paramètres de l'algorithme ;
             </item>
-            <item>en outre, les types des variables doivent correspondre entre l’appel et l’en-tête du module ;</item>
-            <item>ne peut être affectée à un paramètre d’entrée du module qu’une constante, une expression ou une variable préalablement affectée ;</item>
-            <item>à un paramètre de sortie d’un module doit toujours correspondre une autre variable, jamais une constante ou une expression ;</item>
-            <item>il faut s’assurer qu’à l’issue du module, tous les paramètres de sortie aient été affectés lors de l’exécution de ce module.</item>
+            <item>en outre, les types des variables doivent correspondre entre l’appel et l’en-tête de l'algorithme ;</item>
+            <item>ne peut être affectée à un paramètre d’entrée de l'algorithme  qu’une constante, une expression ou une variable préalablement affectée ;</item>
+            <item>à un paramètre de sortie d’un algorithme doit toujours correspondre une autre variable, jamais une constante ou une expression ;</item>
+            <item>il faut s’assurer qu’à l’issue de l'algorithme, tous les paramètres de sortie aient été affectés lors de l’exécution de cet algorithme.</item>
           </list>
       </paragraph>
     </clarify>
@@ -162,75 +161,75 @@ fin module
 		
   
 	<!-- =========================================================== -->
-	<unit label="RetournerValeur" title="Module renvoyant une valeur">
+	<unit label="RetournerValeur" title="Algorithme renvoyant une valeur">
 	<!-- =========================================================== -->
 
-    <entry>Un deuxième type de module est le module renvoyant une valeur. 
-    (On désigne aussi ce type de modules par le terme fonction).</entry>
+    <entry>Un deuxième type d'algorithme est l'algorithme renvoyant une valeur. 
+    (On désigne aussi ce type d'algorithmes par le terme fonction).</entry>
     
 		<learningObject title="En algo">
 		<!-- ================================================ -->
 		<clarify>
 		  <paragraph>Son en-tête est du type suivant :</paragraph>
 		   <paragraph cssClass="code">
-module exemple (var1↓ : type1, var2↓ : type2, . . ., varN↓ : typeN) → typeRes
+algorithme exemple (var1↓ : type1, var2↓ : type2, . . ., varN↓ : typeN) → typeRes
       </paragraph>
       <paragraph>
-        Il se distingue du module précédemment étudié par la flèche de renvoi à droite,
+        Il se distingue de l'algorithme précédemment étudié par la flèche de renvoi à droite,
         et possède les particularités suivantes :
       </paragraph>
       <paragraph>
         <list listStyle="unordered">
-            <item>ce module renvoie une valeur qui n’est pas affectée à une variable de sortie ;</item>
+            <item>cet algorithme renvoie une valeur qui n’est pas affectée à une variable de sortie ;</item>
             <item>à droite de la flèche de renvoi ne se trouve donc pas le nom d’un paramètre de sortie,
             mais le <formatted style="bold">type</formatted> de la valeur renvoyée ;</item>
             <item>typeRes est le type de la valeur renvoyée ; en théorie, ce peut être un type simple
-            (entier, réel, booléen, chaine, caractère), un type structuré ou même un tableau (ces
+            (entier, réel, booléen, chaine), un type structuré ou même un tableau (ces
             types seront vus dans les chapitres suivants). En pratique il conviendra de s’en tenir
             aux limitations du langage utilisé ;</item>
-            <item>var1, . . ., varN sont les paramètres du module 
+            <item>var1, . . ., varN sont les paramètres de l'algorithme
             (aussi appelés <formatted style="bold">arguments</formatted> ) ; ce sont, le
             plus souvent, des paramètres d’entrée, les paramètres de sortie étant plus rares dans
-            ce type de module ;</item>
-            <item>ces arguments deviennent automatiquement des variables locales du module ; déclarées
+            ce type d'algorithme ;</item>
+            <item>ces arguments deviennent automatiquement des variables locales de l'algorithme ; déclarées
             dans son en-tête, elles ne doivent plus l’être dans la partie déclarative ;</item>
-            <item>la valeur renvoyée est définie à la fin du module via la primitive retourner résultat, où
+            <item>la valeur renvoyée est définie à la fin de l'algorithme via la primitive 
+            <formatted style="code">retourner résultat</formatted>, où
             résultat est une variable (ou plus généralement une expression) de type typeRes ;</item>
-            <item>pour appeler ce type de module, on utilise son nom comme celui d’une variable ou
-            dans une expression apparaissant dans le module appelant, mais jamais à gauche du
+            <item>pour appeler ce type d'algorithme, on utilise son nom comme celui d’une variable ou
+            dans une expression apparaissant dans l'algorithme appelant, mais jamais à gauche du
             signe d’affectation.</item>
           </list>
         </paragraph>
         <paragraph>
-          Comme précédemment, il faut veiller, lors de l’appel de ce type de module, à ce que le
+          Comme précédemment, il faut veiller, lors de l’appel de ce type d'algorithme, à ce que le
           nombre d’arguments ainsi que leur type correspondent à ceux spécifiés dans l’en-tête.
         </paragraph>
       </clarify>
       <look>
-         <paragraph>Par exemple, ceci donnerait pour le module max2 : </paragraph>
+         <paragraph>Par exemple, ceci donnerait pour l'algorithme max2 : </paragraph>
       <paragraph cssClass="code">
-module max2 (a↓, b↓ : réels)→ réel
+algorithme max2 (a↓, b↓ : réels)→ réel
     si a > b alors
       max ← a
     sinon
       max ← b
     fin si
     retourner max
-fin module
+fin algorithme
       </paragraph>
       <paragraph>
-        Pour faire appel aux services de ce module, il suffit à présent d’écrire son nom suivi d’un
+        Pour faire appel aux services de cet algorithme, il suffit à présent d’écrire son nom suivi d’un
         nombre de variables (ou, en entrée, d’expressions) en accord avec son en-tête. 
       </paragraph>
-      <paragraph>Montrons par un exemple comment le module max3 peut faire appel au module max2 : </paragraph>
+      <paragraph>Montrons par un exemple comment l'algorithme max3 peut faire appel à l'algorithme max2 : </paragraph>
       <paragraph cssClass="code">
-module max3 ()
-    a, b, c, temp, max : réels
-    lire a, b, c
+algorithme max3 (a, b, c : réels)  → réel
+    temp, max : réels
     temp ← max2( a, b)
     max ← max2( temp, c)
-    afficher max
-fin module
+    retourner max
+fin algorithme
       </paragraph>
     </look>
     </learningObject>
@@ -332,7 +331,7 @@ public static int absolu ( int nb ) {
 <![CDATA[
 int resultat = absolu(4);
 int ecart = -10;
-int ecartAbsolu = absolu(ecart );
+int ecartAbsolu = absolu( ecart );
 ]]>				</paragraph>
 		</look>
 		<look>
@@ -340,7 +339,7 @@ int ecartAbsolu = absolu(ecart );
 		  <paragraph cssClass="java">
 <![CDATA[
 public static void presenter (String nomPgm) {
-    System.out. println ("Programme "+nomPgm);
+    System.out. println ("Programme " + nomPgm);
 }]]>				</paragraph>
       <paragraph>
         Appel possible (si dans la même classe) :
@@ -357,8 +356,8 @@ presenter ("moyenne de 2 nombres");
 public static int lireEntier () {
     Scanner clavier = new Scanner(System.in);
     int nb;
-    System.out. println ("Entrez un nombre entier!");
-    nb = clavier . nextInt ();
+    System.out.println ("Entrez un nombre entier !");
+    nb = clavier.nextInt ();
     return nb;
 }]]>				</paragraph>
       <paragraph>
@@ -377,10 +376,10 @@ import java.util.Scanner;
 public class Test{
   public static double max2(double nb1, double nb2){
     double max = nb1;
-		if (nb1 < nb2) {
-			max = nb2;
-		}
-		return max;
+    if (nb1 < nb2) {
+      max = nb2;
+    }
+    return max;
   }
 }]]>				</paragraph>
 		</look>
@@ -411,15 +410,15 @@ public class Test{
         </paragraph>
         <paragraph cssClass="code">
 // Lit un nombre, l'affiche s’il est positif et sinon lance une erreur.
-module lirePositif ()
+algorithme lirePositif ()
     nb : réel
-    lire nb
+    demander nb
     si nb <![CDATA[<]]> 0 alors
       erreur "Le nombre n’est pas positif !"
     fin si
     
     afficher nb
-fin module
+fin algorithme
         </paragraph>
       </look>
     </learningObject>
@@ -442,8 +441,8 @@ import java.util.Scanner;
     // Lit un nombre, l affiche si il est positif et sinon lance une erreur.
     public static void main(String [] args){
       Scanner clavier = new Scanner(System.in);
-      double nb;
-      if (nb<![CDATA[<]]> 0) {
+      double nb = clavier.nextDouble();
+      if (nb <![CDATA[<]]> 0) {
         throw new IllegalArgumentException("Le nombre n est pas positif !");
       }
       
@@ -686,7 +685,7 @@ public class MaxEntiers {
     public static int lireEntier () {
       Scanner clavier = new Scanner(System.in);
       System.out. println ("Entrez un nombre entier!");
-      return clavier . nextInt ();
+      return clavier.nextInt ();
     }
     
     /**
@@ -747,7 +746,7 @@ public class MaxEntiers {
 								<list listStyle="unordered">
 									<item>
 										<paragraph cssClass="code">
-module ex1 ()
+algorithme ex1 ()
     x, y : entiers
     addition(3, 4, x)
     afficher x
@@ -755,19 +754,19 @@ module ex1 ()
     y ← 5
     addition(x, y, y)
     afficher y
-fin module
+fin algorithme
 
-module addition(a↓, b↓, c↑ : entiers)
+algorithme addition(a↓, b↓, c↑ : entiers)
     somme : entier
     somme ← a + b
     c ← somme
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="7">7</gap>  <gap answers="8">8</gap> 
                   </item>
 									<item>
 										<paragraph cssClass="code">
-module ex2 ()
+algorithme ex2 ()
     a, b : entiers
     addition(3, 4, a)
     afficher a
@@ -775,19 +774,19 @@ module ex2 ()
     b ← 5
     addition(b, a, b)
     afficher b
-fin module
+fin algorithme
 
-module addition(a↓, b↓, c↑ : entiers)
+algorithme addition(a↓, b↓, c↑ : entiers)
     somme : entier
     somme ← a + b
     c ← somme
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="7">7</gap>  <gap answers="8">8</gap> 
                   </item>
 									<item>
 										<paragraph cssClass="code">
-module ex3 ()
+algorithme ex3 ()
     a, b, c : entiers
     calcul(3, 4, c)
     afficher c
@@ -796,20 +795,20 @@ module ex3 ()
     c ← 5
     calcul(b, c, a)
     afficher a, b, c
-fin module
+fin algorithme
 
-module calcul(a↓, b↓, c↑ : entiers)
+algorithme calcul(a↓, b↓, c↑ : entiers)
     a ← 2*a
     b ← 3*b
     c ← a+b
-fin module
+fin algorithme
 				            </paragraph>
 				            <gap answers="18">18</gap>  <gap answers="23">23</gap> 
                   </item>
                   
                   <item>
 										<paragraph cssClass="code">
-module ex4 ()
+algorithme ex4 ()
     a, b, c : entiers
     a ← 3
     b ← 4
@@ -817,19 +816,19 @@ module ex4 ()
     afficher c
     calcul2(a, b, c)
     afficher a, b, c
-fin module
+fin algorithme
 
-module calcul2 (a↓, b↓, c↑ : entiers)
+algorithme calcul2 (a↓, b↓, c↑ : entiers)
     a ← f(a) 
     c ← 3*b 
     c ← a+c
-fin module
+fin algorithme
 
-module f (a↓ : entier) → entier
+algorithme f (a↓ : entier) → entier
     b : entier
     b ← 2*a+1
     retourner b
-fin module
+fin algorithme
 				            </paragraph>
 				            <gap answers="9">9</gap>  <gap answers="3">3</gap> <gap answers="4">4</gap> <gap answers="19">19</gap> 
                   </item>
@@ -981,7 +980,7 @@ fin module
             <item>résolvez le problème via quelques exemples précis ;</item>
             <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
             <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-            <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
           </list>
         </paragraph>
@@ -992,7 +991,7 @@ fin module
             <item>échange le contenu de deux variables entières passées en paramètres.
             </item>
             <item>retourne le maximum de 4 nombres donnés en paramètre en utilisant 
-              les modules <formatted style="code">max2</formatted> et/ou <formatted style="code">max3</formatted> déjà développés dans ce chapitre.</item>
+              les algorithmes <formatted style="code">max2</formatted> et/ou <formatted style="code">max3</formatted> déjà développés dans ce chapitre.</item>
             <item>valide une date donnée par trois entiers : l’année, le mois et le jour.</item>
           </list>
         </paragraph>
@@ -1006,7 +1005,7 @@ fin module
           <paragraph>
             <multimedia src="../image/sin.png" type="png"/>
 		      </paragraph>
-          Écrivez un module qui reçoit les valeurs (dans l’ordre) du côté opposé (o) et
+          Écrivez un algorithme qui reçoit les valeurs (dans l’ordre) du côté opposé (o) et
           adjacent (a) d'un triangle rectangle et qui retourne le sinus de l'angle Â de ce triangle rectangle.
         </paragraph>
       </act>

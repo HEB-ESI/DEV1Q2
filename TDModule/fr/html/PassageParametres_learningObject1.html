@@ -5,24 +5,24 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <meta http-equiv="Content-Style-Type" content="text/css" />
-      <meta name="description" content="TD Modules: Module. " />
+      <meta name="description" content="TD Récapitulatif: Algorithme. " />
       <meta name="copyright" content="" />
       <meta name="author" content="" />
-      <meta name="keywords" content="TD Modules, eLML" />
-      <title>1.2.1. Module</title>
+      <meta name="keywords" content="TD Récapitulatif, eLML" />
+      <title>1.2.1. Algorithme</title>
       <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
          <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
          <!----></script></head>
    <body xmlns:elml="http://www.elml.ch" onunload="finish()"><a class="skip" style="position: absolute; left: -1000em; width: 20em;" href="#nav_lesson" title="Lien vers Menu">Lien vers Menu</a><a class="skip" href="#content_link" style="position: absolute; left: -1000em; width: 20em;" title="Lien vers Table des matières">Lien vers Table des matières</a><ul class="navigation" id="nav_lesson">
-         <li class="navigationLink"><a href="index.html">1. TD Modules</a><ul class="navigation nav_unit">
+         <li class="navigationLink"><a href="index.html">1. TD Récapitulatif</a><ul class="navigation nav_unit">
                <li class="navigationLink"><a href="unit_Decouper.html">1.1. Découper du code</a></li>
                <li class="navigationLink"><a href="unit_PassageParametres.html">1.2. Passage de paramètres</a><ul class="navigation nav_lo">
-                     <li class="navigationActual"><strong>1.2.1. Module</strong></li>
-                     <li class="navigationLink"><a href="PassageParametres_learningObject2.html">1.2.2. Appel de module</a></li>
+                     <li class="navigationActual"><strong>1.2.1. Algorithme</strong></li>
+                     <li class="navigationLink"><a href="PassageParametres_learningObject2.html">1.2.2. Appel d'algorithme</a></li>
                   </ul>
                </li>
-               <li class="navigationLink"><a href="unit_RetournerValeur.html">1.3. Module renvoyant une valeur</a></li>
+               <li class="navigationLink"><a href="unit_RetournerValeur.html">1.3. Algorithme renvoyant une valeur</a></li>
                <li class="navigationLink"><a href="unit_Methodes.html">1.4. Méthodes et appel de méthodes</a></li>
                <li class="navigationLink"><a href="unit_Erreur.html">1.5. Erreur ou Exception</a></li>
                <li class="navigationLink"><a href="unit_Commenter.html">1.6. Commenter une méthode</a></li>
@@ -30,49 +30,49 @@
             </ul>
          </li>
       </ul>
-      <div class="navigation_arrows"><a href="unit_PassageParametres.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="PassageParametres_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="PassageParametres_learningObject1.html">1.2.1. Module</h1>
+      <div class="navigation_arrows"><a href="unit_PassageParametres.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="PassageParametres_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="PassageParametres_learningObject1.html">1.2.1. Algorithme</h1>
       <div id="d8e49.html" class="clarify">
          <p class="paragraph" id="d8e50">
-            Pour pouvoir faire communiquer les modules entre eux, il faut les équiper d’une «
-            interface »
-            de transmission des variables appelée l’<b>en-tête</b> du module et qui contient une déclaration
-            de variables qu’on appellera ici <b>paramètres</b> du module.
+            Pour pouvoir faire communiquer les algorithmes entre eux, il faut les équiper d’une
+            « interface »
+            de transmission des variables appelée l’<b>en-tête</b> d'algorithme et qui contient une déclaration
+            de variables qu’on appellera ici <b>paramètres</b> de l'algorithme.
             
          </p>
          <p class="paragraph" id="d8e58">
             <ul class="list" id="d8e59">
                <li class="itemAlt">
                   Les variables accompagnées d’une flèche vers le bas (↓) sont des <b>paramètres d’entrée</b> qui
-                  reçoivent des <b>données</b> au début de l’exécution du module (données qui ne doivent donc plus
+                  reçoivent des <b>données</b> au début de l’exécution de l'algorithme (données qui ne doivent donc plus
                   être lues) 
                   
                </li>
                <li class="item">
                   tandis que celles accompagnées d’une flèche vers le haut (↑) sont des <b>paramètres
-                     de sortie</b> qui permettent de renvoyer des résultats à l’<b>issue</b> de l’exécution du module
+                     de sortie</b> qui permettent de renvoyer des résultats à l’<b>issue</b> de l’exécution de l'algorithme
                   (résultats qui ne doivent donc plus être affichés). 
                   
                </li>
                <li class="itemAlt">
                   Les variables accompagnées d'une double flèche (↓ ↑) sont en<b> entrée-sortie</b> c-à-d qu'elles ont une valeur
-                  en arrivant dans le module, que cette valeur sera modifiée dans le module et que la
-                  valeur modifiée est en sortie. 
-                  La variable de départ aura donc changé de valeur dans le module et ce changement se
-                  répercute en dehors.
+                  en arrivant dans l'algorithme, que cette valeur sera modifiée dans l'algorithme et
+                  que la valeur modifiée est en sortie. 
+                  La variable de départ aura donc changé de valeur dans l'algorithme et ce changement
+                  se répercute en dehors.
                   
                </li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e81">Par exemple, ceci donnerait pour le module max2 : </p><pre>
-module max2 (a↓, b↓ : réels, max↑ : réel)
+         <p class="paragraph" id="d8e81">Par exemple, ceci donnerait pour l'algorithme max2 : </p><pre>
+algorithme max2 (a↓, b↓ : réels, max↑ : réel)
     si a &gt; b alors
       max ← a
     sinon
       max ← b
     fin si
-fin module
+fin algorithme
       </pre><p class="paragraph" id="d8e85">
-            Sous cette forme, ce module est devenu « inactif », <b>il ne lit rien ni n’affiche rien</b>,
+            Cet algorithme <b>ne lit rien et n’affiche rien</b>,
             mais il est cependant prêt à être utilisé. Il suffit pour cela de lui fournir les
             valeurs de <code>a</code> 
             et <code>b</code> (paramètres d’entrée) pour qu’il entre en action. Une fois le maximum calculé, celui-ci
@@ -85,6 +85,6 @@ fin module
       </div>
       <hr />
       <div class="navigation_arrows"><a href="unit_PassageParametres.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="PassageParametres_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 21.2.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDModule.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 6.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDModule.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

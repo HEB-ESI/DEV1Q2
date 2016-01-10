@@ -33,14 +33,14 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><img src="../../../_templates/java/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0" /></div><a name="top"></a><h1 id="Exercices_learningObject3.html">1.8.3. À vous de jouer...</h1>
-      <div id="d8e1851.html" class="act">
+      <div id="d8e1875.html" class="act">
          <h4>Consignes</h4>
-         <p class="paragraph" title="Consignes" id="d8e1852">
-            Il est temps de se lancer et d’écrire vos premiers modules et programmes Java correspondant.
-            
+         <p class="paragraph" title="Consignes" id="d8e1876">
+            Il est temps de se lancer et d’écrire vos premiers algorithmes et programmes Java
+            correspondant. 
             Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
             
-            <ul class="list" id="d8e1854">
+            <ul class="list" id="d8e1878">
                <li class="itemAlt">il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement
                   spécifié ;
                </li>
@@ -58,8 +58,8 @@
             </ul>
          </p>
          <h4>Parenthèses</h4>
-         <p class="paragraph" title="Parenthèses" id="d8e1876">
-            <ol class="list" id="d8e1877">
+         <p class="paragraph" title="Parenthèses" id="d8e1900">
+            <ol class="list" id="d8e1901">
                <li class="itemAlt">Que vaut (((5) + 3) - 2) + (2 * 3) ?</li>
                <li class="item">Toutes les parenthèses sont-elles obligatoires ? Si non, lesquelles pouvez-vous retirer
                   ?
@@ -71,40 +71,40 @@
             </ol>
          </p>
          <h4>Exercice résolu</h4>
-         <p class="paragraph" title="Exercice résolu" id="d8e1886">
+         <p class="paragraph" title="Exercice résolu" id="d8e1910">
             La somme des angles d’un triangle est égale dans tous les cas à 180°. Écrivez un algorithme
             qui lit la valeur de deux angles d’un triangle, et affiche la valeur du 3e. 
             
          </p>
-         <p class="paragraph" id="d8e1888">Par exemple, si on lit 40 pour le premier angle et 60 pour lesecond, on doit trouver
-            80 pour le troisième (40 + 60 = 100,le troisième angle vaut donc 80).
+         <p class="paragraph" id="d8e1912">Par exemple, si on lit 40 pour le premier angle et 60 pour le second, on doit trouver
+            80 pour le troisième (40 + 60 = 100, le troisième angle vaut donc 80).
          </p>
-         <p class="paragraph" id="d8e1890">Par exemple, si on lit 90 pour le premier angle et 10 pour lesecond, on doit trouver
-            80 pour le troisième (90 + 10 = 100,le troisième angle vaut donc 80).
+         <p class="paragraph" id="d8e1914">Par exemple, si on lit 90 pour le premier angle et 10 pour le second, on doit trouver
+            80 pour le troisième (90 + 10 = 100, le troisième angle vaut donc 80).
          </p>
-         <p class="paragraph" id="d8e1892">Par exemple, si on lit 89 pour le premier angle et 30 pour lesecond, on doit trouver
-            61 pour le troisième (89 + 30 = 119,le troisième angle vaut donc 61).
+         <p class="paragraph" id="d8e1916">Par exemple, si on lit 89 pour le premier angle et 30 pour le second, on doit trouver
+            61 pour le troisième (89 + 30 = 119, le troisième angle vaut donc 61).
          </p>
-         <p class="paragraph" id="d8e1894">Par exemple, si on lit 5 pour le premier angle et 5 pour lesecond, on doit trouver
-            170 pour le troisième (5 + 5 = 10,le troisième angle vaut donc 170).
+         <p class="paragraph" id="d8e1918">Par exemple, si on lit 5 pour le premier angle et 5 pour le second, on doit trouver
+            170 pour le troisième (5 + 5 = 10, le troisième angle vaut donc 170).
          </p>
-         <p class="paragraph" id="d8e1896">Par exemple, si on lit 0 pour le premier angle et 180 pour lesecond, on doit trouver
-            0 pour le troisième (0 + 180 = 180,le troisième angle vaut donc 0).
+         <p class="paragraph" id="d8e1920">Par exemple, si on lit 0 pour le premier angle et 180 pour le second, on doit trouver
+            0 pour le troisième (0 + 180 = 180, le troisième angle vaut donc 0).
          </p>
-         <p class="paragraph" id="d8e1898">
+         <p class="paragraph" id="d8e1922">
             Quelles sont les données ? :
             
-            <ol class="list" id="d8e1900">
-               <li class="itemAlt">les 2 angles du triangle, ils sont lus au clavier.</li>
+            <ol class="list" id="d8e1924">
+               <li class="itemAlt">les 2 angles du triangle, des réels.</li>
             </ol>
             Que cherche-t-on ? :
             
-            <ol class="list" id="d8e1904">
-               <li class="itemAlt">la valeur du 3e angle du triangle, à afficher à l'écran.</li>
+            <ol class="list" id="d8e1928">
+               <li class="itemAlt">la valeur du 3e angle du triangle, un réel.</li>
             </ol>
             Comment faire ? :
             
-            <ol class="list" id="d8e1908">
+            <ol class="list" id="d8e1932">
                <li class="itemAlt">On sait que la somme des 3 angles d'un triangle vaut 180°. (angle1 + angle2 + angle3
                   = 180)
                </li>
@@ -115,12 +115,9 @@
             </ol>
             Écrivons l'algorithme :
             <pre>
-module troisièmeAngleTriangle()
-    angle1, angle2, angle3 : réels
-    lire angle1, angle2
-    angle3 ← 180 - (angle1 + angle2)
-    afficher angle3
-fin module
+algorithme troisièmeAngleTriangle(angle1, angle2 : réels)
+    retourner 180 - (angle1 + angle2)
+fin algorithme
           </pre>
             Traduisons cet algorithme en java :
             <pre>
@@ -130,8 +127,12 @@ public class Triangle{
         Scanner clavier = new Scanner(System.in);
         double angle1 = clavier.nextDouble();
         double angle2 = clavier.nextDouble();
-        double angle3 = 180 - (angle1 + angle2);
+        double angle3 = troisiemeAngleTriangle(angle1, angle2);
         System.out.println(angle3);
+    }    
+    
+    public static double troisiemeAngleTriangle(double angle1, double angle2) {
+        return 180 - (angle1 + angle2);
     }
 }
         </pre>
@@ -139,37 +140,33 @@ public class Triangle{
             
          </p>
          <h4>À vous</h4>
-         <p class="paragraph" title="À vous" id="d8e1929">
+         <p class="paragraph" title="À vous" id="d8e1953">
             Écrivez les algorithmes et codez les programmes Java correspondant qui 
             
-            <ol class="list" id="d8e1931">
-               <li class="itemAlt">calcule et affiche la surface d’un carré en lisant la valeur de son côté au clavier.</li>
-               <li class="item">calcule et affiche la surface d’un rectangle  en lisant les valeurs de sa longueur
+            <ol class="list" id="d8e1955">
+               <li class="itemAlt">calcule et retourne la surface d’un carré en recevant la valeur de son côté.</li>
+               <li class="item">calcule et retourne la surface d’un rectangle en recevant les valeurs de sa longueur
                   et sa largeur.
                </li>
-               <li class="itemAlt">calcule et affiche la surface d’un cercle en lisant la valeur de son rayon au clavier.
-                  (Pensez à aller voir la classe Math pour obtenir la valeur de PI ;))
+               <li class="itemAlt">calcule et retourne la surface d’un cercle en recevant la valeur de son rayon.  (Pensez
+                  à aller voir la classe Math pour obtenir la valeur de PI ;))
                </li>
                <li class="item">étant donné le prix unitaire d’un produit (hors TVA), le taux de TVA (en %) 
-                  et la quantité de produit vendue à un client, calcule et affiche le prix total à payer
-                  par ce client.
+                  et la quantité de produit vendue à un client, calcule et retourne le prix total à
+                  payer par ce client.
                </li>
                <li class="itemAlt">réalise la permutation du contenu de deux variables.</li>
                <li class="item">calcule la somme des chiffres d’un nombre entier de 3 chiffres. Réflexion : l’algorithme
                   est-il aussi valide pour les entiers inférieurs à 100 ?
                </li>
-               <li class="itemAlt">étant donné un moment dans la journée donné par trois nombres lus, à savoir, heure,
+               <li class="itemAlt">étant donné un moment dans la journée donné par trois nombres reçus, à savoir, heure,
                   minute et seconde, calcule le nombre de secondes écoulées depuis minuit.
-               </li>
-               <li class="item">étant donné un temps écoulé dans la journée exprimé en secondes, calcule et affiche
-                  ce temps sous la forme de trois nombres (heure, minute et seconde). <br />
-                  Ex : 10000 secondes donnera 2h 46’40”
                </li>
             </ol>
          </p>
       </div>
       <hr />
       <div class="navigation_arrows"><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><img src="../../../_templates/java/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0" /></div>
-      <p class="footer"> Update: 9.2.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 29.9.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

@@ -66,7 +66,7 @@
 					\usepackage[pdftex]{graphicx}
 				\fi
 				\usepackage[a4paper, hyperfigures=true, colorlinks, linkcolor=black, citecolor=blue,urlcolor=blue, pagebackref=true, bookmarks=true, bookmarksopen=true,bookmarksnumbered=true,
-                pdfauthor={}, pdftitle={TD Modules}, pdfkeywords={TD Modules, },pdfpagemode=UseOutlines,pdfpagetransition=Dissolve,nesting=true,
+                pdfauthor={}, pdftitle={TD Récapitulatif}, pdfkeywords={TD R\'ecapitulatif, },pdfpagemode=UseOutlines,pdfpagetransition=Dissolve,nesting=true,
 				backref, pdffitwindow=true, bookmarksnumbered=true]{hyperref}
 				\usepackage{supertabular}
 				\usepackage[table]{xcolor}
@@ -121,7 +121,7 @@
 				
 				\makeindex
 				
-				\title{TD Modules}	
+				\title{TD R\'ecapitulatif}	
 			\date{}
 			\author{\scriptsize{}}
 			\definecolor{light-gray}{gray}{0.8}
@@ -149,7 +149,7 @@
 				
 				
 				%\maketitle
-				\cadretitre{TD1}{TD Modules}
+				\cadretitre{TD1}{TD R\'ecapitulatif}
 				\thispagestyle{fancy}
         \marginpar{\begin{sideways}
             \begin{minipage}[t]{1cm}
@@ -169,8 +169,8 @@
 			\end{minipage}
         \end{sideways}}
             \begin{abstract}
-			Ce TD a pour but d'aborder pourquoi et comment d\'ecouper un algorithme en modules
-      (morceaux d'algorithmes) et en m\'ethodes (morceaux de code).
+			Ce TD a pour but d'aborder pourquoi et comment d\'ecouper un algorithme,
+			comment lancer une exception et documenter votre code.
 		
             \par
         \end{abstract}
@@ -184,7 +184,7 @@
 				\thispagestyle{fancy}
 				\pagestyle{fancy}
 	   
-            \section{D\'ecouper du code}\subsection{D\'ecouper du code : modules ou m\'ethodes}
+            \section{D\'ecouper du code}\subsection{D\'ecouper du code : algorithmes ou m\'ethodes}
       Pourquoi ?
       
 					\begin{itemize}
@@ -207,12 +207,12 @@
 			\item Il tient sur une page
 					\end{itemize}
 				
-      En algo,nous parlerons de \textbf{module}.
+      En algo,nous parlerons d'\textbf{algorithme}.
       En Java nous parlerons de \textbf{m\'ethode}.
-    \section{Passage de param\`etres}\subsection{Module}
-        Pour pouvoir faire communiquer les modules entre eux, il faut les \'equiper d'une \guillemotleft  interface \guillemotright 
-        de transmission des variables appel\'ee l'\textbf{en-t\^ete} du module et qui contient une d\'eclaration
-        de variables qu'on appellera ici \textbf{param\`etres} du module.
+    \section{Passage de param\`etres}\subsection{Algorithme}
+        Pour pouvoir faire communiquer les algorithmes entre eux, il faut les \'equiper d'une \guillemotleft  interface \guillemotright 
+        de transmission des variables appel\'ee l'\textbf{en-t\^ete} d'algorithme et qui contient une d\'eclaration
+        de variables qu'on appellera ici \textbf{param\`etres} de l'algorithme.
       
             \par
         
@@ -220,62 +220,61 @@
 				
 			\item 
             Les variables accompagn\'ees d'une fl\`eche vers le bas (↓) sont des \textbf{param\`etres d'entr\'ee} qui
-            re\c coivent des \textbf{donn\'ees} au d\'ebut de l'ex\'ecution du module (donn\'ees qui ne doivent donc plus
+            re\c coivent des \textbf{donn\'ees} au d\'ebut de l'ex\'ecution de l'algorithme (donn\'ees qui ne doivent donc plus
             \^etre lues) 
           
 			\item 
             tandis que celles accompagn\'ees d'une fl\`eche vers le haut (↑) sont des \textbf{param\`etres
-            de sortie} qui permettent de renvoyer des r\'esultats \`a l'\textbf{issue} de l'ex\'ecution du module
+            de sortie} qui permettent de renvoyer des r\'esultats \`a l'\textbf{issue} de l'ex\'ecution de l'algorithme
             (r\'esultats qui ne doivent donc plus \^etre affich\'es). 
           
 			\item 
             Les variables accompagn\'ees d'une double fl\`eche (↓ ↑) sont en\textbf{ entr\'ee-sortie} c-\`a-d qu'elles ont une valeur
-            en arrivant dans le module, que cette valeur sera modifi\'ee dans le module et que la valeur modifi\'ee est en sortie. 
-            La variable de d\'epart aura donc chang\'e de valeur dans le module et ce changement se r\'epercute en dehors.
+            en arrivant dans l'algorithme, que cette valeur sera modifi\'ee dans l'algorithme et que la valeur modifi\'ee est en sortie. 
+            La variable de d\'epart aura donc chang\'e de valeur dans l'algorithme et ce changement se r\'epercute en dehors.
           
 					\end{itemize}
 				
             \par
-        Par exemple, ceci donnerait pour le module max2 : 
+        Par exemple, ceci donnerait pour l'algorithme max2 : 
             \par
         \begin{verbatim}
-module max2 (a↓, b↓ : réels, max↑ : réel)
+algorithme max2 (a↓, b↓ : réels, max↑ : réel)
     si a > b alors
       max ← a
     sinon
       max ← b
     fin si
-fin module
+fin algorithme
       \end{verbatim}
-        Sous cette forme, ce module est devenu \guillemotleft  inactif \guillemotright , \textbf{il ne lit rien ni n'affiche rien},
+        Cet algorithme \textbf{ne lit rien et n'affiche rien},
         mais il est cependant pr\^et \`a \^etre utilis\'e. Il suffit pour cela de lui fournir les valeurs de \verb@a@ 
         et \verb@b@ (param\`etres d'entr\'ee) pour qu'il entre en action. Une fois le maximum calcul\'e, celui-ci est
         affect\'e \`a la variable max qui - en tant que param\`etre de sortie - contiendra et renverra le
         r\'esultat voulu.
       
             \par
-        \subsection{Appel de module}
-        Pour faire appel aux services de ce module, il suffit \`a pr\'esent d'\'ecrire son nom suivi d'un
+        \subsection{Appel d'algorithme}
+        Pour faire appel aux services de cet algorithme, il suffit \`a pr\'esent d'\'ecrire son nom suivi d'un
         nombre de variables (ou, en entr\'ee, d'expressions) en accord avec son en-t\^ete. 
       
             \par
-        Montrons par un exemple comment le module max3 peut faire appel au module max2 : 
+        Montrons par un exemple comment l'algorithme max3 peut faire appel \`a l'algorithme max2 : 
             \par
         \begin{verbatim}
-module max3 ()
-    a, b, c, temp, max : réels
-    lire a, b, c
+algorithme max3 (a, b, c : réels) → réel
+    temp, max : réels
     max2( a, b, temp )
     max2( temp, c, max )
-    afficher max
-fin module
+    retourner max
+fin algorithme
       \end{verbatim}
         L'instruction max2(a, b, temp) se d\'eroule comme suit :
         
 					\begin{itemize}
 				
-			\item le contenu des variables a et b est affect\'e aux param\`etres d'entr\'ee a et b du module max2, puis ce module peut entrer en action ;
-			\item \`a l'issue du module max2, la valeur du param\`etre de sortie max est communiqu\'ee \`a la variable temp, qui contient \`a pr\'esent le maximum de a et b
+			\item le contenu des variables a et b est affect\'e aux param\`etres d'entr\'ee a et b de l'algorithme max2, puis cet algorithme peut entrer en action ;
+			\item \`a l'issue de l'algorithme max2, la valeur du param\`etre de sortie max est communiqu\'ee \`a la variable temp, qui contient \`a pr\'esent le maximum de a et b
 					\end{itemize}
 				
             \par
@@ -284,20 +283,20 @@ fin module
         
 					\begin{itemize}
 				
-			\item le contenu des variables temp et c est affect\'e aux param\`etres d'entr\'ee a et b du module max2, puis ce module peut entrer en action ;
-			\item \`a l'issue du module max2, la valeur du param\`etre de sortie max est communiqu\'ee \`a la variable max qui contient \`a pr\'esent le maximum des 3 nombres de d\'epart.
+			\item le contenu des variables temp et c est affect\'e aux param\`etres d'entr\'ee a et b de l'algorithme max2, puis cet algorithme peut entrer en action ;
+			\item \`a l'issue de l'algorithme max2, la valeur du param\`etre de sortie max est communiqu\'ee \`a la variable max qui contient \`a pr\'esent le maximum des 3 nombres de d\'epart.
 					\end{itemize}
 				
             \par
         
-        Implicitement, on a introduit ici un nouveau type de primitive, l'appel \`a un module qui
+        Implicitement, on a introduit ici un nouveau type de primitive, l'appel \`a un algorithme qui
         consiste en la simple \'ecriture de son nom dans le code. Cette instruction est reconnue comme
         telle car elle ne s'apparente pas aux autres types d'instruction vus pr\'ec\'edemment (primitives
-        lire, afficher, ← , structures de contr\^ole si, selon que, tant que, pour. . .). Lorsque l'ordina-
-        teur rencontre cette instruction, il va rechercher si un module portant ce nom existe. Une
-        fois ce module trouv\'e, les param\`etres ad hoc lui sont communiqu\'es et toutes les instructions
-        le composant sont ex\'ecut\'ees s\'equentiellement. Arriv\'e \`a l'issue du module, les param\`etres de
-        sortie sont communiqu\'es au module appelant et le d\'eroulement de celui-ci se poursuit l\`a o\`u
+        demander, afficher, ← , structures de contr\^ole si, selon que, tant que, pour. . .). Lorsque l'ordinateur
+        rencontre cette instruction, il va rechercher si un algorithme portant ce nom existe. Une
+        fois cet algorithme trouv\'e, les param\`etres ad hoc lui sont communiqu\'es et toutes les instructions
+        le composant sont ex\'ecut\'ees s\'equentiellement. Arriv\'e \`a l'issue de l'algorithme, les param\`etres de
+        sortie sont communiqu\'es \`a l'algorithme appelant et le d\'eroulement de celui-ci se poursuit l\`a o\`u
         il avait \'et\'e interrompu.
       
             \par
@@ -308,88 +307,88 @@ fin module
 				
 			\item si tous les param\`etres sont en entr\'ee, on peut omettre les fl\`eches ;
 			\item 
-              la pr\'esence de ces param\`etres n'est pas obligatoire, on peut envisager un module sans
-              param\`etre de sortie (par ex. un module qui re\c coit en entr\'ee un nombre et dont la seule
-              fonction est de l'afficher \`a l'\'ecran), ou inversement sans param\`etre d'entr\'ee (un module
+              la pr\'esence de ces param\`etres n'est pas obligatoire, on peut envisager un algorithme sans
+              param\`etre de sortie (par ex. un algorithme qui re\c coit en entr\'ee un nombre et dont la seule
+              fonction est de l'afficher \`a l'\'ecran), ou inversement sans param\`etre d'entr\'ee (un algorithme 
               qui simule un lancer de d\'e, et renvoie en param\`etre une valeur al\'eatoire entre 1 et 6) ;
             
 			\item 
-              pour appeler correctement un module, il faut fournir des noms de variables, des expressions ou des constantes 
+              pour appeler correctement un algorithme, il faut fournir des noms de variables, des expressions ou des constantes 
               en \textbf{m\^eme nombre} et en \textbf{m\^eme ordre} 
-              que les param\`etres du module ;
+              que les param\`etres de l'algorithme ;
             
-			\item en outre, les types des variables doivent correspondre entre l'appel et l'en-t\^ete du module ;
-			\item ne peut \^etre affect\'ee \`a un param\`etre d'entr\'ee du module qu'une constante, une expression ou une variable pr\'ealablement affect\'ee ;
-			\item \`a un param\`etre de sortie d'un module doit toujours correspondre une autre variable, jamais une constante ou une expression ;
-			\item il faut s'assurer qu'\`a l'issue du module, tous les param\`etres de sortie aient \'et\'e affect\'es lors de l'ex\'ecution de ce module.
+			\item en outre, les types des variables doivent correspondre entre l'appel et l'en-t\^ete de l'algorithme ;
+			\item ne peut \^etre affect\'ee \`a un param\`etre d'entr\'ee de l'algorithme  qu'une constante, une expression ou une variable pr\'ealablement affect\'ee ;
+			\item \`a un param\`etre de sortie d'un algorithme doit toujours correspondre une autre variable, jamais une constante ou une expression ;
+			\item il faut s'assurer qu'\`a l'issue de l'algorithme, tous les param\`etres de sortie aient \'et\'e affect\'es lors de l'ex\'ecution de cet algorithme.
 					\end{itemize}
 				
             \par
-        \section{Module renvoyant une valeur}Un deuxi\`eme type de module est le module renvoyant une valeur. 
-    (On d\'esigne aussi ce type de modules par le terme fonction).\subsection{En algo}Son en-t\^ete est du type suivant :
+        \section{Algorithme renvoyant une valeur}Un deuxi\`eme type d'algorithme est l'algorithme renvoyant une valeur. 
+    (On d\'esigne aussi ce type d'algorithmes par le terme fonction).\subsection{En algo}Son en-t\^ete est du type suivant :
             \par
         \begin{verbatim}
-module exemple (var1↓ : type1, var2↓ : type2, . . ., varN↓ : typeN) → typeRes
+algorithme exemple (var1↓ : type1, var2↓ : type2, . . ., varN↓ : typeN) → typeRes
       \end{verbatim}
-        Il se distingue du module pr\'ec\'edemment \'etudi\'e par la fl\`eche de renvoi \`a droite,
+        Il se distingue de l'algorithme pr\'ec\'edemment \'etudi\'e par la fl\`eche de renvoi \`a droite,
         et poss\`ede les particularit\'es suivantes :
       
             \par
         
 					\begin{itemize}
 				
-			\item ce module renvoie une valeur qui n'est pas affect\'ee \`a une variable de sortie ;
+			\item cet algorithme renvoie une valeur qui n'est pas affect\'ee \`a une variable de sortie ;
 			\item \`a droite de la fl\`eche de renvoi ne se trouve donc pas le nom d'un param\`etre de sortie,
             mais le \textbf{type} de la valeur renvoy\'ee ;
 			\item typeRes est le type de la valeur renvoy\'ee ; en th\'eorie, ce peut \^etre un type simple
-            (entier, r\'eel, bool\'een, chaine, caract\`ere), un type structur\'e ou m\^eme un tableau (ces
+            (entier, r\'eel, bool\'een, chaine), un type structur\'e ou m\^eme un tableau (ces
             types seront vus dans les chapitres suivants). En pratique il conviendra de s'en tenir
             aux limitations du langage utilis\'e ;
-			\item var1, . . ., varN sont les param\`etres du module 
+			\item var1, . . ., varN sont les param\`etres de l'algorithme
             (aussi appel\'es \textbf{arguments} ) ; ce sont, le
             plus souvent, des param\`etres d'entr\'ee, les param\`etres de sortie \'etant plus rares dans
-            ce type de module ;
-			\item ces arguments deviennent automatiquement des variables locales du module ; d\'eclar\'ees
+            ce type d'algorithme ;
+			\item ces arguments deviennent automatiquement des variables locales de l'algorithme ; d\'eclar\'ees
             dans son en-t\^ete, elles ne doivent plus l'\^etre dans la partie d\'eclarative ;
-			\item la valeur renvoy\'ee est d\'efinie \`a la fin du module via la primitive retourner r\'esultat, o\`u
+			\item la valeur renvoy\'ee est d\'efinie \`a la fin de l'algorithme via la primitive 
+            \verb@retourner résultat@, o\`u
             r\'esultat est une variable (ou plus g\'en\'eralement une expression) de type typeRes ;
-			\item pour appeler ce type de module, on utilise son nom comme celui d'une variable ou
-            dans une expression apparaissant dans le module appelant, mais jamais \`a gauche du
+			\item pour appeler ce type d'algorithme, on utilise son nom comme celui d'une variable ou
+            dans une expression apparaissant dans l'algorithme appelant, mais jamais \`a gauche du
             signe d'affectation.
 					\end{itemize}
 				
             \par
         
-          Comme pr\'ec\'edemment, il faut veiller, lors de l'appel de ce type de module, \`a ce que le
+          Comme pr\'ec\'edemment, il faut veiller, lors de l'appel de ce type d'algorithme, \`a ce que le
           nombre d'arguments ainsi que leur type correspondent \`a ceux sp\'ecifi\'es dans l'en-t\^ete.
         
             \par
-        Par exemple, ceci donnerait pour le module max2 : 
+        Par exemple, ceci donnerait pour l'algorithme max2 : 
             \par
         \begin{verbatim}
-module max2 (a↓, b↓ : réels)→ réel
+algorithme max2 (a↓, b↓ : réels)→ réel
     si a > b alors
       max ← a
     sinon
       max ← b
     fin si
     retourner max
-fin module
+fin algorithme
       \end{verbatim}
-        Pour faire appel aux services de ce module, il suffit \`a pr\'esent d'\'ecrire son nom suivi d'un
+        Pour faire appel aux services de cet algorithme, il suffit \`a pr\'esent d'\'ecrire son nom suivi d'un
         nombre de variables (ou, en entr\'ee, d'expressions) en accord avec son en-t\^ete. 
       
             \par
-        Montrons par un exemple comment le module max3 peut faire appel au module max2 : 
+        Montrons par un exemple comment l'algorithme max3 peut faire appel \`a l'algorithme max2 : 
             \par
         \begin{verbatim}
-module max3 ()
-    a, b, c, temp, max : réels
-    lire a, b, c
+algorithme max3 (a, b, c : réels)  → réel
+    temp, max : réels
     temp ← max2( a, b)
     max ← max2( temp, c)
-    afficher max
-fin module
+    retourner max
+fin algorithme
       \end{verbatim}\section{M\'ethodes et appel de m\'ethodes}\subsection{M\'ethode}
 		  Syntaxe : 
 		  \begin{verbatim}
@@ -477,13 +476,13 @@ public static int absolu ( int nb ) {
 
 int resultat = absolu(4);
 int ecart = -10;
-int ecartAbsolu = absolu(ecart );
+int ecartAbsolu = absolu( ecart );
 				\end{Java}Par exemple : 
             \par
         \begin{Java}
 
 public static void presenter (String nomPgm) {
-    System.out. println ("Programme "+nomPgm);
+    System.out. println ("Programme " + nomPgm);
 }				\end{Java}
         Appel possible (si dans la m\^eme classe) :
       
@@ -498,8 +497,8 @@ presenter ("moyenne de 2 nombres");
 public static int lireEntier () {
     Scanner clavier = new Scanner(System.in);
     int nb;
-    System.out. println ("Entrez un nombre entier!");
-    nb = clavier . nextInt ();
+    System.out.println ("Entrez un nombre entier !");
+    nb = clavier.nextInt ();
     return nb;
 }				\end{Java}
         Appel possible (si dans la m\^eme classe) :
@@ -516,10 +515,10 @@ import java.util.Scanner;
 public class Test{
   public static double max2(double nb1, double nb2){
     double max = nb1;
-		if (nb1 < nb2) {
-			max = nb2;
-		}
-		return max;
+    if (nb1 < nb2) {
+      max = nb2;
+    }
+    return max;
   }
 }				\end{Java}\section{Erreur ou Exception}
           Il est parfois utile de pouvoir signaler un probl\`eme dans le code. 
@@ -537,15 +536,15 @@ public class Test{
             \par
         \begin{verbatim}
 // Lit un nombre, l'affiche s’il est positif et sinon lance une erreur.
-module lirePositif ()
+algorithme lirePositif ()
     nb : réel
-    lire nb
+    demander nb
     si nb < 0 alors
       erreur "Le nombre n’est pas positif !"
     fin si
     
     afficher nb
-fin module
+fin algorithme
         \end{verbatim}\subsection{Lancer une exception}En Java, pour lancer une erreur, on parlera d'une exception, on utilise l'instruction : 
             \par
         \begin{Java}
@@ -561,8 +560,8 @@ import java.util.Scanner;
     // Lit un nombre, l affiche si il est positif et sinon lance une erreur.
     public static void main(String [] args){
       Scanner clavier = new Scanner(System.in);
-      double nb;
-      if (nb< 0) {
+      double nb = clavier.nextDouble();
+      if (nb < 0) {
         throw new IllegalArgumentException("Le nombre n est pas positif !");
       }
       
@@ -856,7 +855,7 @@ public class MaxEntiers {
     public static int lireEntier () {
       Scanner clavier = new Scanner(System.in);
       System.out. println ("Entrez un nombre entier!");
-      return clavier . nextInt ();
+      return clavier.nextInt ();
     }
     
     /**
@@ -903,7 +902,7 @@ public class MaxEntiers {
 					\begin{itemize}
 				
 			\item \begin{verbatim}
-module ex1 ()
+algorithme ex1 ()
     x, y : entiers
     addition(3, 4, x)
     afficher x
@@ -911,16 +910,16 @@ module ex1 ()
     y ← 5
     addition(x, y, y)
     afficher y
-fin module
+fin algorithme
 
-module addition(a↓, b↓, c↑ : entiers)
+algorithme addition(a↓, b↓, c↑ : entiers)
     somme : entier
     somme ← a + b
     c ← somme
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}}  \textcolor{gray}{\underline{\hspace*{1em}}} 
 			\item \begin{verbatim}
-module ex2 ()
+algorithme ex2 ()
     a, b : entiers
     addition(3, 4, a)
     afficher a
@@ -928,16 +927,16 @@ module ex2 ()
     b ← 5
     addition(b, a, b)
     afficher b
-fin module
+fin algorithme
 
-module addition(a↓, b↓, c↑ : entiers)
+algorithme addition(a↓, b↓, c↑ : entiers)
     somme : entier
     somme ← a + b
     c ← somme
-fin module
+fin algorithme
 				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}}  \textcolor{gray}{\underline{\hspace*{1em}}} 
 			\item \begin{verbatim}
-module ex3 ()
+algorithme ex3 ()
     a, b, c : entiers
     calcul(3, 4, c)
     afficher c
@@ -946,16 +945,16 @@ module ex3 ()
     c ← 5
     calcul(b, c, a)
     afficher a, b, c
-fin module
+fin algorithme
 
-module calcul(a↓, b↓, c↑ : entiers)
+algorithme calcul(a↓, b↓, c↑ : entiers)
     a ← 2*a
     b ← 3*b
     c ← a+b
-fin module
+fin algorithme
 				            \end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}}  \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{verbatim}
-module ex4 ()
+algorithme ex4 ()
     a, b, c : entiers
     a ← 3
     b ← 4
@@ -963,19 +962,19 @@ module ex4 ()
     afficher c
     calcul2(a, b, c)
     afficher a, b, c
-fin module
+fin algorithme
 
-module calcul2 (a↓, b↓, c↑ : entiers)
+algorithme calcul2 (a↓, b↓, c↑ : entiers)
     a ← f(a) 
     c ← 3*b 
     c ← a+c
-fin module
+fin algorithme
 
-module f (a↓ : entier) → entier
+algorithme f (a↓ : entier) → entier
     b : entier
     b ← 2*a+1
     retourner b
-fin module
+fin algorithme
 				            \end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}}  \textcolor{gray}{\underline{\hspace*{1em}}}  \textcolor{gray}{\underline{\hspace*{1em}}}  \textcolor{gray}{\underline{\hspace*{2em}}} 
 					\end{itemize}
 				
@@ -1122,7 +1121,7 @@ public class Operation {
 			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
 			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
-			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
 					\end{itemize}
 				
@@ -1135,7 +1134,7 @@ public class Operation {
 			\item \'echange le contenu de deux variables enti\`eres pass\'ees en param\`etres.
             
 			\item retourne le maximum de 4 nombres donn\'es en param\`etre en utilisant 
-              les modules \verb@max2@ et/ou \verb@max3@ d\'ej\`a d\'evelopp\'es dans ce chapitre.
+              les algorithmes \verb@max2@ et/ou \verb@max3@ d\'ej\`a d\'evelopp\'es dans ce chapitre.
 			\item valide une date donn\'ee par trois entiers : l'ann\'ee, le mois et le jour.
 					\end{enumerate}
 				
@@ -1163,7 +1162,7 @@ public class Operation {
                     
             \par
         
-          \'Ecrivez un module qui re\c coit les valeurs (dans l'ordre) du c\^ot\'e oppos\'e (o) et
+          \'Ecrivez un algorithme qui re\c coit les valeurs (dans l'ordre) du c\^ot\'e oppos\'e (o) et
           adjacent (a) d'un triangle rectangle et qui retourne le sinus de l'angle \^A de ce triangle rectangle.
         
             \par

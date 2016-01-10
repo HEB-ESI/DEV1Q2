@@ -19,7 +19,7 @@
                <li class="navigationLink"><a href="unit_Boucles.html">1.1. Les boucles</a><ul class="navigation nav_lo">
                      <li class="navigationActual"><strong>1.1.1. tant que</strong></li>
                      <li class="navigationLink"><a href="Boucles_learningObject2.html">1.1.2. while</a></li>
-                     <li class="navigationLink"><a href="Boucles_learningObject3.html">1.1.3. faire - jusqu’à ce que</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject3.html">1.1.3. faire - tant que</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject4.html">1.1.4. do...while</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject5.html">1.1.5. pour</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject6.html">1.1.6. for</a></li>
@@ -71,18 +71,18 @@ fin tant que
          <h4>Afficher les nombres plus petits que 10</h4>
          <p class="paragraph" title="Afficher les nombres plus petits que 10" id="d8e68">On affiche uniquement les nombres inférieurs (pas strictement) à 10 .</p><pre>
 // Affiche les nombres de 1 à 10.
-module compterJusque10 () // version avec tant que
+algorithme compterJusque10 () // version avec tant que
     nb : entier
     nb ← 1 // c’est le premier nombre à afficher
     tant que nb ≤ 10 faire // c’est le premier nombre à afficher
       afficher nb  // on affiche la valeur de la variable nb
       nb ← nb + 1 // on passe au nombre suivant
     fin tant que
-fin module
+fin algorithme
       </pre><h4>Somme de nombres</h4>
          <p class="paragraph" title="Somme de nombres" id="d8e72"> Après chaque nombre, on demande à l’utilisateur s’il y a encore un nombre à additionner.</p><pre>
 // Lit des valeurs entières et retourne la somme des valeurs lues.
-module sommeNombres() → entier
+algorithme sommeNombres() → entier
     valeur : entier // un des termes de l’addition
     somme : entier // la somme
     somme ← 0
@@ -92,10 +92,10 @@ module sommeNombres() → entier
       lire valeur // remarquer l’endroit où on lit une valeur.
     fin tant que
 retourner somme
-fin module
+fin algorithme
       </pre></div>
       <hr />
       <div class="navigation_arrows"><a href="unit_Boucles.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 13.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

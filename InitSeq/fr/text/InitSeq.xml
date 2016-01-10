@@ -25,8 +25,8 @@
 								<list listStyle="unordered">
 									<item>un montant d'un ticket de caisse ? <gap answers="">montant : réel</gap></item>  
 									<item>une cote sur le bulletin (pas de demi-point autorisé) ? <gap answers="">cote : entier</gap></item>  
-									<item>le titre d'un film ?<gap answers="">titre : chaine</gap></item>
-									<item>l'initiale de votre nom ?<gap answers="">nom : caractère</gap></item>
+									<item>le titre d'un film ? <gap answers="">titre : chaine</gap></item>
+									<item>l'initiale de votre nom ? <gap answers="">nom : chaine</gap></item>
 								</list>  
 							</gapText>
 							<solution></solution>
@@ -42,8 +42,8 @@
 								<list listStyle="unordered">
 									<item>un montant d'un ticket de caisse ? <gap answers="">double montant;</gap></item>  
 									<item>une cote sur le bulletin (pas de demi-point autorisé) ? <gap answers="">int cote;</gap></item>  
-									<item>le titre d'un film ?<gap answers="">String titre;</gap></item>
-									<item>l'initiale de votre nom ?<gap answers="">char nom;</gap></item>
+									<item>le titre d'un film ? <gap answers="">String titre;</gap></item>
+									<item>l'initiale de votre nom ? <gap answers="">char nom;</gap></item>
 								</list>  
 							</gapText>
 							<solution></solution>
@@ -61,7 +61,7 @@
                 entier 		<gap answers="int">int</gap><newLine/>
                 réel   		<gap answers="double">double</gap> <newLine/>
                 chaine 		<gap answers="String">String</gap> <newLine/>
-                caractère	<gap answers="char">char</gap> <newLine/>
+                chaine d'un seul caractère	<gap answers="char">char</gap> <newLine/>
                 booléen     <gap answers="boolean">boolean</gap> <newLine/>
               </gapText>
               <solution></solution>
@@ -186,7 +186,7 @@
 				<selfCheck title="Le type primitif non numérique" shuffle="no">
 						<fillInBlanks>
 							<question> 
-								Donnez le type primitif non numériques :
+								Donnez le type primitif non numérique :
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
@@ -273,7 +273,7 @@
               <gapText>
                 11%3 : <gap answers="">2</gap>
               </gapText>
-              <solution>Il s'agitdu reste de la division entière.</solution>
+              <solution>Il s'agit du reste de la division entière.</solution>
             </fillInBlanks>
 				  </selfCheck>
 				  <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
@@ -362,7 +362,7 @@ somme + 1 ← 3</paragraph>
 						</answer>
 						<answer feedback="" correct="no"><paragraph cssClass="code">
 						
-somme, n : entier 
+somme, n : entiers 
 n ← 4 
 somme ← 3n</paragraph>
 						</answer>
@@ -459,14 +459,14 @@ somme = 3n;</paragraph>
 						<question>Les exemples d’affectation sont-ils corrects ?
 						</question>
 						<answer feedback="" correct="yes">nombre1, nombre2 : entiers <newLine/>
-						lire nombre1, nombre2</answer>
+						demander nombre1, nombre2</answer>
 						<answer feedback="" correct="yes">nombre1 : entier <newLine/>
-						lire nombre1</answer>
+						demander nombre1</answer>
 						<answer feedback="" correct="yes">maChaine : chaine <newLine/>
-						lire maChaine</answer>
+						demander maChaine</answer>
 						<answer feedback="" correct="no">maChaine : chaine <newLine/>
-						lire "Entrez une chaine", maChaine</answer>
-						<answer feedback="" correct="no">lire nombre1 + nombre2</answer>
+						demander "Entrez une chaine", maChaine</answer>
+						<answer feedback="" correct="no">demander nombre1 + nombre2</answer>
 					</multipleChoice>
 				</selfCheck>
 				
@@ -606,7 +606,7 @@ afficher "Bonjour"</paragraph>
 						</answer>
 						<answer feedback="" correct="yes"><paragraph cssClass="code">
 						
-a, b : entier 
+a, b : entiers 
 test : booléen 
 a ← 4 
 b ← 3 
@@ -734,56 +734,52 @@ public class ReadingExercice {
           <selfCheck title="Compréhension" shuffle="no">
 						<fillInBlanks>
 							<question>
-							  Que vont-ils afficher si à chaque fois les deux nombres lus au départ sont successivement 2 et 3 ?
+							  Que vont-ils retourner/afficher si à chaque fois les deux nombres reçus/lus au départ sont successivement 2 et 3 ?
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
 									<item>
 										<paragraph cssClass="code">
-module exerciceA()
-  a,b : entiers
+algorithme exerciceA(b, a : entiers) → réel
   quotient : réel
-  lire b, a
   quotient ← a / b
   afficher quotient
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="1.5">1.5</gap> 
 									</item>  
 									<item>
 										<paragraph cssClass="code">
-module exerciceB()
+algorithme exerciceB() → entier
   a, b, c, d : entiers
-  lire c, d
+  demander c, d
   a ← 2*c+5*d
   b ← 2+c*3+d
   c ← a MOD b
-  afficher a DIV c
-fin module
+  retourner a DIV c
+fin algorithme
 				</paragraph>
 				            <gap answers="2">2</gap> 
 									</item>  
 									<item>
 										<paragraph cssClass="code">
-module exerciceC()
-  x, y : réels
-  lire x, y
+algorithme exerciceC(x, y : réels) → réel
   x ← x*x 
   x ← x*x+y*y 
   x ← √x
-  afficher x
-fin module
+  retourner x
+fin algorithme
 				</paragraph>
 				            <gap answers="5">5</gap> 
 									</item>  
 									<item>
 										<paragraph cssClass="code">
-module exerciceD()
+algorithme exerciceD()
   x, y : réels
-  lire x, x
+  demander x, x
   x ← x MOD x + (x + 1) DIV 2
   afficher x + 3
-fin module
+fin algorithme
 				</paragraph>
 				            <gap answers="5">5</gap> 
 									</item>  

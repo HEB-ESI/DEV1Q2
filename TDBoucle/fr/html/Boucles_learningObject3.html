@@ -5,11 +5,11 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <meta http-equiv="Content-Style-Type" content="text/css" />
-      <meta name="description" content="TD Boucles: faire - jusqu’à ce que. Somme de nombres. " />
+      <meta name="description" content="TD Boucles: faire - tant que. Somme de nombres. " />
       <meta name="copyright" content="" />
       <meta name="author" content="" />
       <meta name="keywords" content="TD Boucles, eLML" />
-      <title>1.1.3. faire - jusqu’à ce que</title>
+      <title>1.1.3. faire - tant que</title>
       <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
          <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
@@ -19,7 +19,7 @@
                <li class="navigationLink"><a href="unit_Boucles.html">1.1. Les boucles</a><ul class="navigation nav_lo">
                      <li class="navigationLink"><a href="Boucles_learningObject1.html">1.1.1. tant que</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject2.html">1.1.2. while</a></li>
-                     <li class="navigationActual"><strong>1.1.3. faire - jusqu’à ce que</strong></li>
+                     <li class="navigationActual"><strong>1.1.3. faire - tant que</strong></li>
                      <li class="navigationLink"><a href="Boucles_learningObject4.html">1.1.4. do...while</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject5.html">1.1.5. pour</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject6.html">1.1.6. for</a></li>
@@ -34,52 +34,50 @@
             </ul>
          </li>
       </ul>
-      <div class="navigation_arrows"><a href="Boucles_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Boucles_learningObject3.html">1.1.3. faire - jusqu’à ce que</h1>
-      <div id="d8e110.html" class="clarify"><pre>
+      <div class="navigation_arrows"><a href="Boucles_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Boucles_learningObject3.html">1.1.3. faire - tant que</h1>
+      <div id="d8e105.html" class="clarify"><pre>
 faire
     séquence d’instructions à exécuter
-jusqu'à ce que conditionPourSORTIRDeLaBoucle
-      </pre><p class="paragraph" id="d8e113">
-            Cette structure est très proche du « <code>tant que</code> » à deux différences près :
+tant que condition
+      </pre><p class="paragraph" id="d8e108">
+            Cette structure est très proche du « <code>tant que</code> » à une différence près :
             
-            <ol class="list" id="d8e118">
+            <ul class="list" id="d8e113">
                <li class="itemAlt">
                   Le <b>test</b> est fait <b>à la fin</b> et pas au début. 
                   La tâche est donc toujours <b>exécutée au moins une fois</b>.
                   
                </li>
-               <li class="item">On donne la <b>condition pour arrêter</b> et pas pour continuer.
-               </li>
-            </ol>
+            </ul>
          </p>
-         <p class="paragraph" id="d8e135">En pseudo-code :</p><pre>
+         <p class="paragraph" id="d8e125">En pseudo-code :</p><pre>
 faire
     séquence d’instructions à exécuter
-jusqu’à ce que condition
-      </pre><p class="paragraph" id="d8e139">
+tant que condition
+      </pre><p class="paragraph" id="d8e129">
             La <b>condition</b> est une expression délivrant un résultat 
             <b>booléen</b> (vrai ou faux).
             
          </p>
-         <p class="paragraph" id="d8e147">
+         <p class="paragraph" id="d8e137">
             Il faut que la séquence d’instructions comprise entre <code>faire</code> 
-            et <code>jusqu’à ce que</code> contienne au moins 
+            et <code>tant que</code> contienne au moins 
             <b>une instruction qui modifie la condition</b> de telle manière 
-            qu’elle puisse <b>devenir vraie</b> à un moment donné pour arrêter l’itération.
+            qu’elle puisse <b>devenir fausse</b> à un moment donné pour arrêter l’itération.
             
          </p>
-         <p class="paragraph" id="d8e161">
+         <p class="paragraph" id="d8e151">
             La tâche est toujours <b>exécutée au moins une fois</b>.
             
          </p>
-         <p class="paragraph" id="d8e166"><span class="multimedia_inline"><img class="multimedia" id="d8e167" src="../image/boucleFaire.jpg" alt="" /></span></p>
+         <p class="paragraph" id="d8e156"><span class="multimedia_inline"><img class="multimedia" id="d8e157" src="../image/boucleFaire.jpg" alt="" /></span></p>
       </div>
-      <div id="d8e168.html" class="look">
-         <p class="paragraph" id="d8e169">Par exemple : </p>
+      <div id="d8e158.html" class="look">
+         <p class="paragraph" id="d8e159">Par exemple : </p>
          <h4>Somme de nombres</h4>
-         <p class="paragraph" title="Somme de nombres" id="d8e171"> Après chaque nombre, on demande à l’utilisateur s’il y a encore un nombre à additionner.</p><pre>
+         <p class="paragraph" title="Somme de nombres" id="d8e161"> Après chaque nombre, on demande à l’utilisateur s’il y a encore un nombre à additionner.</p><pre>
 // Lit des valeurs entières et retourne la somme des valeurs lues.
-module sommeNombres() → entier
+algorithme sommeNombres() → entier
     encore : booléen // est-ce qu’il reste encore une valeur à additionner ?
     valeur : entier // un des termes de l’addition
     somme : entier // la somme
@@ -88,13 +86,13 @@ module sommeNombres() → entier
       lire valeur
       somme ← somme + valeur
       lire encore
-    jusqu’à ce que NON encore
+    tant que encore
     retourner somme
-fin module
-      </pre><p class="paragraph" id="d8e175">Avec cette solution, on additionne au moins une valeur.</p>
+fin algorithme
+      </pre><p class="paragraph" id="d8e165">Avec cette solution, on additionne au moins une valeur.</p>
       </div>
       <hr />
       <div class="navigation_arrows"><a href="Boucles_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 13.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

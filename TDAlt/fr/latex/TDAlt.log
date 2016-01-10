@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 JAN 2015 18:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  6 OCT 2015 09:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -798,7 +798,7 @@ LaTeX Info: Redefining \nameref on input line 143.
 \openout5 = `TDAlt.out'.
 
 
-<../../../_templates/java/icons/logo-esi.jpg, id=44, 45.16875pt x 85.31876pt>
+<../../../_templates/java/icons/logo-esi.jpg, id=40, 45.16875pt x 85.31876pt>
 File: ../../../_templates/java/icons/logo-esi.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/logo-esi.jpg>
@@ -842,7 +842,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 152.
 
-<../../../_templates/java/icons/cc-gris.jpg, id=45, 88.33pt x 31.11626pt>
+<../../../_templates/java/icons/cc-gris.jpg, id=41, 88.33pt x 31.11626pt>
 File: ../../../_templates/java/icons/cc-gris.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/cc-gris.jpg>
@@ -891,88 +891,84 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) [2
 
 ]
-Overfull \hbox (151.63728pt too wide) in paragraph at lines 280--280
+Overfull \hbox (151.63728pt too wide) in paragraph at lines 270--270
 []\T1/lmtt/m/n/10.95 // Lit un nombre et affiche si ce nombre est positif (zéro
  inclus) ou strictement négatif[] 
  []
 
 [3]
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 320--320
+Overfull \hbox (48.16008pt too wide) in paragraph at lines 313--313
 []      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
  dans liste_1[] 
  []
 
 
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 320--320
+Overfull \hbox (48.16008pt too wide) in paragraph at lines 313--313
 []      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
  dans liste_2[] 
  []
 
 
-Overfull \hbox (48.16008pt too wide) in paragraph at lines 320--320
+Overfull \hbox (48.16008pt too wide) in paragraph at lines 313--313
 []      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
  dans liste_n[] 
  []
 
 [4]
-Overfull \hbox (134.39108pt too wide) in paragraph at lines 369--369
+Overfull \hbox (134.39108pt too wide) in paragraph at lines 360--360
 []\T1/lmtt/m/n/10.95 // Lit un nombre entre 1 et 7 et affiche en clair le jour 
 de la semaine correspondant.[] 
  []
 
-[5]
-Overfull \hbox (2.17021pt too wide) in paragraph at lines 389--389
+
+Overfull \hbox (2.17021pt too wide) in paragraph at lines 380--380
 []      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
  val1[] 
  []
 
 
-Overfull \hbox (94.14995pt too wide) in paragraph at lines 389--389
+Overfull \hbox (94.14995pt too wide) in paragraph at lines 380--380
 []      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
  val2 ou val3 ou val4[] 
  []
 
-
-Overfull \hbox (2.17021pt too wide) in paragraph at lines 389--389
+[5]
+Overfull \hbox (2.17021pt too wide) in paragraph at lines 380--380
 []      \T1/lmtt/m/n/10.95 // instructions lorsque la valeur de la variable est
  valN[] 
  []
 
-[6] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [7]
-Overfull \hbox (180.38095pt too wide) in paragraph at lines 494--494
-[]\T1/lmtt/m/n/10.95 // Lit un nombre et affiche si ce nombre est strictement p
-ositif , strictement négatif ou nul.[] 
- []
-
-[8] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
+[6] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
-) [9] [10]
-[11]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 712.
+) [7] [8]
+[9]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 628.
 
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [12] [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 799.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 799.
- (./TDAlt.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 799.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 799.
+) [10]
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+) [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 715.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 715.
+
+(./TDAlt.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 715.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 715.
 Package rerunfilecheck Info: File `TDAlt.out' has not changed.
-(rerunfilecheck)             Checksum: 3969608BD9DCA1474AA916F6C1FF589C;706.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 799.
+(rerunfilecheck)             Checksum: 370B75CF7F1CBC20C8DC15D0A1EE7EA4;616.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 715.
  ) 
 Here is how much of TeX's memory you used:
- 13059 strings out of 493304
- 189311 string characters out of 6139871
- 323275 words of memory out of 5000000
- 16067 multiletter control sequences out of 15000+600000
+ 13041 strings out of 493304
+ 189035 string characters out of 6139871
+ 326274 words of memory out of 5000000
+ 16066 multiletter control sequences out of 15000+600000
  63517 words of font info for 47 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,12n,43p,333b,1937s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,43p,333b,2015s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
 vips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/sh
@@ -986,10 +982,10 @@ onts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb>
 /public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/
 share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmtt8.pfb>
-Output written on TDAlt.pdf (14 pages, 350525 bytes).
+Output written on TDAlt.pdf (12 pages, 346697 bytes).
 PDF statistics:
- 406 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
- 202 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 375 PDF objects out of 1000 (max. 8388607)
+ 340 compressed objects within 4 object streams
+ 185 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

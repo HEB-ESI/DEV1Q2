@@ -11,7 +11,7 @@
         <item>résolvez le problème via quelques exemples précis ;</item>
         <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
         <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
         <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
         <item>Pour la partie Java, dessinez l'arborescence des fichier. </item>
       </list>
@@ -68,51 +68,51 @@ Lun Mar Mer Jeu Ven Sam Dim
     </paragraph>
     
     <paragraph title="Calcul de la catégorie">
-      Écrivez les modules suivants, dont voici les prototypes :
+      Écrivez les algorithmes suivants, dont voici les prototypes :
       <list listStyle="unordered">
         <item>
           <paragraph>
-            <formatted style="code">module isLeapYear(year : entier) → booléen</formatted>
+            <formatted style="code">algorithme isLeapYear(year : entier) → booléen</formatted>
           </paragraph>
           qui reçoit une année au format AAAA et qui renvoie vrai si cette année est bissextile et faux si elle ne l’est pas.
         </item>
         <item>
           <paragraph>
-            <formatted style="code">module daysInMonth(month, year : entiers) → entier</formatted>
+            <formatted style="code">algorithme daysInMonth(month, year : entiers) → entier</formatted>
           </paragraph>
           qui retourne le nombre de jours du mois donné en paramètre.
         </item>
         <item>
           <paragraph>
-            <formatted style="code">module isAvailableDate(day, month, year : entiers) → booléen</formatted>
+            <formatted style="code">algorithme isAvailableDate(day, month, year : entiers) → booléen</formatted>
           </paragraph>
           qui reçoit le jour, le mois et l'année d'une date et qui renvoie vrai si cette date est valide et faux si elle ne l’est pas.
           Une date est considérée comme valide si le mois est compris entre 1 et 12 et le jour entre 1 et (le nombre de jours du mois).
         </item>
         <item>
           <paragraph>
-            <formatted style="code">module dayOfWeek(day, month, year : entiers) → entier</formatted>
+            <formatted style="code">algorithme dayOfWeek(day, month, year : entiers) → entier</formatted>
           </paragraph>
           qui retourne un entier correspondant au jour de la semaine (0 = lundi, 1 = mardi, . . .) pour une date donnée en paramètre. <newLine/>
           Le paramètre year est au format AAAA, par exemple 2015.
-          <paragraph>Si la date fournie est invalide, le module lancera une erreur.</paragraph>
+          <paragraph>Si la date fournie est invalide, l'algorithme lancera une erreur.</paragraph>
         </item>
         <item>
           <paragraph>
-            <formatted style="code">module printDay(day : entier)</formatted>
+            <formatted style="code">algorithme printDay(day : entier)</formatted>
           </paragraph>
           qui affiche à l’écran au format JJ le numéro du jour donné en paramètre.<newLine/>
           Par exemple, si on donne 1 en paramètre à cette fonction, celle-ci affichera 01.
         </item>
         <item>
           <paragraph>
-            <formatted style="code">module printCalendar(month, year : entiers)</formatted>
+            <formatted style="code">algorithme printCalendar(month, year : entiers)</formatted>
           </paragraph>
           qui affiche à l’écran le calendrier du mois de l'année passés en paramètre, les semaines commençant par le lundi.
         </item>
         <item>
           <paragraph>
-            <formatted style="code">module principal</formatted>
+            <formatted style="code">algorithme principal</formatted>
           </paragraph>
           qui demande à l'utilisateur d'entrer un mois et une année au clavier.<newLine/>
           Si le mois entré n'est pas valide, le programme redemandera la lecture jusqu'à obtenir une valeur correcte pour le mois.<newLine/>

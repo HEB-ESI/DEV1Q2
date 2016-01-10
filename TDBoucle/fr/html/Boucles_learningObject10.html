@@ -19,7 +19,7 @@
                <li class="navigationLink"><a href="unit_Boucles.html">1.1. Les boucles</a><ul class="navigation nav_lo">
                      <li class="navigationLink"><a href="Boucles_learningObject1.html">1.1.1. tant que</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject2.html">1.1.2. while</a></li>
-                     <li class="navigationLink"><a href="Boucles_learningObject3.html">1.1.3. faire - jusqu’à ce que</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject3.html">1.1.3. faire - tant que</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject4.html">1.1.4. do...while</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject5.html">1.1.5. pour</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject6.html">1.1.6. for</a></li>
@@ -35,8 +35,8 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="Boucles_learningObject9.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_TryCatch.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Boucles_learningObject10.html">1.1.10. 3 pas en avant, 2 pas en arrière</h1>
-      <div id="d8e474.html" class="clarify">
-         <p class="paragraph" id="d8e475">
+      <div id="d8e462.html" class="clarify">
+         <p class="paragraph" id="d8e463">
             		    Dans certains cas, il n’est pas possible de déduire directement le nombre suivant
             en connaissant juste le nombre précédent. 
             		    Prenons un exemple un peu plus compliqué pour l’illustrer.
@@ -44,7 +44,7 @@
                2, 3, 4, 5, 4, 3. . </i>. »
             
          </p>
-         <p class="paragraph" id="d8e480">
+         <p class="paragraph" id="d8e468">
             Si on vient d’écrire, disons un 3, impossible sans information supplémentaire, de
             connaitre
             le nombre suivant. Il faudrait savoir si on est en phase d’avancement ou de recul
@@ -52,12 +52,12 @@
             de pas il reste à faire dans cette direction.
             
          </p>
-         <p class="paragraph" id="d8e482">
+         <p class="paragraph" id="d8e470">
             Ajoutons des variables pour retenir l’<code>état</code> où on est.
             
          </p><pre>
-module suite3Avant2Arrière(n↓ : entier)
-    nb, nbPasRestants, direction, i : entiers
+algorithme suite3Avant2Arrière(n↓ : entier)
+    nb, nbPasRestants, direction : entiers
     nb ← 1
     nbPasRestants ← 3 // 3 pas
     direction ← 1 // en avant
@@ -74,12 +74,12 @@ module suite3Avant2Arrière(n↓ : entier)
         fin si
       fin si
     fin pour
-fin module
-      </pre><p class="paragraph" id="d8e489">
+fin algorithme
+      </pre><p class="paragraph" id="d8e477">
             On obtient un algorithme plus long mais qui respecte toujours le schéma vu.
             
          </p>
-         <p class="paragraph" id="d8e491">
+         <p class="paragraph" id="d8e479">
             Un conseil : essayez de respecter ce schéma et vous obtiendrez plus facilement un
             algorithme
             correct et lisible, également dans les cas particuliers.
@@ -88,6 +88,6 @@ fin module
       </div>
       <hr />
       <div class="navigation_arrows"><a href="Boucles_learningObject9.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_TryCatch.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 13.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

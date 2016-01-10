@@ -31,8 +31,8 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="Exercices_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Exercices_learningObject3.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Exercices_learningObject2.html">1.3.2. Compréhension de codes Java</h1>
-      <div id="d8e278.html" class="act">
-         <p class="paragraph" id="d8e279">
+      <div id="d8e243.html" class="act">
+         <p class="paragraph" id="d8e244">
             Pour ces exercices, nous vous demandons de comprendre des codes Java donnés. 
             
             <h4>Compréhension</h4>
@@ -44,7 +44,7 @@
                </div>
                <div class="itemAnswer">
                   <div class="itemLabel">
-                     <ul class="list" id="d8e286">
+                     <ul class="list" id="d8e251">
                         <li class="itemAlt"><pre>
 import java.util.Scanner;
 public class Exercice1 {
@@ -53,14 +53,19 @@ public class Exercice1 {
         int nb1 = clavier.nextInt();
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
+        System.out.println(max(nb1, nb2));
+    }
+    public static int max(int nb1, int nb2) {
+        int max;
         if (nb1 &lt; nb2){
-          System.out.print(nb1);
+          max= nb1;
         } else {
-          System.out.print(nb2);
+          max = nb2;
         } 
+        return max;
     }
 }
-        </pre><input type="text" value="" class="itemText" id="_d8e290" style="width:12px" /> <span class="gapText">,2,2</span></li>
+        </pre><input type="text" value="" class="itemText" id="_d8e255" style="width:12px" /> <span class="gapText">,2,2</span></li>
                         <li class="item"><pre>
 import java.util.Scanner;
 public class Exercice2 {
@@ -69,18 +74,23 @@ public class Exercice2 {
         int nb1 = clavier.nextInt();
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
+        System.out.println(max(nb1, nb2, nb3));
+    }
+    public static int max(int nb1, int nb2, int nb3) {
+        int max;
         if (nb1 &gt; nb2 &amp;&amp; nb1 &gt; nb3){
-          System.out.print(nb1);
+          max = nb1;
         } else {
             if (nb2 &gt; nb3){
-              System.out.print(nb2);
+              max = nb2;
             } else {
-              System.out.print(nb3);
+              max = nb3;
             }
         } 
+        return max;
     }
 }
-        </pre><input type="text" value="" class="itemText" id="_d8e295" style="width:12px" /> <span class="gapText">,4,4</span></li>
+        </pre><input type="text" value="" class="itemText" id="_d8e260" style="width:12px" /> <span class="gapText">,4,4</span></li>
                         <li class="itemAlt"><pre>
 import java.util.Scanner;
 public class Exercice3 {
@@ -89,6 +99,9 @@ public class Exercice3 {
         int nb1 = clavier.nextInt();
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
+        System.out.println(trio(nb1));
+    }
+    public static void trio(int nb1) {
         switch (nb1){
           case 1 : System.out.print("premier"); break;
           case 2 : System.out.print("deuxieme"); break;
@@ -97,7 +110,7 @@ public class Exercice3 {
         } 
     }
 }
-        </pre><input type="text" value="" class="itemText" id="_d8e300" style="width:100px" /> <span class="gapText">,deuxième,deuxième</span></li>
+        </pre><input type="text" value="" class="itemText" id="_d8e265" style="width:100px" /> <span class="gapText">,deuxième,deuxième</span></li>
                         <li class="item"><pre>
 import java.util.Scanner;
 public class Exercice3 {
@@ -106,6 +119,9 @@ public class Exercice3 {
         int nb1 = clavier.nextInt();
         int nb2 = clavier.nextInt();
         int nb3 = clavier.nextInt();
+        System.out.println(trio(nb1));
+    }
+    public static void trio(int nb1) {
         switch (nb1){
           case 1 : System.out.print("premier");
           case 2 : System.out.print("deuxieme");
@@ -114,7 +130,7 @@ public class Exercice3 {
         } 
     }
 }
-        </pre><input type="text" value="" class="itemText" id="_d8e305" style="width:300px" /> <span class="gapText">,premierdeuxiemetroisiemepas dans le trio,premierdeuxiemetroisiemepas dans le trio</span></li>
+        </pre><input type="text" value="" class="itemText" id="_d8e270" style="width:300px" /> <span class="gapText">,premierdeuxiemetroisiemepas dans le trio,premierdeuxiemetroisiemepas dans le trio</span></li>
                      </ul>
                   </div>
                   <div class="itemHelp_disabled">    </div>
@@ -126,6 +142,6 @@ public class Exercice3 {
       </div>
       <hr />
       <div class="navigation_arrows"><a href="Exercices_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Exercices_learningObject3.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 20.2.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 6.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

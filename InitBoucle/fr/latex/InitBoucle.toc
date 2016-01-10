@@ -10,7 +10,7 @@
 \contentsline {subparagraph}{Exercice Tant que}{5}{section*.7}
 \contentsline {subparagraph}{Exercice Pour}{6}{section*.8}
 \contentsline {subsection}{\numberline {1.3}\`A vous de jouer...}{6}{subsection.1.3}
-\contentsline {subparagraph}{Vous me copierez 100 fois...}{7}{section*.9}
+\contentsline {subparagraph}{Vous me copierez 100 fois...}{6}{section*.9}
 \contentsline {subparagraph}{Un nombre est-il divisible par 9 ?}{7}{section*.10}
 \contentsline {subparagraph}{Suite de positifs}{7}{section*.11}
 \contentsline {subparagraph}{La conjecture de Goldbach}{7}{section*.12}

@@ -19,7 +19,7 @@
                <li class="navigationLink"><a href="unit_Boucles.html">1.1. Les boucles</a><ul class="navigation nav_lo">
                      <li class="navigationLink"><a href="Boucles_learningObject1.html">1.1.1. tant que</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject2.html">1.1.2. while</a></li>
-                     <li class="navigationLink"><a href="Boucles_learningObject3.html">1.1.3. faire - jusqu’à ce que</a></li>
+                     <li class="navigationLink"><a href="Boucles_learningObject3.html">1.1.3. faire - tant que</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject4.html">1.1.4. do...while</a></li>
                      <li class="navigationLink"><a href="Boucles_learningObject5.html">1.1.5. pour</a></li>
                      <li class="navigationActual"><strong>1.1.6. for</strong></li>
@@ -35,22 +35,22 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="Boucles_learningObject5.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject7.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Boucles_learningObject6.html">1.1.6. for</h1>
-      <div id="d8e367.html" class="clarify">
-         <p class="paragraph" id="d8e368">
+      <div id="d8e352.html" class="clarify">
+         <p class="paragraph" id="d8e353">
             		    L'équivalent Java de la boucle 
             		  
          </p><pre>
 pour variable de début à fin [par pas] faire
     séquence d’instructions à exécuter
 fin pour
-      </pre><p class="paragraph" id="d8e372">est </p><pre>
-for ( int i =début; i&lt;=fin; i=i+pas ) {
+      </pre><p class="paragraph" id="d8e357">est </p><pre>
+for ( int i = début; i &lt;= fin;  i = i+pas ) {
     séquence d’instructions à exécuter
 }
   </pre></div>
-      <div id="d8e376.html" class="look">
+      <div id="d8e361.html" class="look">
          <h4>Les nombres pairs entre 2 et 100</h4>
-         <p class="paragraph" title="Les nombres pairs entre 2 et 100" id="d8e377"></p><pre>
+         <p class="paragraph" title="Les nombres pairs entre 2 et 100" id="d8e362"></p><pre>
 public class Exemple {
     /**
     * Affiche la somme des nombres pairs entre 2 et 100 inclus.
@@ -59,42 +59,42 @@ public class Exemple {
     public static void main(String [] args) {
       int somme;
       somme = 0;
-      for ( int i =2; i&lt;=100; i=i+2 ) {
+      for ( int i = 2; i &lt;= 100; i = i+2 ) {
         somme = somme + i;
       }
       System.out. println (somme);
     }
 }</pre><h4>Compte à rebours</h4>
-         <p class="paragraph" title="Compte à rebours" id="d8e380"></p><pre>
+         <p class="paragraph" title="Compte à rebours" id="d8e365"></p><pre>
 public class Exemple {
     /**
     * Affiche un compte a rebours a partir de 10.
     * @param args non utilise
     */
     public static void main(String [] args) {
-      for ( int i=10; i&gt;=1; i=i−1 ) {
+      for ( int i = 10; i &gt;= 1; i = i−1 ) {
         System.out. println ( i );
       }
       System.out. println ("Partez !");
     }
 }</pre></div>
-      <div id="d8e383.html" class="clarify">
-         <p class="paragraph" id="d8e384"><code>i++;</code> est un raccourci pour <code>i =i+1;</code></p>
+      <div id="d8e368.html" class="clarify">
+         <p class="paragraph" id="d8e369"><code>i++;</code> est un raccourci pour <code>i = i+1;</code></p>
       </div>
-      <div id="d8e390.html" class="look"><pre>
+      <div id="d8e375.html" class="look"><pre>
 public class Exemple {
     /**
     * Affiche les nombres de 1 a 10 inclus.
     * @param args non utilise
     */
     public static void main(String [] args) {
-      for ( int i =1; i&lt;=10; i++ ) {
+      for ( int i = 1; i &lt;= 10; i++ ) {
         System.out. println ( i );
       }
     }
 }</pre></div>
       <hr />
       <div class="navigation_arrows"><a href="Boucles_learningObject5.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Boucles_learningObject7.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 13.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

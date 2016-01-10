@@ -32,27 +32,32 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="unit_Structure.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Structure_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Structure_learningObject1.html">1.6.1. Structure générale d’un algorithme</h1>
-      <div id="d8e1559.html" class="clarify">
-         <p class="paragraph" id="d8e1560">
-            La traduction d’un algorithme en pseudo-code constituera le contenu d’un module. 
-            Un module contient donc la solution algorithmique d’un problème donné (ou d’une de
+      <div id="d8e1580.html" class="clarify">
+         <p class="paragraph" id="d8e1581">
+            Un algorithme contient la solution algorithmique d’un problème donné (ou d’une de
             ses parties).
+            
+         </p>
+         <p class="paragraph" id="d8e1583"><span class="multimedia_inline"><img class="multimedia" id="d8e1584" src="../image/methode.png" alt="" /></span></p>
+         <p class="paragraph" id="d8e1585">
             Sa structure générale sera la suivante :
             
          </p><pre>
-module nomDuModule()
-    déclaration des variables et constantes utilisées dans le module
-    lecture des données
-    instructions utilisant les données lues
-    communication des résultats
-fin module
-				</pre><p class="paragraph" id="d8e1564">
+algorithme nomDeAlgorithme(paramètres)
+    instructions
+fin algorithme
+				</pre><pre>
+algorithme nomDeAlgorithme(paramètres) → type
+    instructions
+    retourner expression
+fin algorithme
+				</pre><p class="paragraph" id="d8e1591">
             Remarques :
             
-            <ul class="list" id="d8e1566">
+            <ul class="list" id="d8e1593">
                <li class="itemAlt">Le code d’un algorithme sera toujours compris entre la première ligne, 
-                  appelée « <b>entête</b> » qui commence par le mot « module » suivi du nom choisi pour l’algorithme,
-                  et la ligne finale « fin module ».
+                  appelée « <b>entête</b> » qui commence par le mot « algorithme » suivi du nom choisi pour l’algorithme,
+                  et la ligne finale « fin algorithme ».
                   
                </li>
                <li class="item">Le code compris entre l’entête et la ligne finale sera toujours légèrement décalé
@@ -61,27 +66,26 @@ fin module
                   nous y reviendrons lors de l’étude des structures alternatives et répétitives.
                   
                </li>
-               <li class="itemAlt">Comme pour les variables, le <b>nomDuModule</b> 
+               <li class="itemAlt">Comme pour les variables, le <b>nomDeAlgorithme</b> 
                   devra être <b>approprié</b> au contenu ! 
-                  Par exemple, sommerNombres(), additionnerFractions() plutôt que goPartez() ! 
+                  Par exemple, sommerNombres(nb1, nb2 : réels), additionnerFractions(num1, num2, dén1,
+                  dén2 : entiers) plutôt que goPartez() ! 
                   
                </li>
-               <li class="item">Le rôle des <b>parenthèses</b> qui suivent le nom du module sera expliqué plus tard.
-               </li>
-               <li class="itemAlt">Il va de soi que toutes les parties de cette structure générale ne seront pas toujours
+               <li class="item">Il va de soi que toutes les parties de cette structure générale ne seront pas toujours
                   
-                  nécessaires : certains algorithmes ne nécessiteront pas de lecture de données, d’autres
-                  
+                  nécessaires : certains algorithmes ne nécessiteront pas de passage de paramètres,
+                  d’autres 
                   ne devront pas communiquer des résultats...
                   
                </li>
-               <li class="item">Pour la <b>lisibilité</b>, 
-                  on veillera toujours à ce qu’un module tienne sur une vingtaine de 
-                  lignes (donc, en pratique, sur un écran de 40 x 80 caractères ou une page). Ceci implique
+               <li class="itemAlt">Pour la <b>lisibilité</b>, 
+                  on veillera toujours à ce qu’un algorithme tienne sur une vingtaine de 
+                  lignes (donc, en pratique, sur un écran de 40 x 80 caractères ou une page). 
                   
-                  que si le module devait être plus long, il faudrait le découper, comme nous le verrons
-                  
-                  plus loin.
+               </li>
+               <li class="item">
+                  Il devra résoudre un seul problème.
                   
                </li>
             </ul>
@@ -89,6 +93,6 @@ fin module
       </div>
       <hr />
       <div class="navigation_arrows"><a href="unit_Structure.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Structure_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 9.2.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 29.9.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

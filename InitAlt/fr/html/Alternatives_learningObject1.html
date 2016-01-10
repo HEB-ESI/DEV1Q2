@@ -40,15 +40,15 @@
             </div>
             <div class="itemAnswer">
                <div class="itemLabel"><pre>
-module multiple5()
-    n : entier
-    lire n
+algorithme multiple5(n : entier) → chaine
+    aRetourner : chaine
     si <input type="text" value="" class="itemText" id="_d8e20" style="width:100px" /> <span class="gapText">,n MOD 5 = 0,n MOD 5 = 0,n MOD 5=0</span> alors
-        afficher n, "est divisible par 5"
+        aRetourner ← n, "est divisible par 5"
     sinon
-        afficher n, "n'est pas divisible par 5"
+        aRetourner ← n, "n'est pas divisible par 5"
     fin si
-fin module
+    retourner aRetourner
+fin algorithme
 </pre></div>
                <div class="itemHelp_disabled">    </div>
             </div>
@@ -59,11 +59,10 @@ fin module
          <div id="selfCheck2.html" class="singleChoice">
             <div class="itemQuestion">Le morceau d'algorithme suivant est-il correct ?
                					  <pre>
-lire n
-// n est un entier
+// n est un entier reçu en paramètre
 selon que n vaut
-1, 2, 3, 4 : n ← 3*n
-3, 5, 7, 9 : n ← 2*n
+    1, 2, 3, 4 : n ← 3*n
+    3, 5, 7, 9 : n ← 2*n
 fin selon</pre></div>
             <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="0" class="itemRadio" id="selfCheck2.html_d8e30" /><div class="itemLabel"><label for="selfCheck2.html_d8e30"> 
                      							vrai
@@ -94,31 +93,27 @@ fin selon</pre></div>
                <div class="itemLabel">
                   <ul class="list" id="d8e41">
                      <li class="itemAlt"><pre>
-module exerciceA()
-    x : entier
+algorithme exerciceA (x : entier)
     ok : booléen
-    lire x
     ok ← x &gt; 2
     si ok alors
       afficher 2*x
     sinon
       afficher 3*x
     fin si
-fin module
-				</pre><p class="paragraph" id="d8e45">Si le nombre lu est 2 ? </p><input type="text" value="" class="itemText" id="_d8e47" style="width:12px" /> <span class="gapText">,6,6</span></li>
+fin algorithme
+				</pre><p class="paragraph" id="d8e45">Si le nombre reçu est 2 ? </p><input type="text" value="" class="itemText" id="_d8e47" style="width:12px" /> <span class="gapText">,6,6</span></li>
                      <li class="item"><pre>
-module exerciceB()
-    x : entier
+algorithme exerciceB (x : entier)
     ok : booléen
-    lire x
     ok ← x MOD 2 = 0
     si ok alors
       afficher 2*x
     sinon
       afficher 3*x
     fin si
-fin module
-				</pre><p class="paragraph" id="d8e52">Si le nombre lu est 3 ? </p><input type="text" value="" class="itemText" id="_d8e54" style="width:12px" /> <span class="gapText">,9,9</span></li>
+fin algorithme
+				</pre><p class="paragraph" id="d8e52">Si le nombre reçu est 3 ? </p><input type="text" value="" class="itemText" id="_d8e54" style="width:12px" /> <span class="gapText">,9,9</span></li>
                   </ul>
                </div>
                <div class="itemHelp_disabled">    </div>
@@ -133,6 +128,6 @@ fin module
       </div>
       <hr />
       <div class="navigation_arrows"><a href="unit_Alternatives.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Alternatives_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/InitAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 6.10.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/InitAlt.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

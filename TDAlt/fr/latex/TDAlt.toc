@@ -4,14 +4,13 @@
 \contentsline {subsection}{\numberline {1.2}si-alors-sinon-fin si}{3}{subsection.1.2}
 \contentsline {section}{\numberline {2}selon que}{4}{section.2}
 \contentsline {subsection}{\numberline {2.1}selon que (version avec listes de valeurs)}{4}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}selon que (version avec conditions)}{7}{subsection.2.2}
-\contentsline {section}{\numberline {3}Exercices}{9}{section.3}
-\contentsline {subsection}{\numberline {3.1}Compr\'ehension d'algorithme}{9}{subsection.3.1}
-\contentsline {subparagraph}{Compr\'ehension}{9}{section*.2}
-\contentsline {subsection}{\numberline {3.2}Compr\'ehension de codes Java}{10}{subsection.3.2}
-\contentsline {subparagraph}{Compr\'ehension}{10}{section*.3}
-\contentsline {subsection}{\numberline {3.3}\`A vous de jouer...}{12}{subsection.3.3}
-\contentsline {subparagraph}{Stationnement alternatif}{13}{section*.4}
-\contentsline {subparagraph}{La fi\`evre monte}{13}{section*.5}
-\contentsline {subparagraph}{Taxes communales}{13}{section*.6}
-\contentsline {subparagraph}{Au cin\'ema}{13}{section*.7}
+\contentsline {section}{\numberline {3}Exercices}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Compr\'ehension d'algorithme}{7}{subsection.3.1}
+\contentsline {subparagraph}{Compr\'ehension}{7}{section*.2}
+\contentsline {subsection}{\numberline {3.2}Compr\'ehension de codes Java}{8}{subsection.3.2}
+\contentsline {subparagraph}{Compr\'ehension}{8}{section*.3}
+\contentsline {subsection}{\numberline {3.3}\`A vous de jouer...}{10}{subsection.3.3}
+\contentsline {subparagraph}{Stationnement alternatif}{11}{section*.4}
+\contentsline {subparagraph}{La fi\`evre monte}{11}{section*.5}
+\contentsline {subparagraph}{Taxes communales}{11}{section*.6}
+\contentsline {subparagraph}{Au cin\'ema}{11}{section*.7}
