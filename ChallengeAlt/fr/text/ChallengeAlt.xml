@@ -20,7 +20,7 @@
     </paragraph>
 
     <paragraph title="Afficher le titre">
-      Écrivez un module qui affiche le texte :
+      Écrivez un algorithme qui affiche le texte :
     </paragraph>
     <paragraph cssClass="code">
       DEV1 - Entête - Athlétisme - <formatted style="italic">votre nom</formatted>
@@ -31,7 +31,7 @@
       multiples comme le décathlon. <newLine/>
       Pour le 100m, la formule est : <formatted style="code">points = 25.4347 ∗ (18 − temps)^(1.81)</formatted> (arrondi à l’entier inférieur)
       Par exemple, le record d’Usain Bolt à 9.58 s vaut 1202 points.<newLine/>
-      Modifiez votre module pour qu’il lise le temps mis pour parcourir 100m (un réel représentant le nombre de secondes)
+      Modifiez votre algorithme pour qu’il lise le temps mis pour parcourir 100m (un réel représentant le nombre de secondes)
       et affiche les points obtenus (un entier)
     </paragraph>
     
@@ -43,10 +43,10 @@
         <item>Senior si ils sont nés entre 1980 et 1995</item>
         <item>Master si ils sont nés avant 1980</item>
       </list>
-      Modifiez votre module pour qu’il lise l’année de naissance de l’athlète et affiche sa
+      Modifiez votre algorithme pour qu’il lise l’année de naissance de l’athlète et affiche sa
       catégorie. On peut supposer que l’année entrée est correcte.
     </paragraph>
-		<paragraph>Programmez maintenant votre module en Java.</paragraph>
+		<paragraph>Programmez maintenant votre algorithme en Java.</paragraph>
 		<paragraph>
         Aide en Java : pour prendre la partie entière d’un réel en Java, on peut écrire : entier = (int) réel;
     </paragraph>

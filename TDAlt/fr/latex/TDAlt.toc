@@ -3,7 +3,7 @@
 \contentsline {subsection}{\numberline {1.1}si-alors-fin si}{2}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}si-alors-sinon-fin si}{3}{subsection.1.2}
 \contentsline {section}{\numberline {2}selon que}{4}{section.2}
-\contentsline {subsection}{\numberline {2.1}selon que (version avec listes de valeurs)}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.1}selon que}{4}{subsection.2.1}
 \contentsline {section}{\numberline {3}Exercices}{7}{section.3}
 \contentsline {subsection}{\numberline {3.1}Compr\'ehension d'algorithme}{7}{subsection.3.1}
 \contentsline {subparagraph}{Compr\'ehension}{7}{section*.2}
@@ -13,4 +13,4 @@
 \contentsline {subparagraph}{Stationnement alternatif}{11}{section*.4}
 \contentsline {subparagraph}{La fi\`evre monte}{11}{section*.5}
 \contentsline {subparagraph}{Taxes communales}{11}{section*.6}
-\contentsline {subparagraph}{Au cin\'ema}{11}{section*.7}
+\contentsline {subparagraph}{Au cin\'ema}{12}{section*.7}

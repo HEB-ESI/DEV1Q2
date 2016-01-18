@@ -162,7 +162,7 @@ public class Test {
     branche à exécuter en fonction de la valeur d’une variable (ou parfois d’une expression) ou
     de la condition qui est vraie.</entry>
     
-		<learningObject title="selon que (version avec listes de valeurs)">
+		<learningObject title="selon que">
 		<!-- =================================================== -->
 		<clarify>
 		  <paragraph>En pseudo-code :</paragraph>
@@ -257,7 +257,7 @@ switch (variable){
       </paragraph>
       <paragraph>
         La variable peut être de type <formatted style="code">byte</formatted>, <formatted style="code">short</formatted>, 
-        <formatted style="code">char</formatted>, <formatted style="code">int</formatted> <formatted style="code">String</formatted> et 
+        <formatted style="code">char</formatted>, <formatted style="code">int</formatted>, <formatted style="code">String</formatted> et 
         les types énumérés que nous verrons plus tard.
       </paragraph>
       <paragraph>
@@ -284,20 +284,24 @@ public class Test{
   public static void main(String[] args){
       Scanner clavier = new Scanner(System.in);
       String produit = clavier.next();
+      System.out.println(prix(produit));
+  }
+  
+  public static double prix(String produit){
       switch(produit) {
         case "Coca" :
         case "Sprite" :
         case "Fanta" :
-        prixDistributeur = 60;
+        prixDistributeur = 0.8;
         break;
       case "IceTea" :
-        prixDistributeur = 70;
+        prixDistributeur = 1.2;
         break;
       default :
         prixDistributeur = 0;
         break;
       }
-      System.out.println(prixDistributeur);
+      return prixDistributeur;
     }
 }
       </paragraph>

@@ -295,7 +295,7 @@ public class Test {
 }
     \end{Java}\section{selon que}Avec ces structures, plusieurs branches d'ex\'ecution sont disponibles. L'ordinateur choisit la
     branche \`a ex\'ecuter en fonction de la valeur d'une variable (ou parfois d'une expression) ou
-    de la condition qui est vraie.\subsection{selon que (version avec listes de valeurs)}En pseudo-code :
+    de la condition qui est vraie.\subsection{selon que}En pseudo-code :
             \par
         \begin{verbatim}
 selon que variable vaut
@@ -385,7 +385,7 @@ switch (variable){
             \par
         
         La variable peut \^etre de type \verb@byte@, \verb@short@, 
-        \verb@char@, \verb@int@\verb@String@ et 
+        \verb@char@, \verb@int@, \verb@String@ et 
         les types \'enum\'er\'es que nous verrons plus tard.
       
             \par
@@ -411,20 +411,24 @@ public class Test{
   public static void main(String[] args){
       Scanner clavier = new Scanner(System.in);
       String produit = clavier.next();
+      System.out.println(prix(produit));
+  }
+  
+  public static double prix(String produit){
       switch(produit) {
         case "Coca" :
         case "Sprite" :
         case "Fanta" :
-        prixDistributeur = 60;
+        prixDistributeur = 0.8;
         break;
       case "IceTea" :
-        prixDistributeur = 70;
+        prixDistributeur = 1.2;
         break;
       default :
         prixDistributeur = 0;
         break;
       }
-      System.out.println(prixDistributeur);
+      return prixDistributeur;
     }
 }
       \end{Java}\section{Exercices}
