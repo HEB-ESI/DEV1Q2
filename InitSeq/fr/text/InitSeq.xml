@@ -149,7 +149,7 @@
 				<selfCheck title="Les types primitifs numériques entiers" shuffle="no">
 						<fillInBlanks>
 							<question> 
-								Donnez les types primitifs numériques entiers dans l'ordre (de celui quiprend le moins de place en mémoire à celui qui en prend le plus) :
+								Donnez les types primitifs numériques entiers dans l'ordre (de celui qui prend le moins de place en mémoire à celui qui en prend le plus) :
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
@@ -169,7 +169,7 @@
 				<selfCheck title="Les types primitifs numériques flottants" shuffle="no">
 						<fillInBlanks>
 							<question> 
-								Donnez les types primitifs numériques flottants dans l'ordre (de celui quiprend le moins de place en mémoire à celui qui en prend le plus) :
+								Donnez les types primitifs numériques flottants dans l'ordre (de celui qui prend le moins de place en mémoire à celui qui en prend le plus) :
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
@@ -277,7 +277,7 @@
             </fillInBlanks>
 				  </selfCheck>
 				  <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
-          <link uri="../../../TDSeq/fr/html/unit_OpérateursEtExpressions.html">révisez ici</link></paragraph>
+          <link uri="../../../TDSeq/fr/html/unit_OperateursEtExpressions.html">révisez ici</link></paragraph>
         
           <selfCheck title="Comment calculer ?" shuffle="yes">
             <fillInBlanks>
@@ -289,7 +289,7 @@
             </fillInBlanks>
 				  </selfCheck>
 				  <paragraph>Si vous n'avez pas répondu correctement à la question, 
-          <link uri="../../../TDSeq/fr/html/OpérateursEtExpressions_learningObject6.html">révisez ici</link></paragraph>
+          <link uri="../../../TDSeq/fr/html/OperateursEtExpressions_learningObject10.html">révisez ici</link></paragraph>
         </act>
       </learningObject>
   </unit>
@@ -693,28 +693,6 @@ afficher a = b</paragraph>
 					</multipleChoice>
 				</selfCheck>
         
-				<selfCheck title="Méthodes de Scanner" shuffle="yes">
-					<fillInBlanks>
-						<question>Complétez les méthodes suivantes afin de permettre une lecture au clavier adéquate.</question>
-						<gapText>
-							<paragraph cssClass="javawithblanks">
-import java.util.Scanner;
-public class ReadingExercice {
-    public static void main (String[] args) {  
-        Scanner keyboard = new Scanner(System.in);  
-        int integerNb = keyboard.<gap answers="">nextInt()</gap>;
-        double realNb = keyboard.<gap answers="">nextDouble()</gap> ;
-        boolean ok = keyboard.<gap answers="">nextBoolean()</gap> ;
-        String string1 = keyboard.<gap answers="">next()</gap> ; // We read a word
-        String string2 = keyboard.<gap answers="">nextLine()</gap> ; // We read a line 
-        char aCharacter = keyboard.<gap answers="">next().charAt()</gap> ;
-    }
-}							</paragraph>
-						</gapText>
-						<solution></solution>
-					</fillInBlanks>
-				</selfCheck>
-        
         <paragraph>Si vous n'avez pas répondu correctement à toutes les questions, 
         <link uri="../../../TDSeq/fr/html/Affectation_learningObject6.html">révisez ici</link></paragraph>
 			  </act>
@@ -1008,7 +986,7 @@ public class Exercice5 {
     <!-- ============================================================ -->
     <act>
         <paragraph title="Consignes">
-          Il est temps de se lancer et d’écrire vos premiers modules et programmes Java correspondant. 
+          Il est temps de se lancer et d’écrire vos premiers algorithmes et programmes Java correspondant. 
           Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
           <list listStyle="unordered">
             <item>il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement spécifié ;</item>
@@ -1023,9 +1001,9 @@ public class Exercice5 {
         <paragraph title="Exercices">
         Écrivez les algorithmes et codez les programmes Java correspondant qui 
           <list listStyle="ordered">
-            <item>réalise la permutation du contenu de deux variables.</item>
-            <item>étant donné un moment dans la journée donné par trois nombres lus, à savoir, heure, minute et seconde, calcule le nombre de secondes écoulées depuis minuit.</item>
-            <item>étant donné un temps écoulé dans la journée exprimé en secondes, calcule et affiche ce temps sous la forme de trois nombres (heure, minute et seconde). <newLine/>
+            <item>réalisent la permutation du contenu de deux variables.</item>
+            <item>étant donné un moment dans la journée donné par trois nombres lus, à savoir, heure, minute et seconde, calculent le nombre de secondes écoulées depuis minuit.</item>
+            <item>étant donné un temps écoulé dans la journée exprimé en secondes, calculent et afficnthe ce temps sous la forme de trois nombres (heure, minute et seconde). <newLine/>
             Ex : 10000 secondes donnera 2h 46’40”</item>
           </list>
         </paragraph>
