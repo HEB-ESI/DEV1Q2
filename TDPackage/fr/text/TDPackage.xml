@@ -43,7 +43,7 @@
 				Pour <formatted style="bold">votre</formatted> code, 
 				nous vous recommandons de rassembler vos classes
 				par package reprenant votre login et le TD.
-				Exemple : <formatted style="java">g32010.td6</formatted>. 
+				Exemple : <formatted style="java">g32010.tdPackage</formatted>. 
 			</paragraph>
 			
 			<paragraph title="Associer une classe à un package" icon="icon_reading"/>
@@ -53,7 +53,7 @@
 				(c-à-d avant même l'instruction <formatted style="java">public class NomClasse</formatted>) :
 			</paragraph>
 			<paragraph cssClass="java">
-	package g32010.td6;
+	package g32010.tdPackage;
 			</paragraph>
 					
 			<paragraph title="Nom complet d'une classe" icon="icon_reading"/>
@@ -81,10 +81,10 @@
 				<fillInBlanks>
 					<question>
 						Donnez le nom complet de la classe <formatted style="code">SurfaceTriangle</formatted>
-						dont le package est <formatted style="code">g32010.td6</formatted> :
+						dont le package est <formatted style="code">g32010.tdPackage</formatted> :
 					</question>
 					<gapText>
-						<gap answers="g32010.td6.SurfaceTriangle">g32010.td6.SurfaceTriangle </gap>
+						<gap answers="g32010.tdPackage.SurfaceTriangle">g32010.tdPackage.SurfaceTriangle </gap>
 					</gapText>
 					<solution/>
 				</fillInBlanks>
@@ -103,9 +103,9 @@
 				La notion de package est liée à celle de répertoire
 				(et même d'arborescence de répertoires).
 				Ainsi le package
-				<formatted style="java">td.td6</formatted> sera associé 
-				aux dossiers <formatted style="code">td/td6</formatted>
-				(un dossier <formatted style="java">td6</formatted> 
+				<formatted style="java">td.tdPackage</formatted> sera associé 
+				aux dossiers <formatted style="code">td/tdPackage</formatted>
+				(un dossier <formatted style="java">tdPackage</formatted> 
 				dans un dossier <formatted style="java">td</formatted>).
 				Tout comme une classe appartient à un package,
 				la version compilée de la classe
@@ -133,10 +133,10 @@
 						Donnez la suite de répertoires dans lesquels 
 						<formatted style="bold">doit</formatted> certainement
 						se trouver la classe <formatted style="java">SurfaceTriangle</formatted>
-						dont le package est <formatted style="java">g32010.tds.td6</formatted>
+						dont le package est <formatted style="java">g32010.tds.tdPackage</formatted>
 					</question>
 					<gapText>
-						<gap answers="">g32010/tds/td6</gap>
+						<gap answers="">g32010/tds/tdPackage</gap>
 					</gapText>
 					<solution/>
 				</fillInBlanks>
@@ -152,14 +152,11 @@
 
 	<look>
 		<paragraph>
-			Lors du précédent TD,
-			vous avez pris une copie de la classe
+			Une classe
 			<formatted style="code">Color</formatted>
-			et vous l'avez compilée.
-			Nous avons aussi fait ce travail
-			en plaçant la classe dans le package
+			a comme package
 			<formatted style="code">esi.util</formatted>.
-			Voyons voir comment l'utiliser.			
+			Voyons comment l'utiliser.			
 		</paragraph>
 		<paragraph title="Expérience" icon="icon_experiment"/>
 		<list listStyle="ordered">
@@ -302,7 +299,7 @@
 	java -d chemin Fichier.java
 		</paragraph>
 		<paragraph>
-			Compile le fichier donné et place
+			compile le fichier donné et place
 			le résultat dans une hiérarchie de dossiers
 			qui correspond au package à partir du chemin donné.
 		</paragraph>
@@ -345,10 +342,7 @@
 			<paragraph>
 				Pour la manipuler,
 				la procédure est la même que pour les
-				autres variables d'environnement
-				(comme 
-				<formatted style="code">PS1</formatted>
-				que vous avez déjà vu).
+				autres variables d'environnement.
 			</paragraph>
 
 			<list listStyle="unordered">
@@ -388,13 +382,13 @@
 				<fillInBlanks>
 					<question>
 						Sachant que la classe <formatted style="java">SurfaceTriangle</formatted> se trouve dans 
-						<formatted style="code">/home/g32010/tds/td6</formatted> 
+						<formatted style="code">/home/g32010/tds/tdPackage</formatted> 
 						et qu'on retrouve <formatted style="code">/home</formatted> dans la variable <formatted style="code">CLASSPATH</formatted>, 
 						donnez l'instruction <formatted style="java">package</formatted> correspondant à la situation :
 					</question>
 					<gapText>
 						<paragraph cssClass="javawithblanks">
-package <gap answers="">g32010.tds.td6</gap>;
+package <gap answers="">g32010.tds.tdPackage</gap>;
 						</paragraph>
 					</gapText>
 					<solution/>
@@ -514,7 +508,7 @@ package <gap answers="">g32010.tds.td6</gap>;
 					<formatted style="code">nano src/Test.java</formatted>
 					<newLine/>
 					en prenant soin de commencer le fichier par un package qui a du sens
-					(par exemple : <formatted style="code">g12345.td6</formatted>).
+					(par exemple : <formatted style="code">g12345.tdPackage</formatted>).
 				</item>
 				<item>
 					On compile en demandant à créer la classe à partir
@@ -523,17 +517,16 @@ package <gap answers="">g32010.tds.td6</gap>;
 					<formatted style="code">javac -d . src/Test.java</formatted>
 				</item>
 				<item>
-					On exécute : <formatted style="code">java g12345.td6.Test</formatted>
+					On exécute : <formatted style="code">java g12345.tdPackage.Test</formatted>
 				</item>
 			</list>
 
 			<paragraph title="Exercice" icon="act"/>
 			<paragraph>
-				Dans un sous-dossier du td6
-				(par exemple : td6/cas1),
+				Dans un sous-dossier du tdPackage
+				(par exemple : tdPackage/cas1),
 				faites une copie de votre programme 
 				<formatted style="code">Hello.java</formatted>
-				développé au td3
 				et placez-le dans un package en suivant
 				l'approche ci-dessus.
 				Quelle est la commande à utiliser pour compiler ?
@@ -585,7 +578,7 @@ package <gap answers="">g32010.tds.td6</gap>;
 					On édite le source directement dans le dossier courant : 
 					<formatted style="code">nano Test.java</formatted>
 					en prenant soin de commencer le fichier par un package qui a du sens
-					(par exemple : <formatted style="code">g12345.td6</formatted>).
+					(par exemple : <formatted style="code">g12345.tdPackage</formatted>).
 				</item>
 				<item>
 					On compile en demandant à créer la classe dans
@@ -593,7 +586,7 @@ package <gap answers="">g32010.tds.td6</gap>;
 					<formatted style="code">javac -d ~/classes Test.java</formatted>
 				</item>
 				<item>
-					On exécute : <formatted style="code">java g12345.td6.Test</formatted>
+					On exécute : <formatted style="code">java g12345.tdPackage.Test</formatted>
 				</item>
 			</list>
 			
@@ -604,11 +597,10 @@ package <gap answers="">g32010.tds.td6</gap>;
 			<paragraph title="Exercice" icon="act"/>
 			<paragraph>
 				Il s'agit du même exercice que pour la première approche.
-				Dans un autre sous-dossier du td6
-				(par exemple : td6/cas2),
+				Dans un autre sous-dossier du tdPackage
+				(par exemple : tdPackage/cas2),
 				faites une copie de votre programme 
 				<formatted style="code">Hello.java</formatted>
-				développé au td3
 				et placez-le dans un package en suivant
 				l'approche ci-dessus.
 				Quelle est la commande à utiliser pour compiler ?
@@ -674,11 +666,11 @@ package <gap answers="">g32010.tds.td6</gap>;
 						<question>
 							<paragraph>Soit le code :</paragraph>
 							<paragraph cssClass="java">
-package td.td6; 
+package td.tdPackage; 
 public class ErrCompilation {
     import java.util.Scanner;
     public static void main (String [] args) { 
-        System.out.println("TD6Prepa");
+        System.out.println("TDPackage");
     }
 }							</paragraph>
 							<paragraph>
@@ -724,7 +716,7 @@ import java.util.Scanner;
 package survol;
 public class ErrCompilation{
 	public static void main (String [] args){
-		System.out.println("TD6Prepa");
+		System.out.println("TDPackage");
 	
 }							</paragraph>
 							<paragraph>
@@ -803,7 +795,7 @@ Could not find the main class: ErrCompilation. Program will exit.
           </list>
         </paragraph>
         <paragraph>
-          Vous trouverez cet énoncé <link uri="../../../TDPackage/fr/enonce/DEV1-LAJ-interro-3B-20141114-1.pdf">ici</link>.
+          Vous trouverez cet énoncé <link uri="../../../TDPackage/fr/enonce/DEV1-LAJ-interro-3B-Java-JLC.pdf">ici</link>.
         </paragraph>
       </act>
     </learningObject>

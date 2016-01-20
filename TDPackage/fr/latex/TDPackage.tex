@@ -212,7 +212,7 @@
 				Pour \textbf{votre} code, 
 				nous vous recommandons de rassembler vos classes
 				par package reprenant votre login et le TD.
-				Exemple : \verb|g32010.td6|. 
+				Exemple : \verb|g32010.tdPackage|. 
 			
             \par
         
@@ -229,7 +229,7 @@
 			
             \par
         \begin{Java}
-	package g32010.td6;
+	package g32010.tdPackage;
 			\end{Java}
 			
 		\subparagraph{Nom complet d'une classe} 
@@ -257,8 +257,8 @@
             \par
         
 						Donnez le nom complet de la classe \verb@SurfaceTriangle@
-						dont le package est \verb@g32010.td6@ :
-					 \textcolor{gray}{\underline{\hspace*{16em}}} 
+						dont le package est \verb@g32010.tdPackage@ :
+					 \textcolor{gray}{\underline{\hspace*{20em}}} 
 			
 		\subparagraph{Package et dossiers} 
 		
@@ -278,9 +278,9 @@
 				La notion de package est li\'ee \`a celle de r\'epertoire
 				(et m\^eme d'arborescence de r\'epertoires).
 				Ainsi le package
-				\verb|td.td6| sera associ\'e 
-				aux dossiers \verb@td/td6@
-				(un dossier \verb|td6| 
+				\verb|td.tdPackage| sera associ\'e 
+				aux dossiers \verb@td/tdPackage@
+				(un dossier \verb|tdPackage| 
 				dans un dossier \verb|td|).
 				Tout comme une classe appartient \`a un package,
 				la version compil\'ee de la classe
@@ -325,15 +325,12 @@
 						Donnez la suite de r\'epertoires dans lesquels 
 						\textbf{doit} certainement
 						se trouver la classe \verb|SurfaceTriangle|
-						dont le package est \verb|g32010.tds.td6| \textcolor{gray}{\underline{\hspace*{10em}}} \subsection{Utiliser le package d'un autre}
-			Lors du pr\'ec\'edent TD,
-			vous avez pris une copie de la classe
+						dont le package est \verb|g32010.tds.tdPackage| \textcolor{gray}{\underline{\hspace*{16em}}} \subsection{Utiliser le package d'un autre}
+			Une classe
 			\verb@Color@
-			et vous l'avez compil\'ee.
-			Nous avons aussi fait ce travail
-			en pla\c cant la classe dans le package
+			a comme package
 			\verb@esi.util@.
-			Voyons voir comment l'utiliser.			
+			Voyons comment l'utiliser.			
 		
             \par
         
@@ -495,7 +492,7 @@
         \begin{Java}
 	java -d chemin Fichier.java
 		\end{Java}
-			Compile le fichier donn\'e et place
+			compile le fichier donn\'e et place
 			le r\'esultat dans une hi\'erarchie de dossiers
 			qui correspond au package \`a partir du chemin donn\'e.
 		
@@ -536,10 +533,7 @@
 
 				Pour la manipuler,
 				la proc\'edure est la m\^eme que pour les
-				autres variables d'environnement
-				(comme 
-				\verb@PS1@
-				que vous avez d\'ej\`a vu).
+				autres variables d'environnement.
 			
             \par
         
@@ -581,11 +575,11 @@
                 \textcolor{white}{.} \par
             
 						Sachant que la classe \verb|SurfaceTriangle| se trouve dans 
-						\verb@/home/g32010/tds/td6@ 
+						\verb@/home/g32010/tds/tdPackage@ 
 						et qu'on retrouve \verb@/home@ dans la variable \verb@CLASSPATH@, 
 						donnez l'instruction \verb|package| correspondant \`a la situation :
 					\begin{Java}
-package  \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ ;
+package  \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ ;
 						\end{Java}
 			
 		\subparagraph{Exercice} 
@@ -710,7 +704,7 @@ package  \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ ;
 				\verb@nano src/Test.java@\par
 				
 					en prenant soin de commencer le fichier par un package qui a du sens
-					(par exemple : \verb@g12345.td6@).
+					(par exemple : \verb@g12345.tdPackage@).
 				
 			\item 
 					On compile en demandant \`a cr\'eer la classe \`a partir
@@ -718,7 +712,7 @@ package  \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ ;
 					\par
 				\verb@javac -d . src/Test.java@
 			\item 
-					On ex\'ecute : \verb@java g12345.td6.Test@
+					On ex\'ecute : \verb@java g12345.tdPackage.Test@
 					\end{enumerate}
 				
 			
@@ -728,11 +722,10 @@ package  \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ ;
 				
             \par
         
-				Dans un sous-dossier du td6
-				(par exemple : td6/cas1),
+				Dans un sous-dossier du tdPackage
+				(par exemple : tdPackage/cas1),
 				faites une copie de votre programme 
 				\verb@Hello.java@
-				d\'evelopp\'e au td3
 				et placez-le dans un package en suivant
 				l'approche ci-dessus.
 				Quelle est la commande \`a utiliser pour compiler ?
@@ -807,14 +800,14 @@ package  \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ ;
 					On \'edite le source directement dans le dossier courant : 
 					\verb@nano Test.java@
 					en prenant soin de commencer le fichier par un package qui a du sens
-					(par exemple : \verb@g12345.td6@).
+					(par exemple : \verb@g12345.tdPackage@).
 				
 			\item 
 					On compile en demandant \`a cr\'eer la classe dans
 					le dossier global d\'edi\'e :
 					\verb@javac -d ~/classes Test.java@
 			\item 
-					On ex\'ecute : \verb@java g12345.td6.Test@
+					On ex\'ecute : \verb@java g12345.tdPackage.Test@
 					\end{enumerate}
 				
 			
@@ -825,11 +818,10 @@ package  \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ ;
             \par
         
 				Il s'agit du m\^eme exercice que pour la premi\`ere approche.
-				Dans un autre sous-dossier du td6
-				(par exemple : td6/cas2),
+				Dans un autre sous-dossier du tdPackage
+				(par exemple : tdPackage/cas2),
 				faites une copie de votre programme 
 				\verb@Hello.java@
-				d\'evelopp\'e au td3
 				et placez-le dans un package en suivant
 				l'approche ci-dessus.
 				Quelle est la commande \`a utiliser pour compiler ?
@@ -880,11 +872,11 @@ package  \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ ;
             Soit le code :
             \par
         \begin{Java}
-package td.td6; 
+package td.tdPackage; 
 public class ErrCompilation {
     import java.util.Scanner;
     public static void main (String [] args) { 
-        System.out.println("TD6Prepa");
+        System.out.println("TDPackage");
     }
 }							\end{Java}
 								la commande \verb@javac ErrCompilation.java@ 
@@ -938,7 +930,7 @@ import java.util.Scanner;
 package survol;
 public class ErrCompilation{
 	public static void main (String [] args){
-		System.out.println("TD6Prepa");
+		System.out.println("TDPackage");
 	
 }							\end{Java}
 								la commande \verb@javac ErrCompilation.java@ provoque l'erreur suivante :
@@ -1028,7 +1020,7 @@ Could not find the main class: ErrCompilation. Program will exit.
 				
             \par
         
-          Vous trouverez cet \'enonc\'e ici (\url{www.heb.be/esi/TDPackage/fr/../../TDPackage/fr/enonce/DEV1-LAJ-interro-3B-20141114-1.pdf}).
+          Vous trouverez cet \'enonc\'e ici (\url{www.heb.be/esi/TDPackage/fr/../../TDPackage/fr/enonce/DEV1-LAJ-interro-3B-Java-JLC.pdf}).
         
             \par
         

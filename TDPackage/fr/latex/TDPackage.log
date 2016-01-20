@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  6 OCT 2015 11:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  20 JAN 2016 21:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -890,99 +890,95 @@ cc-gris.jpg>]
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) [2
 
-]
-Overfull \hbox (40.80054pt too wide) in paragraph at lines 325--328
-\T1/lmr/m/n/10.95 classe []\T1/lmtt/m/n/10.95 SurfaceTriangle \T1/lmr/m/n/10.95
- dont le pa-ckage est []\T1/lmtt/m/n/10.95 g32010.tds.td6 []$[]$[] 
- []
-
-[3]
-Overfull \hbox (37.63655pt too wide) in paragraph at lines 446--452
+] [3]
+Overfull \hbox (37.63655pt too wide) in paragraph at lines 443--449
 \T1/lmr/m/n/10.95 cor-res-pon-dant au pa-ckage. Ici, il cherche le fi-chier []\
 T1/lmtt/m/n/10.95 g12345/util/Color.class 
  []
 
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 493.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 493.
 [4]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 496.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 496.
-
-Overfull \hbox (10.68704pt too wide) in paragraph at lines 555--558
+Overfull \hbox (10.68704pt too wide) in paragraph at lines 549--552
 []\T1/lmr/m/n/10.95 Pour ajou-ter un dos-sier à son contenu : []\T1/lmtt/m/n/10
 .95 CLASSPATH=$CLASSPATH:valeur 
  []
 
 
-Overfull \hbox (12.11748pt too wide) in paragraph at lines 583--587
+Overfull \hbox (46.60988pt too wide) in paragraph at lines 577--581
 []\T1/lmr/m/n/10.95 Sachant que la classe []\T1/lmtt/m/n/10.95 SurfaceTriangle 
-\T1/lmr/m/n/10.95 se trouve dans []\T1/lmtt/m/n/10.95 /home/g32010/tds/td6
+\T1/lmr/m/n/10.95 se trouve dans []\T1/lmtt/m/n/10.95 /home/g32010/tds/tdPackag
+e
  []
 
-[5]
-Overfull \hbox (55.12488pt too wide) in paragraph at lines 595--600
+
+Overfull \hbox (55.12488pt too wide) in paragraph at lines 589--594
 \T1/lmr/m/n/10.95 qu'elle a comme che-min []\T1/lmtt/m/n/10.95 /eCours/java/be/
 heb/esi/lg1/exemples/Exercice1.class\T1/lmr/m/n/10.95 ,
  []
 
-[6]
-</home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/approche4.jpeg, id=132, 51
+[5]
+</home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/approche4.jpeg, id=121, 51
 6.93124pt x 269.005pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/approche4.jpeg Graphi
 c file (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/approche4.jpeg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/ap
-proche4.jpeg used on input line 690.
+proche4.jpeg used on input line 684.
 (pdftex.def)             Requested size: 216.00536pt x 112.40666pt.
 
-Overfull \hbox (14.09998pt too wide) in paragraph at lines 745--745
+[6]
+Overfull \hbox (14.09998pt too wide) in paragraph at lines 738--738
 [][][][] 
  []
 
 [7 </home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/approche4.jpeg>]
-</home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/approche3.jpeg, id=148, 45
+</home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/approche3.jpeg, id=150, 45
 4.69875pt x 272.01625pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/approche3.jpeg Graphi
 c file (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/approche3.jpeg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/ap
-proche3.jpeg used on input line 787.
+proche3.jpeg used on input line 780.
 (pdftex.def)             Requested size: 216.00496pt x 129.22151pt.
 
-Overfull \hbox (0.86238pt too wide) in paragraph at lines 796--802
+Overfull \hbox (0.86238pt too wide) in paragraph at lines 789--795
 \T1/lmr/m/n/10.95 chier de confi-gu-ra-tion du bash) : []\T1/lmtt/m/n/10.95 CLA
 SSPATH=$CLASSPATH:~/classes\T1/lmr/m/n/10.95 . 
  []
 
 
-Overfull \hbox (11.02246pt too wide) in paragraph at lines 807--811
+Overfull \hbox (11.02246pt too wide) in paragraph at lines 800--804
 []\T1/lmr/m/n/10.95 On édite le source di-rec-te-ment dans le dos-sier cou-rant
  : []\T1/lmtt/m/n/10.95 nano Test.java
  []
 
-[8 </home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/approche3.jpeg>]
-Overfull \hbox (14.09998pt too wide) in paragraph at lines 842--842
+
+Overfull \hbox (14.09998pt too wide) in paragraph at lines 834--834
 [][][][] 
  []
 
+[8 </home/clr/Documents/Cours/DEV1Q2/TDPackage/fr/image/approche3.jpeg>]
 [9] [10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1035.
- [11] [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1035.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1027.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1027.
  (./TDPackage.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1035.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1035.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1027.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1027.
 
 Package rerunfilecheck Info: File `TDPackage.out' has not changed.
 (rerunfilecheck)             Checksum: C28DAADD804AB70B609DF19B9047652D;624.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1035.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1027.
  ) 
 Here is how much of TeX's memory you used:
- 12481 strings out of 493304
- 182309 string characters out of 6139871
- 298511 words of memory out of 5000000
+ 12480 strings out of 493304
+ 182308 string characters out of 6139871
+ 298517 words of memory out of 5000000
  15586 multiletter control sequences out of 15000+600000
  76569 words of font info for 56 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1001,10 +997,10 @@ ype1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.
 pfb>
-Output written on TDPackage.pdf (12 pages, 408671 bytes).
+Output written on TDPackage.pdf (11 pages, 407484 bytes).
 PDF statistics:
- 286 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
- 104 named destinations out of 1000 (max. 500000)
+ 282 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
+ 103 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
