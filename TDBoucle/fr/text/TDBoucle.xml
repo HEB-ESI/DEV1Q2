@@ -83,7 +83,7 @@ algorithme sommeNombres() → entier
       somme ← somme + valeur
       lire valeur // remarquer l’endroit où on lit une valeur.
     fin tant que
-retourner somme
+    retourner somme
 fin algorithme
       </paragraph>
     </look>
@@ -269,13 +269,12 @@ faire
     séquence d’instructions à exécuter
 tant que conditionPourResterDansLaBoucle
       </paragraph>
-      <paragraph>c-à-d </paragraph>
+      <paragraph>est </paragraph>
 		  <paragraph  cssClass="code">
 do ( condition ) {
     séquence d’instructions à exécuter
 } while( conditionPourResterDansLaBoucle );
 		  </paragraph>
-		  car la condition est inversée.
     </clarify>
     
     <look>
@@ -312,7 +311,7 @@ public class Exemple {
       System.out. println (somme);
     }
 }]]></paragraph>
-    <paragraph>Affichera -5 si le premier nb lu vaut -5.</paragraph>
+    <paragraph>affichera -5 si le premier nb lu vaut -5.</paragraph>
     </look>
     
   </learningObject>
@@ -1117,7 +1116,7 @@ public static void appelMaxPositif() {
             <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
             <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
-            <item>Pour la partie Java, dessinez l'arborescence des fichie, vous travaillerez dans un package  <formatted style="code">g12345.Boucles</formatted>. </item>
+            <item>Pour la partie Java, dessinez l'arborescence des fichiers, vous travaillerez dans un package  <formatted style="code">g12345.Boucles</formatted>. </item>
           </list>
         </paragraph>
         
@@ -1181,7 +1180,7 @@ public static void appelMaxPositif() {
         <paragraph title="Jeu de la fourchette">
           Écrivez un algorithme qui simule le jeu de la fourchette. Ce jeu consiste à essayer de découvrir
           un nombre quelconque compris entre 0 et 100 inclus, tiré au sort par l’ordinateur (la primitive
-          <formatted style="code">hasard(n : entier)</formatted> retourne un entier entre 0 inclus et n exclus). <newLine/>
+          <formatted style="code">hasard(n : entier)</formatted> retourne un entier entre 1 inclus et n exclus). <newLine/>
           L’utilisateur a droit à huit essais maximum.<newLine/>
           À chaque essai, l’algorithme devra afficher un message indicatif
           <list listStyle="unordered">

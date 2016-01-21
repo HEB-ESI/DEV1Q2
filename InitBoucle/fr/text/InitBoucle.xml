@@ -5,7 +5,7 @@
 	
 	<entry>
 		<paragraph>
-			Ces exercices ont pour but de vérifier que vous avez fixé les structures alternatives qui permettent de conditionner
+			Ces exercices ont pour but de vérifier que vous avez fixé les structures répétitives qui permettent de répéter
       des parties d’algorithmes, de code.
 		</paragraph>
 	</entry>
@@ -345,7 +345,7 @@ public class Test {
             <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
             <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
-            <item>Pour la partie Java, dessinez l'arborescence des fichie, vous travaillerez dans un package  <formatted style="code">g12345.Boucles</formatted>. </item>
+            <item>Pour la partie Java, dessinez l'arborescence des fichiers, vous travaillerez dans un package  <formatted style="code">g12345.Boucles</formatted>. </item>
           </list>
         </paragraph>
         

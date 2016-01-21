@@ -190,22 +190,21 @@
       le calendrier d'un mois et d'une ann\'ee donn\'ees. \par
 				
       Voici un exemple d'affichage pour
-      le mois de mars 2015 : 
+      le mois de avril 2016 : 
     
             \par
         \begin{verbatim}
 Mars 2015
 
 Lun Mar Mer Jeu Ven Sam Dim
-                        01
-02  03  04  05  06  07  08
-09  10  11  12  13  14  15
-16  17  18  19  20  21  22
-23  24  25  26  27  28  29
-30  31
+                01  02  03
+04  05  06  07  08  09  10
+11  12  13  14  15  16  17
+18  19  20  21  22  23  24
+25  26  27  28  29  30
 		\end{verbatim}
-      Votre programme devra demander \`a l'utilisateur d'entrer au clavier un mois et une ann\'ee au format MM AAAA
-      (par exemple 03 2015) et afficher le calendrier de ce mois.
+      Votre programme devra demander \`a l'utilisateur d'entrer au clavier un mois et une ann\'ee au format MM (ou M) AAAA
+      (par exemple 4 2016) et afficher le calendrier de ce mois.
     
             \par
         
@@ -231,16 +230,16 @@ Lun Mar Mer Jeu Ven Sam Dim
 			\item \verb@h@ est un entier repr\'esentant le jour de la semaine (0 = samedi, 1 = dimanche, 2 = lundi, . . .),
 			\item \verb@q@ est un entier repr\'esentant le jour du mois (de 1 \`a 31),
 			\item \verb@m@ est un entier repr\'esentant le num\'ero du mois 
-				(3 = mars, 4 = avril, . . . Janvier et f\'evrier \'etant consid\'er\'es comme les mois 13 et 14 de l'ann\'ee pr\'ec\'edente. Donc janvier 2015 sera consid\'er\'e comme 13 2014),
-			\item \verb@J@ est un entier repr\'esentant year/100 (par exemple 20 pour l'ann\'ee 2008),
-			\item \verb@K@ est un entier repr\'esentant l'ann\'ee dans le si\`ecle, c'est \`a dire year mod 100 (par exemple 15 pour l'ann\'ee 2015)
+				(3 = mars, 4 = avril, . . . Janvier et f\'evrier \'etant consid\'er\'es comme les mois 13 et 14 de l'ann\'ee pr\'ec\'edente. Donc janvier 2016 sera consid\'er\'e comme 13 2015),
+			\item \verb@J@ est un entier repr\'esentant year/100 (par exemple 20 pour l'ann\'ee 2016),
+			\item \verb@K@ est un entier repr\'esentant l'ann\'ee dans le si\`ecle, c'est \`a dire year mod 100 (par exemple 16 pour l'ann\'ee 2016)
 			\item \verb@x/y@ repr\'esente le r\'esultat de \textbf{division enti\`ere} de x par y.
 					\end{itemize}
 				
-      Ainsi, pour le 3 mars 2015, \verb@q@ = 3, \verb@m@ = 3, 
-      \verb@J@ = 20 et \verb@K@ = 15. \par
+      Ainsi, pour le 3 avril 2016, \verb@q@ = 3, \verb@m@ = 3, 
+      \verb@J@ = 20 et \verb@K@ = 16. \par
 				
-      Le r\'esultat \verb@h@ de la congruence de Zeller est ((3+10+15+3+5+100) mod 7) = (136 mod 7) = 3 et donc \textbf{mardi}.
+      Le r\'esultat \verb@h@ de la congruence de Zeller est ((3+13+16+4+5+100) mod 7) = (141 mod 7) = 1 et donc \textbf{dimanche}.
     
             \par
         
@@ -282,7 +281,7 @@ Lun Mar Mer Jeu Ven Sam Dim
         
           qui retourne un entier correspondant au jour de la semaine (0 = lundi, 1 = mardi, . . .) pour une date donn\'ee en param\`etre. \par
 				
-          Le param\`etre year est au format AAAA, par exemple 2015.
+          Le param\`etre year est au format AAAA, par exemple 2016.
           Si la date fournie est invalide, l'algorithme lancera une erreur.
             \par
         

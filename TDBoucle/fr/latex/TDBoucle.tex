@@ -269,7 +269,7 @@ algorithme sommeNombres() → entier
       somme ← somme + valeur
       lire valeur // remarquer l’endroit où on lit une valeur.
     fin tant que
-retourner somme
+    retourner somme
 fin algorithme
       \end{verbatim}\subsection{while}
 		    L'\'equivalent Java de la boucle 
@@ -460,15 +460,13 @@ fin algorithme
 faire
     séquence d’instructions à exécuter
 tant que conditionPourResterDansLaBoucle
-      \end{verbatim}c-\`a-d 
+      \end{verbatim}est 
             \par
         \begin{verbatim}
 do ( condition ) {
     séquence d’instructions à exécuter
 } while( conditionPourResterDansLaBoucle );
 		  \end{verbatim}
-		  car la condition est invers\'ee.
-    
 			
 		\subparagraph{Les puissances de 2} 
 		
@@ -511,7 +509,7 @@ public class Exemple {
       } while ( nb > 0 );
       System.out. println (somme);
     }
-}\end{Java}Affichera -5 si le premier nb lu vaut -5.
+}\end{Java}affichera -5 si le premier nb lu vaut -5.
             \par
         \subsection{pour}
         On va indiquer combien de fois la t\^ache doit \^etre r\'ep\'et\'ee. Cela se fait au travers
@@ -1242,7 +1240,7 @@ public static void appelMaxPositif() {
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
 			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
-			\item Pour la partie Java, dessinez l'arborescence des fichie, vous travaillerez dans un package  \verb@g12345.Boucles@. 
+			\item Pour la partie Java, dessinez l'arborescence des fichiers, vous travaillerez dans un package  \verb@g12345.Boucles@. 
 					\end{itemize}
 				
             \par
@@ -1320,7 +1318,7 @@ public static void appelMaxPositif() {
 				
           \'Ecrivez un algorithme qui simule le jeu de la fourchette. Ce jeu consiste \`a essayer de d\'ecouvrir
           un nombre quelconque compris entre 0 et 100 inclus, tir\'e au sort par l'ordinateur (la primitive
-          \verb@hasard(n : entier)@ retourne un entier entre 0 inclus et n exclus). \par
+          \verb@hasard(n : entier)@ retourne un entier entre 1 inclus et n exclus). \par
 				
           L'utilisateur a droit \`a huit essais maximum.\par
 				

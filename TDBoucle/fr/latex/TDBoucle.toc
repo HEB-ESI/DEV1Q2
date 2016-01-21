@@ -20,7 +20,7 @@
 \contentsline {subparagraph}{Somme de nombres}{11}{section*.17}
 \contentsline {subsection}{\numberline {1.6}for}{12}{subsection.1.6}
 \contentsline {subparagraph}{Les nombres pairs entre 2 et 100}{12}{section*.18}
-\contentsline {subparagraph}{Compte \`a rebours}{13}{section*.19}
+\contentsline {subparagraph}{Compte \`a rebours}{12}{section*.19}
 \contentsline {subsection}{\numberline {1.7}Quel type de boucle choisir ?}{13}{subsection.1.7}
 \contentsline {subsection}{\numberline {1.8}Sentinelle}{13}{subsection.1.8}
 \contentsline {subsection}{\numberline {1.9}suite de nombres}{14}{subsection.1.9}
