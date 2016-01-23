@@ -28,12 +28,12 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><img src="../../../_templates/java/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0" /></div><a name="top"></a><h1 id="Exercices_learningObject3.html">1.3.3. À vous de jouer...</h1>
-      <div id="d8e955.html" class="act">
-         <p class="paragraph" id="d8e956">
+      <div id="d8e963.html" class="act">
+         <p class="paragraph" id="d8e964">
             N'oubliez pas nos quelques conseils pour vous guider dans la résolution de tels problèmes
             :
             
-            <ul class="list" id="d8e958">
+            <ul class="list" id="d8e966">
                <li class="itemAlt">il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement
                   spécifié ;
                </li>
@@ -43,7 +43,7 @@
                <li class="item">n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme
                   définitif pseudo-codé ;
                </li>
-               <li class="itemAlt">déclarez ensuite les variables (et leur type) qui interviennent dans chaque module
+               <li class="itemAlt">déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme
                   ; les noms des variables risquant de ne pas être suffisamment explicites.
                </li>
                <li class="item">Écrivez la partie algorithmique <b>AVANT</b> de vous lancer dans la programmation en Java.
@@ -51,15 +51,15 @@
                <li class="itemAlt">Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir prématurément
                   (si on a trouvé ce qu'on cherche par exemple).
                </li>
-               <li class="item">Pour la partie Java, dessinez l'arborescence des fichier. </li>
+               <li class="item">Pour la partie Java, dessinez l'arborescence des fichiers. </li>
                <li class="itemAlt"><b>Écrivez le plan de tests en écrivant l'algorithme. Codez les tests après avoir écrit
                      le code Java.</b></li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e987">
+         <p class="paragraph" id="d8e995">
             Écrivez les algorithmes et codez les programmes Java correspondant qui 
             
-            <ol class="list" id="d8e989">
+            <ol class="list" id="d8e997">
                <li class="itemAlt"> reçoit en paramètre le tableau <code>températures</code> de 
                   <code>n</code>  réels et qui retourne
                   le plus grand écart absolu entre deux températures consécutives de ce tableau. Et
@@ -69,7 +69,7 @@
                </li>
                <li class="item">
                   reçoit en paramètre le tableau valeurs de <code>n</code> entiers et qui vérifie si ce
-                  tableau est ordonné (strictement) croissant sur les valeurs. Le module retournera
+                  tableau est ordonné (strictement) croissant sur les valeurs. L'algorithme retournera
                   vrai si le
                   tableau est ordonné, faux sinon.
                   
@@ -110,9 +110,9 @@
                </li>
             </ol>
          </p>
-         <p class="paragraph" id="d8e1023">En java, n'oubliez pas d'écrire la javadoc et les tests de vos méthodes.</p>
+         <p class="paragraph" id="d8e1031">En java, n'oubliez pas d'écrire la javadoc et les tests de vos méthodes.</p>
          <h4>Mastermind</h4>
-         <p class="paragraph" title="Mastermind" id="d8e1025">
+         <p class="paragraph" title="Mastermind" id="d8e1033">
             Dans le jeu du Mastermind, un joueur A doit trouver une combinaison de 
             <code>k</code> pions de couleur,
             choisie et tenue secrète par un autre joueur B. Cette combinaison peut contenir éventuellement
@@ -123,7 +123,7 @@
             corrects mais mal placés.
             
          </p>
-         <p class="paragraph" id="d8e1030">
+         <p class="paragraph" id="d8e1038">
             Pour implémenter une simulation de ce jeu, on utilise le type Chaine, dont les valeurs
             possibles sont les couleurs des pions utilisés. (Attention, le nombre exact de couleurs
             n’est
@@ -137,26 +137,26 @@
             Chaine.
             
          </p>
-         <p class="paragraph" id="d8e1032">
-            Écrire le module suivant qui renvoie dans les variables <code>bienPlacés</code> 
+         <p class="paragraph" id="d8e1040">
+            Écrire l'algorithme suivant qui renvoie dans les variables <code>bienPlacés</code> 
             et <code>malPlacés</code> respectivement
             le nombre de pions bien placés et mal placés dans la « proposition » du joueur A en
             la
             comparant à la « solution » cachée du joueur B.
             
          </p><pre>
-module testerProposition( proposition↓, solution↓ : tableau [1 à k ] de Chaines, bienPlacés↑, malPlacés↑ : entiers)
-        </pre><p id="d8e1042" class="popupTitle" style="cursor: pointer;" onclick="onBlock('solutiond8e1042')">Cliquez pour voir une solution</p>
-         <div id="solutiond8e1042text" style="display: none; cursor: pointer;" class="popup" title="une solution" onclick="off('solutiond8e1042')">
-            <p class="paragraph" id="d8e1043">
+algorithme testerProposition( proposition↓, solution↓ : tableau de k chaines, bienPlacés↑, malPlacés↑ : entiers)
+        </pre><p id="d8e1050" class="popupTitle" style="cursor: pointer;" onclick="onBlock('solutiond8e1050')">Cliquez pour voir une solution</p>
+         <div id="solutiond8e1050text" style="display: none; cursor: pointer;" class="popup" title="une solution" onclick="off('solutiond8e1050')">
+            <p class="paragraph" id="d8e1051">
                En cas de besoin, vous trouverez une solution <a class="link" href="../../../TDTableau/fr/solution/CorrectionMastermind.pdf" target="_blank" rel="external" title="ici">ici</a>.
                
             </p>
          </div>
-         <p class="paragraph" id="d8e1048">En java, n'oubliez pas d'écrire la javadoc et les tests de vos méthodes.</p>
+         <p class="paragraph" id="d8e1056">En java, n'oubliez pas d'écrire la javadoc et les tests de vos méthodes.</p>
       </div>
       <hr />
       <div class="navigation_arrows"><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><img src="../../../_templates/java/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0" /></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 23.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

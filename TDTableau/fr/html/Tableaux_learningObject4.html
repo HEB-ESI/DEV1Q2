@@ -21,7 +21,7 @@
                      <li class="navigationLink"><a href="Tableaux_learningObject2.html">1.1.2. Déclaration et création en Java</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject3.html">1.1.3. Taille logique et physique</a></li>
                      <li class="navigationActual"><strong>1.1.4. Taille d'un tableau en Java</strong></li>
-                     <li class="navigationLink"><a href="Tableaux_learningObject5.html">1.1.5. Tableau et paramètres de module</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject5.html">1.1.5. Tableau et paramètres d'algorithme</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject6.html">1.1.6. Tableau et paramètres de méthodes</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject7.html">1.1.7. Parcours d’un tableau à une dimension.</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject8.html">1.1.8. Erreurs fréquentes et exceptions lancées en Java</a></li>
@@ -33,43 +33,43 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="Tableaux_learningObject3.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject5.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Tableaux_learningObject4.html">1.1.4. Taille d'un tableau en Java</h1>
-      <div id="d8e204.html" class="clarify">
-         <p class="paragraph" id="d8e205">
+      <div id="d8e206.html" class="clarify">
+         <p class="paragraph" id="d8e207">
             		    En Java, un tableau connait sa taille
             
          </p><pre>
 identifier.length
       </pre><pre>
 int [] entiers = {4, 5, 6};
-int taille = entiers . length ;
-System.out. println ( taille ); // écrit 3
+int taille = entiers.length ;
+System.out.println (taille); // écrit 3
       </pre></div>
-      <div id="d8e211.html" class="look">
-         <p class="paragraph" id="d8e212">Par exemple : </p><pre>
-package be.heb.esi. lg1 . tutorials . tableaux ;
+      <div id="d8e213.html" class="look">
+         <p class="paragraph" id="d8e214">Par exemple : </p><pre>
+package be.heb.esi.lg1.tutorials.tableaux ;
 
 public class SimpleParcoursAscendant {
     public static void main(String [] args){
       int [] entiers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-      for(int i = 0; i &lt; entiers . length ; i = i + 1) {
-        System.out. println ( entiers [ i ]);
+      for(int i = 0; i &lt; entiers.length ; i = i + 1) {
+        System.out.println (entiers [i]);
       }
     }
 }
-      </pre><p class="paragraph" id="d8e216">ou encore</p><pre>
-package be.heb.esi. lg1 . tutorials . tableaux ;
+      </pre><p class="paragraph" id="d8e218">ou encore</p><pre>
+package be.heb.esi.lg1.tutorials.tableaux ;
 
 public class SimpleParcoursDescendant {
     public static void main(String [] args){
       int [] entiers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-      for(int i = entiers . length − 1; i &gt;= 0; i = i−1) {
-        System.out. println ( entiers [ i ]);
+      for(int i = entiers.length − 1; i &gt;= 0; i = i−1) {
+        System.out.println (entiers [i]);
       }
     }
 }
       </pre></div>
       <hr />
       <div class="navigation_arrows"><a href="Tableaux_learningObject3.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject5.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 23.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

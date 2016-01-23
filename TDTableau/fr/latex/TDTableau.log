@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 JAN 2015 18:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  23 JAN 2016 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -886,9 +886,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  <../../../_templates/java/icons/logo-esi.jpg> <../../../_templates/java/icons/
 cc-gris.jpg>]
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-34.def
 File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
 ) [2
@@ -897,14 +894,14 @@ File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 )
-</home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tabPres.png, id=102, 527.9
+</home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tabPres.png, id=103, 527.9
 725pt x 138.5175pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tabPres.png Graphic f
 ile (type png)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tabPres.png>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/ta
-bPres.png used on input line 299.
+bPres.png used on input line 297.
 (pdftex.def)             Requested size: 288.00113pt x 75.55922pt.
  [3]
 </home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/reference.png, id=109, 347
@@ -914,71 +911,79 @@ File: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/reference.png Graphic
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/reference.png>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/re
-ference.png used on input line 328.
+ference.png used on input line 327.
 (pdftex.def)             Requested size: 288.01308pt x 75.7491pt.
 
 [4 </home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tabPres.png> </home/clr
 /Documents/Cours/DEV1Q2/TDTableau/fr/image/reference.png>]
-Overfull \hbox (117.14488pt too wide) in paragraph at lines 403--403
+Overfull \hbox (117.14488pt too wide) in paragraph at lines 402--402
 []\T1/lmtt/m/n/10.95 String [] noms = new String[] {" Victoria ", "Melanie", "M
 elanie", "Emma", "Geri"};[] 
  []
 
 [5] [6]
-Overfull \hbox (25.16515pt too wide) in paragraph at lines 490--490
-[]    \T1/lmtt/m/n/10.95 tant que numéroProduit > 0 ET numéroProduit <= nbArtic
-les faire[] 
+Overfull \hbox (22.18437pt too wide) in paragraph at lines 489--489
+[]    \T1/lmtt/m/n/10.95 tant que numéroProduit $\OMS/lmsy/m/n/10.95 ^^U$ \T1/l
+mtt/m/n/10.95 0 ET numéroProduit < nbArticles faire[] 
  []
 
-[7] [8]
-Overfull \hbox (139.86609pt too wide) in paragraph at lines 559--559
-[]\T1/lmtt/m/n/10.95 module afficherTailles(tabEntiers$\OMS/lmsy/m/n/10.95 #$ \
-T1/lmtt/m/n/10.95 : tableau [1 à n] d'entiers, tailleLogique : entier)[] 
+[7] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+) [8]
+Overfull \hbox (134.11736pt too wide) in paragraph at lines 558--558
+[]\T1/lmtt/m/n/10.95 algorithme afficherTailles(tabEntiers$\OMS/lmsy/m/n/10.95 
+#$ \T1/lmtt/m/n/10.95 : tableau de n entiers, tailleLogique : entier)[] 
  []
 
 
-Overfull \hbox (71.15501pt too wide) in paragraph at lines 559--559
+Overfull \hbox (71.15501pt too wide) in paragraph at lines 558--558
 []    \T1/lmtt/m/n/10.95 afficher "J'ai reçu un tableau rempli de ", tailleLogi
 que, " éléments "[] 
  []
 
 
-Overfull \hbox (122.89362pt too wide) in paragraph at lines 582--582
+Overfull \hbox (122.89362pt too wide) in paragraph at lines 581--581
 []\T1/lmtt/m/n/10.95 // Crée un tableau statique d'entiers de taille 10, l'init
 ialise à 0 et le retourne.[] 
  []
 
 [9] [10]
-Overfull \hbox (36.66261pt too wide) in paragraph at lines 682--682
+Overfull \hbox (111.39615pt too wide) in paragraph at lines 661--661
+[]\T1/lmtt/m/n/10.95 tab : tableau de n T  // où n est la taille du tableau et 
+T est un type quelconque[] 
+ []
+
+
+Overfull \hbox (36.66261pt too wide) in paragraph at lines 681--681
 []\T1/lmtt/m/n/10.95 // Les déclarations sont omises pour ne pas alourdir les a
 lgorithmes.[] 
  []
 
 [11] [12]
-Overfull \hbox (1.62277pt too wide) in paragraph at lines 763--763
-[]\T1/lmtt/m/n/10.95 module contientZéro(tab : tableau [1 à n] d'entiers) $\OMS
-/lmsy/m/n/10.95 !$ \T1/lmtt/m/n/10.95 booléen[] 
+Overfull \hbox (24.6177pt too wide) in paragraph at lines 762--762
+[]\T1/lmtt/m/n/10.95 algorithme contientZéro(tab : tableau [1 à n] d'entiers) $
+\OMS/lmsy/m/n/10.95 !$ \T1/lmtt/m/n/10.95 booléen[] 
  []
 
 
-Overfull \hbox (33.68184pt too wide) in paragraph at lines 763--763
+Overfull \hbox (45.1793pt too wide) in paragraph at lines 762--762
 []    \T1/lmtt/m/n/10.95 retourner i $\OMS/lmsy/m/n/10.95 ^^T$ \T1/lmtt/m/n/10.
-95 n // Si le test est vrai c'est qu'on a trouvé un 0[] 
+95 n-1 // Si le test est vrai c'est qu'on a trouvé un 0[] 
  []
 
 [13]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 820.
+(Font)              <9> on input line 819.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 820.
+(Font)              <5> on input line 819.
 
-Overfull \hbox (3.32616pt too wide) in paragraph at lines 820--821
+Overfull \hbox (3.32616pt too wide) in paragraph at lines 819--820
 []\T1/lmr/m/n/10.95 Voire dan-ger pour la vie hu-maine, par exemple : l'échec d
 u vol d'Ariane
  []
 
 [14]
-Overfull \hbox (4.90788pt too wide) in paragraph at lines 924--926
+Overfull \hbox (4.90788pt too wide) in paragraph at lines 923--925
 []\T1/lmr/m/n/10.95 Par exemple : []\T1/lmtt/m/n/10.95 public static int max(in
 t n1, int n2, int n3) ... \T1/lmr/m/n/10.95 qui
  []
@@ -991,10 +996,10 @@ le (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/junit.jpeg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/ju
-nit.jpeg used on input line 1009.
+nit.jpeg used on input line 1008.
 (pdftex.def)             Requested size: 288.0065pt x 136.85414pt.
  [16 </home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/junit.jpeg>]
-Overfull \hbox (50.62416pt too wide) in paragraph at lines 1075--1078
+Overfull \hbox (50.62416pt too wide) in paragraph at lines 1074--1077
 \T1/lmr/m/n/10.95 et ils n'au-ront plus alors qu'à exé-cu-ter la com-mande []\T
 1/lmtt/m/n/10.95 javatest package.MaClasseTest
  []
@@ -1007,54 +1012,47 @@ File: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tab3.jpg Graphic file
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tab3.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/ta
-b3.jpg used on input line 1237.
+b3.jpg used on input line 1236.
 (pdftex.def)             Requested size: 179.99815pt x 52.28015pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) [19 </home/clr/Documents/Cours/DEV1Q2/TDTableau/fr/image/tab3.jpg>]
-Overfull \hbox (27.4771pt too wide) in paragraph at lines 1311--1312
+Overfull \hbox (27.4771pt too wide) in paragraph at lines 1310--1311
 []\T1/lmr/m/n/10.95 Pour ce ta-bleau de 3 élé-ments, l'ins-truc-tion []\T1/lmtt
 /m/n/10.95 System.out.println (entiers[6]); 
  []
 
 
-Overfull \hbox (43.2643pt too wide) in paragraph at lines 1376--1378
+Overfull \hbox (43.2643pt too wide) in paragraph at lines 1375--1377
 \T1/lmr/m/n/10.95 vé-ri-fier que la mé-thode lance bien une ex-cep-tion de type
  []\T1/lmtt/m/n/10.95 IllegalArgumentException\T1/lmr/m/n/10.95 . 
  []
 
 [20]
-Overfull \hbox (71.91655pt too wide) in paragraph at lines 1397--1397
+Overfull \hbox (71.91655pt too wide) in paragraph at lines 1396--1396
 [][]$[]$[] []$[]$[] []$[]$[] 
  []
 
 [21]
-Overfull \hbox (15.58508pt too wide) in paragraph at lines 1489--1493
-[]\T1/lmr/m/n/10.95 Écrire le mo-dule sui-vant qui ren-voie dans les va-riables
- []\T1/lmtt/m/n/10.95 bienPlacés \T1/lmr/m/n/10.95 et []\T1/lmtt/m/n/10.95 malP
-lacés
- []
-
-
-Overfull \hbox (300.00945pt too wide) in paragraph at lines 1497--1497
-[]\T1/lmtt/m/n/10.95 module testerProposition( proposition$\OMS/lmsy/m/n/10.95 
-#$\T1/lmtt/m/n/10.95 , solution$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n/10.95 : tab
-leau [1 à k ] de Chaines, bienPlacés$\OMS/lmsy/m/n/10.95 "$\T1/lmtt/m/n/10.95 ,
- malPlacés$\OMS/lmsy/m/n/10.95 "$ \T1/lmtt/m/n/10.95 : entiers)[] 
+Overfull \hbox (282.76324pt too wide) in paragraph at lines 1496--1496
+[]\T1/lmtt/m/n/10.95 algorithme testerProposition( proposition$\OMS/lmsy/m/n/10
+.95 #$\T1/lmtt/m/n/10.95 , solution$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n/10.95 :
+ tableau de k chaines, bienPlacés$\OMS/lmsy/m/n/10.95 "$\T1/lmtt/m/n/10.95 , ma
+lPlacés$\OMS/lmsy/m/n/10.95 "$ \T1/lmtt/m/n/10.95 : entiers)[] 
  []
 
 [22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1500.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1499.
  [23]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1500.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1499.
  (./TDTableau.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1500.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1500.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1499.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1499.
 
 Package rerunfilecheck Info: File `TDTableau.out' has not changed.
-(rerunfilecheck)             Checksum: 3F5DFBB17D9D7F774C39DDCA49581D31;1107.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1500.
+(rerunfilecheck)             Checksum: B3930E1E5115CA8F8C72CB26A28FF87D;1110.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1499.
  ) 
 Here is how much of TeX's memory you used:
  13597 strings out of 493304
@@ -1079,7 +1077,7 @@ hare/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/zapfding/uzdr.pfb>
-Output written on TDTableau.pdf (23 pages, 442636 bytes).
+Output written on TDTableau.pdf (23 pages, 443099 bytes).
 PDF statistics:
  366 PDF objects out of 1000 (max. 8388607)
  311 compressed objects within 4 object streams

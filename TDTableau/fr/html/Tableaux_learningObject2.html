@@ -21,7 +21,7 @@
                      <li class="navigationActual"><strong>1.1.2. Déclaration et création en Java</strong></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject3.html">1.1.3. Taille logique et physique</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject4.html">1.1.4. Taille d'un tableau en Java</a></li>
-                     <li class="navigationLink"><a href="Tableaux_learningObject5.html">1.1.5. Tableau et paramètres de module</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject5.html">1.1.5. Tableau et paramètres d'algorithme</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject6.html">1.1.6. Tableau et paramètres de méthodes</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject7.html">1.1.7. Parcours d’un tableau à une dimension.</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject8.html">1.1.8. Erreurs fréquentes et exceptions lancées en Java</a></li>
@@ -50,8 +50,9 @@
          </p>
          <p class="paragraph" id="d8e101"><span class="multimedia_inline"><img class="multimedia" id="d8e102" src="../image/tabPres.png" alt="" /></span></p>
          <p class="paragraph" id="d8e103">
-            Contrairement à algo où on a le choix des valeurs desbornes pour les indices, 
-            en Java, les indices varient de <code>0</code> à <code>taille du tableau - 1</code>.
+            Contrairement à algo où on peut avoir le choix des valeurs des bornes pour les indices,
+            
+            en Java, les indices varient toujours de <code>0</code> à <code>taille du tableau - 1</code>.
             
          </p>
          <p class="paragraph" id="d8e111">0 est l’indice de départ.</p>
@@ -60,57 +61,57 @@
             En Java, l'étape de création est séparée de l'étape de déclaration. <br />
             En effet, l'étape de déclaration réserve un emplacement mémoire sur la pile qui contiendra
             une adresse 
-            où trouver la valeur des éléments du tableau. 
-            La création connaitra lataille du tableau, le créera sur le tas et remplira l'adresse
+            où trouver la valeur des éléments du tableau. <br />
+            La création connaitra la taille du tableau, le créera sur le tas et remplira l'adresse
             sur la pile.
             
          </p>
-         <p class="paragraph" id="d8e117"><span class="multimedia_inline"><img class="multimedia" id="d8e118" src="../image/reference.png" alt="" /></span></p>
+         <p class="paragraph" id="d8e119"><span class="multimedia_inline"><img class="multimedia" id="d8e120" src="../image/reference.png" alt="" /></span></p>
          <h4>Déclaration</h4>
-         <p class="paragraph" title="Déclaration" id="d8e119">
+         <p class="paragraph" title="Déclaration" id="d8e121">
             Pour déclarer un tableau : 
             
          </p><pre>
 Type[] identifier
-      </pre><p class="paragraph" id="d8e123">
+      </pre><p class="paragraph" id="d8e125">
             Par exemple :<br /><code>int []</code> est le type tableau d’entiers<br /><code>String []</code> est le type tableau de chaines de caractères
             
          </p><pre>
 int [] cotes ;
 String [] noms;
       </pre><h4>Création</h4>
-         <p class="paragraph" title="Création" id="d8e136">
+         <p class="paragraph" title="Création" id="d8e138">
             Pour créer un tableau : 
             
          </p><pre>
 identifier = new Type[taille]
-      </pre><p class="paragraph" id="d8e140">
+      </pre><p class="paragraph" id="d8e142">
             Par exemple :<br /><code>new int[3]</code><br /><code>new String[taille]</code> où <code>taille</code> est défini
             
          </p><pre>
 int [] entiers ; // déclaration
 entiers = new int[3]; // création
-      </pre><p class="paragraph" id="d8e154">
+      </pre><p class="paragraph" id="d8e156">
             La déclaration et la création peuvent être combinées
             
          </p><pre>
 int [] entiers = new int[3];
       </pre><h4>Initialisation</h4>
-         <p class="paragraph" title="Initialisation" id="d8e158">
+         <p class="paragraph" title="Initialisation" id="d8e160">
             Par défaut, les éléments sont initialisés à 0 (numériques) ou false (booléens).
             Ce ne sont pas forcément les valeurs initiales que nous désirons. Pour changer ça
             :
             
          </p><pre>
 identifier = new Type[] {x, x}
-      </pre><p class="paragraph" id="d8e162">
+      </pre><p class="paragraph" id="d8e164">
             Par exemple :<br /><code>new int[] {42, 17, -5}</code><br /><code>new String[] {"foo", "bar"}</code></p><pre>
 int [] entiers = new int[] {0x2A, 021, −5};
 String [] noms = new String[] {" Victoria ", "Melanie", "Melanie", "Emma", "Geri"};
 double[] réels ;
 réels = new double[] {4.2, −1};
       </pre><h4>Cas particulier : déclaration, création et initialisation</h4>
-         <p class="paragraph" title="Cas particulier : déclaration, création et initialisation" id="d8e173">
+         <p class="paragraph" title="Cas particulier : déclaration, création et initialisation" id="d8e175">
             On peut déclarer le tableau, le créer et l'initialiser en une seule étape, en donnant
             ses valeurs :
             
@@ -122,8 +123,8 @@ double[] pseudoRéels = {4.5, 1E−4, −4.12, Math.PI};
 double[] réels ;
 réels = {4.2, −1}; // FAUX
       </pre><h4>Accès aux éléments</h4>
-         <p class="paragraph" title="Accès aux éléments" id="d8e177">
-            <ol class="list" id="d8e178">
+         <p class="paragraph" title="Accès aux éléments" id="d8e179">
+            <ol class="list" id="d8e180">
                <li class="itemAlt">0 est l’indice de départ</li>
                <li class="item">les indices varient de 0 à taille du tableau - 1</li>
                <li class="itemAlt">la taille du tableau est son nombre d’éléments</li>
@@ -133,12 +134,12 @@ int [] entiers = {3, 14, 15};
 int entier = entiers [2]; // entier vaut 15
 entiers [1] = 85;
 entier = 0;
-entier = entiers [ entier +1]; // entier vaut 85
+entier = entiers [entier +1]; // entier vaut 85
       </pre></div>
-      <div id="d8e187.html" class="look">
-         <p class="paragraph" id="d8e188">Par exemple :</p><pre>
+      <div id="d8e189.html" class="look">
+         <p class="paragraph" id="d8e190">Par exemple :</p><pre>
 
-package be.heb.esi. lg1 . tutorials . tableaux ;
+package be.heb.esi.lg1.tutorials.tableaux;
 
 public class InitialisationTableau {
     public static void main(String [] args) {
@@ -150,6 +151,6 @@ public class InitialisationTableau {
 }</pre></div>
       <hr />
       <div class="navigation_arrows"><a href="Tableaux_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject3.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 23.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

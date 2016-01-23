@@ -214,7 +214,7 @@
       
             \par
         \begin{verbatim}
-nomTableau : tableau [borneMin à borneMax] de TypeÉlément
+nomTableau : tableau de taille TypeÉlément
       \end{verbatim}
         o\`u \verb@TypeÉlément@ est le type des \'el\'ements 
         que l'on trouvera dans le tableau. Les \'el\'ements sont
@@ -230,10 +230,8 @@ nomTableau : tableau [borneMin à borneMax] de TypeÉlément
       
             \par
         
-        Les \textbf{bornes} apparaissant dans la d\'eclaration 
-        sont des constantes ou des param\`etres ayant une
-        valeur connue lors de la d\'eclaration. Une fois un tableau d\'eclar\'e, \textbf{seuls les \'el\'ements d'indice
-        compris entre borneMin et borneMax peuvent \^etre utilis\'es}. 
+       Une fois un tableau d\'eclar\'e, \textbf{seuls les \'el\'ements d'indice
+        compris entre 0 et taille-1 peuvent \^etre utilis\'es}. 
       
             \par
         
@@ -241,16 +239,16 @@ nomTableau : tableau [borneMin à borneMax] de TypeÉlément
       
             \par
         \begin{verbatim}
-        tabEntiers : tableau [1 à 100] d’entiers
+        tabEntiers : tableau de 100 entiers
       \end{verbatim}
-        Il est interdit d'utiliser tabEntiers[0] ou tabEntiers[101]. De plus, chaque \'el\'ement tabEntiers[i]
-        (avec 1 ≤ i ≤ 100) doit \^etre mani\'e avec la m\^eme pr\'ecaution qu'une variable simple, c'est-\`a-
+        Il est interdit d'utiliser tabEntiers[-1] ou tabEntiers[100]. De plus, chaque \'el\'ement tabEntiers[i]
+        (avec 0 ≤ i ≤ 99) doit \^etre mani\'e avec la m\^eme pr\'ecaution qu'une variable simple, c'est-\`a-
         dire qu'on ne peut utiliser un \'el\'ement du tableau qui n'aurait pas \'et\'e pr\'ealablement affect\'e
         ou initialis\'e.
       
             \par
         
-        N.B. : Il n'est pas interdit de prendre 0 pour la borne inf\'erieure ou m\^eme d'utiliser des
+        N.B. : Il n'est pas interdit de prendre autre chose que 0 pour la borne inf\'erieure ou m\^eme d'utiliser des
         bornes n\'egatives (par exemple : tabTemp\'eratures : tableau [-20 \`a 50] de r\'eels).
         En Java, un tableau est d\'efini par sa taille n et les bornes sont automatiquement 0 et n − 1.
         Ce n'est pas le cas en algorithmique o\`u on a plus de libert\'e dans le choix des bornes
@@ -258,28 +256,28 @@ nomTableau : tableau [borneMin à borneMax] de TypeÉlément
             \par
         \begin{verbatim}
 // Calcule et affiche la quantité vendue de 10 produits.
-module statistiquesVentesAvecTableau()
-    cpt : tableau [1 à 10] d’entiers
+algorithme statistiquesVentesAvecTableau()
+    cpt : tableau de 10 entiers
     i, numéroProduit, quantité : entiers
     
-    pour i de 1 à 10 faire
+    pour i de 0 à 9 faire
       cpt[i] ← 0
     fin pour
     
     afficher "Introduisez le numéro du produit :"
-    lire numéroProduit
-    tant que numéroProduit > 0 faire
+    demander numéroProduit
+    tant que numéroProduit ≥ 0 et numéroProduit ≤ 9 faire
       afficher "Introduisez la quantité vendue :"
-      lire quantité
+      demander quantité
       cpt[numéroProduit] ← cpt[numéroProduit] + quantité
       afficher "Introduisez le numéro du produit :"
-      lire numéroProduit
+      demander numéroProduit
     fin tant que
     
-    pour i de 1 à 10 faire
+    pour i de 0 à 9 faire
       afficher "quantité vendue de produit ", i, " : ", cpt[i]
     fin pour
-fin module
+fin algorithme
       \end{verbatim}\subsection{D\'eclaration et cr\'eation en Java}
 		    Nous pr\'esentons ici une vue simplifi\'ee  des tableaux en Java afin de coller
         au cours d'algorithmique.
@@ -304,8 +302,8 @@ fin module
                     
             \par
         
-        Contrairement \`a algo o\`u on a le choix des valeurs desbornes pour les indices, 
-        en Java, les indices varient de \verb@0@ \`a \verb@taille du tableau - 1@.
+        Contrairement \`a algo o\`u on peut avoir le choix des valeurs des bornes pour les indices, 
+        en Java, les indices varient toujours de \verb@0@ \`a \verb@taille du tableau - 1@.
       
             \par
         0 est l'indice de d\'epart.
@@ -319,8 +317,9 @@ fin module
         En Java, l'\'etape de cr\'eation est s\'epar\'ee de l'\'etape de d\'eclaration. \par
 				
         En effet, l'\'etape de d\'eclaration r\'eserve un emplacement m\'emoire sur la pile qui contiendra une adresse 
-        o\`u trouver la valeur des \'el\'ements du tableau. 
-        La cr\'eation connaitra lataille du tableau, le cr\'eera sur le tas et remplira l'adresse sur la pile.
+        o\`u trouver la valeur des \'el\'ements du tableau. \par
+				
+        La cr\'eation connaitra la taille du tableau, le cr\'eera sur le tas et remplira l'adresse sur la pile.
       
             \par
         \begin{figure}[hbt]
@@ -435,12 +434,12 @@ int [] entiers = {3, 14, 15};
 int entier = entiers [2]; // entier vaut 15
 entiers [1] = 85;
 entier = 0;
-entier = entiers [ entier +1]; // entier vaut 85
+entier = entiers [entier +1]; // entier vaut 85
       \end{verbatim}Par exemple :
             \par
         \begin{verbatim}
 
-package be.heb.esi. lg1 . tutorials . tableaux ;
+package be.heb.esi.lg1.tutorials.tableaux;
 
 public class InitialisationTableau {
     public static void main(String [] args) {
@@ -463,30 +462,30 @@ public class InitialisationTableau {
             \par
         \begin{verbatim}
 // Calcule et affiche la quantité vendue de x produits.
-module statistiquesVentes()
-    cpt : tableau [1 à 1000] d’entiers
+algorithme statistiquesVentes()
+    cpt : tableau de 1000 entiers
     i, numéroProduit, quantité : entiers
     nbArticles : entier
     
-    lire nbArticles
-    pour i de 1 à nbArticles faire
+    demander nbArticles
+    pour i de 0 à nbArticles-1 faire
       cpt[i] ← 0
     fin pour
     
     afficher "Introduisez le numéro du produit :"
-    lire numéroProduit
-    tant que numéroProduit > 0 ET numéroProduit <= nbArticles faire
+    demander numéroProduit
+    tant que numéroProduit ≥ 0 ET numéroProduit < nbArticles faire
       afficher "Introduisez la quantité vendue :"
-      lire quantité
+      demander quantité
       cpt[numéroProduit] ← cpt[numéroProduit] + quantité
       afficher "Introduisez le numéro du produit :"
-      lire numéroProduit
+      demander numéroProduit
     fin tant que
     
-    pour i de 1 à nbArticles faire
+    pour i de 0 à nbArticles-1 faire
       afficher "quantité vendue de produit ", i, " : ", cpt[i]
     fin pour
-fin module
+fin algorithme
 \end{verbatim}\subsection{Taille d'un tableau en Java}
 		    En Java, un tableau connait sa taille
       
@@ -495,39 +494,39 @@ fin module
 identifier.length
       \end{verbatim}\begin{verbatim}
 int [] entiers = {4, 5, 6};
-int taille = entiers . length ;
-System.out. println ( taille ); // écrit 3
+int taille = entiers.length ;
+System.out.println (taille); // écrit 3
       \end{verbatim}Par exemple : 
             \par
         \begin{verbatim}
-package be.heb.esi. lg1 . tutorials . tableaux ;
+package be.heb.esi.lg1.tutorials.tableaux ;
 
 public class SimpleParcoursAscendant {
     public static void main(String [] args){
       int [] entiers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-      for(int i = 0; i < entiers . length ; i = i + 1) {
-        System.out. println ( entiers [ i ]);
+      for(int i = 0; i < entiers.length ; i = i + 1) {
+        System.out.println (entiers [i]);
       }
     }
 }
       \end{verbatim}ou encore
             \par
         \begin{verbatim}
-package be.heb.esi. lg1 . tutorials . tableaux ;
+package be.heb.esi.lg1.tutorials.tableaux ;
 
 public class SimpleParcoursDescendant {
     public static void main(String [] args){
       int [] entiers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-      for(int i = entiers . length − 1; i >= 0; i = i−1) {
-        System.out. println ( entiers [ i ]);
+      for(int i = entiers.length − 1; i >= 0; i = i−1) {
+        System.out.println (entiers [i]);
       }
     }
 }
-      \end{verbatim}\subsection{Tableau et param\`etres de module}
-		    Un tableau peut \^etre pass\'e en param\`etre \`a un module mais qu'en est-il de sa taille ? Il
-        serait utile de pouvoir appeler le m\^eme module avec des tableaux de tailles diff\'erentes. Pour
+      \end{verbatim}\subsection{Tableau et param\`etres d'algorithme}
+		    Un tableau peut \^etre pass\'e en param\`etre \`a un algorithme mais qu'en est-il de sa taille ? Il
+        serait utile de pouvoir appeler le m\^eme algorithme avec des tableaux de tailles diff\'erentes. Pour
         permettre cela, la taille du tableau re\c cu en param\`etre est d\'eclar\'ee avec une variable (qui
-        peut \^etre consid\'er\'e comme un param\`etre entrant).
+        peut \^etre consid\'er\'ee comme un param\`etre entrant).
 		  
             \par
         
@@ -535,12 +534,12 @@ public class SimpleParcoursDescendant {
 		  
             \par
         \begin{verbatim}
-module afficherTaille(tabEntier↓ : tableau [1 à n] d’entiers)
+algorithme afficherTaille(tabEntier↓ : tableau de n entiers)
     afficher "J’ai reçu un tableau de ", n, " éléments".
-fin module
+fin algorithme
       \end{verbatim}
         Ce \verb@n@ va prendre la taille pr\'ecise du tableau utilis\'e \`a chaque appel
-        et peut \^etre utilis\'e dans le corps du module. Bien s\^ur il s'agit l\`a de la 
+        et peut \^etre utilis\'e dans le corps de l'algorithme. Bien s\^ur il s'agit l\`a de la 
         \textbf{taille physique} du tableau. 
       
             \par
@@ -552,35 +551,35 @@ fin module
         Par exemple :
             \par
         \begin{verbatim}
-module afficherTailles(tabEntiers↓ : tableau [1 à n] d’entiers, tailleLogique : entier)
+algorithme afficherTailles(tabEntiers↓ : tableau de n entiers, tailleLogique : entier)
     afficher "J’ai reçu un tableau rempli de ", tailleLogique, " éléments "
     afficher "sur ", n, " éléments au total."
-fin module
+fin algorithme
       \end{verbatim}
-        Un module peut retourner un tableau.
+        Un algorithme peut retourner un tableau.
       
             \par
         \begin{verbatim}
 // Crée un tableau statique d’entiers de taille 10, l’initialise à 0 et le retourne.
-module créerTableau() → tableau [1 à 10] d’entiers
-    tab : tableau [1 à 10] d’entiers
+algorithme créerTableau() → tableau de 10 entiers
+    tab : tableau de 10 entiers
     i : entier
-    pour i de 1 à 10 faire
+    pour i de 0 à 9 faire
       tab[i] ← 0
     fin pour
     retourner tab
-fin module
+fin algorithme
 
-module principalAppelTableau()
-    entiers : tableau [1 à 10] d’entiers
+algorithme principalAppelTableau()
+    entiers : tableau de 10 entiers
     i : entier
     entiers ← créerTableau()
-    pour i de 1 à 10 faire
+    pour i de 0 à 9 faire
       afficher entiers[i]
     fin pour
-fin module
+fin algorithme
       \end{verbatim}
-        Attention, il n'est pas possible de lire ou d'afficher un tableau en une seule instruction ; il faut des
+        Attention, il n'est pas possible de demander ou d'afficher un tableau en une seule instruction ; il faut des
         instructions de lecture ou d'affichage individuelles pour chacun de ses \'el\'ements.
       
             \par
@@ -590,8 +589,8 @@ fin module
             \par
         \begin{verbatim}
 public static void afficher ( int [] entiers ) {
-    for(int i = 0; i <entiers . length ; i ++) {
-      System.out. println ( entiers [ i ]);
+    for(int i = 0; i < entiers.length ; i ++) {
+      System.out.println (entiers [i]);
     }
 }\end{verbatim}L'appel pourrait \^etre
             \par
@@ -614,7 +613,7 @@ afficher ( cotes );
             \par
         \begin{verbatim}
 public static void remplir ( int [] entiers , int val ) {
-    for(int i = 0; i <entiers . length ; i ++) {
+    for(int i = 0; i < entiers.length ; i ++) {
       entiers [ i ] = val;
     }
 }\end{verbatim}L'appel pourrait \^etre
@@ -658,7 +657,7 @@ int [] cotes = créer(16, 20);
 		  
             \par
         \begin{verbatim}
-tab : tableau [1 à n] de T  // où T est un type quelconque
+tab : tableau de n T  // où n est la taille du tableau et T est un type quelconque
       \end{verbatim}Envisageons d'abord le parcours complet et voyons ensuite les parcours avec arr\^et pr\'ematur\'e.
             \par
         
@@ -676,7 +675,7 @@ tab : tableau [1 à n] de T  // où T est un type quelconque
         \begin{verbatim}
 // Parcours complet d’un tableau via une boucle pour
 // Les déclarations sont omises pour ne pas alourdir les algorithmes.
-pour i de 1 à n faire
+pour i de 0 à n-1 faire
     traiter tab[i]
 fin pour
       \end{verbatim}
@@ -700,8 +699,8 @@ fin pour
             \par
         \begin{verbatim}
 // Parcours complet d’un tableau via une boucle tant-que
-i ← 1
-tant que i ≤ n faire
+i ← 0
+tant que i ≤ n-1 faire
     traiter tab[i]
     i ← i+1
 fin tant que
@@ -724,12 +723,12 @@ fin tant que
             \par
         \begin{verbatim}
 // Parcours partiel d’un tableau sans variable booléenne
-i ← 1
-tant que i ≤ n ET test sur tab[i] dit que on continue faire
+i ← 0
+tant que i ≤ n-1 ET test sur tab[i] dit qu'on continue faire
     i ← i+1
 fin tant que
 
-si i > n alors
+si i ≥ n alors
     // on est arrivé au bout
 sinon
     // arrêt prématuré à l’indice i.
@@ -752,14 +751,14 @@ fin si
             \par
         \begin{verbatim}
 // Indique si un zéro est présent dans le tableau
-module contientZéro(tab : tableau [1 à n] d’entiers) → booléen
+algorithme contientZéro(tab : tableau [1 à n] d’entiers) → booléen
     i : entier
-    i ← 1
-    tant que i ≤ n ET tab[i] ≠ 0 faire
+    i ← 0
+    tant que i ≤ n-1 ET tab[i] ≠ 0 faire
       i ← i+1
     fin tant que
-    retourner i ≤ n // Si le test est vrai c’est qu’on a trouvé un 0
-fin module
+    retourner i ≤ n-1 // Si le test est vrai c’est qu’on a trouvé un 0
+fin algorithme
       \end{verbatim}
 			
 		\subparagraph{Parcours avec sortie pr\'ematur\'ee avec variable bool\'eenne} 
@@ -769,10 +768,10 @@ fin module
             \par
         \begin{verbatim}
 // Parcours partiel d’un tableau avec variable booléenne
-i ← 1
+i ← 0
 trouvé ← faux
-tant que i ≤ n ET NON trouvé faire
-    si test sur tab[i] dit que on a trouvé alors
+tant que i ≤ n-1 ET NON trouvé faire
+    si test sur tab[i] dit qu'on a trouvé alors
       trouvé ← vrai
     sinon
       i ← i+1
@@ -857,7 +856,7 @@ fin tant que
 			\item Besoin d'outils pour nous aider de fa\c con \`a tester de la mani\`ere la plus facile/rapide possible
 			\item Il existe plusieurs sortes de tests : unitaires, d'int\'egration, fonctionnels, non-r\'egression, . . .
 			\item Nous nous int\'eressons aux tests unitaires (\url{fr.wikipedia.org/wiki/Test\_(informatique)}) : 
-                c'est une proc\'edure permettant de tester le bon fonctionnement d'un module (une m\'ethode), ce qui n'est pas forc\'ement suffisant.
+                c'est une proc\'edure permettant de tester le bon fonctionnement d'un algorithme (une m\'ethode), ce qui n'est pas forc\'ement suffisant.
 					\end{itemize}
 				
 					\end{itemize}
@@ -997,7 +996,7 @@ fin tant que
           
 					\begin{itemize}
 				
-			\item est autonome (ne re\c coit rien ne retourne rien)
+			\item est autonome (ne re\c coit rien, ne retourne rien)
 			\item contient des affirmations
 			\item fait appel \`a la m\'ethode \`a tester
 			\item compare le r\'esultat attendu et le r\'esultat obtenu
@@ -1397,7 +1396,7 @@ entiers= new {3,3,3};
 				 \textcolor{gray}{\underline{\hspace*{3em}}}  \textcolor{gray}{\underline{\hspace*{16em}}}  \textcolor{gray}{\underline{\hspace*{20em}}}  \par
 				
 								permet de lancer les tests de la classe \verb|ExerciceTest|, 
-								dont le package est \verb|g32000.tds.td7BisPrepa|, pr\'ec\'edemment compil\'ee.    
+								dont le package est \verb|g32000.tds.tdTableaux|, pr\'ec\'edemment compil\'ee.    
 							
             \par
         \subsection{\`A vous de jouer...}
@@ -1409,10 +1408,10 @@ entiers= new {3,3,3};
 			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
 			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
-			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
 			\item Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir pr\'ematur\'ement (si on a trouv\'e ce qu'on cherche par exemple).
-			\item Pour la partie Java, dessinez l'arborescence des fichier. 
+			\item Pour la partie Java, dessinez l'arborescence des fichiers. 
 			\item \textbf{\'Ecrivez le plan de tests en \'ecrivant l'algorithme. Codez les tests apr\`es avoir \'ecrit le code Java.}
 					\end{itemize}
 				
@@ -1429,7 +1428,7 @@ entiers= new {3,3,3};
             
 			\item 
               re\c coit en param\`etre le tableau valeurs de \verb@n@ entiers et qui v\'erifie si ce
-              tableau est ordonn\'e (strictement) croissant sur les valeurs. Le module retournera vrai si le
+              tableau est ordonn\'e (strictement) croissant sur les valeurs. L'algorithme retournera vrai si le
               tableau est ordonn\'e, faux sinon.
             
 			\item 
@@ -1486,14 +1485,14 @@ entiers= new {3,3,3};
         
             \par
         
-          \'Ecrire le module suivant qui renvoie dans les variables \verb@bienPlacés@ 
+          \'Ecrire l'algorithme suivant qui renvoie dans les variables \verb@bienPlacés@ 
           et \verb@malPlacés@ respectivement
           le nombre de pions bien plac\'es et mal plac\'es dans la \guillemotleft  proposition \guillemotright  du joueur A en la
           comparant \`a la \guillemotleft  solution \guillemotright  cach\'ee du joueur B.
         
             \par
         \begin{verbatim}
-module testerProposition( proposition↓, solution↓ : tableau [1 à k ] de Chaines, bienPlacés↑, malPlacés↑ : entiers)
+algorithme testerProposition( proposition↓, solution↓ : tableau de k chaines, bienPlacés↑, malPlacés↑ : entiers)
         \end{verbatim} {\footnotesize\emph{(une solution est disponible dans la version en ligne)}\par} En java, n'oubliez pas d'\'ecrire la javadoc et les tests de vos m\'ethodes.
             \par
         

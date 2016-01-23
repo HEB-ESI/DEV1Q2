@@ -21,7 +21,7 @@
                      <li class="navigationLink"><a href="Tableaux_learningObject2.html">1.1.2. Déclaration et création en Java</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject3.html">1.1.3. Taille logique et physique</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject4.html">1.1.4. Taille d'un tableau en Java</a></li>
-                     <li class="navigationLink"><a href="Tableaux_learningObject5.html">1.1.5. Tableau et paramètres de module</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject5.html">1.1.5. Tableau et paramètres d'algorithme</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject6.html">1.1.6. Tableau et paramètres de méthodes</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject7.html">1.1.7. Parcours d’un tableau à une dimension.</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject8.html">1.1.8. Erreurs fréquentes et exceptions lancées en Java</a></li>
@@ -38,8 +38,8 @@
             Pour <b>déclarer un tableau</b>, on écrit :
             
          </p><pre>
-nomTableau : tableau [borneMin à borneMax] de TypeÉlément
-      </pre><p class="paragraph" id="d8e50">
+nomTableau : tableau de <i>taille</i> TypeÉlément
+      </pre><p class="paragraph" id="d8e53">
             où <code>TypeÉlément</code> est le type des éléments 
             que l’on trouvera dans le tableau. Les éléments sont
             d’un des types élémentaires vus précédemment 
@@ -48,28 +48,26 @@ nomTableau : tableau [borneMin à borneMax] de TypeÉlément
             <code>caractère</code>) ou encore des variables structurées. 
             
          </p>
-         <p class="paragraph" id="d8e71">
+         <p class="paragraph" id="d8e74">
             À ce propos, remarquons aussi qu’un tableau peut être un
             champ d’une structure. D’autres possibilités apparaitront lors de l’étude de l’orienté
             objet.
             
          </p>
-         <p class="paragraph" id="d8e73">
-            Les <b>bornes</b> apparaissant dans la déclaration 
-            sont des constantes ou des paramètres ayant une
-            valeur connue lors de la déclaration. Une fois un tableau déclaré, <b>seuls les éléments d’indice
-               compris entre borneMin et borneMax peuvent être utilisés</b>. 
+         <p class="paragraph" id="d8e76">
+            Une fois un tableau déclaré, <b>seuls les éléments d’indice
+               compris entre 0 et taille-1 peuvent être utilisés</b>. 
             
          </p>
          <p class="paragraph" id="d8e81">
             Par exemple, si on déclare :
             
          </p><pre>
-        tabEntiers : tableau [1 à 100] d’entiers
+        tabEntiers : tableau de 100 entiers
       </pre><p class="paragraph" id="d8e85">
-            Il est interdit d’utiliser tabEntiers[0] ou tabEntiers[101]. De plus, chaque élément
+            Il est interdit d’utiliser tabEntiers[-1] ou tabEntiers[100]. De plus, chaque élément
             tabEntiers[i]
-            (avec 1 ≤ i ≤ 100) doit être manié avec la même précaution qu’une variable simple,
+            (avec 0 ≤ i ≤ 99) doit être manié avec la même précaution qu’une variable simple,
             c’est-à-
             dire qu’on ne peut utiliser un élément du tableau qui n’aurait pas été préalablement
             affecté
@@ -77,8 +75,8 @@ nomTableau : tableau [borneMin à borneMax] de TypeÉlément
             
          </p>
          <p class="paragraph" id="d8e87">
-            N.B. : Il n’est pas interdit de prendre 0 pour la borne inférieure ou même d’utiliser
-            des
+            N.B. : Il n’est pas interdit de prendre autre chose que 0 pour la borne inférieure
+            ou même d’utiliser des
             bornes négatives (par exemple : tabTempératures : tableau [-20 à 50] de réels).
             En Java, un tableau est défini par sa taille n et les bornes sont automatiquement
             0 et n − 1.
@@ -88,31 +86,31 @@ nomTableau : tableau [borneMin à borneMax] de TypeÉlément
       </div>
       <div id="d8e89.html" class="look"><pre>
 // Calcule et affiche la quantité vendue de 10 produits.
-module statistiquesVentesAvecTableau()
-    cpt : tableau [1 à 10] d’entiers
+algorithme statistiquesVentesAvecTableau()
+    cpt : tableau de 10 entiers
     i, numéroProduit, quantité : entiers
     
-    pour i de 1 à 10 faire
+    pour i de 0 à 9 faire
       cpt[i] ← 0
     fin pour
     
     afficher "Introduisez le numéro du produit :"
-    lire numéroProduit
-    tant que numéroProduit &gt; 0 faire
+    demander numéroProduit
+    tant que numéroProduit ≥ 0 et numéroProduit ≤ 9 faire
       afficher "Introduisez la quantité vendue :"
-      lire quantité
+      demander quantité
       cpt[numéroProduit] ← cpt[numéroProduit] + quantité
       afficher "Introduisez le numéro du produit :"
-      lire numéroProduit
+      demander numéroProduit
     fin tant que
     
-    pour i de 1 à 10 faire
+    pour i de 0 à 9 faire
       afficher "quantité vendue de produit ", i, " : ", cpt[i]
     fin pour
-fin module
+fin algorithme
       </pre></div>
       <hr />
       <div class="navigation_arrows"><a href="unit_Tableaux.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 23.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

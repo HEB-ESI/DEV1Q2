@@ -21,7 +21,7 @@
                      <li class="navigationLink"><a href="Tableaux_learningObject2.html">1.1.2. Déclaration et création en Java</a></li>
                      <li class="navigationActual"><strong>1.1.3. Taille logique et physique</strong></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject4.html">1.1.4. Taille d'un tableau en Java</a></li>
-                     <li class="navigationLink"><a href="Tableaux_learningObject5.html">1.1.5. Tableau et paramètres de module</a></li>
+                     <li class="navigationLink"><a href="Tableaux_learningObject5.html">1.1.5. Tableau et paramètres d'algorithme</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject6.html">1.1.6. Tableau et paramètres de méthodes</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject7.html">1.1.7. Parcours d’un tableau à une dimension.</a></li>
                      <li class="navigationLink"><a href="Tableaux_learningObject8.html">1.1.8. Erreurs fréquentes et exceptions lancées en Java</a></li>
@@ -33,8 +33,8 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="Tableaux_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Tableaux_learningObject3.html">1.1.3. Taille logique et physique</h1>
-      <div id="d8e194.html" class="clarify">
-         <p class="paragraph" id="d8e195">
+      <div id="d8e196.html" class="clarify">
+         <p class="paragraph" id="d8e197">
             		    Parfois, on connait la taille d’un tableau lorsqu’on écrit l’algorithme (par
             exemple s’il s’agit
             de retenir les ventes pour les douze mois de l’année) mais ce n’est pas toujours le
@@ -42,7 +42,7 @@
             exemple, connait-on le nombre de produits vendus par le magasin ?).
             		  
          </p>
-         <p class="paragraph" id="d8e197">
+         <p class="paragraph" id="d8e199">
             		    Si cette taille n’est pas connue, une possibilité est
             d’attribuer au tableau une taille maximale (sa taille physique) et de retenir dans
             une
@@ -50,35 +50,35 @@
             		  
          </p>
       </div>
-      <div id="d8e199.html" class="look"><pre>
+      <div id="d8e201.html" class="look"><pre>
 // Calcule et affiche la quantité vendue de x produits.
-module statistiquesVentes()
-    cpt : tableau [1 à 1000] d’entiers
+algorithme statistiquesVentes()
+    cpt : tableau de 1000 entiers
     i, numéroProduit, quantité : entiers
     nbArticles : entier
     
-    lire nbArticles
-    pour i de 1 à nbArticles faire
+    demander nbArticles
+    pour i de 0 à nbArticles-1 faire
       cpt[i] ← 0
     fin pour
     
     afficher "Introduisez le numéro du produit :"
-    lire numéroProduit
-    tant que numéroProduit &gt; 0 ET numéroProduit &lt;= nbArticles faire
+    demander numéroProduit
+    tant que numéroProduit ≥ 0 ET numéroProduit &lt; nbArticles faire
       afficher "Introduisez la quantité vendue :"
-      lire quantité
+      demander quantité
       cpt[numéroProduit] ← cpt[numéroProduit] + quantité
       afficher "Introduisez le numéro du produit :"
-      lire numéroProduit
+      demander numéroProduit
     fin tant que
     
-    pour i de 1 à nbArticles faire
+    pour i de 0 à nbArticles-1 faire
       afficher "quantité vendue de produit ", i, " : ", cpt[i]
     fin pour
-fin module
+fin algorithme
 </pre></div>
       <hr />
       <div class="navigation_arrows"><a href="Tableaux_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 23.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

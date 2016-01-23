@@ -43,7 +43,7 @@
         Pour <formatted style="bold">déclarer un tableau</formatted>, on écrit :
       </paragraph>
 		  <paragraph cssClass="code">
-nomTableau : tableau [borneMin à borneMax] de TypeÉlément
+nomTableau : tableau de <formatted style="italic">taille</formatted> TypeÉlément
       </paragraph>
       <paragraph>
         où <formatted style="code">TypeÉlément</formatted> est le type des éléments 
@@ -58,25 +58,23 @@ nomTableau : tableau [borneMin à borneMax] de TypeÉlément
         champ d’une structure. D’autres possibilités apparaitront lors de l’étude de l’orienté objet.
       </paragraph>
       <paragraph>
-        Les <formatted style="bold">bornes</formatted> apparaissant dans la déclaration 
-        sont des constantes ou des paramètres ayant une
-        valeur connue lors de la déclaration. Une fois un tableau déclaré, <formatted style="bold">seuls les éléments d’indice
-        compris entre borneMin et borneMax peuvent être utilisés</formatted>. 
+       Une fois un tableau déclaré, <formatted style="bold">seuls les éléments d’indice
+        compris entre 0 et taille-1 peuvent être utilisés</formatted>. 
       </paragraph>
       <paragraph>
         Par exemple, si on déclare :
       </paragraph>
       <paragraph cssClass="code">
-        tabEntiers : tableau [1 à 100] d’entiers
+        tabEntiers : tableau de 100 entiers
       </paragraph>
       <paragraph>
-        Il est interdit d’utiliser tabEntiers[0] ou tabEntiers[101]. De plus, chaque élément tabEntiers[i]
-        (avec 1 ≤ i ≤ 100) doit être manié avec la même précaution qu’une variable simple, c’est-à-
+        Il est interdit d’utiliser tabEntiers[-1] ou tabEntiers[100]. De plus, chaque élément tabEntiers[i]
+        (avec 0 ≤ i ≤ 99) doit être manié avec la même précaution qu’une variable simple, c’est-à-
         dire qu’on ne peut utiliser un élément du tableau qui n’aurait pas été préalablement affecté
         ou initialisé.
       </paragraph>
       <paragraph>
-        N.B. : Il n’est pas interdit de prendre 0 pour la borne inférieure ou même d’utiliser des
+        N.B. : Il n’est pas interdit de prendre autre chose que 0 pour la borne inférieure ou même d’utiliser des
         bornes négatives (par exemple : tabTempératures : tableau [-20 à 50] de réels).
         En Java, un tableau est défini par sa taille n et les bornes sont automatiquement 0 et n − 1.
         Ce n’est pas le cas en algorithmique où on a plus de liberté dans le choix des bornes
@@ -86,28 +84,28 @@ nomTableau : tableau [borneMin à borneMax] de TypeÉlément
     <look>
       <paragraph cssClass="code">
 // Calcule et affiche la quantité vendue de 10 produits.
-module statistiquesVentesAvecTableau()
-    cpt : tableau [1 à 10] d’entiers
+algorithme statistiquesVentesAvecTableau()
+    cpt : tableau de 10 entiers
     i, numéroProduit, quantité : entiers
     
-    pour i de 1 à 10 faire
+    pour i de 0 à 9 faire
       cpt[i] ← 0
     fin pour
     
     afficher "Introduisez le numéro du produit :"
-    lire numéroProduit
-    tant que numéroProduit > 0 faire
+    demander numéroProduit
+    tant que numéroProduit ≥ 0 et numéroProduit ≤ 9 faire
       afficher "Introduisez la quantité vendue :"
-      lire quantité
+      demander quantité
       cpt[numéroProduit] ← cpt[numéroProduit] + quantité
       afficher "Introduisez le numéro du produit :"
-      lire numéroProduit
+      demander numéroProduit
     fin tant que
     
-    pour i de 1 à 10 faire
+    pour i de 0 à 9 faire
       afficher "quantité vendue de produit ", i, " : ", cpt[i]
     fin pour
-fin module
+fin algorithme
       </paragraph>
     </look>
 		</learningObject>
@@ -130,15 +128,15 @@ fin module
         <multimedia src="../image/tabPres.png" type="png" />
       </paragraph>
       <paragraph>
-        Contrairement à algo où on a le choix des valeurs desbornes pour les indices, 
-        en Java, les indices varient de <formatted style="code">0</formatted> à <formatted style="code">taille du tableau - 1</formatted>.
+        Contrairement à algo où on peut avoir le choix des valeurs des bornes pour les indices, 
+        en Java, les indices varient toujours de <formatted style="code">0</formatted> à <formatted style="code">taille du tableau - 1</formatted>.
       </paragraph>
       <paragraph>0 est l’indice de départ.</paragraph>
       <paragraph title="Déclaration et création : 2 étapes">
         En Java, l'étape de création est séparée de l'étape de déclaration. <newLine/>
         En effet, l'étape de déclaration réserve un emplacement mémoire sur la pile qui contiendra une adresse 
-        où trouver la valeur des éléments du tableau. 
-        La création connaitra lataille du tableau, le créera sur le tas et remplira l'adresse sur la pile.
+        où trouver la valeur des éléments du tableau. <newLine/>
+        La création connaitra la taille du tableau, le créera sur le tas et remplira l'adresse sur la pile.
       </paragraph>
       <paragraph>
         <multimedia src="../image/reference.png" type="png" />
@@ -220,14 +218,14 @@ int [] entiers = {3, 14, 15};
 int entier = entiers [2]; // entier vaut 15
 entiers [1] = 85;
 entier = 0;
-entier = entiers [ entier +1]; // entier vaut 85
+entier = entiers [entier +1]; // entier vaut 85
       </paragraph>
     </clarify>
     <look>
       <paragraph>Par exemple :</paragraph>
       <paragraph cssClass="code">
 <![CDATA[
-package be.heb.esi. lg1 . tutorials . tableaux ;
+package be.heb.esi.lg1.tutorials.tableaux;
 
 public class InitialisationTableau {
     public static void main(String [] args) {
@@ -258,30 +256,30 @@ public class InitialisationTableau {
     <look>
       <paragraph cssClass="code">
 <![CDATA[// Calcule et affiche la quantité vendue de x produits.
-module statistiquesVentes()
-    cpt : tableau [1 à 1000] d’entiers
+algorithme statistiquesVentes()
+    cpt : tableau de 1000 entiers
     i, numéroProduit, quantité : entiers
     nbArticles : entier
     
-    lire nbArticles
-    pour i de 1 à nbArticles faire
+    demander nbArticles
+    pour i de 0 à nbArticles-1 faire
       cpt[i] ← 0
     fin pour
     
     afficher "Introduisez le numéro du produit :"
-    lire numéroProduit
-    tant que numéroProduit > 0 ET numéroProduit <= nbArticles faire
+    demander numéroProduit
+    tant que numéroProduit ≥ 0 ET numéroProduit < nbArticles faire
       afficher "Introduisez la quantité vendue :"
-      lire quantité
+      demander quantité
       cpt[numéroProduit] ← cpt[numéroProduit] + quantité
       afficher "Introduisez le numéro du produit :"
-      lire numéroProduit
+      demander numéroProduit
     fin tant que
     
-    pour i de 1 à nbArticles faire
+    pour i de 0 à nbArticles-1 faire
       afficher "quantité vendue de produit ", i, " : ", cpt[i]
     fin pour
-fin module
+fin algorithme
 ]]></paragraph>
     </look>
     
@@ -298,33 +296,33 @@ identifier.length
       </paragraph>
       <paragraph cssClass="code">
 int [] entiers = {4, 5, 6};
-int taille = entiers . length ;
-System.out. println ( taille ); // écrit 3
+int taille = entiers.length ;
+System.out.println (taille); // écrit 3
       </paragraph>
     </clarify>
     <look>
       <paragraph>Par exemple : </paragraph>
       <paragraph cssClass="code">
-<![CDATA[package be.heb.esi. lg1 . tutorials . tableaux ;
+<![CDATA[package be.heb.esi.lg1.tutorials.tableaux ;
 
 public class SimpleParcoursAscendant {
     public static void main(String [] args){
       int [] entiers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-      for(int i = 0; i < entiers . length ; i = i + 1) {
-        System.out. println ( entiers [ i ]);
+      for(int i = 0; i < entiers.length ; i = i + 1) {
+        System.out.println (entiers [i]);
       }
     }
 }]]>
       </paragraph>
       <paragraph>ou encore</paragraph>
       <paragraph cssClass="code">
-<![CDATA[package be.heb.esi. lg1 . tutorials . tableaux ;
+<![CDATA[package be.heb.esi.lg1.tutorials.tableaux ;
 
 public class SimpleParcoursDescendant {
     public static void main(String [] args){
       int [] entiers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-      for(int i = entiers . length − 1; i >= 0; i = i−1) {
-        System.out. println ( entiers [ i ]);
+      for(int i = entiers.length − 1; i >= 0; i = i−1) {
+        System.out.println (entiers [i]);
       }
     }
 }]]>
@@ -332,26 +330,26 @@ public class SimpleParcoursDescendant {
     </look>
     </learningObject>
 
-		<learningObject title="Tableau et paramètres de module">
+		<learningObject title="Tableau et paramètres d'algorithme">
 		<!-- ================================================ -->
 		<clarify>
 		  <paragraph>
-		    Un tableau peut être passé en paramètre à un module mais qu’en est-il de sa taille ? Il
-        serait utile de pouvoir appeler le même module avec des tableaux de tailles différentes. Pour
+		    Un tableau peut être passé en paramètre à un algorithme mais qu’en est-il de sa taille ? Il
+        serait utile de pouvoir appeler le même algorithme avec des tableaux de tailles différentes. Pour
         permettre cela, la taille du tableau reçu en paramètre est déclarée avec une variable (qui
-        peut être considéré comme un paramètre entrant).
+        peut être considérée comme un paramètre entrant).
 		  </paragraph>
 		  <paragraph>
 		    Par exemple :
 		  </paragraph>
 		  <paragraph cssClass="code">
-module afficherTaille(tabEntier↓ : tableau [1 à n] d’entiers)
+algorithme afficherTaille(tabEntier↓ : tableau de n entiers)
     afficher "J’ai reçu un tableau de ", n, " éléments".
-fin module
+fin algorithme
       </paragraph>
 		  <paragraph>
         Ce <formatted style="code">n</formatted> va prendre la taille précise du tableau utilisé à chaque appel
-        et peut être utilisé dans le corps du module. Bien sûr il s’agit là de la 
+        et peut être utilisé dans le corps de l'algorithme. Bien sûr il s’agit là de la 
         <formatted style="bold">taille physique</formatted> du tableau. 
       </paragraph>
       <paragraph>
@@ -360,36 +358,36 @@ fin module
       </paragraph>
 		  <paragraph>Par exemple :</paragraph>
       <paragraph cssClass="code">
-module afficherTailles(tabEntiers↓ : tableau [1 à n] d’entiers, tailleLogique : entier)
+algorithme afficherTailles(tabEntiers↓ : tableau de n entiers, tailleLogique : entier)
     afficher "J’ai reçu un tableau rempli de ", tailleLogique, " éléments "
     afficher "sur ", n, " éléments au total."
-fin module
+fin algorithme
       </paragraph>
       <paragraph>
-        Un module peut retourner un tableau.
+        Un algorithme peut retourner un tableau.
       </paragraph>
       <paragraph cssClass="code">
 // Crée un tableau statique d’entiers de taille 10, l’initialise à 0 et le retourne.
-module créerTableau() → tableau [1 à 10] d’entiers
-    tab : tableau [1 à 10] d’entiers
+algorithme créerTableau() → tableau de 10 entiers
+    tab : tableau de 10 entiers
     i : entier
-    pour i de 1 à 10 faire
+    pour i de 0 à 9 faire
       tab[i] ← 0
     fin pour
     retourner tab
-fin module
+fin algorithme
 
-module principalAppelTableau()
-    entiers : tableau [1 à 10] d’entiers
+algorithme principalAppelTableau()
+    entiers : tableau de 10 entiers
     i : entier
     entiers ← créerTableau()
-    pour i de 1 à 10 faire
+    pour i de 0 à 9 faire
       afficher entiers[i]
     fin pour
-fin module
+fin algorithme
       </paragraph>
       <paragraph>
-        Attention, il n'est pas possible de lire ou d'afficher un tableau en une seule instruction ; il faut des
+        Attention, il n'est pas possible de demander ou d'afficher un tableau en une seule instruction ; il faut des
         instructions de lecture ou d’affichage individuelles pour chacun de ses éléments.
       </paragraph>
     </clarify>
@@ -402,8 +400,8 @@ fin module
 		  <paragraph>Par exemple :</paragraph>
 		  <paragraph cssClass="code">
 <![CDATA[public static void afficher ( int [] entiers ) {
-    for(int i = 0; i <entiers . length ; i ++) {
-      System.out. println ( entiers [ i ]);
+    for(int i = 0; i < entiers.length ; i ++) {
+      System.out.println (entiers [i]);
     }
 }]]></paragraph>
       <paragraph>L’appel pourrait être</paragraph>
@@ -420,7 +418,7 @@ afficher ( cotes );
       <paragraph>Par exemple :</paragraph>
 		  <paragraph cssClass="code">
 <![CDATA[public static void remplir ( int [] entiers , int val ) {
-    for(int i = 0; i <entiers . length ; i ++) {
+    for(int i = 0; i < entiers.length ; i ++) {
       entiers [ i ] = val;
     }
 }]]></paragraph>
@@ -465,7 +463,7 @@ int [] cotes = créer(16, 20);
 		    Soit le tableau <formatted style="code">tab</formatted> déclaré ainsi
 		  </paragraph>
 		  <paragraph cssClass="code">
-tab : tableau [1 à n] de T  // où T est un type quelconque
+tab : tableau de n T  // où n est la taille du tableau et T est un type quelconque
       </paragraph>
       <paragraph>Envisageons d’abord le parcours complet et voyons ensuite les parcours avec arrêt prématuré.</paragraph>
 		  <paragraph title="Parcours complet.">
@@ -477,7 +475,7 @@ tab : tableau [1 à n] de T  // où T est un type quelconque
 		  <paragraph cssClass="code">
 // Parcours complet d’un tableau via une boucle pour
 // Les déclarations sont omises pour ne pas alourdir les algorithmes.
-pour i de 1 à n faire
+pour i de 0 à n-1 faire
     traiter tab[i]
 fin pour
       </paragraph>
@@ -493,8 +491,8 @@ fin pour
       </paragraph>
 		  <paragraph  cssClass="code">
 // Parcours complet d’un tableau via une boucle tant-que
-i ← 1
-tant que i ≤ n faire
+i ← 0
+tant que i ≤ n-1 faire
     traiter tab[i]
     i ← i+1
 fin tant que
@@ -512,12 +510,12 @@ fin tant que
 		  </paragraph>
 		  <paragraph  cssClass="code">
 // Parcours partiel d’un tableau sans variable booléenne
-i ← 1
-tant que i ≤ n ET test sur tab[i] dit que on continue faire
+i ← 0
+tant que i ≤ n-1 ET <formatted style="italic">test sur tab[i] dit qu'on continue</formatted> faire
     i ← i+1
 fin tant que
 
-si i > n alors
+si i ≥ n alors
     // on est arrivé au bout
 sinon
     // arrêt prématuré à l’indice i.
@@ -537,24 +535,24 @@ fin si
       <paragraph>Par exemple : </paragraph>
       <paragraph  cssClass="code">
 // Indique si un zéro est présent dans le tableau
-module contientZéro(tab : tableau [1 à n] d’entiers) → booléen
+algorithme contientZéro(tab : tableau [1 à n] d’entiers) → booléen
     i : entier
-    i ← 1
-    tant que i ≤ n ET tab[i] ≠ 0 faire
+    i ← 0
+    tant que i ≤ n-1 ET tab[i] ≠ 0 faire
       i ← i+1
     fin tant que
-    retourner i ≤ n // Si le test est vrai c’est qu’on a trouvé un 0
-fin module
+    retourner i ≤ n-1 // Si le test est vrai c’est qu’on a trouvé un 0
+fin algorithme
       </paragraph>
       
       <paragraph title="Parcours avec sortie prématurée avec variable booléenne">
 		  </paragraph>
 		  <paragraph  cssClass="code">
 // Parcours partiel d’un tableau avec variable booléenne
-i ← 1
+i ← 0
 trouvé ← faux
-tant que i ≤ n ET NON trouvé faire
-    si test sur tab[i] dit que on a trouvé alors
+tant que i ≤ n-1 ET NON trouvé faire
+    si <formatted style="italic">test sur tab[i] dit qu'on a trouvé</formatted> alors
       trouvé ← vrai
     sinon
       i ← i+1
@@ -637,7 +635,7 @@ fin tant que
                 <item>Besoin d’outils pour nous aider de façon à tester de la manière la plus facile/rapide possible</item>
                 <item>Il existe plusieurs sortes de tests : unitaires, d’intégration, fonctionnels, non-régression, . . .</item>
                 <item>Nous nous intéressons aux <link uri="http://fr.wikipedia.org/wiki/Test_(informatique)">tests unitaires</link> : 
-                c'est une procédure permettant de tester le bon fonctionnement d’un module (une méthode), ce qui n'est pas forcément suffisant.</item>
+                c'est une procédure permettant de tester le bon fonctionnement d’un algorithme (une méthode), ce qui n'est pas forcément suffisant.</item>
               </list>
             </item>
           </list>
@@ -735,7 +733,7 @@ fin tant que
         <paragraph>
           La classe de test contient une méthode de test par cas. Cette méthode
           <list style="unordered"> 
-            <item>est autonome (ne reçoit rien ne retourne rien)</item>
+            <item>est autonome (ne reçoit rien, ne retourne rien)</item>
             <item>contient des affirmations</item>
             <item>fait appel à la méthode à tester</item>
             <item>compare le résultat attendu et le résultat obtenu</item>
@@ -1126,9 +1124,9 @@ entiers= new {3,3,3};
 								<formatted style="javawithblanks">
 								<gap answers="">java</gap> 
 								<gap answers="">org.junit.runner.JUnitCore</gap>
-								<gap answers="">g32000.tds.td7BisPrepa.ExerciceTest</gap></formatted><newLine/>
+								<gap answers="">g32000.tds.tdTableaux.ExerciceTest</gap></formatted><newLine/>
 								permet de lancer les tests de la classe <formatted style="java">ExerciceTest</formatted>, 
-								dont le package est <formatted style="java">g32000.tds.td7BisPrepa</formatted>, précédemment compilée.    
+								dont le package est <formatted style="java">g32000.tds.tdTableaux</formatted>, précédemment compilée.    
 							</paragraph>    
 						</gapText>
 						<solution/>
@@ -1147,10 +1145,10 @@ entiers= new {3,3,3};
             <item>résolvez le problème via quelques exemples précis ;</item>
             <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
             <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-            <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
             <item>Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir prématurément (si on a trouvé ce qu'on cherche par exemple).</item>
-            <item>Pour la partie Java, dessinez l'arborescence des fichier. </item>
+            <item>Pour la partie Java, dessinez l'arborescence des fichiers. </item>
             <item><formatted style="bold">Écrivez le plan de tests en écrivant l'algorithme. Codez les tests après avoir écrit le code Java.</formatted></item>
           </list>
         </paragraph>
@@ -1165,7 +1163,7 @@ entiers= new {3,3,3};
             </item>
             <item>
               reçoit en paramètre le tableau valeurs de <formatted style="code">n</formatted> entiers et qui vérifie si ce
-              tableau est ordonné (strictement) croissant sur les valeurs. Le module retournera vrai si le
+              tableau est ordonné (strictement) croissant sur les valeurs. L'algorithme retournera vrai si le
               tableau est ordonné, faux sinon.
             </item>
             <item>
@@ -1214,13 +1212,13 @@ entiers= new {3,3,3};
           Chaine.
         </paragraph>
         <paragraph>
-          Écrire le module suivant qui renvoie dans les variables <formatted style="code">bienPlacés</formatted> 
+          Écrire l'algorithme suivant qui renvoie dans les variables <formatted style="code">bienPlacés</formatted> 
           et <formatted style="code">malPlacés</formatted> respectivement
           le nombre de pions bien placés et mal placés dans la « proposition » du joueur A en la
           comparant à la « solution » cachée du joueur B.
         </paragraph>
         <paragraph  cssClass="code">
-module testerProposition( proposition↓, solution↓ : tableau [1 à k ] de Chaines, bienPlacés↑, malPlacés↑ : entiers)
+algorithme testerProposition( proposition↓, solution↓ : tableau de k chaines, bienPlacés↑, malPlacés↑ : entiers)
         </paragraph>
         <popup title="une solution">
           <paragraph>
