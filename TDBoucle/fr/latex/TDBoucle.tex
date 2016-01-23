@@ -264,10 +264,10 @@ algorithme sommeNombres() → entier
     valeur : entier // un des termes de l’addition
     somme : entier // la somme
     somme ← 0
-    lire valeur
+    demander valeur
     tant que valeur ≥ 0 faire
       somme ← somme + valeur
-      lire valeur // remarquer l’endroit où on lit une valeur.
+      demander valeur // remarquer l’endroit où on lit une valeur.
     fin tant que
     retourner somme
 fin algorithme
@@ -346,12 +346,12 @@ public class Lecture {
     * Les valeurs non entieres sont passees .
     * @return l entier lu .
     */
-    public static int lireEntier () {
+    public static int demanderEntier () {
       Scanner clavier = new Scanner(System.in);
       int nb;
       // Tant que ce n  est pas un entier au clavier
       while ( ! clavier .hasNextInt() ) {
-        clavier .next (); // le lire , le passer
+        clavier .next (); // le demander , le passer
       }
       nb = clavier . nextInt ();
       return nb;
@@ -362,11 +362,11 @@ public class Lecture {
     * Les valeurs non entieres , nulles ou negatives sont passees .
     * @return l entier lu .
     */
-    public static int lirePositif () {
+    public static int demanderPositif () {
       int nb;
-      nb = lireEntier ();
+      nb = demanderEntier ();
       while (nb<=0) {
-        nb = lireEntier ();
+        nb = demanderEntier ();
       }
       return nb;
     }
@@ -378,7 +378,7 @@ public class Lecture {
       int nombreLu;
       
       System.out. print ("Entrez un entier  positif : ");
-      nombreLu = lirePositif ();
+      nombreLu = demanderPositif ();
     }
 }\end{Java}\subsection{faire - tant que}\begin{verbatim}
 faire
@@ -444,9 +444,9 @@ algorithme sommeNombres() → entier
     somme : entier // la somme
     somme ← 0
     faire
-      lire valeur
+      demander valeur
       somme ← somme + valeur
-      lire encore
+      demander encore
     tant que encore
     retourner somme
 fin algorithme
@@ -697,7 +697,7 @@ algorithme sommeNombres () → entier
     somme ← 0 // la somme se construit petit à petit. Elle vaut 0 au départ
     demander nbValeurs
     pour i de 1 à nbValeurs faire
-      lire valeur
+      demander valeur
       somme ← somme + valeur
     fin pour
     retourner somme
@@ -1183,7 +1183,7 @@ algorithme Test
     demander nb
     tant que nb ≠ 0 faire
         produit ← produit * nb
-        lire nb 
+        demander nb 
     fin tant que
     afficher produit
     
@@ -1276,7 +1276,7 @@ public static void appelMaxPositif() {
               
             \par
         
-              Pensez \`a utiliser l'algorithme \'ecrit ci-dessus qui permet de lire un entier positif.
+              Pensez \`a utiliser l'algorithme \'ecrit ci-dessus qui permet de demander un entier positif.
               
             \par
         

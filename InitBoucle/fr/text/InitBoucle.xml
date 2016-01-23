@@ -296,7 +296,7 @@ public class Test {
 					Écrivez en Java l'algorithme suivant.
 				</paragraph>
 				<paragraph cssClass="code">
-<![CDATA[module Test
+<![CDATA[algorithme Test
 
     nb: Entier
     i : Entier
@@ -306,7 +306,7 @@ public class Test {
         afficher i
     fin pour
 
-fin module
+fin algorithme
 ]]>			     </paragraph>
 
 				<popup title="la solution" visible="online"> 
@@ -392,7 +392,7 @@ public class Test {
         <formatted style="code">main</formatted> en Java.</paragraph>
         <paragraph>
           Écrivez un algorithme, <formatted style="code">principal</formatted>, qui lit un nombre et vérifie que tous les
-          nombres pairs inférieurs à ce nombre sont la somme de 2 nombres premiers. Ce module affiche vrai ou faux selon le cas.
+          nombres pairs inférieurs à ce nombre sont la somme de 2 nombres premiers. Ce algorithme affiche vrai ou faux selon le cas.
         </paragraph>
         <paragraph>
           Mettez en évidence les variables <formatted style="bold">« données »</formatted>, 

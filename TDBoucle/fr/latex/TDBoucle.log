@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  21 JAN 2016 18:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  23 JAN 2016 17:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -918,6 +918,12 @@ Overfull \hbox (19.41641pt too wide) in paragraph at lines 274--274
 rs lues.[] 
  []
 
+
+Overfull \hbox (19.41641pt too wide) in paragraph at lines 274--274
+[]      \T1/lmtt/m/n/10.95 demander valeur // remarquer l'endroit où on lit une
+ valeur.[] 
+ []
+
 [3 </home/clr/Documents/Cours/DEV1Q2/TDBoucle/fr/image/boucleTq.jpg>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
@@ -1085,8 +1091,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1350.
  ) 
 Here is how much of TeX's memory you used:
  13848 strings out of 493304
- 199026 string characters out of 6139871
- 333002 words of memory out of 5000000
+ 199034 string characters out of 6139871
+ 332006 words of memory out of 5000000
  16757 multiletter control sequences out of 15000+600000
  80981 words of font info for 57 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1106,7 +1112,7 @@ e/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt
 8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on TDBoucle.pdf (26 pages, 480972 bytes).
+Output written on TDBoucle.pdf (26 pages, 480954 bytes).
 PDF statistics:
  592 PDF objects out of 1000 (max. 8388607)
  534 compressed objects within 6 object streams
