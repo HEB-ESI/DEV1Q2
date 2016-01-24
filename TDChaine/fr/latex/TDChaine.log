@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 JAN 2015 19:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  24 JAN 2016 21:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -798,7 +798,7 @@ LaTeX Info: Redefining \nameref on input line 143.
 \openout5 = `TDChaine.out'.
 
 
-<../../../_templates/java/icons/logo-esi.jpg, id=44, 45.16875pt x 85.31876pt>
+<../../../_templates/java/icons/logo-esi.jpg, id=48, 45.16875pt x 85.31876pt>
 File: ../../../_templates/java/icons/logo-esi.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/logo-esi.jpg>
@@ -842,7 +842,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 152.
 
-<../../../_templates/java/icons/cc-gris.jpg, id=45, 88.33pt x 31.11626pt>
+<../../../_templates/java/icons/cc-gris.jpg, id=49, 88.33pt x 31.11626pt>
 File: ../../../_templates/java/icons/cc-gris.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/cc-gris.jpg>
@@ -888,105 +888,121 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 cc-gris.jpg>]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
-File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 ) [2
 
-] [3] [4]
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-36.def
+]
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
+File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
+)
+Overfull \hbox (185.58224pt too wide) in paragraph at lines 254--254
+[]\T1/lmtt/m/n/10.95 texte[2] $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 "a"  /
+/ texte vaut "Hallo" ; un caractère doit être remplacé par un seul caractère.[]
+ 
+ []
+
+
+Overfull \hbox (7.3715pt too wide) in paragraph at lines 267--267
+[]\T1/lmtt/m/n/10.95 algorithme contient(mot : chaine, lettre : caractère) $\OM
+S/lmsy/m/n/10.95 !$ \T1/lmtt/m/n/10.95 booléen[] 
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-34.def
+File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
+) [3] [4]
+Overfull \hbox (1.8357pt too wide) in paragraph at lines 377--380
+\T1/lmr/m/n/10.95 transforme une chaine conte-nant des ca-rac-tères nu-mé-rique
+s en nombre. Ainsi,
+ []
+
+
+Overfull \hbox (220.07465pt too wide) in paragraph at lines 392--392
+[]        \T1/lmtt/m/n/10.95 texte $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10.95 "
+al" + "go" + "rithmique"  // assigne la chaine "algortihmique" à la variable te
+xte.[] 
+ []
+
+[5] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-36.def
 File: uni-36.def 2013/05/13 UCS: Unicode data U+2400..U+24FF
-) [5]
-Overfull \hbox (41.8639pt too wide) in paragraph at lines 441--441
+)
+Overfull \hbox (41.8639pt too wide) in paragraph at lines 447--447
 []        \T1/lmtt/m/n/10.95 sousChaine(ch : chaine, pos : entier, long : entie
 r) $\OMS/lmsy/m/n/10.95 !$ \T1/lmtt/m/n/10.95 chaine[] 
  []
 
-
-Overfull \hbox (29.39429pt too wide) in paragraph at lines 451--459
+[6]
+Overfull \hbox (29.39429pt too wide) in paragraph at lines 457--466
 \T1/lmr/m/n/10.95 lon-gueur 10). Pour ex-traire le jour de cette date, on écrir
 a []\T1/lmtt/m/n/10.95 sousChaine(ch, 1, 2)\T1/lmr/m/n/10.95 ;
  []
 
 
-Overfull \hbox (58.68504pt too wide) in paragraph at lines 451--459
+Overfull \hbox (58.68504pt too wide) in paragraph at lines 457--466
 \T1/lmr/m/n/10.95 le mois s'ob-tien-dra avec []\T1/lmtt/m/n/10.95 sousChaine(ch
 , 4, 2) \T1/lmr/m/n/10.95 et l'an-née avec []\T1/lmtt/m/n/10.95 sousChaine(ch, 
 7, 4)\T1/lmr/m/n/10.95 .
  []
 
 
-Overfull \hbox (105.09998pt too wide) in paragraph at lines 473--473
-[]        \T1/lmtt/m/n/10.95 estDansChaine(ch : chaine, sous-chaine : chaine [o
-u caractère]) $\OMS/lmsy/m/n/10.95 !$ \T1/lmtt/m/n/10.95 entier[] 
- []
-
-[6]
-Overfull \hbox (14.15424pt too wide) in paragraph at lines 506--510
-[]\T1/lmr/m/n/10.95 Par exemple, []\T1/lmtt/m/n/10.95 concat("al", "go", "rithm
-ique") \T1/lmr/m/n/10.95 don-nera []\T1/lmtt/m/n/10.95 "algorithmique"\T1/lmr/m
-/n/10.95 .
- []
-
-
-</home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/java-logi-egal1.jpg, id=99,
- 403.5075pt x 79.29625pt>
+</home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/java-logi-egal1.jpg, id=102
+, 403.5075pt x 79.29625pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/java-logi-egal1.jpg Gr
 aphic file (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/java-logi-egal1.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/jav
-a-logi-egal1.jpg used on input line 537.
+a-logi-egal1.jpg used on input line 519.
 (pdftex.def)             Requested size: 288.0008pt x 56.59715pt.
 
-</home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/java-logi-egal2.jpg, id=100
+[7]
+</home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/java-logi-egal2.jpg, id=111
 , 360.34625pt x 211.79124pt>
 File: /home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/java-logi-egal2.jpg Gr
 aphic file (type jpg)
 
 <use /home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/java-logi-egal2.jpg>
 Package pdftex.def Info: /home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/jav
-a-logi-egal2.jpg used on input line 559.
+a-logi-egal2.jpg used on input line 541.
 (pdftex.def)             Requested size: 287.99696pt x 169.2684pt.
 
-[7] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) [8 </home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/java-logi-egal1.jpg> <
 /home/clr/Documents/Cours/DEV1Q2/TDChaine/fr/image/java-logi-egal2.jpg>] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 669.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 651.
  [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 669.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 651.
 
 (./TDChaine.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 669.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 669.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 651.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 651.
 Package rerunfilecheck Info: File `TDChaine.out' has not changed.
-(rerunfilecheck)             Checksum: AD67E5CD52056137C3E4CF4AFD93E62B;679.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 669.
+(rerunfilecheck)             Checksum: 836D409B04DD7104304643738FECFE3F;745.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 651.
  ) 
 Here is how much of TeX's memory you used:
- 12877 strings out of 493304
- 187072 string characters out of 6139871
- 306079 words of memory out of 5000000
- 16029 multiletter control sequences out of 15000+600000
+ 13522 strings out of 493304
+ 193978 string characters out of 6139871
+ 309358 words of memory out of 5000000
+ 16673 multiletter control sequences out of 15000+600000
  65746 words of font info for 47 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,43p,336b,1943s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathsy.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/latxfont/lcircle1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/latxfont/lcirclew.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmri9.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on TDChaine.pdf (10 pages, 319664 bytes).
+ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri9.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmtt8.pfb>
+Output written on TDChaine.pdf (10 pages, 320453 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 57 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

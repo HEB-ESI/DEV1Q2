@@ -19,11 +19,12 @@
                <li class="navigationActual"><strong>1.1. Les chaines</strong><ul class="navigation nav_lo">
                      <li class="navigationLink"><a href="Chaines_learningObject1.html">1.1.1. Manipuler les caractères</a></li>
                      <li class="navigationLink"><a href="Chaines_learningObject2.html">1.1.2. En Java</a></li>
-                     <li class="navigationLink"><a href="Chaines_learningObject3.html">1.1.3. Convertir en chaine</a></li>
-                     <li class="navigationLink"><a href="Chaines_learningObject4.html">1.1.4. Conversion de chaine en Java</a></li>
-                     <li class="navigationLink"><a href="Chaines_learningObject5.html">1.1.5. Manipuler les chaines</a></li>
-                     <li class="navigationLink"><a href="Chaines_learningObject6.html">1.1.6. En Java</a></li>
-                     <li class="navigationLink"><a href="Chaines_learningObject7.html">1.1.7. Égalités de types références</a></li>
+                     <li class="navigationLink"><a href="Chaines_learningObject3.html">1.1.3. Chaine et nombre</a></li>
+                     <li class="navigationLink"><a href="Chaines_learningObject4.html">1.1.4. Concaténation</a></li>
+                     <li class="navigationLink"><a href="Chaines_learningObject5.html">1.1.5. Conversion de chaine en Java</a></li>
+                     <li class="navigationLink"><a href="Chaines_learningObject6.html">1.1.6. Manipuler les chaines</a></li>
+                     <li class="navigationLink"><a href="Chaines_learningObject7.html">1.1.7. En Java</a></li>
+                     <li class="navigationLink"><a href="Chaines_learningObject8.html">1.1.8. Égalités de types références</a></li>
                   </ul>
                </li>
                <li class="navigationLink"><a href="unit_Exercices.html">1.2. Exercices</a></li>
@@ -33,9 +34,36 @@
       <div class="navigation_arrows"><a href="index.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Chaines_learningObject1.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="unit_Chaines.html">1.1. Les chaines</h1>
       <div id="Chaines_entry.html">
          <p class="paragraph" id="d8e10">
-            Nous avons défini deux types de variables qui permettent de stocker du texte :
+            Nous avons introduit le type chaine mais nous n’en avons encore fait
+            que des usages basiques, essentiellement des affichages. Il est temps d’aller plus
+            loin et de les
+            manipuler, c’est-à-dire d’examiner et de manipuler le contenu de chaines. Mais procédons
+            par étapes.
             
-            <ul class="list" id="d8e12">
+         </p>
+         <p class="paragraph" id="d8e12">
+            Certains langages, comme Java, distinguent clairement le type chaine et le type caractère.
+            Ainsi, en Java, le littéral ’A’ représente un caractère qui est différent du littéral
+            "A" qui
+            représente une chaine (composée d’un seul caractère). Cette distinction est essentiellement
+            dictée par des détails d’implémentation ; un caractère pouvant se représenter de façon
+            plus
+            économe qu’une chaine.
+            
+         </p>
+         <p class="paragraph" id="d8e14">
+            En algo, nous introduirons un type caractère mais sans le distinguer clairement d’une
+            chaine.
+            Ainsi, un caractère pourra être utilisé comme une chaine et une chaine d’un seul caractère
+            pourra être considéré comme un caractère. En somme, caractère n’est qu’un raccourci
+            pour
+            dire : une chaine de longueur 1.
+            
+         </p>
+         <p class="paragraph" id="d8e16">
+            Nous avons donc deux types de variables qui permettent de stocker du texte :
+            
+            <ul class="list" id="d8e18">
                <li class="itemAlt">
                   le caractère (pour les différentes lettres et symboles qui apparaissent sur le clavier
                   de votre
@@ -45,14 +73,18 @@
                <li class="item">et la chaine (qui est un assemblage de plusieurs caractères)</li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e17">
-            Observez la petite nuance d’écriture : 
+         <p class="paragraph" id="d8e23">
+            Observez la petite nuance d’écriture en Java : 
             un caractère sera entouré d'apostrophes (ou simples guillemets) (<code>’ ’</code>) 
             et une chaine de doubles guillemets (<code>" "</code>).
             
          </p>
-         <p class="paragraph" id="d8e25">
+         <p class="paragraph" id="d8e31">
             La <b>taille (ou longueur) d’une chaine</b> est le nombre de caractères qu’elle contient. 
+            Pour la connaitre on utilisera la notation <code>long(uneChaine)</code>.
+            
+         </p>
+         <p class="paragraph" id="d8e39">
             Remarquez qu’une chaine peut être vide, mais pas un caractère ! Ne confondez pas la
             chaine vide ("", de
             taille nulle) avec le caractère blanc (’ ’) qui contient l’espace séparant 2 mots
@@ -63,6 +95,6 @@
       </div>
       <hr />
       <div class="navigation_arrows"><a href="index.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Chaines_learningObject1.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDChaine.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 24.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDChaine.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

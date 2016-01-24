@@ -52,14 +52,14 @@
             		  
          </p><pre>
 /// Trie le tableau reçu en paramètre (via un tri par insertion).
-module triInsertion(tab↓↑ : tableau[1 à n] d’entiers)
+module triInsertion(tab↓↑ : tableau de n entiers)
     i, j, valAInsérer : entiers
-    pour i de 2 à n faire
+    pour i de 1 à n-1 faire
       valAInsérer ← tab[i]
       // recherche de l’endroit où insérer valAInsérer dans le
       // sous-tableau trié et décalage simultané des éléments
       j ← i-1
-      tant que j ≥ 1 ET valAInsérer &lt; tab[j] faire
+      tant que j ≥ 0 ET valAInsérer &lt; tab[j] faire
         tab[j+1] ← tab[j]
         j ← j–1
       fin tant que
@@ -69,6 +69,6 @@ fin module
 </pre></div>
       <hr />
       <div class="navigation_arrows"><a href="Motivation_clarify.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Motivation_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTri.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 24.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTri.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

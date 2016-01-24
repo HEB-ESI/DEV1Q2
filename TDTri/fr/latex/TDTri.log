@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 JAN 2015 18:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  24 JAN 2016 10:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -914,14 +914,14 @@ tion des minima successifs).[]
  []
 
 
-Overfull \hbox (36.11516pt too wide) in paragraph at lines 342--342
+Overfull \hbox (13.12022pt too wide) in paragraph at lines 342--342
 []\T1/lmtt/m/n/10.95 module triSélectionMinimaSuccessifs(tab$\OMS/lmsy/m/n/10.9
-5 #$$"$ \T1/lmtt/m/n/10.95 : tableau[1 à n] d'entiers)[] 
+5 #$$"$ \T1/lmtt/m/n/10.95 : tableau de n entiers)[] 
  []
 
 
 Overfull \hbox (48.16008pt too wide) in paragraph at lines 342--342
-[]    \T1/lmtt/m/n/10.95 pour i de 1 à n ^^U 1 faire // i correspond à l'étape 
+[]    \T1/lmtt/m/n/10.95 pour i de 0 à n ^^U 2 faire // i correspond à l'étape 
 de l'algorithme[] 
  []
 
@@ -932,10 +932,10 @@ Overfull \hbox (94.14995pt too wide) in paragraph at lines 342--342
  []
 
 
-Overfull \hbox (116.32372pt too wide) in paragraph at lines 342--342
+Overfull \hbox (93.32878pt too wide) in paragraph at lines 342--342
 []\T1/lmtt/m/n/10.95 module positionMin(tab$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n
-/10.95 : tableau[1 à n] d'entiers, début, fin : entiers) $\OMS/lmsy/m/n/10.95 !
-$ \T1/lmtt/m/n/10.95 entier[] 
+/10.95 : tableau de n entiers, début, fin : entiers) $\OMS/lmsy/m/n/10.95 !$ \T
+1/lmtt/m/n/10.95 entier[] 
  []
 
 [4]
@@ -946,41 +946,41 @@ IV 2
  []
 
 [5]
-Overfull \hbox (190.23607pt too wide) in paragraph at lines 421--421
+Overfull \hbox (161.4924pt too wide) in paragraph at lines 423--423
 []\T1/lmtt/m/n/10.95 module rechercheDichotomique(tab$\OMS/lmsy/m/n/10.95 #$$"$
- \T1/lmtt/m/n/10.95 : tableau[1 à n] de T, valeur$\OMS/lmsy/m/n/10.95 #$ \T1/lm
-tt/m/n/10.95 : T, pos$\OMS/lmsy/m/n/10.95 "$ \T1/lmtt/m/n/10.95 : entier) $\OMS
-/lmsy/m/n/10.95 !$ \T1/lmtt/m/n/10.95 booléen[] 
+ \T1/lmtt/m/n/10.95 : tableau de n T, valeur$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/
+n/10.95 : T, pos$\OMS/lmsy/m/n/10.95 "$ \T1/lmtt/m/n/10.95 : entier) $\OMS/lmsy
+/m/n/10.95 !$ \T1/lmtt/m/n/10.95 booléen[] 
  []
 
 
-Overfull \hbox (145.34111pt too wide) in paragraph at lines 421--421
-[]        \T1/lmtt/m/n/10.95 candidat < valeur: indiceGauche $\OMS/lmsy/m/n/10.
-95  $ \T1/lmtt/m/n/10.95 indiceMédian + 1 // on garde la partie droite[] 
+Overfull \hbox (36.11517pt too wide) in paragraph at lines 423--423
+[]        \T1/lmtt/m/n/10.95 indiceGauche $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/
+10.95 indiceMédian + 1 // on garde la partie droite[] 
  []
 
 
-Overfull \hbox (139.59238pt too wide) in paragraph at lines 421--421
+Overfull \hbox (139.59238pt too wide) in paragraph at lines 423--423
 []        \T1/lmtt/m/n/10.95 candidat > valeur: indiceDroit $\OMS/lmsy/m/n/10.9
 5  $ \T1/lmtt/m/n/10.95 indiceMédian ^^U 1 // on garde la partie gauche[] 
  []
 
 
-Overfull \hbox (128.64235pt too wide) in paragraph at lines 421--421
+Overfull \hbox (128.64235pt too wide) in paragraph at lines 423--423
 []      \T1/lmtt/m/n/10.95 // on vérifiera que indiceGauche donne la valeur où 
 elle pourrait être insérée.[] 
  []
 
 [6] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 501.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 503.
  [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 501.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 503.
  (./TDTri.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 501.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 501.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 503.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 503.
 Package rerunfilecheck Info: File `TDTri.out' has not changed.
 (rerunfilecheck)             Checksum: 5DD17147E10EA2D1CC37893C502173C8;451.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 501.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 503.
  ) 
 Here is how much of TeX's memory you used:
  13097 strings out of 493304
@@ -1000,7 +1000,7 @@ lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on TDTri.pdf (8 pages, 295033 bytes).
+Output written on TDTri.pdf (8 pages, 294844 bytes).
 PDF statistics:
  148 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams

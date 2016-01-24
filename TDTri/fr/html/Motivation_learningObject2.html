@@ -36,10 +36,10 @@
             
          </p><pre>
 // Trie le tableau reçu en paramètre (via un tri par sélection des minima successifs).
-module triSélectionMinimaSuccessifs(tab↓↑ : tableau[1 à n] d’entiers)
+module triSélectionMinimaSuccessifs(tab↓↑ : tableau de n entiers)
     i, indiceMin : entier
-    pour i de 1 à n – 1 faire // i correspond à l’étape de l’algorithme
-      indiceMin ← positionMin( tab, i, n )
+    pour i de 0 à n – 2 faire // i correspond à l’étape de l’algorithme
+      indiceMin ← positionMin( tab, i, n-1 )
       swap( tab[i], tab[indiceMin] )
     fin pour
 fin module
@@ -55,7 +55,7 @@ fin module
 
 
 // Retourne l’indice du minimum entre les indices début et fin du tableau reçu.
-module positionMin(tab↓ : tableau[1 à n] d’entiers, début, fin : entiers) → entier
+module positionMin(tab↓ : tableau de n entiers, début, fin : entiers) → entier
     indiceMin, i : entiers
     indiceMin ← début
     pour i de début+1 à fin faire
@@ -69,6 +69,6 @@ fin module
       </pre></div>
       <hr />
       <div class="navigation_arrows"><a href="Motivation_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Motivation_learningObject3.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTri.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 24.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTri.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

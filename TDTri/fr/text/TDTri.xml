@@ -109,14 +109,14 @@
 		  
       <paragraph cssClass="code">
 <![CDATA[/// Trie le tableau reçu en paramètre (via un tri par insertion).
-module triInsertion(tab↓↑ : tableau[1 à n] d’entiers)
+module triInsertion(tab↓↑ : tableau de n entiers)
     i, j, valAInsérer : entiers
-    pour i de 2 à n faire
+    pour i de 1 à n-1 faire
       valAInsérer ← tab[i]
       // recherche de l’endroit où insérer valAInsérer dans le
       // sous-tableau trié et décalage simultané des éléments
       j ← i-1
-      tant que j ≥ 1 ET valAInsérer < tab[j] faire
+      tant que j ≥ 0 ET valAInsérer < tab[j] faire
         tab[j+1] ← tab[j]
         j ← j–1
       fin tant que
@@ -137,10 +137,10 @@ fin module
       </paragraph>
       <paragraph cssClass="code">
 <![CDATA[// Trie le tableau reçu en paramètre (via un tri par sélection des minima successifs).
-module triSélectionMinimaSuccessifs(tab↓↑ : tableau[1 à n] d’entiers)
+module triSélectionMinimaSuccessifs(tab↓↑ : tableau de n entiers)
     i, indiceMin : entier
-    pour i de 1 à n – 1 faire // i correspond à l’étape de l’algorithme
-      indiceMin ← positionMin( tab, i, n )
+    pour i de 0 à n – 2 faire // i correspond à l’étape de l’algorithme
+      indiceMin ← positionMin( tab, i, n-1 )
       swap( tab[i], tab[indiceMin] )
     fin pour
 fin module
@@ -156,7 +156,7 @@ fin module
 
 
 // Retourne l’indice du minimum entre les indices début et fin du tableau reçu.
-module positionMin(tab↓ : tableau[1 à n] d’entiers, début, fin : entiers) → entier
+module positionMin(tab↓ : tableau de n entiers, début, fin : entiers) → entier
     indiceMin, i : entiers
     indiceMin ← début
     pour i de début+1 à fin faire
@@ -183,10 +183,10 @@ fin module
 		  
 		  <paragraph cssClass="code">
 <![CDATA[// Trie le tableau reçu en paramètre (via un tri bulle).
-module triBulle(tab↓↑ : tableau[1 à n] d’entiers)
+module triBulle(tab↓↑ : tableau de n entiers)
     indiceBulle, i : entiers
     pour indiceBulle de 1 à n faire
-      pour i de n – 1 à indiceBulle par – 1 faire
+      pour i de n – 2 à indiceBulle par – 1 faire
         si tab[i] > tab[i + 1] alors
           swap( tab[i], tab[i + 1] )
         fin si
@@ -233,21 +233,23 @@ fin module
 		  
 		  <paragraph cssClass="code">
 <![CDATA[
-module rechercheDichotomique(tab↓↑ : tableau[1 à n] de T, valeur↓ : T, pos↑ : entier) → booléen
+module rechercheDichotomique(tab↓↑ : tableau de n T, valeur↓ : T, pos↑ : entier) → booléen
     indiceDroit, indiceGauche, indiceMédian : entiers
     candidat : T
     trouvé : booléen
-    indiceGauche ← 1
-    indiceDroit ← n
+    indiceGauche ← 0
+    indiceDroit ← n-1
     trouvé ← faux
     tant que NON trouvé ET indiceGauche ≤ indiceDroit faire
       indiceMédian ← (indiceGauche + indiceDroit) DIV 2
       candidat ← tab[indiceMédian]
-      selon que
-        candidat = valeur: trouvé ← vrai
-        candidat < valeur: indiceGauche ← indiceMédian + 1 // on garde la partie droite
+      si candidat = valeur alors 
+        trouvé ← vrai
+      sinon si candidat < valeur alors
+        indiceGauche ← indiceMédian + 1 // on garde la partie droite
+      sinon 
         candidat > valeur: indiceDroit ← indiceMédian – 1 // on garde la partie gauche
-      fin selon que
+      fin si
     fin tant que
     
     si trouvé alors
@@ -285,10 +287,10 @@ fin module
           <item>résolvez le problème via quelques exemples précis ;</item>
           <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
           <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-          <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+          <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
           <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
           <item>Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir prématurément (si on a trouvé ce qu'on cherche par exemple).</item>
-          <item>Pour la partie Java, dessinez l'arborescence des fichier. </item>
+          <item>Pour la partie Java, dessinez l'arborescence des fichiers. </item>
           <item><formatted style="bold">Écrivez le plan de tests en écrivant l'algorithme. Codez les tests après avoir écrit le code Java.</formatted></item>
         </list>
       </paragraph>

@@ -63,21 +63,23 @@
             		  
          </p><pre>
 
-module rechercheDichotomique(tab↓↑ : tableau[1 à n] de T, valeur↓ : T, pos↑ : entier) → booléen
+module rechercheDichotomique(tab↓↑ : tableau de n T, valeur↓ : T, pos↑ : entier) → booléen
     indiceDroit, indiceGauche, indiceMédian : entiers
     candidat : T
     trouvé : booléen
-    indiceGauche ← 1
-    indiceDroit ← n
+    indiceGauche ← 0
+    indiceDroit ← n-1
     trouvé ← faux
     tant que NON trouvé ET indiceGauche ≤ indiceDroit faire
       indiceMédian ← (indiceGauche + indiceDroit) DIV 2
       candidat ← tab[indiceMédian]
-      selon que
-        candidat = valeur: trouvé ← vrai
-        candidat &lt; valeur: indiceGauche ← indiceMédian + 1 // on garde la partie droite
+      si candidat = valeur alors 
+        trouvé ← vrai
+      sinon si candidat &lt; valeur alors
+        indiceGauche ← indiceMédian + 1 // on garde la partie droite
+      sinon 
         candidat &gt; valeur: indiceDroit ← indiceMédian – 1 // on garde la partie gauche
-      fin selon que
+      fin si
     fin tant que
     
     si trouvé alors
@@ -92,6 +94,6 @@ fin module
 </pre></div>
       <hr />
       <div class="navigation_arrows"><a href="Motivation_learningObject3.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 29.1.2015 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTri.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 24.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTri.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

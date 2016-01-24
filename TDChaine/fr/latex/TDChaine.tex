@@ -184,7 +184,29 @@
 				\pagestyle{fancy}
 	   
             \section{Les chaines}
-        Nous avons d\'efini deux types de variables qui permettent de stocker du texte :
+        Nous avons introduit le type chaine mais nous n'en avons encore fait
+        que des usages basiques, essentiellement des affichages. Il est temps d'aller plus loin et de les
+        manipuler, c'est-\`a-dire d'examiner et de manipuler le contenu de chaines. Mais proc\'edons
+        par \'etapes.
+      
+            \par
+        
+        Certains langages, comme Java, distinguent clairement le type chaine et le type caract\`ere.
+        Ainsi, en Java, le litt\'eral 'A' repr\'esente un caract\`ere qui est diff\'erent du litt\'eral "A" qui
+        repr\'esente une chaine (compos\'ee d'un seul caract\`ere). Cette distinction est essentiellement
+        dict\'ee par des d\'etails d'impl\'ementation ; un caract\`ere pouvant se repr\'esenter de fa\c con plus
+        \'econome qu'une chaine.
+      
+            \par
+        
+        En algo, nous introduirons un type caract\`ere mais sans le distinguer clairement d'une chaine.
+        Ainsi, un caract\`ere pourra \^etre utilis\'e comme une chaine et une chaine d'un seul caract\`ere
+        pourra \^etre consid\'er\'e comme un caract\`ere. En somme, caract\`ere n'est qu'un raccourci pour
+        dire : une chaine de longueur 1.
+      
+            \par
+        
+        Nous avons donc deux types de variables qui permettent de stocker du texte :
         
 					\begin{itemize}
 				
@@ -197,21 +219,54 @@
 				
             \par
         
-        Observez la petite nuance d'\'ecriture : 
+        Observez la petite nuance d'\'ecriture en Java : 
         un caract\`ere sera entour\'e d'apostrophes (ou simples guillemets) (\verb@’ ’@) 
         et une chaine de doubles guillemets (\verb@" "@).
       
             \par
         
         La \textbf{taille (ou longueur) d'une chaine} est le nombre de caract\`eres qu'elle contient. 
+        Pour la connaitre on utilisera la notation \verb@long(uneChaine)@.
+      
+            \par
+        
         Remarquez qu'une chaine peut \^etre vide, mais pas un caract\`ere ! Ne confondez pas la chaine vide ("", de
         taille nulle) avec le caract\`ere blanc (' ') qui contient l'espace s\'eparant 2 mots d'un texte et
         que vous obtenez en enfon\c cant la touche d'espacement au bas du clavier.
 		
             \par
         \subsection{Manipuler les caract\`eres}
+		    Pour pouvoir manipuler une chaine, il faut pouvoir acc\'eder aux caract\`eres qui la composent.
+        Comme il s'agit d'une op\'eration de base souvent utilis\'ee, nous allons introduire une \'ecriture 
+        compacte, emprunt\'ee aux tableaux : \verb@nomChaine[i]@ 
+        d\'esigne le ie caract\`ere de la chaine \verb@nomChaine@ (en commen\c cant \`a 1).
+		  
+            \par
+        
+		    Par exemple :
+		  
+            \par
+        \begin{verbatim}
+texte : chaine
+texte ← "Hello"
+afficher texte[5  ] // Affiche "o"
+texte[2] ← "a"  // texte vaut "Hallo" ; un caractère doit être remplacé par un seul caractère.
+		  \end{verbatim}
+		    \'Ecrivons un algorithme qui v\'erifie si un mot donn\'e contient une lettre donn\'ee
+      .
+            \par
+        \begin{verbatim}
+algorithme contient(mot : chaine, lettre : caractère) → booléen
+    i : entier
+    i ← 1
+    tant que i≤long(mot) ET mot[i]≠lettre faire
+      i ← i+1
+    fin tant que
+    retourner i≤long(mot)
+fin algorithme
+		  \end{verbatim}
         Introduisons quelques fonctions (ou primitives) agissant sur les caract\`eres. Leur \'ecriture
-        s'apparente \`a celle de modules que vous pourrez utiliser tels quels dans les exercices. 
+        s'apparente \`a celle d'algorithmes que vous pourrez utiliser tels quels dans les exercices. 
       
             \par
         \begin{verbatim}
@@ -242,23 +297,21 @@
         estChiffre(car : caractère) → booléen
       \end{verbatim}
         Cette fonction permet de savoir si un caract\`ere est un chiffre. Elle retourne vrai uniquement
-        pour les dix caract\`eres '0', '1', '2', '3', '4', '5', '6', '7', '8' et '9' et faux dans tous les autres
+        pour les dix caract\`eres "0", "1", "2", "3", "4", "5", "6", "7", "8" et "9" et faux dans tous les autres
         cas.
       
             \par
-        
-        On peut aussi convertir une majuscule en minuscule, gr\^ace \`a la fonction :
+        toutes les lettres d'une chaine en majuscules, gr\^ace \`a la fonction :
       
             \par
         \begin{verbatim}
-        majuscule(car : caractère) → caractère
+        majuscule(texte : chaine) → chaine
       \end{verbatim}
-        Par exemple, si \verb@car@ vaut \verb@’h’@, 
-        cette fonction retourne \verb@’H’@. L'op\'eration inverse se fait avec :
+        L'op\'eration inverse se fait avec :
       
             \par
         \begin{verbatim}
-        minuscule(car : caractère) → caractère
+        minuscule(texte : chaine) → chaine
       \end{verbatim}
         Il peut aussi \^etre pratique de connaitre la position d'une lettre dans l'alphabet. Ceci se fera
         \`a l'aide de la fonction :
@@ -267,10 +320,10 @@
         \begin{verbatim}
         numLettre(car : caractère) → entier
       \end{verbatim}
-        qui retourne toujours un entier entre 1 et 26. Par exemple numLettre('E') donnera 5, ainsi
-        que numLettre('e'), cette fonction traite donc de la m\^eme mani\`ere les majuscules et les
+        qui retourne toujours un entier entre 1 et 26. Par exemple numLettre("E") donnera 5, ainsi
+        que numLettre("e"), cette fonction traite donc de la m\^eme mani\`ere les majuscules et les
         minuscules. En vertu de ce qui a \'et\'e \'ecrit plus haut, numLettre retournera aussi 5 pour les
-        caract\`eres '\'e', '\`e', '\^e', '\"e'. . .). N.B. : attention, il est interdit d'utiliser cette fonction si le
+        caract\`eres "\'e", "\`e", "\^e", "\"e". . .). N.B. : attention, il est interdit d'utiliser cette fonction si le
         caract\`ere n'est pas une lettre !
       
             \par
@@ -288,11 +341,12 @@
         \begin{verbatim}
         lettreMin(n : entier) → caractère
       \end{verbatim}
-        qui retournent respectivement la forme majuscule ou minuscule de la n-\`eme lettre de l'alpha-
-        bet (o\`u n sera obligatoirement compris entre 1 et 26). Par exemple, 
+        qui retournent respectivement la forme majuscule ou minuscule de la n-\`eme lettre de l'alphabet 
+        (o\`u n sera obligatoirement compris entre 1 et 26). Par exemple, 
         \verb@lettreMaj(13)@ retourne
-        \verb@’M’@ tandis que \verb@lettreMin(26)@ 
-        retourne \verb@’z’@.
+        \verb@"M"@ tandis que 
+        \verb@lettreMin(26)@ 
+        retourne \verb@"z"@.
       
             \par
         \subsection{En Java}
@@ -302,61 +356,54 @@
 					\textcolor{white}{.} \par
 				
 		    Allez voir la classe \verb@java.lang.Character@ dans l'API
-		    et trouvez-y les m\'ethodes Java correspondant aux modules d'algo d\'efinis ci-dessus.
+		    et trouvez-y les m\'ethodes Java correspondant aux algorithmes d\'efinis ci-dessus.
 		  
             \par
-        \subsection{Convertir en chaine}
-		    Un caract\`ere peut \^etre vu comme une chaine de taille 1, mais techniquement, il est important
-        de faire la distinction entre ces deux types. Si on veut transformer un caract\`ere en chaine,
-        on utilisera la fonction :
-      
+        \subsection{Chaine et nombre}
+		    Si une chaine contient un nombre, on doit pouvoir le convertir, et inversement.
+		  
             \par
         \begin{verbatim}
-        chaine(car : caractère) → chaine
+        chaine(n : réel) → chaine
       \end{verbatim}
-        Par exemple, si \verb@car@ vaut \verb@'a’@, 
-        cette fonction retournera \verb@"a"@. Il est cependant admissible d'utiliser 
-        le simple signe d'affectation qui r\'ealise la conversion de fa\c con automatique :
-      
-            \par
-        \begin{verbatim}
-        varChaine ← varCaractère
-      \end{verbatim}
-        De fa\c con similaire, on pourra transformer une variable num\'erique en chaine avec :
-      
-            \par
-        \begin{verbatim}
-        chaine(n : entier) → chaine
-      \end{verbatim}
-        ou
-      
-            \par
-        \begin{verbatim}
-        chaine(x : réel) → chaine
-      \end{verbatim}
-        Ainsi, \verb@chaine(23)@ donnera \verb@"23"@ 
-        et \verb@chaine (3,14)@ donnera \verb@"3,14"@. Notez qu'on utilise le m\^eme
-        nom de fonction dans ces derniers cas (concept de \guillemotleft  surcharge \guillemotright  qui sera d\'evelopp\'e dans
-        le chapitre orient\'e objet du cours \guillemotleft  Algorithmique II \guillemotright ). La diff\'erence entre ces diff\'erentes
-        fonctions se fait par le type de la variable en entr\'ee.
-      
-            \par
-        
-        On peut aussi transformer une chaine contenant des caract\`eres num\'eriques en nombre par
-        la fonction inverse :
+        transforme un nombre en chaine.
+        Ex : \verb@chaine(42)@ retourne la chaine "42" et 
+        \verb@chaine(3,14)@ donnera "3,14".
       
             \par
         \begin{verbatim}
         nombre(ch : chaine) → réel
       \end{verbatim}
-        Ainsi, \verb@nombre("3,14")@ retournera \verb@3,14@. 
-        Notez que si \verb@n@ est un entier, l'instruction \verb@n ← nombre("3,14")@
-        affectera \verb@n@ \`a 3.
-        On supposera encore que si la chaine \verb@ch@ ne repr\'esente pas un nombre de fa\c con correcte, la
-        fonction retournera 0.
-		  
+        transforme une chaine contenant des caract\`eres num\'eriques en nombre. 
+        Ainsi, \verb@nombre("3,14")@ retournera 3,14. 
+        C'est une erreur de l'utiliser avec une chaine qui ne repr\'esente pas un nombre.
+      
             \par
-        \subsection{Conversion de chaine en Java}
+        \subsection{Concat\'enation}
+		    Il est fr\'equent de devoir rassembler plusieurs chaines pour former une seule chaine plus
+        grande, il s'agit de l'op\'eration de concat\'enation. Introduisons \'egalement une notation
+        compacte, le +. 
+      
+            \par
+        Par exemple :
+            \par
+        \begin{verbatim}
+        texte ← "al" + "go" + "rithmique"  // assigne la chaine "algortihmique" à la variable texte.
+      \end{verbatim}
+        \'Ecrivons un algorithme qui inverse toutes les lettres d'un mot. 
+        Ainsi, "algo" deviendra "ogla".
+      
+            \par
+        \begin{verbatim}
+algorithme miroir (mot : chaine) → chaine
+    miroir : chaine
+    miroir ← ""
+    pour i de 1 à long(mot) faire
+      miroir ← mot[i] + miroir
+    fin pour
+    retourner miroir
+fin algorithme      
+      \end{verbatim}\subsection{Conversion de chaine en Java}
 		    Pour convertir un type primitif en \verb@String@, 
 		    il suffit d'utiliser l'op\'erateur \verb@+@ 
 		    avec un op\'erande de type \verb@String@.
@@ -365,10 +412,10 @@
         Par exemple :
             \par
         \begin{verbatim}
-System.out. println ("1+1␣=␣"+2);
+System.out.println ("1+1␣=␣"+2);
 String s = "Pi␣=␣" + 3.1415;
-System.out. println ("1"+2+3); // 123
-System.out. println (1+2+"3"); //33
+System.out.println ("1"+2+3); // 123
+System.out.println (1+2+"3"); //33
       \end{verbatim}
 		    Pour convertir un \verb@String@ en \verb@char@ , 
 		    il faut penser \`a la m\'ethode \verb@charAt()@ :
@@ -383,49 +430,8 @@ char initiale = nom.charAt(0);
       
             \par
         \begin{verbatim}
-int nb = Integer . parseInt ("12");
+int nb = Integer.parseInt ("12");
       \end{verbatim}\subsection{Manipuler les chaines}
-			
-		\subparagraph{Longueur d'une chaine} 
-		
-					\textcolor{white}{.} \par
-				
-        La longueur d'une chaine (ou encore sa taille) est le nombre de caract\`eres qu'elle contient.
-        Nous pourrons l'\'evaluer avec la fonction
-      
-            \par
-        \begin{verbatim}
-        longueur(ch : chaine) → entier
-      \end{verbatim}
-        Par exemple : \verb@longueur("algorithmique")@ 
-        retourne \verb@13@ et 
-        \verb@longueur("")@ retourne \verb@0@.
-      
-            \par
-        
-			
-		\subparagraph{Acc\`es aux diff\'erents caract\`eres d'une chaine} 
-		
-					\textcolor{white}{.} \par
-				
-        La fonction
-       
-            \par
-        \begin{verbatim}
-        car(ch : chaine, n : entier) → caractère
-      \end{verbatim}
-        permet de connaitre le n-\`eme caract\`ere contenu dans une chaine. Pour une utilisation correcte
-        de cette fonction, il faut que la valeur de n soit au moins \'egale \`a 1 et qu'elle ne d\'epasse
-        pas la longueur de la chaine. 
-      
-            \par
-        
-        Par exemple \verb@car("Spirou", 4)@ retourne \verb@’r’@, 
-        mais \verb@car("Spirou", 8)@
-        g\'en\'erera un message d'erreur.
-      
-            \par
-        
 			
 		\subparagraph{Extraction de sous-chaine} 
 		
@@ -455,7 +461,8 @@ int nb = Integer . parseInt ("12");
         le mois s'obtiendra avec \verb@sousChaine(ch, 4, 2)@ et l'ann\'ee avec
         \verb@sousChaine(ch, 7, 4)@. 
         Attention, les 3 r\'esultats obtenus sont des chaines de chiffres et non
-        des nombres !
+        des nombres mais il est possible de les convertir via la fonction 
+        \verb@nombre@ !
       
             \par
         
@@ -469,56 +476,31 @@ int nb = Integer . parseInt ("12");
       
             \par
         \begin{verbatim}
-        estDansChaine(ch : chaine, sous-chaine : chaine [ou caractère]) → entier
+        position(ch : chaine, sous-chaine : chaine) → entier
       \end{verbatim}
         La valeur de l'entier renvoy\'e est la position o\`u commence la sous-chaine recherch\'ee. 
       
             \par
         
-        Par exemple, \verb@estDansChaine("algorithmique", "mi")@ 
+        Par exemple, \verb@position("algorithmique", "mi")@ 
         retournera \verb@9@. Si la sous-chaine ne s'y trouve
         pas, la fonction retourne \verb@0@. 
         On peut admettre ici d'\'ecrire un caract\`ere \`a la place de la sous-chaine. 
       
             \par
         
-        Par exemple, \verb@estDansChaine("algorithmique", ’m’)@ 
+        Par exemple, \verb@position("algorithmique", "m")@ 
         retournera \'egalement \verb@9@.
       
             \par
-        
-			
-		\subparagraph{Concat\'enation de chaines} 
-		
-					\textcolor{white}{.} \par
-				
-        Il est fr\'equent de devoir rassembler plusieurs chaines pour former une seule chaine plus
-        grande, il s'agit de l'op\'eration de concat\'enation. La syntaxe est la suivante :
-       
-            \par
-        \begin{verbatim}
-        concat(ch1, ch2, . . ., chN : chaine) → chaine
-      \end{verbatim}
-        On remarquera ici le cas exceptionnel d'une fonction admettant un nombre ind\'efini de param\`etres.
-      
-            \par
-        
-        Par exemple, \verb@concat("al", "go", "rithmique")@ donnera 
-        \verb@"algorithmique"@. On admettra
-        aussi comme notation alternative l'utilisation du signe \guillemotleft  \verb@+@ \guillemotright  
-        qui est ici sans \'equivoque entre des variables non num\'eriques :
-       
-            \par
-        \begin{verbatim}
-        ch ← ch1 + ch2 + . . .+ chN
-      \end{verbatim}\subsection{En Java}
+        \subsection{En Java}
 			
 		\subparagraph{java.lang.String} 
 		
 					\textcolor{white}{.} \par
 				
 		    Allez voir la classe \verb@java.lang.String@ dans l'API
-		    et trouvez-y les m\'ethodes Java correspondant aux modules d'algo d\'efinis ci-dessus.
+		    et trouvez-y les m\'ethodes Java correspondant aux algorithmes d\'efinis ci-dessus.
 		  
             \par
         
@@ -616,10 +598,10 @@ System.out. println (s1. equals(s3 )); // Vrai
 			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
 			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
-			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
 			\item Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir pr\'ematur\'ement (si on a trouv\'e ce qu'on cherche par exemple).
-			\item Pour la partie Java, dessinez l'arborescence des fichier. 
+			\item Pour la partie Java, dessinez l'arborescence des fichiers. 
 			\item \textbf{\'Ecrivez le plan de tests en \'ecrivant l'algorithme. Codez les tests apr\`es avoir \'ecrit le code Java.}
 					\end{itemize}
 				
@@ -648,7 +630,7 @@ System.out. println (s1. equals(s3 )); // Vrai
 			\item 
               v\'erifie si un mot donn\'e sous forme de chaine constitue un
               palindrome (comme par exemple "kayak", "radar" ou "saippuakivikauppias" (marchand
-              de savon en finnois)
+              de savon en finnois))
             
 			\item 
               v\'erifie si une phrase donn\'ee sous forme de chaine constitue
