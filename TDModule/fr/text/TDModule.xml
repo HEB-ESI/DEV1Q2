@@ -353,7 +353,7 @@ presenter ("moyenne de 2 nombres");
 		  <paragraph>Par exemple : </paragraph>
 		  <paragraph cssClass="java">
 <![CDATA[
-public static int lireEntier () {
+public static int demanderEntier () {
     Scanner clavier = new Scanner(System.in);
     int nb;
     System.out.println ("Entrez un nombre entier !");
@@ -365,7 +365,7 @@ public static int lireEntier () {
       </paragraph>
 <paragraph cssClass="java">
 <![CDATA[
-int nb = lireEntier ();
+int nb = demanderEntier ();
 ]]>				</paragraph>
 		</look>
 		<look>
@@ -410,7 +410,7 @@ public class Test{
         </paragraph>
         <paragraph cssClass="code">
 // Lit un nombre, l'affiche s’il est positif et sinon lance une erreur.
-algorithme lirePositif ()
+algorithme demanderPositif ()
     nb : réel
     demander nb
     si nb <![CDATA[<]]> 0 alors
@@ -682,7 +682,7 @@ public class MaxEntiers {
     * Le nombre est lu sur l entree standard ( le clavier ).
     * @return le nombre entier lu .
     */
-    public static int lireEntier () {
+    public static int demanderEntier () {
       Scanner clavier = new Scanner(System.in);
       System.out. println ("Entrez un nombre entier!");
       return clavier.nextInt ();
@@ -694,8 +694,8 @@ public class MaxEntiers {
     * @return le nombre entier lu .
     * @throws IllegalArgumentException si le nombre lu est strictement negatif.
     */
-    public static int lireEntierPositif () {
-      int nbLu = lireEntier();
+    public static int demanderEntierPositif () {
+      int nbLu = demanderEntier();
       
       if(nbLu < 0)
         throw new IllegalArgumentException("Nombre lu negatif");
@@ -710,8 +710,8 @@ public class MaxEntiers {
     public static void main ( String [] args ) {
       int max; // Le max des nombres lus
       int nb1, nb2; // Chacun des nombres lus
-      nb1 = lireEntier ();
-      nb2 = lireEntierPositif ();
+      nb1 = demanderEntier ();
+      nb2 = demanderEntierPositif ();
       max = max(nb1,nb2);
       System.out. println ("max = " + max);
     }
@@ -902,7 +902,7 @@ fin algorithme
 		System.out.println("Operations");
 	}
   
-	public static double lireEntier() {  
+	public static double demanderEntier() {  
 	
 		Scanner clavier = new Scanner(System.in);
 		int nb;
@@ -940,8 +940,8 @@ fin algorithme
             <answer feedback="" correct="no">
               <formatted style="java">String chaine = entete(); System.out.println(chaine);</formatted>
             </answer>
-            <answer feedback="" correct="yes"><formatted style="java">double nombre = lireEntier();</formatted></answer>
-            <answer feedback="" correct="no"><formatted style="java">double nombre = lireEntier(5);</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">double nombre = demanderEntier();</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">double nombre = demanderEntier(5);</formatted></answer>
             <answer feedback="" correct="no"><formatted style="java">int max2 = max2(3.2,2.3);</formatted></answer>
             <answer feedback="" correct="yes"><formatted style="java">int max2 = max2(3,2);</formatted></answer>
             <answer feedback="" correct="no"><formatted style="java">int max2 = max2(3,2,5);</formatted></answer>
@@ -959,8 +959,8 @@ fin algorithme
             <answer feedback="" correct="no"><formatted style="java">Operation.entete("Operations");</formatted></answer>
             <answer feedback="" correct="no"><formatted style="java">entete();</formatted></answer>
             <answer feedback="" correct="yes"><formatted style="java">Operation.entete();</formatted></answer>
-            <answer feedback="" correct="yes"><formatted style="java">double nombre = Operation.lireEntier();</formatted></answer>
-            <answer feedback="" correct="no"><formatted style="java">double nombre = lireEntier();</formatted></answer>
+            <answer feedback="" correct="yes"><formatted style="java">double nombre = Operation.demanderEntier();</formatted></answer>
+            <answer feedback="" correct="no"><formatted style="java">double nombre = demanderEntier();</formatted></answer>
             <answer feedback="" correct="yes"><formatted style="java">int max2 = Operation.max2(1,2);</formatted></answer>
             <answer feedback="" correct="no"><formatted style="java">int max2 = max2(1,2);</formatted></answer>
           </multipleChoice>

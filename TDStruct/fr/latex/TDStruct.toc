@@ -4,6 +4,6 @@
 \contentsline {subsection}{\numberline {1.2}D\'eclaration d'une variable de type structur\'e}{3}{subsection.1.2}
 \contentsline {subsection}{\numberline {1.3}Utilisation des variables de type structur\'e}{3}{subsection.1.3}
 \contentsline {subsection}{\numberline {1.4}Exemple d'algorithme}{5}{subsection.1.4}
-\contentsline {section}{\numberline {2}Exercices}{6}{section.2}
+\contentsline {section}{\numberline {2}Exercices}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}\`A vous de jouer...}{6}{subsection.2.1}
-\contentsline {subparagraph}{Cercle}{7}{section*.2}
+\contentsline {subparagraph}{Cercle}{6}{section*.2}

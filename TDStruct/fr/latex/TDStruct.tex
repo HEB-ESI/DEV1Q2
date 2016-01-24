@@ -306,19 +306,19 @@ arrivée.heure ← départ.heure
 arrivée.minute ← départ.minute
 arrivée.seconde ← départ.seconde
       \end{verbatim}
-		    Une variable structur\'ee peut aussi \^etre le param\`etre d'un module, et un module peut \'egalement 
-		    renvoyer une \guillemotleft  valeur \guillemotright  de type structur\'e. Par exemple, l'ent\^ete d'un module renvoyant
+		    Une variable structur\'ee peut aussi \^etre le param\`etre d'un algorithme, et un algorithme peut \'egalement 
+		    renvoyer une \guillemotleft  valeur \guillemotright  de type structur\'e. Par exemple, l'ent\^ete d'un algorithme renvoyant
 		    le nombre de secondes \'ecoul\'ees entre une heure de d\'epart et d'arriv\'ee serait :
       
             \par
         \begin{verbatim}
-module nbSecondesEcoulées( départ↓, arrivée↓ : Moment) → entier
+algorithme nbSecondesEcoulées( départ↓, arrivée↓ : Moment) → entier
       \end{verbatim}
-		    On pourra aussi lire ou afficher une variable structur\'ee :
+		    On pourra aussi demander ou afficher une variable structur\'ee :
       
             \par
         \begin{verbatim}
-lire unMoment
+demander unMoment
 afficher unMoment
       \end{verbatim}
 		    Par contre, il n'est pas autoris\'e d'utiliser les op\'erateurs de comparaison (<, >) pour comparer 
@@ -330,7 +330,7 @@ afficher unMoment
             \par
         
         Si le besoin de comparer des variables structur\'ees se fait sentir, il faudra dans ce cas \'ecrire
-        des modules de comparaison adapt\'es aux structures utilis\'ees.
+        des algorithmes de comparaison adapt\'es aux structures utilis\'ees.
       
             \par
         
@@ -340,40 +340,25 @@ afficher unMoment
         \begin{verbatim}
 anniversaire ← {1, 9, 1989}
       \end{verbatim}\subsection{Exemple d'algorithme}
-		    Le module ci-dessous re\c coit en param\`etre deux dates ; la valeur renvoy\'ee est -1 si la premi\`ere
-        date est ant\'erieure \`a la deuxi\`eme, 0 si les deux dates sont identiques ou 1 si la premi\`ere date
-        est post\'erieure \`a la deuxi\`eme.
+		    L'algorithme ci-dessous re\c coit en param\`etre deux dates ; la valeur renvoy\'ee est n\'egative si la
+        premi\`ere date est ant\'erieure \`a la deuxi\`eme, 0 si les deux dates sont identiques ou positive si
+        la premi\`ere date est post\'erieure \`a la deuxi\`eme.
       
             \par
         \begin{verbatim}
-// Reçoit 2 dates en paramètres et retourne la valeur
-// –1 si la première date est antérieure à la deuxième
-// 0 si les deux dates sont identiques
-// 1 si la première date est postérieure à la deuxième.
-module comparerDates(date1↓, date2↓ : Date) → entier
-    résultat : entier
-    résultat ← -1 // valeur choisie par défaut
-    si date1.année ≥ date2.année alors
-      si date1.année > date2.année alors
-        résultat ← 1
-      sinon // les années sont identiques
-        si date1.mois ≥ date2.mois alors
-          si date1.mois > date2.mois alors
-            résultat ← 1
-          sinon // les années et les mois sont identiques
-            si date1.jour ≥ date2.jour alors
-              si date1.jour > date2.jour alors
-                résultat ← 1
-              sinon // les années, les mois et les jours sont identiques
-                résultat ← 0
-              fin si
-            fin si
-          fin si
-        fin si
-      fin si
+// Reçoit 2 dates en paramètres et retourne une valeur
+// négative si la première date est antérieure à la deuxième
+// nulle si les deux dates sont identiques
+// positive si la première date est postérieure à la deuxième.
+algorithme comparerDates(date1↓, date2↓ : Date) → entier
+    si date1.année = date2.année alors
+      retourner date1.année - date2.année
+    sinon si date1.mois = date2.mois alors
+      retourner date1.mois - date2.mois
+    sinon
+      retourner date1.jour - date2.jour
     fin si
-    retourner résultat
-fin module
+fin algorithme
       \end{verbatim}\section{Exercices}
 				Maintenant, mettons tout \c ca en pratique.
       
@@ -387,8 +372,7 @@ fin module
 			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
 			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
-			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
-			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
 			\item Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir pr\'ematur\'ement (si on a trouv\'e ce qu'on cherche par exemple).
 					\end{itemize}
 				
@@ -422,10 +406,10 @@ fin module
           
 					\begin{itemize}
 				
-			\item un module calculant la surface du cercle re\c cu en param\`etre ;
-			\item un module recevant 2 points en param\`etre et retournant le cercle dont le diam\`etre est le segment reliant ces 2 points ;
-			\item un module qui d\'etermine si un point donn\'e est dans un cercle ;
-			\item un module qui indique si 2 cercles ont une intersection.
+			\item un algorithme calculant la surface du cercle re\c cu en param\`etre ;
+			\item un algorithme recevant 2 points en param\`etre et retournant le cercle dont le diam\`etre est le segment reliant ces 2 points ;
+			\item un algorithme qui d\'etermine si un point donn\'e est dans un cercle ;
+			\item un algorithme qui indique si 2 cercles ont une intersection.
 					\end{itemize}
 				
             \par

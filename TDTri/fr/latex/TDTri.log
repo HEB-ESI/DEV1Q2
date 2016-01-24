@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  24 JAN 2016 10:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  24 JAN 2016 22:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -914,9 +914,9 @@ tion des minima successifs).[]
  []
 
 
-Overfull \hbox (13.12022pt too wide) in paragraph at lines 342--342
-[]\T1/lmtt/m/n/10.95 module triSélectionMinimaSuccessifs(tab$\OMS/lmsy/m/n/10.9
-5 #$$"$ \T1/lmtt/m/n/10.95 : tableau de n entiers)[] 
+Overfull \hbox (36.11516pt too wide) in paragraph at lines 342--342
+[]\T1/lmtt/m/n/10.95 algorithme triSélectionMinimaSuccessifs(tab$\OMS/lmsy/m/n/
+10.95 #$$"$ \T1/lmtt/m/n/10.95 : tableau de n entiers)[] 
  []
 
 
@@ -932,10 +932,10 @@ Overfull \hbox (94.14995pt too wide) in paragraph at lines 342--342
  []
 
 
-Overfull \hbox (93.32878pt too wide) in paragraph at lines 342--342
-[]\T1/lmtt/m/n/10.95 module positionMin(tab$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n
-/10.95 : tableau de n entiers, début, fin : entiers) $\OMS/lmsy/m/n/10.95 !$ \T
-1/lmtt/m/n/10.95 entier[] 
+Overfull \hbox (116.32372pt too wide) in paragraph at lines 342--342
+[]\T1/lmtt/m/n/10.95 algorithme positionMin(tab$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt
+/m/n/10.95 : tableau de n entiers, début, fin : entiers) $\OMS/lmsy/m/n/10.95 !
+$ \T1/lmtt/m/n/10.95 entier[] 
  []
 
 [4]
@@ -946,11 +946,11 @@ IV 2
  []
 
 [5]
-Overfull \hbox (161.4924pt too wide) in paragraph at lines 423--423
-[]\T1/lmtt/m/n/10.95 module rechercheDichotomique(tab$\OMS/lmsy/m/n/10.95 #$$"$
- \T1/lmtt/m/n/10.95 : tableau de n T, valeur$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/
-n/10.95 : T, pos$\OMS/lmsy/m/n/10.95 "$ \T1/lmtt/m/n/10.95 : entier) $\OMS/lmsy
-/m/n/10.95 !$ \T1/lmtt/m/n/10.95 booléen[] 
+Overfull \hbox (184.48734pt too wide) in paragraph at lines 423--423
+[]\T1/lmtt/m/n/10.95 algorithme rechercheDichotomique(tab$\OMS/lmsy/m/n/10.95 #
+$$"$ \T1/lmtt/m/n/10.95 : tableau de n T, valeur$\OMS/lmsy/m/n/10.95 #$ \T1/lmt
+t/m/n/10.95 : T, pos$\OMS/lmsy/m/n/10.95 "$ \T1/lmtt/m/n/10.95 : entier) $\OMS/
+lmsy/m/n/10.95 !$ \T1/lmtt/m/n/10.95 booléen[] 
  []
 
 
@@ -1000,7 +1000,7 @@ lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on TDTri.pdf (8 pages, 294844 bytes).
+Output written on TDTri.pdf (8 pages, 294856 bytes).
 PDF statistics:
  148 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  29 JAN 2015 19:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.20)  24 JAN 2016 22:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -908,46 +908,28 @@ ou en mo-di-fier le contenu,
 [3] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 )
-Overfull \hbox (6.82405pt too wide) in paragraph at lines 316--316
-[]\T1/lmtt/m/n/10.95 module nbSecondesEcoulées( départ$\OMS/lmsy/m/n/10.95 #$\T
-1/lmtt/m/n/10.95 , arrivée$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n/10.95 : Moment) 
-$\OMS/lmsy/m/n/10.95 !$ \T1/lmtt/m/n/10.95 entier[] 
+Overfull \hbox (29.81898pt too wide) in paragraph at lines 316--316
+[]\T1/lmtt/m/n/10.95 algorithme nbSecondesEcoulées( départ$\OMS/lmsy/m/n/10.95 
+#$\T1/lmtt/m/n/10.95 , arrivée$\OMS/lmsy/m/n/10.95 #$ \T1/lmtt/m/n/10.95 : Mome
+nt) $\OMS/lmsy/m/n/10.95 !$ \T1/lmtt/m/n/10.95 entier[] 
  []
 
-[4] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-34.def
-File: uni-34.def 2013/05/13 UCS: Unicode data U+2200..U+22FF
-)
-Overfull \hbox (53.90881pt too wide) in paragraph at lines 377--377
-[]              \T1/lmtt/m/n/10.95 sinon // les années, les mois et les jours s
-ont identiques[] 
- []
-
-[5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 433.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 433.
+[4] [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 417.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 417.
  (./TDStruct.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 433.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 433.
-
-
-Package rerunfilecheck Warning: File `TDStruct.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `TDStruct.out':
-(rerunfilecheck)             Before: 3DDD764823809255B5A100E364ABC2A3;533
-(rerunfilecheck)             After:  BD19CD5E57BB69146592314180F81836;535.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 433.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 417.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 417.
+Package rerunfilecheck Info: File `TDStruct.out' has not changed.
+(rerunfilecheck)             Checksum: BD19CD5E57BB69146592314180F81836;535.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 417.
  ) 
 Here is how much of TeX's memory you used:
- 13093 strings out of 493304
- 189235 string characters out of 6139871
- 283881 words of memory out of 5000000
- 16288 multiletter control sequences out of 15000+600000
+ 12201 strings out of 493304
+ 179551 string characters out of 6139871
+ 282881 words of memory out of 5000000
+ 15403 multiletter control sequences out of 15000+600000
  55893 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,43p,336b,686s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -961,10 +943,10 @@ lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmtt8.pfb>
-Output written on TDStruct.pdf (7 pages, 279226 bytes).
+Output written on TDStruct.pdf (6 pages, 276806 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 114 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
  67 words of extra memory for PDF output out of 10000 (max. 10000000)
 

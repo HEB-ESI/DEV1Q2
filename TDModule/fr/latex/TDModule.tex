@@ -494,7 +494,7 @@ presenter ("moyenne de 2 nombres");
             \par
         \begin{Java}
 
-public static int lireEntier () {
+public static int demanderEntier () {
     Scanner clavier = new Scanner(System.in);
     int nb;
     System.out.println ("Entrez un nombre entier !");
@@ -506,7 +506,7 @@ public static int lireEntier () {
             \par
         \begin{Java}
 
-int nb = lireEntier ();
+int nb = demanderEntier ();
 				\end{Java}Montrons par un exemple comment \'ecrire la m\'ethode max2 : 
             \par
         \begin{Java}
@@ -536,7 +536,7 @@ public class Test{
             \par
         \begin{verbatim}
 // Lit un nombre, l'affiche s’il est positif et sinon lance une erreur.
-algorithme lirePositif ()
+algorithme demanderPositif ()
     nb : réel
     demander nb
     si nb < 0 alors
@@ -852,7 +852,7 @@ public class MaxEntiers {
     * Le nombre est lu sur l entree standard ( le clavier ).
     * @return le nombre entier lu .
     */
-    public static int lireEntier () {
+    public static int demanderEntier () {
       Scanner clavier = new Scanner(System.in);
       System.out. println ("Entrez un nombre entier!");
       return clavier.nextInt ();
@@ -864,8 +864,8 @@ public class MaxEntiers {
     * @return le nombre entier lu .
     * @throws IllegalArgumentException si le nombre lu est strictement negatif.
     */
-    public static int lireEntierPositif () {
-      int nbLu = lireEntier();
+    public static int demanderEntierPositif () {
+      int nbLu = demanderEntier();
       
       if(nbLu < 0)
         throw new IllegalArgumentException("Nombre lu negatif");
@@ -880,8 +880,8 @@ public class MaxEntiers {
     public static void main ( String [] args ) {
       int max; // Le max des nombres lus
       int nb1, nb2; // Chacun des nombres lus
-      nb1 = lireEntier ();
-      nb2 = lireEntierPositif ();
+      nb1 = demanderEntier ();
+      nb2 = demanderEntierPositif ();
       max = max(nb1,nb2);
       System.out. println ("max = " + max);
     }
@@ -1027,7 +1027,7 @@ public class Operation {
 		System.out.println("Operations");
 	}
   
-	public static double lireEntier() {  
+	public static double demanderEntier() {  
 	
 		Scanner clavier = new Scanner(System.in);
 		int nb;
@@ -1071,9 +1071,9 @@ public class Operation {
         
             \item[ \ding{"6F} ] \verb|String chaine = entete(); System.out.println(chaine);|
         
-            \item[ \ding{"6F} ] \verb|double nombre = lireEntier();|
+            \item[ \ding{"6F} ] \verb|double nombre = demanderEntier();|
         
-            \item[ \ding{"6F} ] \verb|double nombre = lireEntier(5);|
+            \item[ \ding{"6F} ] \verb|double nombre = demanderEntier(5);|
         
             \item[ \ding{"6F} ] \verb|int max2 = max2(3.2,2.3);|
         
@@ -1103,9 +1103,9 @@ public class Operation {
         
             \item[ \ding{"6F} ] \verb|Operation.entete();|
         
-            \item[ \ding{"6F} ] \verb|double nombre = Operation.lireEntier();|
+            \item[ \ding{"6F} ] \verb|double nombre = Operation.demanderEntier();|
         
-            \item[ \ding{"6F} ] \verb|double nombre = lireEntier();|
+            \item[ \ding{"6F} ] \verb|double nombre = demanderEntier();|
         
             \item[ \ding{"6F} ] \verb|int max2 = Operation.max2(1,2);|
         

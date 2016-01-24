@@ -356,9 +356,9 @@ fin si
       <paragraph>Par exemple : </paragraph>
       <paragraph cssClass="code">
 // Lit un nombre et affiche si ce nombre est strictement positif , strictement négatif ou nul.
-module signeNombre()
+algorithme signeNombre()
     nb : entier
-    lire nb
+    demander nb
     selon que 
       nb <![CDATA[<]]> 0 :
         afficher "le nombre", nb, " est négatif"
@@ -367,7 +367,7 @@ module signeNombre()
       autres : 
         afficher "le nombre", nb, " est nul"
     fin selon que
-fin module
+fin algorithme
     </paragraph>
     </look>
     

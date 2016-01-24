@@ -109,7 +109,7 @@
 		  
       <paragraph cssClass="code">
 <![CDATA[/// Trie le tableau reçu en paramètre (via un tri par insertion).
-module triInsertion(tab↓↑ : tableau de n entiers)
+algorithme triInsertion(tab↓↑ : tableau de n entiers)
     i, j, valAInsérer : entiers
     pour i de 1 à n-1 faire
       valAInsérer ← tab[i]
@@ -122,7 +122,7 @@ module triInsertion(tab↓↑ : tableau de n entiers)
       fin tant que
       tab[j+1] ← valAInsérer
     fin pour
-fin module
+fin algorithme
 ]]></paragraph>
     </clarify>
     
@@ -137,26 +137,26 @@ fin module
       </paragraph>
       <paragraph cssClass="code">
 <![CDATA[// Trie le tableau reçu en paramètre (via un tri par sélection des minima successifs).
-module triSélectionMinimaSuccessifs(tab↓↑ : tableau de n entiers)
+algorithme triSélectionMinimaSuccessifs(tab↓↑ : tableau de n entiers)
     i, indiceMin : entier
     pour i de 0 à n – 2 faire // i correspond à l’étape de l’algorithme
       indiceMin ← positionMin( tab, i, n-1 )
       swap( tab[i], tab[indiceMin] )
     fin pour
-fin module
+fin algorithme
 
 
 // Échange le contenu de 2 variables.
-module swap(a↓↑, b↓↑ : entiers)
+algorithme swap(a↓↑, b↓↑ : entiers)
     aux : entiers
     aux ← a
     a ← b
     b ← aux
-fin module
+fin algorithme
 
 
 // Retourne l’indice du minimum entre les indices début et fin du tableau reçu.
-module positionMin(tab↓ : tableau de n entiers, début, fin : entiers) → entier
+algorithme positionMin(tab↓ : tableau de n entiers, début, fin : entiers) → entier
     indiceMin, i : entiers
     indiceMin ← début
     pour i de début+1 à fin faire
@@ -165,7 +165,7 @@ module positionMin(tab↓ : tableau de n entiers, début, fin : entiers) → ent
       fin si
     fin pour
     retourner indiceMin
-fin module
+fin algorithme
 ]]>
       </paragraph>
     </clarify>
@@ -183,7 +183,7 @@ fin module
 		  
 		  <paragraph cssClass="code">
 <![CDATA[// Trie le tableau reçu en paramètre (via un tri bulle).
-module triBulle(tab↓↑ : tableau de n entiers)
+algorithme triBulle(tab↓↑ : tableau de n entiers)
     indiceBulle, i : entiers
     pour indiceBulle de 1 à n faire
       pour i de n – 2 à indiceBulle par – 1 faire
@@ -192,16 +192,16 @@ module triBulle(tab↓↑ : tableau de n entiers)
         fin si
       fin pour
     fin pour
-fin module
+fin algorithme
 
 
 // Échange le contenu de 2 variables.
-module swap(a↓↑, b↓↑ : entiers)
+algorithme swap(a↓↑, b↓↑ : entiers)
     aux : entiers
     aux ← a
     a ← b
     b ← aux
-fin module
+fin algorithme
 ]]></paragraph>
     </clarify>
     </learningObject>
@@ -233,7 +233,7 @@ fin module
 		  
 		  <paragraph cssClass="code">
 <![CDATA[
-module rechercheDichotomique(tab↓↑ : tableau de n T, valeur↓ : T, pos↑ : entier) → booléen
+algorithme rechercheDichotomique(tab↓↑ : tableau de n T, valeur↓ : T, pos↑ : entier) → booléen
     indiceDroit, indiceGauche, indiceMédian : entiers
     candidat : T
     trouvé : booléen
@@ -260,7 +260,7 @@ module rechercheDichotomique(tab↓↑ : tableau de n T, valeur↓ : T, pos↑ :
       // on vérifiera que indiceGauche donne la valeur où elle pourrait être insérée.
     fin si
     retourner trouvé
-fin module
+fin algorithme
 ]]></paragraph>
     </clarify>
     </learningObject>

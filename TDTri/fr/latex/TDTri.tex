@@ -288,7 +288,7 @@
             \par
         \begin{verbatim}
 /// Trie le tableau reçu en paramètre (via un tri par insertion).
-module triInsertion(tab↓↑ : tableau de n entiers)
+algorithme triInsertion(tab↓↑ : tableau de n entiers)
     i, j, valAInsérer : entiers
     pour i de 1 à n-1 faire
       valAInsérer ← tab[i]
@@ -301,7 +301,7 @@ module triInsertion(tab↓↑ : tableau de n entiers)
       fin tant que
       tab[j+1] ← valAInsérer
     fin pour
-fin module
+fin algorithme
 \end{verbatim}\subsection{Tri par s\'election des minima successifs}
 		    Dans ce tri, on recherche \`a chaque \'etape la plus petite valeur de l'ensemble non encore tri\'e
         et on peut la placer imm\'ediatement \`a sa position d\'efinitive.
@@ -309,26 +309,26 @@ fin module
             \par
         \begin{verbatim}
 // Trie le tableau reçu en paramètre (via un tri par sélection des minima successifs).
-module triSélectionMinimaSuccessifs(tab↓↑ : tableau de n entiers)
+algorithme triSélectionMinimaSuccessifs(tab↓↑ : tableau de n entiers)
     i, indiceMin : entier
     pour i de 0 à n – 2 faire // i correspond à l’étape de l’algorithme
       indiceMin ← positionMin( tab, i, n-1 )
       swap( tab[i], tab[indiceMin] )
     fin pour
-fin module
+fin algorithme
 
 
 // Échange le contenu de 2 variables.
-module swap(a↓↑, b↓↑ : entiers)
+algorithme swap(a↓↑, b↓↑ : entiers)
     aux : entiers
     aux ← a
     a ← b
     b ← aux
-fin module
+fin algorithme
 
 
 // Retourne l’indice du minimum entre les indices début et fin du tableau reçu.
-module positionMin(tab↓ : tableau de n entiers, début, fin : entiers) → entier
+algorithme positionMin(tab↓ : tableau de n entiers, début, fin : entiers) → entier
     indiceMin, i : entiers
     indiceMin ← début
     pour i de début+1 à fin faire
@@ -337,7 +337,7 @@ module positionMin(tab↓ : tableau de n entiers, début, fin : entiers) → ent
       fin si
     fin pour
     retourner indiceMin
-fin module
+fin algorithme
 
       \end{verbatim}\subsection{Tri bulle}
 		    Il s'agit d'un tri par permutations ayant pour but d'amener \`a chaque \'etape \`a la \guillemotleft  surface \guillemotright 
@@ -348,7 +348,7 @@ fin module
             \par
         \begin{verbatim}
 // Trie le tableau reçu en paramètre (via un tri bulle).
-module triBulle(tab↓↑ : tableau de n entiers)
+algorithme triBulle(tab↓↑ : tableau de n entiers)
     indiceBulle, i : entiers
     pour indiceBulle de 1 à n faire
       pour i de n – 2 à indiceBulle par – 1 faire
@@ -357,16 +357,16 @@ module triBulle(tab↓↑ : tableau de n entiers)
         fin si
       fin pour
     fin pour
-fin module
+fin algorithme
 
 
 // Échange le contenu de 2 variables.
-module swap(a↓↑, b↓↑ : entiers)
+algorithme swap(a↓↑, b↓↑ : entiers)
     aux : entiers
     aux ← a
     a ← b
     b ← aux
-fin module
+fin algorithme
 \end{verbatim}\subsection{Recherche dichotomique}
 		    La recherche dichotomique a pour essence de r\'eduire \`a chaque \'etape la taille de l'ensemble
         de recherche de moiti\'e, jusqu'\`a ce qu'il ne reste qu'un seul \'el\'ement dont la valeur devrait
@@ -392,7 +392,7 @@ fin module
             \par
         \begin{verbatim}
 
-module rechercheDichotomique(tab↓↑ : tableau de n T, valeur↓ : T, pos↑ : entier) → booléen
+algorithme rechercheDichotomique(tab↓↑ : tableau de n T, valeur↓ : T, pos↑ : entier) → booléen
     indiceDroit, indiceGauche, indiceMédian : entiers
     candidat : T
     trouvé : booléen
@@ -419,7 +419,7 @@ module rechercheDichotomique(tab↓↑ : tableau de n T, valeur↓ : T, pos↑ :
       // on vérifiera que indiceGauche donne la valeur où elle pourrait être insérée.
     fin si
     retourner trouvé
-fin module
+fin algorithme
 \end{verbatim}\section{Exercices}
 				Maintenant, mettons tout \c ca en pratique.
       
@@ -433,7 +433,7 @@ fin module
 			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
 			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
-			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
 			\item Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir pr\'ematur\'ement (si on a trouv\'e ce qu'on cherche par exemple).
 			\item Pour la partie Java, dessinez l'arborescence des fichiers. 

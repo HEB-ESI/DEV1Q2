@@ -149,18 +149,18 @@ arrivée.minute ← départ.minute
 arrivée.seconde ← départ.seconde
       </paragraph>
       <paragraph>
-		    Une variable structurée peut aussi être le paramètre d’un module, et un module peut également 
-		    renvoyer une « valeur » de type structuré. Par exemple, l’entête d’un module renvoyant
+		    Une variable structurée peut aussi être le paramètre d’un algorithme, et un algorithme peut également 
+		    renvoyer une « valeur » de type structuré. Par exemple, l’entête d’un algorithme renvoyant
 		    le nombre de secondes écoulées entre une heure de départ et d’arrivée serait :
       </paragraph>
       <paragraph cssClass="code">
-module nbSecondesEcoulées( départ↓, arrivée↓ : Moment) → entier
+algorithme nbSecondesEcoulées( départ↓, arrivée↓ : Moment) → entier
       </paragraph>
       <paragraph>
-		    On pourra aussi lire ou afficher une variable structurée :
+		    On pourra aussi demander ou afficher une variable structurée :
       </paragraph>
       <paragraph cssClass="code">
-lire unMoment
+demander unMoment
 afficher unMoment
       </paragraph>
       <paragraph>
@@ -172,7 +172,7 @@ afficher unMoment
       </paragraph>
       <paragraph>
         Si le besoin de comparer des variables structurées se fait sentir, il faudra dans ce cas écrire
-        des modules de comparaison adaptés aux structures utilisées.
+        des algorithmes de comparaison adaptés aux structures utilisées.
       </paragraph>
       <paragraph>
         Par facilité d’écriture, on peut assigner tous les champs en une fois via des « {} ». Exemple :
@@ -186,39 +186,24 @@ anniversaire ← {1, 9, 1989}
 		<learningObject title="Exemple d’algorithme">
 		<clarify>
 		  <paragraph>
-		    Le module ci-dessous reçoit en paramètre deux dates ; la valeur renvoyée est –1 si la première
-        date est antérieure à la deuxième, 0 si les deux dates sont identiques ou 1 si la première date
-        est postérieure à la deuxième.
+		    L'algorithme ci-dessous reçoit en paramètre deux dates ; la valeur renvoyée est négative si la
+        première date est antérieure à la deuxième, 0 si les deux dates sont identiques ou positive si
+        la première date est postérieure à la deuxième.
       </paragraph>
       <paragraph cssClass="code">
-// Reçoit 2 dates en paramètres et retourne la valeur
-// –1 si la première date est antérieure à la deuxième
-// 0 si les deux dates sont identiques
-// 1 si la première date est postérieure à la deuxième.
-module comparerDates(date1↓, date2↓ : Date) → entier
-    résultat : entier
-    résultat ← -1 // valeur choisie par défaut
-    si date1.année ≥ date2.année alors
-      si date1.année > date2.année alors
-        résultat ← 1
-      sinon // les années sont identiques
-        si date1.mois ≥ date2.mois alors
-          si date1.mois > date2.mois alors
-            résultat ← 1
-          sinon // les années et les mois sont identiques
-            si date1.jour ≥ date2.jour alors
-              si date1.jour > date2.jour alors
-                résultat ← 1
-              sinon // les années, les mois et les jours sont identiques
-                résultat ← 0
-              fin si
-            fin si
-          fin si
-        fin si
-      fin si
+// Reçoit 2 dates en paramètres et retourne une valeur
+// négative si la première date est antérieure à la deuxième
+// nulle si les deux dates sont identiques
+// positive si la première date est postérieure à la deuxième.
+algorithme comparerDates(date1↓, date2↓ : Date) → entier
+    si date1.année = date2.année alors
+      retourner date1.année - date2.année
+    sinon si date1.mois = date2.mois alors
+      retourner date1.mois - date2.mois
+    sinon
+      retourner date1.jour - date2.jour
     fin si
-    retourner résultat
-fin module
+fin algorithme
       </paragraph>
     </clarify>
 		</learningObject>
@@ -246,8 +231,7 @@ fin module
         <item>résolvez le problème via quelques exemples précis ;</item>
         <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
         <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
-        <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
         <item>Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir prématurément (si on a trouvé ce qu'on cherche par exemple).</item>
       </list>
     </paragraph>
@@ -271,10 +255,10 @@ fin module
           Définir un type Cercle pouvant décrire de façon commode un cercle quelconque dans un
           espace à deux dimensions. Écrire ensuite
           <list listStyle="unordered">
-            <item>un module calculant la surface du cercle reçu en paramètre ;</item>
-            <item>un module recevant 2 points en paramètre et retournant le cercle dont le diamètre est le segment reliant ces 2 points ;</item>
-            <item>un module qui détermine si un point donné est dans un cercle ;</item>
-            <item>un module qui indique si 2 cercles ont une intersection.</item>
+            <item>un algorithme calculant la surface du cercle reçu en paramètre ;</item>
+            <item>un algorithme recevant 2 points en paramètre et retournant le cercle dont le diamètre est le segment reliant ces 2 points ;</item>
+            <item>un algorithme qui détermine si un point donné est dans un cercle ;</item>
+            <item>un algorithme qui indique si 2 cercles ont une intersection.</item>
           </list>
         </paragraph>
       </act>
