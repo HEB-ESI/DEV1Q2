@@ -188,7 +188,7 @@
 	</unit>
 		
 	<!-- =================================================================== -->
-	<unit label="SystèmeDeFichiers" title="Système de fichiers, chemin absolu et relatif">
+	<unit label="SystemeDeFichiers" title="Système de fichiers, chemin absolu et relatif">
 	<!-- =================================================================== -->
 		
 		<entry>
