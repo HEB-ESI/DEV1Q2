@@ -1,8 +1,8 @@
-<?xml version="1.0" ?><config xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.elml.ch ../../core/structure/config.xsd">
+﻿<?xml version="1.0" ?><config xmlns="http://www.elml.ch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.elml.ch ../../core/structure/config.xsd">
   <!--These parameters are used in all version (online and print) -->
   <general>
     <!--Enter the contact Email that students will use to contact the tutor -->
-    <contact>mcodutti@heb.be</contact>
+    <contact>cleruste@heb.be</contact>
     <!--Enter the URL to your servers home page -->
     <server>http://www.heb.be/esi</server>
     <!--Would like to make a transformation for role 'tutor' or 'student'? -->
