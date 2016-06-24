@@ -14,8 +14,7 @@
         <item>résolvez le problème via quelques exemples précis ;</item>
         <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
         <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
-        <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
         <item>Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir prématurément (si on a trouvé ce qu'on cherche par exemple).</item>
       </list>
     </paragraph>
@@ -24,13 +23,13 @@
       Définir un type Rectangle pouvant décrire de façon commode un rectangle dans un espace
       à deux dimensions et dont les côtés sont parallèles aux axes des coordonnées. Écrire ensuite
       <list listStyle="unordered">
-        <item>un module calculant le périmètre d’un rectangle reçu en paramètre ;</item>
-        <item>un module calculant la surface d’un rectangle reçu en paramètre ;</item>
-        <item>un module recevant en paramètre un rectangle R et les coordonnées d’un point P, et
+        <item>un algorithme calculant le périmètre d’un rectangle reçu en paramètre ;</item>
+        <item>un algorithme calculant la surface d’un rectangle reçu en paramètre ;</item>
+        <item>un algorithme recevant en paramètre un rectangle R et les coordonnées d’un point P, et
           renvoyant vrai si et seulement si le point P est à l’intérieur du rectangle R ;</item>
-        <item>un module recevant en paramètre un rectangle R et les coordonnées d’un point P, et
+        <item>un algorithme recevant en paramètre un rectangle R et les coordonnées d’un point P, et
           renvoyant vrai si et seulement si le point P est sur le bord du rectangle R ;</item>
-        <item>un module recevant en paramètre deux rectangles et renvoyant la valeur booléenne
+        <item>un algorithme recevant en paramètre deux rectangles et renvoyant la valeur booléenne
           vrai si et seulement si ces deux rectangles ont une intersection.</item>
       </list>
     </paragraph>

@@ -1737,13 +1737,13 @@ public class Exercice7 {
           </list>
         </paragraph>
         <paragraph title="Exercice résolu">
-          La somme des angles d’un triangle est égale dans tous les cas à 180°. Écrivez un algorithme qui lit la valeur de deux angles d’un triangle, et affiche la valeur du 3e. 
+          La somme des angles d’un triangle est égale dans tous les cas à 180°. Écrivez un algorithme qui reçoit la valeur de deux angles d’un triangle, et retourne la valeur du 3e. 
         </paragraph>
-        <paragraph>Par exemple, si on lit 40 pour le premier angle et 60 pour le second, on doit trouver 80 pour le troisième (40 + 60 = 100, le troisième angle vaut donc 80).</paragraph>
-        <paragraph>Par exemple, si on lit 90 pour le premier angle et 10 pour le second, on doit trouver 80 pour le troisième (90 + 10 = 100, le troisième angle vaut donc 80).</paragraph>
-        <paragraph>Par exemple, si on lit 89 pour le premier angle et 30 pour le second, on doit trouver 61 pour le troisième (89 + 30 = 119, le troisième angle vaut donc 61).</paragraph>
-        <paragraph>Par exemple, si on lit 5 pour le premier angle et 5 pour le second, on doit trouver 170 pour le troisième (5 + 5 = 10, le troisième angle vaut donc 170).</paragraph>
-        <paragraph>Par exemple, si on lit 0 pour le premier angle et 180 pour le second, on doit trouver 0 pour le troisième (0 + 180 = 180, le troisième angle vaut donc 0).</paragraph>
+        <paragraph>Par exemple, si on reçoit 40 pour le premier angle et 60 pour le second, on doit retourner 80 pour le troisième (40 + 60 = 100, le troisième angle vaut donc 80).</paragraph>
+        <paragraph>Par exemple, si on reçoit 90 pour le premier angle et 10 pour le second, on doit retourner 80 pour le troisième (90 + 10 = 100, le troisième angle vaut donc 80).</paragraph>
+        <paragraph>Par exemple, si on reçoit 89 pour le premier angle et 30 pour le second, on doit retourner 61 pour le troisième (89 + 30 = 119, le troisième angle vaut donc 61).</paragraph>
+        <paragraph>Par exemple, si on reçoit 5 pour le premier angle et 5 pour le second, on doit retourner 170 pour le troisième (5 + 5 = 10, le troisième angle vaut donc 170).</paragraph>
+        <paragraph>Par exemple, si on reçoit 0 pour le premier angle et 180 pour le second, on doit retourner 0 pour le troisième (0 + 180 = 180, le troisième angle vaut donc 0).</paragraph>
         <paragraph>
           Quelles sont les données ? :
           <list listStyle="ordered">
@@ -1794,7 +1794,7 @@ public class Triangle{
             <item>étant donné le prix unitaire d’un produit (hors TVA), le taux de TVA (en %) 
             et la quantité de produit vendue à un client, calcule et retourne le prix total à payer par ce client.</item>
             <item>réalise la permutation du contenu de deux variables.</item>
-            <item>calcule la somme des chiffres d’un nombre entier de 3 chiffres. Réflexion : l’algorithme est-il aussi valide pour les entiers inférieurs à 100 ?</item>
+            <item>calcule et retourne la somme des chiffres d’un nombre entier de 3 chiffres reçu en paramètre. Réflexion  : l’algorithme est-il aussi valide pour les entiers inférieurs à 100 ?</item>
             <item>étant donné un moment dans la journée donné par trois nombres reçus, à savoir, heure, minute et seconde, calcule le nombre de secondes écoulées depuis minuit.</item>
           </list>
         </paragraph>

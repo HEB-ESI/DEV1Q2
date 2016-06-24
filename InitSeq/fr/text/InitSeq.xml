@@ -1002,14 +1002,14 @@ public class Exercice5 {
         Écrivez les algorithmes et codez les programmes Java correspondant qui 
           <list listStyle="ordered">
             <item>réalisent la permutation du contenu de deux variables.</item>
-            <item>étant donné un moment dans la journée donné par trois nombres lus, à savoir, heure, minute et seconde, calculent le nombre de secondes écoulées depuis minuit.</item>
-            <item>étant donné un temps écoulé dans la journée exprimé en secondes, calculent et afficnthe ce temps sous la forme de trois nombres (heure, minute et seconde). <newLine/>
+            <item>étant donné un moment dans la journée donné par trois nombres, à savoir, heure, minute et seconde, calculent et retournent le nombre de secondes écoulées depuis minuit.</item>
+            <item>étant donné un temps écoulé dans la journée exprimé en secondes, calculent et affichent ce temps sous la forme de trois nombres (heure, minute et seconde). <newLine/>
             Ex : 10000 secondes donnera 2h 46’40”</item>
           </list>
         </paragraph>
         
         <paragraph>
-          Écrivez un algorithme qui lit un nombre pouvant prendre des valeurs de 100 à 999 et qui affiche ce même nombre mais renversé. 
+          Écrivez un algorithme qui reçoit un nombre pouvant prendre des valeurs de 100 à 999 et qui retourne ce même nombre mais renversé. 
           Le dernier chiffre devient le premier et inversement. <newLine/>
           Par exemple : le nombre 123 devient 321 et le nombre 410 deviendra 14.
         </paragraph>

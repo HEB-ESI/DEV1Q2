@@ -14,10 +14,10 @@
         <item>résolvez le problème via quelques exemples précis ;</item>
         <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
         <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
         <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
         <item>Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir prématurément (si on a trouvé ce qu'on cherche par exemple).</item>
-        <item>Pour la partie Java, dessinez l'arborescence des fichier. </item>
+        <item>Pour la partie Java, dessinez l'arborescence des fichiers. </item>
         <item><formatted style="bold">Écrivez le plan de tests en écrivant l'algorithme. Codez les tests après avoir écrit le code Java.</formatted></item>
       </list>
     </paragraph>
@@ -34,11 +34,11 @@
           le texte "ZUT" devient "BWV".
           Bien sûr, il faut que l’expéditeur du message et le récepteur se soient mis d’accord sur la
           valeur de k.
-          On vous demande d’écrire un module qui reçoit une chaine ne contenant que des lettres
+          On vous demande d’écrire un algorithme qui reçoit une chaine ne contenant que des lettres
           majuscules ainsi que la valeur de k et qui retourne la version chiffrée du message.
-          On vous demande également d’écrire le module de déchiffrement. Ce module reçoit un mes-
-          sage chiffré et la valeur de k qui a été utilisée pour le chiffrer et retourne le message en clair.
-          Attention ! Ce second module est très simple.
+          On vous demande également d’écrire l'algorithme de déchiffrement. Cet algorithme reçoit un message 
+          chiffré et la valeur de k qui a été utilisée pour le chiffrer et retourne le message en clair.
+          Attention ! Ce second algorithme est très simple.
         </paragraph>
         <paragraph>Écrivez le code java correspondant ainsi que la javadoc et les tests.</paragraph>
         
@@ -50,7 +50,7 @@
           comprendre via une analyse statistique. On analyse la fréquence de chaque lettre du message
           et la plus fréquente remplace probablement le ’E’. Par exemple, si la lettre la plus fréquente
           est le ’B’, il est probable que le message soit chiffré avec un décalage de 3.
-          Écrivez un module qui reçoit une chaine - le message chiffré par le chiffre de César - et
+          Écrivez un algorithme qui reçoit une chaine - le message chiffré par le chiffre de César - et
           retourne une valeur probable pour le déplacement utilisé pour le chiffrer.
         </paragraph>
         <paragraph>Écrivez le code java correspondant ainsi que la javadoc et les tests.</paragraph>
@@ -58,16 +58,16 @@
         <paragraph title="Le caractère le plus présent">
           Écrire un algorithme qui, à partir d’un texte donné sous forme de chaine, retourne le caractère
           qui s’y trouve le plus de fois. N.B. : on peut simplifier le problème ici en supposant que le
-          texte ne contient que des caractères minuscules non accentués, ainsi que l’absence d’ex-aeéquo.
-          Exemple : pour "roberto roule en moto à oslo", l’algorithme renverra ’o’.
+          texte ne contient que des caractères minuscules non accentués, ainsi que l’absence d’ex &#230;quo.
+          Exemple : pour "roberto roule en moto a oslo", l’algorithme renverra ’o’.
         </paragraph>
         <paragraph>Écrivez le code java correspondant ainsi que la javadoc et les tests.</paragraph>
         
         <paragraph title="Palindrome">
-          Soit le tableau phrase : tableau[1 à n] de caractères (caractère alphabétique, le caractère
+          Soit le tableau phrase : tableau de n caractères (caractère alphabétique, le caractère
           d’espacement ou un caractère de ponctuation). Dans ce tableau, des lettres qui se suivent
           constituent un mot. Ces mots sont séparés les uns des autres par un ou plusieurs caractères
-          d’espacement ou de ponctuation. Écrire un module qui reçoit en paramètre ce tableau et
+          d’espacement ou de ponctuation. Écrire un algorithme qui reçoit en paramètre ce tableau et
           qui vérifie si la phrase formée par les mots de ce tableau est un palindrome. Le résultat sera
           communiqué par le renvoi d’une valeur booléenne. Pour rappel, une phrase palindrome est
           une phrase qui peut se lire dans les deux sens sans tenir compte des espacements et de la

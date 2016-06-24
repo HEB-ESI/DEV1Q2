@@ -11,15 +11,14 @@
         <item>résolvez le problème via quelques exemples précis ;</item>
         <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
         <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
-        <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
+        <item>déclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
         <item>Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir prématurément (si on a trouvé ce qu'on cherche par exemple).</item>
       </list>
     </paragraph>
 		<paragraph>
 			Soit un tableau carré (à n lignes et n colonnes) d’éléments de type Couleur dont les valeurs possibles sont ‘noir’ et ‘blanc’. 
 			Au départ, toutes les cases du tableau sont initialisées à ‘blanc’. 
-			Écrire un module qui reçoit ce tableau en paramètre et noircit les cases de façon à obtenir un motif en forme de sablier comme le suggère l’exemple ci-dessous. 
+			Écrire un algorithme qui reçoit ce tableau en paramètre et noircit les cases de façon à obtenir un motif en forme de sablier comme le suggère l’exemple ci-dessous. 
     </paragraph>
     <paragraph>
       N.B. : l’exemple est donné pour un tableau 11 x 11, mais votre algorithme doit fonctionner quelle que soit la taille du tableau.

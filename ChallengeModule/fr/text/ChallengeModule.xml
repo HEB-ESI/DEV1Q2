@@ -27,8 +27,7 @@
     <paragraph title="Longueur du pas du Zébu">
       La longueur du pas du Zébu est liée à son poids et au nombre PI par la formule (complètement farfelue) suivante :
       <formatted style="code">pas = √ (poids / |1 − PI|)</formatted>
-      Écrivez un algorithme qui reçoit le poids du Zébu en paramètre et retourne la
-      longueur du pas du Zébu correspondante.
+      Écrivez un algorithme qui reçoit le poids du Zébu en paramètre et retourne la longueur du pas du Zébu correspondante.
     </paragraph>
     <paragraph>Si le poids reçu en paramètre est négatif, vous lancerez une erreur qui arrêtera le programme.</paragraph>
     
