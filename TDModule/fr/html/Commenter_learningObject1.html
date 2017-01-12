@@ -31,13 +31,13 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="unit_Commenter.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Commenter_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Commenter_learningObject1.html">1.6.1. Commenter une méthode</h1>
-      <div id="d8e332.html" class="clarify">
-         <p class="paragraph" id="d8e333">
-            <ul class="list" id="d8e334">
+      <div id="d8e544.html" class="clarify">
+         <p class="paragraph" id="d8e546">
+            <ul class="list" id="d8e548">
                <li class="itemAlt">
                   Pour qui ?
                   
-                  <ul class="list" id="d8e337">
+                  <ul class="list" id="d8e552">
                      <li class="itemAlt">Le programmeur qui va utiliser le code</li>
                      <li class="item">Le programmeur qui va maintenir le code (peut-être vous)</li>
                   </ul>
@@ -45,7 +45,7 @@
                <li class="item">
                   Quel type de documentation ?
                   
-                  <ul class="list" id="d8e344">
+                  <ul class="list" id="d8e564">
                      <li class="itemAlt">Ce que fait la méthode/classe</li>
                      <li class="item">Comment elle le fait (peut être réduit au minimum si code lisible)</li>
                   </ul>
@@ -53,7 +53,7 @@
                <li class="itemAlt">
                   Qui est intéressé par quoi ?
                   
-                  <ul class="list" id="d8e351">
+                  <ul class="list" id="d8e576">
                      <li class="itemAlt">Le programmeur-utilisateur : intéressé uniquement par le quoi</li>
                      <li class="item">Le programmeur-mainteneur : intéressé par le quoi et le comment</li>
                   </ul>
@@ -61,11 +61,11 @@
                <li class="item">
                   Où mettre la documentation ?
                   
-                  <ul class="list" id="d8e358">
+                  <ul class="list" id="d8e588">
                      <li class="itemAlt">
                         Avec le code
                         
-                        <ul class="list" id="d8e361">
+                        <ul class="list" id="d8e592">
                            <li class="itemAlt">Plus facile pour le maintenir</li>
                            <li class="item">Plus de chance de garder la synchronisation avec le code</li>
                         </ul>
@@ -76,8 +76,8 @@
             </ul>
          </p>
          <h4>litterate programming</h4>
-         <p class="paragraph" title="litterate programming" id="d8e368">
-            <ul class="list" id="d8e369">
+         <p class="paragraph" title="litterate programming" id="d8e609">
+            <ul class="list" id="d8e611">
                <li class="itemAlt">la documentation accompagne le code</li>
                <li class="item">un outil extrait cette documentation pour en faire un document facile à lire</li>
                <li class="itemAlt">toute la documentation suit la même structure, le même style, donc, c'est plus facile
@@ -85,30 +85,30 @@
                </li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e376">
+         <p class="paragraph" id="d8e624">
             		    Regardons ce qui existe. 
             		    Par exemple, la méthode <code>abs</code> de la classe <code>Math</code> :
             		  
          </p>
-         <p class="paragraph" id="d8e384"><span class="multimedia_inline"><img class="multimedia" id="d8e385" src="../image/Mathabs.png" alt="" /></span></p>
-         <p class="paragraph" id="d8e386">
+         <p class="paragraph" id="d8e633"><span class="multimedia_inline"><img class="multimedia" id="d8e635" src="../image/Mathabs.png" alt="" /></span></p>
+         <p class="paragraph" id="d8e638">
             		    Il est essentiel de commenter chaque méthode. C'est ce qui permet de pouvoir
             les utiliser facilement.
             		  
          </p>
-         <p class="paragraph" id="d8e388">
+         <p class="paragraph" id="d8e642">
             		    Comment écrire la nôtre :
             		  
          </p>
          <h4>javadoc</h4>
-         <p class="paragraph" title="javadoc" id="d8e390">
-            <ul class="list" id="d8e391">
+         <p class="paragraph" title="javadoc" id="d8e645">
+            <ul class="list" id="d8e647">
                <li class="itemAlt">Le commentaire javadoc est identifié par <code>/**... */</code> ;
                </li>
                <li class="item">la documentation est produite au format HTML ;</li>
                <li class="itemAlt">On commente essentiellement
                   
-                  <ul class="list" id="d8e401">
+                  <ul class="list" id="d8e660">
                      <li class="itemAlt">la classe : rôle et fonctionnement</li>
                      <li class="item">les méthodes publiques : ce que ça fait, paramètres et résultats</li>
                   </ul>
@@ -118,11 +118,11 @@
             </ul>
          </p>
          <h4>Tag</h4>
-         <p class="paragraph" title="Tag" id="d8e411">
+         <p class="paragraph" title="Tag" id="d8e678">
             		    On utilise des <b>tags</b> pour identifier certains éléments.
             		    Les plus courants :
             		    
-            <ul class="list" id="d8e416">
+            <ul class="list" id="d8e683">
                <li class="itemAlt">@param : décrit les paramètres</li>
                <li class="item">@return : décrit ce qui est retourné</li>
                <li class="itemAlt">@throws : spécifie les exceptions lancées</li>
@@ -141,7 +141,7 @@ public static double sqrt( double nb ) {
       throw new IllegalArgumentException("Nombre negatif");
     
     return Math.sqrt(nb);
-}				</pre><p class="paragraph" id="d8e427">
+}				</pre><p class="paragraph" id="d8e702">
             		    Exemple : la valeur absolue
             
          </p><pre>
@@ -159,15 +159,15 @@ public static int absolu ( int nb ) {
       abs = nb;
     }
     return abs;
-}				</pre><p class="paragraph" id="d8e432">
-            <ul class="list" id="d8e433">
+}				</pre><p class="paragraph" id="d8e709">
+            <ul class="list" id="d8e711">
                <li class="itemAlt">Les types sont déduits de la signature et ajoutés à la documentation.</li>
                <li class="item">La première phrase (terminée par un <code>.</code>) sert de résumé.
                </li>
             </ul>
          </p>
          <h4>html</h4>
-         <p class="paragraph" title="html" id="d8e441">
+         <p class="paragraph" title="html" id="d8e724">
             		    La documentation peut contenir des balises HTML.
             		  
          </p><pre>
@@ -187,14 +187,14 @@ public static int absolu ( int nb ) {
 * &lt;code&gt;a MOD 400 = 0 OU (a MOD 4 = 0 ET a MOD 100 != 0)&lt;/code&gt;
 * @param annee l annee dont on se demande si elle est bissextile
 * @return vrai si l annee est bissextile
-*/}				</pre><p class="paragraph" id="d8e445">
+*/}				</pre><p class="paragraph" id="d8e730">
             Ce qui donne : 
-            <span class="multimedia_inline"><img class="multimedia" id="d8e447" src="../image/javadocBissextile.png" alt="" /></span></p>
+            <span class="multimedia_inline"><img class="multimedia" id="d8e732" src="../image/javadocBissextile.png" alt="" /></span></p>
          <h4>Produire la documentation</h4>
-         <p class="paragraph" title="Produire la documentation" id="d8e448">
+         <p class="paragraph" title="Produire la documentation" id="d8e735">
             La commande javadoc : 
             
-            <ul class="list" id="d8e450">
+            <ul class="list" id="d8e737">
                <li class="itemAlt">javadoc Temps.java</li>
                <li class="item">javadoc ∗.java</li>
                <li class="itemAlt">javadoc −d doc ∗.java</li>
@@ -203,39 +203,39 @@ public static int absolu ( int nb ) {
             </ul>
          </p>
          <h4>Une bonne documentation</h4>
-         <p class="paragraph" title="Une bonne documentation" id="d8e461">
+         <p class="paragraph" title="Une bonne documentation" id="d8e756">
             Une bonne javadoc décrit le quoi mais jamais le comment DONC, ne jamais parler de
             ce qui est privé.
             
          </p>
-         <p class="paragraph" id="d8e463">
+         <p class="paragraph" id="d8e760">
             Mauvais exemples :
             
-            <ul class="list" id="d8e465">
+            <ul class="list" id="d8e762">
                <li class="itemAlt">On utilise un for pour parcourir le tableau.</li>
                <li class="item">Pour aller plus vite, on stocke le <code>prix hors tva</code> dans une variable temporaire.
                </li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e473">
+         <p class="paragraph" id="d8e775">
             Ne pas écrire ce que javadoc écrit lui-même :
             
          </p>
-         <p class="paragraph" id="d8e475">
+         <p class="paragraph" id="d8e778">
             Mauvais exemples :
             
-            <ul class="list" id="d8e477">
+            <ul class="list" id="d8e780">
                <li class="itemAlt">nb - un entier qui ...</li>
                <li class="item">La méthode sqrt ...</li>
                <li class="itemAlt">Cette méthode ne retourne rien.</li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e484">
+         <p class="paragraph" id="d8e793">
             Pour en savoir plus : 
             <a class="link" href="http://www.oracle.com/technetwork/articles/java/index-137868.html" target="_blank" rel="external" title="http://www.oracle.com/technetwork/articles/java/index-137868.html">http://www.oracle.com/technetwork/articles/java/index-137868.html</a></p>
       </div>
       <hr />
       <div class="navigation_arrows"><a href="unit_Commenter.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Commenter_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 24.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDModule.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 12.1.2017 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@heb.be">Contact</a> - <a href="../text/TDModule.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

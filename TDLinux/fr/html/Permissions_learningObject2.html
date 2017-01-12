@@ -37,56 +37,56 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="Permissions_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Permissions_learningObject3.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Permissions_learningObject2.html">1.4.2. Propriétaire et groupe d'un fichier</h1>
-      <div id="d8e950.html" class="clarify">
-         <p class="paragraph" id="d8e951">
+      <div id="d8e1341.html" class="clarify">
+         <p class="paragraph" id="d8e1343">
             					Tous les fichiers ont un propriétaire et appartiennent à un groupe.
             					C'est la base pour définir les permissions sur ce fichier.
             					On pourra ainsi donner des permissions différentes :
             					
-            <ul class="list" id="d8e953">
+            <ul class="list" id="d8e1345">
                <li class="itemAlt">au propriétaire du fichier ;</li>
                <li class="item">aux utilisateurs qui appartiennent au même groupe que le fichier ;</li>
                <li class="itemAlt"> à tous les autres. </li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e960">
+         <p class="paragraph" id="d8e1358">
             				  Lister au format long le contenu du répertoire nous permet de voir les infos
             suivantes :
             				
          </p>
-         <p class="paragraph" id="d8e962"><span class="multimedia_inline"><img class="multimedia" id="d8e963" src="../image/permissions.jpg" alt="" /></span></p>
-         <p class="paragraph" id="d8e964">
+         <p class="paragraph" id="d8e1361"><span class="multimedia_inline"><img class="multimedia" id="d8e1363" src="../image/permissions.jpg" alt="" /></span></p>
+         <p class="paragraph" id="d8e1366">
             Sur le schéma ci-dessus, on peut lire, par exemple, que le fichier <code>Max.java</code> 
             appartient à <code>g32671</code> et a été placé dans le groupe users.
             
          </p>
-         <p class="paragraph" id="d8e972">
+         <p class="paragraph" id="d8e1375">
             Nous vous disions qu'il existait un groupe principal (le premier donné par la commande
             <span class="input">groups</span>)
             et que c'est celui qui serait utilisé par défaut lors de certaines opérations.
             
          </p>
-         <p class="paragraph" id="d8e977">
+         <p class="paragraph" id="d8e1382">
             C'est le cas par exemple ici,
             quand l'utilisateur <code>g32671</code> a créé son fichier <code>Max.java</code>,
             ce fichier s'est retrouvé dans le groupe par défaut <code>users</code>.
             
          </p>
-         <p class="paragraph" id="d8e988">
+         <p class="paragraph" id="d8e1394">
             Or, 
             
          </p>
-         <p class="paragraph" id="d8e990"><span class="multimedia_inline"><img class="multimedia" id="d8e991" src="../image/groupesLinux1.jpg" alt="" /></span></p>
-         <p class="paragraph" id="d8e992">
+         <p class="paragraph" id="d8e1397"><span class="multimedia_inline"><img class="multimedia" id="d8e1399" src="../image/groupesLinux1.jpg" alt="" /></span></p>
+         <p class="paragraph" id="d8e1402">
             le groupe <span class="input">users</span> contient à la fois 
             le groupe <span class="input">étudiants</span>/<span class="input">étudiants1</span> et
             aussi le groupe <span class="input">enseignants</span>.
             
          </p>
-         <p class="paragraph" id="d8e1006">
+         <p class="paragraph" id="d8e1417">
             					Comme nous avons vu que nous pouvions donner des permissions différentes :
             					
-            <ul class="list" id="d8e1008">
+            <ul class="list" id="d8e1419">
                <li class="itemAlt">au propriétaire du fichier ;</li>
                <li class="item">aux utilisateurs qui appartiennent au même groupe que le fichier ;</li>
                <li class="itemAlt"> à tous les autres. </li>
@@ -97,30 +97,30 @@
             et des <span class="input">enseignants</span>.
             
          </p>
-         <p class="paragraph" id="d8e1028">
+         <p class="paragraph" id="d8e1444">
             On ne pourrait donc pas distinguer les permissions des étudiants de celles des enseignants.
             				
          </p>
-         <p class="paragraph" id="d8e1031">
+         <p class="paragraph" id="d8e1448">
             				  Pour faire la distinction entre étudiants et enseignants, il faudrait changer
             le groupe auquel appartient le fichier.
             				
          </p>
-         <p class="paragraph" id="d8e1033"><span class="input">chgrp etudiants1 Max.java</span> indique que le fichier <code>Max.java</code> doit être placé dans le
+         <p class="paragraph" id="d8e1451"><span class="input">chgrp etudiants1 Max.java</span> indique que le fichier <code>Max.java</code> doit être placé dans le
             				  groupe <code>etudiants1</code> (le propriétaire du fichier peut exécuter cette commande mais il doit obligatoirement
             indiquer un groupe auquel il appartient).
             				
          </p>
-         <p class="paragraph" id="d8e1043">
+         <p class="paragraph" id="d8e1463">
             				  Il existe aussi une commande que seul l'administrateur peut exécuter <span class="input">chown g32000 Max.java</span> 
             				  qui change le propriétaire du fichier<code> Max.java</code> à <code>g32000</code>.
             
          </p>
       </div>
-      <div id="d8e1054.html" class="act">
+      <div id="d8e1476.html" class="act">
          <h4>Exercices<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Exercices" id="d8e1055"></p>
-         <ol class="list" id="d8e1056">
+         <p class="paragraph" title="Exercices" id="d8e1478"></p>
+         <ol class="list" id="d8e1480">
             <li class="itemAlt">Visualisez le propriétaire des fichiers de votre dossier personnel.</li>
             <li class="item">Créez un répertoire <code>tdLinux</code> dans votre dossier personnel ;
             </li>
@@ -129,10 +129,10 @@
             </li>
          </ol>
       </div>
-      <div id="d8e1069.html" class="act">
+      <div id="d8e1499.html" class="act">
          <h4>Exercices<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Exercices" id="d8e1070"></p>
-         <ol class="list" id="d8e1071">
+         <p class="paragraph" title="Exercices" id="d8e1501"></p>
+         <ol class="list" id="d8e1503">
             <li class="itemAlt">Visualiser les groupes auxquels vous appartenez.</li>
             <li class="item">Visualiser le groupe auquel appartient votre dossier <code>tdLinux</code>.
             </li>
@@ -148,19 +148,19 @@
             </li>
          </ol>
       </div>
-      <div id="d8e1092.html" class="act">
+      <div id="d8e1535.html" class="act">
          <h4>Exercices<img src="../../../_templates/java/icons/act.gif" title="act" alt="act" class="icon" /></h4>
-         <p class="paragraph" title="Exercices" id="d8e1093"></p>
-         <ol class="list" id="d8e1094">
+         <p class="paragraph" title="Exercices" id="d8e1537"></p>
+         <ol class="list" id="d8e1539">
             <li class="itemAlt">Visualisez vos fichiers et déterminez à quel groupe ils appartiennent.</li>
             <li class="item">Créez un fichier de test et modifiez le groupe auquel il appartient.</li>
          </ol>
       </div>
-      <div id="d8e1099.html" class="clarify">
+      <div id="d8e1549.html" class="clarify">
          <h4>FAQ<img src="../../../_templates/java/icons/icon_faq.gif" title="icon_faq" alt="icon_faq" class="icon" /></h4>
-         <p class="paragraph" title="FAQ" id="d8e1100"></p>
-         <p class="paragraph" id="d8e1101"><b>Les fichiers dans mon dossier personnel ne sont pas automatiquement à moi ?</b></p>
-         <p class="paragraph" id="d8e1104">  
+         <p class="paragraph" title="FAQ" id="d8e1551"></p>
+         <p class="paragraph" id="d8e1553"><b>Les fichiers dans mon dossier personnel ne sont pas automatiquement à moi ?</b></p>
+         <p class="paragraph" id="d8e1559">  
             					Non. En pratique c'est généralement le cas, 
             					mais on peut très bien trouver dans un dossier personnel un fichier qui appartient
             à quelqu'un d'autre.  
@@ -169,6 +169,6 @@
       </div>
       <hr />
       <div class="navigation_arrows"><a href="Permissions_learningObject1.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Permissions_learningObject3.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 26.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDLinux.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 12.1.2017 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@heb.be">Contact</a> - <a href="../text/TDLinux.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

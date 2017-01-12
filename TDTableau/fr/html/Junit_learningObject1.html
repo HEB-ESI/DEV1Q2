@@ -26,38 +26,38 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="unit_Junit.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Junit_learningObject1.html">1.2.1. Tests unitaires</h1>
-      <div id="d8e390.html" class="clarify">
+      <div id="d8e594.html" class="clarify">
          <h4>Les tests unitaires</h4>
-         <p class="paragraph" title="Les tests unitaires" id="d8e391">
+         <p class="paragraph" title="Les tests unitaires" id="d8e596">
             Tous les programmes réels contiennent des bugs (erreurs, défauts), parfois même beaucoup.
             C'est inacceptable :
             
-            <ul class="list" id="d8e393">
+            <ul class="list" id="d8e598">
                <li class="itemAlt">Inconfort pour l’utilisateur</li>
                <li class="item">Perte de temps, d’argent, de données, de matériel</li>
                <li class="itemAlt">Voire danger pour la vie humaine, par exemple : <a class="link" href="http://fr.wikipedia.org/wiki/Vol_501_d%27Ariane_5" target="_blank" rel="external" title="l'échec du vol d'Ariane 5">l'échec du vol d'Ariane 5</a>.
                </li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e403">
+         <p class="paragraph" id="d8e614">
             On peut trouver différents types d’erreurs : 
             
-            <ul class="list" id="d8e405">
+            <ul class="list" id="d8e616">
                <li class="itemAlt">à la compilation</li>
                <li class="item">à l’exécution, le programme s’arrête</li>
                <li class="itemAlt">à l’exécution, le programme fournit une mauvaise réponse</li>
             </ul>
             On pourrait aussi parler d’autres défauts
             
-            <ul class="list" id="d8e413">
+            <ul class="list" id="d8e628">
                <li class="itemAlt">Trop lent</li>
                <li class="item">Trop gourmand en mémoire</li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e418">
+         <p class="paragraph" id="d8e638">
             Pour produire un logiciel sans bug il faut
             
-            <ul class="list" id="d8e420">
+            <ul class="list" id="d8e640">
                <li class="itemAlt">
                   suivre une méthodologie éprouvée pour produire une première version avec peu de bugs
                   (cf. Analyse)
@@ -66,7 +66,7 @@
                <li class="item">
                   tester, tester et . . . tester encore ! Pour détecter ceux qui restent
                   
-                  <ul class="list" id="d8e425">
+                  <ul class="list" id="d8e647">
                      <li class="itemAlt">Besoin d’outils pour nous aider de façon à tester de la manière la plus facile/rapide
                         possible
                      </li>
@@ -82,16 +82,16 @@
             </ul>
          </p>
          <h4>Le plan de tests</h4>
-         <p class="paragraph" title="Le plan de tests" id="d8e435">
+         <p class="paragraph" title="Le plan de tests" id="d8e665">
             Il faut planifier les tests, c'est-à-dire se demander quoi tester en choisissant les
             cas intéressants / judicieux.
             Pour ça, il faut se baser sur les erreurs fréquentes et cela viendra avec l'expérience.
             
          </p>
-         <p class="paragraph" id="d8e437">
+         <p class="paragraph" id="d8e668">
             Nous avons besoin d’un plan reprenant les tests à effectuer
             
-            <ul class="list" id="d8e439">
+            <ul class="list" id="d8e670">
                <li class="itemAlt">Quelles valeurs de paramètres sont pertinentes ?</li>
                <li class="item">Quel est le résultat attendu ?</li>
             </ul>
@@ -99,17 +99,17 @@
             (ou même avant et éventuellement par une autre personne).
             
          </p>
-         <p class="paragraph" id="d8e445">
+         <p class="paragraph" id="d8e681">
             Il permet de s’assurer que l’on teste tous les cas pertinents.
             
          </p>
-         <p class="paragraph" id="d8e447">
+         <p class="paragraph" id="d8e684">
             On ne peut pas tester toutes les valeurs possibles
             
-            <ul class="list" id="d8e449">
+            <ul class="list" id="d8e686">
                <li class="itemAlt">Il faut choisir des valeurs représentatives
                   
-                  <ul class="list" id="d8e452">
+                  <ul class="list" id="d8e690">
                      <li class="itemAlt">Cas général / particuliers</li>
                      <li class="item">Valeurs limites</li>
                   </ul>
@@ -118,7 +118,7 @@
                   : 
                   on s’inspire des erreurs les plus fréquentes en programmation :
                   
-                  <ul class="list" id="d8e459">
+                  <ul class="list" id="d8e702">
                      <li class="itemAlt">On commence/arrête trop tôt/tard une boucle</li>
                      <li class="item">On initialise mal une variable</li>
                      <li class="itemAlt">Dans un test, on se trompe entre &lt; et ≤</li>
@@ -130,20 +130,20 @@
                </li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e471">
+         <p class="paragraph" id="d8e723">
             Par exemple : <code>public static int max(int n1, int n2, int n3) ...</code>
             qui calcule la valeur maximale de trois nombres.
             
          </p>
-         <p class="paragraph" id="d8e476">
+         <p class="paragraph" id="d8e729">
             Que tester en plus du cas général ?
             
-            <ul class="list" id="d8e478">
+            <ul class="list" id="d8e731">
                <li class="itemAlt">Le maximum est la première/dernière valeur</li>
                <li class="item">Présence de nombres négatifs</li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e483">
+         <p class="paragraph" id="d8e741">
             Par exemple : plan de tests de la méthode <code>max</code> : 
             
          </p><pre>
@@ -152,11 +152,11 @@
 2   1, −3, −4        1        maximum au début
 3   1, 3, 11        11        maximum à la fin
 4   −1, −3, −4      −1        que des négatifs
-        </pre><p class="paragraph" id="d8e491">
-            <ul class="list" id="d8e492">
+        </pre><p class="paragraph" id="d8e751">
+            <ul class="list" id="d8e753">
                <li class="itemAlt">Quand tester ? 
                   
-                  <ul class="list" id="d8e495">
+                  <ul class="list" id="d8e757">
                      <li class="itemAlt">Le plus souvent possible</li>
                      <li class="item">Erreur plus facile à identifier/corriger</li>
                      <li class="itemAlt">Idéalement après chaque méthode écrite</li>
@@ -164,14 +164,14 @@
                </li>
                <li class="item">Que tester ? 
                   
-                  <ul class="list" id="d8e504">
+                  <ul class="list" id="d8e772">
                      <li class="itemAlt">Tout</li>
                      <li class="item">Le nouveau code peut mettre en évidence un problème dans le code ancien (régression)</li>
                   </ul>
                </li>
                <li class="itemAlt">Comment tester ? 
                   
-                  <ul class="list" id="d8e511">
+                  <ul class="list" id="d8e784">
                      <li class="itemAlt">Pas à la main : intenable</li>
                      <li class="item">Besoin d’un outil automatisé : <b>JUnit</b></li>
                   </ul>
@@ -179,34 +179,34 @@
             </ul>
          </p>
          <h4>JUnit</h4>
-         <p class="paragraph" title="JUnit" id="d8e518">
+         <p class="paragraph" title="JUnit" id="d8e798">
             JUnit : outil pour automatiser les tests unitaires :
             
-            <ul class="list" id="d8e520">
+            <ul class="list" id="d8e800">
                <li class="itemAlt">Le programmeur fournit les tests,</li>
                <li class="item">JUnit exécute tous les tests et</li>
                <li class="itemAlt">établit un rapport détaillant les problèmes</li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e527">
+         <p class="paragraph" id="d8e813">
             La classe de test contient une méthode de test par cas. Cette méthode
             
-            <ul class="list" id="d8e529">
+            <ul class="list" id="d8e815">
                <li class="itemAlt">est autonome (ne reçoit rien, ne retourne rien)</li>
                <li class="item">contient des affirmations</li>
                <li class="itemAlt">fait appel à la méthode à tester</li>
                <li class="item">compare le résultat attendu et le résultat obtenu</li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e538"><span class="multimedia_inline"><img class="multimedia" id="d8e539" src="../image/junit.jpeg" alt="" /></span></p>
-         <p class="paragraph" id="d8e540">Par exemple</p><pre>
+         <p class="paragraph" id="d8e831"><span class="multimedia_inline"><img class="multimedia" id="d8e833" src="../image/junit.jpeg" alt="" /></span></p>
+         <p class="paragraph" id="d8e836">Par exemple</p><pre>
 @Test
 public void max_cas1() {
     int n1 = 1, n2 = 3, n3 = 0;
     assertEquals ( 3, MaClasse.max(n1, n2, n3) );
 }
-</pre><p class="paragraph" id="d8e544">
-            <ul class="list" id="d8e545">
+</pre><p class="paragraph" id="d8e843">
+            <ul class="list" id="d8e845">
                <li class="itemAlt">Reconnu comme un test unitaire grâce à l’annotation <code>@Test</code></li>
                <li class="item">Pas de <code>static</code></li>
                <li class="itemAlt"><code>assertEquals</code> vérifie que les 2 valeurs sont identiques
@@ -216,20 +216,20 @@ public void max_cas1() {
             </ul>
          </p>
          <h4>Lancer les tests</h4>
-         <p class="paragraph" title="Lancer les tests" id="d8e565"></p>
-         <p class="paragraph" id="d8e566">
+         <p class="paragraph" title="Lancer les tests" id="d8e872"></p>
+         <p class="paragraph" id="d8e874">
             					Pour lancer le test, il suffit de compiler la classe de test puis de lancer la
             commande : 
             					<code>java org.junit.runner.JUnitCore package.MaClasseTest</code>.
             				
          </p>
-         <p class="paragraph" id="d8e571">
+         <p class="paragraph" id="d8e880">
             					Cette commande lance les tests 
             					et affiche un message récapitulatif du nombre de tests
             					et du décompte de ceux qui ont réussi ou échoué.
             				
          </p>
-         <p class="paragraph" id="d8e573">
+         <p class="paragraph" id="d8e883">
             					Si cela ne fonctionne pas directement sur linux1 
             					c'est que la JVM ne trouve pas la classe
             					<code>org.junit.runner.JUnitCore</code> 
@@ -241,7 +241,7 @@ public void max_cas1() {
             					afin que la variable d'environnement soit relue.
             				
          </p>
-         <p class="paragraph" id="d8e590">
+         <p class="paragraph" id="d8e901">
             					Certains d'entre vous ne voudront pas 
             					entrer cette longue commande lors de chaque 
             					lancement de tests.    
@@ -250,7 +250,7 @@ public void max_cas1() {
             				
          </p><pre>
 	alias javatest='java org.junit.runner.JUnitCore'
-				</pre><p class="paragraph" id="d8e597">
+				</pre><p class="paragraph" id="d8e911">
             					et ils n'auront plus alors qu'à exécuter la commande
             					<code>javatest package.MaClasseTest</code>
             					pour lancer la classe de tests.
@@ -259,6 +259,6 @@ public void max_cas1() {
       </div>
       <hr />
       <div class="navigation_arrows"><a href="unit_Junit.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="unit_Exercices.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 24.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 12.1.2017 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

@@ -33,17 +33,17 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="Tableaux_learningObject6.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject8.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Tableaux_learningObject7.html">1.1.7. Parcours d’un tableau à une dimension.</h1>
-      <div id="d8e295.html" class="clarify">
-         <p class="paragraph" id="d8e296">
+      <div id="d8e449.html" class="clarify">
+         <p class="paragraph" id="d8e451">
             		    Soit le tableau <code>tab</code> déclaré ainsi
             		  
          </p><pre>
 tab : tableau de n T  // où n est la taille du tableau et T est un type quelconque
-      </pre><p class="paragraph" id="d8e303">Envisageons d’abord le parcours complet et voyons ensuite les parcours avec arrêt
+      </pre><p class="paragraph" id="d8e460">Envisageons d’abord le parcours complet et voyons ensuite les parcours avec arrêt
             prématuré.
          </p>
          <h4>Parcours complet.</h4>
-         <p class="paragraph" title="Parcours complet." id="d8e305">
+         <p class="paragraph" title="Parcours complet." id="d8e463">
             		    Pour parcourir complètement un tableau, on peut utiliser la boucle 
             		    <code>pour</code> comme dans
             l’algorithme suivant où « traiter » va dépendre du problème concret posé : afficher,
@@ -57,12 +57,12 @@ pour i de 0 à n-1 faire
     traiter tab[i]
 fin pour
       </pre><h4>Parcours avec sortie prématurée.</h4>
-         <p class="paragraph" title="Parcours avec sortie prématurée." id="d8e312">
+         <p class="paragraph" title="Parcours avec sortie prématurée." id="d8e473">
             Parfois, on ne doit pas forcément parcourir le tableau jusqu’au bout mais on pourra
             s’arrêter
             prématurément si une certaine condition est remplie. Par exemple :
             
-            <ol class="list" id="d8e314">
+            <ol class="list" id="d8e475">
                <li class="itemAlt">on cherche la présence d’un élément et on vient de le trouver ;</li>
                <li class="item">on vérifie qu’il n’y a pas de 0 et on vient d’en trouver un.</li>
             </ol>
@@ -76,21 +76,21 @@ tant que i ≤ n-1 faire
     traiter tab[i]
     i ← i+1
 fin tant que
-		  </pre><p class="paragraph" id="d8e328">
+		  </pre><p class="paragraph" id="d8e494">
             		    On peut à présent introduire le test d’arrêt. Une contrainte est qu’on voudra,
             à la fin de la
             boucle, savoir si oui ou non on s’est arrêté prématurément et, si c’est le cas, à
             quel indice.
             
          </p>
-         <p class="paragraph" id="d8e330">
+         <p class="paragraph" id="d8e497">
             Il existe essentiellement deux solutions, avec ou sans variable booléenne. En général,
             la
             solution [A] sera plus claire si le test est court.
             		  
          </p>
          <h4>Parcours avec sortie prématurée sans variable booléenne</h4>
-         <p class="paragraph" title="Parcours avec sortie prématurée sans variable booléenne" id="d8e332"></p><pre>
+         <p class="paragraph" title="Parcours avec sortie prématurée sans variable booléenne" id="d8e500"></p><pre>
 // Parcours partiel d’un tableau sans variable booléenne
 i ← 0
 tant que i ≤ n-1 ET <i>test sur tab[i] dit qu'on continue</i> faire
@@ -102,23 +102,23 @@ si i ≥ n alors
 sinon
     // arrêt prématuré à l’indice i.
 fin si
-      </pre><p class="paragraph" id="d8e339">
+      </pre><p class="paragraph" id="d8e510">
             Il faut être attentif à <b>ne pas inverser les deux parties du test</b>. 
             Il faut absolument vérifier  que l’indice est bon avant de tester la valeur à cet
             indice.
             
          </p>
-         <p class="paragraph" id="d8e344">
+         <p class="paragraph" id="d8e516">
             On pourrait inverser les deux branches du si-sinon en inversant le test mais attention
             à ne
             pas tester <code>tab[i]</code> car <code>i</code> n’est peut-être pas valide.
             
          </p>
-         <p class="paragraph" id="d8e352">
+         <p class="paragraph" id="d8e525">
             Dans certains cas, le si-sinon peut se simplifier en un simple return d’une condition.
             
          </p>
-         <p class="paragraph" id="d8e354">Par exemple : </p><pre>
+         <p class="paragraph" id="d8e528">Par exemple : </p><pre>
 // Indique si un zéro est présent dans le tableau
 algorithme contientZéro(tab : tableau [1 à n] d’entiers) → booléen
     i : entier
@@ -129,7 +129,7 @@ algorithme contientZéro(tab : tableau [1 à n] d’entiers) → booléen
     retourner i ≤ n-1 // Si le test est vrai c’est qu’on a trouvé un 0
 fin algorithme
       </pre><h4>Parcours avec sortie prématurée avec variable booléenne</h4>
-         <p class="paragraph" title="Parcours avec sortie prématurée avec variable booléenne" id="d8e358"></p><pre>
+         <p class="paragraph" title="Parcours avec sortie prématurée avec variable booléenne" id="d8e534"></p><pre>
 // Parcours partiel d’un tableau avec variable booléenne
 i ← 0
 trouvé ← faux
@@ -141,12 +141,12 @@ tant que i ≤ n-1 ET NON trouvé faire
     fin si
 fin tant que
 // tester le booléen pour savoir si arrêt prématuré.
-      </pre><p class="paragraph" id="d8e364">
+      </pre><p class="paragraph" id="d8e544">
             Attention à bien choisir un nom de booléen adapté au problème et à l’initialiser à
             la bonne
             valeur. Par exemple, si la variable s’appelle « continue »
             
-            <ol class="list" id="d8e366">
+            <ol class="list" id="d8e546">
                <li class="itemAlt">initialiser la variable à vrai ;</li>
                <li class="item">le test de la boucle est « . . .ET continue » ;</li>
                <li class="itemAlt">mettre la variable à faux pour sortir de la boucle.</li>
@@ -155,6 +155,6 @@ fin tant que
       </div>
       <hr />
       <div class="navigation_arrows"><a href="Tableaux_learningObject6.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject8.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 24.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 12.1.2017 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

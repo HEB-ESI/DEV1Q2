@@ -164,7 +164,7 @@
 			\vspace{-1em}
 			\\Les autorisations au-delà du champ de cette licence peuvent être obtenues à 
 			\texttt{http://www.heb.be/esi}
-			- \texttt{mcodutti@heb.be}
+			- \texttt{cleruste@heb.be}
 			}\end{tiny}
 			\end{minipage}
         \end{sideways}}
@@ -317,7 +317,7 @@
             \par
         \begin{figure}[hbt]
 				    \begin{center}
-					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png}
+					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/cuvelier/Documents/ESI/Java/2016-2017/DEV1Q2/notes/DEV1Q2/TDSeq/fr/image/primitifs.png}
 						\end{center}
                 
                     \caption[primitifs.png]{primitifs.png}
@@ -1406,7 +1406,7 @@ int nombre1 = clavier. nextInt ();
             \par
         \begin{figure}[hbt]
 				    \begin{center}
-					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/methode.png}
+					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/cuvelier/Documents/ESI/Java/2016-2017/DEV1Q2/notes/DEV1Q2/TDSeq/fr/image/methode.png}
 						\end{center}
                 
                     \caption[methode.png]{methode.png}
@@ -1519,7 +1519,7 @@ public class NomClasse {
             \par
         \subsection{Java est un langage compil\'e puis interpr\'et\'e}\begin{figure}[hbt]
 				    \begin{center}
-					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/clr/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png}
+					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/cuvelier/Documents/ESI/Java/2016-2017/DEV1Q2/notes/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png}
 						\end{center}
                 
                     \caption[java-jvm-jvm.png]{java-jvm-jvm.png}
@@ -1585,7 +1585,7 @@ fin algorithme
 algorithme exerciceD (a, b : entiers) → réel
   retourner a / b
 fin algorithme
-				\end{verbatim} \textcolor{gray}{\underline{\hspace*{2em}}} 
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
 			\item \begin{verbatim}
 algorithme exerciceE () → entier
   a, b, c, d : entiers
@@ -1882,18 +1882,18 @@ public class Exercice7 {
 		
 					\textcolor{white}{.} \par
 				
-          La somme des angles d'un triangle est \'egale dans tous les cas \`a 180\textdegree . \'Ecrivez un algorithme qui lit la valeur de deux angles d'un triangle, et affiche la valeur du 3e. 
+          La somme des angles d'un triangle est \'egale dans tous les cas \`a 180\textdegree . \'Ecrivez un algorithme qui re\c coit la valeur de deux angles d'un triangle, et retourne la valeur du 3e. 
         
             \par
-        Par exemple, si on lit 40 pour le premier angle et 60 pour le second, on doit trouver 80 pour le troisi\`eme (40 + 60 = 100, le troisi\`eme angle vaut donc 80).
+        Par exemple, si on re\c coit 40 pour le premier angle et 60 pour le second, on doit retourner 80 pour le troisi\`eme (40 + 60 = 100, le troisi\`eme angle vaut donc 80).
             \par
-        Par exemple, si on lit 90 pour le premier angle et 10 pour le second, on doit trouver 80 pour le troisi\`eme (90 + 10 = 100, le troisi\`eme angle vaut donc 80).
+        Par exemple, si on re\c coit 90 pour le premier angle et 10 pour le second, on doit retourner 80 pour le troisi\`eme (90 + 10 = 100, le troisi\`eme angle vaut donc 80).
             \par
-        Par exemple, si on lit 89 pour le premier angle et 30 pour le second, on doit trouver 61 pour le troisi\`eme (89 + 30 = 119, le troisi\`eme angle vaut donc 61).
+        Par exemple, si on re\c coit 89 pour le premier angle et 30 pour le second, on doit retourner 61 pour le troisi\`eme (89 + 30 = 119, le troisi\`eme angle vaut donc 61).
             \par
-        Par exemple, si on lit 5 pour le premier angle et 5 pour le second, on doit trouver 170 pour le troisi\`eme (5 + 5 = 10, le troisi\`eme angle vaut donc 170).
+        Par exemple, si on re\c coit 5 pour le premier angle et 5 pour le second, on doit retourner 170 pour le troisi\`eme (5 + 5 = 10, le troisi\`eme angle vaut donc 170).
             \par
-        Par exemple, si on lit 0 pour le premier angle et 180 pour le second, on doit trouver 0 pour le troisi\`eme (0 + 180 = 180, le troisi\`eme angle vaut donc 0).
+        Par exemple, si on re\c coit 0 pour le premier angle et 180 pour le second, on doit retourner 0 pour le troisi\`eme (0 + 180 = 180, le troisi\`eme angle vaut donc 0).
             \par
         
           Quelles sont les donn\'ees ? :
@@ -1961,7 +1961,7 @@ public class Triangle{
 			\item \'etant donn\'e le prix unitaire d'un produit (hors TVA), le taux de TVA (en \%) 
             et la quantit\'e de produit vendue \`a un client, calcule et retourne le prix total \`a payer par ce client.
 			\item r\'ealise la permutation du contenu de deux variables.
-			\item calcule la somme des chiffres d'un nombre entier de 3 chiffres. R\'eflexion : l'algorithme est-il aussi valide pour les entiers inf\'erieurs \`a 100 ?
+			\item calcule et retourne la somme des chiffres d'un nombre entier de 3 chiffres re\c cu en param\`etre. R\'eflexion  : l'algorithme est-il aussi valide pour les entiers inf\'erieurs \`a 100 ?
 			\item \'etant donn\'e un moment dans la journ\'ee donn\'e par trois nombres re\c cus, \`a savoir, heure, minute et seconde, calcule le nombre de secondes \'ecoul\'ees depuis minuit.
 					\end{enumerate}
 				

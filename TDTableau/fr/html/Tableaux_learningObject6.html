@@ -33,55 +33,55 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="Tableaux_learningObject5.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject7.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Tableaux_learningObject6.html">1.1.6. Tableau et paramètres de méthodes</h1>
-      <div id="d8e256.html" class="clarify">
-         <p class="paragraph" id="d8e257">Un tableau peut être un paramètre d’une méthode.</p>
-         <p class="paragraph" id="d8e259">Par exemple :</p><pre>
+      <div id="d8e384.html" class="clarify">
+         <p class="paragraph" id="d8e386">Un tableau peut être un paramètre d’une méthode.</p>
+         <p class="paragraph" id="d8e389">Par exemple :</p><pre>
 public static void afficher ( int [] entiers ) {
     for(int i = 0; i &lt; entiers.length ; i ++) {
       System.out.println (entiers [i]);
     }
-}</pre><p class="paragraph" id="d8e263">L’appel pourrait être</p><pre>
+}</pre><p class="paragraph" id="d8e395">L’appel pourrait être</p><pre>
 int [] cotes = {12, 8, 10, 14, 9};
 afficher ( cotes );
       </pre><h4>Passage de paramètre par valeur</h4>
-         <p class="paragraph" title="Passage de paramètre par valeur" id="d8e267">
+         <p class="paragraph" title="Passage de paramètre par valeur" id="d8e402">
             En Java, passage de paramètre par valeur.
             Pour un tableau, cela signifie que l’on ne peut pas
             modifier le tableau dans son ensemble mais que
             l’on pourra modifier ses éléments.
             
          </p>
-         <p class="paragraph" id="d8e269">Par exemple :</p><pre>
+         <p class="paragraph" id="d8e405">Par exemple :</p><pre>
 public static void remplir ( int [] entiers , int val ) {
     for(int i = 0; i &lt; entiers.length ; i ++) {
       entiers [ i ] = val;
     }
-}</pre><p class="paragraph" id="d8e273">L’appel pourrait être</p><pre>
+}</pre><p class="paragraph" id="d8e411">L’appel pourrait être</p><pre>
 int [] cotes = new int[16]; // Ne pas oublier de le créer !
 remplir ( cotes , 20 );
-      </pre><p class="paragraph" id="d8e277">MAIS :</p><pre>
+      </pre><p class="paragraph" id="d8e417">MAIS :</p><pre>
 public static void méthodeFausse( double[] réels ) {
     double[] réelsDePassage = {4.2, −7, Math.PI};
     réels = réelsDePassage; // INUTILE
-}</pre><p class="paragraph" id="d8e282">
+}</pre><p class="paragraph" id="d8e424">
             Quel que soit l’appel, le tableau que l’on passe en
             paramètre ne sera pas modifié.
             
          </p>
          <h4>Un tableau peut être une valeur de retour</h4>
-         <p class="paragraph" title="Un tableau peut être une valeur de retour" id="d8e284"></p>
-         <p class="paragraph" id="d8e285">Par exemple :</p><pre>
+         <p class="paragraph" title="Un tableau peut être une valeur de retour" id="d8e427"></p>
+         <p class="paragraph" id="d8e430">Par exemple :</p><pre>
 ppublic static int [] créer ( int taille , int val ) {
     int [] entiers = new int[ taille ];
     for(int i = 0; i &lt; taille ; i ++) {
       entiers [ i ] = val;
     }
     return entiers ;
-}</pre><p class="paragraph" id="d8e289">L’appel pourrait être</p><pre>
+}</pre><p class="paragraph" id="d8e436">L’appel pourrait être</p><pre>
 int [] cotes = créer(16, 20);
       </pre></div>
       <hr />
       <div class="navigation_arrows"><a href="Tableaux_learningObject5.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Tableaux_learningObject7.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 24.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 12.1.2017 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@heb.be">Contact</a> - <a href="../text/TDTableau.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

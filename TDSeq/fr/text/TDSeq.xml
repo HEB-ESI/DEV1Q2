@@ -1424,7 +1424,7 @@ algorithme exerciceD (a, b : entiers) → réel
   retourner a / b
 fin algorithme
 				</paragraph>
-				            <gap answers="1.5">1.5</gap> 
+				            <gap answers="0">0</gap> 
 									</item>  
 									<item>
 										<paragraph cssClass="code">

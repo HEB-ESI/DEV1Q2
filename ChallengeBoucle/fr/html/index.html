@@ -21,10 +21,10 @@
       <div class="navigation_arrows"><img src="../../../_templates/java/navigation/back_off.gif" height="24" width="24" alt="No previous page available" border="0" /><a href="unit_.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="index.html">1. Challenge : les boucles</h1>
       <div>
          <h2 id="ChallengeBoucle_entry.html">Le calendrier</h2>
-         <p class="paragraph" id="d8e4">
+         <p class="paragraph" id="d8e6">
             Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
             
-            <ul class="list" id="d8e6">
+            <ul class="list" id="d8e8">
                <li class="itemAlt">il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement
                   spécifié ;
                </li>
@@ -42,7 +42,7 @@
                <li class="itemAlt">Pour la partie Java, dessinez l'arborescence des fichiers. </li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e30">
+         <p class="paragraph" id="d8e43">
             			Avez-vous compris les boucles ? Voyons ça en relevant le défi du calendrier : <br />
             			réalisez un programme permettant d'afficher sur le terminal 
             le calendrier d'un mois et d'une année données. <br />
@@ -58,23 +58,23 @@ Lun Mar Mer Jeu Ven Sam Dim
 11  12  13  14  15  16  17
 18  19  20  21  22  23  24
 25  26  27  28  29  30
-		</pre><p class="paragraph" id="d8e38">
+		</pre><p class="paragraph" id="d8e53">
             Votre programme devra demander à l’utilisateur d’entrer au clavier un mois et une
             année au format MM (ou M) AAAA
             (par exemple 4 2016) et afficher le calendrier de ce mois.
             
          </p>
-         <p class="paragraph" id="d8e40">
+         <p class="paragraph" id="d8e56">
             Pour déterminer le jour de la semaine où commence le mois, vous utiliserez <a class="link" href="http://en.wikipedia.org/wiki/Zeller%27s_congruence" target="_blank" rel="external" title="la congruence de Zeller">la congruence de Zeller</a>. <br />
             Pour le calendrier grégorien, actuellement utilisé dans la majeure partie du monde,
             la congruence de Zeller est la suivante :
             
          </p>
-         <p class="paragraph" id="d8e47"><span class="multimedia_inline"><img class="multimedia" id="d8e48" src="../image/zeller.png" alt="" /></span></p>
-         <p class="paragraph" id="d8e49">
+         <p class="paragraph" id="d8e65"><span class="multimedia_inline"><img class="multimedia" id="d8e67" src="../image/zeller.png" alt="" /></span></p>
+         <p class="paragraph" id="d8e70">
             où
             
-            <ul class="list" id="d8e51">
+            <ul class="list" id="d8e72">
                <li class="itemAlt"><code>h</code> est un entier représentant le jour de la semaine (0 = samedi, 1 = dimanche, 2 = lundi,
                   . . .),
                </li>
@@ -98,7 +98,7 @@ Lun Mar Mer Jeu Ven Sam Dim
             <b>dimanche</b>.
             
          </p>
-         <p class="paragraph" id="d8e101">
+         <p class="paragraph" id="d8e131">
             Une autre règle est nécessaire : celle des années bissextiles. <br />
             En effet, le mois de février de ces années contient 29 jours au lieu de 28.
             Depuis l’instauration du calendrier grégorien, sont bissextiles les années divisibles
@@ -107,23 +107,23 @@ Lun Mar Mer Jeu Ven Sam Dim
             
          </p>
          <h4>Calcul de la catégorie</h4>
-         <p class="paragraph" title="Calcul de la catégorie" id="d8e105">
+         <p class="paragraph" title="Calcul de la catégorie" id="d8e136">
             Écrivez les algorithmes suivants, dont voici les prototypes :
             
-            <ul class="list" id="d8e107">
+            <ul class="list" id="d8e138">
                <li class="itemAlt">
-                  <p class="paragraph" id="d8e109"><code>algorithme isLeapYear(year : entier) → booléen</code></p>
+                  <p class="paragraph" id="d8e142"><code>algorithme isLeapYear(year : entier) → booléen</code></p>
                   qui reçoit une année au format AAAA et qui renvoie vrai si cette année est bissextile
                   et faux si elle ne l’est pas.
                   
                </li>
                <li class="item">
-                  <p class="paragraph" id="d8e114"><code>algorithme daysInMonth(month, year : entiers) → entier</code></p>
+                  <p class="paragraph" id="d8e151"><code>algorithme daysInMonth(month, year : entiers) → entier</code></p>
                   qui retourne le nombre de jours du mois donné en paramètre.
                   
                </li>
                <li class="itemAlt">
-                  <p class="paragraph" id="d8e119"><code>algorithme isAvailableDate(day, month, year : entiers) → booléen</code></p>
+                  <p class="paragraph" id="d8e160"><code>algorithme isAvailableDate(day, month, year : entiers) → booléen</code></p>
                   qui reçoit le jour, le mois et l'année d'une date et qui renvoie vrai si cette date
                   est valide et faux si elle ne l’est pas.
                   Une date est considérée comme valide si le mois est compris entre 1 et 12 et le jour
@@ -131,27 +131,27 @@ Lun Mar Mer Jeu Ven Sam Dim
                   
                </li>
                <li class="item">
-                  <p class="paragraph" id="d8e124"><code>algorithme dayOfWeek(day, month, year : entiers) → entier</code></p>
+                  <p class="paragraph" id="d8e169"><code>algorithme dayOfWeek(day, month, year : entiers) → entier</code></p>
                   qui retourne un entier correspondant au jour de la semaine (0 = lundi, 1 = mardi,
                   . . .) pour une date donnée en paramètre. <br />
                   Le paramètre year est au format AAAA, par exemple 2016.
                   
-                  <p class="paragraph" id="d8e130">Si la date fournie est invalide, l'algorithme lancera une erreur.</p>
+                  <p class="paragraph" id="d8e177">Si la date fournie est invalide, l'algorithme lancera une erreur.</p>
                </li>
                <li class="itemAlt">
-                  <p class="paragraph" id="d8e133"><code>algorithme printDay(day : entier)</code></p>
+                  <p class="paragraph" id="d8e183"><code>algorithme printDay(day : entier)</code></p>
                   qui affiche à l’écran au format JJ le numéro du jour donné en paramètre.<br />
                   Par exemple, si on donne 1 en paramètre à cette fonction, celle-ci affichera 01.
                   
                </li>
                <li class="item">
-                  <p class="paragraph" id="d8e140"><code>algorithme printCalendar(month, year : entiers)</code></p>
+                  <p class="paragraph" id="d8e195"><code>algorithme printCalendar(month, year : entiers)</code></p>
                   qui affiche à l’écran le calendrier du mois de l'année passés en paramètre, les semaines
                   commençant par le lundi.
                   
                </li>
                <li class="itemAlt">
-                  <p class="paragraph" id="d8e145"><code>algorithme principal</code></p>
+                  <p class="paragraph" id="d8e204"><code>algorithme principal</code></p>
                   qui demande à l'utilisateur d'entrer un mois et une année au clavier.<br />
                   Si le mois entré n'est pas valide, le programme redemandera la lecture jusqu'à obtenir
                   une valeur correcte pour le mois.<br />
@@ -160,8 +160,8 @@ Lun Mar Mer Jeu Ven Sam Dim
                </li>
             </ul>
          </p>
-         <p class="paragraph" id="d8e153">Écrivez le code java correspondant ainsi que la javadoc.</p>
-         <p class="paragraph" id="d8e155">
+         <p class="paragraph" id="d8e217">Écrivez le code java correspondant ainsi que la javadoc.</p>
+         <p class="paragraph" id="d8e220">
             		  Toutes les méthodes sauf la méthode <code>main</code> 
             		  seront écrites dans une classe <code>g12345.boucles.UtilCalendrier</code>.
             
@@ -174,6 +174,6 @@ Lun Mar Mer Jeu Ven Sam Dim
       </div>
       <hr />
       <div class="navigation_arrows"><img src="../../../_templates/java/navigation/back_off.gif" height="24" width="24" alt="No previous page available" border="0" /><a href="unit_.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 23.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/ChallengeBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 12.1.2017 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@heb.be">Contact</a> - <a href="../text/ChallengeBoucle.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>
