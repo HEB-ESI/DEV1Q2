@@ -1762,7 +1762,7 @@ public class Exercice7 {
           </list>
           Écrivons l'algorithme :
           <paragraph cssClass="code">
-algorithme troisièmeAngleTriangle(angle1, angle2 : réels)
+algorithme troisièmeAngleTriangle(angle1, angle2 : réels)→ réel
     retourner 180 - (angle1 + angle2)
 fin algorithme
           </paragraph>

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.24)  13 JAN 2017 09:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.24)  13 JAN 2017 09:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1069,7 +1069,13 @@ Overfull \hbox (8.04198pt too wide) in paragraph at lines 1875--1876
 , les-quelles pouvez-
  []
 
-[28] [29]
+[28]
+Overfull \hbox (7.3715pt too wide) in paragraph at lines 1927--1927
+[]\T1/lmtt/m/n/10.95 algorithme troisièmeAngleTriangle(angle1, angle2 : réels)$
+\OMS/lmsy/m/n/10.95 !$ \T1/lmtt/m/n/10.95 réel[] 
+ []
+
+[29]
 Overfull \hbox (3.63113pt too wide) in paragraph at lines 1945--1946
 \T1/lmr/m/n/10.95 Il nous reste à com-pi-ler []\T1/lmtt/m/n/10.95 javac Triangl
 e.java \T1/lmr/m/n/10.95 et à exé-cu-ter []\T1/lmtt/m/n/10.95 java Triangle
@@ -1110,7 +1116,7 @@ m/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt
 8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on TDSeq.pdf (30 pages, 476327 bytes).
+Output written on TDSeq.pdf (30 pages, 476357 bytes).
 PDF statistics:
  717 PDF objects out of 1000 (max. 8388607)
  652 compressed objects within 7 object streams
