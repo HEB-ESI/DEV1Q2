@@ -1630,6 +1630,7 @@ public class Exercice7 {
 								Quelle est l'erreur ?
 							</paragraph>
 						</question>
+
 			            <answer feedback="Non non, qu'il y ait 0, 1 ou plusieurs espaces ne change rien..." correct="no">il faut insérer des espaces dans la parenthèse</answer>
 			            <answer feedback="En effet, il s'agit bien de String et non string" correct="yes">string doit être écrit avec une majuscule au début</answer>
 			            <answer feedback="Non non, le fichier doit bien avoir le même nom que la classe avec l'extension java, c-à-d ErrCompilation.java" correct="no">le fichier doit s'appeler string.java</answer>

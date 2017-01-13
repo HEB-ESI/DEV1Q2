@@ -401,9 +401,8 @@ return absolu;
         
         <paragraph title="Métro">
           L'horaire du métro bruxellois varie selon le jour et l'heure. La fréquence des passages est de 5
-          minutes en semaine de 6h à 10h et de 15h à 19h. De 7 minutes en semaine de 10h à 15h et le
-          samedi de 12h à 19h. De 10 min après 19h en semaine et le samedi et toute la journée de
-          dimanche. 
+          minutes en semaine de 6h à 10h et de 15h à 19h. De 7 minutes en semaine de 10h à 15h et le samedi avant 19h. 
+	  De 10 min après 19h et avant 6h en semaine et le samedi et toute la journée de dimanche. 
         </paragraph>
         <paragraph>
           Mettez en évidence les variables <formatted style="bold">« données »</formatted>, 
