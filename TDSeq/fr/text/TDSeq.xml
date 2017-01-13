@@ -1634,6 +1634,7 @@ public class Exercice7 {
 			            <answer feedback="En effet, il s'agit bien de String et non string" correct="yes">string doit être écrit avec une majuscule au début</answer>
 			            <answer feedback="Non non, le fichier doit bien avoir le même nom que la classe avec l'extension java, c-à-d ErrCompilation.java" correct="no">le fichier doit s'appeler string.java</answer>
 			            <answer feedback="Non non, ce sont bien des parenthèses..." correct="no">il faut remplacer les parenthèses par des accolades</answer>
+					<solution></solution>
 					</multipleChoice>
 				</selfCheck>
 				
