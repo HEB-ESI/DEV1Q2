@@ -717,7 +717,7 @@ package survol;
 public class ErrCompilation{
 	public static void main (String [] args){
 		System.out.println("TDPackage");
-	
+	}
 }							</paragraph>
 							<paragraph>
 								la commande <formatted style="code">javac ErrCompilation.java</formatted> provoque l'erreur suivante :
