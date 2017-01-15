@@ -271,7 +271,7 @@ tant que conditionPourResterDansLaBoucle
       </paragraph>
       <paragraph>est </paragraph>
 		  <paragraph  cssClass="code">
-do ( condition ) {
+do {
     séquence d’instructions à exécuter
 } while( conditionPourResterDansLaBoucle );
 		  </paragraph>
