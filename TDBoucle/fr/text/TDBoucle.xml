@@ -65,13 +65,13 @@ fin tant que
 algorithme compterJusque10 () // version avec tant que
     nb : entier
     nb ← 1 // c’est le premier nombre à afficher
-    tant que nb ≤ 10 faire // c’est le premier nombre à afficher
+    tant que nb ≤ 10 faire // pour aller jusqu'à 10
       afficher nb  // on affiche la valeur de la variable nb
       nb ← nb + 1 // on passe au nombre suivant
     fin tant que
 fin algorithme
       </paragraph>
-      <paragraph title="Somme de nombres"> Après chaque nombre, on demande à l’utilisateur s’il y a encore un nombre à additionner.</paragraph>
+      <paragraph title="Somme de nombres"> Si l'utilisateur encode une valeur négative l'agorithme arrête de demander une valeur .</paragraph>
       <paragraph cssClass="code">
 // Lit des valeurs entières et retourne la somme des valeurs lues.
 algorithme sommeNombres() → entier
