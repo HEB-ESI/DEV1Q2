@@ -55,7 +55,7 @@ Lun Mar Mer Jeu Ven Sam Dim
 				<item><formatted style="code">K</formatted> est un entier représentant l’année dans le siècle, c’est à dire year mod 100 (par exemple 16 pour l’année 2016)</item>
 				<item><formatted style="code">x/y</formatted> représente le résultat de <formatted style="bold">division entière</formatted> de x par y.</item>
       </list>
-      Ainsi, pour le 3 avril 2016, <formatted style="code">q</formatted> = 3, <formatted style="code">m</formatted> = 3, 
+      Ainsi, pour le 3 avril 2016, <formatted style="code">q</formatted> = 3, <formatted style="code">m</formatted> = 4, 
       <formatted style="code">J</formatted> = 20 et <formatted style="code">K</formatted> = 16. <newLine/>
       Le résultat <formatted style="code">h</formatted> de la congruence de Zeller est ((3+13+16+4+5+100) mod 7) = (141 mod 7) = 1 et donc <formatted style="bold">dimanche</formatted>.
     </paragraph>
