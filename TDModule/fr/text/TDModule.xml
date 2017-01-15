@@ -372,7 +372,6 @@ int nb = demanderEntier ();
     <paragraph>Montrons par un exemple comment écrire la méthode max2 : </paragraph>
       <paragraph cssClass="java">
 <![CDATA[
-import java.util.Scanner;
 public class Test{
   public static double max2(double nb1, double nb2){
     double max = nb1;
