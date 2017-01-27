@@ -164,7 +164,7 @@
 			\vspace{-1em}
 			\\Les autorisations au-delà du champ de cette licence peuvent être obtenues à 
 			\texttt{http://www.heb.be/esi}
-			- \texttt{mcodutti@heb.be}
+			- \texttt{cleruste@heb.be}
 			}\end{tiny}
 			\end{minipage}
         \end{sideways}}
@@ -177,30 +177,37 @@
 			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
 			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
-			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque module ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
-			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans chaque algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
 			\item Demandez-vous si vous avez besoin de parcourir tout le tableau ou de sortir pr\'ematur\'ement (si on a trouv\'e ce qu'on cherche par exemple).
 					\end{itemize}
 				
             \par
         
-			Soit un tableau carr\'e (\`a n lignes et n colonnes) d'\'el\'ements de type Couleur dont les valeurs possibles sont 'noir' et 'blanc'. 
-			Au d\'epart, toutes les cases du tableau sont initialis\'ees \`a 'blanc'. 
-			\'Ecrire un module qui re\c coit ce tableau en param\`etre et noircit les cases de fa\c con \`a obtenir un motif en forme de sablier comme le sugg\`ere l'exemple ci-dessous. 
+			Soit un tableau de n \'el\'ements de type Personne dont les champs sont: 
+			
+					\begin{itemize}
+				
+			\item nom de type cha\^ine ;
+			\item pr\'enom de type cha\^ine;
+			\item dateNaissance de type Date ;
+			\item adresse de type Adresse ;
+					\end{itemize}
+				
+			Les types Date et Adresse sont eux-m\^eme des structures.
+			Date aura les champs jour, mois et ann\'ee tous de type entier.
+			Adresse aura les champs:
+			
+					\begin{itemize}
+				
+			\item typeVoie de type cha\^ine donnant le type de la voie (rue, avenue, dr\`eve,...);
+			\item nomVoie de type cha\^ine donnant le nom de la voie;
+			\item num\'ero de type entier donnant le num\'ero du b\^atiment dans la voie ;
+			\item commune de type cha\^ine donnant le nom de la commune ;
+					\end{itemize}
+				
+			Au d\'epart, toutes les cases du tableau sont initialis\'ees aux valeurs 0 pour les num\'eriques et une cha\^ine vide pour les cha\^ines. 
+			\'Ecrire un algorithme qui lit les donn\'ees des personnes et qui les stocke dans le tableau. Cet algorithme s'arr\^etera soit quand le tableau est plein soit quand l'utilisateur encode une valeur sentinelle "***" pour le nom de la personne. 
     
-            \par
-        
-      N.B. : l'exemple est donn\'e pour un tableau 11 x 11, mais votre algorithme doit fonctionner quelle que soit la taille du tableau.
-		
-            \par
-        \begin{figure}[hbt]
-				    \begin{center}
-					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/clr/Documents/Cours/DEV1Q2/ChallengeStruct/fr/image/sablier.png}
-						\end{center}
-                
-                    \caption[sablier.png]{sablier.png}
-                \end{figure}
-                    
             \par
         \end{abstract}
 				\vspace{-2em}\tableofcontents

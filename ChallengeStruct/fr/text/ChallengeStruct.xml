@@ -16,16 +16,27 @@
       </list>
     </paragraph>
 		<paragraph>
-			Soit un tableau carré (à n lignes et n colonnes) d’éléments de type Couleur dont les valeurs possibles sont ‘noir’ et ‘blanc’. 
-			Au départ, toutes les cases du tableau sont initialisées à ‘blanc’. 
-			Écrire un algorithme qui reçoit ce tableau en paramètre et noircit les cases de façon à obtenir un motif en forme de sablier comme le suggère l’exemple ci-dessous. 
+			Soit un tableau de n éléments de type Personne dont les champs sont: 
+			<list listStyle="unordered">
+        			<item>nom de type chaîne ;</item>
+        			<item>prénom de type chaîne;</item>
+        			<item>dateNaissance de type Date ;</item>
+        			<item>adresse de type Adresse ;</item>
+        	       </list>
+			Les types Date et Adresse sont eux-même des structures.
+			Date aura les champs jour, mois et année tous de type entier.
+			Adresse aura les champs:
+			<list listStyle="unordered">
+        			<item>typeVoie de type chaîne donnant le type de la voie (rue, avenue, drève,...);</item>
+        			<item>nomVoie de type chaîne donnant le nom de la voie;</item>
+        			<item>numéro de type entier donnant le numéro du bâtiment dans la voie ;</item>
+        			<item>commune de type chaîne donnant le nom de la commune ;</item>
+        	       </list>
+			Au départ, toutes les cases du tableau sont initialisées aux valeurs 0 pour les numériques et une chaîne vide pour les chaînes. 
+			Écrire un algorithme qui lit les données des personnes et qui les stocke dans le tableau. Cet algorithme s'arrêtera soit quand le tableau est plein soit quand l'utilisateur encode une valeur sentinelle "***" pour le nom de la personne. 
     </paragraph>
-    <paragraph>
-      N.B. : l’exemple est donné pour un tableau 11 x 11, mais votre algorithme doit fonctionner quelle que soit la taille du tableau.
-		</paragraph>
-    <paragraph>
-      <multimedia src="../image/sablier.png" type="png" />
-    </paragraph>
+    
+    
 	</entry>
 
 </lesson>
