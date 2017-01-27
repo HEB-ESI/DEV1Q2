@@ -442,7 +442,7 @@ remplir ( cotes , 20 );
       </paragraph>
       <paragraph>Par exemple :</paragraph>
 		  <paragraph cssClass="code">
-<![CDATA[ppublic static int [] créer ( int taille , int val ) {
+<![CDATA[public static int [] créer ( int taille , int val ) {
     int [] entiers = new int[ taille ];
     for(int i = 0; i < taille ; i ++) {
       entiers [ i ] = val;
