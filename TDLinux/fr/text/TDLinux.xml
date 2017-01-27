@@ -49,22 +49,22 @@
 					<formatted style="input">ls -l</formatted> permet de <formatted style="bold">lister</formatted> le contenu d'un répertoire au format long ; 
         </item>
         <item>
-          <formatted style="input">mv <formatted style="italic">nomDuFichier</formatted> <formatted style="italic">nouveauNomDuFichier</formatted></formatted> 
+          <formatted style="input">mv <formatted style="italic">nomDuFichier </formatted> <formatted style="italic">nouveauNomDuFichier</formatted></formatted> 
           permet de <formatted style="bold">renommer</formatted> le fichier nommé <formatted style="italic">nomDuFichier</formatted>
           en un fichier nommé <formatted style="italic">nouveauNomDuFichier</formatted> ; 
         </item>
         <item>
-          <formatted style="input">mv <formatted style="italic">nomDuFichier</formatted> <formatted style="italic">nomDuDossier</formatted></formatted> 
+          <formatted style="input">mv <formatted style="italic">nomDuFichier </formatted> <formatted style="italic">nomDuDossier</formatted></formatted> 
           permet de <formatted style="bold">déplacer</formatted> le fichier nommé <formatted style="italic">nomDuFichier</formatted>
           dans un répertoire nommé <formatted style="italic">nomDuDossier</formatted> ; 
         </item>
         <item>
-          <formatted style="input">cp <formatted style="italic">nomDuFichier</formatted> <formatted style="italic">nouveauNomDuFichier</formatted></formatted> 
+          <formatted style="input">cp <formatted style="italic">nomDuFichier </formatted> <formatted style="italic">nouveauNomDuFichier</formatted></formatted> 
           permet de <formatted style="bold">copier</formatted> le fichier nommé <formatted style="italic">nomDuFichier</formatted>
           en un fichier copie  nommé <formatted style="italic">nouveauNomDuFichier</formatted> situé dans le même répertoire; 
         </item>
         <item>
-          <formatted style="input">cp <formatted style="italic">nomDuFichier</formatted> <formatted style="italic">nomDuDossier</formatted></formatted> 
+          <formatted style="input">cp <formatted style="italic">nomDuFichier </formatted> <formatted style="italic">nomDuDossier</formatted></formatted> 
           permet de <formatted style="bold">copier</formatted> le fichier nommé <formatted style="italic">nomDuFichier</formatted>
           en un fichier copie  nommé <formatted style="italic">nomDuFichier</formatted> 
           situé dans un répertoire nommé <formatted style="italic">nomDuDossier</formatted> ; 
