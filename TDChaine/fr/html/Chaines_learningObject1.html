@@ -32,8 +32,8 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="unit_Chaines.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Chaines_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Chaines_learningObject1.html">1.1.1. Manipuler les caractères</h1>
-      <div id="d8e43.html" class="clarify">
-         <p class="paragraph" id="d8e44">
+      <div id="d8e66.html" class="clarify">
+         <p class="paragraph" id="d8e68">
             		    Pour pouvoir manipuler une chaine, il faut pouvoir accéder aux caractères qui
             la composent.
             Comme il s’agit d’une opération de base souvent utilisée, nous allons introduire une
@@ -42,15 +42,15 @@
             désigne le ie caractère de la chaine <code>nomChaine</code> (en commençant à 1).
             		  
          </p>
-         <p class="paragraph" id="d8e52">
+         <p class="paragraph" id="d8e77">
             		    Par exemple :
             		  
          </p><pre>
 texte : chaine
 texte ← "Hello"
-afficher texte[5  ] // Affiche "o"
+afficher texte[5] // Affiche "o"
 texte[2] ← "a"  // texte vaut "Hallo" ; un caractère doit être remplacé par un seul caractère.
-		  </pre><p class="paragraph" id="d8e56">
+		  </pre><p class="paragraph" id="d8e83">
             		    Écrivons un algorithme qui vérifie si un mot donné contient une lettre donnée
             .
          </p><pre>
@@ -62,7 +62,7 @@ algorithme contient(mot : chaine, lettre : caractère) → booléen
     fin tant que
     retourner i≤long(mot)
 fin algorithme
-		  </pre><p class="paragraph" id="d8e60">
+		  </pre><p class="paragraph" id="d8e90">
             Introduisons quelques fonctions (ou primitives) agissant sur les caractères. Leur
             écriture
             s’apparente à celle d'algorithmes que vous pourrez utiliser tels quels dans les exercices.
@@ -70,29 +70,29 @@ fin algorithme
             
          </p><pre>
         estLettre(car : caractère) → booléen
-      </pre><p class="paragraph" id="d8e64">
+      </pre><p class="paragraph" id="d8e96">
             Cette fonction indique si un caractère est une lettre. Par exemple elle retourne vrai
             pour ’a’,
             ’e’, ’G’, ’K’, mais faux pour ’4’, ’$’, ’@’. . .
             
          </p>
-         <p class="paragraph" id="d8e66">
+         <p class="paragraph" id="d8e99">
             Si on veut savoir si une lettre est une minuscule ou majuscule, on utilisera les fonctions
             analogues
             
          </p><pre>
         estMinuscule(car : caractère) → booléen
-      </pre><p class="paragraph" id="d8e70">
+      </pre><p class="paragraph" id="d8e105">
             et
             
          </p><pre>
         estMajuscule(car : caractère) → booléen
-      </pre><p class="paragraph" id="d8e75">
+      </pre><p class="paragraph" id="d8e112">
             Il va de soi que si <code>car</code> n’est pas une lettre, ces deux fonctions retournent faux.
             
          </p><pre>
         estChiffre(car : caractère) → booléen
-      </pre><p class="paragraph" id="d8e82">
+      </pre><p class="paragraph" id="d8e121">
             Cette fonction permet de savoir si un caractère est un chiffre. Elle retourne vrai
             uniquement
             pour les dix caractères "0", "1", "2", "3", "4", "5", "6", "7", "8" et "9" et faux
@@ -100,23 +100,23 @@ fin algorithme
             cas.
             
          </p>
-         <p class="paragraph" id="d8e84">toutes les lettres d'une chaine en majuscules, grâce à la fonction :
+         <p class="paragraph" id="d8e124">toutes les lettres d'une chaine en majuscules, grâce à la fonction :
             
          </p><pre>
         majuscule(texte : chaine) → chaine
-      </pre><p class="paragraph" id="d8e88">
+      </pre><p class="paragraph" id="d8e131">
             L’opération inverse se fait avec :
             
          </p><pre>
         minuscule(texte : chaine) → chaine
-      </pre><p class="paragraph" id="d8e92">
+      </pre><p class="paragraph" id="d8e137">
             Il peut aussi être pratique de connaitre la position d’une lettre dans l’alphabet.
             Ceci se fera
             à l’aide de la fonction :
             
          </p><pre>
         numLettre(car : caractère) → entier
-      </pre><p class="paragraph" id="d8e96">
+      </pre><p class="paragraph" id="d8e143">
             qui retourne toujours un entier entre 1 et 26. Par exemple numLettre("E") donnera
             5, ainsi
             que numLettre("e"), cette fonction traite donc de la même manière les majuscules et
@@ -128,19 +128,19 @@ fin algorithme
             caractère n’est pas une lettre !
             
          </p>
-         <p class="paragraph" id="d8e99">
+         <p class="paragraph" id="d8e146">
             Il peut être utile d’avoir un outil qui fait l’opération inverse, à savoir associer
             la lettre de
             l’alphabet correspondant à une position donnée. Pour cela, nous aurons :
             
          </p><pre>
         lettreMaj(n : entier) → caractère
-      </pre><p class="paragraph" id="d8e103">
+      </pre><p class="paragraph" id="d8e153">
             et
             
          </p><pre>
         lettreMin(n : entier) → caractère
-      </pre><p class="paragraph" id="d8e107">
+      </pre><p class="paragraph" id="d8e159">
             qui retournent respectivement la forme majuscule ou minuscule de la n-ème lettre de
             l’alphabet 
             (où n sera obligatoirement compris entre 1 et 26). Par exemple, 
@@ -153,6 +153,6 @@ fin algorithme
       </div>
       <hr />
       <div class="navigation_arrows"><a href="unit_Chaines.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Chaines_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 24.1.2016 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:mcodutti@heb.be">Contact</a> - <a href="../text/TDChaine.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 27.1.2017 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@heb.be">Contact</a> - <a href="../text/TDChaine.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

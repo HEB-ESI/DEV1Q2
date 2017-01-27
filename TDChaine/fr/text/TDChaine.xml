@@ -74,7 +74,7 @@
 		  <paragraph cssClass="code">
 texte : chaine
 texte ← "Hello"
-afficher texte[5  ] // Affiche "o"
+afficher texte[5] // Affiche "o"
 texte[2] ← "a"  // texte vaut "Hallo" ; un caractère doit être remplacé par un seul caractère.
 		  </paragraph>
 		  <paragraph>
