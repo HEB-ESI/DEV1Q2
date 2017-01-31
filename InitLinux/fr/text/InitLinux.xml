@@ -829,9 +829,6 @@
 		<learningObject title="Gestion des processus">
 		<!-- ========================================= -->
 		
-		</learningObject>
-		
-		
 			<act>
 				<paragraph title="Expérimentation - La boucle infinie" icon="act"/>
 				<list listStyle="ordered">
@@ -904,6 +901,7 @@
 				
 				<paragraph> Si vous vous êtes trompé, <link uri="../../../TDLinux/fr/html/Processus_learningObject1.html">révisez ici</link></paragraph>
 			</act>
+			</learningObject>
   </unit>
 
 	

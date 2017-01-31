@@ -2110,13 +2110,14 @@ find ~ -name Ex.java
     </learningObject>
 </unit>
 	
+  
 	<!-- ========================================= -->
-	<unit label="Processus" title="Gestion des processus">
+	<unit label="Processus" title="Gestion des processuss">
 	<!-- ========================================= -->
 
-		<learningObject title="Gestion des processus">
-		<!-- ========================================= -->
-			
+	  <learningObject title="Gestion des processuss"> 
+	  <!-- ========================================= -->
+    
 			<clarify>
 				<paragraph>
 					Les programmes contenant des boucles

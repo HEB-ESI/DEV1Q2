@@ -73,7 +73,7 @@ if (condition) {
       </paragraph>
       <paragraph>
         Lorsque la <formatted style="bold">condition est fausse</formatted>, 
-        les instructions se trouvant entre <formatted style="bold">{</formatted> 
+        les instructions se trouvant entre <formatted style="bold">{ </formatted> 
         et <formatted style="bold">}</formatted> sont tout simplement <formatted style="bold">ignorées</formatted>.
       </paragraph>
     </clarify>

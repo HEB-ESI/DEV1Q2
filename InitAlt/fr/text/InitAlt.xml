@@ -71,6 +71,7 @@ fin selon</paragraph>
 							<gapText> 
 								<list listStyle="unordered">
 									<item>
+									  <paragraph>Si le nombre reçu est 2 ? </paragraph>
 										<paragraph cssClass="code">
 algorithme exerciceA (x : entier)
     ok : booléen
@@ -82,10 +83,10 @@ algorithme exerciceA (x : entier)
     fin si
 fin algorithme
 				</paragraph>
-				            <paragraph>Si le nombre reçu est 2 ? </paragraph>
 									  <gap answers="6">6</gap> 
                   </item>
 									<item>
+									  <paragraph>Si le nombre reçu est 3 ? </paragraph>
 										<paragraph cssClass="code">
 algorithme exerciceB (x : entier)
     ok : booléen
@@ -97,7 +98,6 @@ algorithme exerciceB (x : entier)
     fin si
 fin algorithme
 				</paragraph>
-				            <paragraph>Si le nombre reçu est 3 ? </paragraph>
 									  <gap answers="9">9</gap> 
                   </item>
 								</list>
