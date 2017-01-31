@@ -86,15 +86,15 @@
 				<selfCheck title="Le type des données" shuffle="yes">
 						<fillInBlanks>
 							<question> 
-								Quel(s) type(s) de données utiliseriez-vous pour représenter :
+								Quel(s) type(s) de données utiliseriez-vous et quel nombre de variables avez-vous besoin pour représenter :
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
-									<item>un prix hors tva ?<gap answers="1 réel,un réel, réel">réel</gap></item>  
-									<item>votre nom ? <gap answers="une chaine,1 chaine, chaine">chaine</gap></item>  
+									<item>un prix hors tva ?<gap answers="1 réel,un réel, réel">1 réel</gap></item>  
+									<item>votre nom de famille (en supposant que vous n'ayez pas un nom composé) ? <gap answers="une chaine,1 chaine, chaine">1 chaine</gap></item>  
 									<item>vos initiales ?<gap answers="2 chaines,3 chaines">2 chaines</gap></item>  
-									<item>la longueur d'un rectangle ? <gap answers="réel,1 réel">réel</gap></item>  
-									<item>une date du calendrier ? <gap answers="3 entiers,trois entiers,2 entiers 1 chaine,1 chaine 2 entiers">3 entiers</gap></item>  
+									<item>la longueur d'un rectangle ? <gap answers="1 réel, réel">1 réel</gap></item>  
+									<item>une date du calendrier (au format 8/2/2017 par exemple) ? <gap answers="3 entiers,trois entiers">3 entiers</gap></item>  
 									<item>un moment dans la journée ? <gap answers="3 entiers, trois entiers">3 entiers</gap></item>  
 								</list>  
 							</gapText>
@@ -354,8 +354,7 @@
           forme la partie d’un algorithme nommée <formatted style="bold">déclaration des variables</formatted>. 
         </paragraph>
         <paragraph>
-          La déclaration des informations apparaitra toujours en <formatted style="bold">début</formatted> d’algorithme, ou dans un bloc annexe appelé
-          dictionnaire des variables ou encore dictionnaire des données.
+          La déclaration des informations apparaitra toujours en <formatted style="bold">début</formatted> d’algorithme.
         </paragraph>
         
         <paragraph title="Valeur initiale ?" icon="important" />
@@ -391,16 +390,19 @@
             x1 est correct mais pas 1x.
             </item>
             <item>
-            Pour donner un nom composé à une variable, on peut utiliser le « tiret bas » ou underscore 
-            (par ex. premier_numérateur) mais on déconseille d’utiliser le signe « – » qui est
-            plutôt réservé à la soustraction. Ainsi, dans la plupart des langages, premier-numérateur
-            serait interprété comme la soustraction des variables premier et numérateur.
-            </item>
-            <item>
-            Une alternative à l’utilisation du tiret bas pour l’écriture de noms de variables composés
-            est la notation « chameau » (camelCase en anglais), qui consiste à mettre une majuscule
+            Pour donner un nom composé à une variable, on utilise 
+            la notation « chameau » (camelCase en anglais), qui consiste à mettre une majuscule
             au début des mots (généralement à partir du deuxième), par exemple premierNombre
             ou dateNaissance.
+            </item>
+            <item>
+            Pour donner un nom composé à une constante, on utilise le « tiret bas » ou underscore 
+            (par ex. TAUX_TVA) 
+            </item>
+            <item>
+            On déconseille d’utiliser le signe « – » qui est
+            plutôt réservé à la soustraction. Ainsi, dans la plupart des langages, premier-numérateur
+            serait interprété comme la soustraction des variables premier et numérateur.
             </item>
             <item>
             Les indices et exposants sont proscrits.
@@ -509,7 +511,7 @@
             ou <formatted style="code">dateNaissance</formatted>.
             </item>
             <item>
-            Pour donner un nom composé à une variable entièrement en majuscules, on peut utiliser le « tiret bas » ou underscore 
+            Pour donner un nom composé à une constante, on utilise le « tiret bas » ou underscore 
             (par ex. <formatted style="code">PREMIER_NUMERATEUR</formatted>).
             </item>
             <item>
@@ -632,7 +634,7 @@ Y = 3; // Idem
 			<!-- ============================================================ -->
 			  <clarify>
         <paragraph>
-          Ce sont deux opérateurs très importants qui ne peuvent s’utiliser qu’avec des variables entières :
+          Ce sont deux opérateursqui ne peuvent s’utiliser qu’avec des variables entières :
           <list listStyle="unordered">
             <item><formatted style="code">DIV</formatted> division entière</item>
             <item><formatted style="code">MOD</formatted> reste de la division entière</item>
@@ -645,7 +647,7 @@ Y = 3; // Idem
 			<!-- ============================================================ -->
 			  <clarify>
         <paragraph>
-          Ce sont deux opérateurs très importants qui ne peuvent s’utiliser qu’avec des variables entières :
+          Ce sont deux opérateurs qui ne peuvent s’utiliser qu’avec des variables entières :
           <list listStyle="unordered">
             <item><formatted style="code">/</formatted> division entière si les deux opérandes sont entiers</item>
             <item><formatted style="code">%</formatted> reste de la division entière</item>
@@ -659,7 +661,7 @@ Y = 3; // Idem
 			<!-- ============================================================ -->
 			  <clarify>
         <paragraph>
-          Ce sont des opérateurs très importants qui ne peuvent s’utiliser qu’avec des expressions numériques ou des chaines :
+          Ce sont des opérateurs qui ne peuvent s’utiliser qu’avec des expressions numériques ou des chaines :
           <list listStyle="unordered">
             <item><formatted style="code"><![CDATA[<]]></formatted> inférieur </item>
             <item><formatted style="code"><![CDATA[≤]]></formatted> inférieur ou égal </item>
@@ -678,7 +680,7 @@ Y = 3; // Idem
 			<!-- ============================================================ -->
 			  <clarify>
         <paragraph>
-          Ce sont des opérateurs très importants qui ne peuvent s’utiliser qu’avec des expressions numériques :
+          Ce sont des opérateurs qui ne peuvent s’utiliser qu’avec des expressions numériques :
           <list listStyle="unordered">
             <item><formatted style="code"><![CDATA[<]]></formatted> inférieur </item>
             <item><formatted style="code"><![CDATA[<=]]></formatted> inférieur ou égal </item>
@@ -766,12 +768,13 @@ Y = 3; // Idem
 			<!-- ============================================================ -->
 			  <clarify>
         <paragraph>
-          Ce sont des opérateurs très importants qui ne peuvent s’utiliser qu’avec des expressions booléennes :
+          Ce sont des opérateurs qui ne peuvent s’utiliser qu’avec des expressions booléennes :
           <list listStyle="unordered">
             <item><formatted style="code"><![CDATA[&&]]></formatted> et </item>
             <item><formatted style="code"><![CDATA[||]]></formatted> ou </item>
             <item><formatted style="code"><![CDATA[!]]></formatted> négation </item>
           </list>
+          Java utilise l'évaluation court-circuitée.
         </paragraph>
         </clarify>
       </learningObject>
@@ -1052,22 +1055,10 @@ int nombre1 = clavier. nextInt ();
           Exemples <newLine/><newLine/>
           <formatted style="input">afficher nb1</formatted><newLine/><newLine/>
           <formatted style="input">afficher "Le premier nombre vaut ", nb1, " et le seconde nombre vaut ", nb2 </formatted>
-        </paragraph>
+          </paragraph>
           <paragraph>
-          Remarques :
-          <list listStyle="unordered">
-            <item>
-              Ce ne serait pas une erreur fondamentale de remplacer demander par recevoir ou afficher
-              par écrire. Il n’y a évidemment pas de confusion possible à partir du moment où l’on
-              sait qu’il s’agit de primitives d’échange entre l’extérieur et l’ordinateur exécutant la
-              procédure, mais par principe, il est conseillé d’utiliser une syntaxe commune et limitée
-              à un petit nombre de mots-clés.
-            </item>
-            <item>
-              Comme pour l’affectation interne, on ne peut afficher que des expressions dont les
-              variables qui la composent ont été affectées préalablement.
-            </item>
-          </list>
+          Comme pour l’affectation interne, on ne peut afficher que des expressions dont les
+          variables qui la composent ont été affectées préalablement.
           </paragraph>
         </clarify>
         </learningObject>
@@ -1143,8 +1134,10 @@ int nombre1 = clavier. nextInt ();
                     n ← n / 2<newLine/>
                     n ← n % 3 ? <newLine/>
                     <gap answers="0">0</gap></item>  
-								  <item>Quelle est la ligne de code qui réalise l'affectation externe de la variabl réelle capital ? <gap answers="">capital=clavier.nextDouble();</gap></item>  
-								  <item>Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire ? <gap answers="">System.out.println(salaire);</gap></item>  
+                  <item>Quelle est la ligne de code qui déclare et crée la variable clavier permettant l'accès au clavier en entrée ? <gap answers="">Scanner clavier = new Scanner(System.in);</gap></item>  
+								  <item>Quelle est la ligne de code qui réalise l'affectation externe de la variable réelle capital ? <gap answers="">capital=clavier.nextDouble();</gap></item>  
+								  <item>Quelle est la ligne de code qui permet d'aller à la ligne ? <gap answers="">System.out.println();</gap></item>  
+								  <item>Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire et d'aller à la ligne ? <gap answers="">System.out.println(salaire);</gap></item>  
 									<item>Dans un code java, on veut mettre dans la variable c le produit des contenus des
 									  variables a et b. Que doit-on écrire ? <gap answers="c = a*b;">c = a*b;</gap></item>  
 									<item>Écrivez l'instruction qui a pour effet de mettre clr dans la variable acronyme (de type chaine) <gap answers="">acronyme = "clr";</gap></item>  
@@ -1166,6 +1159,8 @@ int nombre1 = clavier. nextInt ();
 			<paragraph>
 				On n’insistera jamais assez sur la nécessité de documenter un algorithme en y insérant 
         des commentaires judicieux, clairs et suffisants !
+        
+        Dans un premier temps, vous pourrez utiliser les commentaires pour documenter votre code.
       </paragraph>
     </entry>
     
@@ -1195,6 +1190,10 @@ int nombre1 = clavier. nextInt ();
     <learningObject title="Documenter son code Java">
     <!-- ====================================== -->
     <clarify>
+      <paragraph>
+      Dans un premier temps, vous pourrez documenter votre code à l'aide de commentaires.
+      </paragraph>
+      
       <paragraph>Il existe plusieurs manières d’ajouter un commentaire</paragraph>
       <paragraph cssClass="java">
 // Commentaire sur une ligne
@@ -1203,6 +1202,10 @@ int nombre1 = clavier. nextInt ();
 /* Commentaire sur
   plusieurs lignes */
 </paragraph>
+      <paragraph>
+      En Java,il existe toutefois un outil bien plus puissant pour commenter son code, il s'agit de la javadoc.
+      Nous en reparlerons plus loin.
+      </paragraph>
     </clarify>
     </learningObject>
   </unit>
@@ -1230,16 +1233,24 @@ int nombre1 = clavier. nextInt ();
           Sa structure générale sera la suivante :
         </paragraph>
         <paragraph cssClass="code">
-algorithme nomDeAlgorithme(paramètres)
+algorithme nomAlgorithme(paramètres)
     instructions
 fin algorithme
 				</paragraph>
         <paragraph cssClass="code">
-algorithme nomDeAlgorithme(paramètres) → type
+algorithme nomAlgorithme(paramètres) → type
     instructions
     retourner expression
 fin algorithme
 				</paragraph>
+				
+				<paragraph>Par exemple,</paragraph>
+				<paragraph cssClass="code">
+algorithme sommerNombres(nb1, nb2 : réels) → réel
+    retourner nb1 + nb2
+fin algorithme
+				</paragraph>
+				
         <paragraph>
           Remarques :
           <list listStyle="unordered">
@@ -1251,13 +1262,13 @@ fin algorithme
               c’est un premier exemple d’<formatted style="bold">indentation</formatted> indispensable pour la lisibilité d’un programme, 
               nous y reviendrons lors de l’étude des structures alternatives et répétitives.
             </item>
-            <item>Comme pour les variables, le <formatted style="bold">nomDeAlgorithme</formatted> 
+            <item>Comme pour les variables, le <formatted style="bold">nomAlgorithme</formatted> 
             devra être <formatted style="bold">approprié</formatted> au contenu ! 
             Par exemple, sommerNombres(nb1, nb2 : réels), additionnerFractions(num1, num2, dén1, dén2 : entiers) plutôt que goPartez() ! 
             </item>
             <item>Il va de soi que toutes les parties de cette structure générale ne seront pas toujours 
             nécessaires : certains algorithmes ne nécessiteront pas de passage de paramètres, d’autres 
-            ne devront pas communiquer des résultats...
+            ne devront pas communiquer un résultat...
             </item>
             <item>Pour la <formatted style="bold">lisibilité</formatted>, 
             on veillera toujours à ce qu’un algorithme tienne sur une vingtaine de 
@@ -1296,9 +1307,22 @@ public class NomClasse {
         </paragraph>
       </clarify>
       <clarify>
+      
+         <paragraph>
+          <formatted style="bold">Méthode</formatted> est le mot Java équivalent d'"algorithme".
+        </paragraph>
+        <paragraph>
+          Voici par exemple la méthode 
+        </paragraph>
+        <paragraph cssClass="java">
+public class NomClasse {
+    public static double sommerNombres(double nb1, double nb2)
+        retourner nb1 + nb2;
+    }
+}
+        </paragraph>
         <paragraph>
           Quand un programme Java s'exécute, il démarre à la méthode principale.
-          <formatted style="bold">Méthode</formatted> est le mot Java équivalent d'"algorithme".
         </paragraph>
         <paragraph>
           La méthode principale s'appelle <formatted style="input">public static void main(String [] args) </formatted> et s'insère dans la classe de la façon suivante :
@@ -1318,8 +1342,13 @@ import java.util.Scanner;
 public class NomClasse {
     public static void main(String [] args) {
         Scanner clavier = new Scanner(System.in);
-        int nb = clavier.nextInt();
-        System.out.println("Le nombre lu vaut" + nb);
+        double nombre1 = clavier.nextDouble();
+        double nombre2 = clavier.nextDouble();
+        double somme = sommerNombres(nombre1, nombre2);
+        System.out.println("La somme de " + nombre1 + " et de " + nombre2 + " vaut " + somme);
+    }
+    public static double sommerNombres(double nb1, double nb2)
+        retourner nb1 + nb2;
     }
 }
         </paragraph>
@@ -1475,6 +1504,7 @@ fin algorithme
       <act>
         <paragraph>
           Pour ces exercices, nous vous demandons de comprendre des codes Java donnés. 
+        </paragraph>
           <selfCheck title="Compréhension" shuffle="no">
 						<fillInBlanks>
 							<question>
@@ -1599,9 +1629,11 @@ public class Exercice7 {
 							<solution/>
 						</fillInBlanks>
 					</selfCheck>
-        </paragraph>
-        
-        
+      </act>
+      </learningObject>
+      
+      <learningObject title="Compréhension de codes Java (suite)">
+      <act>
 				<selfCheck title="Comprendre les erreurs" shuffle="yes">
 					<multipleChoice>
 						<question>
@@ -1638,9 +1670,10 @@ public class Exercice7 {
 					<solution></solution>
 					</multipleChoice>
 				</selfCheck>
-				
+     
+
 				<selfCheck title="Comprendre les erreurs" shuffle="yes">
-					<multipleChoice>
+      					<multipleChoice>
 						<question>
 							<paragraph>
 								Soit le code :
@@ -1673,9 +1706,10 @@ public class Exercice7 {
 						<solution>En effet, quel est-il d'ailleurs ?</solution>
 					</multipleChoice>
 				</selfCheck>
+     
 
 				<selfCheck title="Comprendre les erreurs" shuffle="yes">
-					<multipleChoice>
+      					<multipleChoice>
 						<question>
 							<paragraph>
 								Soit le code :
@@ -1706,7 +1740,7 @@ public class Exercice7 {
 						</question>
 						<answer feedback=" " correct="no">la machine virtuelle est mal installée</answer>
 						<answer feedback=" " correct="no">l'entête de la méthode main est incorrect</answer>
-						<answer feedback="En effet... quelle classe tente-t-il d'exécuter ? (Relisez bien la commande d'exécution)" correct="yes">on exécute la mauvaise classe</answer>
+						<answer feedback="En effet... quelle classe tente-t-il d'exécuter ? (Relisez bien la commande d'exécution)" correct="yes">on exécute le mauvais fichier</answer>
 						<solution></solution>
 					</multipleChoice>
 				</selfCheck>
@@ -1725,7 +1759,7 @@ public class Exercice7 {
             <item>résolvez le problème via quelques exemples précis ;</item>
             <item>mettez en évidence les variables <formatted style="bold">« données »</formatted>, les variables <formatted style="bold">« résultats »</formatted> et les variables de travail ;</item>
             <item>n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme définitif pseudo-codé ;</item>
-            <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables risquant de ne pas être suffisamment explicites.</item>
+            <item>déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme ; les noms des variables doivent être suffisamment explicites.</item>
             <item>Écrivez la partie algorithmique <formatted style="bold">AVANT</formatted> de vous lancer dans la programmation en Java.</item>
           </list>
         </paragraph>
@@ -1767,7 +1801,7 @@ algorithme troisièmeAngleTriangle(angle1, angle2 : réels)→ réel
     retourner 180 - (angle1 + angle2)
 fin algorithme
           </paragraph>
-          Traduisons cet algorithme en java :
+          Traduisons cet algorithme en java en ajoutant le traitement des données en entrée et sortie (demande au clavier et affichage à l'écran) :
           <paragraph cssClass="java">
 import java.util.Scanner;
 public class Triangle{
@@ -1790,11 +1824,16 @@ public class Triangle{
         <paragraph title="À vous">
         Écrivez les algorithmes et codez les programmes Java correspondant qui 
           <list listStyle="ordered">
-            <item>calcule et retourne la surface d’un carré en recevant la valeur de son côté.</item>
-            <item>calcule et retourne la surface d’un rectangle en recevant les valeurs de sa longueur et sa largeur.</item>
-            <item>calcule et retourne la surface d’un cercle en recevant la valeur de son rayon.  (Pensez à aller voir la classe Math pour obtenir la valeur de PI ;))</item>
+            <item>dans 3 algorithmes/méthodes différent(e)s affiche respectivement  "*", "**", "***" .</item>
+            <item>affiche le triangle 
+            <paragraph>*</paragraph><paragraph>**</paragraph><paragraph>***</paragraph>
+            </item>
+            <item>calcule et retourne la surface d’un carré en recevant la valeur de son côté. Pour rappel, la surface du carré est la longueur du côté au carré.</item>
+            <item>calcule et retourne la surface d’un rectangle en recevant les valeurs de sa longueur et sa largeur . Pour rappel, la surface du rectangle est la longueur multipliée par la largeur.</item>
+            <item>calcule et retourne la surface d’un cercle en recevant la valeur de son rayon. Pour rappel, la surface du cercle est PI multiplié par la valeur du rayon au carré. (Pensez à aller voir la classe Math pour obtenir la valeur de PI ;))</item>
             <item>étant donné le prix unitaire d’un produit (hors TVA), le taux de TVA (en %) 
-            et la quantité de produit vendue à un client, calcule et retourne le prix total à payer par ce client.</item>
+            et la quantité de produit vendue à un client, calcule et retourne le prix total à payer par ce client. 
+            Pour rappel, le prix total est la quantité multipliée par le prix unitaire multiplié par (1 + le taux de tva)</item>
             <item>réalise la permutation du contenu de deux variables.</item>
             <item>calcule et retourne la somme des chiffres d’un nombre entier de 3 chiffres reçu en paramètre. Réflexion  : l’algorithme est-il aussi valide pour les entiers inférieurs à 100 ?</item>
             <item>étant donné un moment dans la journée donné par trois nombres reçus, à savoir, heure, minute et seconde, calcule le nombre de secondes écoulées depuis minuit.</item>

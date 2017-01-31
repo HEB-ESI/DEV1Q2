@@ -2,7 +2,7 @@
   <!--These parameters are used in all version (online and print) -->
   <general>
     <!--Enter the contact Email that students will use to contact the tutor -->
-    <contact>cleruste@heb.be</contact>
+    <contact>cleruste@he2b.be</contact>
     <!--Enter the URL to your servers home page -->
     <server>http://www.heb.be/esi</server>
     <!--Would like to make a transformation for role 'tutor' or 'student'? -->

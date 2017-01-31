@@ -19,14 +19,14 @@
 				<selfCheck title="Le type des données" shuffle="yes">
 						<fillInBlanks>
 							<question> 
-								Comment déclarer en algorithmique :
+								Comment déclarer en algorithmique les variables dont le nom est le mot en gras :
 							</question>
 							<gapText> 
 								<list listStyle="unordered">
-									<item>un montant d'un ticket de caisse ? <gap answers="">montant : réel</gap></item>  
-									<item>une cote sur le bulletin (pas de demi-point autorisé) ? <gap answers="">cote : entier</gap></item>  
-									<item>le titre d'un film ? <gap answers="">titre : chaine</gap></item>
-									<item>l'initiale de votre nom ? <gap answers="">nom : chaine</gap></item>
+									<item>un <formatted style="bold">montant</formatted> d'un ticket de caisse ? <gap answers="">montant : réel</gap></item>  
+									<item>une <formatted style="bold">cote</formatted> sur le bulletin (pas de demi-point autorisé) ? <gap answers="">cote : entier</gap></item>  
+									<item>le <formatted style="bold">titre</formatted> d'un film ? <gap answers="">titre : chaine</gap></item>
+									<item>l'initiale de votre <formatted style="bold">nom</formatted> ? <gap answers="">nom : chaine</gap></item>
 								</list>  
 							</gapText>
 							<solution></solution>
