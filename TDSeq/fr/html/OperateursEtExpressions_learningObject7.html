@@ -20,8 +20,8 @@
                <li class="navigationLink"><a href="unit_VariablesEtTypes.html">1.2. Variables et types</a></li>
                <li class="navigationLink"><a href="unit_OperateursEtExpressions.html">1.3. Opérateurs et expressions</a><ul class="navigation nav_lo">
                      <li class="navigationLink"><a href="OperateursEtExpressions_learningObject1.html">1.3.1. Les opérateurs arithmétiques élémentaires en algo</a></li>
-                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject2.html">1.3.2. Les opérateurs arithmétiques élémentaires en Java</a></li>
-                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject3.html">1.3.3. Les opérateurs DIV et MOD en algo</a></li>
+                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject2.html">1.3.2. Les opérateurs DIV et MOD en algo</a></li>
+                     <li class="navigationLink"><a href="OperateursEtExpressions_learningObject3.html">1.3.3. Les opérateurs arithmétiques élémentaires en Java</a></li>
                      <li class="navigationLink"><a href="OperateursEtExpressions_learningObject4.html">1.3.4. Les opérateurs DIV et MOD en Java</a></li>
                      <li class="navigationLink"><a href="OperateursEtExpressions_learningObject5.html">1.3.5. Les opérateurs de comparaison en algo</a></li>
                      <li class="navigationLink"><a href="OperateursEtExpressions_learningObject6.html">1.3.6. Les opérateurs de comparaison en Java</a></li>
@@ -41,12 +41,12 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="OperateursEtExpressions_learningObject6.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="OperateursEtExpressions_learningObject8.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="OperateursEtExpressions_learningObject7.html">1.3.7. Les opérateurs booléens en algo</h1>
-      <div id="d8e1400.html" class="clarify">
-         <p class="paragraph" id="d8e1402">
+      <div id="d8e972.html" class="clarify">
+         <p class="paragraph" id="d8e973">
             Ce sont des opérateurs qui ne peuvent s’utiliser qu’avec des expressions booléennes
             :
             
-            <ul class="list" id="d8e1404">
+            <ul class="list" id="d8e975">
                <li class="itemAlt"><code>ET</code> et 
                </li>
                <li class="item"><code>OU</code> ou 
@@ -56,12 +56,12 @@
             </ul>
          </p>
       </div>
-      <div id="d8e1424.html" class="clarify">
-         <p class="paragraph" id="d8e1426">
+      <div id="d8e988.html" class="clarify">
+         <p class="paragraph" id="d8e989">
             On définit deux modes d’évaluation des opérateurs ET et OU :
             
          </p>
-         <p class="paragraph" id="d8e1429"><b>L’évaluation complète</b> :
+         <p class="paragraph" id="d8e991"><b>L’évaluation complète</b> :
             pour connaitre la valeur de <code>cond1 ET cond2</code> 
             (respectivement <code>cond1 OU cond2</code>), les deux
             conditions sont chacune évaluées, après quoi on évalue la valeur de vérité de l’ensemble
@@ -69,33 +69,33 @@
             l’expression.
             
          </p>
-         <p class="paragraph" id="d8e1441"><b>L’évaluation court-circuitée</b> :
+         <p class="paragraph" id="d8e1001"><b>L’évaluation court-circuitée</b> :
             dans un premier temps, seule la première condition est testée. 
             
          </p>
-         <p class="paragraph" id="d8e1447">
+         <p class="paragraph" id="d8e1005">
             Dans le cas du <code>ET</code>, si <code>cond1</code> s’avère faux, 
             il est inutile d’évaluer <code>cond2</code> puisque le résultat sera faux de toute façon ;
             l’évaluation de <code>cond2</code> 
             et de l’ensemble de la conjonction ne se fera que si <code>cond1</code> est vrai.
             
          </p>
-         <p class="paragraph" id="d8e1465">
+         <p class="paragraph" id="d8e1022">
             De même, dans le cas du <code>OU</code>, si <code>cond1</code> s’avère vrai, 
             il est inutile d’évaluer <code>cond2</code> puisque le
             résultat sera vrai de toute façon ; l’évaluation de <code>cond2</code> et de l’ensemble de la disjonction
             ne se fera que si <code>cond1</code> est faux.
             
          </p>
-         <p class="paragraph" id="d8e1484">
+         <p class="paragraph" id="d8e1039">
             Dans le cadre de ce cours, nous opterons pour la deuxième interprétation. 
             
          </p>
-         <p class="paragraph" id="d8e1487">
+         <p class="paragraph" id="d8e1041">
             Montrons son avantage sur un exemple. 
             
          </p>
-         <p class="paragraph" id="d8e1490">
+         <p class="paragraph" id="d8e1043">
             Considérons l’expression <code>n ≠ 0 ET m/n &gt; 10</code>. Si on teste sa valeur
             de vérité avec une valeur de <code>n</code> non nulle, la première condition est vraie et le résultat de
             la conjonction dépendra de la valeur de la deuxième condition. Supposons à présent
@@ -107,17 +107,17 @@
             arrêt de l’algorithme pour cause de division par 0 !
             
          </p>
-         <p class="paragraph" id="d8e1502">
+         <p class="paragraph" id="d8e1054">
             Notez que l’évaluation court-circuitée a pour conséquence la non-commutativité du
             
             <code>ET</code> et du <code>OU</code> : 
-            <code>cond1 ET cond2</code> ≠ <code>cond2 ET cond1</code>, 
+            <code>cond1 ET cond2</code> n'est pas la même que <code>cond2 ET cond1</code>, 
             puisque l’ordre des évaluations des deux conditions entre en jeu.
             
          </p>
       </div>
       <hr />
       <div class="navigation_arrows"><a href="OperateursEtExpressions_learningObject6.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="OperateursEtExpressions_learningObject8.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 13.1.2017 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 2.2.2018 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@he2b.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

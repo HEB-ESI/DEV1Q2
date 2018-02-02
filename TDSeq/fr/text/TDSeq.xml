@@ -599,6 +599,20 @@ Y = 3; // Idem
         </paragraph>
         </clarify>
       </learningObject>
+
+
+			<learningObject title="Les opérateurs DIV et MOD en algo">
+			<!-- ============================================================ -->
+			  <clarify>
+        <paragraph>
+          Ce sont deux opérateurs qui ne peuvent s’utiliser qu’avec des variables entières :
+          <list listStyle="unordered">
+            <item><formatted style="code">DIV</formatted> division entière</item>
+            <item><formatted style="code">MOD</formatted> reste de la division entière</item>
+          </list>
+        </paragraph>
+        </clarify>
+      </learningObject>
       
       
 			<learningObject title="Les opérateurs arithmétiques élémentaires en Java">
@@ -630,18 +644,6 @@ Y = 3; // Idem
         </clarify>
       </learningObject>
       
-			<learningObject title="Les opérateurs DIV et MOD en algo">
-			<!-- ============================================================ -->
-			  <clarify>
-        <paragraph>
-          Ce sont deux opérateursqui ne peuvent s’utiliser qu’avec des variables entières :
-          <list listStyle="unordered">
-            <item><formatted style="code">DIV</formatted> division entière</item>
-            <item><formatted style="code">MOD</formatted> reste de la division entière</item>
-          </list>
-        </paragraph>
-        </clarify>
-      </learningObject>
       
 			<learningObject title="Les opérateurs DIV et MOD en Java">
 			<!-- ============================================================ -->
@@ -758,7 +760,7 @@ Y = 3; // Idem
           <paragraph>
           Notez que l’évaluation court-circuitée a pour conséquence la non-commutativité du 
           <formatted style="code">ET</formatted> et du <formatted style="code">OU</formatted> : 
-          <formatted style="code">cond1 ET cond2</formatted> ≠ <formatted style="code">cond2 ET cond1</formatted>, 
+          <formatted style="code">cond1 ET cond2</formatted> n'est pas la même que <formatted style="code">cond2 ET cond1</formatted>, 
           puisque l’ordre des évaluations des deux conditions entre en jeu.
           </paragraph>
         </clarify>
@@ -851,11 +853,11 @@ Y = 3; // Idem
 								  <item>4.5*3 ? <gap answers="13.5">13.5</gap></item>  
 									<item>13.0/2 ? <gap answers="6.5">6.5</gap></item>  
 									<item>15 % 3 ? <gap answers="0">0</gap></item>  
-									<item>'a'=='b' ? <gap answers="faux">faux</gap></item>  
-									<item>7<![CDATA[<]]>8 ? <gap answers="vrai">vrai</gap></item>  
-									<item>0<![CDATA[<=]]>0 ? <gap answers="vrai">vrai</gap></item>  
-									<item>-1<![CDATA[<=]]>4 ET 4<![CDATA[>]]>8 ? <gap answers="faux">faux</gap></item>  
-									<item>-1<![CDATA[≥]]>4 OU 4<![CDATA[<]]>8 ? <gap answers="vrai">vrai</gap></item>  
+									<item>'a'=='b' ? <gap answers="false">false</gap></item>  
+									<item>7<![CDATA[<]]>8 ? <gap answers="true">true</gap></item>  
+									<item>0<![CDATA[<=]]>0 ? <gap answers="true">true</gap></item>  
+									<item>-1<![CDATA[<=]]>4 <![CDATA[&&]]> 4<![CDATA[>]]>8 ? <gap answers="false">false</gap></item>  
+									<item>-1<![CDATA[>=]]>4 <![CDATA[||]]> 4<![CDATA[<]]>8 ? <gap answers="true">true</gap></item>  
 								</list>  
 							</gapText>
 							<solution></solution>
@@ -900,8 +902,8 @@ Y = 3; // Idem
 						<answer feedback="" correct="yes">delta ← b**2 – 4*a*c</answer>
 						<answer feedback="" correct="yes">maChaine ← "Bonjour"</answer>
 						<answer feedback="" correct="yes">test ← a = b</answer>
-						<answer feedback="" correct="no">somme + 1 ← 3</answer>
-						<answer feedback="" correct="no">somme ← 3n</answer>
+						<answer feedback="À gauche de l'affectation, on doit trouver une variable, pas une expression" correct="no">somme + 1 ← 3</answer>
+						<answer feedback="Il manque un opérateur entre 3 et n. 3n n'est pas non plus un nom de variable correct" correct="no">somme ← 3n</answer>
 					</multipleChoice>
 				</selfCheck>
 				</act>
@@ -956,10 +958,10 @@ Y = 3; // Idem
 						<answer feedback="" correct="yes">somme = nombre1 + nombre2;</answer>
 						<answer feedback="" correct="yes">denRes = den1 * den2;</answer>
 						<answer feedback="" correct="yes">cpt = cpt + 1;</answer>
-						<answer feedback="" correct="yes">delta = b**2 – 4*a*c;</answer>
+						<answer feedback="" correct="yes">delta = Math.pow(b,2) – 4*a*c;</answer>
 						<answer feedback="" correct="yes">maChaine = "Bonjour";</answer>
-						<answer feedback="" correct="no">somme + 1 = 3;</answer>
-						<answer feedback="" correct="no">somme = 3n;</answer>
+						<answer feedback="À gauche de l'affectation, on doit trouver une variable, pas une expression" correct="no">somme + 1 = 3;</answer>
+						<answer feedback="Il manque un opérateur entre 3 et n. 3n n'est pas non plus un nom de variable correct" correct="no">somme = 3n;</answer>
 					</multipleChoice>
 				</selfCheck>
 				</act>
@@ -1017,11 +1019,11 @@ Y = 3; // Idem
           Nous noterons :
           </paragraph>
           <paragraph cssClass="java">
-import java. util .Scanner;
+import java.util.Scanner;
 // ...
 Scanner clavier = new Scanner(System.in);
 // ...
-int nombre1 = clavier. nextInt ();
+int nombre1 = clavier.nextInt();
 				</paragraph>
         <paragraph>
           Les différentes lectures possibles sont :
@@ -1070,14 +1072,14 @@ int nombre1 = clavier. nextInt ();
           L’affichage de la valeur d'une variable <formatted style="input">var</formatted>  est donnée par l'instruction
           </paragraph>
           <paragraph cssClass="java">
- System.out.println (var);
+ System.out.println(var);
 				</paragraph>
         <paragraph>
           Si nous voulons précéder l'affichage de la valeur d'une variable <formatted style="input">var</formatted>  par un message, 
           nous utiliserons l'instruction
         </paragraph>
         <paragraph cssClass="java">
- System.out.println ("La variable var vaut " + var);
+ System.out.println("La variable var vaut " + var);
 				</paragraph>
         </clarify>
         </learningObject>
@@ -1102,8 +1104,8 @@ int nombre1 = clavier. nextInt ();
                     n ← n DIV 2<newLine/>
                     n ← n MOD 7 ? <newLine/>
                     <gap answers="5">5</gap></item>  
-								  <item>Quelle est la ligne de code qui réalise l'affectation externe de la variable capital ?<gap answers="demander capital">demander capital</gap></item>  
-								  <item>Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire ?<gap answers="afficher salaire">afficher salaire</gap></item>  
+								  <item>Quelle est l'instruction qui réalise l'affectation externe de la variable capital ?<gap answers="demander capital">demander capital</gap></item>  
+								  <item>Quelle est l'instruction qui permet d'afficher le contenu de la variable salaire ?<gap answers="afficher salaire">afficher salaire</gap></item>  
 									<item>Dans un algorithme, on veut mettre dans la variable c le produit des contenus des
 									  variables a et b. Que doit-on écrire?<gap answers="c ← a*b">c ← a*b</gap></item>  
 									<item>Écrivez l'instruction qui a pour effet de mettre clr dans la variable acronyme (de type chaine) <gap answers="">acronyme ← "clr"</gap></item>  
@@ -1380,15 +1382,15 @@ public class NomClasse {
         <paragraph cssClass="java">
 // Mon premier programme
 public class Hello {
-    public static void main(String [] args) {
-        System.out. println ("Bonjour !");
+    public static void main(String[] args) {
+        System.out.println ("Bonjour !");
     }
 }
         </paragraph>
         <paragraph>
         <list listStyle="unordered">
             <item>Compilons-le <formatted style="input">javac Hello.java</formatted></item>
-            <item>On obtient la version compilée, le bytecode (<formatted style="code">Hello . class</formatted> )</item>
+            <item>On obtient la version compilée, le bytecode (<formatted style="code">Hello.class</formatted> )</item>
             <item>On peut l’exécuter <formatted style="input">java Hello</formatted></item>
             <item>On voit alors apparaitre à l'écran <formatted style="code">Bonjour !</formatted></item>
           </list>

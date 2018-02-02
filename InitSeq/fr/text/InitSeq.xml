@@ -214,7 +214,7 @@
             <fillInBlanks>
               <question>
                 <paragraph>
-                  Donnez l'équivalent Java des opérateurs vu en algorithmique.
+                  Donnez l'équivalent Java des opérateurs vus en algorithmique.
                 </paragraph>
               </question>
               <gapText> 
@@ -550,7 +550,7 @@ public class ReadingExercice {
         boolean ok = keyboard.<gap answers="">nextBoolean()</gap> ;
         String string1 = keyboard.<gap answers="">next()</gap> ; // We read a word
         String string2 = keyboard.<gap answers="">nextLine()</gap> ; // We read a line 
-        char aCharacter = keyboard.<gap answers="">next().charAt()</gap> ;
+        char aCharacter = keyboard.<gap answers="">next().charAt(0)</gap> ;
     }
 }							</paragraph>
 						</gapText>
@@ -642,7 +642,7 @@ afficher a = b</paragraph>
     }						</paragraph>
 						</answer>          
             
-						<answer feedback="" correct="yes"> 
+						<answer feedback="Affiche la somme de nombre1 et nombre2" correct="yes"> 
 							code 2
 							<paragraph cssClass="java">
     import java.util.Scanner;
@@ -658,7 +658,7 @@ afficher a = b</paragraph>
     }						</paragraph>
 						</answer>
             
-						<answer feedback="" correct="yes"> 
+						<answer feedback="Affiche la valeur de nombre1, un espace, puis la valeur de nombre2" correct="yes"> 
 							code 3
 							<paragraph cssClass="java">
     import java.util.Scanner;

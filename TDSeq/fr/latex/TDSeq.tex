@@ -164,7 +164,7 @@
 			\vspace{-1em}
 			\\Les autorisations au-delà du champ de cette licence peuvent être obtenues à 
 			\texttt{http://www.heb.be/esi}
-			- \texttt{cleruste@heb.be}
+			- \texttt{cleruste@he2b.be}
 			}\end{tiny}
 			\end{minipage}
         \end{sideways}}
@@ -249,15 +249,15 @@
 		
                 \textcolor{white}{.} \par
              
-								Quel(s) type(s) de donn\'ees utiliseriez-vous pour repr\'esenter :
+								Quel(s) type(s) de donn\'ees utiliseriez-vous et quel nombre de variables avez-vous besoin pour repr\'esenter :
 							
 					\begin{itemize}
 				
-			\item un prix hors tva ? \textcolor{gray}{\underline{\hspace*{3em}}} 
-			\item votre nom ?  \textcolor{gray}{\underline{\hspace*{5em}}} 
+			\item un prix hors tva ? \textcolor{gray}{\underline{\hspace*{5em}}} 
+			\item votre nom de famille (en supposant que vous n'ayez pas un nom compos\'e) ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 			\item vos initiales ? \textcolor{gray}{\underline{\hspace*{10em}}} 
-			\item la longueur d'un rectangle ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
-			\item une date du calendrier ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
+			\item la longueur d'un rectangle ?  \textcolor{gray}{\underline{\hspace*{5em}}} 
+			\item une date du calendrier (au format 8/2/2017 par exemple) ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 			\item un moment dans la journ\'ee ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 					\end{itemize}
 				\subsection{Les types \'equivalents en java}
@@ -317,7 +317,7 @@
             \par
         \begin{figure}[hbt]
 				    \begin{center}
-					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/cuvelier/Documents/ESI/Java/2016-2017/DEV1Q2/notes/DEV1Q2/TDSeq/fr/image/primitifs.png}
+					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/cath/Documents/Cours/DEV1Q2/TDSeq/fr/image/primitifs.png}
 						\end{center}
                 
                     \caption[primitifs.png]{primitifs.png}
@@ -577,8 +577,7 @@
         
             \par
         
-          La d\'eclaration des informations apparaitra toujours en \textbf{d\'ebut} d'algorithme, ou dans un bloc annexe appel\'e
-          dictionnaire des variables ou encore dictionnaire des donn\'ees.
+          La d\'eclaration des informations apparaitra toujours en \textbf{d\'ebut} d'algorithme.
         
             \par
         
@@ -629,16 +628,19 @@
             x1 est correct mais pas 1x.
             
 			\item 
-            Pour donner un nom compos\'e \`a une variable, on peut utiliser le \guillemotleft  tiret bas \guillemotright  ou underscore 
-            (par ex. premier\_num\'erateur) mais on d\'econseille d'utiliser le signe \guillemotleft  - \guillemotright  qui est
-            plut\^ot r\'eserv\'e \`a la soustraction. Ainsi, dans la plupart des langages, premier-num\'erateur
-            serait interpr\'et\'e comme la soustraction des variables premier et num\'erateur.
-            
-			\item 
-            Une alternative \`a l'utilisation du tiret bas pour l'\'ecriture de noms de variables compos\'es
-            est la notation \guillemotleft  chameau \guillemotright  (camelCase en anglais), qui consiste \`a mettre une majuscule
+            Pour donner un nom compos\'e \`a une variable, on utilise 
+            la notation \guillemotleft  chameau \guillemotright  (camelCase en anglais), qui consiste \`a mettre une majuscule
             au d\'ebut des mots (g\'en\'eralement \`a partir du deuxi\`eme), par exemple premierNombre
             ou dateNaissance.
+            
+			\item 
+            Pour donner un nom compos\'e \`a une constante, on utilise le \guillemotleft  tiret bas \guillemotright  ou underscore 
+            (par ex. TAUX\_TVA) 
+            
+			\item 
+            On d\'econseille d'utiliser le signe \guillemotleft  - \guillemotright  qui est
+            plut\^ot r\'eserv\'e \`a la soustraction. Ainsi, dans la plupart des langages, premier-num\'erateur
+            serait interpr\'et\'e comme la soustraction des variables premier et num\'erateur.
             
 			\item 
             Les indices et exposants sont proscrits.
@@ -755,7 +757,7 @@
             ou \verb@dateNaissance@.
             
 			\item 
-            Pour donner un nom compos\'e \`a une variable enti\`erement en majuscules, on peut utiliser le \guillemotleft  tiret bas \guillemotright  ou underscore 
+            Pour donner un nom compos\'e \`a une constante, on utilise le \guillemotleft  tiret bas \guillemotright  ou underscore 
             (par ex. \verb@PREMIER_NUMERATEUR@).
             
 			\item 
@@ -829,6 +831,16 @@ Y = 3; // Idem
           valeur du d\'enominateur, une division par 0 entrainant toujours l'arr\^et d'un algorithme.
         
             \par
+        \subsection{Les op\'erateurs DIV et MOD en algo}
+          Ce sont deux op\'erateurs qui ne peuvent s'utiliser qu'avec des variables enti\`eres :
+          
+					\begin{itemize}
+				
+			\item \verb@DIV@ division enti\`ere
+			\item \verb@MOD@ reste de la division enti\`ere
+					\end{itemize}
+				
+            \par
         \subsection{Les op\'erateurs arithm\'etiques \'el\'ementaires en Java}
           Ce sont les op\'erateurs binaires bien connus :
           
@@ -859,18 +871,8 @@ Y = 3; // Idem
           valeur du d\'enominateur, une division par 0 entrainant un arr\^et du programme.
         
             \par
-        \subsection{Les op\'erateurs DIV et MOD en algo}
-          Ce sont deux op\'erateurs tr\`es importants qui ne peuvent s'utiliser qu'avec des variables enti\`eres :
-          
-					\begin{itemize}
-				
-			\item \verb@DIV@ division enti\`ere
-			\item \verb@MOD@ reste de la division enti\`ere
-					\end{itemize}
-				
-            \par
         \subsection{Les op\'erateurs DIV et MOD en Java}
-          Ce sont deux op\'erateurs tr\`es importants qui ne peuvent s'utiliser qu'avec des variables enti\`eres :
+          Ce sont deux op\'erateurs qui ne peuvent s'utiliser qu'avec des variables enti\`eres :
           
 					\begin{itemize}
 				
@@ -880,7 +882,7 @@ Y = 3; // Idem
 				
             \par
         \subsection{Les op\'erateurs de comparaison en algo}
-          Ce sont des op\'erateurs tr\`es importants qui ne peuvent s'utiliser qu'avec des expressions num\'eriques ou des chaines :
+          Ce sont des op\'erateurs qui ne peuvent s'utiliser qu'avec des expressions num\'eriques ou des chaines :
           
 					\begin{itemize}
 				
@@ -900,7 +902,7 @@ Y = 3; // Idem
 				
             \par
         \subsection{Les op\'erateurs de comparaison en Java}
-          Ce sont des op\'erateurs tr\`es importants qui ne peuvent s'utiliser qu'avec des expressions num\'eriques :
+          Ce sont des op\'erateurs qui ne peuvent s'utiliser qu'avec des expressions num\'eriques :
           
 					\begin{itemize}
 				
@@ -986,12 +988,12 @@ Y = 3; // Idem
         
           Notez que l'\'evaluation court-circuit\'ee a pour cons\'equence la non-commutativit\'e du 
           \verb@ET@ et du \verb@OU@ : 
-          \verb@cond1 ET cond2@ ≠ \verb@cond2 ET cond1@, 
+          \verb@cond1 ET cond2@ n'est pas la m\^eme que \verb@cond2 ET cond1@, 
           puisque l'ordre des \'evaluations des deux conditions entre en jeu.
           
             \par
         \subsection{Les op\'erateurs bool\'eens en Java}
-          Ce sont des op\'erateurs tr\`es importants qui ne peuvent s'utiliser qu'avec des expressions bool\'eennes :
+          Ce sont des op\'erateurs qui ne peuvent s'utiliser qu'avec des expressions bool\'eennes :
           
 					\begin{itemize}
 				
@@ -1000,6 +1002,8 @@ Y = 3; // Idem
 			\item \verb@!@ n\'egation 
 					\end{itemize}
 				
+          Java utilise l'\'evaluation court-circuit\'ee.
+        
             \par
         \subsection{Les fonctions math\'ematiques complexes en algo}
 					\begin{itemize}
@@ -1067,8 +1071,8 @@ Y = 3; // Idem
 			\item 'a'=='b' ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
 			\item 7<8 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
 			\item 0<=0 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
-			\item -1<=4 ET 4>8 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
-			\item -1≥4 OU 4<8 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item -1<=4 \&\& 4>8 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
+			\item -1>=4 || 4<8 ?  \textcolor{gray}{\underline{\hspace*{3em}}} 
 					\end{itemize}
 				\section{L'affectation d'une valeur \`a une variable}
 				Cette op\'eration est probablement l'op\'eration la plus importante. En effet, une variable ne
@@ -1166,7 +1170,7 @@ Y = 3; // Idem
         
             \item[ \ding{"6F} ] cpt = cpt + 1;
         
-            \item[ \ding{"6F} ] delta = b**2 - 4*a*c;
+            \item[ \ding{"6F} ] delta = Math.pow(b,2) - 4*a*c;
         
             \item[ \ding{"6F} ] maChaine = "Bonjour";
         
@@ -1225,11 +1229,11 @@ Y = 3; // Idem
           
             \par
         \begin{Java}
-import java. util .Scanner;
+import java.util.Scanner;
 // ...
 Scanner clavier = new Scanner(System.in);
 // ...
-int nombre1 = clavier. nextInt ();
+int nombre1 = clavier.nextInt();
 				\end{Java}
           Les diff\'erentes lectures possibles sont :
           
@@ -1265,37 +1269,23 @@ int nombre1 = clavier. nextInt ();
 				\,\verb|afficher "Le premier nombre vaut ", nb1, " et le seconde nombre vaut ", nb2 |\,
             \par
         
-          Remarques :
+          Comme pour l'affectation interne, on ne peut afficher que des expressions dont les
+          variables qui la composent ont \'et\'e affect\'ees pr\'ealablement.
           
-					\begin{itemize}
-				
-			\item 
-              Ce ne serait pas une erreur fondamentale de remplacer demander par recevoir ou afficher
-              par \'ecrire. Il n'y a \'evidemment pas de confusion possible \`a partir du moment o\`u l'on
-              sait qu'il s'agit de primitives d'\'echange entre l'ext\'erieur et l'ordinateur ex\'ecutant la
-              proc\'edure, mais par principe, il est conseill\'e d'utiliser une syntaxe commune et limit\'ee
-              \`a un petit nombre de mots-cl\'es.
-            
-			\item 
-              Comme pour l'affectation interne, on ne peut afficher que des expressions dont les
-              variables qui la composent ont \'et\'e affect\'ees pr\'ealablement.
-            
-					\end{itemize}
-				
             \par
         \subsection{Communication des r\'esultats en Java}
           L'affichage de la valeur d'une variable \,\verb|var|\,  est donn\'ee par l'instruction
           
             \par
         \begin{Java}
- System.out.println (var);
+ System.out.println(var);
 				\end{Java}
           Si nous voulons pr\'ec\'eder l'affichage de la valeur d'une variable \,\verb|var|\,  par un message, 
           nous utiliserons l'instruction
         
             \par
         \begin{Java}
- System.out.println ("La variable var vaut " + var);
+ System.out.println("La variable var vaut " + var);
 				\end{Java}\subsection{Exercices}
 			
 		\subparagraph{Que vaut ?} 
@@ -1320,8 +1310,8 @@ int nombre1 = clavier. nextInt ();
 				
                     n ← n MOD 7 ? \par
 				 \textcolor{gray}{\underline{\hspace*{1em}}} 
-			\item Quelle est la ligne de code qui r\'ealise l'affectation externe de la variable capital ? \textcolor{gray}{\underline{\hspace*{16em}}} 
-			\item Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire ? \textcolor{gray}{\underline{\hspace*{16em}}} 
+			\item Quelle est l'instruction qui r\'ealise l'affectation externe de la variable capital ? \textcolor{gray}{\underline{\hspace*{16em}}} 
+			\item Quelle est l'instruction qui permet d'afficher le contenu de la variable salaire ? \textcolor{gray}{\underline{\hspace*{16em}}} 
 			\item Dans un algorithme, on veut mettre dans la variable c le produit des contenus des
 									  variables a et b. Que doit-on \'ecrire? \textcolor{gray}{\underline{\hspace*{5em}}} 
 			\item \'Ecrivez l'instruction qui a pour effet de mettre clr dans la variable acronyme (de type chaine)  \textcolor{gray}{\underline{\hspace*{16em}}} 
@@ -1358,8 +1348,10 @@ int nombre1 = clavier. nextInt ();
 				
                     n ← n \% 3 ? \par
 				 \textcolor{gray}{\underline{\hspace*{1em}}} 
-			\item Quelle est la ligne de code qui r\'ealise l'affectation externe de la variabl r\'eelle capital ?  \textcolor{gray}{\underline{\hspace*{16em}}} 
-			\item Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire ?  \textcolor{gray}{\underline{\hspace*{16em}}} 
+			\item Quelle est la ligne de code qui d\'eclare et cr\'ee la variable clavier permettant l'acc\`es au clavier en entr\'ee ?  \textcolor{gray}{\underline{\hspace*{20em}}} 
+			\item Quelle est la ligne de code qui r\'ealise l'affectation externe de la variable r\'eelle capital ?  \textcolor{gray}{\underline{\hspace*{16em}}} 
+			\item Quelle est la ligne de code qui permet d'aller \`a la ligne ?  \textcolor{gray}{\underline{\hspace*{16em}}} 
+			\item Quelle est la ligne de code qui permet d'afficher le contenu de la variable salaire et d'aller \`a la ligne ?  \textcolor{gray}{\underline{\hspace*{16em}}} 
 			\item Dans un code java, on veut mettre dans la variable c le produit des contenus des
 									  variables a et b. Que doit-on \'ecrire ?  \textcolor{gray}{\underline{\hspace*{10em}}} 
 			\item \'Ecrivez l'instruction qui a pour effet de mettre clr dans la variable acronyme (de type chaine)  \textcolor{gray}{\underline{\hspace*{16em}}} 
@@ -1367,6 +1359,8 @@ int nombre1 = clavier. nextInt ();
 				\section{Documenter son code}
 				On n'insistera jamais assez sur la n\'ecessit\'e de documenter un algorithme en y ins\'erant 
         des commentaires judicieux, clairs et suffisants !
+        
+        Dans un premier temps, vous pourrez utiliser les commentaires pour documenter votre code.
       
             \par
         \subsection{Documenter son algorithme}
@@ -1389,14 +1383,23 @@ int nombre1 = clavier. nextInt ();
         Nous prendrons l'habitude de commenter chaque algorithme en pr\'ecisant ce qu'il fait.
       
             \par
-        \subsection{Documenter son code Java}Il existe plusieurs mani\`eres d'ajouter un commentaire
+        \subsection{Documenter son code Java}
+      Dans un premier temps, vous pourrez documenter votre code \`a l'aide de commentaires.
+      
+            \par
+        Il existe plusieurs mani\`eres d'ajouter un commentaire
             \par
         \begin{Java}
 // Commentaire sur une ligne
 \end{Java}\begin{Java}
 /* Commentaire sur
   plusieurs lignes */
-\end{Java}\section{Structure g\'en\'erale}
+\end{Java}
+      En Java,il existe toutefois un outil bien plus puissant pour commenter son code, il s'agit de la javadoc.
+      Nous en reparlerons plus loin.
+      
+            \par
+        \section{Structure g\'en\'erale}
 				Voyons maintenant comment d\'emarrer les algo et le code Java.
       
             \par
@@ -1406,7 +1409,7 @@ int nombre1 = clavier. nextInt ();
             \par
         \begin{figure}[hbt]
 				    \begin{center}
-					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/cuvelier/Documents/ESI/Java/2016-2017/DEV1Q2/notes/DEV1Q2/TDSeq/fr/image/methode.png}
+					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/cath/Documents/Cours/DEV1Q2/TDSeq/fr/image/methode.png}
 						\end{center}
                 
                     \caption[methode.png]{methode.png}
@@ -1418,13 +1421,19 @@ int nombre1 = clavier. nextInt ();
         
             \par
         \begin{verbatim}
-algorithme nomDeAlgorithme(paramètres)
+algorithme nomAlgorithme(paramètres)
     instructions
 fin algorithme
 				\end{verbatim}\begin{verbatim}
-algorithme nomDeAlgorithme(paramètres) → type
+algorithme nomAlgorithme(paramètres) → type
     instructions
     retourner expression
+fin algorithme
+				\end{verbatim}Par exemple,
+            \par
+        \begin{verbatim}
+algorithme sommerNombres(nb1, nb2 : réels) → réel
+    retourner nb1 + nb2
 fin algorithme
 				\end{verbatim}
           Remarques :
@@ -1439,13 +1448,13 @@ fin algorithme
               c'est un premier exemple d'\textbf{indentation} indispensable pour la lisibilit\'e d'un programme, 
               nous y reviendrons lors de l'\'etude des structures alternatives et r\'ep\'etitives.
             
-			\item Comme pour les variables, le \textbf{nomDeAlgorithme} 
+			\item Comme pour les variables, le \textbf{nomAlgorithme} 
             devra \^etre \textbf{appropri\'e} au contenu ! 
             Par exemple, sommerNombres(nb1, nb2 : r\'eels), additionnerFractions(num1, num2, d\'en1, d\'en2 : entiers) plut\^ot que goPartez() ! 
             
 			\item Il va de soi que toutes les parties de cette structure g\'en\'erale ne seront pas toujours 
             n\'ecessaires : certains algorithmes ne n\'ecessiteront pas de passage de param\`etres, d'autres 
-            ne devront pas communiquer des r\'esultats...
+            ne devront pas communiquer un r\'esultat...
             
 			\item Pour la \textbf{lisibilit\'e}, 
             on veillera toujours \`a ce qu'un algorithme tienne sur une vingtaine de 
@@ -1485,9 +1494,21 @@ public class NomClasse {
           Attention Java est sensible \`a la casse, il diff\'erencie majuscules et minuscules.
         
             \par
+        \textbf{M\'ethode} est le mot Java \'equivalent d'"algorithme".
         
+            \par
+        
+          Voici par exemple la m\'ethode 
+        
+            \par
+        \begin{Java}
+public class NomClasse {
+    public static double sommerNombres(double nb1, double nb2)
+        retourner nb1 + nb2;
+    }
+}
+        \end{Java}
           Quand un programme Java s'ex\'ecute, il d\'emarre \`a la m\'ethode principale.
-          \textbf{M\'ethode} est le mot Java \'equivalent d'"algorithme".
         
             \par
         
@@ -1509,8 +1530,13 @@ import java.util.Scanner;
 public class NomClasse {
     public static void main(String [] args) {
         Scanner clavier = new Scanner(System.in);
-        int nb = clavier.nextInt();
-        System.out.println("Le nombre lu vaut" + nb);
+        double nombre1 = clavier.nextDouble();
+        double nombre2 = clavier.nextDouble();
+        double somme = sommerNombres(nombre1, nombre2);
+        System.out.println("La somme de " + nombre1 + " et de " + nombre2 + " vaut " + somme);
+    }
+    public static double sommerNombres(double nb1, double nb2)
+        retourner nb1 + nb2;
     }
 }
         \end{Java}\section{Compiler et ex\'ecuter un programme Java}
@@ -1519,7 +1545,7 @@ public class NomClasse {
             \par
         \subsection{Java est un langage compil\'e puis interpr\'et\'e}\begin{figure}[hbt]
 				    \begin{center}
-					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/cuvelier/Documents/ESI/Java/2016-2017/DEV1Q2/notes/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png}
+					\includegraphics[width=0.8\linewidth,height=0.8\textheight,keepaspectratio=true]{/home/cath/Documents/Cours/DEV1Q2/TDSeq/fr/image/java-jvm-jvm.png}
 						\end{center}
                 
                     \caption[java-jvm-jvm.png]{java-jvm-jvm.png}
@@ -1533,15 +1559,15 @@ public class NomClasse {
         \begin{Java}
 // Mon premier programme
 public class Hello {
-    public static void main(String [] args) {
-        System.out. println ("Bonjour !");
+    public static void main(String[] args) {
+        System.out.println ("Bonjour !");
     }
 }
         \end{Java}
 					\begin{itemize}
 				
 			\item Compilons-le \,\verb|javac Hello.java|\,
-			\item On obtient la version compil\'ee, le bytecode (\verb@Hello . class@ )
+			\item On obtient la version compil\'ee, le bytecode (\verb@Hello.class@ )
 			\item On peut l'ex\'ecuter \,\verb|java Hello|\,
 			\item On voit alors apparaitre \`a l'\'ecran \verb@Bonjour !@
 					\end{itemize}
@@ -1617,7 +1643,9 @@ fin algorithme
             \par
         \subsection{Compr\'ehension de codes Java}
           Pour ces exercices, nous vous demandons de comprendre des codes Java donn\'es. 
-          
+        
+            \par
+        
 			
 		\subparagraph{Compr\'ehension} 
 		
@@ -1714,9 +1742,7 @@ public class Exercice7 {
 }
         \end{Java} \textcolor{gray}{\underline{\hspace*{1em}}} 
 					\end{itemize}
-				
-            \par
-        
+				\subsection{Compr\'ehension de codes Java (suite)}
 			
 		\subparagraph{Comprendre les erreurs} 
 		
@@ -1838,7 +1864,7 @@ public class Exercice7 {
         
             \item[ \ding{"6D} ] l'ent\^ete de la m\'ethode main est incorrect
         
-            \item[ \ding{"6D} ] on ex\'ecute la mauvaise classe
+            \item[ \ding{"6D} ] on ex\'ecute le mauvais fichier
         
             \end{itemize} 
         \subsection{\`A vous de jouer...}
@@ -1856,7 +1882,7 @@ public class Exercice7 {
 			\item r\'esolvez le probl\`eme via quelques exemples pr\'ecis ;
 			\item mettez en \'evidence les variables \textbf{\guillemotleft  donn\'ees \guillemotright }, les variables \textbf{\guillemotleft  r\'esultats \guillemotright } et les variables de travail ;
 			\item n'h\'esitez pas \`a faire une \'ebauche de r\'esolution en fran\c cais avant d'\'elaborer l'algorithme d\'efinitif pseudo-cod\'e ;
-			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans l'algorithme ; les noms des variables risquant de ne pas \^etre suffisamment explicites.
+			\item d\'eclarez ensuite les variables (et leur type) qui interviennent dans l'algorithme ; les noms des variables doivent \^etre suffisamment explicites.
 			\item \'Ecrivez la partie algorithmique \textbf{AVANT} de vous lancer dans la programmation en Java.
 					\end{itemize}
 				
@@ -1925,7 +1951,7 @@ algorithme troisièmeAngleTriangle(angle1, angle2 : réels)→ réel
     retourner 180 - (angle1 + angle2)
 fin algorithme
           \end{verbatim}
-          Traduisons cet algorithme en java :
+          Traduisons cet algorithme en java en ajoutant le traitement des donn\'ees en entr\'ee et sortie (demande au clavier et affichage \`a l'\'ecran) :
           \begin{Java}
 import java.util.Scanner;
 public class Triangle{
@@ -1955,11 +1981,21 @@ public class Triangle{
           
 					\begin{enumerate}
 				
-			\item calcule et retourne la surface d'un carr\'e en recevant la valeur de son c\^ot\'e.
-			\item calcule et retourne la surface d'un rectangle en recevant les valeurs de sa longueur et sa largeur.
-			\item calcule et retourne la surface d'un cercle en recevant la valeur de son rayon.  (Pensez \`a aller voir la classe Math pour obtenir la valeur de PI ;))
+			\item dans 3 algorithmes/m\'ethodes diff\'erent(e)s affiche respectivement  "*", "**", "***" .
+			\item affiche le triangle 
+            *
+            \par
+        **
+            \par
+        ***
+            \par
+        
+			\item calcule et retourne la surface d'un carr\'e en recevant la valeur de son c\^ot\'e. Pour rappel, la surface du carr\'e est la longueur du c\^ot\'e au carr\'e.
+			\item calcule et retourne la surface d'un rectangle en recevant les valeurs de sa longueur et sa largeur . Pour rappel, la surface du rectangle est la longueur multipli\'ee par la largeur.
+			\item calcule et retourne la surface d'un cercle en recevant la valeur de son rayon. Pour rappel, la surface du cercle est PI multipli\'e par la valeur du rayon au carr\'e. (Pensez \`a aller voir la classe Math pour obtenir la valeur de PI ;))
 			\item \'etant donn\'e le prix unitaire d'un produit (hors TVA), le taux de TVA (en \%) 
-            et la quantit\'e de produit vendue \`a un client, calcule et retourne le prix total \`a payer par ce client.
+            et la quantit\'e de produit vendue \`a un client, calcule et retourne le prix total \`a payer par ce client. 
+            Pour rappel, le prix total est la quantit\'e multipli\'ee par le prix unitaire multipli\'e par (1 + le taux de tva)
 			\item r\'ealise la permutation du contenu de deux variables.
 			\item calcule et retourne la somme des chiffres d'un nombre entier de 3 chiffres re\c cu en param\`etre. R\'eflexion  : l'algorithme est-il aussi valide pour les entiers inf\'erieurs \`a 100 ?
 			\item \'etant donn\'e un moment dans la journ\'ee donn\'e par trois nombres re\c cus, \`a savoir, heure, minute et seconde, calcule le nombre de secondes \'ecoul\'ees depuis minuit.

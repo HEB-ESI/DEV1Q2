@@ -32,29 +32,33 @@
          </li>
       </ul>
       <div class="navigation_arrows"><a href="unit_Structure.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Structure_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Structure_learningObject1.html">1.6.1. Structure générale d’un algorithme</h1>
-      <div id="d8e2317.html" class="clarify">
-         <p class="paragraph" id="d8e2319">
+      <div id="d8e1590.html" class="clarify">
+         <p class="paragraph" id="d8e1591">
             Un algorithme contient la solution algorithmique d’un problème donné (ou d’une de
             ses parties).
             
          </p>
-         <p class="paragraph" id="d8e2322"><span class="multimedia_inline"><img class="multimedia" id="d8e2324" src="../image/methode.png" alt="" /></span></p>
-         <p class="paragraph" id="d8e2327">
+         <p class="paragraph" id="d8e1593"><span class="multimedia_inline"><img class="multimedia" id="d8e1594" src="../image/methode.png" alt="" /></span></p>
+         <p class="paragraph" id="d8e1595">
             Sa structure générale sera la suivante :
             
          </p><pre>
-algorithme nomDeAlgorithme(paramètres)
+algorithme nomAlgorithme(paramètres)
     instructions
 fin algorithme
 				</pre><pre>
-algorithme nomDeAlgorithme(paramètres) → type
+algorithme nomAlgorithme(paramètres) → type
     instructions
     retourner expression
 fin algorithme
-				</pre><p class="paragraph" id="d8e2337">
+				</pre><p class="paragraph" id="d8e1601">Par exemple,</p><pre>
+algorithme sommerNombres(nb1, nb2 : réels) → réel
+    retourner nb1 + nb2
+fin algorithme
+				</pre><p class="paragraph" id="d8e1605">
             Remarques :
             
-            <ul class="list" id="d8e2339">
+            <ul class="list" id="d8e1607">
                <li class="itemAlt">Le code d’un algorithme sera toujours compris entre la première ligne, 
                   appelée « <b>entête</b> » qui commence par le mot « algorithme » suivi du nom choisi pour l’algorithme,
                   et la ligne finale « fin algorithme ».
@@ -66,7 +70,7 @@ fin algorithme
                   nous y reviendrons lors de l’étude des structures alternatives et répétitives.
                   
                </li>
-               <li class="itemAlt">Comme pour les variables, le <b>nomDeAlgorithme</b> 
+               <li class="itemAlt">Comme pour les variables, le <b>nomAlgorithme</b> 
                   devra être <b>approprié</b> au contenu ! 
                   Par exemple, sommerNombres(nb1, nb2 : réels), additionnerFractions(num1, num2, dén1,
                   dén2 : entiers) plutôt que goPartez() ! 
@@ -76,7 +80,7 @@ fin algorithme
                   
                   nécessaires : certains algorithmes ne nécessiteront pas de passage de paramètres,
                   d’autres 
-                  ne devront pas communiquer des résultats...
+                  ne devront pas communiquer un résultat...
                   
                </li>
                <li class="itemAlt">Pour la <b>lisibilité</b>, 
@@ -93,6 +97,6 @@ fin algorithme
       </div>
       <hr />
       <div class="navigation_arrows"><a href="unit_Structure.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Structure_learningObject2.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
-      <p class="footer"> Update: 13.1.2017 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <p class="footer"> Update: 2.2.2018 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@he2b.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>

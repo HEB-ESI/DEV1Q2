@@ -5,12 +5,15 @@
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta http-equiv="Content-Script-Type" content="text/javascript" />
       <meta http-equiv="Content-Style-Type" content="text/css" />
-      <meta name="description" content="TD Séquentiel - Rappels de base: À vous de jouer.... Consignes. Parenthèses. Exercice résolu. À vous. " />
+      <meta name="description" content="TD Séquentiel - Rappels de base: Compréhension de codes Java (suite). Comprendre les erreurs. Comprendre les erreurs. Comprendre les erreurs. " />
       <meta name="copyright" content="" />
       <meta name="author" content="" />
       <meta name="keywords" content="TD Séquentiel - Rappels de base, eLML" />
-      <title>1.8.3. À vous de jouer...</title>
-      <link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
+      <title>1.8.3. Compréhension de codes Java (suite)</title>
+      		
+      <link href="selfCheck.css" type="text/css" rel="stylesheet" media="screen" />
+      		<script src="selfCheck.js" type="text/javascript">
+         <!----></script><link rel="stylesheet" href="../../../_templates/java/elml.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="../../../_templates/java/elml_print.css" type="text/css" media="print,handheld" /><script src="../../../_templates/java/elml.js" type="text/javascript">
          <!----></script><script type="text/javascript" language="JavaScript1.2" src="scorm_generic.js">
          <!----></script></head>
@@ -26,148 +29,154 @@
                <li class="navigationLink"><a href="unit_Exercices.html">1.8. Exercices</a><ul class="navigation nav_lo">
                      <li class="navigationLink"><a href="Exercices_learningObject1.html">1.8.1. Compréhension d’algorithme</a></li>
                      <li class="navigationLink"><a href="Exercices_learningObject2.html">1.8.2. Compréhension de codes Java</a></li>
-                     <li class="navigationActual"><strong>1.8.3. À vous de jouer...</strong></li>
+                     <li class="navigationActual"><strong>1.8.3. Compréhension de codes Java (suite)</strong></li>
+                     <li class="navigationLink"><a href="Exercices_learningObject4.html">1.8.4. À vous de jouer...</a></li>
                   </ul>
                </li>
             </ul>
          </li>
       </ul>
-      <div class="navigation_arrows"><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><img src="../../../_templates/java/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0" /></div><a name="top"></a><h1 id="Exercices_learningObject3.html">1.8.3. À vous de jouer...</h1>
-      <div id="d8e2837.html" class="act">
-         <h4>Consignes</h4>
-         <p class="paragraph" title="Consignes" id="d8e2839">
-            Il est temps de se lancer et d’écrire vos premiers algorithmes et programmes Java
-            correspondant. 
-            Voici quelques conseils pour vous guider dans la résolution de tels problèmes :
-            
-            <ul class="list" id="d8e2841">
-               <li class="itemAlt">il convient d’abord de bien comprendre le problème posé ; assurez-vous qu’il est parfaitement
-                  spécifié ;
-               </li>
-               <li class="item">résolvez le problème via quelques exemples précis ;</li>
-               <li class="itemAlt">mettez en évidence les variables <b>« données »</b>, les variables <b>« résultats »</b> et les variables de travail ;
-               </li>
-               <li class="item">n’hésitez pas à faire une ébauche de résolution en français avant d’élaborer l’algorithme
-                  définitif pseudo-codé ;
-               </li>
-               <li class="itemAlt">déclarez ensuite les variables (et leur type) qui interviennent dans l’algorithme
-                  ; les noms des variables risquant de ne pas être suffisamment explicites.
-               </li>
-               <li class="item">Écrivez la partie algorithmique <b>AVANT</b> de vous lancer dans la programmation en Java.
-               </li>
-            </ul>
-         </p>
-         <h4>Parenthèses</h4>
-         <p class="paragraph" title="Parenthèses" id="d8e2873">
-            <ol class="list" id="d8e2875">
-               <li class="itemAlt">Que vaut (((5) + 3) - 2) + (2 * 3) ?</li>
-               <li class="item">Toutes les parenthèses sont-elles obligatoires ? Si non, lesquelles pouvez-vous retirer
-                  ?
-               </li>
-               <li class="itemAlt">Que vaut ((4/2)*(2*3)) * 5 ?</li>
-               <li class="item">Toutes les parenthèses sont-elles obligatoires ? Si non, lesquelles pouvez-vous retirer
-                  ?
-               </li>
-            </ol>
-         </p>
-         <h4>Exercice résolu</h4>
-         <p class="paragraph" title="Exercice résolu" id="d8e2891">
-            La somme des angles d’un triangle est égale dans tous les cas à 180°. Écrivez un algorithme
-            qui reçoit la valeur de deux angles d’un triangle, et retourne la valeur du 3e. 
-            
-         </p>
-         <p class="paragraph" id="d8e2894">Par exemple, si on reçoit 40 pour le premier angle et 60 pour le second, on doit retourner
-            80 pour le troisième (40 + 60 = 100, le troisième angle vaut donc 80).
-         </p>
-         <p class="paragraph" id="d8e2897">Par exemple, si on reçoit 90 pour le premier angle et 10 pour le second, on doit retourner
-            80 pour le troisième (90 + 10 = 100, le troisième angle vaut donc 80).
-         </p>
-         <p class="paragraph" id="d8e2901">Par exemple, si on reçoit 89 pour le premier angle et 30 pour le second, on doit retourner
-            61 pour le troisième (89 + 30 = 119, le troisième angle vaut donc 61).
-         </p>
-         <p class="paragraph" id="d8e2904">Par exemple, si on reçoit 5 pour le premier angle et 5 pour le second, on doit retourner
-            170 pour le troisième (5 + 5 = 10, le troisième angle vaut donc 170).
-         </p>
-         <p class="paragraph" id="d8e2907">Par exemple, si on reçoit 0 pour le premier angle et 180 pour le second, on doit retourner
-            0 pour le troisième (0 + 180 = 180, le troisième angle vaut donc 0).
-         </p>
-         <p class="paragraph" id="d8e2910">
-            Quelles sont les données ? :
-            
-            <ol class="list" id="d8e2912">
-               <li class="itemAlt">les 2 angles du triangle, des réels.</li>
-            </ol>
-            Que cherche-t-on ? :
-            
-            <ol class="list" id="d8e2918">
-               <li class="itemAlt">la valeur du 3e angle du triangle, un réel.</li>
-            </ol>
-            Comment faire ? :
-            
-            <ol class="list" id="d8e2924">
-               <li class="itemAlt">On sait que la somme des 3 angles d'un triangle vaut 180°. (angle1 + angle2 + angle3
-                  = 180)
-               </li>
-               <li class="item">On connait la valeur de 2 des angles, disons angle1 et angle2.</li>
-               <li class="itemAlt">La valeur du troisième angle vaut donc 180 moins la somme des 2 autres angles.(angle3
-                  vaut 180 - (angle1 + angle2))
-               </li>
-            </ol>
-            Écrivons l'algorithme :
-            <pre>
-algorithme troisièmeAngleTriangle(angle1, angle2 : réels)→ réel
-    retourner 180 - (angle1 + angle2)
-fin algorithme
-          </pre>
-            Traduisons cet algorithme en java :
-            <pre>
-import java.util.Scanner;
-public class Triangle{
-    public static void main(String [] args) {
-        Scanner clavier = new Scanner(System.in);
-        double angle1 = clavier.nextDouble();
-        double angle2 = clavier.nextDouble();
-        double angle3 = troisiemeAngleTriangle(angle1, angle2);
-        System.out.println(angle3);
-    }    
-    
-    public static double troisiemeAngleTriangle(double angle1, double angle2) {
-        return 180 - (angle1 + angle2);
-    }
-}
-        </pre>
-            Il nous reste à compiler <span class="input">javac Triangle.java</span> et à exécuter <span class="input">java Triangle</span> notre programme.
-            
-         </p>
-         <h4>À vous</h4>
-         <p class="paragraph" title="À vous" id="d8e2950">
-            Écrivez les algorithmes et codez les programmes Java correspondant qui 
-            
-            <ol class="list" id="d8e2952">
-               <li class="itemAlt">calcule et retourne la surface d’un carré en recevant la valeur de son côté.</li>
-               <li class="item">calcule et retourne la surface d’un rectangle en recevant les valeurs de sa longueur
-                  et sa largeur.
-               </li>
-               <li class="itemAlt">calcule et retourne la surface d’un cercle en recevant la valeur de son rayon.  (Pensez
-                  à aller voir la classe Math pour obtenir la valeur de PI ;))
-               </li>
-               <li class="item">étant donné le prix unitaire d’un produit (hors TVA), le taux de TVA (en %) 
-                  et la quantité de produit vendue à un client, calcule et retourne le prix total à
-                  payer par ce client.
-               </li>
-               <li class="itemAlt">réalise la permutation du contenu de deux variables.</li>
-               <li class="item">calcule et retourne la somme des chiffres d’un nombre entier de 3 chiffres reçu en
-                  paramètre. Réflexion  : l’algorithme est-il aussi valide pour les entiers inférieurs
-                  à 100 ?
-               </li>
-               <li class="itemAlt">étant donné un moment dans la journée donné par trois nombres reçus, à savoir, heure,
-                  minute et seconde, calcule le nombre de secondes écoulées depuis minuit.
-               </li>
-            </ol>
-         </p>
-      </div>
+      <div class="navigation_arrows"><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Exercices_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div><a name="top"></a><h1 id="Exercices_learningObject3.html">1.8.3. Compréhension de codes Java (suite)</h1>
+      <div id="d8e1818.html" class="act">
+         <h4>Comprendre les erreurs</h4>
+         <div id="selfCheck1.html" class="singleChoiceShuffle">
+            <div class="itemQuestion">
+               <p class="paragraph" id="d8e1822">
+                  								Soit le code :
+                  							
+               </p><pre>
+  public class ErrCompilation{
+	  public static void main ( string[] args ) {
+		  System.out.println("Hello !");
+	  }
+  }							</pre><p class="paragraph" id="d8e1826">
+                  								la commande "<code>javac ErrCompilation.java</code>"  provoque l'erreur suivante :
+                  							
+               </p><pre>
+  ErrCompilation.java:2:
+  cannot find symbol
+  symbol : class string
+  location:class ErrCompilation
+  public static void main ( string[] args ) {
+  ^ 
+  1
+  error						</pre><p class="paragraph" id="d8e1833">
+                  								Quelle est l'erreur ?
+                  							
+               </p>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck1.html" value="0" class="itemRadio" id="selfCheck1.html_d8e1835" /><div class="itemLabel"><label for="selfCheck1.html_d8e1835">il faut insérer des espaces dans la parenthèse <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip('Non non, qu&#x92;il y ait 0, 1 ou plusieurs espaces ne change rien...')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck1.html" value="1" class="itemRadio" id="selfCheck1.html_d8e1837" /><div class="itemLabel"><label for="selfCheck1.html_d8e1837">string doit être écrit avec une majuscule au début <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip('En effet, il s&#x92;agit bien de String et non string')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck1.html" value="0" class="itemRadio" id="selfCheck1.html_d8e1839" /><div class="itemLabel"><label for="selfCheck1.html_d8e1839">le fichier doit s'appeler string.java <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip('Non non, le fichier doit bien avoir le même nom que la classe avec l&#x92;extension java, c-à-d ErrCompilation.java')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck1.html" value="0" class="itemRadio" id="selfCheck1.html_d8e1841" /><div class="itemLabel"><label for="selfCheck1.html_d8e1841">il faut remplacer les parenthèses par des accolades <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip('Non non, ce sont bien des parenthèses...')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+            <div class="itemSolution"></div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck1.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck1.html_solution" onclick="solutionChoice('selfCheck1.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div><script src="wz_tooltip.js" type="text/javascript">
+            <!----></script><h4>Comprendre les erreurs</h4>
+         <div id="selfCheck2.html" class="singleChoiceShuffle">
+            <div class="itemQuestion">
+               <p class="paragraph" id="d8e1847">
+                  								Soit le code :
+                  							
+               </p><pre>
+  public class ErrExecution {
+      public void main ( String[] args ) {
+          System.out.println(10);
+      }
+  }							</pre><p class="paragraph" id="d8e1851">
+                  								la suite de commandes 
+                  							
+               </p><pre>
+  javac ErrExecution.java 
+  java ErrExecution			</pre><p class="paragraph" id="d8e1855">
+                  								provoque l'erreur suivante :
+                  							
+               </p><pre>
+  Exception in thread "main" java.lang.NoSuchMethodError: main</pre><p class="paragraph" id="d8e1859">
+                  								il s'agit d'une erreur générée par la machine virtuelle java car :
+                  							
+               </p>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="0" class="itemRadio" id="selfCheck2.html_d8e1861" /><div class="itemLabel"><label for="selfCheck2.html_d8e1861">la machine virtuelle est mal installée <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip(' ')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="0" class="itemRadio" id="selfCheck2.html_d8e1863" /><div class="itemLabel"><label for="selfCheck2.html_d8e1863">le source n'a pas été compilé <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip(' ')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="1" class="itemRadio" id="selfCheck2.html_d8e1865" /><div class="itemLabel"><label for="selfCheck2.html_d8e1865">l'entête de la méthode main est incorrect <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip('il manque le mot clé static')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck2.html" value="0" class="itemRadio" id="selfCheck2.html_d8e1867" /><div class="itemLabel"><label for="selfCheck2.html_d8e1867">on exécute la mauvaise classe <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip(' ')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+            <div class="itemSolution">En effet, quel est-il d'ailleurs ?</div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck2.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck2.html_solution" onclick="solutionChoice('selfCheck2.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div><script src="wz_tooltip.js" type="text/javascript">
+            <!----></script><h4>Comprendre les erreurs</h4>
+         <div id="selfCheck3.html" class="singleChoiceShuffle">
+            <div class="itemQuestion">
+               <p class="paragraph" id="d8e1874">
+                  								Soit le code :
+                  							
+               </p><pre>
+  public class ErrExecution {
+      public static void main ( String[] args ) {	
+          System.out.println(10);
+      }
+  }							</pre><p class="paragraph" id="d8e1878">
+                  								la suite de commandes 
+                  							
+               </p><pre>
+  javac ErrExecution.java 
+  java ErrExecution.java	</pre><p class="paragraph" id="d8e1882">
+                  								provoque l'erreur suivante :
+                  							
+               </p><pre>
+  Exception in thread "main" java.lang.NoClassDefFoundError: ErrExecution/java
+  caused by: java.lang.ClassNotFoundException: ErrExecution.java
+  [...]
+  Could not find the main class: ErrExecution.java. Program will exit.	</pre><p class="paragraph" id="d8e1886">
+                  								il s'agit d'une erreur générée par la machine virtuelle java car :
+                  							
+               </p>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck3.html" value="0" class="itemRadio" id="selfCheck3.html_d8e1888" /><div class="itemLabel"><label for="selfCheck3.html_d8e1888">la machine virtuelle est mal installée <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip(' ')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck3.html" value="0" class="itemRadio" id="selfCheck3.html_d8e1890" /><div class="itemLabel"><label for="selfCheck3.html_d8e1890">l'entête de la méthode main est incorrect <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip(' ')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="itemAnswer"><input type="radio" name="selfCheck3.html" value="1" class="itemRadio" id="selfCheck3.html_d8e1892" /><div class="itemLabel"><label for="selfCheck3.html_d8e1892">on exécute le mauvais fichier <span class="itemFeedback">
+                        <!----></span></label></div>
+               <div class="itemHelp" onmouseover="Tip('En effet... quelle classe tente-t-il d&#x92;exécuter ? (Relisez bien la commande d&#x92;exécution)')" onmouseout="UnTip()">?</div>
+            </div>
+            <div class="missingMC">Vous n'avez pas encore marqué toutes les réponses correctes!</div>
+            <div class="itemSolution"></div>
+            <div class="itemCheck"><button type="submit" class="buttonCheck" onclick="checkChoice('selfCheck3.html');" onmouseover="this.className='buttonCheck_hover';" onmouseout="this.className='buttonCheck';">Vérifier</button><button type="submit" class="buttonSolution_disabled" id="selfCheck3.html_solution" onclick="solutionChoice('selfCheck3.html');" onmouseover="this.className='buttonSolution_hover';" onmouseout="this.className='buttonSolution';" disabled="disabled">Solution</button></div>
+         </div><script src="wz_tooltip.js" type="text/javascript">
+            <!----></script></div>
       <hr />
-      <div class="navigation_arrows"><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><img src="../../../_templates/java/navigation/next_off.gif" height="24" width="24" alt="No following page available" border="0" /></div>
-      <p class="footer"> Update: 13.1.2017 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@heb.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
+      <div class="navigation_arrows"><a href="Exercices_learningObject2.html"><img src="../../../_templates/java/navigation/back.gif" height="24" width="24" alt="Go to previous page" border="0" /></a><a href="Exercices_learningObject4.html"><img src="../../../_templates/java/navigation/next.gif" height="24" width="24" alt="Go to next page" border="0" /></a></div>
+      <p class="footer"> Update: 2.2.2018 (<a href="http://www.elml.org/">created with eLML</a>)  - <a href="mailto:cleruste@he2b.be">Contact</a> - <a href="../text/TDSeq.pdf">Imprimer (PDF)</a> - <a href="http://www.heb.be/esi"> ©</a></p>
    </body>
 </html>
