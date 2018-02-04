@@ -135,15 +135,15 @@ public class Test {
     public static void main(String[] args){
       Scanner clavier = new Scanner(System.in);
       int nombre1;
-      nombre1 = clavier. nextInt ();
+      nombre1 = clavier.nextInt();
       signe(nombre1);
     }
     public static void signe(int nombre1) {
       System.out. println (nombre1 + " est un nombre ");
       if (nombre1 <![CDATA[<]]> 0) {
-        System.out. println (" negatif ");
+        System.out.println (" negatif ");
       } else {
-        System.out. println (" positif ");
+        System.out.println (" positif ");
       }
     }
 }

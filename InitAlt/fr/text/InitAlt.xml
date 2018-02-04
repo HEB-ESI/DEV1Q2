@@ -29,9 +29,9 @@
 algorithme multiple5(n : entier) → chaine
     aRetourner : chaine
     si <gap answers="n MOD 5 = 0,n MOD 5=0">n MOD 5 = 0</gap> alors
-        aRetourner ← n, "est divisible par 5"
+        aRetourner ← "la valeur ", n, " est divisible par 5"
     sinon
-        aRetourner ← n, "n'est pas divisible par 5"
+        aRetourner ← "la valeur ", n, " n'est pas divisible par 5"
     fin si
     retourner aRetourner
 fin algorithme
@@ -232,7 +232,7 @@ public class Test{
                   <item>
                   <paragraph cssClass="java">
 <![CDATA[
-import java. util .Scanner;
+import java.util.Scanner;
 public class Test {
     public static void main(String [] args) {
       Scanner clavier = new Scanner(System.in);
@@ -266,7 +266,7 @@ public class Test {
                   <item>
                   <paragraph cssClass="java">
 <![CDATA[
-import java. util .Scanner;
+import java.util.Scanner;
 public class Test {
     public static void main(String [] args) {
       Scanner clavier = new Scanner(System.in);

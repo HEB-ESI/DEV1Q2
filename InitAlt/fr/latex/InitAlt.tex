@@ -164,7 +164,7 @@
 			\vspace{-1em}
 			\\Les autorisations au-delà du champ de cette licence peuvent être obtenues à 
 			\texttt{http://www.heb.be/esi}
-			- \texttt{cleruste@heb.be}
+			- \texttt{cleruste@he2b.be}
 			}\end{tiny}
 			\end{minipage}
         \end{sideways}}
@@ -197,9 +197,9 @@
 algorithme multiple5(n : entier) → chaine
     aRetourner : chaine
     si n MOD 5 = 0 alors
-        aRetourner ← n, "est divisible par 5"
+        aRetourner ← "la valeur ", n, " est divisible par 5"
     sinon
-        aRetourner ← n, "n'est pas divisible par 5"
+        aRetourner ← "la valeur ", n, " n'est pas divisible par 5"
     fin si
     retourner aRetourner
 fin algorithme
@@ -240,7 +240,9 @@ fin selon\end{verbatim}
               
 					\begin{itemize}
 				
-			\item \begin{verbatim}
+			\item Si le nombre re\c cu est 2 ? 
+            \par
+        \begin{verbatim}
 algorithme exerciceA (x : entier)
     ok : booléen
     ok ← x > 2
@@ -250,10 +252,10 @@ algorithme exerciceA (x : entier)
       afficher 3*x
     fin si
 fin algorithme
-				\end{verbatim}Si le nombre re\c cu est 2 ? 
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
+			\item Si le nombre re\c cu est 3 ? 
             \par
-         \textcolor{gray}{\underline{\hspace*{1em}}} 
-			\item \begin{verbatim}
+        \begin{verbatim}
 algorithme exerciceB (x : entier)
     ok : booléen
     ok ← x MOD 2 = 0
@@ -263,9 +265,7 @@ algorithme exerciceB (x : entier)
       afficher 3*x
     fin si
 fin algorithme
-				\end{verbatim}Si le nombre re\c cu est 3 ? 
-            \par
-         \textcolor{gray}{\underline{\hspace*{1em}}} 
+				\end{verbatim} \textcolor{gray}{\underline{\hspace*{1em}}} 
 					\end{itemize}
 				Si vous n'avez pas r\'epondu correctement \`a toutes les questions, 
         r\'evisez ici (\url{www.heb.be/esi/InitAlt/fr/../../TDAlt/fr/html/unit\_SiAlorsSinon.html})
@@ -382,7 +382,7 @@ public class Test{
          \textcolor{gray}{\underline{\hspace*{5em}}} 
 			\item \begin{Java}
 
-import java. util .Scanner;
+import java.util.Scanner;
 public class Test {
     public static void main(String [] args) {
       Scanner clavier = new Scanner(System.in);
@@ -413,7 +413,7 @@ public class Test {
          \textcolor{gray}{\underline{\hspace*{2em}}} 
 			\item \begin{Java}
 
-import java. util .Scanner;
+import java.util.Scanner;
 public class Test {
     public static void main(String [] args) {
       Scanner clavier = new Scanner(System.in);

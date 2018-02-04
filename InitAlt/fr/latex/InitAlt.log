@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.24)  13 JAN 2017 10:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.13)  2 FEB 2018 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -806,13 +806,13 @@ LaTeX Info: Redefining \nameref on input line 143.
 \openout5 = `InitAlt.out'.
 
 
-<../../../_templates/java/icons/logo-esi.jpg, id=20, 45.16875pt x 85.31876pt>
+<../../../_templates/java/icons/logo-esi.jpg, id=20, 72.27pt x 57.816pt>
 File: ../../../_templates/java/icons/logo-esi.jpg Graphic file (type jpg)
 
 <use ../../../_templates/java/icons/logo-esi.jpg>
 Package pdftex.def Info: ../../../_templates/java/icons/logo-esi.jpg used on in
 put line 145.
-(pdftex.def)             Requested size: 56.9055pt x 107.48915pt.
+(pdftex.def)             Requested size: 56.9055pt x 45.52414pt.
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 152.
 
 
@@ -896,18 +896,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 cc-gris.jpg>]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
-) [2
+)
+Overfull \hbox (24.6177pt too wide) in paragraph at lines 206--206
+[]        \T1/lmtt/m/n/10.95 aRetourner $\OMS/lmsy/m/n/10.95  $ \T1/lmtt/m/n/10
+.95 "la valeur ", n, " n'est pas divisible par 5"[] 
+ []
+
+[2
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 271.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 271.
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [3] [4]
-[5] [6] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+) [3]
+[4] [5] [6] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
 LaTeX Font Info:    Try loading font information for TS1+lmr on input line 536.
@@ -928,8 +933,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 605.
  ) 
 Here is how much of TeX's memory you used:
  13271 strings out of 493029
- 192708 string characters out of 6136234
- 327536 words of memory out of 5000000
+ 192708 string characters out of 6136233
+ 327523 words of memory out of 5000000
  16386 multiletter control sequences out of 15000+600000
  66760 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -948,7 +953,7 @@ onts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb>
 share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmtt8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on InitAlt.pdf (8 pages, 342799 bytes).
+Output written on InitAlt.pdf (8 pages, 392903 bytes).
 PDF statistics:
  331 PDF objects out of 1000 (max. 8388607)
  299 compressed objects within 3 object streams
